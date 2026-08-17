@@ -1,0 +1,1441 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dynamics: Force &amp; Newton’s Laws &#8212; College Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/metadata_figure.css?v=2463d4a7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/h5p-resizer.js?v=a3e8b8ed"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter04/dynamics-new';</script>
+    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
+    <script src="../_static/init-plyr.js?v=bf401924"></script>
+    <script src="../_static/audio-player.js?v=5a953d7a"></script>
+    <link rel="canonical" href="https://saturnaxis.github.io/CollegePhysics/Chapter04/dynamics-new.html" />
+    <link rel="icon" href="../_static/PHYS1401_logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/PHYS1401_logo.png" class="logo__image only-light" alt="College Physics - Home"/>
+    <script>document.write(`<img src="../_static/PHYS1401_logo.png" class="logo__image only-dark" alt="College Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    Welcome to College Physics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who Are These Notes For?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to Cite and Reuse This Material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/computational-writing-primer.html">Writing Primer: Markdown and LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/figures-primer.html">Figures and Graphs Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/course-faq.html">Course FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/physics-recruitment.html">Finding Your Path in Physics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter02/kinematics.html">1. Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter03/2D-kinematics.html">2. 2D Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamics.html">3. Dynamics: Force &amp; Newton’s Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter05/friction-drag-elasticity.html">4. Friction, Drag, &amp; Elasticity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter06/circular-motion-gravitation.html">5. Circular Motion &amp; Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter07/work-energy.html">6. Work &amp; Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter08/momentum-collisions.html">7. Momentum &amp; Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter09/statics-torque.html">8. Statics &amp; Torque</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter10/rotational-motion.html">9. Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter11/fluid-statics.html">10. Fluids: Statics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter12/fluid-dynamics.html">11. Fluids: Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter13/temperature-gases.html">12. Kinetic Theory of Gases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter14/heat-transfer.html">13. Heat Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter15/thermodynamics.html">14. Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter16/oscillations-waves.html">15. Oscillations &amp; Waves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter17/hearing.html">16. Hearing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/CollegePhysics/main?urlpath=tree/Chapter04/dynamics-new.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/CollegePhysics/blob/main/Chapter04/dynamics-new.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics/issues/new?title=Issue%20on%20page%20%2FChapter04/dynamics-new.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter04/dynamics-new.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dynamics: Force & Newton’s Laws</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-of-force-conceptually">Development of Force Conceptually</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-first-law-of-motion">Newton’s First Law of Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inertia-mass">Inertia &amp; Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-second-law-of-motion">Newton’s Second Law of Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summing-forces-by-direction">Summing Forces by Direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-force">Units of Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weight-and-the-gravitational-force">Weight and the Gravitational Force</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-third-law-of-motion">Newton’s Third Law of Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-tension-and-other-forces">Normal, Tension, and other Forces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-force">Normal Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tension">Tension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#large-tension">Large Tension</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-newton-s-laws-a-problem-solving-strategy">Applying Newton’s Laws: A Problem-Solving Strategy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-general-strategy">A General Strategy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-tells-us-what-the-force-sum-must-do">Acceleration Tells Us What the Force Sum Must Do</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-forces-in-two-dimensions">Multiple Forces in Two Dimensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-different-tensions-at-different-angles">Example Problem: Different Tensions at Different Angles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-what-does-the-bathroom-scale-read-in-an-elevator">Example Problem: What Does the Bathroom Scale Read in an Elevator?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-dynamics-back-to-kinematics">Connecting Dynamics Back to Kinematics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-what-force-must-a-soccer-player-exert-to-reach-top-speed">Example Problem: What Force Must a Soccer Player Exert to Reach Top Speed?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dynamics-force-newton-s-laws">
+<h1>Dynamics: Force &amp; Newton’s Laws<a class="headerlink" href="#dynamics-force-newton-s-laws" title="Link to this heading">#</a></h1>
+<p>Aug 12, 2026 | 7640 words | 51 min read</p>
+<div class="tip admonition">
+<p class="admonition-title">Chapter roadmap</p>
+<p>Kinematics described how objects move; this chapter develops the physical ideas that explain why motion changes. You will use forces, free-body diagrams, and Newton’s laws to connect interactions with acceleration and to analyze common forces such as weight, normal force, and tension.</p>
+<p>As you read, focus on three questions:</p>
+<ol class="arabic simple">
+<li><p>How do you choose a system and decide which forces are external to it?</p></li>
+<li><p>How does the sum of the forces in each coordinate direction determine the acceleration in that direction?</p></li>
+<li><p>How do Newton’s third law, normal force, and tension help you build and interpret a free-body diagram?</p></li>
+</ol>
+<p>These ideas come together in a consistent problem-solving strategy that you will use in the worked examples, in-class exercises, and homework.</p>
+</div>
+<p>The study of motion is kinematics, but kinematics only <em>describes</em> the way objects move through their velocity and acceleration.  <strong>Dynamics</strong> considers why objects change their motion through the forces that affect objects and systems.  Newton’s laws of motion are the foundation of dynamics.</p>
+<p>Isaac Newton’s laws of motion were only one part of the monumental work that made him legendary.  His insights marked the transition from the Renaissance to the modern era and revolutionized the way people thought about the physical universe.  For centuries, natural philosophers debated the nature of the universe through rules of logic, where a lot of credit was given to classical philosophers (e.g., Aristotle). Newton and Galileo both contributed a great deal to this change in thinking.</p>
+<p>Galileo demonstrated how observation was the absolute determinant of truth, rather than “logical” argument.  Galileo’s telescope showed the importance of observation, where he discovered moons orbiting Jupiter and other observations that falsified geocentrism.  Galileo developed a foundational principle, which is now called Newton’s first law of motion.  Newton expanded upon the work of Galileo and Kepler (i.e., his predecessors), which enabled him to develop laws of motion, a law of gravity, the method of calculus, and contributions to theories of light and color.</p>
+<p>By the early 20th century, experiments showed that Newton’s laws of motion are a good approximation for objects moving at speeds much less than the speed of light and for objects much larger than atomic and molecular scales.  Relativity becomes important at very high speeds, while quantum mechanics becomes important at very small scales.  These discoveries established the limits of classical mechanics.</p>
+<section id="development-of-force-conceptually">
+<h2>Development of Force Conceptually<a class="headerlink" href="#development-of-force-conceptually" title="Link to this heading">#</a></h2>
+<p>Dynamics is the study of the forces that <em>cause</em> objects and systems to change their motion.  However, we need a working definition of force.  Our intuitive definition describes <em>contact</em> forces that involve a direct push or pull.  A push or pull has both a magnitude and direction, which makes a force a <em>vector</em> quantity.  For example, a cannon exerts a strong force on a cannonball.  Our everyday experience also gives us a good idea of how multiple forces add.  If two ice skaters push on a third skater, we expect the total force to be a <em>combination</em> of the individual forces.</p>
+<p>The two forces combine to produce a total force because force is a vector.  Additionally, we find that forces add just like other vectors and can be represented by an arrow using either the head-to-tail graphical method or the analytical method developed in the previous chapter.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Forces in an Interaction</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-force-skater-interaction">
+<img alt="Overhead view of three ice skaters. One skater pushes the central skater to the right while another pushes upward, with arrows labeled F1 and F2 showing the two force directions." src="../_images/skater-forces.png" />
+<figcaption>
+<p><span class="caption-text">Two skaters push on a third skater from different directions. Each push is represented by a force vector, <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> or <span class="math notranslate nohighlight">\(\vec{F}_2\)</span>. Because force is a vector, each force has both a magnitude and a direction. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-1-development-of-force-concept">OpenStax, <em>College Physics 2e</em>, Figure 4.3</a>.</span><a class="headerlink" href="#fig-force-skater-interaction" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+From the Scene to a Free-Body Diagram</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-force-skater-diagram">
+<img alt="Five-step sequence showing a three-skater interaction simplified into a free-body diagram. The central skater is isolated, replaced by a point, and the forces F1 and F2 are added with a parallelogram to obtain the diagonal total force." src="../_images/skater-fbd.png" />
+<figcaption>
+<p><span class="caption-text">A free-body diagram is created by isolating the object of interest and keeping only the forces acting on that object. Here, the central skater is replaced by a point and the two applied forces are drawn from that point. The faint translated vectors form a parallelogram, connecting force addition to the graphical vector-addition methods introduced earlier. The diagonal gives the total force, <span class="math notranslate nohighlight">\(\vec{F}_{\rm tot}=\vec{F}_1+\vec{F}_2\)</span>. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-1-development-of-force-concept">OpenStax, <em>College Physics 2e</em>, Figure 4.3</a>.</span><a class="headerlink" href="#fig-force-skater-diagram" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Free-Body Diagram in Motion</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-force-skater-motion">
+<img alt="Animated overhead view of two stationary skaters pushing a third skater. Force vectors F1 and F2 appear, a parallelogram shows their vector sum Ftot, and the central skater moves diagonally in the direction of the combined forces." src="../_images/skater_force_motion.gif" />
+<figcaption>
+<p><span class="caption-text">The two pushes act simultaneously on the skater. The force vectors can be combined graphically to determine the total force. While the interaction occurs, the skater’s motion changes in the direction associated with the combined forces. For now, the important idea is qualitative: <strong>forces describe interactions that can change an object’s motion</strong>. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-1-development-of-force-concept">OpenStax, <em>College Physics 2e</em>, Figure 4.3</a>.</span><a class="headerlink" href="#fig-force-skater-motion" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code> shows our first example of a <strong>free-body diagram</strong> (FBD), which is a technique used to simplify problems by illustrating all the <strong>external</strong> forces acting on a body using only arrows.  The body is represented by a single isolated point (i.e., free body), where only external (outside) forces acting <em>on</em> the body are shown.  We can ignore any internal forces within the body (object) that is acted on.  FBDs are very useful in analyzing forces because they help us externalize the problem on paper instead of trying to solve the whole problem in our head.  Drawing FBDs is not about your artistic ability; it is a technique that helps make problems easier to solve.</p>
+</section>
+<section id="newton-s-first-law-of-motion">
+<h2>Newton’s First Law of Motion<a class="headerlink" href="#newton-s-first-law-of-motion" title="Link to this heading">#</a></h2>
+<p>Experience shows us that an object at rest will remain at rest if left alone.  Additionally, an object in motion tends to slow down and stop unless some effort is made to keep it moving.  This second observation is more complicated by friction and air resistance.  As in the example of an ice skater (i.e., a frictionless surface), the skater keeps moving once in motion until acted upon.  <strong>Newton’s first law of motion</strong> describes how objects behave in the absence of external forces, under idealized conditions.</p>
+<div class="admonition-newton-s-first-law-of-motion admonition">
+<p class="admonition-title">Newton’s First Law of Motion</p>
+<blockquote>
+<div><p>A body at rest remains at rest or, if in motion, remains in motion at a constant velocity unless acted on by a net external force.</p>
+</div></blockquote>
+</div>
+<p>Newton’s first law states that there must be a <em>cause</em> (which is a net external force) <em>for there to be any change in velocity (either a change in magnitude or direction).</em>  A net external force will be defined with Newton’s second law.  An object sliding across a table or floor slows down due to the net force of friction acting on the object.  If friction disappeared, <em>would the object slow down?</em></p>
+<p>The idea of cause and effect is crucial in accurately describing what happens.  Consider an object sliding along a rough horizontal surface, where it quickly grinds to a halt.  If we spray the surface with talcum powder, then the surface is smoother and the object slides further (e.g., shuffleboard).  If we make the surface even smoother by rubbing oil on it (e.g., a bowling lane), then the object slides farther still.  Extrapolating to a frictionless surface, we can imagine the object sliding in a straight line indefinitely.  Friction is thus <em>causing</em> the slowing of the object (consistent with Newton’s first law) and is an external force.</p>
+<p>Consider an air hockey table.  When the air is turned on, it creates a nearly frictionless surface, and the puck glides long distances without slowing down.  When the air is turned off, the puck slides only a short distance before friction slows it to a stop.  If we know enough about the friction, we can develop a model that accurately predicts how quickly the object will slow down.</p>
+<p>Newton’s first law is completely general and can be applied to objects sliding on tables, as well as blood pumped from the heart. Experiments have thoroughly verified that any change in velocity (in speed or direction) must be caused by a net external force. The idea of universal laws that generally apply to everything is a basic feature of all laws of physics. Identifying these laws came from recognizing patterns in nature. Another important idea was parsimony: a good model should not introduce additional assumptions or causes when they are unnecessary. This principle is often associated with the medieval philosopher William of Ockham and is commonly called <em>Ockham’s razor</em>.</p>
+<p>Galileo challenged Aristotle’s proposal that the surrounding air continued to push a projectile after it left the thrower’s hand. Galileo could describe the motion of projectiles without requiring the air to keep pushing them through their flight.  Newton carried this idea further by treating rest and uniform motion as equivalent states: what requires a cause is not motion itself, but a change in motion.</p>
+<section id="inertia-mass">
+<h3>Inertia &amp; Mass<a class="headerlink" href="#inertia-mass" title="Link to this heading">#</a></h3>
+<p>The property of a body to remain at rest (or to remain in motion with constant velocity) is called <strong>inertia</strong>.  Newton’s first law is often called the <strong>law of inertia</strong>.  Some objects have more inertia than others, which makes their motion harder to change.  For example, it is more difficult to move a boulder than a basketball.  But we cannot measure inertia directly.</p>
+<p>Instead, we measure the <strong>mass</strong> as a proxy for inertia.  Roughly speaking, mass is a measure of the amount of “stuff” (or matter) in something.  The quantity of matter is determined by the atoms and molecules that make up the object.  Mass does not vary with location.  The mass of an object is the same on Earth as it is on the Moon.  It is not practical to count <em>all</em> the atoms and molecules in an object, so masses are determined by comparison with a standard kilogram.</p>
+<p>In May 2019, the definition of the kilogram was changed so that it is based on an exact value of Planck’s constant.  A <a class="reference external" href="https://en.wikipedia.org/wiki/Kibble_balance">Kibble balance</a> can realize this definition by comparing mechanical power with electrical power measured using quantum electrical standards.</p>
+<div class="tip admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.youtube.com/&#64;Veritasium"><strong>Veritasium</strong></a></p>
+<div class="video_wrapper align-center" style="text-align: center">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/c_e1wITe_ig" style="border: 0; height: 345px; width: 560px">
+</iframe></div></div>
+</section>
+</section>
+<section id="newton-s-second-law-of-motion">
+<h2>Newton’s Second Law of Motion<a class="headerlink" href="#newton-s-second-law-of-motion" title="Link to this heading">#</a></h2>
+<p><strong>Newton’s second law of motion</strong> mathematically states the cause and effect relationship between force and changes in motion.  Newton’s first law indicated that a net external force is required to change motion, while Newton’s second law gives us a general mathematical relationship between the net external force and the resulting acceleration.  Newton’s second law relates the mass and acceleration of an object to the net external force.</p>
+<p>Intuitively, we can see that a larger net force produces a larger acceleration for the same object.  Recall the definition of acceleration as the change in <em>velocity</em> divided by a time interval.  This means that a change in motion is equivalent to a change in velocity.  Newton’s first law says that a net external force causes a change in motion and thus, a <em>net external force causes acceleration.</em></p>
+<p>An <strong>external force</strong> acts from outside the <strong>system</strong> (i.e., object, or collection of objects) of interest.  For example, a system can consist of a wagon and a child in it that is being pushed by two other children.  The two children supply external forces because their pushes can change the motion of the wagon and child.</p>
+<figure class="align-default" id="fig-system-to-fbd">
+<img alt="Three-panel sequence showing how to construct a free-body diagram for a wagon carrying a child. Panel a identifies the wagon and child as the system while two people push it. Panel b replaces the system with a simplified wagon and retains the external forces. Panel c replaces the system with a point and shows only the applied forces, friction, normal force, and weight." src="../_images/FBD_diagram.png" />
+<figcaption>
+<p><span class="caption-text">Constructing a free-body diagram begins by choosing the <strong>system</strong>. In (a), the wagon and child are enclosed by the dashed boundary, while the two people pushing the wagon remain outside the system. The applied forces <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{F}_2\)</span>, friction <span class="math notranslate nohighlight">\(\vec{f}\)</span>, the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span>, and weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> are external forces acting on the system. In (b), the physical details are removed while the same external forces are retained. In (c), the system is reduced to a point and only the external-force vectors remain, producing the free-body diagram. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-3-newtons-second-law-of-motion-concept-of-a-system">OpenStax, <em>College Physics 2e</em>, Figure 4.5</a>.</span><a class="headerlink" href="#fig-system-to-fbd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Internal forces act between elements of the system.  The force that the child in the wagon applies to hang on is an internal force between elements of the system of interest.  The internal forces occur in Newton’s third-law pairs and cancel when we consider the motion of the complete system, which gives us reason to ignore them.  Only external forces affect the motion of a system according to Newton’s first law.  <em>Defining the boundaries of the system makes it easier to identify which forces are external.</em></p>
+<p>Acceleration is directly proportional to (indicated mathematically with <span class="math notranslate nohighlight">\(\propto\)</span>) and in the same direction as the net (total) external force acting on a system.  A smaller force causes a smaller acceleration and vice versa.  The vertical forces are shown for completeness, where they must cancel.  Otherwise the wagon’s motion would change along the vertical direction; hopefully not!  These vertical forces are the weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> of the wagon and child, along with the support of the ground <span class="math notranslate nohighlight">\(\vec{N}\)</span>.  There is a horizontal frictional force <span class="math notranslate nohighlight">\(\vec{f}\)</span> that opposes the applied force from the two children on the left.  <strong>Frictional forces</strong> oppose relative motion, or attempted relative motion, between surfaces that are touching.  We can simplify the scenario using a FBD with only the external forces, which add together to produce the net force <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\)</span>.</p>
+<p>We established that the acceleration <span class="math notranslate nohighlight">\(\vec{a}\)</span> is proportional to the net external force <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\)</span>, where this is expressed mathematically as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1a7056f7-0084-4086-bee7-58866d54a133">
+<span class="eqno">()<a class="headerlink" href="#equation-1a7056f7-0084-4086-bee7-58866d54a133" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{a} \propto \vec{F}_{net},
+\end{align}\]</div>
+<p>and the <span class="math notranslate nohighlight">\(\propto\)</span> symbol means “proportional to”.  When a quantity is proportional to another, it means that as one increases so does the other in proportion.</p>
+<p>Going back to our intuition, we know that a larger net force can produce a larger acceleration.  A more massive object has the opposite effect: for the same net force, it accelerates more slowly.  This is where the mass (i.e., inertia) affects the motion of the object.  The same net external force applied to a car produces a much smaller acceleration than when applied to a basketball.  The relationship between magnitude of the acceleration <span class="math notranslate nohighlight">\(a\)</span> and the object’s mass <span class="math notranslate nohighlight">\(m\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-628e106e-2f0c-49df-a248-25fb9889eb5d">
+<span class="eqno">()<a class="headerlink" href="#equation-628e106e-2f0c-49df-a248-25fb9889eb5d" title="Permalink to this equation">#</a></span>\[\begin{align}
+a \propto \frac{1}{m}.
+\end{align}\]</div>
+<p>The acceleration of an object depends only on the net external force and the mass of the object.  Combining the two proportionalities yields Newton’s second law of motion.</p>
+<div class="note admonition">
+<p class="admonition-title">Newton’s Second Law of Motion</p>
+<blockquote>
+<div><p>The acceleration of a system is directly proportional to and in the same direction as the net external force acting on the system, and inversely proportional to its mass.</p>
+</div></blockquote>
+<p>In equation form, Newton’s second law of motion is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7996a90b-abfe-439c-9dc3-da701fdc790f">
+<span class="eqno">()<a class="headerlink" href="#equation-7996a90b-abfe-439c-9dc3-da701fdc790f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{a} = \frac{\vec{F}_{\rm net}}{m}.
+\end{align}\]</div>
+<p>This is often written in the more familiar form</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7b286ede-0b64-4414-b352-66291f00320f">
+<span class="eqno">()<a class="headerlink" href="#equation-7b286ede-0b64-4414-b352-66291f00320f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{F}_{\rm net} &amp;= m\vec{a}, \\
+F_{\rm net} &amp;= ma,
+\end{align}\]</div>
+<p>where the vector form retains all information concerning the direction of force and acceleration.  The scalar form is useful when Newton’s second law is applied separately to each coordinate direction.</p>
+</div>
+<section id="summing-forces-by-direction">
+<h3>Summing Forces by Direction<a class="headerlink" href="#summing-forces-by-direction" title="Link to this heading">#</a></h3>
+<p>Newton’s second law involves the <strong>net force</strong>, which means that we must add together all of the external forces acting on the system. Because forces are vectors, we do this separately in each coordinate direction. For motion in two dimensions, Newton’s second law can therefore be written as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c37808ff-b481-4b1e-b979-e9edbc7a6606">
+<span class="eqno">()<a class="headerlink" href="#equation-c37808ff-b481-4b1e-b979-e9edbc7a6606" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_x &amp;= ma_x, \\
+\sum F_y &amp;= ma_y.
+\end{align}\]</div>
+<p>The symbol <span class="math notranslate nohighlight">\(\sum\)</span> means “sum of.” Thus, <span class="math notranslate nohighlight">\(\sum F_x\)</span> means to add all of the force components in the <span class="math notranslate nohighlight">\(x\)</span>-direction, while <span class="math notranslate nohighlight">\(\sum F_y\)</span> means to add all of the force components in the <span class="math notranslate nohighlight">\(y\)</span>-direction.</p>
+<p>The signs of the forces depend on the coordinate system that we choose. If we define right and up as positive, then forces pointing to the right or upward are positive, while forces pointing to the left or downward are negative.</p>
+<p>For the wagon example (Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>), the two children push toward the right with forces <span class="math notranslate nohighlight">\(F_1\)</span> and <span class="math notranslate nohighlight">\(F_2\)</span>, while friction <span class="math notranslate nohighlight">\(f\)</span> acts toward the left. The horizontal force equation is therefore</p>
+<div class="amsmath math notranslate nohighlight" id="equation-08d8a525-587d-431c-a342-2a4fa165914e">
+<span class="eqno">()<a class="headerlink" href="#equation-08d8a525-587d-431c-a342-2a4fa165914e" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_x = F_1 + F_2 - f = ma_x.
+\end{align}\]</div>
+<p>The normal force <span class="math notranslate nohighlight">\(N\)</span> acts upward and the weight <span class="math notranslate nohighlight">\(w\)</span> acts downward. Since the wagon does not accelerate vertically,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d15647f6-de9a-4e00-80dd-302ffdfa788f">
+<span class="eqno">()<a class="headerlink" href="#equation-d15647f6-de9a-4e00-80dd-302ffdfa788f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_y = N - w = ma_y = 0.
+\end{align}\]</div>
+<p>Therefore,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fdab3c31-c388-4ed8-8429-f58ce138c558">
+<span class="eqno">()<a class="headerlink" href="#equation-fdab3c31-c388-4ed8-8429-f58ce138c558" title="Permalink to this equation">#</a></span>\[\begin{align}
+N = w.
+\end{align}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\)</span> is <strong>not an additional force</strong> that we draw on the free-body diagram. It is the result of adding all of the external forces already acting on the system.</p>
+<p>This gives us a general procedure for applying Newton’s second law:</p>
+<ol class="arabic simple">
+<li><p>Choose the system of interest.</p></li>
+<li><p>Draw a free-body diagram showing all external forces acting on the system.</p></li>
+<li><p>Choose convenient positive <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-directions.</p></li>
+<li><p>If a force is angled, break it into <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-components.</p></li>
+<li><p>Add the force components in each direction, including their signs.</p></li>
+<li><p>Set each sum equal to the mass times the acceleration in that direction:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight" id="equation-2f3cba46-6c03-48a0-a7d2-e9250a39eed2">
+<span class="eqno">()<a class="headerlink" href="#equation-2f3cba46-6c03-48a0-a7d2-e9250a39eed2" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_x &amp;= ma_x, \\
+\sum F_y &amp;= ma_y.
+\end{align}\]</div>
+<p>A system can accelerate in one direction while having zero acceleration in another. In the wagon example, the horizontal forces do not cancel, so the wagon accelerates horizontally. The vertical forces do cancel, so its vertical acceleration is zero.</p>
+</section>
+<section id="units-of-force">
+<h3>Units of Force<a class="headerlink" href="#units-of-force" title="Link to this heading">#</a></h3>
+<p>The units of force are determined from the units that make up <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span> in terms of mass, length, and time.  The SI unit of force is called the <strong>newton</strong> (abbreviated <span class="math notranslate nohighlight">\(\rm N\)</span>) and is the force needed to accelerate a <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> mass at a rate of <span class="math notranslate nohighlight">\(1\ {\rm m/s^2}\)</span>.  We can see this by using the scalar form to get</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+F_{\rm net} &amp;= ma, \\
+1\ {\rm N} &amp;= 1\ {\rm kg \cdot m/s^2}.
+\end{align*}\]</div>
+<p>The unit of force in the United States is the pound <span class="math notranslate nohighlight">\((\rm lb)\)</span>, where you can convert between the units using <span class="math notranslate nohighlight">\(1\ {\rm lb} = 4.45\ {\rm N}\)</span>.</p>
+</section>
+<section id="weight-and-the-gravitational-force">
+<h3>Weight and the Gravitational Force<a class="headerlink" href="#weight-and-the-gravitational-force" title="Link to this heading">#</a></h3>
+<p>As we’ve seen in prior chapters, an object accelerates toward the center of Earth when dropped from a height.  Newton’s second law states that a net force on an object is responsible for its acceleration.  Neglecting air resistance, the net force on a falling object is the gravitational force and is commonly called its <strong>weight</strong> <span class="math notranslate nohighlight">\(\vec{w}\)</span>.  Weight can be denoted as a vector because it has a direction (downward toward Earth’s center).  The magnitude of the weight is given by <span class="math notranslate nohighlight">\(w\)</span>.  Galileo showed (quite unintuitively) that objects fall with the same acceleration <span class="math notranslate nohighlight">\(g\)</span> when air resistance is neglected.  If you drop a hammer and a feather from the same height in a vacuum, they both hit the ground at the same time.</p>
+<p>Consider an object with mass <span class="math notranslate nohighlight">\(m\)</span> falling downward toward Earth.  It experiences only the downward force of gravity, which has a magnitude <span class="math notranslate nohighlight">\(w\)</span>.  We can use Newton’s second law to write <span class="math notranslate nohighlight">\(F_{\rm net} = ma,\)</span> but the only force acting on the object is gravity so that <span class="math notranslate nohighlight">\(F_{\rm net} = w\)</span>.  We know that the magnitude of the acceleration due to gravity is given by <span class="math notranslate nohighlight">\(a = g\)</span>.  Thus we can combine these relations together to determine the magnitude of the object’s weight <span class="math notranslate nohighlight">\(w\)</span>.</p>
+<div class="admonition-weight admonition">
+<p class="admonition-title">Weight</p>
+<p>The gravitational force on a mass <span class="math notranslate nohighlight">\(m\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ade230b5-a837-4d13-b7aa-cb53c26ccd18">
+<span class="eqno">()<a class="headerlink" href="#equation-ade230b5-a837-4d13-b7aa-cb53c26ccd18" title="Permalink to this equation">#</a></span>\[\begin{align}
+w = mg.
+\end{align}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(g = 9.81\ {\rm m/s^2}\)</span> on Earth, the weight of a 1-kg object is <span class="math notranslate nohighlight">\(9.81\ {\rm N}\)</span>.  We can determine this mathematically by</p>
+<div class="math notranslate nohighlight">
+\[ w = mg = (1.0\ {\rm kg})(9.81\ {\rm m/s^2}) = 9.81\ {\rm N}. \]</div>
+<p>The weight given above is just its magnitude.  When solving problems with weight, you need to take the orientation of the coordinate system into account to get the magnitude of the respective components.</p>
+</div>
+<p>When the net external force is only due to gravity (i.e., its weight), we say that it is in <strong>free-fall</strong>. In the real world, when objects fall downward toward the Earth, there is always some upward force from air acting on the object.  For sufficiently heavy or dense objects, the upward air resistance is negligible compared to the gravitational force.</p>
+<p>Weight varies dramatically when an object is far from Earth’s surface.  On the Moon, the acceleration due to gravity is about <span class="math notranslate nohighlight">\(1/6\)</span> times that of Earth, or <span class="math notranslate nohighlight">\(1.625\ {\rm m/s^2}\)</span>.  This means that a 1-kg mass has a weight of only about <span class="math notranslate nohighlight">\(1.6\ {\rm N}\)</span> on the Moon compared to the <span class="math notranslate nohighlight">\(9.8\ {\rm N}\)</span> on the Earth.</p>
+<p>An object’s weight depends on the local gravitational field, which is usually dominated by a nearby massive body such as Earth, the Moon, or the Sun. Popular media can refer to weight differently.  When they speak of “weightlessness” or “microgravity”, they are referring to cases where the person (or object) is in free-fall.  The astronauts in the International Space Station (ISS) are not truly weightless; the gravitational force there is only about <span class="math notranslate nohighlight">\({\sim}10\%\)</span> smaller than it is at Earth’s surface.</p>
+<p>Weight and mass are very different physical quantities.  Mass (in <span class="math notranslate nohighlight">\(\rm kg\)</span>) is the quantity of matter, where it is not position dependent (i.e., you still have the same mass if you go to the Moon) and it does not vary in classical physics.  Weight (in <span class="math notranslate nohighlight">\(\rm N\)</span>) depends on the strength of gravity at that location.</p>
+</section>
+</section>
+<section id="newton-s-third-law-of-motion">
+<h2>Newton’s Third Law of Motion<a class="headerlink" href="#newton-s-third-law-of-motion" title="Link to this heading">#</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Newton’s Third Law of Motion</p>
+<blockquote>
+<div><p>Whenever one body exerts a force on a second body, the first body experiences a force that is equal in magnitude and opposite in direction to the force that it exerts.</p>
+</div></blockquote>
+</div>
+<p>This law represents a certain symmetry in nature, where forces always occur in pairs.  One body cannot exert a force on another without experiencing a force itself.  This is sometimes loosely referred to as “action-reaction”, where the force exerted is the action and the force experienced as a consequence is a reaction.  Newton’s third law has practical uses, but we must be careful in defining our system.</p>
+<p>Consider a swimmer pushing off from the side of a pool (see Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>).  She pushes against the pool wall with her feet and accelerates in the <em>opposite direction</em>.  The wall exerts an equal and opposite force back on the swimmer.  You might think that the two equal and opposite forces would cancel, but they do not <em>because they act on different systems.</em>  Otherwise the horizontal forces would be balanced exactly and the swimmer would not move.</p>
+<figure class="align-default" id="fig-swimmer-third-law-fbd">
+<img alt="Three-panel sequence showing how a free-body diagram is constructed for a swimmer pushing away from a pool wall. Panel a identifies the swimmer as the system and shows buoyancy upward, weight downward, the wall force on the swimmer to the left, the swimmer force on the wall to the right, and acceleration to the left. Panel b isolates the swimmer and retains only the external forces acting on the swimmer. Panel c replaces the swimmer with a point and shows the buoyant force, weight, and wall force that make up the swimmer's free-body diagram." src="../_images/FBD_3rdLaw_diagram.png" />
+<figcaption>
+<p><span class="caption-text">Constructing the swimmer’s free-body diagram begins by choosing the <strong>system</strong>. In (a), the swimmer is the system, while the water and pool wall are outside it. The swimmer pushes on the wall with <span class="math notranslate nohighlight">\(\vec{F}_\text{feet on wall}\)</span>, and the wall pushes back on the swimmer with the equal-and-opposite force <span class="math notranslate nohighlight">\(\vec{F}_\text{wall on feet}\)</span>; these forces act on different objects and therefore do not appear together on the same free-body diagram. In (b), the surroundings are removed and only the external forces acting on the swimmer are retained: the wall force, buoyant force <span class="math notranslate nohighlight">\(\overrightarrow{BF}\)</span>, and weight <span class="math notranslate nohighlight">\(\vec{w}\)</span>. In (c), the swimmer is reduced to a point to produce the final free-body diagram. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-4-newtons-third-law-of-motion-symmetry-in-forces">OpenStax, <em>College Physics 2e</em>, Figure 4.9</a>.</span><a class="headerlink" href="#fig-swimmer-third-law-fbd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In this case, there are two systems: (1) the swimmer or (2) the wall.  If we select the swimmer to be the system of interest, then <span class="math notranslate nohighlight">\(\vec{F}_\text{wall on feet}\)</span> is an external force on this system and affects its motion.  Intuitively we expect the swimmer to move in the direction of <span class="math notranslate nohighlight">\(\vec{F}_\text{wall on feet}\)</span>.  In contrast, the force <span class="math notranslate nohighlight">\(\vec{F}_\text{feet on wall}\)</span> acts on the wall and is <strong>not</strong> on our system of interest.  Thus it is not included in the FBD for the swimmer.  It could be included as a separate FBD for the wall as its own system.  Note that the reaction to her push moves the swimmer in the desired direction.</p>
+<p>Other examples of Newton’s third law are easy to find.  When you walk across the floor, you exert a force backward on the floor, while the floor exerts an equal and opposite force forward on you. This forward force can accelerate you or help maintain your motion.  A similar situation occurs for the wheels on your car.</p>
+<p>Rockets move forward by expelling gas backward at high velocity.  The rocket exerts a large backward force on the gas in the rocket’s combustion chamber and the gas exerts a large reaction force forward on the rocket, where this reaction force is called <strong>thrust</strong>.  It is a common misconception that rockets push on the ground or the air behind them. Rockets work in a vacuum because their thrust comes from the interaction between the rocket and its exhaust; in fact, a rocket engine can produce slightly more thrust in a vacuum because there is no atmospheric pressure opposing the exhaust.</p>
+<div class="tip admonition">
+<p class="admonition-title">Interactive Simulation: Gravity Force Lab</p>
+<iframe
+  src="https://phet.colorado.edu/sims/html/gravity-force-lab-basics/latest/gravity-force-lab-basics_en.html"
+  width="100%"
+  height="600px"
+  style="border: none;"
+  allowfullscreen
+  loading="lazy">
+</iframe>
+<p>Use this PhET simulation to visualize the gravitational force. Change the properties of the objects to see how it changes the force.</p>
+</div>
+</section>
+<section id="normal-tension-and-other-forces">
+<h2>Normal, Tension, and other Forces<a class="headerlink" href="#normal-tension-and-other-forces" title="Link to this heading">#</a></h2>
+<p>Forces have many names including push, pull, thrust, lift, weight, friction, and tension.  Typically, they are grouped depending on their source, how they are transmitted, or their effects.</p>
+<section id="normal-force">
+<h3>Normal Force<a class="headerlink" href="#normal-force" title="Link to this heading">#</a></h3>
+<p>Weight is a force that acts at all times, but if it were the only vertical force we would all be sinking towards the center of the Earth.  Since this does not happen, there must be a force that balances the weight in the opposite direction.  Near Earth’s surface we can treat the surface as flat, where the weight of a box is represented by an arrow pointing downward.  The balancing force is normal (i.e., perpendicular) to the surface and points upward in this situation. This force is called the <strong>normal</strong> force.  Forces are vectors, which means we represent the normal force as <span class="math notranslate nohighlight">\(\vec{N}\)</span>.  Note that the magnitude of the normal force is <span class="math notranslate nohighlight">\(N\)</span>, where the unit symbol for the newton is <span class="math notranslate nohighlight">\(\rm N\)</span>.  This difference is subtle, but the context usually provides a clear distinction by which one is meant.</p>
+<p>For an object resting on a horizontal surface with no other vertical forces and no vertical acceleration, the vertical forces balance:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9488064c-9353-4fba-9978-0851609249fc">
+<span class="eqno">()<a class="headerlink" href="#equation-9488064c-9353-4fba-9978-0851609249fc" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{N} + \vec{w} &amp;= 0, \\
+N &amp;= w = mg.
+\end{align}\]</div>
+<p>The first equation is the vector force balance, while the second gives the corresponding magnitudes.</p>
+<p><em>How does an inanimate object (e.g., a table) support the weight of a mass placed on it?</em>  If you’re holding a bag of dog food, it makes intuitive sense why you can hold it up because you apply a force to counteract the weight.  When the dog food is placed on the table, it actually sags slightly under the load.  This is more noticeable with an especially heavy bag and weak table.  The table exerts a <em>restoring</em> force much like a deformed spring.  The greater the deformation, the greater the restoring force.  The table applies only enough restoring force to support the weight of the bag.</p>
+<figure class="align-default" id="fig-normal-force-examples">
+<img alt="Three-panel comparison of vertical forces for objects at rest. Panel a shows a cardboard box resting on the floor with an upward normal force and downward weight, together with its free-body diagram. Panel b shows a bag of dog food supported by a person's hands with an upward hand force and downward weight, together with its free-body diagram. Panel c shows the same bag resting on a table with an upward normal force and downward weight, together with its free-body diagram." src="../_images/Normal_force_diagram.png" />
+<figcaption>
+<p><span class="caption-text">Three examples illustrate how different interactions can produce the upward force that balances an object’s weight. In (a), the floor exerts the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> on a box. In (b), a person’s hands exert an upward force <span class="math notranslate nohighlight">\(\vec{F}_{\rm hand}\)</span> on a bag of dog food. In (c), the table exerts the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> on the bag. The free-body diagram beneath each scene keeps only the external forces acting on the object. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-5-normal-tension-and-other-examples-of-forces">OpenStax, <em>College Physics 2e</em>, Figure 4.11</a>.</span><a class="headerlink" href="#fig-normal-force-examples" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>On an inclined surface, the normal force can be less than the weight because it balances only the component of the weight perpendicular to the surface.  When an object rests on an incline that makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the horizontal, the force of gravity acting on the object is divided into two components:</p>
+<ol class="arabic simple">
+<li><p>a force acting perpendicular to the plane, <span class="math notranslate nohighlight">\(w_y\)</span>, and</p></li>
+<li><p>a force acting parallel to the plane, <span class="math notranslate nohighlight">\(w_x\)</span>.</p></li>
+</ol>
+<p>When there is no acceleration perpendicular to the plane, the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> is equal in magnitude and opposite in direction to the perpendicular component <span class="math notranslate nohighlight">\(w_y\)</span>. The component parallel to the plane, <span class="math notranslate nohighlight">\(w_x\)</span>, can cause the object to accelerate down the incline (see Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>).  In the frictionless case shown, <span class="math notranslate nohighlight">\(w_x\)</span> is the unbalanced force that allows the acceleration to occur, while <span class="math notranslate nohighlight">\(w_y\)</span> is balanced by the normal force <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<figure class="align-default" id="incline-force-fig">
+<img alt="force on an incline example" src="https://saturnaxis.github.io/IntroPhysics/_images/Inclined_Plane.png" />
+<figcaption>
+<p><span class="caption-text">The coordinate system is chosen so that the <span class="math notranslate nohighlight">\(x\)</span>-axis is parallel to the inclined surface. The angle <span class="math notranslate nohighlight">\(\beta\ (= 90^\circ - \theta)\)</span> is complementary to <span class="math notranslate nohighlight">\(\theta\)</span>. Adapted from: OpenStax <a class="reference external" href="https://openstax.org/books/university-physics-volume-1/pages/5-6-common-forces">Figure 5.23</a>.</span><a class="headerlink" href="#incline-force-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Angles in a Triangle</p>
+<p><em>How do we know that the angle <span class="math notranslate nohighlight">\(\theta\)</span> given in Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code> is the same in both places?</em></p>
+<p>Let’s assume that they are different:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta_1\)</span> is the angle between <span class="math notranslate nohighlight">\(\vec{w}\)</span> and <span class="math notranslate nohighlight">\(\vec{w}_y\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta_2\)</span> is the angle between the horizontal surface and incline plane.</p></li>
+</ul>
+<p>The angle between <span class="math notranslate nohighlight">\(\vec{w}\)</span> and <span class="math notranslate nohighlight">\(\vec{w}_x\)</span> is <span class="math notranslate nohighlight">\(\beta = 90^\circ - \theta_1\)</span> because <span class="math notranslate nohighlight">\(\vec{w}_x\)</span> and <span class="math notranslate nohighlight">\(\vec{w}_y\)</span> are perpendicular.  The inclined surface also makes a triangle, with 3 angles that sum to <span class="math notranslate nohighlight">\(180^\circ\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ \theta_2 + 90^\circ + \beta = 180^\circ.\]</div>
+<p>We can solve for <span class="math notranslate nohighlight">\(\beta\)</span> in terms of <span class="math notranslate nohighlight">\(\theta_2\)</span> and substitute into the equation containing <span class="math notranslate nohighlight">\(\theta_1\)</span>,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\beta &amp;= 90^\circ - \theta_2, \\
+90^\circ - \theta_2 &amp;= 90^\circ - \theta_1,\\
+\theta_2 &amp;= \theta_1.
+\end{align*}\]</div>
+<p>With a little geometry, we showed that <span class="math notranslate nohighlight">\(\theta_1 = \theta_2 = \theta\)</span>.</p>
+</div>
+<p><strong>Be careful when resolving the weight into components.</strong>  Normally when the <span class="math notranslate nohighlight">\(x\)</span>-component of a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> is resolved, we find that <span class="math notranslate nohighlight">\(F_x = F\cos{\theta}\)</span>.  However, in this case we are using the complementary angle <span class="math notranslate nohighlight">\(\beta = 90^\circ - \theta\)</span> to resolve the <span class="math notranslate nohighlight">\(w_x\)</span>.  Using the red vectors in Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>, we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+w_x &amp;= w\cos{\beta} = w\sin{\theta}, \\
+w_y &amp;= w\cos{\theta}.
+\end{align*}\]</div>
+</section>
+<section id="tension">
+<h3>Tension<a class="headerlink" href="#tension" title="Link to this heading">#</a></h3>
+<p>A <strong>tension force</strong> acts along the length of a flexible connector, such as a rope or cable.  The word “tension” comes from the Latin word “to stretch”, which is why the flexible cords that carry muscle forces are called <em>tendons</em>.  A flexible connector can exert a pull only along its length, so the force it transmits is directed along the connector.</p>
+<p>Consider a person holding a mass <span class="math notranslate nohighlight">\(m\)</span> on a rope, where the mass is held stationary.  Because the mass is held stationary, its acceleration is zero and therefore <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}=0\)</span>. The only external forces acting on the mass are its weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> and the tension <span class="math notranslate nohighlight">\(\vec{T}\)</span> supplied by the rope. Their vectors point in opposite directions, so the magnitude of the tension <span class="math notranslate nohighlight">\(T\)</span> must equal the magnitude of the weight <span class="math notranslate nohighlight">\(w\)</span>.  Thus, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5752e941-73f7-42a1-95c1-a2bce58b4617">
+<span class="eqno">()<a class="headerlink" href="#equation-5752e941-73f7-42a1-95c1-a2bce58b4617" title="Permalink to this equation">#</a></span>\[\begin{align}
+F_{\rm net} = T - w = 0,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(w\)</span> are the magnitudes of the tension and weight, respectively.  We consider only the tension acting on the mass <span class="math notranslate nohighlight">\(m\)</span>, which is upwards and has a positive sign, where the weight acts downwards and carries a negative sign.  Just as you would expect</p>
+<div class="math notranslate nohighlight">
+\[ T = w = mg. \]</div>
+<p>For a <span class="math notranslate nohighlight">\(5.0\)</span>-kg mass (and neglecting the mass of the rope), we see that</p>
+<div class="math notranslate nohighlight">
+\[ T = mg = (5.0\ {\rm kg})(9.81\ {\rm m/s^2}) = 49\ {\rm N}. \]</div>
+<p>If we cut the rope and insert a spring, the spring would extend a length corresponding to a force of <span class="math notranslate nohighlight">\(49\ {\rm N}\)</span>.</p>
+<p>Flexible connectors are often used to transmit forces around corners (e.g., a hospital traction system, a finger joint, or a bicycle brake cable).  For an ideal massless connector passing over frictionless supports or pulleys, the tension is transmitted undiminished. Only its direction changes, and it is always parallel to the flexible connector.</p>
+</section>
+<section id="large-tension">
+<h3>Large Tension<a class="headerlink" href="#large-tension" title="Link to this heading">#</a></h3>
+<p>A surprisingly large tension can develop when a force is applied perpendicular to a taut rope or other flexible connector (see Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>). A tightrope walker provides a useful example. The walker’s weight provides a downward load near the center of the rope, while the tension in the two sides of the rope pulls upward and outward on the loaded point.</p>
+<figure class="align-default" id="tension-tightrope-fig">
+<img alt="A tightrope walker standing at the center of a sagging wire. The wire slopes upward by 5 degrees on each side of the walker, illustrating the tension forces acting along the wire." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ac4a7a65e7119df31a54d79532d93ff21c45c769" />
+<figcaption>
+<p><span class="caption-text">The weight of a tightrope walker causes a wire to sag by <span class="math notranslate nohighlight">\(5.0^\circ\)</span>. The system of interest here is the point in the wire at which the tightrope walker is standing. <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-5-normal-tension-and-other-examples-of-forces">Source: OpenStax College Physics, Figure 4.16</a>.</span><a class="headerlink" href="#tension-tightrope-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Suppose the tightrope walker is standing still. Treat the walker and the small section of rope beneath them as the system. Because this system is not accelerating, the forces must balance in both the horizontal and vertical directions. We divide the tension into the forces from the right and left sections of the rope, <span class="math notranslate nohighlight">\(\vec{T}_R\)</span> and <span class="math notranslate nohighlight">\(\vec{T}_L\)</span>.</p>
+<ol class="arabic simple">
+<li><p>The vertical components, <span class="math notranslate nohighlight">\(T_{Ry}\)</span> and <span class="math notranslate nohighlight">\(T_{Ly}\)</span>, together support the walker’s weight <span class="math notranslate nohighlight">\(w\)</span>.</p></li>
+<li><p>The horizontal components, <span class="math notranslate nohighlight">\(T_{Rx}\)</span> and <span class="math notranslate nohighlight">\(T_{Lx}\)</span>, point in opposite directions and cancel.</p></li>
+</ol>
+<p>The force balance is therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+F_{{\rm net},y} &amp;= T_{Ry} + T_{Ly} - w = 0, \\
+F_{{\rm net},x} &amp;= T_{Rx} - T_{Lx} = 0.
+\end{align*}\]</div>
+<p>Assume the rope makes the same angle <span class="math notranslate nohighlight">\(\theta\)</span> with the horizontal on each side of the walker. The horizontal components are</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+T_{Rx} &amp;= T_R\cos{\theta}, \\
+T_{Lx} &amp;= T_L\cos{\theta}.
+\end{align*}\]</div>
+<p>Because these horizontal components must be equal,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+T_R\cos{\theta} &amp;= T_L\cos{\theta},
+\end{align*}\]</div>
+<p>which gives</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{T_R=T_L=T}.
+\]</div>
+<p>For an ideal lightweight rope, the tension has the same magnitude throughout the rope. The two sides therefore each pull on the walker with the same tension <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Now consider the vertical direction. Each side provides an upward component</p>
+<div class="math notranslate nohighlight">
+\[
+T_y=T\sin{\theta}.
+\]</div>
+<p>Both sides together support the walker’s weight, so</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+2T\sin{\theta}-w &amp;= 0,\\
+2T\sin{\theta} &amp;= w,\\
+T &amp;= \frac{w}{2\sin{\theta}}.
+\end{align*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(w=mg\)</span>,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7135ca45-630b-4fc2-a4e9-7f1747a8a4a1">
+<span class="eqno">()<a class="headerlink" href="#equation-7135ca45-630b-4fc2-a4e9-7f1747a8a4a1" title="Permalink to this equation">#</a></span>\[\begin{align}
+T=\frac{mg}{2\sin{\theta}}.
+\end{align}\]</div>
+<p>This result explains why tightropes, clotheslines, cables, and similar connectors can experience very large tensions. As the rope becomes more nearly horizontal, <span class="math notranslate nohighlight">\(\theta\)</span> becomes smaller and <span class="math notranslate nohighlight">\(\sin{\theta}\)</span> decreases. The tension must then increase so that its small vertical components can still support the downward force.</p>
+<p>More generally, if a perpendicular force <span class="math notranslate nohighlight">\(F_\perp\)</span> is applied at the midpoint of a flexible connector,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a29b5daa-8329-408d-8dde-9662133a976e">
+<span class="eqno">()<a class="headerlink" href="#equation-a29b5daa-8329-408d-8dde-9662133a976e" title="Permalink to this equation">#</a></span>\[\begin{align}
+T=\frac{F_\perp}{2\sin{\theta}}.
+\end{align}\]</div>
+<p>As <span class="math notranslate nohighlight">\(\theta\rightarrow0\)</span>, the required tension becomes extremely large. A perfectly horizontal flexible connector supporting a downward force would require infinite tension in this idealized model. This is why real ropes and cables always sag at least slightly under their own weight or any additional load.</p>
+</section>
+</section>
+<section id="applying-newton-s-laws-a-problem-solving-strategy">
+<h2>Applying Newton’s Laws: A Problem-Solving Strategy<a class="headerlink" href="#applying-newton-s-laws-a-problem-solving-strategy" title="Link to this heading">#</a></h2>
+<p>We have introduced several different forces and all three of Newton’s laws, but most dynamics problems use the same basic approach.  The difficulty is usually not choosing a new equation.  Instead, we need to determine <strong>what system we are studying, what forces act on it, and how those forces combine in each direction</strong>.</p>
+<p>Newton’s second law provides the connection between the forces and the resulting motion,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4128e3bd-04b0-437d-ab3e-a2722a26848e">
+<span class="eqno">()<a class="headerlink" href="#equation-4128e3bd-04b0-437d-ab3e-a2722a26848e" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_x &amp;= ma_x, \\
+\sum F_y &amp;= ma_y.
+\end{align}\]</div>
+<p>The important part is building the equations on the left-hand side correctly.  A free-body diagram gives us a visual inventory of the external forces, while the coordinate system tells us whether each force component is positive or negative.</p>
+<section id="a-general-strategy">
+<h3>A General Strategy<a class="headerlink" href="#a-general-strategy" title="Link to this heading">#</a></h3>
+<p>We can organize most force problems using the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Choose the system.</strong> Decide which object, or collection of objects, we want to analyze.</p></li>
+<li><p><strong>Identify the external forces.</strong> Determine which interactions cross the boundary of the system.</p></li>
+<li><p><strong>Draw a free-body diagram.</strong> Replace the system with a point and draw only the external forces acting on it.</p></li>
+<li><p><strong>Choose the coordinate directions.</strong> Define which directions are positive.  Whenever possible, choose axes that simplify the forces or the motion.</p></li>
+<li><p><strong>Break angled forces into components.</strong> A force that is not along one of the coordinate axes may contribute to both the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-directions.</p></li>
+<li><p><strong>Determine the acceleration in each direction.</strong> Ask whether the velocity is changing along <span class="math notranslate nohighlight">\(x\)</span> or <span class="math notranslate nohighlight">\(y\)</span>.</p></li>
+<li><p><strong>Sum the forces separately in each direction.</strong></p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_x &amp;= ma_x, \\
+\sum F_y &amp;= ma_y.
+\end{align*}\]</div>
+<ol class="arabic simple" start="8">
+<li><p><strong>Solve for the unknown quantity and check the result.</strong> The units, sign, direction, and approximate size of the answer should agree with the physical situation.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">The Free-Body Diagram Comes Before the Equations</p>
+<p>Do not begin a force problem by searching for numbers to substitute into <span class="math notranslate nohighlight">\(F=ma\)</span>.  First decide on the system and construct the free-body diagram.  The equations should come directly from the forces shown on that diagram.</p>
+<p>The <strong>net force is not another force</strong> that should be added to the free-body diagram.  It is the result of adding together the external forces already shown.</p>
+</div>
+</section>
+<section id="acceleration-tells-us-what-the-force-sum-must-do">
+<h3>Acceleration Tells Us What the Force Sum Must Do<a class="headerlink" href="#acceleration-tells-us-what-the-force-sum-must-do" title="Link to this heading">#</a></h3>
+<p>Before writing an equation for a particular direction, determine whether the system accelerates in that direction.</p>
+<p>If the acceleration is zero, then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_x &amp;= 0
+\end{align*}\]</div>
+<p>or</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_y &amp;= 0,
+\end{align*}\]</div>
+<p>depending on the direction being considered.</p>
+<p>An acceleration of zero does <strong>not</strong> require the object to be stationary.  <em>An object moving with constant velocity also has zero acceleration and therefore zero net force.</em></p>
+<p>If the system accelerates in a direction, then the forces along that direction do not cancel.  For example,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_x = ma_x.
+\end{align*}\]</div>
+<p>This distinction becomes especially useful when a system accelerates in one direction but not another.  A wagon may accelerate horizontally while remaining on the ground vertically.  In that case,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_x &amp;= ma_x, \\
+\sum F_y &amp;= 0.
+\end{align*}\]</div>
+<p>The same reasoning applies to more complicated systems.</p>
+</section>
+<section id="multiple-forces-in-two-dimensions">
+<h3>Multiple Forces in Two Dimensions<a class="headerlink" href="#multiple-forces-in-two-dimensions" title="Link to this heading">#</a></h3>
+<p>When several forces act at different angles, Newton’s second law is still applied independently to each direction.  The free-body diagram may look complicated, but each force contributes only through its <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-components.</p>
+<p>Suppose a system has several external forces.  The horizontal equation has the general form</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_x = F_{1x}+F_{2x}+F_{3x}+\cdots = ma_x,
+\end{align*}\]</div>
+<p>while the vertical equation is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_y = F_{1y}+F_{2y}+F_{3y}+\cdots = ma_y.
+\end{align*}\]</div>
+<p>The signs come from the coordinate system that we choose.  If right and up are positive, then a force pointing left has a negative <span class="math notranslate nohighlight">\(x\)</span>-component and a force pointing downward has a negative <span class="math notranslate nohighlight">\(y\)</span>-component.</p>
+<p>This is why choosing the coordinate system is an important part of the model rather than just a mathematical detail.</p>
+</section>
+<section id="example-problem-different-tensions-at-different-angles">
+<h3>Example Problem: Different Tensions at Different Angles<a class="headerlink" href="#example-problem-different-tensions-at-different-angles" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Different Tensions at Different Angles</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(15\ {\rm kg}\)</span> traffic light is suspended by two lightweight wires. The left wire makes an angle of <span class="math notranslate nohighlight">\(30^\circ\)</span> above the horizontal and the right wire makes an angle of <span class="math notranslate nohighlight">\(45^\circ\)</span> above the horizontal. Find the tension in each wire.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The traffic light is the system. We neglect the masses of the wires and define the <span class="math notranslate nohighlight">\(x\)</span>-axis horizontally with <span class="math notranslate nohighlight">\(+x\)</span> to the right and the <span class="math notranslate nohighlight">\(y\)</span>-axis vertically with <span class="math notranslate nohighlight">\(+y\)</span> upward. The traffic light is stationary, so <span class="math notranslate nohighlight">\(a_x=a_y=0\)</span>. The known quantities are <span class="math notranslate nohighlight">\(m=15\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(\theta_1=30^\circ\)</span>, and <span class="math notranslate nohighlight">\(\theta_2=45^\circ\)</span>. The unknowns are the tension magnitudes <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span>.</p>
+<figure class="align-default" id="openstax-traffic-light-tension-fig">
+<img alt="Traffic light suspended by two wires. The left wire is 30 degrees above the horizontal and the right wire is 45 degrees above the horizontal. The figure shows the traffic light as the system, its weight downward, the two tensions along the wires, and their horizontal and vertical components." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/bebf3d9c5cc60722f5f19df3df892fe345411da7" />
+<figcaption>
+<p><span class="caption-text">A traffic light is supported by two wires at different angles. The figure shows the physical system, the free-body diagram, and the components of the two tension forces. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-7-further-applications-of-newtons-laws-of-motion">OpenStax, <em>College Physics 2e</em>, Figure 4.22</a>.</span><a class="headerlink" href="#openstax-traffic-light-tension-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">Because there is no horizontal acceleration, the horizontal components of the tensions must cancel:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_x &amp;= T_2\cos(45^\circ)-T_1\cos(30^\circ)=0, \\
+T_2 &amp;= T_1\frac{\cos(30^\circ)}{\cos(45^\circ)}.
+\end{align*}\]</div>
+<p class="sd-card-text">The vertical components of the two tensions must together support the weight of the traffic light:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_y &amp;= T_1\sin(30^\circ)+T_2\sin(45^\circ)-mg=0.
+\end{align*}\]</div>
+<p class="sd-card-text">Substituting the horizontal-force relationship into the vertical equation gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+T_1\sin(30^\circ)+T_1\frac{\cos(30^\circ)}{\cos(45^\circ)}\sin(45^\circ) &amp;= mg, \\
+T_1 &amp;= \frac{mg}{\sin(30^\circ)+\cos(30^\circ)}.
+\end{align*}\]</div>
+<p class="sd-card-text">The left-wire tension is therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+T_1 &amp;= \frac{(15\ {\rm kg})(9.81\ {\rm m/s^2})}{\sin(30^\circ)+\cos(30^\circ)} \\
+&amp;= 107.7\ {\rm N} \approx 1.1\times10^2\ {\rm N}.
+\end{align*}\]</div>
+<p class="sd-card-text">The right-wire tension follows from the horizontal-force relationship:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+T_2 &amp;= (107.7\ {\rm N})\frac{\cos(30^\circ)}{\cos(45^\circ)} \\
+&amp;= 131.9\ {\rm N} \approx 1.3\times10^2\ {\rm N}.
+\end{align*}\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The two wire tensions are approximately <span class="math notranslate nohighlight">\(T_1=1.1\times10^2\ {\rm N}\)</span> and <span class="math notranslate nohighlight">\(T_2=1.3\times10^2\ {\rm N}\)</span>. They are not equal because the wires make different angles with the horizontal. The horizontal components must cancel while the vertical components together support the traffic light’s weight, which is consistent with the stationary model.</p>
+</div>
+</details><p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-7-further-applications-of-newtons-laws-of-motion">OpenStax, <em>College Physics 2e</em>, Example 4.8</a>.</em></p>
+</div>
+</section>
+<section id="example-problem-what-does-the-bathroom-scale-read-in-an-elevator">
+<h3>Example Problem: What Does the Bathroom Scale Read in an Elevator?<a class="headerlink" href="#example-problem-what-does-the-bathroom-scale-read-in-an-elevator" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: What Does the Bathroom Scale Read in an Elevator?</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(75\ {\rm kg}\)</span> person stands on a bathroom scale in an elevator. What does the scale read (a) when the elevator accelerates upward at <span class="math notranslate nohighlight">\(1.2\ {\rm m/s^2}\)</span> and (b) when the elevator moves upward at a constant speed of <span class="math notranslate nohighlight">\(1\ {\rm m/s}\)</span>?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The person is the system. We define a vertical <span class="math notranslate nohighlight">\(y\)</span>-axis with <span class="math notranslate nohighlight">\(+y\)</span> upward. The two external forces acting on the person are the upward normal force <span class="math notranslate nohighlight">\(N\)</span> from the scale and the downward weight <span class="math notranslate nohighlight">\(w=mg\)</span>. The scale exerts an upward normal force <span class="math notranslate nohighlight">\(N\)</span> on the person. By Newton’s third law, the person exerts an equal-magnitude downward force on the scale, so the scale reading has magnitude <span class="math notranslate nohighlight">\(N\)</span>. For part (a), <span class="math notranslate nohighlight">\(a_y=+1.2\ {\rm m/s^2}\)</span>. For part (b), the elevator has constant velocity, so <span class="math notranslate nohighlight">\(a_y=0\)</span>.</p>
+<figure class="align-default" id="openstax-elevator-scale-fig">
+<img alt="Person standing on a bathroom scale in an elevator. The full interaction diagram shows forces on the elevator, scale, and person, while the free-body diagram for the person shows only an upward scale force and downward weight." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/cf2e019aa85e3875c7e4550084f78cd89149fa62" />
+<figcaption>
+<p><span class="caption-text">A person stands on a scale in an elevator. The free-body diagram for the person contains only the upward force from the scale and the downward weight. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-7-further-applications-of-newtons-laws-of-motion">OpenStax, <em>College Physics 2e</em>, Figure 4.23</a>.</span><a class="headerlink" href="#openstax-elevator-scale-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">Newton’s second law in the vertical direction gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\sum F_y &amp;= N-w=ma_y.
+\end{align*}\]</div>
+<p class="sd-card-text">Using <span class="math notranslate nohighlight">\(w=mg\)</span> and solving for the normal force gives the general result</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+N=m(g+a_y).
+\end{align*}\]</div>
+<p class="sd-card-text">For part (a), the elevator accelerates upward, so the scale reading is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+N &amp;= (75\ {\rm kg})(9.81\ {\rm m/s^2}+1.2\ {\rm m/s^2}) \\
+&amp;= 8.3\times10^2\ {\rm N}.
+\end{align*}\]</div>
+<p class="sd-card-text">For part (b), constant velocity means zero acceleration. The scale reading becomes</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+N &amp;= mg \\
+&amp;= (75\ {\rm kg})(9.81\ {\rm m/s^2}) \\
+&amp;= 7.4\times10^2\ {\rm N}.
+\end{align*}\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The scale reads approximately <span class="math notranslate nohighlight">\(8.3\times10^2\ {\rm N}\)</span> while the elevator accelerates upward and <span class="math notranslate nohighlight">\(7.4\times10^2\ {\rm N}\)</span> while it moves at constant speed. The larger reading during upward acceleration is required because the scale must both support the person’s weight and provide the upward net force. At constant velocity the acceleration is zero, so the normal force returns to the person’s ordinary weight.</p>
+</div>
+</details><p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-7-further-applications-of-newtons-laws-of-motion">OpenStax, <em>College Physics 2e</em>, Example 4.9</a>.</em></p>
+</div>
+</section>
+<section id="connecting-dynamics-back-to-kinematics">
+<h3>Connecting Dynamics Back to Kinematics<a class="headerlink" href="#connecting-dynamics-back-to-kinematics" title="Link to this heading">#</a></h3>
+<p>Dynamics tells us what causes acceleration, while kinematics tells us how acceleration changes velocity and position.  Many real problems require both ideas.</p>
+<p>The connection is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a5f0488f-0490-4a5b-a177-445c27d1a1b0">
+<span class="eqno">()<a class="headerlink" href="#equation-a5f0488f-0490-4a5b-a177-445c27d1a1b0" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{forces} \longrightarrow \text{acceleration} \longrightarrow \text{change in motion}.
+\end{align}\]</div>
+<p>Sometimes a problem gives the forces and asks for the resulting motion.  In that case, Newton’s second law is used first to determine the acceleration, followed by the kinematics equations.</p>
+<p>Other problems give information about the motion and ask what force produced it.  In those cases, we work in the opposite direction: use kinematics to determine the acceleration and then use Newton’s second law to determine the force.</p>
+</section>
+<section id="example-problem-what-force-must-a-soccer-player-exert-to-reach-top-speed">
+<h3>Example Problem: What Force Must a Soccer Player Exert to Reach Top Speed?<a class="headerlink" href="#example-problem-what-force-must-a-soccer-player-exert-to-reach-top-speed" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: What Force Must a Soccer Player Exert to Reach Top Speed?</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(70\ {\rm kg}\)</span> soccer player starts from rest and accelerates forward, reaching a speed of <span class="math notranslate nohighlight">\(8.0\ {\rm m/s}\)</span> in <span class="math notranslate nohighlight">\(2.5\ {\rm s}\)</span>. (a) What is the player’s average acceleration? (b) What average force does the player exert backward on the ground to produce this acceleration? Neglect air resistance.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The player is the system. We define the horizontal <span class="math notranslate nohighlight">\(x\)</span>-axis along the direction of the run, with <span class="math notranslate nohighlight">\(+x\)</span> forward. The player starts from rest, so <span class="math notranslate nohighlight">\(v_0=0\)</span>, and reaches <span class="math notranslate nohighlight">\(v_f=8.0\ {\rm m/s}\)</span> in <span class="math notranslate nohighlight">\(\Delta t=2.5\ {\rm s}\)</span>. The player’s mass is <span class="math notranslate nohighlight">\(m=70\ {\rm kg}\)</span>. Air resistance is neglected, so the horizontal ground force is the external force responsible for the player’s forward acceleration. Newton’s third law relates the forward force of the ground on the player to the backward force of the player on the ground.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The average acceleration follows from the change in velocity divided by the elapsed time:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_x &amp;= \frac{v_f-v_0}{\Delta t} \\
+&amp;= \frac{8.0\ {\rm m/s}-0}{2.5\ {\rm s}} \\
+&amp;= 3.2\ {\rm m/s^2}.
+\end{align*}\]</div>
+<p class="sd-card-text">Newton’s second law then gives the magnitude of the horizontal net force on the player:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+F_{\rm net} &amp;= ma_x \\
+&amp;= (70\ {\rm kg})(3.2\ {\rm m/s^2}) \\
+&amp;= 2.2\times10^2\ {\rm N}.
+\end{align*}\]</div>
+<p class="sd-card-text">The ground therefore exerts approximately <span class="math notranslate nohighlight">\(2.2\times10^2\ {\rm N}\)</span> forward on the player. Newton’s third law tells us that the player exerts a force of the same magnitude backward on the ground.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The player’s average acceleration is <span class="math notranslate nohighlight">\(3.2\ {\rm m/s^2}\)</span>. To produce that acceleration, the ground exerts an average force of about <span class="math notranslate nohighlight">\(2.2\times10^2\ {\rm N}\)</span> forward on the player, so the player exerts about <span class="math notranslate nohighlight">\(2.2\times10^2\ {\rm N}\)</span> backward on the ground. This example connects kinematics, Newton’s second law, and Newton’s third law in the same physical situation.</p>
+</div>
+</details><p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-7-further-applications-of-newtons-laws-of-motion">OpenStax, <em>College Physics 2e</em>, Example 4.10</a>.</em></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Putting It All Together</p>
+<p>Most problems involving Newton’s laws can be organized using the same sequence:</p>
+<p><strong>Situation <span class="math notranslate nohighlight">\(\rightarrow\)</span> System <span class="math notranslate nohighlight">\(\rightarrow\)</span> Free-body diagram <span class="math notranslate nohighlight">\(\rightarrow\)</span> Coordinate directions <span class="math notranslate nohighlight">\(\rightarrow\)</span> Sum the forces <span class="math notranslate nohighlight">\(\rightarrow\)</span> Solve <span class="math notranslate nohighlight">\(\rightarrow\)</span> Check</strong></p>
+<p>The equations should follow from the physical model rather than the other way around.  If the free-body diagram and coordinate directions are correct, writing</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7697c826-1a0f-43b8-bd2a-37f2c9a1d989">
+<span class="eqno">()<a class="headerlink" href="#equation-7697c826-1a0f-43b8-bd2a-37f2c9a1d989" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_x &amp;= ma_x, \\
+\sum F_y &amp;= ma_y
+\end{align}\]</div>
+<p>usually becomes the straightforward part of the problem.</p>
+</div>
+<p>The final step is always to ask whether the answer makes physical sense.  Check the units, sign, direction, and approximate magnitude.  A force should have units of newtons, an acceleration should have units of <span class="math notranslate nohighlight">\({\rm m/s^2}\)</span>, and the direction of the net force should agree with the direction of the acceleration.  These checks will not prove that a solution is correct, but they can quickly reveal many common mistakes.</p>
+</section>
+</section>
+<section id="in-class-exercises">
+<h2>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>Suppose two children push horizontally, but in exactly opposite directions, on a third child in a wagon. The first child exerts a force of <span class="math notranslate nohighlight">\(75\ {\rm N}\)</span>, the second a force of <span class="math notranslate nohighlight">\(90\ {\rm N}\)</span>, friction is <span class="math notranslate nohighlight">\(12\ {\rm N}\)</span>, and the mass of the third child plus wagon is <span class="math notranslate nohighlight">\(23\ {\rm kg}\)</span>.</p>
+<p>a. What is the system of interest if the acceleration of the child in the wagon is to be calculated?</p>
+<p>b. Draw a free-body diagram, including all forces acting on the system.</p>
+<p>c. Calculate the acceleration.</p>
+<p>d. What would the acceleration be if friction were <span class="math notranslate nohighlight">\(15\ {\rm N}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>The weight of an astronaut plus their space suit on the Moon is only <span class="math notranslate nohighlight">\(250\ {\rm N}\)</span>. How much do they weigh on Earth? What is the mass on the Moon? On Earth?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>(a) Calculate the tension in a vertical strand of spider web if a spider of mass <span class="math notranslate nohighlight">\(8.00 \times 10^{-5}\ {\rm kg}\)</span> hangs motionless on it. (b) Calculate the tension in a horizontal strand of spider web if the same spider sits motionless in the middle of it much like the tightrope walker in Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>. The strand sags at an angle of <span class="math notranslate nohighlight">\(12^\circ\)</span> below the horizontal. Compare this with the tension in the vertical strand (find their ratio).</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>Calculate the force a <span class="math notranslate nohighlight">\(70\)</span>-kg high jumper must exert on the ground to produce an upward acceleration <span class="math notranslate nohighlight">\(4.0\)</span> times the acceleration due to gravity. Explicitly show how you follow the steps in the Problem-Solving Strategy for Newton’s laws of motion.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>A nurse pushes a cart by exerting a force on the handle at a downward angle <span class="math notranslate nohighlight">\(35^\circ\)</span> below the horizontal. The loaded cart has a mass of <span class="math notranslate nohighlight">\(28\ {\rm kg}\)</span>, and the force of friction is <span class="math notranslate nohighlight">\(60\ {\rm N}\)</span>. (a) Draw a free-body diagram for the system of interest. (b) What force must the nurse exert to move at a constant velocity?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(35\)</span>-kg dolphin decelerates from <span class="math notranslate nohighlight">\(12.0\)</span> to <span class="math notranslate nohighlight">\(7.50\ {\rm m/s}\)</span> in <span class="math notranslate nohighlight">\(2.30\ {\rm s}\)</span> to join another dolphin in play. What average force was exerted to slow him if he was moving horizontally? (The gravitational force is balanced by the buoyant force of the water.)</p>
+</div></blockquote>
+</div>
+<p><em>Problems adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-problems-exercises">OpenStax, <em>College Physics 2e</em>, Chapter 4 Problems &amp; Exercises</a>.</em></p>
+</section>
+</section>
+<section id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage provide examples of the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>A rock is thrown straight up. What is the net external force acting on the rock when it is at the top of its trajectory?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Describe a situation in which one system exerts a force on another and, as a consequence, experiences a force that is equal in magnitude and opposite in direction. Which of Newton’s laws of motion apply?</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>Suppose a <span class="math notranslate nohighlight">\(60\)</span>-kg gymnast climbs a rope. (a) What is the tension in the rope if they climb at a constant speed? (b) What is the tension in the rope if they accelerate upward at a rate of <span class="math notranslate nohighlight">\(1.50\ {\rm m/s^2}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(1100\)</span>-kg car pulls a boat on a trailer. (a) What total force resists the motion of the car, boat, and trailer if the car exerts a <span class="math notranslate nohighlight">\(1900\)</span>-N force on the road and produces an acceleration of <span class="math notranslate nohighlight">\(0.550\ {\rm m/s^2}\)</span>? The mass of the boat plus trailer is <span class="math notranslate nohighlight">\(700\ {\rm kg}\)</span>. (b) What is the force in the hitch between the car and the trailer if <span class="math notranslate nohighlight">\(80\%\)</span> of the resisting forces are experienced by the boat and trailer?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>A flea jumps by exerting a force of <span class="math notranslate nohighlight">\(1.20 \times 10^{-5}\ {\rm N}\)</span> straight down on the ground. A breeze blowing on the flea parallel to the ground exerts a force of <span class="math notranslate nohighlight">\(0.500 \times 10^{-6}\ {\rm N}\)</span> on the flea. Find the direction and magnitude of the acceleration of the flea if its mass is <span class="math notranslate nohighlight">\(6.00 \times 10^{-7}\ {\rm kg}\)</span>. Do not neglect the gravitational force.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(76.0\)</span>-kg person is being pulled away from a burning building as shown in Fig. <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>. Calculate the tension in the two ropes if the person is momentarily motionless. Include a free-body diagram in your solution.</p>
+</div></blockquote>
+<figure class="align-default" id="rescue-ropes-fig">
+<img alt="A person being rescued from a burning building is supported by two ropes. One rope extends upward toward the building at an angle of 15 degrees from the vertical, while a second rope extends upward toward a rescuer at an angle of 10 degrees above the horizontal. The person's weight acts downward." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/c1e1b868b916f63786905d5f951f8b72d56d4b17" />
+<figcaption>
+<p><span class="caption-text">A person is supported by two ropes while being pulled away from a burning building. The tension <span class="math notranslate nohighlight">\(\vec{T}_1\)</span> acts along the more vertical rope, while <span class="math notranslate nohighlight">\(\vec{T}_2\)</span> acts along the rope held by the rescuer. The person’s weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> acts downward. <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-7-further-applications-of-newtons-laws-of-motion">Source: OpenStax College Physics, Figure 4.40</a>.</span><a class="headerlink" href="#rescue-ropes-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p><em>Problems adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/4-problems-exercises">OpenStax, <em>College Physics 2e</em>, Chapter 4 Problems &amp; Exercises</a>.</em></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/CollegePhysics",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter04"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-of-force-conceptually">Development of Force Conceptually</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-first-law-of-motion">Newton’s First Law of Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inertia-mass">Inertia &amp; Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-second-law-of-motion">Newton’s Second Law of Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summing-forces-by-direction">Summing Forces by Direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-force">Units of Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weight-and-the-gravitational-force">Weight and the Gravitational Force</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-third-law-of-motion">Newton’s Third Law of Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-tension-and-other-forces">Normal, Tension, and other Forces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-force">Normal Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tension">Tension</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#large-tension">Large Tension</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-newton-s-laws-a-problem-solving-strategy">Applying Newton’s Laws: A Problem-Solving Strategy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-general-strategy">A General Strategy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-tells-us-what-the-force-sum-must-do">Acceleration Tells Us What the Force Sum Must Do</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-forces-in-two-dimensions">Multiple Forces in Two Dimensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-different-tensions-at-different-angles">Example Problem: Different Tensions at Different Angles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-what-does-the-bathroom-scale-read-in-an-elevator">Example Problem: What Does the Bathroom Scale Read in an Elevator?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-dynamics-back-to-kinematics">Connecting Dynamics Back to Kinematics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-what-force-must-a-soccer-player-exert-to-reach-top-speed">Example Problem: What Force Must a Soccer Player Exert to Reach Top Speed?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+format: jb-book
+root: home
+parts:
+- caption: Preamble
+  chapters:
+  - file: Preamble/who-for
+  - file: Preamble/cite-reuse
+  - file: Preamble/computational-writing-primer
+  - file: Preamble/figures-primer
+  - file: Preamble/course-faq
+  - file: Preamble/physics-recruitment.ipynb
+- caption: Unit 1
+  numbered: true
+  maxdepth: 3 
+  chapters:
+  - file: Chapter02/kinematics.ipynb
+  - file: Chapter03/2D-kinematics.ipynb
+  - file: Chapter04/dynamics.ipynb
+  - file: Chapter05/friction-drag-elasticity.ipynb
+- caption: Unit 2
+  numbered: true
+  maxdepth: 3 
+  chapters:
+  - file: Chapter06/circular-motion-gravitation.ipynb
+  - file: Chapter07/work-energy.ipynb
+  - file: Chapter08/momentum-collisions.ipynb
+  - file: Chapter09/statics-torque.ipynb
+- caption: Unit 3
+  numbered: true
+  maxdepth: 3 
+  chapters:
+  - file: Chapter10/rotational-motion.ipynb
+  - file: Chapter11/fluid-statics.ipynb
+  - file: Chapter12/fluid-dynamics.ipynb
+  - file: Chapter13/temperature-gases.ipynb
+- caption: Unit 4
+  numbered: true
+  maxdepth: 3 
+  chapters:
+  - file: Chapter14/heat-transfer.ipynb
+  - file: Chapter15/thermodynamics.ipynb
+  - file: Chapter16/oscillations-waves.ipynb
+  - file: Chapter17/hearing.ipynb
+
+
+
+

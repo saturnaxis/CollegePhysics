@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Friction, Drag, &amp; Elasticity &#8212; College Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/metadata_figure.css?v=2463d4a7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/h5p-resizer.js?v=a3e8b8ed"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter05/friction-drag-elasticity';</script>
+    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
+    <script src="../_static/init-plyr.js?v=bf401924"></script>
+    <script src="../_static/audio-player.js?v=5a953d7a"></script>
+    <link rel="canonical" href="https://saturnaxis.github.io/CollegePhysics/Chapter05/friction-drag-elasticity.html" />
+    <link rel="icon" href="../_static/PHYS1401_logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Circular Motion &amp; Gravitation" href="../Chapter06/circular-motion-gravitation.html" />
+    <link rel="prev" title="3. Dynamics: Force &amp; Newton’s Laws" href="../Chapter04/dynamics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/PHYS1401_logo.png" class="logo__image only-light" alt="College Physics - Home"/>
+    <script>document.write(`<img src="../_static/PHYS1401_logo.png" class="logo__image only-dark" alt="College Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    Welcome to College Physics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who Are These Notes For?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to Cite and Reuse This Material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/computational-writing-primer.html">Writing Primer: Markdown and LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/figures-primer.html">Figures and Graphs Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/course-faq.html">Course FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/physics-recruitment.html">Finding Your Path in Physics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter02/kinematics.html">1. Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter03/2D-kinematics.html">2. 2D Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter04/dynamics.html">3. Dynamics: Force &amp; Newton’s Laws</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Friction, Drag, &amp; Elasticity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter06/circular-motion-gravitation.html">5. Circular Motion &amp; Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter07/work-energy.html">6. Work &amp; Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter08/momentum-collisions.html">7. Momentum &amp; Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter09/statics-torque.html">8. Statics &amp; Torque</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter10/rotational-motion.html">9. Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter11/fluid-statics.html">10. Fluids: Statics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter12/fluid-dynamics.html">11. Fluids: Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter13/temperature-gases.html">12. Kinetic Theory of Gases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter14/heat-transfer.html">13. Heat Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter15/thermodynamics.html">14. Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter16/oscillations-waves.html">15. Oscillations &amp; Waves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter17/hearing.html">16. Hearing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/CollegePhysics/main?urlpath=tree/Chapter05/friction-drag-elasticity.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/CollegePhysics/blob/main/Chapter05/friction-drag-elasticity.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics/issues/new?title=Issue%20on%20page%20%2FChapter05/friction-drag-elasticity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter05/friction-drag-elasticity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Friction, Drag, & Elasticity</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#friction">4.1. Friction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-skiing-exercise">4.1.1. Example Problem: Skiing Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drag-forces">4.2. Drag Forces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-a-terminal-velocity">4.2.1. Example Problem: A Terminal Velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticity-stress-and-strain">4.3. Elasticity: Stress and Strain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.1. Example Problem: The Stretch of a Long Cable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.2. Example Problem: Calculating Deformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.3. Example Problem: Calculating Force Required to Deform</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.4. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">4.4.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">4.4.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">4.4.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="friction-drag-elasticity">
+<h1><span class="section-number">4. </span>Friction, Drag, &amp; Elasticity<a class="headerlink" href="#friction-drag-elasticity" title="Link to this heading">#</a></h1>
+<p>Aug 17, 2026 | 1345 words | 9 min read</p>
+<section id="friction">
+<h2><span class="section-number">4.1. </span>Friction<a class="headerlink" href="#friction" title="Link to this heading">#</a></h2>
+<p><strong>Friction</strong> is a force that opposes relative motion between surfaces in <em>contact</em>, but also allows us to move (e.g., Newton’s third law and traction).  The behavior of friction is complicated and not completely understood, where we rely heavily on observations to infer the nature of friction.  We can deal with its more general characteristics and understand the circumstances in which it behaves.</p>
+<div class="note admonition">
+<p class="admonition-title">Friction</p>
+<p>Friction is a force that opposes relative motion between surfaces in contact.</p>
+</div>
+<p>Friction is parallel to the contact surface between surfaces and always in a direction that opposes motion (or attempted motion) of the systems relative to each other.  There are two categories of friction that we often deal with:</p>
+<ul class="simple">
+<li><p>If two surfaces are in contact and <em>moving</em> relative to one another, then the friction is called <strong>kinetic friction</strong>.  For example, friction slows a hockey puck sliding on ice.</p></li>
+<li><p>When objects are <em>stationary</em>, it is called <strong>static friction</strong>.  The static friction is usually greater than the kinetic friction between the surfaces.  Otherwise there would be movement.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Kinetic Friction</p>
+<p>If two surfaces are in contact and moving relative to one another, then the friction between them is called kinetic friction.</p>
+</div>
+<p>Imagine trying to slide a heavy crate across a concrete floor, where you may push hard and not move it at all.  This means that the static friction responds to what you do; it increases proportionally in magnitude, but in the opposite direction of your push.  We can make some observations regarding the nature of friction from this example:</p>
+<ul class="simple">
+<li><p>If you push hard enough, then the crate seems to slip suddenly and starts to move. Once in motion, it is easier to keep it in motion than it was to get it started, which tells us that the kinetic friction force is less than the static friction force.</p></li>
+<li><p>If you add mass to the crate, you need to push even harder to get it started and keep it moving.  This shows us that the magnitude of your initial push depends on the force <em>perpendicular</em> (i.e., normal) to your push.</p></li>
+<li><p>Furthermore, if you oiled the concrete, you would find it easier to get the crate started and keep it going.  This reveals that friction primarily depends on the resistance to motion at the interface.</p></li>
+</ul>
+<figure class="align-default" id="fig-friction-surfaces">
+<a class="reference internal image-reference" href="../_images/friction_diagram.png"><img alt="Three-panel comparison of friction. Panel a shows a single wooden crate pushed across dry concrete, with a magnified view of the microscopic contact between the rough surfaces. Panel b shows two stacked crates on dry concrete, requiring a larger applied force because of the increased load. Panel c shows a single crate on an oiled concrete surface, requiring a smaller applied force because lubrication reduces the frictional resistance." src="../_images/friction_diagram.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text"><strong>Friction depends on both the load and the surfaces in contact.</strong> (a) A crate pushed across dry concrete experiences a frictional force <span class="math notranslate nohighlight">\(\vec{f}\)</span> opposite the direction of motion or attempted motion. The magnified view shows that even apparently flat surfaces contact one another at microscopic irregularities. (b) Adding a second crate increases the weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> and normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span>, increasing the maximum frictional force and therefore the applied force needed to begin sliding. (c) Lubricating the contact surface reduces the frictional resistance, so a smaller applied force is required to move the crate. The lengths of the arrows are intended to illustrate these relative changes rather than provide a quantitative force scale.</span><a class="headerlink" href="#fig-friction-surfaces" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Figure <a class="reference internal" href="#fig-friction-surfaces"><span class="std std-numref">4.1</span></a> illustrates three scenarios: (a) a single crate on dry concrete, (b) two crates on dry concrete, and (c) a single crate on an oily surface.  The forces shown in each panel illustrate how both the force pressing the surfaces together and the nature of the surfaces affect friction. The close-up in scenario (a) shows that even surfaces that appear smooth are rough on microscopic scales. Consider the following:</p>
+<ul class="simple">
+<li><p>in scenario (a), microscopic high points on the crate and concrete come into contact and can interlock or deform as the crate is pushed. A considerable force can be resisted by friction with no apparent motion.</p></li>
+<li><p>in scenario (b), the harder the surfaces are pushed together, the more force is needed to move them.  Part of the friction is due to the adhesive force between the surface molecules of the crates and the concrete.</p></li>
+<li><p>in scenario (c), the oil allows the crate to slide easier along the concrete.  The oil fills the gap between the surface where the oil molecules flow or rotate more easily, which allows movement to occur readily.  Part of the friction is describe by the behavior of molecules at the surface.</p></li>
+</ul>
+<p>Once an object is moving, there are fewer points of contact (i.e., fewer molecules adhering), so less force is required to keep the object moving. The magnitude of the frictional force depends on the situation, where it can be static (i.e., stationary) or kinetic (moving).</p>
+<div class="note admonition">
+<p class="admonition-title">Magnitude of Static Friction</p>
+<p>When there is no motion between the objects, the <strong>magnitude of static friction</strong> <span class="math notranslate nohighlight">\(f_{\rm s}\)</span> is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1e71e801-502a-49e3-96f9-33ee85610bf9">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-1e71e801-502a-49e3-96f9-33ee85610bf9" title="Permalink to this equation">#</a></span>\[\begin{align}
+f_{\rm s} \leq \mu_{\rm s}N,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_{\rm s}\)</span> is the coefficient of static friction and <span class="math notranslate nohighlight">\(N\)</span> is the magnitude of the normal force (i.e., force perpendicular to the surface).  The <span class="math notranslate nohighlight">\(\leq\)</span> symbol means <em>less than or equal to</em>, implying that static friction can have a minimum and maximum value of <span class="math notranslate nohighlight">\(\mu_{\rm s}N\)</span>.</p>
+</div>
+<p>Static friction is a responsive force that increases proportionally to whatever force is exerted, up to its maximum limit.  Once the applied force exceeds <span class="math notranslate nohighlight">\(f_{\rm s,max}\)</span>, the object will move.  Thus, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2940e2bb-cd92-4db9-a111-0416a88ab17a">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-2940e2bb-cd92-4db9-a111-0416a88ab17a" title="Permalink to this equation">#</a></span>\[\begin{align}
+f_{\rm s,max} = \mu_{\rm s}N.
+\end{align}\]</div>
+<p>Once in motion, the object is opposed by the kinetic friction instead.</p>
+<div class="note admonition">
+<p class="admonition-title">Magnitude of Kinetic Friction</p>
+<p>The magnitude of kinetic friction <span class="math notranslate nohighlight">\(f_{\rm k}\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-306d935c-189e-45d9-88e3-70ea0bbe47d2">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-306d935c-189e-45d9-88e3-70ea0bbe47d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+f_{\rm k} = \mu_k N,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_{\rm k}\)</span> is the coefficient of kinetic friction.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="table-friction-coefficients">
+<caption><span class="caption-number">Table 4.1 </span><span class="caption-text">Coefficients of Static and Kinetic Friction</span><a class="headerlink" href="#table-friction-coefficients" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>System</p></th>
+<th class="head"><p>Static friction <span class="math notranslate nohighlight">\(\mu_s\)</span></p></th>
+<th class="head"><p>Kinetic friction <span class="math notranslate nohighlight">\(\mu_k\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Rubber on dry concrete</p></td>
+<td><p>1.0</p></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rubber on wet concrete</p></td>
+<td><p>0.7</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Wood on wood</p></td>
+<td><p>0.5</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Waxed wood on wet snow</p></td>
+<td><p>0.14</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Metal on wood</p></td>
+<td><p>0.5</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Steel on steel (dry)</p></td>
+<td><p>0.6</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Steel on steel (oiled)</p></td>
+<td><p>0.05</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-odd"><td><p>Teflon on steel</p></td>
+<td><p>0.04</p></td>
+<td><p>0.04</p></td>
+</tr>
+<tr class="row-even"><td><p>Bone lubricated by synovial fluid</p></td>
+<td><p>0.016</p></td>
+<td><p>0.015</p></td>
+</tr>
+<tr class="row-odd"><td><p>Shoes on wood</p></td>
+<td><p>0.9</p></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-even"><td><p>Shoes on ice</p></td>
+<td><p>0.1</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ice on ice</p></td>
+<td><p>0.1</p></td>
+<td><p>0.03</p></td>
+</tr>
+<tr class="row-even"><td><p>Steel on ice</p></td>
+<td><p>0.04</p></td>
+<td><p>0.02</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="example-problem-skiing-exercise">
+<h3><span class="section-number">4.1.1. </span>Example Problem: Skiing Exercise<a class="headerlink" href="#example-problem-skiing-exercise" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="drag-forces">
+<h2><span class="section-number">4.2. </span>Drag Forces<a class="headerlink" href="#drag-forces" title="Link to this heading">#</a></h2>
+<section id="example-problem-a-terminal-velocity">
+<h3><span class="section-number">4.2.1. </span>Example Problem: A Terminal Velocity<a class="headerlink" href="#example-problem-a-terminal-velocity" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="elasticity-stress-and-strain">
+<h2><span class="section-number">4.3. </span>Elasticity: Stress and Strain<a class="headerlink" href="#elasticity-stress-and-strain" title="Link to this heading">#</a></h2>
+<section id="example-problem-the-stretch-of-a-long-cable">
+<h3><span class="section-number">4.3.1. </span>Example Problem: The Stretch of a Long Cable<a class="headerlink" href="#example-problem-the-stretch-of-a-long-cable" title="Link to this heading">#</a></h3>
+</section>
+<section id="example-problem-calculating-deformation">
+<h3><span class="section-number">4.3.2. </span>Example Problem: Calculating Deformation<a class="headerlink" href="#example-problem-calculating-deformation" title="Link to this heading">#</a></h3>
+</section>
+<section id="example-problem-calculating-force-required-to-deform">
+<h3><span class="section-number">4.3.3. </span>Example Problem: Calculating Force Required to Deform<a class="headerlink" href="#example-problem-calculating-force-required-to-deform" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">4.4. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">4.4.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples and <strong>Check Your Understanding</strong> questions on the course webpage provide examples of the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">4.4.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>A rock is thrown straight up. What is the net external force acting on the rock when it is at the top of its trajectory?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Describe a situation in which one system exerts a force on another and, as a consequence, experiences a force that is equal in magnitude and opposite in direction. Which of Newton’s laws of motion apply?</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">4.4.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/CollegePhysics",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Chapter04/dynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Dynamics: Force &amp; Newton’s Laws</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Chapter06/circular-motion-gravitation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Circular Motion &amp; Gravitation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#friction">4.1. Friction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-skiing-exercise">4.1.1. Example Problem: Skiing Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drag-forces">4.2. Drag Forces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-a-terminal-velocity">4.2.1. Example Problem: A Terminal Velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticity-stress-and-strain">4.3. Elasticity: Stress and Strain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.1. Example Problem: The Stretch of a Long Cable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.2. Example Problem: Calculating Deformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.3. Example Problem: Calculating Force Required to Deform</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.4. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">4.4.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">4.4.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">4.4.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+/*********************************************
+* Variables *
+*********************************************/
+:root {
+  --note-title-color: rgba(68,138,255,.1);
+  --note-border-color: #DA1A32;
+  --grey-border-color: #ccc;
+}
+
+/*********************************************
+* Exercise *
+*********************************************/
+div.exercise {
+  border-color: var(--note-border-color);
+  background-color: var(--note-title-color);
+}
+
+div.exercise p.admonition-title {
+  background-color: var(--note-title-color);
+}
+
+/* Remove content box */
+
+/*div.orange p.admonition-title::before {
+  content: "\f303";
+  font-family: 'FontAwesome';
+}*/
+
+/*********************************************
+* Solution *
+*********************************************/
+div.solution{
+  border-color: var(--grey-border-color);
+  background-color: none;
+}
+
+div.solution p.admonition-title {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Remove content box */
+div.solution p.admonition-title::before {
+  content: none;
+}

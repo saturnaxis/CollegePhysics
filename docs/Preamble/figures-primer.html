@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Figures and Graphs Primer &#8212; College Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/metadata_figure.css?v=2463d4a7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/h5p-resizer.js?v=a3e8b8ed"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Preamble/figures-primer';</script>
+    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
+    <script src="../_static/init-plyr.js?v=bf401924"></script>
+    <script src="../_static/audio-player.js?v=5a953d7a"></script>
+    <link rel="canonical" href="https://saturnaxis.github.io/CollegePhysics/Preamble/figures-primer.html" />
+    <link rel="icon" href="../_static/PHYS1401_logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Course FAQ" href="course-faq.html" />
+    <link rel="prev" title="Writing Primer: Markdown and LaTeX" href="computational-writing-primer.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/PHYS1401_logo.png" class="logo__image only-light" alt="College Physics - Home"/>
+    <script>document.write(`<img src="../_static/PHYS1401_logo.png" class="logo__image only-dark" alt="College Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    Welcome to College Physics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="who-for.html">Who Are These Notes For?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cite-reuse.html">How to Cite and Reuse This Material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computational-writing-primer.html">Writing Primer: Markdown and LaTeX</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Figures and Graphs Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="course-faq.html">Course FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics-recruitment.html">Finding Your Path in Physics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter02/kinematics.html">1. Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter03/2D-kinematics.html">2. 2D Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter04/dynamics.html">3. Dynamics: Force &amp; Newton’s Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter05/friction-drag-elasticity.html">4. Friction, Drag, &amp; Elasticity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter06/circular-motion-gravitation.html">5. Circular Motion &amp; Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter07/work-energy.html">6. Work &amp; Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter08/momentum-collisions.html">7. Momentum &amp; Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter09/statics-torque.html">8. Statics &amp; Torque</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter10/rotational-motion.html">9. Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter11/fluid-statics.html">10. Fluids: Statics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter12/fluid-dynamics.html">11. Fluids: Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter13/temperature-gases.html">12. Kinetic Theory of Gases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter14/heat-transfer.html">13. Heat Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter15/thermodynamics.html">14. Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter16/oscillations-waves.html">15. Oscillations &amp; Waves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter17/hearing.html">16. Hearing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/CollegePhysics/main?urlpath=tree/Preamble/figures-primer.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/CollegePhysics/blob/main/Preamble/figures-primer.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics/issues/new?title=Issue%20on%20page%20%2FPreamble/figures-primer.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Preamble/figures-primer.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Figures and Graphs Primer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-graph">Reading a Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slope-and-rate-of-change">Slope and Rate of Change</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-area-on-a-graph">Geometric Area on a Graph</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Mini Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-points-and-model-curves">Data Points and Model Curves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-and-components">Vectors and Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-body-diagrams">Free-Body Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-in-laboratory-work">Figures in Laboratory Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-checklist">Figure Checklist</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="figures-and-graphs-primer">
+<h1>Figures and Graphs Primer<a class="headerlink" href="#figures-and-graphs-primer" title="Link to this heading">#</a></h1>
+<p>Figures are part of physical reasoning. A useful graph, vector diagram, or free-body diagram should make the model easier to understand rather than merely decorate the page.</p>
+<p>This primer focuses on how to <strong>read, draw, and explain</strong> common physics figures. It does not require Python or plotting code.</p>
+<p>In this course, figures are used to:</p>
+<ul class="simple">
+<li><p>define coordinate directions,</p></li>
+<li><p>show vectors and components,</p></li>
+<li><p>display measured data,</p></li>
+<li><p>compare data with a model,</p></li>
+<li><p>interpret slopes and geometric areas,</p></li>
+<li><p>and communicate the physical meaning of a result.</p></li>
+</ul>
+<section id="reading-a-graph">
+<h2>Reading a Graph<a class="headerlink" href="#reading-a-graph" title="Link to this heading">#</a></h2>
+<p>Before interpreting the shape of a graph, identify its basic structure.</p>
+<p>Ask:</p>
+<ol class="arabic simple">
+<li><p>What quantity is shown on the horizontal axis?</p></li>
+<li><p>What quantity is shown on the vertical axis?</p></li>
+<li><p>What units are used?</p></li>
+<li><p>Is the scale uniform?</p></li>
+<li><p>Are the marks measured data, a model curve, or both?</p></li>
+<li><p>What physical question is the graph meant to answer?</p></li>
+</ol>
+<p>A graph of position versus time does not directly show the path through space. It shows how one coordinate changes as time passes.</p>
+<div class="tip admonition">
+<p class="admonition-title">Quick check</p>
+<p>On a graph of velocity <span class="math notranslate nohighlight">\(v\)</span> versus time <span class="math notranslate nohighlight">\(t\)</span>, the horizontal axis has units of seconds and the vertical axis has units of meters per second. Always read the axis labels before describing the graph.</p>
+</div>
+</section>
+<section id="slope-and-rate-of-change">
+<h2>Slope and Rate of Change<a class="headerlink" href="#slope-and-rate-of-change" title="Link to this heading">#</a></h2>
+<p>The slope between two points is</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm slope}=\frac{\Delta y}{\Delta x}.
+\]</div>
+<p>The physical meaning depends on the quantities assigned to the axes.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 34.0%" />
+<col style="width: 28.0%" />
+<col style="width: 38.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Graph</p></th>
+<th class="head"><p>Slope units</p></th>
+<th class="head"><p>Physical meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Position versus time</p></td>
+<td><p><span class="math notranslate nohighlight">\({\rm m/s}\)</span></p></td>
+<td><p>Velocity</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocity versus time</p></td>
+<td><p><span class="math notranslate nohighlight">\({\rm m/s^2}\)</span></p></td>
+<td><p>Acceleration</p></td>
+</tr>
+<tr class="row-even"><td><p>Force versus position</p></td>
+<td><p><span class="math notranslate nohighlight">\({\rm N/m}\)</span></p></td>
+<td><p>How rapidly the force changes with position</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A steeper line has a larger magnitude of slope. A negative slope means the vertical-axis quantity decreases as the horizontal-axis quantity increases.</p>
+<p>For a curved graph, the slope changes from one point to another. In PHYS 1401, you may estimate a local slope by drawing a tangent line or calculate an average slope over a stated interval.</p>
+<section id="mini-exercise">
+<h3>Mini Exercise<a class="headerlink" href="#mini-exercise" title="Link to this heading">#</a></h3>
+<p>A position–time graph passes through <span class="math notranslate nohighlight">\((t,x)=(1.0\ {\rm s},3.0\ {\rm m})\)</span> and <span class="math notranslate nohighlight">\((4.0\ {\rm s},15.0\ {\rm m})\)</span>. Find the average velocity over the interval.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="math notranslate nohighlight">
+\[
+v_{\rm avg}
+=\frac{\Delta x}{\Delta t}
+=\frac{15.0\ {\rm m}-3.0\ {\rm m}}{4.0\ {\rm s}-1.0\ {\rm s}}
+=4.0\ {\rm m/s}.
+\]</div>
+</div>
+</section>
+</section>
+<section id="geometric-area-on-a-graph">
+<h2>Geometric Area on a Graph<a class="headerlink" href="#geometric-area-on-a-graph" title="Link to this heading">#</a></h2>
+<p>In several physics graphs, a geometric area represents a physical quantity.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 38.0%" />
+<col style="width: 28.0%" />
+<col style="width: 34.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Graph</p></th>
+<th class="head"><p>Area units</p></th>
+<th class="head"><p>Physical meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Velocity versus time</p></td>
+<td><p><span class="math notranslate nohighlight">\({\rm m}\)</span></p></td>
+<td><p>Displacement</p></td>
+</tr>
+<tr class="row-odd"><td><p>Force versus time</p></td>
+<td><p><span class="math notranslate nohighlight">\({\rm N\,s}\)</span></p></td>
+<td><p>Impulse</p></td>
+</tr>
+<tr class="row-even"><td><p>Force versus position</p></td>
+<td><p><span class="math notranslate nohighlight">\({\rm N\,m}={\rm J}\)</span></p></td>
+<td><p>Work</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For straight-line segments, areas can often be found using rectangles, triangles, and trapezoids. Areas below the horizontal axis count as negative when the vertical-axis quantity has direction or sign.</p>
+<section id="id1">
+<h3>Mini Exercise<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>An object moves at a constant velocity of <span class="math notranslate nohighlight">\(6.0\ {\rm m/s}\)</span> for <span class="math notranslate nohighlight">\(4.0\ {\rm s}\)</span>. What displacement is represented by the area under the velocity–time graph?</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The graph forms a rectangle:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta x=(6.0\ {\rm m/s})(4.0\ {\rm s})=24\ {\rm m}.
+\]</div>
+</div>
+</section>
+</section>
+<section id="data-points-and-model-curves">
+<h2>Data Points and Model Curves<a class="headerlink" href="#data-points-and-model-curves" title="Link to this heading">#</a></h2>
+<p>Measured values should normally be shown as individual points. A line or smooth curve may represent:</p>
+<ul class="simple">
+<li><p>a theoretical prediction,</p></li>
+<li><p>a best-fit relationship,</p></li>
+<li><p>a guide to the eye,</p></li>
+<li><p>or a connection between sequential measurements.</p></li>
+</ul>
+<p>Do not assume that a smooth curve is measured more precisely than the points. Ask what the curve represents.</p>
+<p>When comparing data with a model, look for:</p>
+<ul class="simple">
+<li><p>the overall trend,</p></li>
+<li><p>systematic departures from the model,</p></li>
+<li><p>unusually scattered points,</p></li>
+<li><p>possible outliers,</p></li>
+<li><p>and whether the scale makes the agreement look better or worse than it is.</p></li>
+</ul>
+<p>A strong explanation does more than say, “The graph goes up.” It identifies the quantities and states the relationship:</p>
+<blockquote>
+<div><p>As time increases, the position increases more rapidly, so the positive slope becomes steeper and the velocity increases.</p>
+</div></blockquote>
+</section>
+<section id="vectors-and-components">
+<h2>Vectors and Components<a class="headerlink" href="#vectors-and-components" title="Link to this heading">#</a></h2>
+<p>A vector diagram should show:</p>
+<ul class="simple">
+<li><p>a labeled coordinate system,</p></li>
+<li><p>a clear tail and arrowhead,</p></li>
+<li><p>the vector label,</p></li>
+<li><p>and components when they are useful.</p></li>
+</ul>
+<p>For a vector <span class="math notranslate nohighlight">\(\vec{A}\)</span> with magnitude <span class="math notranslate nohighlight">\(A\)</span> at an angle <span class="math notranslate nohighlight">\(\theta\)</span> measured counterclockwise from the positive <span class="math notranslate nohighlight">\(x\)</span>-axis,</p>
+<div class="math notranslate nohighlight">
+\[
+A_x=A\cos\theta
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+A_y=A\sin\theta.
+\]</div>
+<p>Signs come from the direction of the components. Do not rely on the trigonometric formula alone; inspect the diagram.</p>
+<p>A vector drawing does not have to be artistic, but it should be large enough to read and consistent with the chosen axes.</p>
+</section>
+<section id="free-body-diagrams">
+<h2>Free-Body Diagrams<a class="headerlink" href="#free-body-diagrams" title="Link to this heading">#</a></h2>
+<p>A free-body diagram isolates one object or system and shows the external forces acting on it.</p>
+<p>A useful free-body diagram should:</p>
+<ol class="arabic simple">
+<li><p>Identify the object being analyzed.</p></li>
+<li><p>Replace the object with a simple dot or box.</p></li>
+<li><p>Draw one arrow for each external force.</p></li>
+<li><p>Label each force by type or source.</p></li>
+<li><p>Choose coordinate axes that simplify the problem.</p></li>
+<li><p>Avoid including velocity or acceleration arrows as though they were forces.</p></li>
+</ol>
+<p>Common force labels include:</p>
+<ul class="simple">
+<li><p>weight, <span class="math notranslate nohighlight">\(\vec{w}=m\vec{g}\)</span>,</p></li>
+<li><p>normal force, <span class="math notranslate nohighlight">\(\vec{N}\)</span>,</p></li>
+<li><p>tension, <span class="math notranslate nohighlight">\(\vec{T}\)</span>,</p></li>
+<li><p>friction, <span class="math notranslate nohighlight">\(\vec{f}\)</span>,</p></li>
+<li><p>spring force, <span class="math notranslate nohighlight">\(\vec{F}_{\rm s}\)</span>,</p></li>
+<li><p>and an applied force, <span class="math notranslate nohighlight">\(\vec{F}_{\rm app}\)</span>.</p></li>
+</ul>
+<p>The length of an arrow may suggest relative magnitude, but exact scale is not required unless the problem requests it.</p>
+</section>
+<section id="figures-in-laboratory-work">
+<h2>Figures in Laboratory Work<a class="headerlink" href="#figures-in-laboratory-work" title="Link to this heading">#</a></h2>
+<p>Laboratory graphs should make the evidence easy to inspect.</p>
+<p>Unless your laboratory instructions specify a different format, include:</p>
+<ul class="simple">
+<li><p>axis labels with quantities and units,</p></li>
+<li><p>readable numerical scales,</p></li>
+<li><p>visible data markers,</p></li>
+<li><p>a legend when more than one dataset or model is shown,</p></li>
+<li><p>uncertainty bars when they are available and relevant,</p></li>
+<li><p>and a caption that explains what the reader should notice.</p></li>
+</ul>
+<p>A caption should identify the plotted quantities and state the main point. It should not merely repeat the axis labels.</p>
+<p>Weak caption:</p>
+<blockquote>
+<div><p>Position versus time.</p>
+</div></blockquote>
+<p>Stronger caption:</p>
+<blockquote>
+<div><p>Position measured at equal time intervals for a cart released from rest. The upward curvature shows that the cart’s speed increased during the run.</p>
+</div></blockquote>
+</section>
+<section id="figure-checklist">
+<h2>Figure Checklist<a class="headerlink" href="#figure-checklist" title="Link to this heading">#</a></h2>
+<p>Before submitting a figure or diagram, check the following:</p>
+<ul class="simple">
+<li><p>Are the axes or coordinate directions labeled?</p></li>
+<li><p>Are units included?</p></li>
+<li><p>Is the scale readable and appropriate?</p></li>
+<li><p>Are vectors and forces labeled clearly?</p></li>
+<li><p>Can the reader distinguish data from a model?</p></li>
+<li><p>Does the caption explain the physical point?</p></li>
+<li><p>Does the text refer to the figure and interpret it?</p></li>
+<li><p>Is the figure large enough to read without excessive zooming?</p></li>
+</ul>
+<p>Figures are evidence. They should make your reasoning easier for another person to follow.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/CollegePhysics",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Preamble"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="computational-writing-primer.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Writing Primer: Markdown and LaTeX</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="course-faq.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Course FAQ</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-a-graph">Reading a Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slope-and-rate-of-change">Slope and Rate of Change</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-area-on-a-graph">Geometric Area on a Graph</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Mini Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-points-and-model-curves">Data Points and Model Curves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors-and-components">Vectors and Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-body-diagrams">Free-Body Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-in-laboratory-work">Figures in Laboratory Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-checklist">Figure Checklist</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

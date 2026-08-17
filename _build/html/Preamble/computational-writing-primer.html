@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Writing Primer: Markdown and LaTeX &#8212; College Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/metadata_figure.css?v=2463d4a7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/h5p-resizer.js?v=a3e8b8ed"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Preamble/computational-writing-primer';</script>
+    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
+    <script src="../_static/init-plyr.js?v=bf401924"></script>
+    <script src="../_static/audio-player.js?v=5a953d7a"></script>
+    <link rel="canonical" href="https://saturnaxis.github.io/CollegePhysics/Preamble/computational-writing-primer.html" />
+    <link rel="icon" href="../_static/PHYS1401_logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Figures and Graphs Primer" href="figures-primer.html" />
+    <link rel="prev" title="How to Cite and Reuse This Material" href="cite-reuse.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/PHYS1401_logo.png" class="logo__image only-light" alt="College Physics - Home"/>
+    <script>document.write(`<img src="../_static/PHYS1401_logo.png" class="logo__image only-dark" alt="College Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    Welcome to College Physics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="who-for.html">Who Are These Notes For?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cite-reuse.html">How to Cite and Reuse This Material</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Writing Primer: Markdown and LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="figures-primer.html">Figures and Graphs Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="course-faq.html">Course FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics-recruitment.html">Finding Your Path in Physics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter02/kinematics.html">1. Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter03/2D-kinematics.html">2. 2D Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter04/dynamics.html">3. Dynamics: Force &amp; Newton’s Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter05/friction-drag-elasticity.html">4. Friction, Drag, &amp; Elasticity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter06/circular-motion-gravitation.html">5. Circular Motion &amp; Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter07/work-energy.html">6. Work &amp; Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter08/momentum-collisions.html">7. Momentum &amp; Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter09/statics-torque.html">8. Statics &amp; Torque</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter10/rotational-motion.html">9. Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter11/fluid-statics.html">10. Fluids: Statics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter12/fluid-dynamics.html">11. Fluids: Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter13/temperature-gases.html">12. Kinetic Theory of Gases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter14/heat-transfer.html">13. Heat Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter15/thermodynamics.html">14. Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter16/oscillations-waves.html">15. Oscillations &amp; Waves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter17/hearing.html">16. Hearing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics/issues/new?title=Issue%20on%20page%20%2FPreamble/computational-writing-primer.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Preamble/computational-writing-primer.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Writing Primer: Markdown and LaTeX</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-in-markdown">Writing in Markdown</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paragraphs-and-line-breaks">Paragraphs and Line Breaks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emphasis">Emphasis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links">Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#block-quotations">Block Quotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-problem-solving-structure">A Problem-Solving Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-with-latex">Mathematics with LaTeX</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-mathematics">Inline Mathematics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#displayed-equations">Displayed Equations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-latex-patterns">Common LaTeX Patterns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subscripts-and-superscripts">Subscripts and Superscripts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractions">Fractions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#square-roots">Square Roots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greek-letters">Greek Letters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-and-scientific-notation">Multiplication and Scientific Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units">Units</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-calculation-clearly">Writing a Calculation Clearly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Mini Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-words-and-equations">Combining Words and Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-to-avoid">Common Mistakes to Avoid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-are-expected-to-know">What You Are Expected to Know</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="writing-primer-markdown-and-latex">
+<h1>Writing Primer: Markdown and LaTeX<a class="headerlink" href="#writing-primer-markdown-and-latex" title="Link to this heading">#</a></h1>
+<p>This short primer introduces the two text-formatting tools used in the source files for this course:</p>
+<ul class="simple">
+<li><p><strong>Markdown</strong> for headings, paragraphs, lists, links, and emphasis</p></li>
+<li><p><strong>LaTeX</strong> for mathematical symbols and equations</p></li>
+</ul>
+<p>This is <strong>not a programming primer</strong>. You are not expected to learn Python or complete coding assignments in PHYS 1401. The purpose of this page is to help you read the course source files and format a clear scientific explanation when Markdown or LaTeX is useful.</p>
+<p>You should return to this page whenever you need a quick formatting reference.</p>
+<hr class="docutils" />
+<section id="writing-in-markdown">
+<h2>Writing in Markdown<a class="headerlink" href="#writing-in-markdown" title="Link to this heading">#</a></h2>
+<p>Markdown is a lightweight way to organize plain text. The symbols remain readable in the source file and are converted into formatted text when the book is built.</p>
+<section id="headings">
+<h3>Headings<a class="headerlink" href="#headings" title="Link to this heading">#</a></h3>
+<p>Use one or more number signs to create headings.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Main Title</span>
+<span class="gu">## Section</span>
+<span class="gu">### Subsection</span>
+</pre></div>
+</div>
+<p>Use headings to organize ideas, not merely to make text larger.</p>
+</section>
+<section id="paragraphs-and-line-breaks">
+<h3>Paragraphs and Line Breaks<a class="headerlink" href="#paragraphs-and-line-breaks" title="Link to this heading">#</a></h3>
+<p>Separate paragraphs with a blank line.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>This is the first paragraph.
+
+This is the second paragraph.
+</pre></div>
+</div>
+<p>A paragraph should usually develop one main idea. In a physics solution, begin a new paragraph when you move from the model to the calculation or from the calculation to the interpretation.</p>
+</section>
+<section id="emphasis">
+<h3>Emphasis<a class="headerlink" href="#emphasis" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="ge">*italic text*</span>
+
+<span class="gs">**bold text**</span>
+</pre></div>
+</div>
+<p>Use italics for light emphasis and bold text for labels or especially important terms. Avoid bolding entire paragraphs.</p>
+</section>
+<section id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
+<p>Use hyphens for an unordered list.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">-</span><span class="w"> </span>Identify the known quantities.
+<span class="k">-</span><span class="w"> </span>Draw a diagram.
+<span class="k">-</span><span class="w"> </span>Choose a physical principle.
+<span class="k">-</span><span class="w"> </span>Solve and interpret the result.
+</pre></div>
+</div>
+<p>Use numbers when the order matters.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> Define the system.
+<span class="k">2.</span> Choose a coordinate direction.
+<span class="k">3.</span> Write the general equation.
+<span class="k">4.</span> Substitute numerical values.
+</pre></div>
+</div>
+</section>
+<section id="links">
+<h3>Links<a class="headerlink" href="#links" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="nt">OpenStax College Physics 2e</span>](<span class="na">https://openstax.org/books/college-physics-2e/pages/preface</span>)
+</pre></div>
+</div>
+<p>Use descriptive link text rather than phrases such as “click here.”</p>
+</section>
+<section id="block-quotations">
+<h3>Block Quotations<a class="headerlink" href="#block-quotations" title="Link to this heading">#</a></h3>
+<p>Use a greater-than sign for a short quotation or highlighted statement.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="k">&gt; </span><span class="ge">A numerical answer is incomplete until its physical meaning is explained.</span>
+</pre></div>
+</div>
+</section>
+<section id="a-problem-solving-structure">
+<h3>A Problem-Solving Structure<a class="headerlink" href="#a-problem-solving-structure" title="Link to this heading">#</a></h3>
+<p>A complete written solution can be organized with Markdown headings.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">### The Problem</span>
+
+State what must be determined.
+
+<span class="gu">### The Model</span>
+
+Describe the system, assumptions, diagram, and physical principle.
+
+<span class="gu">### The Math</span>
+
+Develop the general equation, solve algebraically, and then substitute values with units.
+
+<span class="gu">### The Conclusion</span>
+
+State the result and explain what it means physically.
+</pre></div>
+</div>
+<p>The headings do not replace the explanation. Each section should contain complete thoughts that another person can follow.</p>
+<section id="mini-exercise">
+<h4>Mini Exercise<a class="headerlink" href="#mini-exercise" title="Link to this heading">#</a></h4>
+<p>Write a Markdown subsection titled <strong>Strategy</strong> followed by a numbered list containing three steps for solving a physics problem.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">## Strategy</span>
+
+<span class="k">1.</span> Identify the known and unknown quantities.
+<span class="k">2.</span> Choose the physical principle that connects them.
+<span class="k">3.</span> Solve the equation and check whether the result is reasonable.
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mathematics-with-latex">
+<h2>Mathematics with LaTeX<a class="headerlink" href="#mathematics-with-latex" title="Link to this heading">#</a></h2>
+<p>LaTeX is used to typeset mathematical expressions. In Markdown, mathematics is placed between dollar signs.</p>
+<section id="inline-mathematics">
+<h3>Inline Mathematics<a class="headerlink" href="#inline-mathematics" title="Link to this heading">#</a></h3>
+<p>Use one dollar sign on each side when an expression belongs inside a sentence.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>The average speed is $v_{\rm avg}=d/\Delta t$.
+</pre></div>
+</div>
+<p>Rendered:</p>
+<p>The average speed is <span class="math notranslate nohighlight">\(v_{\rm avg}=d/\Delta t\)</span>.</p>
+</section>
+<section id="displayed-equations">
+<h3>Displayed Equations<a class="headerlink" href="#displayed-equations" title="Link to this heading">#</a></h3>
+<p>Use two dollar signs on each side when an equation should appear on its own line.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$$
+v_{\rm avg}=\frac{d}{\Delta t}.
+$$
+</pre></div>
+</div>
+<p>Rendered:</p>
+<div class="math notranslate nohighlight">
+\[
+v_{\rm avg}=\frac{d}{\Delta t}.
+\]</div>
+<p>Do not use display mathematics for every short symbol. Reserve it for equations that deserve visual emphasis or are part of a calculation.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="common-latex-patterns">
+<h2>Common LaTeX Patterns<a class="headerlink" href="#common-latex-patterns" title="Link to this heading">#</a></h2>
+<section id="subscripts-and-superscripts">
+<h3>Subscripts and Superscripts<a class="headerlink" href="#subscripts-and-superscripts" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$x_0$, $v_f$, $t^2$, and $10^{-3}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(x_0\)</span>, <span class="math notranslate nohighlight">\(v_f\)</span>, <span class="math notranslate nohighlight">\(t^2\)</span>, and <span class="math notranslate nohighlight">\(10^{-3}\)</span>.</p>
+<p>Use braces when a subscript or superscript contains more than one character.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$v_{\rm avg}$ and $a_{\rm net}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(v_{\rm avg}\)</span> and <span class="math notranslate nohighlight">\(a_{\rm net}\)</span>.</p>
+</section>
+<section id="fractions">
+<h3>Fractions<a class="headerlink" href="#fractions" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$\frac{\Delta x}{\Delta t}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(\frac{\Delta x}{\Delta t}\)</span>.</p>
+</section>
+<section id="square-roots">
+<h3>Square Roots<a class="headerlink" href="#square-roots" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$\sqrt{2gh}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(\sqrt{2gh}\)</span>.</p>
+</section>
+<section id="greek-letters">
+<h3>Greek Letters<a class="headerlink" href="#greek-letters" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$\alpha$, $\theta$, $\Delta$, $\omega$, and $\mu$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(\Delta\)</span>, <span class="math notranslate nohighlight">\(\omega\)</span>, and <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+<p>Remember that uppercase and lowercase Greek letters can represent different quantities.</p>
+</section>
+<section id="multiplication-and-scientific-notation">
+<h3>Multiplication and Scientific Notation<a class="headerlink" href="#multiplication-and-scientific-notation" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$F=ma$
+
+$3.2\times10^5\ {\rm m}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(F=ma\)</span> and <span class="math notranslate nohighlight">\(3.2\times10^5\ {\rm m}\)</span>.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">\times</span></code> for scientific notation rather than a lowercase letter x.</p>
+</section>
+<section id="trigonometric-functions">
+<h3>Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$F_x=F\cos\theta$
+
+$F_y=F\sin\theta$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(F_x=F\cos\theta\)</span> and <span class="math notranslate nohighlight">\(F_y=F\sin\theta\)</span>.</p>
+<p>Standard function names such as <code class="docutils literal notranslate"><span class="pre">\sin</span></code>, <code class="docutils literal notranslate"><span class="pre">\cos</span></code>, and <code class="docutils literal notranslate"><span class="pre">\tan</span></code> are typeset upright automatically.</p>
+</section>
+<section id="vectors">
+<h3>Vectors<a class="headerlink" href="#vectors" title="Link to this heading">#</a></h3>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$\vec{F}$, $\vec{v}$, and $\Delta\vec{x}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(\vec{F}\)</span>, <span class="math notranslate nohighlight">\(\vec{v}\)</span>, and <span class="math notranslate nohighlight">\(\Delta\vec{x}\)</span>.</p>
+<p>Use the vector symbol when direction is important. Use an ordinary symbol such as <span class="math notranslate nohighlight">\(F\)</span> for the magnitude.</p>
+</section>
+<section id="units">
+<h3>Units<a class="headerlink" href="#units" title="Link to this heading">#</a></h3>
+<p>Keep units outside fractions and variables when practical.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$v=20\ {\rm m/s}$
+
+$a=9.80\ {\rm m/s^2}$
+</pre></div>
+</div>
+<p>Rendered: <span class="math notranslate nohighlight">\(v=20\ {\rm m/s}\)</span> and <span class="math notranslate nohighlight">\(a=9.80\ {\rm m/s^2}\)</span>.</p>
+<p>A small space, written as <code class="docutils literal notranslate"><span class="pre">\</span> </code>, separates the number from the unit.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="writing-a-calculation-clearly">
+<h2>Writing a Calculation Clearly<a class="headerlink" href="#writing-a-calculation-clearly" title="Link to this heading">#</a></h2>
+<p>A calculation should show the general relationship before numerical substitution.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$$
+v_{\rm avg}=\frac{\Delta x}{\Delta t}.
+$$
+
+Substituting the measured values gives
+
+$$
+v_{\rm avg}
+=\frac{80\ {\rm m}}{4.0\ {\rm s}}
+=20\ {\rm m/s}.
+$$
+</pre></div>
+</div>
+<p>This presentation makes the physical model visible and keeps the units attached to the values.</p>
+<p>For several connected lines, use an aligned environment.</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$$
+\begin{aligned}
+v<span class="ge">_f^2 &amp;= v_</span>0^2+2a\Delta x,\\
+v<span class="ge">_f &amp;= \sqrt{v_</span>0^2+2a\Delta x},\\
+v_f &amp;= 12.4\ {\rm m/s}.
+\end{aligned}
+$$
+</pre></div>
+</div>
+<p>Rendered:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+v_f^2 &amp;= v_0^2+2a\Delta x,\\
+v_f &amp;= \sqrt{v_0^2+2a\Delta x},\\
+v_f &amp;= 12.4\ {\rm m/s}.
+\end{aligned}
+\end{split}\]</div>
+<p>Use alignment to show logical steps, not to hide skipped algebra.</p>
+<section id="id1">
+<h3>Mini Exercise<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Write the equation for the magnitude of a vector with components <span class="math notranslate nohighlight">\(A_x\)</span> and <span class="math notranslate nohighlight">\(A_y\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$$
+A=\sqrt{A_x^2+A_y^2}.
+$$
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="combining-words-and-equations">
+<h2>Combining Words and Equations<a class="headerlink" href="#combining-words-and-equations" title="Link to this heading">#</a></h2>
+<p>Equations should be part of complete sentences.</p>
+<p>Weak:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$$
+F=ma
+$$
+</pre></div>
+</div>
+<p>Stronger:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Newton&#39;s second law relates the net force to the acceleration:
+
+$$
+F_{\rm net}=ma.
+$$
+
+Because the mass is positive, the acceleration points in the same direction as the net force.
+</pre></div>
+</div>
+<p>Punctuation still belongs at the end of an equation when the equation completes a sentence.</p>
+</section>
+<hr class="docutils" />
+<section id="common-mistakes-to-avoid">
+<h2>Common Mistakes to Avoid<a class="headerlink" href="#common-mistakes-to-avoid" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Omitting a closing dollar sign</p></li>
+<li><p>Using a letter x instead of <code class="docutils literal notranslate"><span class="pre">\times</span></code> for multiplication</p></li>
+<li><p>Forgetting braces in expressions such as <code class="docutils literal notranslate"><span class="pre">v_{avg}</span></code></p></li>
+<li><p>Writing units as though they were variables</p></li>
+<li><p>Dropping units during numerical substitution</p></li>
+<li><p>Presenting equations without explaining why they apply</p></li>
+<li><p>Substituting numbers before developing the general relationship</p></li>
+<li><p>Using headings or bold text in place of a real explanation</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="what-you-are-expected-to-know">
+<h2>What You Are Expected to Know<a class="headerlink" href="#what-you-are-expected-to-know" title="Link to this heading">#</a></h2>
+<p>For this course, you should be able to:</p>
+<ul class="simple">
+<li><p>recognize the basic Markdown structure used in the course notes,</p></li>
+<li><p>format headings, lists, emphasis, and links when needed,</p></li>
+<li><p>read common LaTeX expressions,</p></li>
+<li><p>type simple inline and displayed equations,</p></li>
+<li><p>include subscripts, superscripts, fractions, roots, vectors, and units,</p></li>
+<li><p>and combine equations with clear written reasoning.</p></li>
+</ul>
+<p>You are not expected to write computer programs. Markdown and LaTeX are included because they help present physics clearly.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/CollegePhysics",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Preamble"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cite-reuse.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to Cite and Reuse This Material</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="figures-primer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Figures and Graphs Primer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-in-markdown">Writing in Markdown</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headings">Headings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paragraphs-and-line-breaks">Paragraphs and Line Breaks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emphasis">Emphasis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links">Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#block-quotations">Block Quotations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-problem-solving-structure">A Problem-Solving Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-with-latex">Mathematics with LaTeX</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-mathematics">Inline Mathematics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#displayed-equations">Displayed Equations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-latex-patterns">Common LaTeX Patterns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subscripts-and-superscripts">Subscripts and Superscripts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fractions">Fractions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#square-roots">Square Roots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#greek-letters">Greek Letters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-and-scientific-notation">Multiplication and Scientific Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units">Units</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-calculation-clearly">Writing a Calculation Clearly</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Mini Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-words-and-equations">Combining Words and Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-to-avoid">Common Mistakes to Avoid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-are-expected-to-know">What You Are Expected to Know</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
