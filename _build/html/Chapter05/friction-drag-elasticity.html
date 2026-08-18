@@ -503,11 +503,12 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticity-stress-and-strain">4.3. Elasticity: Stress and Strain</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-length-tension-and-compression-elastic-modulus">4.3.1. Changes in Length – Tension and Compression: Elastic Modulus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sideways-stress-shear-modulus">4.3.2. Sideways Stress: Shear Modulus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-volume-bulk-modulus">4.3.3. Changes in Volume: Bulk Modulus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.4. Example Problem: The Stretch of a Long Cable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.5. Example Problem: Calculating Deformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.6. Example Problem: Calculating Force Required to Deform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.2. Example Problem: The Stretch of a Long Cable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-how-much-does-your-leg-shorten">4.3.3. Example Problem: How Much Does Your Leg Shorten?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sideways-stress-shear-modulus">4.3.4. Sideways Stress: Shear Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-a-nail-under-a-shear-load">4.3.5. Example Problem: A Nail Under a Shear Load</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-volume-bulk-modulus">4.3.6. Changes in Volume: Bulk Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-water-compression-at-ocean-depth">4.3.7. Example Problem: Water Compression at Ocean Depth</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.4. Homework</a><ul class="nav section-nav flex-column">
@@ -529,7 +530,18 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="friction-drag-elasticity">
 <h1><span class="section-number">4. </span>Friction, Drag, &amp; Elasticity<a class="headerlink" href="#friction-drag-elasticity" title="Link to this heading">#</a></h1>
-<p>Aug 18, 2026 | 5188 words | 35 min read</p>
+<p>Aug 18, 2026 | 7244 words | 48 min read</p>
+<div class="tip admonition">
+<p class="admonition-title">Chapter roadmap</p>
+<p>This chapter extends Newton’s laws to three common situations: friction between contacting surfaces, drag through fluids, and elastic deformation of materials. The goal is to connect each force model to the physical conditions that determine its magnitude and direction.</p>
+<p>As you read, focus on three questions:</p>
+<ol class="arabic simple">
+<li><p>How do static and kinetic friction depend on the normal force and the surfaces in contact?</p></li>
+<li><p>How does drag depend on an object’s motion through a fluid, and what determines terminal velocity?</p></li>
+<li><p>How do force, geometry, and material properties determine elastic deformation?</p></li>
+</ol>
+<p>The worked examples will use these ideas to model systems ranging from skiers and skydivers to cables, bones, and compressed fluids.</p>
+</div>
 <section id="friction">
 <h2><span class="section-number">4.1. </span>Friction<a class="headerlink" href="#friction" title="Link to this heading">#</a></h2>
 <p><strong>Friction</strong> is a force that opposes relative motion between surfaces in <em>contact</em>, but also allows us to move (e.g., Newton’s third law and traction).  The behavior of friction is complicated and not completely understood, where we rely heavily on observations to infer the nature of friction.  We can deal with its more general characteristics and understand the circumstances in which it behaves.</p>
@@ -563,29 +575,29 @@ document.write(`
 <ul class="simple">
 <li><p>in scenario (a), microscopic high points on the crate and concrete come into contact and can interlock or deform as the crate is pushed. A considerable force can be resisted by friction with no apparent motion.</p></li>
 <li><p>in scenario (b), the harder the surfaces are pushed together, the more force is needed to move them.  Part of the friction is due to the adhesive force between the surface molecules of the crates and the concrete.</p></li>
-<li><p>in scenario (c), the oil allows the crate to slide easier along the concrete.  The oil fills the gap between the surface where the oil molecules flow or rotate more easily, which allows movement to occur readily.  Part of the friction is describe by the behavior of molecules at the surface.</p></li>
+<li><p>in scenario (c), the oil allows the crate to slide easier along the concrete.  The oil fills the gap between the surface where the oil molecules flow or rotate more easily, which allows movement to occur readily.  Part of the friction is described by the behavior of molecules at the surface.</p></li>
 </ul>
 <p>Once an object is moving, there are fewer points of contact (i.e., fewer molecules adhering), so less force is required to keep the object moving. The magnitude of the frictional force depends on the situation, where it can be static (i.e., stationary) or kinetic (moving).</p>
 <div class="note admonition">
 <p class="admonition-title">Magnitude of Static Friction</p>
 <p>When there is no motion between the objects, the <strong>magnitude of static friction</strong> <span class="math notranslate nohighlight">\(f_{\rm s}\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e2c0f8d9-99a2-489a-8bfd-88c4380e1425">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-e2c0f8d9-99a2-489a-8bfd-88c4380e1425" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2bbf525b-890a-4ff6-a13c-9dd95c80b53b">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-2bbf525b-890a-4ff6-a13c-9dd95c80b53b" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_{\rm s} \leq \mu_{\rm s}N,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_{\rm s}\)</span> is the coefficient of static friction and <span class="math notranslate nohighlight">\(N\)</span> is the magnitude of the normal force (i.e., force perpendicular to the surface).  The <span class="math notranslate nohighlight">\(\leq\)</span> symbol means <em>less than or equal to</em>, implying that static friction can have a minimum and maximum value of <span class="math notranslate nohighlight">\(\mu_{\rm s}N\)</span>.</p>
 </div>
 <p>Static friction is a responsive force that increases proportionally to whatever force is exerted, up to its maximum limit.  Once the applied force exceeds <span class="math notranslate nohighlight">\(f_{\rm s,max}\)</span>, the object will move.  Thus, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f54fc174-637d-435c-8840-250da8dbee35">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-f54fc174-637d-435c-8840-250da8dbee35" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-456a5658-1f0e-45e8-9291-3c604ecafdcc">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-456a5658-1f0e-45e8-9291-3c604ecafdcc" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_{\rm s,max} = \mu_{\rm s}N.
 \end{align}\]</div>
 <p>Once in motion, the object is opposed by the kinetic friction instead.</p>
 <div class="note admonition">
 <p class="admonition-title">Magnitude of Kinetic Friction</p>
 <p>The magnitude of kinetic friction <span class="math notranslate nohighlight">\(f_{\rm k}\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e84ebcf-ec0b-40c6-9d1c-2ac7f81433a2">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-7e84ebcf-ec0b-40c6-9d1c-2ac7f81433a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7bf45390-2541-4a63-ad1a-1aa62d9466b6">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-7bf45390-2541-4a63-ad1a-1aa62d9466b6" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_{\rm k} = \mu_k N,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_{\rm k}\)</span> is the coefficient of kinetic friction.</p>
@@ -659,7 +671,7 @@ f_{\rm k} = \mu_k N,
 </tbody>
 </table>
 </div>
-<p>Table <a class="reference internal" href="#table-friction-coefficients"><span class="std std-numref">4.1</span></a> shows typical coefficients of static and kinetic friction for several pairs of surfaces.  Note that the coefficients of kinetic friction are less than their static counterparts.  The values of <span class="math notranslate nohighlight">\(\mu\)</span> are stated to only one digit (or maybe two digits) is an approximate description of friction.</p>
+<p>Table <a class="reference internal" href="#table-friction-coefficients"><span class="std std-numref">4.1</span></a> shows typical coefficients of static and kinetic friction for several pairs of surfaces.  Note that the coefficients of kinetic friction are less than their static counterparts.  The values of <span class="math notranslate nohighlight">\(\mu\)</span> are stated to only one digit (or maybe two digits), indicating that this description of friction is approximate.</p>
 <p>The equations for static and kinetic friction include the dependence on materials and the normal force.  The direction of friction is always opposite that of motion, parallel between objects, and perpendicular to the normal force.  Note that the normal force depends on your coordinate system, which may not be vertically aligned.</p>
 <p>Consider in Figure <a class="reference internal" href="#fig-friction-surfaces"><span class="std std-numref">4.1</span></a>a that the crate has a mass of <span class="math notranslate nohighlight">\(100\ {\rm kg}\)</span>, then the normal force would be equal to the weight,</p>
 <div class="math notranslate nohighlight">
@@ -672,39 +684,102 @@ f_{\rm k} = \mu_k N,
 \[ f_{\rm k} = \mu_{k}N = (0.30)(981\ {\rm N}) = 290\ {\rm N} \]</div>
 <p>would keep it moving at constant speed.  If the floor is lubricated (Fig. <a class="reference internal" href="#fig-friction-surfaces"><span class="std std-numref">4.1</span></a>c), both coefficients are considerably less.  The coefficient of friction (static or kinetic) is a <em>unitless</em> quantity with a magnitude usually between 0 and 1.0.</p>
 <p><em>Friction in your body</em></p>
-<p>Many parts of the body (especially the joints) have much smaller coefficients of friction, which is often <span class="math notranslate nohighlight">\(3-4\times\)</span> less than that of ice.  The knee joint is formed by the lower leg bone (the tibia) and the thighbone (the femur).  The hip is a ball (at the end of the femur) and socket (part of the pelvis)joint.  The ends of the bones in the joint are covered by cartilage, which provides a smooth surface.  The joints also produce synovial fluid that reduces friction and wear.</p>
+<p>Many parts of the body (especially the joints) have much smaller coefficients of friction, which is often <span class="math notranslate nohighlight">\(3-4\times\)</span> less than that of ice.  The knee joint is formed by the lower leg bone (the tibia) and the thighbone (the femur).  The hip is a ball (at the end of the femur) and socket (part of the pelvis) joint.  The ends of the bones in the joint are covered by cartilage, which provides a smooth surface.  The joints also produce synovial fluid that reduces friction and wear.</p>
 <p>A damaged or arthritic joint can be replaced by an artificial joint.  These replacements are made of metals (stainless steel or titanium) or plastic (polyethylene), which also have very small coefficients of friction.</p>
 <p>Other natural lubricants include: saliva in our mouths and mucus found between organs in the body.  These lubricants aid in the swallowing process and allow for our organs to move past each other during heartbeats, breathing, and everyday moving.  Artificial lubricants are used in ultrasonic imaging, where the gel that couples the transducer to the skin also serves to lubricate the surface between the transducer and the skin.  Since the coefficient between the two surfaces is reduced, the transducer moves freely over the skin.</p>
+<section id="example-problem-skiing-exercise">
+<h3><span class="section-number">4.1.1. </span>Example Problem: Skiing Exercise<a class="headerlink" href="#example-problem-skiing-exercise" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Skiing Exercise</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A skier with a mass of <span class="math notranslate nohighlight">\(62\ {\rm kg}\)</span> is sliding down the <span class="math notranslate nohighlight">\(25^\circ\)</span> snowy slope shown below. Find the coefficient of kinetic friction for the skier if the frictional force has a magnitude of <span class="math notranslate nohighlight">\(45\ {\rm N}\)</span>.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-skiing">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/62dedce67e40ad0242d0075a2b55cc5e81b7b2cd"><img alt="A skier moving down a 25-degree incline with a free-body diagram. The normal force is perpendicular to the slope, friction points uphill, and the skier's weight is resolved into components parallel and perpendicular to the slope." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/62dedce67e40ad0242d0075a2b55cc5e81b7b2cd" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">The skier moves along a <span class="math notranslate nohighlight">\(25^\circ\)</span> slope. The normal force is perpendicular to the slope, while kinetic friction acts parallel to the slope and opposite the motion. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-1-friction">OpenStax, College Physics 2e, Figure 5.4</a>.</em></span><a class="headerlink" href="#fig-example-skiing" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the skier as a particle sliding down an incline. Define the <span class="math notranslate nohighlight">\(x\)</span>-axis parallel to the slope with <span class="math notranslate nohighlight">\(+x\)</span> pointing downhill, and define the <span class="math notranslate nohighlight">\(y\)</span>-axis perpendicular to the slope with <span class="math notranslate nohighlight">\(+y\)</span> pointing away from the surface. The skier has no acceleration perpendicular to the slope, so the normal force balances the perpendicular component of the weight. The known quantities are <span class="math notranslate nohighlight">\(m=62\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(\theta=25^\circ\)</span>, and <span class="math notranslate nohighlight">\(f_{\rm k}=45\ {\rm N}\)</span>. The unknown is the coefficient of kinetic friction <span class="math notranslate nohighlight">\(\mu_{\rm k}\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The kinetic-friction model relates the magnitude of the frictional force to the normal force:</p>
+<div class="math notranslate nohighlight">
+\[ f_{\rm k}=\mu_{\rm k}N.\]</div>
+<p class="sd-card-text">To evaluate this relationship, we first need the normal force. Because the skier has no acceleration perpendicular to the slope, Newton’s second law in the <span class="math notranslate nohighlight">\(y\)</span>-direction requires the normal force to balance the perpendicular component of the skier’s weight:</p>
+<div class="math notranslate nohighlight">
+\[ N = mg\cos\theta.\]</div>
+<p class="sd-card-text">Substituting this expression for <span class="math notranslate nohighlight">\(N\)</span> into the kinetic-friction relation and solving for the coefficient of kinetic friction gives</p>
+<div class="math notranslate nohighlight">
+\[ \mu_{\rm k} = \frac{f_{\rm k}}{mg\cos\theta}.\]</div>
+<p class="sd-card-text">The coefficient of kinetic friction then follows directly from the given values:</p>
+<div class="math notranslate nohighlight">
+\[ \mu_{\rm k} = \frac{45\ {\rm N}}{(62\ {\rm kg})(9.80\ {\rm m/s^2})\cos(25^\circ)} = 0.082.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The coefficient of kinetic friction is <span class="math notranslate nohighlight">\(\boxed{\mu_{\rm k}=0.082}.\)</span> This value is somewhat smaller than the typical value listed for waxed wood on wet snow, but coefficients of friction are approximate and vary with surface conditions, so the result is reasonable.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-1-friction">OpenStax, College Physics 2e, Example 5.1</a>.</em></p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Sliding at Constant Speed</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>An object slides down an incline at constant velocity. Show that the coefficient of kinetic friction is related to the incline angle by <span class="math notranslate nohighlight">\(\mu_{\rm k}=\tan\theta\)</span>.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Define the <span class="math notranslate nohighlight">\(x\)</span>-axis along the incline with <span class="math notranslate nohighlight">\(+x\)</span> pointing downhill. Because the object moves at constant velocity, its acceleration is zero and the net force along the slope must vanish. The downhill component of the weight is <span class="math notranslate nohighlight">\(mg\sin\theta\)</span>, while kinetic friction acts uphill. Perpendicular to the slope, <span class="math notranslate nohighlight">\(N=mg\cos\theta\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">Because the object moves at constant velocity, its acceleration is zero. Newton’s second law along the slope therefore requires the downhill component of the weight to balance the uphill kinetic-friction force:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned} mg\sin\theta-f_{\rm k}=0.$\\The kinetic-friction force is $f_{\rm k}=\mu_{\rm k}N$, and the absence of acceleration perpendicular to the slope gives $N=mg\cos\theta$. Replacing both forces in the balance equation produces\\$$ mg\sin\theta=\mu_{\rm k}mg\cos\theta.\end{aligned}\end{align} \]</div>
+<p class="sd-card-text">The common factors <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(g\)</span> cancel from both sides, so solving for the coefficient of kinetic friction gives</p>
+<div class="math notranslate nohighlight">
+\[ \mu_{\rm k}=\frac{\sin\theta}{\cos\theta}=\tan\theta.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">For an object that slides down an incline at constant velocity, <span class="math notranslate nohighlight">\(\boxed{\mu_{\rm k}=\tan\theta}.\)</span> A steeper constant-speed incline therefore corresponds to a larger coefficient of kinetic friction.</p>
+</div>
+</details></div>
+<p><em>Adapted from the <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-1-friction">OpenStax, College Physics 2e, Section 5.1 Take-Home Experiment</a>.</em></p>
 <figure class="align-default" id="fig-microscopic-friction">
 <a class="reference internal image-reference" href="../_images/microscopic_atomic_friction.png"><img alt="Three-panel illustration of the microscopic origin of friction. Panels a and b compare rough surfaces under small and large normal forces, showing that greater normal force produces a larger area of actual contact. Panel c shows an atomic force microscope probe interacting with atoms at a surface, with lateral cantilever deflection used to measure friction." src="../_images/microscopic_atomic_friction.png" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text"><strong>Microscopic origins of friction.</strong> (a) When two rough surfaces are pressed together with a small normal force, they touch only at a few microscopic high points, or <em>asperities</em>, so the actual area of contact is much smaller than the apparent contact area. (b) Increasing the normal force deforms the asperities and increases the area of actual contact, allowing stronger frictional interactions to develop between the surfaces. (c) At the atomic scale, friction arises from interactions between atoms and molecules at the points of contact. These interactions can be studied using an atomic force microscope (AFM), which measures small lateral forces through the deflection of a cantilever as its probe moves across a surface. For a more detailed introduction to AFM and tip–surface interactions, see the <a class="reference external" href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Physical_Methods_in_Chemistry_and_Nano_Science_(Barron)/09%3A_Surface_Morphology_and_Structure/9.02%3A_Atomic_Force_Microscopy_(AFM)">Chemistry LibreTexts discussion of Atomic Force Microscopy</a>.</span><a class="headerlink" href="#fig-microscopic-friction" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text"><strong>Microscopic origins of friction.</strong> (a) When two rough surfaces are pressed together with a small normal force, they touch only at a few microscopic high points, or <em>asperities</em>, so the actual area of contact is much smaller than the apparent contact area. (b) Increasing the normal force deforms the asperities and increases the area of actual contact, allowing stronger frictional interactions to develop between the surfaces. (c) At the atomic scale, friction arises from interactions between atoms and molecules at the points of contact. These interactions can be studied using an atomic force microscope (AFM), which measures small lateral forces through the deflection of a cantilever as its probe moves across a surface. For a more detailed introduction to AFM and tip–surface interactions, see the <a class="reference external" href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Physical_Methods_in_Chemistry_and_Nano_Science_(Barron)/09%3A_Surface_Morphology_and_Structure/9.02%3A_Atomic_Force_Microscopy_(AFM)">Chemistry LibreTexts discussion of Atomic Force Microscopy</a>.</span><a class="headerlink" href="#fig-microscopic-friction" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Figure <a class="reference internal" href="#fig-microscopic-friction"><span class="std std-numref">4.2</span></a> illustrates a macroscopic characteristic of friction and how we measure on surfaces on the atomic scale.  For many dry surfaces, friction is approximately proportional to the normal force but is nearly independent of the <em>apparent</em>, or macroscopic, area of contact. This may seem counterintuitive.</p>
+<p>Figure <a class="reference internal" href="#fig-microscopic-friction"><span class="std std-numref">4.3</span></a> illustrates a macroscopic characteristic of friction and how we measure on surfaces on the atomic scale.  For many dry surfaces, friction is approximately proportional to the normal force but is nearly independent of the <em>apparent</em>, or macroscopic, area of contact. This may seem counterintuitive.</p>
 <p>Even surfaces that appear smooth are rough on microscopic scales, so they actually touch only at small high points called asperities. The combined area of these microscopic contacts (the real area of contact) is only a small fraction of the <em>apparent</em> contact area. Increasing the normal force deforms the asperities and increases the real area of contact. Because frictional interactions occur at these microscopic contacts, the frictional force increases as the <em>real contact area</em> increases.</p>
 <p>The atomic-scale view helps us understand why friction occurs and why rubbing surfaces can produce heat. As two surfaces slide, atoms at their microscopic contact points interact, deform, and vibrate. Some of the mechanical energy of the motion is therefore converted into thermal energy.</p>
-<p>Figure <a class="reference internal" href="#fig-microscopic-friction"><span class="std std-numref">4.2</span></a>c shows how these interactions can be studied with an <strong>atomic force microscope</strong> (AFM). An AFM works somewhat like the needle of a record player: a very small probe moves across the surface and responds to its features. Forces between the probe and the surface cause the cantilever holding the probe to bend. By measuring this deflection, researchers can measure friction at extremely small scales.</p>
-<section id="example-problem-skiing-exercise">
-<h3><span class="section-number">4.1.1. </span>Example Problem: Skiing Exercise<a class="headerlink" href="#example-problem-skiing-exercise" title="Link to this heading">#</a></h3>
+<p>Figure <a class="reference internal" href="#fig-microscopic-friction"><span class="std std-numref">4.3</span></a>c shows how these interactions can be studied with an <strong>atomic force microscope</strong> (AFM). An AFM works somewhat like the needle of a record player: a very small probe moves across the surface and responds to its features. Forces between the probe and the surface cause the cantilever holding the probe to bend. By measuring this deflection, researchers can measure friction at extremely small scales.</p>
 </section>
 </section>
 <section id="drag-forces">
 <h2><span class="section-number">4.2. </span>Drag Forces<a class="headerlink" href="#drag-forces" title="Link to this heading">#</a></h2>
-<p>When an object is moving in a fluid (either a gas or liquid), it experiences a <strong>drag force</strong> that opposes its motion.  You feel the drag force when you move your hand through water or outside your car window when moving a high speed.  You feel the drag move your hand, but the faster you move your hand, the harder it is to move.  You feel a smaller drag force when you tilt your hand so only side goes through the fluid.  You decreased the area that faced the direction of motion.</p>
+<p>When an object is moving in a fluid (either a gas or liquid), it experiences a <strong>drag force</strong> that opposes its motion.  You feel the drag force when you move your hand through water or outside your car window when moving at high speed.  You feel the drag move your hand, but the faster you move your hand, the harder it is to move.  You feel a smaller drag force when you tilt your hand so only the side goes through the fluid.  You decreased the area that faced the direction of motion.</p>
 <p>The drag force is similar to friction in that it always opposes the motion. Unlike simple friction, the drag force is proportional to some function of velocity of the object in that fluid.  It also depends on the shape of the object, its size, and the type of fluid.  For most large objects (e.g., bicyclists, cars, and baseballs not moving slowly), the magnitude of the drag force <span class="math notranslate nohighlight">\(F_{\rm D}\)</span> is proportional to the square of the speed of the object, or <span class="math notranslate nohighlight">\(F_{\rm D} \propto v^2\)</span>.</p>
 <div class="admonition-drag-force admonition">
 <p class="admonition-title">Drag Force</p>
 <p>More generally, we express the drag force mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-185b2c16-cfc0-42d8-8be0-75f8caf17c35">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-185b2c16-cfc0-42d8-8be0-75f8caf17c35" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-24a258b9-8799-4e7f-91dd-723c836eaf34">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-24a258b9-8799-4e7f-91dd-723c836eaf34" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_{\rm D} &amp;= bv^n, \\
 F_{\rm D} &amp;=\frac{1}{2}C\rho A v^2,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the drag coefficient, <span class="math notranslate nohighlight">\(A\)</span> is the area of the object facing the fluid (i.e., perpendicular to the motion), and <span class="math notranslate nohighlight">\(\rho\)</span> is the density of the fluid. When an object is moving at high velocity through air, the magnitude of the drag force is proportional to the square of the speed (or <span class="math notranslate nohighlight">\(n=2\)</span>). For small particles at low speeds in a fluid, the exponent <span class="math notranslate nohighlight">\(n = 1\)</span>.</p>
 </div>
-<p>Athletes and car designers want to reduce the drag force to lower their race times.  “Aerodynamic” shaping of automobile can reduce the drag force and increase your car’s gas mileage.  The value of the drag coefficient <span class="math notranslate nohighlight">\(C\)</span> is determined empirically, usually with the use of a wind tunnel.  The drag coefficient can depend upon velocity, but we assume that it is a constant here.  Table <a class="reference internal" href="#table-drag-coefficients"><span class="std std-numref">4.2</span></a> lists some typical drag coefficients for a variety of objects.  Notice that the drag coefficient is a <em>unitless</em> (or <em>dimensionless</em>) quantity.</p>
+<p>Athletes and car designers want to reduce the drag force to lower their race times.  “Aerodynamic” shaping of an automobile can reduce the drag force and increase your car’s gas mileage.  The value of the drag coefficient <span class="math notranslate nohighlight">\(C\)</span> is determined empirically, usually with the use of a wind tunnel.  The drag coefficient can depend upon velocity, but we assume that it is a constant here.  Table <a class="reference internal" href="#table-drag-coefficients"><span class="std std-numref">4.2</span></a> lists some typical drag coefficients for a variety of objects.  Notice that the drag coefficient is a <em>unitless</em> (or <em>dimensionless</em>) quantity.</p>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="table-drag-coefficients">
 <caption><span class="caption-number">Table 4.2 </span><span class="caption-text">Typical Drag Coefficient Values</span><a class="headerlink" href="#table-drag-coefficients" title="Link to this table">#</a></caption>
 <colgroup>
@@ -758,53 +833,114 @@ F_{\rm D} &amp;=\frac{1}{2}C\rho A v^2,
 </div>
 <p>At highway speeds, over <span class="math notranslate nohighlight">\(50\%\)</span> of the car’s power is generated to overcome air drag.  The most fuel-efficient cruising speed is about <span class="math notranslate nohighlight">\(45-50\ {\rm mph}\)</span> (or <span class="math notranslate nohighlight">\(70-80\ {\rm kph}\)</span>).  During the 1970s oil crisis in the United States, the maximum speeds on highways were set at about <span class="math notranslate nohighlight">\(55\ {\rm mph}\)</span> (or about <span class="math notranslate nohighlight">\(90\ {\rm kph}\)</span>).</p>
 <p>Substantial research is underway in the sporting world to minimize drag, where this includes the design of golf balls, athletic clothing, and even bodysuits.  Innovations by athletes to minimize drag (e.g., shaving their body hair) can slice away milliseconds in a race, which can be the difference between a gold and silver medal.</p>
-<p>Let’s consider the effects of drag forces upon a moving object and the connections to Newton’s second law.  When a skydiver falls through air under the influence of gravity, there is another force action on him, the drag force.  The downward force of gravity remains constant regardless of the velocity at which the person is moving.  As the person’s velocity increases (through acceleration), the magnitude of the drag force increases until the magnitude of the drag force <em>is equal to</em> the gravitational force.  Thus producing a zero net force.</p>
+<p>Let’s consider the effects of drag forces upon a moving object and the connections to Newton’s second law.  When a skydiver falls through air under the influence of gravity, there is another force acting on him, the drag force.  The downward force of gravity remains constant regardless of the velocity at which the person is moving.  As the person’s velocity increases (through acceleration), the magnitude of the drag force increases until the magnitude of the drag force <em>is equal to</em> the gravitational force.  This produces a zero net force.</p>
 <p>A zero net force means that there is no acceleration, as given by Newton’s second law.  At this point, the person’s velocity remains constant and we say the person (or object) has reached the terminal velocity (<span class="math notranslate nohighlight">\(v_{\rm t}\)</span>).  Since <span class="math notranslate nohighlight">\(F_{\rm D}\)</span> is proportional to the speed, a heavier skydiver must go faster for <span class="math notranslate nohighlight">\(F_{\rm D}\)</span> to equal his weight.</p>
 <p>At the terminal velocity, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a50b902-b6d2-487e-b2df-05e582413aa5">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-2a50b902-b6d2-487e-b2df-05e582413aa5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ee83343e-75bf-4b15-9613-1755e31c58e4">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-ee83343e-75bf-4b15-9613-1755e31c58e4" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_{\rm net} &amp;= mg - F_{\rm D} = ma = 0, \\
 F_{\rm D} &amp;= mg.
 \end{align}\]</div>
 <p>Notice that we chose the positive <span class="math notranslate nohighlight">\(y\)</span>-axis to point downwards so that we have <span class="math notranslate nohighlight">\(+g\)</span>.  Drag opposes the motion, which means it points in the opposite (or <span class="math notranslate nohighlight">\(-y\)</span>) direction.  Since we are examining the case with zero net force, we could have made the opposite choice with <span class="math notranslate nohighlight">\(-g\)</span> and <span class="math notranslate nohighlight">\(+F_{\rm D}\)</span> to arrive at the same final result.</p>
 <p>Using the equation for drag force, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-deedc4b7-1227-4999-928f-d48249da2f1a">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-deedc4b7-1227-4999-928f-d48249da2f1a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5f663ddb-fc04-4bdc-aa23-9a788cda7459">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-5f663ddb-fc04-4bdc-aa23-9a788cda7459" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}\rho CA v^2 = mg,
 \end{align}\]</div>
 <p>which we use algebra to solve for the velocity to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6bb91d6f-4230-462a-a107-d53145dccb18">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-6bb91d6f-4230-462a-a107-d53145dccb18" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3644fe66-cd4e-4c18-9068-8b5c1738f04e">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-3644fe66-cd4e-4c18-9068-8b5c1738f04e" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm t} &amp;= \sqrt{\frac{2mg}{\rho CA}}.
 \end{align}\]</div>
 <p>Assume the density of air is <span class="math notranslate nohighlight">\(\rho = 1.21\ {\rm kg/m^3}\)</span>.  A <span class="math notranslate nohighlight">\(75\)</span>-kg skydiver descending headfirst has an area <span class="math notranslate nohighlight">\(A=0.18\ {\rm m^2}\)</span> and a drag coefficient <span class="math notranslate nohighlight">\(C = 0.70\)</span>.  We can find the terminal velocity as</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-v_{\rm t} &amp;= \sqrt{\frac{2(75\ {\rm kg})(9.81\ {\rm m/s^2})}{\left(1.21\ {\rm kg/m^3}\right)\left(0.18\ {\rm m^2}\right)}}, \\
+v_{\rm t} &amp;= \sqrt{\frac{2(75\ {\rm kg})(9.81\ {\rm m/s^2})}{\left(1.21\ {\rm kg/m^3}\right)\left(0.70\right)\left(0.18\ {\rm m^2}\right)}}, \\
 &amp;= 98\ {\rm m/s} = 350\ {\rm kph}.
 \end{align*}\]</div>
 <p>This means a <span class="math notranslate nohighlight">\(75\)</span>-kg skydiver achieves a maximum terminal velocity of about <span class="math notranslate nohighlight">\(350\ {\rm kph}\)</span> while traveling in a headfirst position, which minimizes the area and drag.  In a spread-eagle position, that terminal velocity may decrease to about <span class="math notranslate nohighlight">\(200\ {\rm kph}\)</span> as the area increases.  It decreases even further after the parachute opens.</p>
+<section id="example-problem-a-terminal-velocity">
+<h3><span class="section-number">4.2.1. </span>Example Problem: A Terminal Velocity<a class="headerlink" href="#example-problem-a-terminal-velocity" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: A Terminal Velocity</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Find the terminal velocity of an <span class="math notranslate nohighlight">\(85\ {\rm kg}\)</span> skydiver falling in a spread-eagle position.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the skydiver using quadratic air drag. Define the vertical <span class="math notranslate nohighlight">\(y\)</span>-axis with <span class="math notranslate nohighlight">\(+y\)</span> downward. At terminal velocity the acceleration is zero, so the downward weight and upward drag force have equal magnitudes. We use <span class="math notranslate nohighlight">\(\rho=1.21\ {\rm kg/m^3}\)</span> for the density of air and <span class="math notranslate nohighlight">\(C=1.0\)</span> for a horizontal skydiver. Following the source estimate, the projected area is approximately the product of a <span class="math notranslate nohighlight">\(2\ {\rm m}\)</span> body length and a <span class="math notranslate nohighlight">\(0.35\ {\rm m}\)</span> width.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">At terminal velocity, the skydiver’s acceleration is zero. With downward chosen as the positive direction, Newton’s second law requires the downward weight to balance the upward drag force:</p>
+<div class="math notranslate nohighlight">
+\[ mg-F_{\rm D}=0. \]</div>
+<p class="sd-card-text">For a skydiver moving rapidly through air, the drag-force magnitude is modeled by the quadratic relation</p>
+<div class="math notranslate nohighlight">
+\[ F_{\rm D}=\frac{1}{2}C\rho A v_{\rm t}^2. \]</div>
+<p class="sd-card-text">Setting the drag force equal to the weight and solving symbolically for the terminal speed gives</p>
+<div class="math notranslate nohighlight">
+\[ v_{\rm t}=\sqrt{\frac{2mg}{C\rho A}}. \]</div>
+<p class="sd-card-text">The projected area is estimated from the skydiver’s approximate body dimensions. Using a length of <span class="math notranslate nohighlight">\(2\ {\rm m}\)</span> and a width of <span class="math notranslate nohighlight">\(0.35\ {\rm m}\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[ A=(2\ {\rm m})(0.35\ {\rm m}) = 0.70\ {\rm m^2}. \]</div>
+<p class="sd-card-text">With the projected area known, the terminal speed is</p>
+<div class="math notranslate nohighlight">
+\[ v_{\rm t} = \sqrt{\frac{2(85\ {\rm kg})(9.81\ {\rm m/s^2})}{(1.0)(1.21\ {\rm kg/m^3})(0.70\ {\rm m^2})}} = 44\ {\rm m/s}. \]</div>
+<p class="sd-card-text">To express the same speed in kilometers per hour, we convert the units using <span class="math notranslate nohighlight">\(1\ {\rm m/s} = 3.6\ {\rm kphh}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ 44\ {\rm m/s}\left(\frac{3.6\ {\rm kph}}{1\ {\rm m/s}}\right) \approx 160\ {\rm kph}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The estimated terminal velocity is <span class="math notranslate nohighlight">\(\boxed{v_{\rm t}\approx44\ {\rm m/s}\approx160\ {\rm kph}}.\)</span> The result is lower than the headfirst terminal velocity discussed in the text because the spread-eagle position presents a much larger area to the airflow and therefore produces more drag at a given speed.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-2-drag-forces">OpenStax, College Physics 2e, Example 5.2</a>.</em></p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Coffee Filters and Terminal Velocity</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Identical coffee filters can be nested so that their mass increases while their frontal area and drag coefficient remain approximately unchanged. What relationship should a graph of <span class="math notranslate nohighlight">\(v_{\rm t}^2\)</span> versus mass have once the filters reach terminal velocity?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The filters have the same shape and frontal area, so <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(A\)</span>, and the air density <span class="math notranslate nohighlight">\(\rho\)</span> are treated as constants. At terminal velocity the drag force balances the weight.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">For quadratic drag, the terminal-speed relation is</p>
+<div class="math notranslate nohighlight">
+\[ v_{\rm t}=\sqrt{\frac{2mg}{C\rho A}}. \]</div>
+<p class="sd-card-text">The filters have the same shape and frontal area, so <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span>, and <span class="math notranslate nohighlight">\(A\)</span> remain constant as filters are added. Squaring the terminal-speed relation makes the dependence on mass explicit:</p>
+<div class="math notranslate nohighlight">
+\[ v_{\rm t}^2=\left(\frac{2g}{C\rho A}\right)m. \]</div>
+<h2 class="rubric" id="because-the-factor-in-parentheses-is-constant-for-this-experiment-the-equation-has-the-linear-form-v-rm-t-2-km-therefore-v-rm-t-2-is-directly-proportional-to-the-total-mass-of-the-nested-filters">Because the factor in parentheses is constant for this experiment, the equation has the linear form <span class="math notranslate nohighlight">\(v_{\rm t}^2=Km\)</span>. Therefore, <span class="math notranslate nohighlight">\(v_{\rm t}^2\)</span> is directly proportional to the total mass of the nested filters.</h2>
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">A graph of <span class="math notranslate nohighlight">\(v_{\rm t}^2\)</span> versus <span class="math notranslate nohighlight">\(m\)</span> should be approximately a straight line through the origin. This is why plotting <span class="math notranslate nohighlight">\(v_{\rm t}^2\)</span> rather than <span class="math notranslate nohighlight">\(v_{\rm t}\)</span> provides a direct test of the quadratic-drag model.</p>
+</div>
+</details></div>
+<p><em>Adapted from the <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-2-drag-forces">OpenStax, College Physics 2e, Section 5.2 Take-Home Experiment</a>.</em></p>
 <p>The size of the object that is falling through air affects the drag significantly.  The terminal velocity of a squirrel is much less than for a skydiver, which means that the squirrel can fall from a significant height without injury.</p>
 <p>The drag force follows a different mathematical relationship if the object is very small, is going very slow, or is in a denser medium than air.  Instead it is proportional to just the velocity.  This relationship is given by <strong>Stokes’ law</strong>.</p>
 <div class="note admonition">
 <p class="admonition-title">Stokes’ Law</p>
 <p>Stokes’ law states that the drag force is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cdcf7310-c1f5-490e-b9e8-604d8bb2b201">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-cdcf7310-c1f5-490e-b9e8-604d8bb2b201" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-89a544a7-3804-4626-9873-e0b8bd213d34">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-89a544a7-3804-4626-9873-e0b8bd213d34" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_{\rm s} = 6\pi r\eta v,
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(r\)</span> is the radius of the object, <span class="math notranslate nohighlight">\(\eta\)</span> is the viscosity of the fluid, and <span class="math notranslate nohighlight">\(v\)</span> is the object’s velocity.
-\end{align}</p>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the radius of the object, <span class="math notranslate nohighlight">\(\eta\)</span> is the viscosity of the fluid, and <span class="math notranslate nohighlight">\(v\)</span> is the object’s velocity.</p>
 </div>
-<p>Microorganisms, pollen, and dust particles are small enough so that they can travel unaided only at a constant (terminal) velocity.  Terminal velocities for bacteria (<span class="math notranslate nohighlight">\(r{\sim}1\ {\rm mu m}\)</span>) can be about <span class="math notranslate nohighlight">\(2\ {\rm mu m/s}\)</span>.  To move a greater speed, many bacteria swim using flagella that are powered by little motors embedded in the cell.  Sediment in a lake can move at about <span class="math notranslate nohighlight">\(5\ {\rm mu m/s}\)</span>, so it can take days to reach the bottom of the lake after being deposited on the surface.</p>
+<p>Microorganisms, pollen, and dust particles are small enough so that they can travel unaided only at a constant (terminal) velocity.  Terminal velocities for bacteria (<span class="math notranslate nohighlight">\(r{\sim}1\ \mu{\rm m}\)</span>) can be about <span class="math notranslate nohighlight">\(2\ \mu{\rm m/s}\)</span>.  To move a greater speed, many bacteria swim using flagella that are powered by little motors embedded in the cell.  Sediment in a lake can move at about <span class="math notranslate nohighlight">\(5\ \mu{\rm m/s}\)</span>, so it can take days to reach the bottom of the lake after being deposited on the surface.</p>
 <p>Fish, dolphins, and whales are streamlined in shape to reduce drag forces.  Birds are streamlined, where migratory species have long necks to reduce drag in long flights.  Flocks of birds fly in a V-shape to form a streamlined pattern.</p>
-<section id="example-problem-a-terminal-velocity">
-<h3><span class="section-number">4.2.1. </span>Example Problem: A Terminal Velocity<a class="headerlink" href="#example-problem-a-terminal-velocity" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="elasticity-stress-and-strain">
 <h2><span class="section-number">4.3. </span>Elasticity: Stress and Strain<a class="headerlink" href="#elasticity-stress-and-strain" title="Link to this heading">#</a></h2>
-<p>Some forces affect an object’s shape rather than affecting its motion (e.g., friction and drag).  A change in shape due to the application of forces is a <strong>deformation</strong>.  Even very small forces are are known to cause some deformation.  For small deformations (e.g., for a rubber band or spring), two important characteristics are observed.</p>
+<p>Some forces affect an object’s shape rather than affecting its motion (e.g., friction and drag).  A change in shape due to the application of forces is a <strong>deformation</strong>.  Even very small forces are known to cause some deformation.  For small deformations (e.g., for a rubber band or spring), two important characteristics are observed.</p>
 <ol class="arabic simple">
 <li><p>The object returns to its original shape when the force is removed (i.e., the deformation is elastic).</p></li>
 <li><p>The size of the deformation is proportional to the force (i.e., Hooke’s law is obeyed).</p></li>
@@ -812,42 +948,76 @@ F_{\rm s} = 6\pi r\eta v,
 <div class="note admonition">
 <p class="admonition-title">Hooke’s Law</p>
 <p><strong>Hooke’s law</strong> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e3e7998d-6c21-48ae-bab5-b0fb90327b3c">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-e3e7998d-6c21-48ae-bab5-b0fb90327b3c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ce8924ac-de11-424e-92da-b3538bbdd9d6">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-ce8924ac-de11-424e-92da-b3538bbdd9d6" title="Permalink to this equation">#</a></span>\[\begin{align}
 F &amp;= k\Delta L, \\
 \Delta L &amp;= L - L_0
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta L\)</span> is the change in length (or deformation in 1D) produced by the force <span class="math notranslate nohighlight">\(F\)</span>, <span class="math notranslate nohighlight">\(L_0\)</span> is the rest length, and <span class="math notranslate nohighlight">\(k\)</span> is a proportionality constant that depends on the shape and composition of the object.  If the amount of applied force <span class="math notranslate nohighlight">\(F\)</span> and the proportionality constant based on the material are both known, then we can rearrange this expression to find the change in length</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a83e8f72-1068-418e-951a-4ccaf5b5925c">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-a83e8f72-1068-418e-951a-4ccaf5b5925c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-12949076-fb49-42c0-8961-89d800ea9189">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-12949076-fb49-42c0-8961-89d800ea9189" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta L = \frac{F}{k}.
 \end{align}\]</div>
 <p>Note that the applied force <span class="math notranslate nohighlight">\(F\)</span> will have a sign, where <span class="math notranslate nohighlight">\(\Delta L &gt; 0\)</span> represents an <em>extension</em> while a <span class="math notranslate nohighlight">\(\Delta L &lt; 0\)</span> is a <em>compression</em>.</p>
 </div>
-<p>Hooke’s law can apply to springs and human bone (see Figure <a class="reference internal" href="#fig-hookes-law-deformation"><span class="std std-numref">4.3</span></a>).  For metals or spring, the straight line region in is much larger.  bones are brittle and the elastic region is small and the fracture region is abrupt.  Eventually a large enough stress to the material will cause it to break or fracture.  <strong>Tensile strength</strong> is the breaking stress that will cause permanent deformation or fracture of the material.</p>
+<p>Hooke’s law can apply to springs and human bone (see Figure <a class="reference internal" href="#fig-hookes-law-deformation"><span class="std std-numref">4.4</span></a>).  For metals or springs, the straight line region is much larger.  Bones are brittle and the elastic region is small and the fracture region is abrupt.  Eventually a large enough stress to the material will cause it to break or fracture.  <strong>Tensile strength</strong> is the breaking stress that will cause permanent deformation or fracture of the material.</p>
 <figure class="align-default" id="fig-hookes-law-deformation">
 <a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b1cae2957bab746ebaf065bd43f567509a446c3b"><img alt="Graph of change in length versus applied force. The graph is linear at small forces, curves while the deformation remains elastic, and then enters a region of permanent deformation before fracture." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b1cae2957bab746ebaf065bd43f567509a446c3b" style="width: 75%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text"><strong>Elastic and permanent deformation.</strong> The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> increases with the applied force <span class="math notranslate nohighlight">\(F\)</span>. For small deformations, the relationship is linear and Hooke’s law applies; the slope of this region is <span class="math notranslate nohighlight">\(1/k\)</span>. At larger forces, the relationship becomes nonlinear but can remain elastic, so the object returns to its original length when the force is removed. Beyond the elastic region, the deformation becomes permanent and sufficiently large forces eventually cause fracture. <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax College Physics 2e, Figure 5.11</a>.</span><a class="headerlink" href="#fig-hookes-law-deformation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text"><strong>Elastic and permanent deformation.</strong> The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> increases with the applied force <span class="math notranslate nohighlight">\(F\)</span>. For small deformations, the relationship is linear and Hooke’s law applies; the slope of this region is <span class="math notranslate nohighlight">\(1/k\)</span>. At larger forces, the relationship becomes nonlinear but can remain elastic, so the object returns to its original length when the force is removed. Beyond the elastic region, the deformation becomes permanent and sufficiently large forces eventually cause fracture. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Figure 5.11</a>.</em></span><a class="headerlink" href="#fig-hookes-law-deformation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The proportionality constant <span class="math notranslate nohighlight">\(k\)</span> depends up on a number of factors for the material.  For example, a guitar string made of nylon stretches when it is tightend, and the extension <span class="math notranslate nohighlight">\(\Delta L\)</span> is proportional to the force applied.  Thicker nylon strings (e.g., for an electric bass guitar) and ones made of steel stretch less for the same applied force, implying that they have a larger <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>The proportionality constant <span class="math notranslate nohighlight">\(k\)</span> depends upon a number of factors for the material.  For example, a guitar string made of nylon stretches when it is tightened, and the extension <span class="math notranslate nohighlight">\(\Delta L\)</span> is proportional to the force applied.  Thicker nylon strings (e.g., for an electric bass guitar) and ones made of steel stretch less for the same applied force, implying that they have a larger <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <figure class="align-default" id="fig-string-stiffness">
 <a class="reference internal image-reference" href="../_images/guitar_string_comparison.png"><img alt="Three neon-green guitar or bass strings of the same original length hang from a support and each carry the same weight. The thinnest string stretches the most, the medium string stretches less, and the thickest string stretches the least. Labels indicate the original length L0 and the extension Delta L." src="../_images/guitar_string_comparison.png" style="width: 90%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text"><strong>String thickness and stiffness.</strong> The same downward force (the same hanging weight <span class="math notranslate nohighlight">\(w\)</span>) is applied to three strings of the same original length <span class="math notranslate nohighlight">\(L_0\)</span>, but with different thicknesses. The thinnest string stretches the most, producing the largest extension <span class="math notranslate nohighlight">\(\Delta L\)</span>, while the thickest string stretches the least. This shows that thicker strings have a larger stiffness constant <span class="math notranslate nohighlight">\(k\)</span>, so they deform less under the same applied force. In musical instruments, this is one reason bassists often use thicker strings for lower tunings: the strings remain tighter and can produce a heavier, more aggressive sound.</span><a class="headerlink" href="#fig-string-stiffness" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text"><strong>String thickness and stiffness.</strong> The same downward force (the same hanging weight <span class="math notranslate nohighlight">\(w\)</span>) is applied to three strings of the same original length <span class="math notranslate nohighlight">\(L_0\)</span>, but with different thicknesses. The thinnest string stretches the most, producing the largest extension <span class="math notranslate nohighlight">\(\Delta L\)</span>, while the thickest string stretches the least. This shows that thicker strings have a larger stiffness constant <span class="math notranslate nohighlight">\(k\)</span>, so they deform less under the same applied force. In musical instruments, this is one reason bassists often use thicker strings for lower tunings: the strings remain tighter and can produce a heavier, more aggressive sound.</span><a class="headerlink" href="#fig-string-stiffness" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Rubber Bands in Parallel and Series</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A rubber band stretches <span class="math notranslate nohighlight">\(3\ {\rm cm}\)</span> when a <span class="math notranslate nohighlight">\(100\ {\rm g}\)</span> mass is attached. How far would two identical rubber bands stretch if the same mass were supported (a) by the two bands in parallel and (b) by the two bands tied together in series?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">For small deformations, each rubber band is approximated as obeying Hooke’s law. One band has stiffness <span class="math notranslate nohighlight">\(k\)</span>. Two identical bands in parallel share the load and have an effective stiffness <span class="math notranslate nohighlight">\(2k\)</span>. Two identical bands in series each carry the same force, and their extensions add, giving an effective stiffness <span class="math notranslate nohighlight">\(k/2\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\Delta L_1=3\ {\rm cm}\)</span> be the extension of one rubber band under the force produced by the <span class="math notranslate nohighlight">\(100\ {\rm g}\)</span> mass. Hooke’s law for the single band is therefore</p>
+<div class="math notranslate nohighlight">
+\[ F=k\Delta L_1=k(3\ {\rm cm}).\]</div>
+<p class="sd-card-text">When two identical bands support the mass in parallel, the bands share the load and the effective stiffness becomes <span class="math notranslate nohighlight">\(2k\)</span>. The extension of the parallel combination follows from</p>
+<div class="math notranslate nohighlight">
+\[ F=(2k)\Delta L_{\parallel}. \]</div>
+<p class="sd-card-text">Since the applied force is the same as it was for the single band, equating the two expressions for <span class="math notranslate nohighlight">\(F\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[ \Delta L_{\parallel} =\frac{\Delta L_1}{2} = \frac{3\ {\rm cm}}{2} = 1.5\ {\rm cm}.\]</div>
+<p class="sd-card-text">When the two bands are connected in series, each band carries the same force and the two individual extensions add. The effective stiffness is therefore <span class="math notranslate nohighlight">\(k/2\)</span>, so the total extension satisfies</p>
+<div class="math notranslate nohighlight">
+\[ F=\left(\frac{k}{2}\right)\Delta L_{\rm series}. \]</div>
+<p class="sd-card-text">Comparing this equation with the single-band relation shows that the series combination stretches twice as far:</p>
+<div class="math notranslate nohighlight">
+\[\Delta L_{\rm series} = 2\Delta L_1 = 2(3\ {\rm cm}) = 6\ {\rm cm}. \]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The two parallel bands stretch <span class="math notranslate nohighlight">\(\boxed{1.5\ {\rm cm}},\)</span> while the two bands in series stretch a total of <span class="math notranslate nohighlight">\(\boxed{6\ {\rm cm}}.\)</span>  Putting elastic elements in parallel makes the system stiffer; putting them in series makes the system easier to stretch.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, “Stretch Yourself a Little”</a>.</em></p>
 <section id="changes-in-length-tension-and-compression-elastic-modulus">
 <h3><span class="section-number">4.3.1. </span>Changes in Length – Tension and Compression: Elastic Modulus<a class="headerlink" href="#changes-in-length-tension-and-compression-elastic-modulus" title="Link to this heading">#</a></h3>
-<p>A change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> occurs when the applied force to a ware or rod is parallel to its length <span class="math notranslate nohighlight">\(L_0\)</span>, either stretching (causing tension) or compressing it.</p>
+<p>A change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> occurs when the applied force to a wire or rod is parallel to its length <span class="math notranslate nohighlight">\(L_0\)</span>, either stretching (causing tension) or compressing it.</p>
 <figure class="align-default" id="fig-tension-compression">
 <a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d0a3f05e8d0def89dbb676a8c7ffd9f710e9a700"><img alt="Two-panel diagram of a cylindrical rod under axial forces. Panel a shows tension: equal and opposite pulling forces stretch the rod, increasing its length by Delta L from its original length L0. Panel b shows compression: equal and opposite pushing forces shorten the same rod by Delta L. The rod's cross-sectional area A is labeled." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d0a3f05e8d0def89dbb676a8c7ffd9f710e9a700" style="width: 65%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text"><strong>Tension and compression of a rod.</strong> (a) In <strong>tension</strong>, equal and opposite forces pull on the rod parallel to its length, stretching it by an amount <span class="math notranslate nohighlight">\(\Delta L\)</span> relative to its original length <span class="math notranslate nohighlight">\(L_0\)</span>. (b) In <strong>compression</strong>, equal and opposite forces push inward on the rod, shortening it by <span class="math notranslate nohighlight">\(\Delta L\)</span>. The cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> is used in defining <strong>stress</strong> and <strong>strain</strong>. <em>Image credit: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, <em>College Physics 2e</em>, Figure 5.13</a>.</em></span><a class="headerlink" href="#fig-tension-compression" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text"><strong>Tension and compression of a rod.</strong> (a) In <strong>tension</strong>, equal and opposite forces pull on the rod parallel to its length, stretching it by an amount <span class="math notranslate nohighlight">\(\Delta L\)</span> relative to its original length <span class="math notranslate nohighlight">\(L_0\)</span>. (b) In <strong>compression</strong>, equal and opposite forces push inward on the rod, shortening it by <span class="math notranslate nohighlight">\(\Delta L\)</span>. The cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> is used in defining <strong>stress</strong> and <strong>strain</strong>. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Figure 5.13</a>.</em></span><a class="headerlink" href="#fig-tension-compression" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The change in length (<span class="math notranslate nohighlight">\(\Delta L\)</span>) depends on only a few variables.  The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> is</p>
@@ -857,8 +1027,8 @@ F &amp;= k\Delta L, \\
 <li><p>inversely proportional to the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> of the wire or rod.</p></li>
 </ul>
 <p>For example, a long guitar string will stretch more than a short one, and a thick string will stretch less than a thin one.  We combine all these factors into one equation for <span class="math notranslate nohighlight">\(\Delta L\)</span>:</p>
-<div class="math notranslate nohighlight" id="length-change-eqn">
-<span id="equation-length-change-eqn"></span><span class="eqno">(4.11)<a class="headerlink" href="#length-change-eqn" title="Link to this equation">#</a></span>\[\Delta L = \frac{ F\ L_0}{Y\ A},\]</div>
+<div class="math notranslate nohighlight" id="equation-length-change-eqn">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-length-change-eqn" title="Link to this equation">#</a></span>\[\Delta L = \frac{ F\ L_0}{Y\ A},\]</div>
 <p>where <span class="math notranslate nohighlight">\(F\)</span> is the applied force, <span class="math notranslate nohighlight">\(Y\)</span> is a factor called the <strong>elastic modulus</strong> (or Young’s modulus) that depends on the substance, <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area, and <span class="math notranslate nohighlight">\(L_0\)</span> is the original length.</p>
 <p>Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a> lists values of <span class="math notranslate nohighlight">\(Y\)</span> for several materials, which are approximate averages. Young’s modulus <span class="math notranslate nohighlight">\(Y\)</span> for tension and compression can differ; the table lists averaged values except for bone, which differs significantly in tension and compression.  Young’s moduli are not listed for liquids or gases in Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a> because they cannot be stretched or compressed in only one direction.</p>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="table-elastic-moduli">
@@ -1004,6 +1174,37 @@ F &amp;= k\Delta L, \\
 </tbody>
 </table>
 </div>
+</section>
+<section id="example-problem-the-stretch-of-a-long-cable">
+<h3><span class="section-number">4.3.2. </span>Example Problem: The Stretch of a Long Cable<a class="headerlink" href="#example-problem-the-stretch-of-a-long-cable" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: The Stretch of a Long Cable</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A suspension cable has an unsupported span of <span class="math notranslate nohighlight">\(3020\ {\rm m}\)</span>. Calculate the amount of stretch in the steel cable if its diameter is <span class="math notranslate nohighlight">\(5.6\ {\rm cm}\)</span> and the tension is <span class="math notranslate nohighlight">\(3.0\times10^6\ {\rm N}\)</span>.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the cable as a uniform steel cylinder undergoing a small tensile deformation. Tension is taken as positive, so <span class="math notranslate nohighlight">\(\Delta L&gt;0\)</span>. The known quantities are <span class="math notranslate nohighlight">\(L_0=3020\ {\rm m}\)</span>, <span class="math notranslate nohighlight">\(F=3.0\times10^6\ {\rm N}\)</span>, diameter <span class="math notranslate nohighlight">\(d=5.6\ {\rm cm}\)</span>, and the Young’s modulus of steel <span class="math notranslate nohighlight">\(Y=210\times10^9\ {\rm N/m^2}\)</span>. The unknown is the extension <span class="math notranslate nohighlight">\(\Delta L\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The axial deformation of a uniform cable is related to the applied tension, original length, Young’s modulus, and cross-sectional area by</p>
+<div class="math notranslate nohighlight">
+\[ \Delta L=\frac{FL_0}{YA}. \]</div>
+<p class="sd-card-text">Before using this relation, we need the cable’s cross-sectional area. A diameter of <span class="math notranslate nohighlight">\(5.6\ {\rm cm}\)</span> corresponds to a radius of <span class="math notranslate nohighlight">\(r=2.8\ {\rm cm}=2.8\times10^{-2}\ {\rm m}\)</span>, so the area is</p>
+<div class="math notranslate nohighlight">
+\[ A=\pi r^2 = \pi(2.8 \times 10^{-2}\ {\rm m})^2 = 2.46\times10^{-3}\ {\rm m^2}. \]</div>
+<p class="sd-card-text">With the geometry known, the extension follows by inserting the tension, original length, Young’s modulus of steel, and cross-sectional area into the deformation equation:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta L = \frac{ (3.0\times10^6\ {\rm N})(3020\ {\rm m})}{(210\times10^9\ {\rm N/m^2})(2.46\times10^{-3}\ {\rm m^2})} \approx 18\ {\rm m}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The cable stretches by approximately <span class="math notranslate nohighlight">\(\boxed{\Delta L\approx18\ {\rm m}}.\)</span>  Although <span class="math notranslate nohighlight">\(18\ {\rm m}\)</span> sounds large, it is only about <span class="math notranslate nohighlight">\(0.6\%\)</span> of the unsupported span. For a cable this long, temperature-dependent expansion and contraction can also become important.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Example 5.3</a>.</em></p>
 <div class="note admonition">
 <p class="admonition-title">Elasticity in Your Body</p>
 <p>Bones do not fracture due to tension or compression, where they generally fracture due to <em>sideways impact</em> or <em>bending</em>, resulting in the bone shearing or snapping.  The behavior of bones under tension and compression helps determine the load the bones can carry.  Bones are classified as weight-bearing structures (e.g., columns in buildings or trees).  Weight-bearing structures usually have support structures where columns in building have steel-reinforcing rods, but
@@ -1014,22 +1215,53 @@ trees and bones are fibrous.  The bones in different parts of the body have diff
 <a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/2bdf3779ff58cbb6cd967697e180e8267c642f73"><img alt="Stress-strain curve for a mammalian tendon. At small strain, the curve passes through a toe region where tendon fibers straighten and align. This is followed by a nearly linear region in which stress increases approximately proportionally with strain, and finally a failure region where individual fibers begin to break." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/2bdf3779ff58cbb6cd967697e180e8267c642f73" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text"><strong>Stress–strain behavior of a tendon.</strong> A tendon does not behave like an ideal Hooke’s-law material over its entire range of deformation. At small strains, the collagen fibers begin to straighten and align in the <strong>toe region</strong>. This is followed by a <strong>linear region</strong>, where stress increases approximately proportionally with strain. At still larger strains, individual fibers begin to break and the tendon enters the <strong>failure region</strong> *Image credit: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, <em>College Physics 2e</em>, Figure 5.15</a>. *</span><a class="headerlink" href="#fig-tendon-stress-strain" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text"><strong>Stress–strain behavior of a tendon.</strong> A tendon does not behave like an ideal Hooke’s-law material over its entire range of deformation. At small strains, the collagen fibers begin to straighten and align in the <strong>toe region</strong>. This is followed by a <strong>linear region</strong>, where stress increases approximately proportionally with strain. At still larger strains, individual fibers begin to break and the tendon enters the <strong>failure region</strong>. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Figure 5.15</a>.</em></span><a class="headerlink" href="#fig-tendon-stress-strain" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In the first part of the stretch curve called the toe region, the fibers in the tendon begin to align in the direction of the stress, or <em>uncrimping</em>.  In the linear region, the fibrils (smaller structural units that make up the larger fibers) will be stretched.  In the failure regions, individual fibers begin to break.</p>
-<p>A simple model of this relationship uses springs in parallel: different springs are activate at different lengths of stretch. Ligaments (tissue connecting bone to bone) behave in a similar way.</p>
+<p>In the first part of the stretch curve called the toe region, the fibers in the tendon begin to align in the direction of the stress, or <em>uncrimping</em>.  In the linear region, the fibrils (smaller structural units that make up the larger fibers) will be stretched.  In the failure region, individual fibers begin to break.</p>
+<p>A simple model of this relationship uses springs in parallel: different springs are activated at different lengths of stretch. Ligaments (tissue connecting bone to bone) behave in a similar way.</p>
 <p>Unlike bones and tendons, the arteries and lungs need to be very stretchable.  The elastic properties of the arteries are essential for blood flow.  The pressure in the arteries increases and arterial walls stretch when the blood is pumped out of the heart.  When you are feeling your pulse, you are feeling the elastic behavior of the arteries as the blood gushes through with each pump of your heart.</p>
 <p>The lungs expand with muscular effort when we breathe in but relax freely and elastically when we breathe out.  Our skins are particularly elastic, especially for the young.  A young person can go from <span class="math notranslate nohighlight">\(100\ {\rm kg}\)</span> to <span class="math notranslate nohighlight">\(60\ {\rm kg}\)</span> with no visible sag in their skins.  The elasticity of all organs reduces with age.</p>
 </div>
+</section>
+<section id="example-problem-how-much-does-your-leg-shorten">
+<h3><span class="section-number">4.3.3. </span>Example Problem: How Much Does Your Leg Shorten?<a class="headerlink" href="#example-problem-how-much-does-your-leg-shorten" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Deformation—How Much Does Your Leg Shorten When You Stand on It?</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Calculate the change in length of the femur when a <span class="math notranslate nohighlight">\(70\ {\rm kg}\)</span> person supports <span class="math notranslate nohighlight">\(62\ {\rm kg}\)</span> of their mass on it. Model the femur as a uniform rod <span class="math notranslate nohighlight">\(40\ {\rm cm}\)</span> long and <span class="math notranslate nohighlight">\(2.0\ {\rm cm}\)</span> in radius.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the femur as a uniform rod under compression. We use the convention that tensile deformation is positive and compressive deformation is negative, so the axial force and <span class="math notranslate nohighlight">\(\Delta L\)</span> are negative in this problem. The supported mass is <span class="math notranslate nohighlight">\(62\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(L_0=0.40\ {\rm m}\)</span>, <span class="math notranslate nohighlight">\(r=0.020\ {\rm m}\)</span>, and the compression value of Young’s modulus for bone is <span class="math notranslate nohighlight">\(Y=9\times10^9\ {\rm N/m^2}\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The force compressing the femur is the weight supported by that leg. With tensile deformation defined as positive, compression is negative, so the axial force is</p>
+<div class="math notranslate nohighlight">
+\[ F=-mg. \]</div>
+<p class="sd-card-text">The femur is modeled as a uniform cylinder, so its cross-sectional area is determined from its radius: <span class="math notranslate nohighlight">\(A=\pi r^2.\)</span>  For a uniform rod undergoing axial deformation, Young’s modulus relates the signed change in length to the applied force through</p>
+<div class="math notranslate nohighlight">
+\[ \Delta L = \frac{FL_0}{YA}. \]</div>
+<p class="sd-card-text">Using the compression value of Young’s modulus for bone and substituting the known quantities gives</p>
+<div class="math notranslate nohighlight">
+\[ \Delta L= \frac{-(62\ {\rm kg})(9.81\ {\rm m/s^2})(0.40\ {\rm m})}{(9 \times 10^9\ {\rm N/m^2}) \pi (0.020\ {\rm m})^2} = -2.1\times10^{-5}\ {\rm m}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The femur shortens by approximately <span class="math notranslate nohighlight">\(\boxed{\Delta L=-2.1\times10^{-5}\ {\rm m}},\)</span> or about <span class="math notranslate nohighlight">\(0.02\ {\rm mm}\)</span>. The negative sign indicates compression. The very small deformation is consistent with our experience that bone is relatively rigid.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Example 5.4</a>.</em></p>
 <p>The equation for change in length can be rearranged into the following form to define the <strong>stress</strong> (measured in <span class="math notranslate nohighlight">\(\rm N/m^2\)</span>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a6daabf-2fc1-4032-8393-6d446d293e62">
-<span class="eqno">(4.12)<a class="headerlink" href="#equation-1a6daabf-2fc1-4032-8393-6d446d293e62" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5b7e1972-1b9e-4bfd-a6d7-f35329c59cd0">
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-5b7e1972-1b9e-4bfd-a6d7-f35329c59cd0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{stress} = \frac{F}{A} = Y\frac{\Delta L}{L_0},
 \end{align}\]</div>
 <p>where the ratio of the change in length is defined as the <strong>strain</strong> (a unitless quantity):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c8f7734-2ed4-4e10-ab8b-3726dd40494c">
-<span class="eqno">(4.13)<a class="headerlink" href="#equation-7c8f7734-2ed4-4e10-ab8b-3726dd40494c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe5b71bf-beae-4179-9af5-f69fad85da63">
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-fe5b71bf-beae-4179-9af5-f69fad85da63" title="Permalink to this equation">#</a></span>\[\begin{align}
 \text{stress} = Y \times \text{strain}.
 \end{align}\]</div>
 <p>In this form, the equation is analogous to Hooke’s law, with stress analogous to force and strain analogous to deformation.  We can see this through rearranging to get:</p>
@@ -1037,55 +1269,129 @@ trees and bones are fibrous.  The bones in different parts of the body have diff
 \[\begin{align*}
 F &amp;= \left(\frac{YA}{L_0}\right)\Delta L,
 \end{align*}\]</div>
-<p>where we can replaced the fraction in parentheses as <span class="math notranslate nohighlight">\(k = \frac{YA}{L_0}\)</span>.</p>
+<p>where we can replace the fraction in parentheses as <span class="math notranslate nohighlight">\(k = \frac{YA}{L_0}\)</span>.</p>
 </section>
 <section id="sideways-stress-shear-modulus">
-<h3><span class="section-number">4.3.2. </span>Sideways Stress: Shear Modulus<a class="headerlink" href="#sideways-stress-shear-modulus" title="Link to this heading">#</a></h3>
-<p>Unlike tension and compression (which occurs parallel to the <span class="math notranslate nohighlight">\(L_0\)</span>), a <em>shearing force</em> is a sideways stress that is perpendicular to <span class="math notranslate nohighlight">\(L_0\)</span>.  Here the deformation is called <span class="math notranslate nohighlight">\(\delta x\)</span>.  Shear deformation behaves similarly to tension and compression.  Therefore, the expression for <strong>shear deformation</strong> <span class="math notranslate nohighlight">\(\delta x\)</span> is a similar equation.</p>
+<h3><span class="section-number">4.3.4. </span>Sideways Stress: Shear Modulus<a class="headerlink" href="#sideways-stress-shear-modulus" title="Link to this heading">#</a></h3>
+<p>Unlike tension and compression (which occur parallel to <span class="math notranslate nohighlight">\(L_0\)</span>), a <em>shearing force</em> is a sideways stress that is perpendicular to <span class="math notranslate nohighlight">\(L_0\)</span>.  Here the deformation is called <span class="math notranslate nohighlight">\(\Delta x\)</span>.  Shear deformation behaves similarly to tension and compression.  Therefore, the expression for <strong>shear deformation</strong> <span class="math notranslate nohighlight">\(\Delta x\)</span> is a similar equation.</p>
 <div class="admonition-shear-deformation admonition">
 <p class="admonition-title">Shear Deformation</p>
 <p>The shear deformation is given mathematically by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e08b5250-f5f4-4386-ba1b-556c26331c30">
-<span class="eqno">(4.14)<a class="headerlink" href="#equation-e08b5250-f5f4-4386-ba1b-556c26331c30" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-84ba80a2-6509-42e7-8fc3-bf02ca14bf08">
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-84ba80a2-6509-42e7-8fc3-bf02ca14bf08" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta x = \left(\frac{1}{S}\right)\left(\frac{F}{A}\right) L_0,
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(S\)</span> is the shear modulus (see Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a>).  The force <span class="math notranslate nohighlight">\(F\)</span> is applied perpendicular to <span class="math notranslate nohighlight">\(L_0\)</span> and parallel to the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>.  To keep the object from accelerating, there are actually two equal and opposite forces (see Figure <a class="reference internal" href="#fig-shear-deformation"><span class="std std-numref">4.7</span></a>).</p>
+<p>where <span class="math notranslate nohighlight">\(S\)</span> is the shear modulus (see Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a>).  The force <span class="math notranslate nohighlight">\(F\)</span> is applied perpendicular to <span class="math notranslate nohighlight">\(L_0\)</span> and parallel to the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>.  To keep the object from accelerating, there are actually two equal and opposite forces (see Figure <a class="reference internal" href="#fig-shear-deformation"><span class="std std-numref">4.8</span></a>).</p>
 </div>
 <figure class="align-default" id="fig-shear-deformation">
 <a class="reference internal image-reference" href="../_images/shear_diagram.png"><img alt="Two-panel diagram illustrating shear deformation. Panel a shows an undeformed rectangular block with height L0 and top surface area A. Panel b shows the same block after shear deformation. Opposing horizontal forces act on the top and bottom surfaces, producing a horizontal displacement Delta x of the top surface while the dashed outline indicates the original shape." src="../_images/shear_diagram.png" style="width: 90%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text"><strong>Shear deformation.</strong> (a) Before deformation, the material has height <span class="math notranslate nohighlight">\(L_0\)</span> and a surface area <span class="math notranslate nohighlight">\(A\)</span> over which a force can act. (b) Equal and opposite forces applied parallel to the surfaces produce a <strong>shear deformation</strong>, shifting the top of the material horizontally by <span class="math notranslate nohighlight">\(\Delta x\)</span> relative to the bottom. The dashed outline shows the original, undeformed shape.</span><a class="headerlink" href="#fig-shear-deformation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text"><strong>Shear deformation.</strong> (a) Before deformation, the material has height <span class="math notranslate nohighlight">\(L_0\)</span> and a surface area <span class="math notranslate nohighlight">\(A\)</span> over which a force can act. (b) Equal and opposite forces applied parallel to the surfaces produce a <strong>shear deformation</strong>, shifting the top of the material horizontally by <span class="math notranslate nohighlight">\(\Delta x\)</span> relative to the bottom. The dashed outline shows the original, undeformed shape.</span><a class="headerlink" href="#fig-shear-deformation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><em>Applications of shear to the body</em></p>
 <p>The spinal column provides the main support for the head and upper part of the body.  The spinal column has normal curvature for stability, but this curvature can be increased which leads to increased shearing forces on the lower vertebrae.  Discs are better at withstanding compressional forces than shear forces.  Because the spine is not vertical, the weight of the upper body exerts some of both (shear and compression forces).</p>
-<p>Pregnant women and people with large abdomens need to move their shoulders back to maintain balance, which increases the curvature in their spin and also increases the shear component of the stress.  An increased angle due to more curvature increases the shear forces along the plane.  These higher shear forces increase the risk of back injury through ruptured discs.</p>
+<p>Pregnant women and people with large abdomens need to move their shoulders back to maintain balance, which increases the curvature in their spine and also increases the shear component of the stress.  An increased angle due to more curvature increases the shear forces along the plane.  These higher shear forces increase the risk of back injury through ruptured discs.</p>
 <p><em>Application of shear to structures</em></p>
-<p>The shear moduli for concrete and brick are very small, where the are too highly variable to be listed.  Concrete used in buildings can withstand compression (e.g., in pillars and arches), but is very poor against the shear encountered in heavily flooded floors or during earthquakes.  Modern structures use steel and steel-reinforced concrete to mitigate the shear forces during these events.  By definition, liquids and gases have shear moduli near zero because they flow in response to shearing forces.</p>
+<p>The shear moduli for concrete and brick are very small, where they are too highly variable to be listed.  Concrete used in buildings can withstand compression (e.g., in pillars and arches), but is very poor against the shear encountered in heavily loaded floors or during earthquakes.  Modern structures use steel and steel-reinforced concrete to mitigate the shear forces during these events.  By definition, liquids and gases have shear moduli near zero because they flow in response to shearing forces.</p>
+</section>
+<section id="example-problem-a-nail-under-a-shear-load">
+<h3><span class="section-number">4.3.5. </span>Example Problem: A Nail Under a Shear Load<a class="headerlink" href="#example-problem-a-nail-under-a-shear-load" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Force Required to Deform—That Nail Does Not Bend Much Under a Load</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Find the mass of the picture hanging from the steel nail shown below if the nail bends by only <span class="math notranslate nohighlight">\(1.80\ \mu{\rm m}\)</span>. Assume the shear modulus is known to two significant figures.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-nail-shear">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/3028d78f9f9d80f035bb4899cf8aa798d3befa79"><img alt="Side view of a nail supporting a picture. The nail has diameter 1.50 millimeters, an exposed length of 5.00 millimeters, and a shear deformation of 1.80 micrometers. Equal and opposite vertical forces act on the nail." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/3028d78f9f9d80f035bb4899cf8aa798d3befa79" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">The nail is loaded in shear by the picture’s weight. The figure provides the nail diameter, the effective length <span class="math notranslate nohighlight">\(L_0\)</span>, and the small shear displacement <span class="math notranslate nohighlight">\(\Delta x\)</span>. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Figure 5.17</a>.</em></span><a class="headerlink" href="#fig-example-nail-shear" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The downward force exerted by the picture is its weight <span class="math notranslate nohighlight">\(mg\)</span>. The wall exerts an equal and opposite force on the nail, producing shear. The figure gives a nail diameter of <span class="math notranslate nohighlight">\(1.50\ {\rm mm}\)</span>, so <span class="math notranslate nohighlight">\(r=0.750\ {\rm mm}\)</span>, an effective length <span class="math notranslate nohighlight">\(L_0=5.00\ {\rm mm}\)</span>, and a shear displacement <span class="math notranslate nohighlight">\(\Delta x=1.80\ \mu{\rm m}\)</span>. For steel, <span class="math notranslate nohighlight">\(S=80\times10^9\ {\rm N/m^2}\)</span>. The unknown is the picture’s mass.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The shear-deformation relation connects the sideways displacement <span class="math notranslate nohighlight">\(\Delta x\)</span> to the shear force, the material’s shear modulus, the cross-sectional area, and the effective length of the nail:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta x=\frac{1}{S}\frac{F}{A}L_0. \]</div>
+<p class="sd-card-text">The unknown in this problem is ultimately the picture’s mass, so we first solve the shear relation for the force:</p>
+<div class="math notranslate nohighlight">
+\[ F=\frac{SA}{L_0}\Delta x. \]</div>
+<p class="sd-card-text">The nail has a radius of <span class="math notranslate nohighlight">\(0.750\ {\rm mm}=0.750 \times 10^{-3}\ {\rm m}\)</span>. Its circular cross-sectional area is therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+A &amp;= \pi r^2, \\
+  &amp;= \pi(0.750 \times 10^{-3}\ {\rm m})^2 = 1.77 \times 10^{-6}\ {\rm m^2}.
+\end{align*}\]</div>
+<p class="sd-card-text">Using the shear modulus of steel together with the nail’s area, effective length, and measured displacement gives the shear force:</p>
+<div class="math notranslate nohighlight">
+\[ F= \frac{(80\times10^9\ {\rm N/m^2})(1.77\times10^{-6}\ {\rm m^2})}{5.00 \times 10^{-3}\ {\rm m}} (1.80 \times 10^{-6}\ {\rm m}) \approx 51\ {\rm N}.\]</div>
+<p class="sd-card-text">This shear force is produced by the picture’s weight, so <span class="math notranslate nohighlight">\(F=mg\)</span>. Solving for the mass gives</p>
+<div class="math notranslate nohighlight">
+\[ m=\frac{F}{g} = \frac{51\ {\rm N}}{9.81\ {\rm m/s^2}} = 5.2\ {\rm kg}. \]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The picture has a mass of approximately <span class="math notranslate nohighlight">\(\boxed{m=5.2\ {\rm kg}}.\)</span> This is a fairly massive picture, yet the nail flexes by only <span class="math notranslate nohighlight">\(1.80\ \mu{\rm m}\)</span>, a displacement far too small to see with the unaided eye.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Example 5.5</a>.</em></p>
 </section>
 <section id="changes-in-volume-bulk-modulus">
-<h3><span class="section-number">4.3.3. </span>Changes in Volume: Bulk Modulus<a class="headerlink" href="#changes-in-volume-bulk-modulus" title="Link to this heading">#</a></h3>
-<p>An object will be compressed in all directions if inward forces are evenly applied on all its surfaces.  Gases are more easily compressed than liquids or solids.  The reason for these different compressibilities is that atoms and molecules are separated by large empty spaces in gases but packed close together in liquids and solids.  You must actually compress their atoms and molecules, as well as the very strong electromagnetic forces in them that opposes this compression.</p>
-<p>We describe the compression (or volume deformation) of an object mathematically following the form in Eqn. <a class="reference internal" href="#equation-length-change-eqn">()</a>.  Since the force is applied evenly to all sides, they have the same stress on all surfaces.  The deformation produced is a change in volume <span class="math notranslate nohighlight">\(\Delta V\)</span> instead, which behaves similarly to the shear, tension, and compression.  The relationship of the change in volume to other physical quantities is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f3f1da80-3fe3-4813-aa26-de7b8a683ff1">
-<span class="eqno">(4.15)<a class="headerlink" href="#equation-f3f1da80-3fe3-4813-aa26-de7b8a683ff1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<h3><span class="section-number">4.3.6. </span>Changes in Volume: Bulk Modulus<a class="headerlink" href="#changes-in-volume-bulk-modulus" title="Link to this heading">#</a></h3>
+<p>An object will be compressed in all directions if inward forces are evenly applied on all its surfaces.  Gases are more easily compressed than liquids or solids.  The reason for these different compressibilities is that atoms and molecules are separated by large empty spaces in gases but packed close together in liquids and solids.  You must actually compress their atoms and molecules, as well as the very strong electromagnetic forces in them that oppose this compression.</p>
+<figure class="align-default" id="fig-bulk-compression">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/03ab3d7bca387b142f226ea8b62e550b7a65a9e1"><img alt="A cube is compressed by inward forces applied uniformly to all of its faces. The original volume and the smaller compressed volume are shown, along with a representative surface area A." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/03ab3d7bca387b142f226ea8b62e550b7a65a9e1" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text"><strong>Bulk compression.</strong> Uniform inward forces produce a decrease in volume. The bulk modulus relates the applied force per unit area to the fractional change in volume. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Figure 5.18</a>.</em></span><a class="headerlink" href="#fig-bulk-compression" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We describe the compression (or volume deformation) of an object mathematically following the form in Eqn. <a class="reference internal" href="#equation-length-change-eqn">(4.11)</a>.  Since the force is applied evenly to all sides, they have the same stress on all surfaces.  The deformation produced is a change in volume <span class="math notranslate nohighlight">\(\Delta V\)</span> instead, which behaves similarly to the shear, tension, and compression.  The relationship of the change in volume to other physical quantities is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bf90c165-8f1d-4a2f-81f1-6c60e54da4cb">
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-bf90c165-8f1d-4a2f-81f1-6c60e54da4cb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta V &amp;= \frac{1}{B}\left(\frac{F}{A}\right)V_0,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(B\)</span> is the bulk modulus, <span class="math notranslate nohighlight">\(V_0\)</span> is the original volume, and <span class="math notranslate nohighlight">\(F/A\)</span> is the force per unit area applied inward on all surfaces.</p>
 <p><em>What are some examples of bulk compression of solids and liquids?</em></p>
-<p>Industrial-grade diamonds are manufactured by compressing carbon with an extremely large force per uint area.  The carbon atoms rearrange their crystalline structure into a more tightly packed pattern to form the diamonds.  In nature, a similar process occurs deep underground, where extremely large forces result from the weight of the overlying material.</p>
-<p>Another natural source of large compressive forces is the pressure created by the weight of water, especially in the deep ocean.  Water exerts an inward force on all surfaces on a submerged object, and even on the water itself.  At great depths, water is measurably compressed.</p>
+<p>Industrial-grade diamonds are manufactured by compressing carbon with an extremely large force per unit area.  The carbon atoms rearrange their crystalline structure into a more tightly packed pattern to form the diamonds.  In nature, a similar process occurs deep underground, where extremely large forces result from the weight of the overlying material.</p>
+<p>Another natural source of large compressive forces is the pressure created by the weight of water, especially in the deep ocean.  Water exerts an inward force on all surfaces of a submerged object, and even on the water itself.  At great depths, water is measurably compressed.</p>
 <p>Some solids and liquids create very large forces when they try to expand but are constrained by the bonds.  This occurs when a contained material warms up since most materials expand when their temperature increases.  If the materials are tightly constrained, they deform or break their container.  Water expands when it freezes, unlike most materials that shrink.  It can easily fracture a boulder, rupture a biological cell, or crack an engine block that gets in its way.</p>
 </section>
-<section id="example-problem-the-stretch-of-a-long-cable">
-<h3><span class="section-number">4.3.4. </span>Example Problem: The Stretch of a Long Cable<a class="headerlink" href="#example-problem-the-stretch-of-a-long-cable" title="Link to this heading">#</a></h3>
-</section>
-<section id="example-problem-calculating-deformation">
-<h3><span class="section-number">4.3.5. </span>Example Problem: Calculating Deformation<a class="headerlink" href="#example-problem-calculating-deformation" title="Link to this heading">#</a></h3>
-</section>
-<section id="example-problem-calculating-force-required-to-deform">
-<h3><span class="section-number">4.3.6. </span>Example Problem: Calculating Force Required to Deform<a class="headerlink" href="#example-problem-calculating-force-required-to-deform" title="Link to this heading">#</a></h3>
+<section id="example-problem-water-compression-at-ocean-depth">
+<h3><span class="section-number">4.3.7. </span>Example Problem: Water Compression at Ocean Depth<a class="headerlink" href="#example-problem-water-compression-at-ocean-depth" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Change in Volume—How Much Is Water Compressed at Great Ocean Depths?</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Calculate the fractional decrease in volume, <span class="math notranslate nohighlight">\(\lvert\Delta V\rvert/V_0\)</span>, for seawater at a depth of <span class="math notranslate nohighlight">\(5.00\ {\rm km}\)</span>, where the force per unit area is <span class="math notranslate nohighlight">\(5.00\times10^7\ {\rm N/m^2}\)</span>.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The water is compressed uniformly from all directions, so the bulk modulus is the appropriate material property. From Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a>, water has <span class="math notranslate nohighlight">\(B=2.2\times10^9\ {\rm N/m^2}\)</span>. Because the question asks for the fractional <em>decrease</em> in volume, we calculate the positive magnitude <span class="math notranslate nohighlight">\(\lvert\Delta V\rvert/V_0\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The bulk modulus relates a uniform pressure to the fractional change in volume. Because the problem asks for the magnitude of the volume decrease, we use</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\lvert\Delta V\rvert}{V_0} = \frac{1}{B}\left(\frac{F}{A}\right). \]</div>
+<p class="sd-card-text">At a depth of <span class="math notranslate nohighlight">\(5.00\ {\rm km}\)</span>, the applied force per unit area is <span class="math notranslate nohighlight">\(5.00\times10^7\ {\rm N/m^2}\)</span>. Dividing this pressure by the bulk modulus of water gives the fractional decrease in volume:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\lvert\Delta V\rvert}{V_0} = \frac{5.00\times10^7\ {\rm N/m^2}}{2.2\times10^9\ {\rm N/m^2}} = 0.023.\]</div>
+<p class="sd-card-text">Multiplying the fractional change by <span class="math notranslate nohighlight">\(100\%\)</span> expresses the same result as a percentage: <span class="math notranslate nohighlight">\(0.023 \times 100\% = 2.3\%.\)</span></p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The seawater volume decreases by approximately <span class="math notranslate nohighlight">\(\boxed{\frac{\lvert\Delta V\rvert}{V_0}=0.023=2.3\%}.\)</span>  The change is measurable but still small despite the enormous pressure, illustrating how difficult it is to compress liquids.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, College Physics 2e, Example 5.6</a>.</em></p>
 </section>
 </section>
 <section id="homework">
@@ -1218,11 +1524,12 @@ F &amp;= \left(\frac{YA}{L_0}\right)\Delta L,
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticity-stress-and-strain">4.3. Elasticity: Stress and Strain</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-length-tension-and-compression-elastic-modulus">4.3.1. Changes in Length – Tension and Compression: Elastic Modulus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sideways-stress-shear-modulus">4.3.2. Sideways Stress: Shear Modulus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-volume-bulk-modulus">4.3.3. Changes in Volume: Bulk Modulus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.4. Example Problem: The Stretch of a Long Cable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.5. Example Problem: Calculating Deformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.6. Example Problem: Calculating Force Required to Deform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.2. Example Problem: The Stretch of a Long Cable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-how-much-does-your-leg-shorten">4.3.3. Example Problem: How Much Does Your Leg Shorten?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sideways-stress-shear-modulus">4.3.4. Sideways Stress: Shear Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-a-nail-under-a-shear-load">4.3.5. Example Problem: A Nail Under a Shear Load</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-volume-bulk-modulus">4.3.6. Changes in Volume: Bulk Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-water-compression-at-ocean-depth">4.3.7. Example Problem: Water Compression at Ocean Depth</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.4. Homework</a><ul class="nav section-nav flex-column">
