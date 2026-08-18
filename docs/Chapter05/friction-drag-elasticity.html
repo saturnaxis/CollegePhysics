@@ -502,9 +502,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticity-stress-and-strain">4.3. Elasticity: Stress and Strain</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.1. Example Problem: The Stretch of a Long Cable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.2. Example Problem: Calculating Deformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.3. Example Problem: Calculating Force Required to Deform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-length-tension-and-compression-elastic-modulus">4.3.1. Changes in Length – Tension and Compression: Elastic Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sideways-stress-shear-modulus">4.3.2. Sideways Stress: Shear Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-volume-bulk-modulus">4.3.3. Changes in Volume: Bulk Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.4. Example Problem: The Stretch of a Long Cable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.5. Example Problem: Calculating Deformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.6. Example Problem: Calculating Force Required to Deform</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.4. Homework</a><ul class="nav section-nav flex-column">
@@ -526,7 +529,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="friction-drag-elasticity">
 <h1><span class="section-number">4. </span>Friction, Drag, &amp; Elasticity<a class="headerlink" href="#friction-drag-elasticity" title="Link to this heading">#</a></h1>
-<p>Aug 17, 2026 | 3075 words | 20 min read</p>
+<p>Aug 18, 2026 | 5002 words | 33 min read</p>
 <section id="friction">
 <h2><span class="section-number">4.1. </span>Friction<a class="headerlink" href="#friction" title="Link to this heading">#</a></h2>
 <p><strong>Friction</strong> is a force that opposes relative motion between surfaces in <em>contact</em>, but also allows us to move (e.g., Newton’s third law and traction).  The behavior of friction is complicated and not completely understood, where we rely heavily on observations to infer the nature of friction.  We can deal with its more general characteristics and understand the circumstances in which it behaves.</p>
@@ -566,23 +569,23 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Magnitude of Static Friction</p>
 <p>When there is no motion between the objects, the <strong>magnitude of static friction</strong> <span class="math notranslate nohighlight">\(f_{\rm s}\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f412706-8a91-4a89-b2f3-b6f2026c106f">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-7f412706-8a91-4a89-b2f3-b6f2026c106f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-04e268b3-925e-4525-9f0e-04c8d0241610">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-04e268b3-925e-4525-9f0e-04c8d0241610" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_{\rm s} \leq \mu_{\rm s}N,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_{\rm s}\)</span> is the coefficient of static friction and <span class="math notranslate nohighlight">\(N\)</span> is the magnitude of the normal force (i.e., force perpendicular to the surface).  The <span class="math notranslate nohighlight">\(\leq\)</span> symbol means <em>less than or equal to</em>, implying that static friction can have a minimum and maximum value of <span class="math notranslate nohighlight">\(\mu_{\rm s}N\)</span>.</p>
 </div>
 <p>Static friction is a responsive force that increases proportionally to whatever force is exerted, up to its maximum limit.  Once the applied force exceeds <span class="math notranslate nohighlight">\(f_{\rm s,max}\)</span>, the object will move.  Thus, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-17b9e7bc-f2d8-4a67-ba30-bfbd6a912a70">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-17b9e7bc-f2d8-4a67-ba30-bfbd6a912a70" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-73aa27fc-d0a7-4aaa-9fc0-b45316bbd143">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-73aa27fc-d0a7-4aaa-9fc0-b45316bbd143" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_{\rm s,max} = \mu_{\rm s}N.
 \end{align}\]</div>
 <p>Once in motion, the object is opposed by the kinetic friction instead.</p>
 <div class="note admonition">
 <p class="admonition-title">Magnitude of Kinetic Friction</p>
 <p>The magnitude of kinetic friction <span class="math notranslate nohighlight">\(f_{\rm k}\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4dea8c7e-c283-4408-8456-3f4e4f515bcf">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-4dea8c7e-c283-4408-8456-3f4e4f515bcf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f2755457-240e-4f32-9bde-3e2cf654f61a">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-f2755457-240e-4f32-9bde-3e2cf654f61a" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_{\rm k} = \mu_k N,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_{\rm k}\)</span> is the coefficient of kinetic friction.</p>
@@ -689,13 +692,13 @@ f_{\rm k} = \mu_k N,
 </section>
 <section id="drag-forces">
 <h2><span class="section-number">4.2. </span>Drag Forces<a class="headerlink" href="#drag-forces" title="Link to this heading">#</a></h2>
-<p>When an object is moving in a fluid (either a gas or liquid), it experiences a <strong>drag force</strong> that opposes its motion.  You feel the drag force when you move your hand through water or outside your car window when moving a high speed.  You feel the drag move your hand, but the faster you move your hand, the harder it is to move.  You feel a smaller drag force when you tilt your hand so only side goes through the fluid.  You decreased the area that faced teh direction of motion.</p>
+<p>When an object is moving in a fluid (either a gas or liquid), it experiences a <strong>drag force</strong> that opposes its motion.  You feel the drag force when you move your hand through water or outside your car window when moving a high speed.  You feel the drag move your hand, but the faster you move your hand, the harder it is to move.  You feel a smaller drag force when you tilt your hand so only side goes through the fluid.  You decreased the area that faced the direction of motion.</p>
 <p>The drag force is similar to friction in that it always opposes the motion. Unlike simple friction, the drag force is proportional to some function of velocity of the object in that fluid.  It also depends on the shape of the object, its size, and the type of fluid.  For most large objects (e.g., bicyclists, cars, and baseballs not moving slowly), the magnitude of the drag force <span class="math notranslate nohighlight">\(F_{\rm D}\)</span> is proportional to the square of the speed of the object, or <span class="math notranslate nohighlight">\(F_{\rm D} \propto v^2\)</span>.</p>
 <div class="admonition-drag-force admonition">
 <p class="admonition-title">Drag Force</p>
 <p>More generally, we express the drag force mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-65d721c0-7be9-43af-bc5f-3ba11b5c1471">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-65d721c0-7be9-43af-bc5f-3ba11b5c1471" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f731c55c-af1b-4d1d-aa12-1eb1b55915d0">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-f731c55c-af1b-4d1d-aa12-1eb1b55915d0" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_{\rm D} &amp;= bv^n, \\
 F_{\rm D} &amp;=\frac{1}{2}C\rho A v^2,
 \end{align}\]</div>
@@ -758,20 +761,20 @@ F_{\rm D} &amp;=\frac{1}{2}C\rho A v^2,
 <p>Let’s consider the effects of drag forces upon a moving object and the connections to Newton’s second law.  When a skydiver falls through air under the influence of gravity, there is another force action on him, the drag force.  The downward force of gravity remains constant regardless of the velocity at which the person is moving.  As the person’s velocity increases (through acceleration), the magnitude of the drag force increases until the magnitude of the drag force <em>is equal to</em> the gravitational force.  Thus producing a zero net force.</p>
 <p>A zero net force means that there is no acceleration, as given by Newton’s second law.  At this point, the person’s velocity remains constant and we say the person (or object) has reached the terminal velocity (<span class="math notranslate nohighlight">\(v_{\rm t}\)</span>).  Since <span class="math notranslate nohighlight">\(F_{\rm D}\)</span> is proportional to the speed, a heavier skydiver must go faster for <span class="math notranslate nohighlight">\(F_{\rm D}\)</span> to equal his weight.</p>
 <p>At the terminal velocity, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-49c3ee56-1033-4cc3-abe8-2a843d1ffa47">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-49c3ee56-1033-4cc3-abe8-2a843d1ffa47" title="Permalink to this equation">#</a></span>\[\begin{align}
-F_{\rm net} &amp;= mg - F_{\rm D} = ma = 0, 
+<div class="amsmath math notranslate nohighlight" id="equation-e8c9390d-567d-4dd3-a1f5-7d6ceb89af04">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-e8c9390d-567d-4dd3-a1f5-7d6ceb89af04" title="Permalink to this equation">#</a></span>\[\begin{align}
+F_{\rm net} &amp;= mg - F_{\rm D} = ma = 0, \\
 F_{\rm D} &amp;= mg.
 \end{align}\]</div>
 <p>Notice that we chose the positive <span class="math notranslate nohighlight">\(y\)</span>-axis to point downwards so that we have <span class="math notranslate nohighlight">\(+g\)</span>.  Drag opposes the motion, which means it points in the opposite (or <span class="math notranslate nohighlight">\(-y\)</span>) direction.  Since we are examining the case with zero net force, we could have made the opposite choice with <span class="math notranslate nohighlight">\(-g\)</span> and <span class="math notranslate nohighlight">\(+F_{\rm D}\)</span> to arrive at the same final result.</p>
 <p>Using the equation for drag force, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b0b36f5-3d55-4932-8078-5142a6b2ab51">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-2b0b36f5-3d55-4932-8078-5142a6b2ab51" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1414bdee-8903-4833-a08b-67e5302b6699">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-1414bdee-8903-4833-a08b-67e5302b6699" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}\rho CA v^2 = mg,
 \end{align}\]</div>
 <p>which we use algebra to solve for the velocity to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d50160bd-13e4-4d16-980f-38211ec02cf0">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-d50160bd-13e4-4d16-980f-38211ec02cf0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-722a3020-69c0-4c89-99a9-11c00a38fe89">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-722a3020-69c0-4c89-99a9-11c00a38fe89" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm t} &amp;= \sqrt{\frac{2mg}{\rho CA}}.
 \end{align}\]</div>
 <p>Assume the density of air is <span class="math notranslate nohighlight">\(\rho = 1.21\ {\rm kg/m^3}\)</span>.  A <span class="math notranslate nohighlight">\(75\)</span>-kg skydiver descending headfirst has an area <span class="math notranslate nohighlight">\(A=0.18\ {\rm m^2}\)</span> and a drag coefficient <span class="math notranslate nohighlight">\(C = 0.70\)</span>.  We can find the terminal velocity as</p>
@@ -786,8 +789,8 @@ v_{\rm t} &amp;= \sqrt{\frac{2(75\ {\rm kg})(9.81\ {\rm m/s^2})}{\left(1.21\ {\r
 <div class="note admonition">
 <p class="admonition-title">Stokes’ Law</p>
 <p>Stokes’ law states that the drag force is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b648ee8d-1138-4ac9-8025-7a4276be7efd">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-b648ee8d-1138-4ac9-8025-7a4276be7efd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5c4342cd-6912-4d63-bceb-204aa2a7cca2">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-5c4342cd-6912-4d63-bceb-204aa2a7cca2" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_{\rm s} = 6\pi r\eta v,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the radius of the object, <span class="math notranslate nohighlight">\(\eta\)</span> is the viscosity of the fluid, and <span class="math notranslate nohighlight">\(v\)</span> is the object’s velocity.
@@ -801,14 +804,286 @@ F_{\rm s} = 6\pi r\eta v,
 </section>
 <section id="elasticity-stress-and-strain">
 <h2><span class="section-number">4.3. </span>Elasticity: Stress and Strain<a class="headerlink" href="#elasticity-stress-and-strain" title="Link to this heading">#</a></h2>
+<p>Some forces affect an object’s shape rather than affecting its motion (e.g., friction and drag).  A change in shape due to the application of forces is a <strong>deformation</strong>.  Even very small forces are are known to cause some deformation.  For small deformations (e.g., for a rubber band or spring), two important characteristics are observed.</p>
+<ol class="arabic simple">
+<li><p>The object returns to its original shape when the force is removed (i.e., the deformation is elastic).</p></li>
+<li><p>The size of the deformation is proportional to the force (i.e., Hooke’s law is obeyed).</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Hooke’s Law</p>
+<p><strong>Hooke’s law</strong> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aa159115-6f56-4fe7-ab67-00679d5648d8">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-aa159115-6f56-4fe7-ab67-00679d5648d8" title="Permalink to this equation">#</a></span>\[\begin{align}
+F &amp;= k\Delta L, \\
+\Delta L &amp;= L - L_0
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta L\)</span> is the change in length (or deformation in 1D) produced by the force <span class="math notranslate nohighlight">\(F\)</span>, <span class="math notranslate nohighlight">\(L_0\)</span> is the rest length, and <span class="math notranslate nohighlight">\(k\)</span> is a proportionality constant that depends on the shape and composition of the object.  If the amount of applied force <span class="math notranslate nohighlight">\(F\)</span> and the proportionality constant based on the material are both known, then we can rearrange this expression to find the change in length</p>
+<div class="amsmath math notranslate nohighlight" id="equation-429b27cf-ae58-4121-aeab-6e1502ef13d5">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-429b27cf-ae58-4121-aeab-6e1502ef13d5" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta L = \frac{F}{k}.
+\end{align}\]</div>
+<p>Note that the applied force <span class="math notranslate nohighlight">\(F\)</span> will have a sign, where <span class="math notranslate nohighlight">\(\Delta L &gt; 0\)</span> represents an <em>extension</em> while a <span class="math notranslate nohighlight">\(\Delta L &lt; 0\)</span> is a <em>compression</em>.</p>
+</div>
+<p>Hooke’s law can apply to springs and human bone (see Figure <a class="reference internal" href="#fig-hookes-law-deformation"><span class="std std-numref">4.3</span></a>).  For metals or spring, the straight line region in is much larger.  bones are brittle and the elastic region is small and the fracture region is abrupt.  Eventually a large enough stress to the material will cause it to break or fracture.  <strong>Tensile strength</strong> is the breaking stress that will cause permanent deformation or fracture of the material.</p>
+<figure class="align-default" id="fig-hookes-law-deformation">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b1cae2957bab746ebaf065bd43f567509a446c3b"><img alt="Graph of change in length versus applied force. The graph is linear at small forces, curves while the deformation remains elastic, and then enters a region of permanent deformation before fracture." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b1cae2957bab746ebaf065bd43f567509a446c3b" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text"><strong>Elastic and permanent deformation.</strong> The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> increases with the applied force <span class="math notranslate nohighlight">\(F\)</span>. For small deformations, the relationship is linear and Hooke’s law applies; the slope of this region is <span class="math notranslate nohighlight">\(1/k\)</span>. At larger forces, the relationship becomes nonlinear but can remain elastic, so the object returns to its original length when the force is removed. Beyond the elastic region, the deformation becomes permanent and sufficiently large forces eventually cause fracture. <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax College Physics 2e, Figure 5.11</a>.</span><a class="headerlink" href="#fig-hookes-law-deformation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The proportionality constant <span class="math notranslate nohighlight">\(k\)</span> depends up on a number of factors for the material.  For example, a guitar string made of nylon stretches when it is tightend, and the extension <span class="math notranslate nohighlight">\(\Delta L\)</span> is proportional to the force applied.  Thicker nylon strings (e.g., for an electric bass guitar) and ones made of steel stretch less for the same applied force, implying that they have a larger <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<figure class="align-default" id="fig-string-stiffness">
+<a class="reference internal image-reference" href="../_images/guitar_string_comparison.png"><img alt="Three neon-green guitar or bass strings of the same original length hang from a support and each carry the same weight. The thinnest string stretches the most, the medium string stretches less, and the thickest string stretches the least. Labels indicate the original length L0 and the extension Delta L." src="../_images/guitar_string_comparison.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text"><strong>String thickness and stiffness.</strong> The same downward force (the same hanging weight <span class="math notranslate nohighlight">\(w\)</span>) is applied to three strings of the same original length <span class="math notranslate nohighlight">\(L_0\)</span>, but with different thicknesses. The thinnest string stretches the most, producing the largest extension <span class="math notranslate nohighlight">\(\Delta L\)</span>, while the thickest string stretches the least. This shows that thicker strings have a larger stiffness constant <span class="math notranslate nohighlight">\(k\)</span>, so they deform less under the same applied force. In musical instruments, this is one reason bassists often use thicker strings for lower tunings: the strings remain tighter and can produce a heavier, more aggressive sound.</span><a class="headerlink" href="#fig-string-stiffness" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="changes-in-length-tension-and-compression-elastic-modulus">
+<h3><span class="section-number">4.3.1. </span>Changes in Length – Tension and Compression: Elastic Modulus<a class="headerlink" href="#changes-in-length-tension-and-compression-elastic-modulus" title="Link to this heading">#</a></h3>
+<p>A change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> occurs when the applied force to a ware or rod is parallel to its length <span class="math notranslate nohighlight">\(L_0\)</span>, either stretching (causing tension) or compressing it.</p>
+<figure class="align-default" id="fig-tension-compression">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d0a3f05e8d0def89dbb676a8c7ffd9f710e9a700"><img alt="Two-panel diagram of a cylindrical rod under axial forces. Panel a shows tension: equal and opposite pulling forces stretch the rod, increasing its length by Delta L from its original length L0. Panel b shows compression: equal and opposite pushing forces shorten the same rod by Delta L. The rod's cross-sectional area A is labeled." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d0a3f05e8d0def89dbb676a8c7ffd9f710e9a700" style="width: 65%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text"><strong>Tension and compression of a rod.</strong> (a) In <strong>tension</strong>, equal and opposite forces pull on the rod parallel to its length, stretching it by an amount <span class="math notranslate nohighlight">\(\Delta L\)</span> relative to its original length <span class="math notranslate nohighlight">\(L_0\)</span>. (b) In <strong>compression</strong>, equal and opposite forces push inward on the rod, shortening it by <span class="math notranslate nohighlight">\(\Delta L\)</span>. The cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> is used in defining <strong>stress</strong> and <strong>strain</strong>. <em>Image credit: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, <em>College Physics 2e</em>, Figure 5.13</a>.</em></span><a class="headerlink" href="#fig-tension-compression" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The change in length (<span class="math notranslate nohighlight">\(\Delta L\)</span>) depends on only a few variables.  The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> is</p>
+<ul class="simple">
+<li><p>proportional to the force <span class="math notranslate nohighlight">\(F\)</span> and depends on the composition of the object,</p></li>
+<li><p>proportional to the original length <span class="math notranslate nohighlight">\(L_0\)</span>, and</p></li>
+<li><p>inversely proportional to the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> of the wire or rod.</p></li>
+</ul>
+<p>For example, a long guitar string will stretch more than a short one, and a thick string will stretch less than a thin one.  We combine all these factors into one equation for <span class="math notranslate nohighlight">\(\Delta L\)</span>:</p>
+<div class="math notranslate nohighlight" id="length-change-eqn">
+<span id="equation-length-change-eqn"></span><span class="eqno">(4.11)<a class="headerlink" href="#length-change-eqn" title="Link to this equation">#</a></span>\[\Delta L = \frac{ F\ L_0}{Y\ A},\]</div>
+<p>where <span class="math notranslate nohighlight">\(F\)</span> is the applied force, <span class="math notranslate nohighlight">\(Y\)</span> is a factor called the <strong>elastic modulus</strong> (or Young’s modulus) that depends on the substance, <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area, and <span class="math notranslate nohighlight">\(L_0\)</span> is the original length.</p>
+<p>Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a> lists values of <span class="math notranslate nohighlight">\(Y\)</span> for several materials, which are approximate averages. Young’s modulus <span class="math notranslate nohighlight">\(Y\)</span> for tension and compression can differ; the table lists averaged values except for bone, which differs significantly in tension and compression.  Young’s moduli are not listed for liquids or gases in Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a> because they cannot be stretched or compressed in only one direction.</p>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="table-elastic-moduli">
+<caption><span class="caption-number">Table 4.3 </span><span class="caption-text">Elastic Moduli</span><a class="headerlink" href="#table-elastic-moduli" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Material</p></th>
+<th class="head"><p>Young’s modulus <span class="math notranslate nohighlight">\(Y\)</span><br />
+(tension–compression)<br />
+<span class="math notranslate nohighlight">\((10^9\ \mathrm{N/m^2})\)</span></p></th>
+<th class="head"><p>Shear modulus <span class="math notranslate nohighlight">\(S\)</span><br />
+<span class="math notranslate nohighlight">\((10^9\ \mathrm{N/m^2})\)</span></p></th>
+<th class="head"><p>Bulk modulus <span class="math notranslate nohighlight">\(B\)</span><br />
+<span class="math notranslate nohighlight">\((10^9\ \mathrm{N/m^2})\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aluminum</p></td>
+<td><p>70</p></td>
+<td><p>25</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bone — tension</p></td>
+<td><p>16</p></td>
+<td><p>80</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>Bone — compression</p></td>
+<td><p>9</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Brass</p></td>
+<td><p>90</p></td>
+<td><p>35</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td><p>Brick</p></td>
+<td><p>15</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Concrete</p></td>
+<td><p>20</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Glass</p></td>
+<td><p>70</p></td>
+<td><p>20</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>Granite</p></td>
+<td><p>45</p></td>
+<td><p>20</p></td>
+<td><p>45</p></td>
+</tr>
+<tr class="row-even"><td><p>Hair (human)</p></td>
+<td><p>10</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Hardwood</p></td>
+<td><p>15</p></td>
+<td><p>10</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Iron, cast</p></td>
+<td><p>100</p></td>
+<td><p>40</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lead</p></td>
+<td><p>16</p></td>
+<td><p>5</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>Marble</p></td>
+<td><p>60</p></td>
+<td><p>20</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nylon</p></td>
+<td><p>5</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Polystyrene</p></td>
+<td><p>3</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Silk</p></td>
+<td><p>6</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Spider thread</p></td>
+<td><p>3</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Steel</p></td>
+<td><p>210</p></td>
+<td><p>80</p></td>
+<td><p>130</p></td>
+</tr>
+<tr class="row-even"><td><p>Tendon</p></td>
+<td><p>1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Acetone</p></td>
+<td></td>
+<td></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethanol</p></td>
+<td></td>
+<td></td>
+<td><p>0.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glycerin</p></td>
+<td></td>
+<td></td>
+<td><p>4.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td></td>
+<td></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td></td>
+<td></td>
+<td><p>2.2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Elasticity in Your Body</p>
+<p>Bones do not fracture due to tension or compression, where they generally fracture due to <em>sideways impact</em> or <em>bending</em>, resulting in the bone shearing or snapping.  The behavior of bones under tension and compression helps determine the load the bones can carry.  Bones are classified as weight-bearing structures (e.g., columns in buildings or trees).  Weight-bearing structures usually have support structures where columns in building have steel-reinforcing rods, but
+trees and bones are fibrous.  The bones in different parts of the body have different structural functions and are prone to different stresses.</p>
+<p>The bone in the top of the femur is arranged in thin sheets separated by marrow while in other places can be cylindrical and filled with marrow (or just solid).  Overweight people have a tendency toward bone damage due to sustained compressions in bone joints and tendons.</p>
+<p>Hooke’s law occurs in tendons. The tendon must stretch easily at first when a force is applied, but offer a restoring force for a greater strain.  Some tendons have a high collagen content so there is relatively little strain (or length change).  In contrast, support tendons can change length by <span class="math notranslate nohighlight">\({\sim}10\%\)</span>.  The stress-strain relationship is nonlinear, since the slope of the line changes in different regions.</p>
+<figure class="align-default" id="fig-tendon-stress-strain">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/2bdf3779ff58cbb6cd967697e180e8267c642f73"><img alt="Stress-strain curve for a mammalian tendon. At small strain, the curve passes through a toe region where tendon fibers straighten and align. This is followed by a nearly linear region in which stress increases approximately proportionally with strain, and finally a failure region where individual fibers begin to break." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/2bdf3779ff58cbb6cd967697e180e8267c642f73" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text"><strong>Stress–strain behavior of a tendon.</strong> A tendon does not behave like an ideal Hooke’s-law material over its entire range of deformation. At small strains, the collagen fibers begin to straighten and align in the <strong>toe region</strong>. This is followed by a <strong>linear region</strong>, where stress increases approximately proportionally with strain. At still larger strains, individual fibers begin to break and the tendon enters the <strong>failure region</strong> *Image credit: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/5-3-elasticity-stress-and-strain">OpenStax, <em>College Physics 2e</em>, Figure 5.15</a>. *</span><a class="headerlink" href="#fig-tendon-stress-strain" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the first part of the stretch curve called the toe region, the fibers in the tendon begin to align in the direction of the stress, or <em>uncrimping</em>.  In the linear region, the fibrils (smaller structural units that make up the larger fibers) will be stretched.  In the failure regions, individual fibers begin to break.</p>
+<p>A simple model of this relationship uses springs in parallel: different springs are activate at different lengths of stretch. Ligaments (tissue connecting bone to bone) behave in a similar way.</p>
+<p>Unlike bones and tendons, the arteries and lungs need to be very stretchable.  The elastic properties of the arteries are essential for blood flow.  The pressure in the arteries increases and arterial walls stretch when the blood is pumped out of the heart.  When you are feeling your pulse, you are feeling the elastic behavior of the arteries as the blood gushes through with each pump of your heart.</p>
+<p>The lungs expand with muscular effort when we breathe in but relax freely and elastically when we breathe out.  Our skins are particularly elastic, especially for the young.  A young person can go from <span class="math notranslate nohighlight">\(100\ {\rm kg}\)</span> to <span class="math notranslate nohighlight">\(60\ {\rm kg}\)</span> with no visible sag in their skins.  The elasticity of all organs reduces with age.</p>
+</div>
+<p>The equation for change in length can be rearranged into the following form to define the <strong>stress</strong> (measured in <span class="math notranslate nohighlight">\(\rm N/m^2\)</span>):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f06f3784-241e-4075-b2b6-eaeee8dc7646">
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-f06f3784-241e-4075-b2b6-eaeee8dc7646" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{stress} = \frac{F}{A} = Y\frac{\Delta L}{L_0},
+\end{align}\]</div>
+<p>where the ratio of the change in length is defined as the <strong>strain</strong> (a unitless quantity):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-30fe0f57-d3f3-4646-a3bc-19c719431eef">
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-30fe0f57-d3f3-4646-a3bc-19c719431eef" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{stress} = Y \times \text{strain}.
+\end{align}\]</div>
+<p>In this form, the equation is analogous to Hooke’s law, with stress analogous to force and strain analogous to deformation.  We can see this through rearranging to get:</p>
+<p>\begin{align*}
+F &amp;= \left(\frac{YA}{L_0}\right)\Delta L,
+\end{align}</p>
+<p>where we can replaced the fraction in parentheses as $k = \frac{YA}{L_0}.</p>
+</section>
+<section id="sideways-stress-shear-modulus">
+<h3><span class="section-number">4.3.2. </span>Sideways Stress: Shear Modulus<a class="headerlink" href="#sideways-stress-shear-modulus" title="Link to this heading">#</a></h3>
+<p>Unlike tension and compression (which occurs parallel to the <span class="math notranslate nohighlight">\(L_0\)</span>), a <em>shearing force</em> is a sideways stress that is perpendicular to <span class="math notranslate nohighlight">\(L_0\)</span>.  Here the deformation is called <span class="math notranslate nohighlight">\(\delta x\)</span>.  Shear deformation behaves similarly to tension and compression.  Therefore, the expression for <strong>shear deformation</strong> <span class="math notranslate nohighlight">\(\delta x\)</span> is a similar equation.</p>
+<div class="admonition-shear-deformation admonition">
+<p class="admonition-title">Shear Deformation</p>
+<p>The shear deformation is given mathematically by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-739ff5c1-82d4-43dd-ada0-6e582c5004a2">
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-739ff5c1-82d4-43dd-ada0-6e582c5004a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+\delta x = \left(\frac{1}{S}\right)\left(\frac{F}{A}\right) L_0,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S\)</span> is the shear modulus (see Table <a class="reference internal" href="#table-elastic-moduli"><span class="std std-numref">4.3</span></a>).  The force <span class="math notranslate nohighlight">\(F\)</span> is applied perpendicular to <span class="math notranslate nohighlight">\(L_0\)</span> and parallel to the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>.  To keep the object from accelerating, there are actually two equal and opposite forces (see Figure {numref}`{number}<fig-shear-deformation>).</p>
+</div>
+<figure class="align-default" id="fig-shear-deformation">
+<a class="reference internal image-reference" href="../_images/shear_diagram.png"><img alt="Two-panel diagram illustrating shear deformation. Panel a shows an undeformed rectangular block with height L0 and top surface area A. Panel b shows the same block after shear deformation. Opposing horizontal forces act on the top and bottom surfaces, producing a horizontal displacement Delta x of the top surface while the dashed outline indicates the original shape." src="../_images/shear_diagram.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text"><strong>Shear deformation.</strong> (a) Before deformation, the material has height <span class="math notranslate nohighlight">\(L_0\)</span> and a surface area <span class="math notranslate nohighlight">\(A\)</span> over which a force can act. (b) Equal and opposite forces applied parallel to the surfaces produce a <strong>shear deformation</strong>, shifting the top of the material horizontally by <span class="math notranslate nohighlight">\(\Delta x\)</span> relative to the bottom. The dashed outline shows the original, undeformed shape.</span><a class="headerlink" href="#fig-shear-deformation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><em>Applications of shear to the body</em></p>
+<p>The spinal column provides the main support for the head and upper part of the body.  The spinal column has normal curvature for stability, but this curvature can be increased which leads to increased shearing forces on the lower vertebrae.  Discs are better at withstanding compressional forces than shear forces.  Because the spine is not vertical, the weight of the upper body exerts some of both (shear and compression forces).</p>
+<p>Pregnant women and people with large abdomens need to move their shoulders back to maintain balance, which increases the curvature in their spin and also increases the shear component of the stress.  An increased angle due to more curvature increases the shear forces along the plane.  These higher shear forces increase the risk of back injury through ruptured discs.</p>
+<p><em>Application of shear to structures</em></p>
+<p>The shear moduli for concrete and brick are very small, where the are too highly variable to be listed.  Concrete used in buildings can withstand compression (e.g., in pillars and arches), but is very poor against the shear encountered in heavily flooded floors or during earthquakes.  Modern structures use steel and steel-reinforced concrete to mitigate the shear forces during these events.  By definition, liquids and gases have shear moduli near zero because they flow in response to shearing forces.</p>
+</section>
+<section id="changes-in-volume-bulk-modulus">
+<h3><span class="section-number">4.3.3. </span>Changes in Volume: Bulk Modulus<a class="headerlink" href="#changes-in-volume-bulk-modulus" title="Link to this heading">#</a></h3>
+<p>An object will be compressed in all directions if inward forces are evenly applied on all its surfaces.  Gases are more easily compressed than liquids or solids.  The reason for these different compressibilities is that atoms and molecules are separated by large empty spaces in gases but packed close together in liquids and solids.  You must actually compress their atoms and molecules, as well as the very strong electromagnetic forces in them that opposes this compression.</p>
+<p>We describe the compression (or volume deformation) of an object mathematically following the form in Eqn. <a class="reference internal" href="#equation-length-change-eqn">()</a>.  Since the force is applied evenly to all sides, they have the same stress on all surfaces.  The deformation produced is a change in volume <span class="math notranslate nohighlight">\(\Delta V\)</span> instead, which behaves similarly to the shear, tension, and compression.  The relationship of the change in volume to other physical quantities is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-751548ff-d640-46c3-9643-0f59e946f4be">
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-751548ff-d640-46c3-9643-0f59e946f4be" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta V &amp;= \frac{1}{B}\left(\frac{F}{A}\right)V_0,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(B\)</span> is the bulk modulus, <span class="math notranslate nohighlight">\(V_0\)</span> is the original volume, and <span class="math notranslate nohighlight">\(F/A\)</span> is the force per unit area applied inward on all surfaces.</p>
+<p><em>What are some examples of bulk compression of solids and liquids?</em></p>
+<p>Industrial-grade diamonds are manufactured by compressing carbon with an extremely large force per uint area.  The carbon atoms rearrange their crystalline structure into a more tightly packed pattern to form the diamonds.  In nature, a similar process occurs deep underground, where extremely large forces result from the weight of the overlying material.</p>
+<p>Another natural source of large compressive forces is teh pressure created by the weight of water, especially in the deep ocean.  Water exerts an inward force on all surfaces on a submerged object, and even on the water itself.  At great depths, water is measurably compressed.</p>
+</section>
 <section id="example-problem-the-stretch-of-a-long-cable">
-<h3><span class="section-number">4.3.1. </span>Example Problem: The Stretch of a Long Cable<a class="headerlink" href="#example-problem-the-stretch-of-a-long-cable" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.4. </span>Example Problem: The Stretch of a Long Cable<a class="headerlink" href="#example-problem-the-stretch-of-a-long-cable" title="Link to this heading">#</a></h3>
 </section>
 <section id="example-problem-calculating-deformation">
-<h3><span class="section-number">4.3.2. </span>Example Problem: Calculating Deformation<a class="headerlink" href="#example-problem-calculating-deformation" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.5. </span>Example Problem: Calculating Deformation<a class="headerlink" href="#example-problem-calculating-deformation" title="Link to this heading">#</a></h3>
 </section>
 <section id="example-problem-calculating-force-required-to-deform">
-<h3><span class="section-number">4.3.3. </span>Example Problem: Calculating Force Required to Deform<a class="headerlink" href="#example-problem-calculating-force-required-to-deform" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">4.3.6. </span>Example Problem: Calculating Force Required to Deform<a class="headerlink" href="#example-problem-calculating-force-required-to-deform" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="homework">
@@ -937,9 +1212,12 @@ F_{\rm s} = 6\pi r\eta v,
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elasticity-stress-and-strain">4.3. Elasticity: Stress and Strain</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.1. Example Problem: The Stretch of a Long Cable</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.2. Example Problem: Calculating Deformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.3. Example Problem: Calculating Force Required to Deform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-length-tension-and-compression-elastic-modulus">4.3.1. Changes in Length – Tension and Compression: Elastic Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sideways-stress-shear-modulus">4.3.2. Sideways Stress: Shear Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changes-in-volume-bulk-modulus">4.3.3. Changes in Volume: Bulk Modulus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-the-stretch-of-a-long-cable">4.3.4. Example Problem: The Stretch of a Long Cable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-deformation">4.3.5. Example Problem: Calculating Deformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-calculating-force-required-to-deform">4.3.6. Example Problem: Calculating Force Required to Deform</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.4. Homework</a><ul class="nav section-nav flex-column">
