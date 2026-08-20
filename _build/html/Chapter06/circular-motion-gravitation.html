@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter06/circular-motion-gravitation';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -189,7 +191,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../home.html">
-                    Welcome to Introductory Physics
+                    Welcome to College Physics
                 </a>
             </li>
         </ul>
@@ -197,8 +199,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who Are These Notes For?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to Cite and Reuse This Material</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Preamble/computational-writing-primer.html">Computational and Writing Primer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Preamble/figures-primer.html">Figures Primer (Matplotlib)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/computational-writing-primer.html">Writing Primer: Markdown and LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/figures-primer.html">Figures and Graphs Primer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/course-faq.html">Course FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/physics-recruitment.html">Finding Your Path in Physics</a></li>
 </ul>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,22 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-angle-and-angular-velocity">5.1. Rotation Angle and Angular Velocity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-angle">5.1.1. Rotation Angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity">5.1.2. Angular Velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#centripetal-acceleration">5.2. Centripetal Acceleration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#centripetal-force">5.3. Centripetal Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-universal-law-of-gravitation">5.4. Newton’s Universal Law of Gravitation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satellites-and-kepler-s-laws">5.5. Satellites and Kepler’s Laws</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +515,231 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="circular-motion-gravitation">
 <h1><span class="section-number">5. </span>Circular Motion &amp; Gravitation<a class="headerlink" href="#circular-motion-gravitation" title="Link to this heading">#</a></h1>
-<p>Aug 02, 2026 | 6 words | 0 min read</p>
+<p>Aug 20, 2026 | 1892 words | 13 min read</p>
+<section id="rotation-angle-and-angular-velocity">
+<h2><span class="section-number">5.1. </span>Rotation Angle and Angular Velocity<a class="headerlink" href="#rotation-angle-and-angular-velocity" title="Link to this heading">#</a></h2>
+<p>Newton’s first law tells us that motion is along a straight line at constant speed unless there is a net external force.  <strong>Uniform circular motion</strong> is the simplest form of curved motion, where the object follows a curved path at constant speed.  Moving in a circular path is also connected to <em>rotation</em> or rotational motion.  Pure <em>translational</em> motion is motion with no rotation.  Some motion combines both types.</p>
+<section id="rotation-angle">
+<h3><span class="section-number">5.1.1. </span>Rotation Angle<a class="headerlink" href="#rotation-angle" title="Link to this heading">#</a></h3>
+<p>When objects rotate about some axis (e.g., a CD or compact disc), each point in the object follows a circular arc.  Consider a line from the center of the CD to its edge.  CD’s are recorded where the pits fall along a curved line that moves through the same angle in the same amount of time.  The <strong>rotation angle</strong> <span class="math notranslate nohighlight">\(\Delta \theta\)</span> is the amount of rotation and is analogous to linear distance.  Mathematically, we define the rotation angle as teh ratio of the arclength <span class="math notranslate nohighlight">\(\Delta s\)</span> to the radius of curvature <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-ang-displace-eqn">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-ang-displace-eqn" title="Link to this equation">#</a></span>\[\Delta \theta = \frac{\Delta s}{r}.\]</div>
+<figure class="align-default" id="fig-angular-displacement">
+<a class="reference internal image-reference" href="../_images/rotation_geometry.png"><img alt="Two-panel figure illustrating angular displacement. Panel a shows a rotating CD with points at different radii sweeping through the same angle delta theta. Panel b shows the geometric relationship between angular displacement, arclength, and radius." src="../_images/rotation_geometry.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><strong>(a)</strong> All points on a rotating CD move through the same angular displacement <span class="math notranslate nohighlight">\(\Delta\theta\)</span> during a given time interval, although points farther from the axis travel a greater distance. <strong>(b)</strong> For a point a distance <span class="math notranslate nohighlight">\(r\)</span> from the axis of rotation, the angular displacement in radians is related to the arclength <span class="math notranslate nohighlight">\(\Delta s\)</span> by <span class="math notranslate nohighlight">\(\Delta\theta = \Delta s/r\)</span>.</span><a class="headerlink" href="#fig-angular-displacement" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We know that for one complete revolution, the arclength is the <em>circumference</em> of a circle of radius <span class="math notranslate nohighlight">\(r\)</span> and a circle’s circumference is <span class="math notranslate nohighlight">\(2\pi r\)</span>.  For one complete revolution, the rotation angle is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e5e3acce-baa1-44c4-bbf7-5031eb61f8bc">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-e5e3acce-baa1-44c4-bbf7-5031eb61f8bc" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta \theta = \frac{2\pi r}{r} = 2\pi.
+\end{align}\]</div>
+<p>This result is the basis for defining the units used to measure rotation angles <span class="math notranslate nohighlight">\(\Delta \theta\)</span> in <strong>radians</strong> (rad).  Then we can relate radians to degrees using</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f1b87809-63e1-40e9-9a25-cc7b2fc46948">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-f1b87809-63e1-40e9-9a25-cc7b2fc46948" title="Permalink to this equation">#</a></span>\[\begin{align}
+2\pi\ {\rm rad} = 360^\circ = 1\ {\rm revolution}.
+\end{align}\]</div>
+<p>We can solve the above equation with some algebra to determine the number of degrees in a radian by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-de7eaefd-0d8c-40b0-91a5-2c5f2dd01dc1">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-de7eaefd-0d8c-40b0-91a5-2c5f2dd01dc1" title="Permalink to this equation">#</a></span>\[\begin{align}
+1\ {\rm rad} = \frac{360^\circ}{2\pi} = \frac{180^\circ}{\pi} \approx 57.3^\circ.
+\end{align}\]</div>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
+<caption><span class="caption-number">Table 5.1 </span><span class="caption-text">Comparison of Angular Units</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><th class="stub"><p><strong>Degrees</strong></p></th>
+<td><p><span class="math notranslate nohighlight">\(0^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(15^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(30^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(45^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(60^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(75^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(90^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(105^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(120^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(135^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(150^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(165^\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(180^\circ\)</span></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><strong>Radians</strong></p></th>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{\pi}{12}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{\pi}{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{\pi}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{\pi}{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{5\pi}{12}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{\pi}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{7\pi}{12}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{2\pi}{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{3\pi}{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{5\pi}{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{11\pi}{12}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="angular-velocity">
+<h3><span class="section-number">5.1.2. </span>Angular Velocity<a class="headerlink" href="#angular-velocity" title="Link to this heading">#</a></h3>
+<p><em>How fast is an object rotating?</em></p>
+<p>We define <strong>angular velocity</strong> <span class="math notranslate nohighlight">\(\omega\)</span> as the rate of change of angle <span class="math notranslate nohighlight">\(\Delta \theta\)</span>.  Mathematically this is represented by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-49ca19f7-6438-4439-8c62-3d61878e4c77">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-49ca19f7-6438-4439-8c62-3d61878e4c77" title="Permalink to this equation">#</a></span>\[\begin{align}
+\omega =  \frac{\Delta \theta}{\Delta t},
+\end{align}\]</div>
+<p>where an angular rotation <span class="math notranslate nohighlight">\(\Delta \theta\)</span> occurs in a time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> and angular velocity is measured in units of <span class="math notranslate nohighlight">\(\rm rad/s\)</span>.  Similar to linear velocity, a greater rotation angle in a given amount of time leads to a greater angular velocity.</p>
+<p>Consider a pit on a rotating CD, where the pit moves an arclength <span class="math notranslate nohighlight">\(\Delta s\)</span> in a time <span class="math notranslate nohighlight">\(\Delta t\)</span> (see Fig. <a class="reference internal" href="#fig-angular-displacement"><span class="std std-numref">5.1</span></a>a).  The pit has a linear velocity given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ec458ca5-8528-4915-9226-f84f4ad04d3e">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-ec458ca5-8528-4915-9226-f84f4ad04d3e" title="Permalink to this equation">#</a></span>\[\begin{align}
+v = \frac{\Delta s}{\Delta t}.
+\end{align}\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Notice that we assume the CD does not slip while spinning.  If the CD momentarily stopped rotating (i.e., slipped) then the <span class="math notranslate nohighlight">\(\Delta t\)</span> would be larger for a given measured <span class="math notranslate nohighlight">\(\Delta s\)</span>.  Therefore, this relationship between linear and angular velocity only applies when there is no slipping.</p>
+</div>
+<p>From Eqn. <a class="reference internal" href="#equation-ang-displace-eqn">(5.1)</a>, we see that <span class="math notranslate nohighlight">\(\Delta s = r\Delta \theta\)</span>.  We can substitute this relation into our equation for linear velocity <span class="math notranslate nohighlight">\(v\)</span> and substitute for the definition of angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-286c5f58-7ac7-4fd0-a397-8b2a5d5fd3be">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-286c5f58-7ac7-4fd0-a397-8b2a5d5fd3be" title="Permalink to this equation">#</a></span>\[\begin{align}
+v = \frac{r\Delta \theta}{\Delta t} = r\omega.
+\end{align}\]</div>
+<p>This relationship can be given in two different ways that corresponds to different insights:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(v = r\omega\)</span> states that the linear speed is largest at a point on the rim (i.e., largest <span class="math notranslate nohighlight">\(r\)</span>).  The velocity of a point on the rim is always perpendicular (or tangent) to the radius.  Thus we also call the linear speed as the <em>tangential speed</em>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega = v/r\)</span> tells us how fast something rotates given the linear speed and the radius.  Consider the tire of a moving car, where the car moves forward with a velocity <span class="math notranslate nohighlight">\(v\)</span> that is equal to the linear velocity of the tire.  The faster the care moves (i.e., large <span class="math notranslate nohighlight">\(v\)</span>), then the faster the tire spins (i.e., large <span class="math notranslate nohighlight">\(\omega\)</span>).</p></li>
+</ol>
+<p>Both <span class="math notranslate nohighlight">\(\omega\)</span> and <span class="math notranslate nohighlight">\(v\)</span> have directions since they both represent velocities.  Angular velocity two directions (e.g., clockwise or counterclockwise), while linear velocity is tangent to the path.  The linear velocity <span class="math notranslate nohighlight">\(v\)</span> can be decomposed into vector components <span class="math notranslate nohighlight">\(v_x\)</span> and <span class="math notranslate nohighlight">\(v_y\)</span> at a given time <span class="math notranslate nohighlight">\(t\)</span> given a constant spin rate <span class="math notranslate nohighlight">\(\omega\)</span>, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4c632c82-529d-4fcd-83bb-d82e6fe9dc9b">
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-4c632c82-529d-4fcd-83bb-d82e6fe9dc9b" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_x &amp;= v\cos\left(\omega t\right), \\
+v_y &amp;= v\sin\left(\omega t\right).
+\end{align}\]</div>
+</section>
+</section>
+<section id="centripetal-acceleration">
+<h2><span class="section-number">5.2. </span>Centripetal Acceleration<a class="headerlink" href="#centripetal-acceleration" title="Link to this heading">#</a></h2>
+<p>Recall from kinematics that acceleration is a change in velocity (in its magnitude, direction, or both).  In uniform circular motion, the direction of the velocity constantly changes, so there is an associated acceleration even though the magnitude of the velocity is constant.</p>
+<figure class="align-default" id="fig-centripetal-acceleration">
+<a class="reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/11e58ada3ac9ddc55f67ebca76ad3f26a96643fb"><img alt="An object moves along a circular path from point B to point C. Tangential velocity vectors v1 and v2 are shown at the two positions, along with a vector diagram showing that the change in velocity points toward the center of the circle." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/11e58ada3ac9ddc55f67ebca76ad3f26a96643fb" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The velocity of an object moving in a circle changes direction as the object moves along its path. The change in velocity <span class="math notranslate nohighlight">\(\Delta \vec{v}\)</span> points toward the center of curvature, so the centripetal acceleration <span class="math notranslate nohighlight">\(\vec{a}_c = \Delta \vec{v}/\Delta t\)</span> is also directed toward the center. For a sufficiently small angular displacement <span class="math notranslate nohighlight">\(\Delta\theta\)</span>, the arc length <span class="math notranslate nohighlight">\(\Delta s\)</span> is approximately equal to the chord length <span class="math notranslate nohighlight">\(\Delta r\)</span>. <em>Adapted from OpenStax, College Physics 2e, Figure 6.7.</em></span><a class="headerlink" href="#fig-centripetal-acceleration" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For an object moving in a circular path at constant speed (see Figure <a class="reference internal" href="#fig-centripetal-acceleration"><span class="std std-numref">5.2</span></a>), the direction of the instantaneous velocity can be determine at two points (<span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>) along the path.  Acceleration points in the direction of the change in velocity, which is toward the center of rotation in this case.  This pointing is shown with the vector diagram in Fig. <a class="reference internal" href="#fig-centripetal-acceleration"><span class="std std-numref">5.2</span></a>.  We call the acceleration of an object moving in uniform circular motion the <strong>centripetal acceleration</strong> <span class="math notranslate nohighlight">\(a_c\)</span>, where <em>centripetal</em> means “toward the center” or “center seeking”.</p>
+<p>The direction of the centripetal acceleration is toward the center, but <em>what is its magnitude?</em></p>
+<p>We can use the two triangles(i.e., the triangles <span class="math notranslate nohighlight">\(ABC\)</span> and <span class="math notranslate nohighlight">\(PQR\)</span>), where we find that they are similar <em>isosceles</em> triangles with two equal sides.  Uniform speed means that <span class="math notranslate nohighlight">\(v_1 = v_2 = v\)</span>.  Also with the properties of similar triangles, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f7f12141-102e-4403-8b50-f2f4b7d7cfe2">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-f7f12141-102e-4403-8b50-f2f4b7d7cfe2" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{\Delta v}{v} = \frac{\Delta s}{r}.
+\end{align}\]</div>
+<p>Recall the definition of acceleration <span class="math notranslate nohighlight">\(a = \Delta v/\Delta t\)</span> and our linear velocity <span class="math notranslate nohighlight">\(v = \Delta s/\Delta t\)</span>, that means we can rearrange the above expression and divide both sides by <span class="math notranslate nohighlight">\(\Delta t\)</span> (allowed by our algebra rules) to get</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{\Delta v}{v} &amp;= \frac{\Delta s}{r}, \qquad &amp;(\text{start here})\\[10pt]
+\Delta v &amp;= \frac{v}{r}\Delta s, \qquad &amp;(\text{rearranging first}) \\[10pt]
+\frac{\Delta v}{\Delta t} &amp;= \left(\frac{v}{r}\right)\left(\frac{\Delta s}{\Delta t}\right), \qquad &amp;(\text{dividing by } \Delta t) \\[10pt]
+a_c &amp;= \frac{v^2}{r}. \qquad &amp; \left(\text{substituting }v = \frac{\Delta s}{\Delta t}\right)
+\end{align*}\]</div>
+<p>We see that the magnitude of the centripetal acceleration is given by</p>
+<div class="math notranslate nohighlight" id="equation-cent-accel-eqn">
+<span class="eqno">(5.10)<a class="headerlink" href="#equation-cent-accel-eqn" title="Link to this equation">#</a></span>\[a_c = \frac{v^2}{r},\]</div>
+<p>which is the acceleration of an object in a circle of radius <span class="math notranslate nohighlight">\(r\)</span> at a speed <span class="math notranslate nohighlight">\(v\)</span>.  This relation tells us the following about centripetal acceleration:</p>
+<ul class="simple">
+<li><p>it is greater at high speeds (i.e., large <span class="math notranslate nohighlight">\(v\)</span>) and in sharp curves (i.e., small <span class="math notranslate nohighlight">\(r\)</span>).</p></li>
+<li><p>it is proportional to the speed <em>squared</em>, which means that it is <span class="math notranslate nohighlight">\(4\times\)</span> as hard to take a curve at <span class="math notranslate nohighlight">\(2\times\)</span> the speed (e.g., <span class="math notranslate nohighlight">\(100\ {\rm kph}\)</span> vs. <span class="math notranslate nohighlight">\(50\ {\rm kph}\)</span>).</p></li>
+</ul>
+<p>It is also useful to express <span class="math notranslate nohighlight">\(a_c\)</span> in terms of angular velocity <span class="math notranslate nohighlight">\(\omega\)</span>.  We can substitute <span class="math notranslate nohighlight">\(v = r\omega\)</span> to find another form as</p>
+<div class="math notranslate nohighlight" id="equation-cent-accel-alt-eqn">
+<span class="eqno">(5.11)<a class="headerlink" href="#equation-cent-accel-alt-eqn" title="Link to this equation">#</a></span>\[a_c = \frac{v^2}{r} = \frac{\left(r\omega\right)^2}{r} = r\omega^2.\]</div>
+<p>A <strong>centrifuge</strong> is a rotating device used to separate specimens of different densities.  High centripetal acceleration significantly decreases the time it takes for separation to occur and makes separation possible with small samples.  They are used in a variety of applications in science and medicine, including</p>
+<ul class="simple">
+<li><p>the separation of single cell suspensions (e.g., bacteria, viruses, and blood cells) from a liquid medium, and</p></li>
+<li><p>the separation of macromolecules (e.g., DNA and protein) from a solution.</p></li>
+</ul>
+<p>Maximum centripetal acceleration of several thousand times the acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span> can be achieved in a vacuum.  Extremely large centrifuges (containing humans) are used to test the tolerance of test pilots and astronauts against the effects of accelerations larger than that of Earth’s surface gravity.</p>
+</section>
+<section id="centripetal-force">
+<h2><span class="section-number">5.3. </span>Centripetal Force<a class="headerlink" href="#centripetal-force" title="Link to this heading">#</a></h2>
+<p>Any force or combination of forces can cause a centripetal or radial acceleration (e.g., tension in a rope on a tether ball, Earth’s gravity on the Moon, banked roadway’s force on a car).  Any net fore causing uniform circular motion is called <strong>centripetal force</strong>.  The direction of a centripetal force is the same as the direction of centripetal acceleration (i.e., toward the center of curvature).</p>
+<p>According to Newton’s second law, net force is mass times acceleration (<span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span>).  For uniform circular motion, the acceleration is the centripetal acceleration <span class="math notranslate nohighlight">\(a_c\)</span>.  Therefore, the magnitude of the centripetal force <span class="math notranslate nohighlight">\(\vec{F}_c\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-73d7896f-5989-4d5c-8129-f3753be24927">
+<span class="eqno">(5.12)<a class="headerlink" href="#equation-73d7896f-5989-4d5c-8129-f3753be24927" title="Permalink to this equation">#</a></span>\[\begin{align}
+F_c &amp;= ma_c, \\
+&amp;= \frac{mv^2}{r},\\
+&amp;= mr\omega^2,
+\end{align}\]</div>
+<p>where Eqn. <a class="reference internal" href="#equation-cent-accel-eqn">(5.10)</a> and <a class="reference internal" href="#equation-cent-accel-alt-eqn">(5.11)</a> can both be substituted for <span class="math notranslate nohighlight">\(a_c\)</span>.  You may use whichever expression for centripetal force is more convenient.</p>
+<p>Centripetal force <span class="math notranslate nohighlight">\(\vec{F}_c\)</span> is always <em>perpendicular</em> to the velocity vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> and pointing toward the center of curvature.  If you know the magnitude of the centripetal force <span class="math notranslate nohighlight">\(F_c\)</span>, the mass <span class="math notranslate nohighlight">\(m\)</span>, and the speed squared <span class="math notranslate nohighlight">\(v^2\)</span>, then you can solve for <span class="math notranslate nohighlight">\(r\)</span> to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fa60df69-8269-47b9-af30-5a1af2be3e4b">
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-fa60df69-8269-47b9-af30-5a1af2be3e4b" title="Permalink to this equation">#</a></span>\[\begin{align}
+r &amp;= \frac{mv^2}{F_c},
+\end{align}\]</div>
+<p>using algebra.  This rearrangement of the equation show that for a given mass and velocity, the centripetal force is <em>inversely</em> proportional to the radius of curvature <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An linear proportion means that as a variable <span class="math notranslate nohighlight">\(x\)</span> is increased, there is a corresponding proportional variable <span class="math notranslate nohighlight">\(y\)</span> increases too.  This occurs in a similar way for decreases in <span class="math notranslate nohighlight">\(x\)</span> that correspond to a decrease in <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>However, an <em>inversely</em> proportional quantity shows a different property.  Suppose that <span class="math notranslate nohighlight">\(x\)</span> is inversely proportional to <span class="math notranslate nohighlight">\(y\)</span>. Then as <span class="math notranslate nohighlight">\(x\)</span> increases, the magnitude of <span class="math notranslate nohighlight">\(y\)</span> <em>decreases</em>, and vice versa.</p>
+</div>
+<figure class="align-default" id="fig-centripetal-force-radius">
+<a class="reference internal image-reference" href="../_images/centripetal_force_diagram.png"><img alt="Two-panel comparison of circular motion at the same speed. Panel a shows motion along a larger-radius path with a smaller inward centripetal force. Panel b shows motion along a smaller-radius path with a larger inward centripetal force." src="../_images/centripetal_force_diagram.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">For an object moving at the same speed <span class="math notranslate nohighlight">\(v\)</span>, the centripetal force depends inversely on the radius of the circular path. <strong>(a)</strong> A larger radius <span class="math notranslate nohighlight">\(r\)</span> requires a smaller centripetal force <span class="math notranslate nohighlight">\(F_c\)</span>. <strong>(b)</strong> A smaller radius requires a larger centripetal force. This relationship follows from <span class="math notranslate nohighlight">\(F_c = mv^2/r\)</span>. <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/6-3-centripetal-force"><em>Adapted from OpenStax, College Physics 2e, Figure 6.9.</em></a></span><a class="headerlink" href="#fig-centripetal-force-radius" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p>Consider a <strong>banked curve</strong>, where the slope of the road helps you follow the curve without skidding sideways.  The greater the banking angle <span class="math notranslate nohighlight">\(\theta\)</span>, the faster you can take the curve. Race tracks have steeply banked curves.  For a car on level ground, the centripetal force causes a car to turn in a circular path due to the friction between the tires and the road (see Figure <a class="reference internal" href="#fig-flat-curve-fbd"><span class="std std-numref">5.4</span></a>).</p>
+<figure class="align-default" id="fig-flat-curve-fbd">
+<a class="reference internal image-reference" href="../_images/car_FBD_diagram.png"><img alt="Three-panel diagram showing the construction of a free-body diagram for a car traveling around a flat curve. The car is selected and isolated as the system, revealing the normal force upward, weight downward, and static friction directed toward the center of the curve. The final free-body diagram shows that static friction supplies the centripetal force." src="../_images/car_FBD_diagram.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Constructing a free-body diagram for a car following a flat curve. <strong>(a)</strong> The car is chosen as the system, and the external forces acting on it are identified. <strong>(b)</strong> Isolating the car shows the normal force <span class="math notranslate nohighlight">\(N\)</span>, the weight <span class="math notranslate nohighlight">\(w\)</span>, and the static friction force <span class="math notranslate nohighlight">\(f_s\)</span> directed toward the center of the curve. <strong>(c)</strong> The free-body diagram shows that the vertical forces balance, while static friction provides the net inward force required for circular motion. Thus, <span class="math notranslate nohighlight">\(f_s = F_c = mv^2/r\)</span>.</span><a class="headerlink" href="#fig-flat-curve-fbd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In an “ideally banked curve”, the banking angle <span class="math notranslate nohighlight">\(\theta\)</span> allows you to follow the curve at a certain speed <em>without</em> the aid of friction between the tires and the road.  For <strong>ideal banking</strong>, the net external force equals the horizontal centripetal force in the absence of friction (see Figure <a class="reference internal" href="#fig-banked-curve-fbd"><span class="std std-numref">5.5</span></a>).  The components of the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> in the horizontal and vertical directions must equal the centripetal force and the weight of the car, respectively.</p>
+<figure class="align-default" id="fig-banked-curve-fbd">
+<a class="reference internal image-reference" href="../_images/banked-car-analysis.png"><img alt="Two-panel diagram of a car traveling around a banked curve. Panel a shows the car on a road banked at angle theta. Panel b shows the free-body diagram, the decomposition of the normal force into vertical and horizontal components, and the corresponding force equations." src="../_images/banked-car-analysis.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">A car travels around a curve banked at an angle <span class="math notranslate nohighlight">\(\theta\)</span>. <strong>(a)</strong> The roadway is tilted so that the normal force is no longer vertical. <strong>(b)</strong> The normal force <span class="math notranslate nohighlight">\(N\)</span> is resolved into vertical and horizontal components. With no vertical acceleration, <span class="math notranslate nohighlight">\(N\cos\theta=w\)</span>. The horizontal component points toward the center of the curve and provides the centripetal force, so <span class="math notranslate nohighlight">\(N\sin\theta=F_c=mv^2/r\)</span>. At the design speed shown here, no friction is required for the car to follow the curve.</span><a class="headerlink" href="#fig-banked-curve-fbd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If the banking angle <span class="math notranslate nohighlight">\(\theta\)</span> is ideal for the speed and radius, then the net external force will equal the necessary centripetal force.  the only two external forces acting on teh are are its weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> and the normal force of the road <span class="math notranslate nohighlight">\(\vec{N}\)</span>.  These two forces must add to give a net external force that is horizontal toward the center of curvature and has a magnitude <span class="math notranslate nohighlight">\(F_c\)</span>.</p>
+<p>We choose a coordinate system, where the normal force is parallel to the banking surface and the weight is straight down (i.e., along the <span class="math notranslate nohighlight">\(-y\)</span>-axis).  The normal force then has separate components aligned with the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-axis.  We add the forces along each coordinate direction, where taking the horizontal components we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-db83d628-ee52-42db-bfe1-88859be18658">
+<span class="eqno">(5.14)<a class="headerlink" href="#equation-db83d628-ee52-42db-bfe1-88859be18658" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_x &amp;= N\sin{\theta} = m a_c, \\
+&amp;= N\sin{\theta} = \frac{mv^2}{r}.
+\end{align}\]</div>
+<p>Because the car does not leave the road’s surface, the net vertical force must be zero (i.e., the vertical components must cancel).  We apply the same procedure for adding the vertical forces to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ce4ace72-e241-4e7d-8fcb-7226af31f21f">
+<span class="eqno">(5.15)<a class="headerlink" href="#equation-ce4ace72-e241-4e7d-8fcb-7226af31f21f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum F_y &amp;= N\cos{\theta} - mg = 0, \\
+&amp;\quad N\cos{\theta} = mg.
+\end{align}\]</div>
+<p>We can combine these two results to eliminate <span class="math notranslate nohighlight">\(N\)</span> and get an expression for the banking angle <span class="math notranslate nohighlight">\(\theta\)</span> in terms of the other physical variables.  We divide the two equations to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ef79c602-ff89-4922-9ed2-11fe6cab257c">
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-ef79c602-ff89-4922-9ed2-11fe6cab257c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{N\sin{\theta}}{N\cos{\theta}} &amp;= \frac{mv^2}{mgr}, \\
+\tan{\theta} &amp;= \frac{v^2}{rg}.
+\end{align}\]</div>
+<p>We can find the angle directly by using the inverse tanget function to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ae9acc52-8eb0-4441-b6da-b7d46a9cee35">
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-ae9acc52-8eb0-4441-b6da-b7d46a9cee35" title="Permalink to this equation">#</a></span>\[\begin{align}
+\theta &amp;= \tan^{-1}\!{\left(\frac{v^2}{rg}\right)}. \qquad \text{(ideally banked curve, no friction)}
+\end{align}\]</div>
+<p>This expression can be understood by considering how the banking angle <span class="math notranslate nohighlight">\(\theta\)</span> depends speed <span class="math notranslate nohighlight">\(v\)</span> and radius <span class="math notranslate nohighlight">\(r\)</span>.  A large <span class="math notranslate nohighlight">\(\theta\)</span> results for a large <span class="math notranslate nohighlight">\(v\)</span> (high speed) and a small <span class="math notranslate nohighlight">\(r\)</span> (sharp curve).  Friction helps because it allows you to take the curve at greater of lower speed than if the curve is frictionless.  Note that <span class="math notranslate nohighlight">\(\theta\)</span> does not depend on the mass of the vehicle.</p>
+</section>
+<section id="newton-s-universal-law-of-gravitation">
+<h2><span class="section-number">5.4. </span>Newton’s Universal Law of Gravitation<a class="headerlink" href="#newton-s-universal-law-of-gravitation" title="Link to this heading">#</a></h2>
+</section>
+<section id="satellites-and-kepler-s-laws">
+<h2><span class="section-number">5.5. </span>Satellites and Kepler’s Laws<a class="headerlink" href="#satellites-and-kepler-s-laws" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +796,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-angle-and-angular-velocity">5.1. Rotation Angle and Angular Velocity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotation-angle">5.1.1. Rotation Angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity">5.1.2. Angular Velocity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#centripetal-acceleration">5.2. Centripetal Acceleration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#centripetal-force">5.3. Centripetal Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-universal-law-of-gravitation">5.4. Newton’s Universal Law of Gravitation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satellites-and-kepler-s-laws">5.5. Satellites and Kepler’s Laws</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
