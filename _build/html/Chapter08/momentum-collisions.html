@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter08/momentum-collisions';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,38 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum-and-force">7.1. Linear Momentum and Force</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">7.1.1. Linear Momentum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-and-newton-s-second-law">7.1.2. Momentum and Newton’s Second Law</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse">7.2. Impulse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">7.3. Conservation of Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-in-1d">7.4. Elastic Collisions in 1D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collisions-in-1d">7.5. Inelastic Collisions in 1D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-point-masses-in-2d">7.6. Collisions of Point Masses in 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-of-two-objects-with-equal-mass">7.6.1. Elastic Collisions of Two Objects with Equal Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-rocket-propulsion">7.7. Introduction to Rocket Propulsion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">7.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">7.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">7.8.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">7.9. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.9.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">7.9.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">7.9.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +531,613 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="momentum-collisions">
 <h1><span class="section-number">7. </span>Momentum &amp; Collisions<a class="headerlink" href="#momentum-collisions" title="Link to this heading">#</a></h1>
-<p>Aug 23, 2026 | 5 words | 0 min read</p>
+<p>Sep 01, 2026 | 4831 words | 32 min read</p>
+<section id="linear-momentum-and-force">
+<h2><span class="section-number">7.1. </span>Linear Momentum and Force<a class="headerlink" href="#linear-momentum-and-force" title="Link to this heading">#</a></h2>
+<section id="linear-momentum">
+<h3><span class="section-number">7.1.1. </span>Linear Momentum<a class="headerlink" href="#linear-momentum" title="Link to this heading">#</a></h3>
+<p>The scientific definition of linear momentum is consistent with people’s intuitive understanding of momentum: a large, fast-moving object has a greater momentum than a smaller, slower object.  Momentum is directly proportional to <strong>both</strong> the object’s mass and velocity.  Thus, a massive, slow-moving object can have the same momentum as low mass, fast-moving object. Momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is a vector describes how a mass <span class="math notranslate nohighlight">\(m\)</span> moves in the direction of its velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span>.  The SI unit for momentum is <span class="math notranslate nohighlight">\({\rm kg\cdot m/s}\)</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">Linear Momentum</p>
+<p>Linear momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is defined as the product of a system’s mass <span class="math notranslate nohighlight">\(m\)</span> multiplied by its velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span>, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e7ea8210-e71c-4fb8-a17b-35a613233942">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-e7ea8210-e71c-4fb8-a17b-35a613233942" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{p} = m\vec{v}.
+\end{align}\]</div>
+<p>For motion in 1D, we may use the scalar version <span class="math notranslate nohighlight">\(p = mv\)</span> and assign the direction of <span class="math notranslate nohighlight">\(\vec{v}\)</span> using positive or negative relative to our chosen coordinate system.</p>
+</div>
+</section>
+<section id="momentum-and-newton-s-second-law">
+<h3><span class="section-number">7.1.2. </span>Momentum and Newton’s Second Law<a class="headerlink" href="#momentum-and-newton-s-second-law" title="Link to this heading">#</a></h3>
+<p>The importance of momentum was recognized early in the development of mechanics.  Momentum was called the <code class="docutils literal notranslate"><span class="pre">quantity</span> <span class="pre">of</span> <span class="pre">motion</span></code>, where Newton stated his second law of motion in terms of momentum.</p>
+<div class="note admonition">
+<p class="admonition-title">Newton’s Second Law of Motion in Terms of Momentum</p>
+<p>The net external force <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\)</span> equals the change in momentum <span class="math notranslate nohighlight">\(\Delta \vec{p}\)</span> of a system divided by the time <span class="math notranslate nohighlight">\(\Delta t\)</span> over which it changes, or</p>
+<div class="math notranslate nohighlight" id="equation-mom-second-law-eqn">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-mom-second-law-eqn" title="Link to this equation">#</a></span>\[\vec{F}_{\rm net} = \frac{\Delta \vec{p}}{\Delta t}.\]</div>
+</div>
+<p>Recall that we defined Newton’s second law as <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span> in <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter04/dynamics.html#newton-s-second-law-of-motion">Chapter 3</a>.  We can see how this form is related to the change in momentum <span class="math notranslate nohighlight">\(\Delta \vec{p}\)</span>.</p>
+<p>First, we write directly the change in momentum as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-31f12296-55bd-4ca2-8e1a-f351a9bd2903">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-31f12296-55bd-4ca2-8e1a-f351a9bd2903" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta \vec{p} = \Delta (m\vec{v}).
+\end{align}\]</div>
+<p>If the mass of the system is <em>constant</em>, we can factor out the <span class="math notranslate nohighlight">\(m\)</span> on the right side to get</p>
+<div class="math notranslate nohighlight">
+\[ \Delta (m\vec{v}) = m\Delta \vec{v}. \]</div>
+<p>Then, we can substitute into Eqn. <a class="reference internal" href="#equation-mom-second-law-eqn">(7.2)</a> to obtain</p>
+<div class="math notranslate nohighlight">
+\[ \vec{F}_{\rm net} = \frac{\Delta \vec{p}}{\Delta t} = \frac{m\Delta {\vec{v}}}{\Delta t}. \]</div>
+<p>Notice that we now have the definition of acceleration from <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter02/kinematics.html#acceleration">Chapter 1</a> on the right-hand side.  With a simple substitution, we have</p>
+<div class="math notranslate nohighlight">
+\[ \vec{F}_{\rm net} = m\vec{a}, \quad \checkmark \]</div>
+<p><em>when the mass of the system is constant</em>.</p>
+<p>Newton’s second law of motion stated in terms of momentum is more generally applicable because it can be applied to systems where the mass is changing (e.g., rockets) and to systems of constant mass.</p>
+<figure class="align-default" id="fig-linear-momentum-newtons-second-law">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/linear_momentum_and_newton_s_second_law.png"><img alt="Two-panel illustration of linear momentum and Newton's second law. Panel (a) compares a 4 kilogram cart moving at 2 meters per second with a 1 kilogram cart moving at 8 meters per second; both have the same momentum of 8 kilogram meters per second. Panel (b) shows a net external force acting on a cart over a time interval, increasing its velocity and momentum, and connects the momentum form of Newton's second law to F net equals ma for constant mass." class="custom-wide-figure" src="../_images/linear_momentum_and_newton_s_second_law.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text"><strong>Linear momentum and Newton’s second law.</strong> <strong>(a)</strong> Momentum depends on both mass and velocity. A <span class="math notranslate nohighlight">\(4\ {\rm kg}\)</span> cart moving at <span class="math notranslate nohighlight">\(2\ {\rm m/s}\)</span> and a <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> cart moving at <span class="math notranslate nohighlight">\(8\ {\rm m/s}\)</span> each have a momentum of <span class="math notranslate nohighlight">\(8\ {\rm kg\cdot m/s}\)</span> in the direction of motion. <strong>(b)</strong> A net external force acting over a time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> changes the momentum of a system. For constant mass, <span class="math notranslate nohighlight">\(\Delta\vec{p}=m\Delta\vec{v}\)</span>, so the momentum form <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}=\Delta\vec{p}/\Delta t\)</span> reduces to the familiar form <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}=m\vec{a}\)</span>.</span><a class="headerlink" href="#fig-linear-momentum-newtons-second-law" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="impulse">
+<h2><span class="section-number">7.2. </span>Impulse<a class="headerlink" href="#impulse" title="Link to this heading">#</a></h2>
+<p>The effect of a force on an object depends on <em>how long it acts</em>, as well as how great the force is.  Consider the change in momentum on a tennis ball:</p>
+<ul class="simple">
+<li><p>a very large force acting over a short time, or</p></li>
+<li><p>a small force acting over a long time</p></li>
+</ul>
+<p>can cause the same <strong>change in momentum</strong>.  A quick, large force from a tennis racquet can launch the tennis ball straight up in the air.  But the weaker gravitational force eventually brings the ball back down as it acts over a much longer time, where it effectively reverses the momentum of the ball.</p>
+<div class="admonition-impulse-change-in-momentum admonition">
+<p class="admonition-title">Impulse: Change in Momentum</p>
+<p>We write the change in momentum by rearranging Eqn. <a class="reference internal" href="#equation-mom-second-law-eqn">(7.2)</a> as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3f7d94e7-0d8b-47db-9cd9-4dff18b1d669">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-3f7d94e7-0d8b-47db-9cd9-4dff18b1d669" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta \vec{p} = \vec{F}_{\rm net}\Delta t,
+\end{align}\]</div>
+<p>where the right-hand side <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\Delta t\)</span> is called the <strong>impulse</strong>.  Impulse is the same as the change in momentum.</p>
+</div>
+<p>There are many ways in which an understanding of impulse affects us in our everyday life.  The dashboard padding (and airbags) allow the net force on the occupants in a car to act over a much longer time when there is a sudden stop.  The momentum change is the same for an occupant, whether the airbag is deployed or not, but the force will be much less if acts over a larger time.</p>
+<p>Modern cars have many plastic components because of primary reasons:</p>
+<ol class="arabic simple">
+<li><p>Lightweight plastics allow for a lighter vehicle, which means the engine needs to do less work to move the car and you get better gas mileage.</p></li>
+<li><p>Plastic components crumple in a collision, which results in a longer collision time and lessens the force felt by the occupants.</p></li>
+</ol>
+<p>Deaths during car races decreased dramatically when the rigid frames were replaced with parts that could crumple or collapse in the event of an accident.</p>
+<p>The bones in your body will fracture if the force on them is too large.  If you jump on the floor from a table, the force on your legs can be immense if you land stiff-legged on a hard surface.  Rolling on the ground after jumping from the table (on a soft mat) extends the time over which the force (on you from the ground) acts.  This helps explain how Jackie Chan could survive with minimal injury after performing all of his martial arts stunts.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Car crash</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-impulse-car-crash">
+<a class="custom-wide-figure reference internal image-reference" href="https://c.tenor.com/mv2xNouGllcAAAAd/tenor.gif"><img alt="Crash-test animation showing the front of a car crumpling as the vehicle rapidly comes to rest." class="custom-wide-figure" src="https://c.tenor.com/mv2xNouGllcAAAAd/tenor.gif" style="width: 85%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.2 </span><span class="caption-text"><strong>Increasing the stopping time in a car crash.</strong> During a collision, the car and its occupants undergo a large change in momentum. The front of the car is designed to <strong>crumple</strong>, increasing the time <span class="math notranslate nohighlight">\(\Delta t\)</span> over which this momentum change occurs. From <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}=\Delta\vec{p}/\Delta t\)</span>, a longer collision time means a smaller average force for the same change in momentum. Airbags and dashboard padding work for the same reason by increasing the stopping time of the occupants. <em>Source: <a class="reference external" href="https://media1.tenor.com/m/mv2xNouGllcAAAAd/iihs-crash-test.gif">IIHS crash-test animation on Tenor</a>.</em></span><a class="headerlink" href="#fig-impulse-car-crash" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Jackie Chan stunt</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-impulse-jackie-chan">
+<a class="custom-tall-figure reference internal image-reference" href="https://c.tenor.com/N2gnQR9uYuAAAAAd/tenor.gif"><img alt="Jackie Chan falling from a clock tower and passing through flexible awnings before reaching the ground during a stunt in Project A." class="custom-tall-figure" src="https://c.tenor.com/N2gnQR9uYuAAAAAd/tenor.gif" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text"><strong>Increasing the stopping time during a stunt.</strong> In this stunt from <em>Project A</em> (1983), Jackie Chan falls from a clock tower and passes through flexible awnings before reaching the ground. The awnings deform as he hits them, changing his momentum over several successive interactions rather than bringing him to rest in a single rigid collision. Increasing the total time over which his momentum changes reduces the average force on his body. Bending the legs, rolling after a landing, and landing on a soft mat use the same impulse principle. <em>Source: <a class="reference external" href="https://media1.tenor.com/m/N2gnQR9uYuAAAAAd/jackie-chan-fall.gif">Jackie Chan falling in Project A on Tenor</a>.</em></span><a class="headerlink" href="#fig-impulse-jackie-chan" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Our definition of impulse includes an assumption that the force is constant over time interval <span class="math notranslate nohighlight">\(\Delta t\)</span>.  Forces are <em>usually not constant</em>, where they vary considerably even during brief time intervals.  It is possible to find the average force <span class="math notranslate nohighlight">\(\vec{F}_{\rm eff}\)</span> that produces the same result as the corresponding time-varying force.</p>
+<p>Figure <a class="reference internal" href="#fig-impulse-force-time"><span class="std std-numref">7.4</span></a> illustrates the force for a ball bouncing off the floor qualitatively.  The area under the curve has units of momentum and is equal to the impulse or change in momentum between time <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>.  The area under the curve is equal tot he rectangle bounded by <span class="math notranslate nohighlight">\(F_{\rm eff}\)</span>, <span class="math notranslate nohighlight">\(t_1\)</span>, and <span class="math notranslate nohighlight">\(t_2\)</span>.</p>
+<figure class="align-center" id="fig-impulse-force-time">
+<img alt="../_images/bdc9b49e12446f5424fe0610d4d56b9fe74fde416a5b7ae1fc6054886cbbdda8.png" src="../_images/bdc9b49e12446f5424fe0610d4d56b9fe74fde416a5b7ae1fc6054886cbbdda8.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text"><strong>Impulse for a time-varying force.</strong> The force during a collision generally changes with time. The impulse is the area under the actual force-versus-time curve between <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>. An effective constant force <span class="math notranslate nohighlight">\(F_{\rm eff}\)</span> can be defined so that the area of the rectangle <span class="math notranslate nohighlight">\(F_{\rm eff}(t_2-t_1)\)</span> is equal to the area under the time-varying force curve. Because the two areas are equal, the actual and effective forces produce the same impulse and therefore the same change in momentum. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-2-impulse">OpenStax, <em>College Physics 2e</em>, Figure 8.2</a>.</span><a class="headerlink" href="#fig-impulse-force-time" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">myst_nb</span><span class="w"> </span><span class="kn">import</span> <span class="n">glue</span>
+
+<span class="c1"># ---------------- force-time model ----------------</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">F_max</span> <span class="o">=</span> <span class="mf">6.0</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">F_actual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span> <span class="o">&gt;=</span> <span class="n">t1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">t</span> <span class="o">&lt;=</span> <span class="n">t2</span><span class="p">)</span>
+<span class="n">F_actual</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">F_max</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># The effective force has the same impulse as the actual force.</span>
+<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="s2">&quot;trapezoid&quot;</span><span class="p">):</span>
+    <span class="n">impulse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapezoid</span><span class="p">(</span><span class="n">F_actual</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">impulse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">F_actual</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="n">F_eff</span> <span class="o">=</span> <span class="n">impulse</span><span class="o">/</span><span class="n">dt</span>
+
+<span class="c1"># ---------------- figure ----------------</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
+
+<span class="c1"># Actual force curve</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">F_actual</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+
+<span class="c1"># Effective constant-force rectangle</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span> <span class="n">t1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">F_eff</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">],</span> <span class="p">[</span><span class="n">F_eff</span><span class="p">,</span> <span class="n">F_eff</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">t2</span><span class="p">,</span> <span class="n">t2</span><span class="p">],</span> <span class="p">[</span><span class="n">F_eff</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Shaded impulse areas</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">F_actual</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="n">F_eff</span><span class="p">,</span> <span class="n">F_eff</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.18</span><span class="p">)</span>
+
+<span class="c1"># ---------------- annotations ----------------</span>
+
+<span class="c1"># Actual force</span>
+<span class="n">t_label</span> <span class="o">=</span> <span class="mf">2.25</span>
+<span class="n">F_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">t_label</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">F_actual</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$F_{\rm actual}$&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">t_label</span><span class="p">,</span> <span class="n">F_label</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">1.75</span><span class="p">,</span> <span class="mf">6.2</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="c1"># Effective force</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.92</span><span class="p">,</span> <span class="n">F_eff</span><span class="o">+</span><span class="mf">0.12</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$F_{\rm eff}$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+
+<span class="c1"># Equal-area statement</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;These areas are equal&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="c1"># t1 and t2 labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_1$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.35</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t_2$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="c1"># ---------------- OpenStax-style axes ----------------</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">5.65</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.55</span><span class="p">,</span> <span class="mf">7.1</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+<span class="k">for</span> <span class="n">spine</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">spine</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Horizontal time axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.55</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">5.58</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$t$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Vertical force axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.65</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">6.85</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$F$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;impulse_force_time&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="conservation-of-momentum">
+<h2><span class="section-number">7.3. </span>Conservation of Momentum<a class="headerlink" href="#conservation-of-momentum" title="Link to this heading">#</a></h2>
+<p>For a sufficiently large system, the momentum of the system is conserved where there can be changes in momentum for components of the system.  For example, if a football player runs into the goalpost in teh end zone, there will be a force on him that causes him to bounce backward. The backward momentum felt by an object (or person) exerting force on another object is often called a <em>recoil</em>.  The Earth recoils (conserving momentum) because of the force applied to it through the goalpost.  The Earth is several orders of magnitude more massive than the player, where its recoil is immeasurably small and can be neglected.</p>
+<p>Consider what happens if the masses of two colliding objects are more similar than the masses of a football player and Earth.  For example, two railcars bumping into one another.  Both cars are coasting along the track in the same direction when the lead car with a mass <span class="math notranslate nohighlight">\(m_2\)</span> is bumped by the trailing car with a mass <span class="math notranslate nohighlight">\(m_1\)</span>.</p>
+<p>The only unbalanced force on each car is the force of the collision, assuming that friction is negligible.  Car 1 slows down as a result of the collision (losing some momentum), while car 2 speeds up (gains some momentum).  The total momentum of the two-car system remains constant.</p>
+<figure class="align-default" id="fig-conservation-of-momentum-railroad-cars">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/conservation_of_momentum_train_collision.png"><img alt="Two-panel diagram showing conservation of momentum for two railcars before and after a collision. In the top panel, railcars of masses m1 and m2 move to the right with velocities v1 and v2. In the bottom panel, after the collision, the cars move with new velocities v1 prime and v2 prime. Both panels identify the two-car system as the system of interest and indicate that the net external force is zero." class="custom-wide-figure" src="../_images/conservation_of_momentum_train_collision.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.5 </span><span class="caption-text"><strong>Conservation of momentum for a two-car collision.</strong> The top panel shows two railcars before the collision, with masses <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> moving to the right with velocities <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>. The bottom panel shows the same cars after the collision, now moving with velocities <span class="math notranslate nohighlight">\(v_1^\prime\)</span> and <span class="math notranslate nohighlight">\(v_2^\prime\)</span>. If the net external force on the two-car system is negligible during the interaction, then the total momentum of the system is conserved, so the total momentum before the collision equals the total momentum after the collision.</span><a class="headerlink" href="#fig-conservation-of-momentum-railroad-cars" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Using the definition of impulse, we can write the change in momentum of car 1 <span class="math notranslate nohighlight">\(\Delta p_1\)</span> in terms of the force <span class="math notranslate nohighlight">\(F_1\)</span> on car 1 due to car 2 and time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p_1 = F_1 \delta t,\]</div>
+<p>where we drop the vector notation because the cars are moving in the same direction (to the right).  Intuitively, it makes sense that the collision time <span class="math notranslate nohighlight">\(\Delta t\)</span> is the same for both cars.  This assumption has to be modified for objects moving near the speed of light.</p>
+<p>Similarly, we find the change in momentum of car 2 <span class="math notranslate nohighlight">\(\Delta p_2\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p_2 = F_2 \delta t, \]</div>
+<p>where <span class="math notranslate nohighlight">\(F_2\)</span> is the force on car 2 due to car 1.  We know from Newton’s third law that <span class="math notranslate nohighlight">\(F_2 = -F_1\)</span>, so we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+F_1 &amp;= \frac{\Delta p_1}{\Delta t}, \\
+F_2 &amp;= \frac{\Delta p_2}{\Delta t}, \\
+\frac{\Delta p_2}{\Delta t} &amp;= - \frac{\Delta p_1}{\Delta t}.
+\end{align*}\]</div>
+<p>Since the interaction time <span class="math notranslate nohighlight">\(\Delta t\)</span> is the same, they cancel on both sides so that we find</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\Delta p_2 &amp;= - \Delta p_1, \\
+\Delta p_2 + \Delta p_1 &amp;= 0.
+\end{align*}\]</div>
+<p>The changes in momentum add to zero, which means the total momentum of the two-car system is constant.  We write this mathematically as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5b6eaeaf-90d3-4ebe-b4cf-f802f2034915">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-5b6eaeaf-90d3-4ebe-b4cf-f802f2034915" title="Permalink to this equation">#</a></span>\[\begin{align}
+p_1 + p_2 &amp;= \text{constant}, \\
+p_1 + p_2 &amp;= p_1^\prime + p_2^\prime,
+\end{align}\]</div>
+<p>where <strong>primed</strong> momenta (<span class="math notranslate nohighlight">\(p_1^\prime\)</span> and <span class="math notranslate nohighlight">\(p_2^\prime\)</span>) represent the state of cars 1 and 2 <em>after</em> the collision and the <strong>unprimed</strong> momenta denote the state of the cars <em>before</em> the collision.</p>
+<div class="note admonition">
+<p class="admonition-title">Conservation of Momentum</p>
+<p>The <strong>conservation of momentum principle</strong> is valid our 1D treatment, where it can be applied to any isolated system with any number of objects in it.  In general the relation is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d6c94bfe-f430-4138-af7f-9576558ba4ea">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-d6c94bfe-f430-4138-af7f-9576558ba4ea" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{p}_{\rm tot} &amp;= {\displaystyle \sum_i^N \vec{p}_i} = \text{constant}, \\
+\vec{p}_{\rm tot}^\prime &amp;= {\displaystyle \sum_i^N \vec{p}_i^\prime} = \text{constant}, \\
+\vec{p}_{\rm tot} &amp;= \vec{p}_{\rm tot}^\prime.
+\end{align}\]</div>
+<p>Recall that the center-of-mass of a system is the effective average location of the mass of the system.  The total momentum can be represented as the momentum of the center of mass of the system.  An <strong>isolated system</strong> is defined as one where the net external force is zero (<span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>).</p>
+</div>
+<p>The conservation of momentum principle can be applied to systems as different as a comet striking the Earth and a gas containing huge numbers of atoms and molecules.  Conservation of momentum is violated only when the <em>net external force is not zero</em>.  But another larger system can always be considered in which momentum is conserved by simply including the source of the external force.  For example, the collision withing the two railroad car system conserves momentum, while each one-car system does not.</p>
+</section>
+<section id="elastic-collisions-in-1d">
+<h2><span class="section-number">7.4. </span>Elastic Collisions in 1D<a class="headerlink" href="#elastic-collisions-in-1d" title="Link to this heading">#</a></h2>
+<p>Let’s consider an elastic collision of two railcars because the railroad track necessarily presents a one-dimensional (1D) problem.  An <strong>elastic collision</strong> is one that also conserves internal kinetic energy.  These are also called “bouncy collisions” where the two objects recoil from each other relative to center-of-mass of the system.  <strong>Internal kinetic energy</strong> is the sum of the kinetic energies of the objects in the system.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Railcar Elastic Collision</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-elastic-collision-railroad-cars">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/before_and_after_elastic_train_collision.png"><img alt="Two-panel diagram of an elastic collision between two railroad cars on a frictionless surface. In the top panel, before the collision, railroad cars of masses m1 and m2 both move to the right with velocities v1 and v2. In the bottom panel, after the collision, the car of mass m1 moves to the left with velocity v1 prime, while the car of mass m2 continues to the right with velocity v2 prime. Both panels identify the two-car system as the system of interest, indicate that the net external force is zero, and show that total momentum is conserved." class="custom-wide-figure" src="../_images/before_and_after_elastic_train_collision.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.6 </span><span class="caption-text"><strong>Elastic collision between two railroad cars.</strong> The top panel shows two railroad cars before the collision, both moving on a frictionless surface with velocities <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>. The bottom panel shows the cars after an elastic collision, where the lighter car reverses direction and the heavier car continues moving to the right with a new speed. For the two-car system, the net external force is negligible, so the total momentum is conserved: <span class="math notranslate nohighlight">\(p_1 + p_2 = p_{\rm tot}\)</span> before the collision and <span class="math notranslate nohighlight">\(p_1^\prime + p_2^\prime = p_{\rm tot}\)</span> afterward. Because the collision is elastic, the total kinetic energy is also conserved, so <span class="math notranslate nohighlight">\(\mathrm{KE}_1^\prime + \mathrm{KE}_2^\prime = \mathrm{KE}_1 + \mathrm{KE}_2\)</span>.</span><a class="headerlink" href="#fig-elastic-collision-railroad-cars" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Choosing Before and After</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-choosing-before-and-after-frames">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/choosing_before_and_after_frames.png"><img alt="Instructional diagram showing how to choose the before and after frames for a one-dimensional elastic collision. The top row shows five stages: approach, just before contact, during collision, just after separation, and moving apart. The two highlighted snapshots, just before contact and just after separation, are then used to construct simplified before and after frames with boxes on a frictionless surface." class="custom-wide-figure" src="../_images/choosing_before_and_after_frames.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text"><strong>Choosing the before and after frames for a 1D elastic collision.</strong> To solve a collision problem, we do not need to model the detailed contact forces during the brief interaction. Instead, we choose two snapshots: one taken <strong>just before contact</strong> and one taken <strong>just after separation</strong>. These snapshots define the <strong>before</strong> and <strong>after</strong> frames used in the conservation equations. In the before frame, the unprimed variables <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> describe the velocities of the two objects prior to the collision. In the after frame, the primed variables <span class="math notranslate nohighlight">\(v_1^\prime\)</span> and <span class="math notranslate nohighlight">\(v_2^\prime\)</span> describe the velocities immediately after the collision. For the two-object system, momentum is conserved, and for an elastic collision the total kinetic energy is also conserved.</span><a class="headerlink" href="#fig-choosing-before-and-after-frames" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Head-on Collision</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-elastic-collision-animation">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/elastic_billiard_collision.gif"><img alt="Animation of a head-on elastic collision between two equal-mass billiard balls viewed from above. A red ball and a blue ball approach each other with equal speeds, collide at the center, and then reverse direction with the same speed. Velocity vectors above the balls show the direction of motion before and after the collision." class="custom-wide-figure" src="../_images/elastic_billiard_collision.gif" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.8 </span><span class="caption-text"><strong>Elastic collision in motion.</strong> This animation shows a head-on elastic collision between two equal-mass billiard balls. Before the collision, the balls move toward one another with equal speeds, as indicated by the velocity vectors <span class="math notranslate nohighlight">\(\vec{v}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{v}_2\)</span>. After the collision, the balls reverse direction and move away with the same speed they had initially, now labeled <span class="math notranslate nohighlight">\(\vec{v}_1^{\prime}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}_2^{\prime}\)</span>. This illustrates the defining features of an elastic collision: the total momentum is conserved, and the total kinetic energy is also conserved.</span><a class="headerlink" href="#fig-elastic-collision-animation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Truly elastic collisions can only be achieved for subatomic particles (e.g., electrons striking nuclei).  Macroscopic collisions can be very nearly (but not quite) elastic, where some kinetic energy is always converted into other forms of energy (e.g.,heat transfer due to friction and sound).  Two common scenarios used to illustrate macroscopic collisions are: two steel blocks on ice and two carts with spring bumpers on an air track.  Icy surfaces and air tracks are nearly frictionless which allows nearly elastic collisions on them.</p>
+<p>Let’s consider two railcars as an approximation of two carts on an air track.  From there we can solve problems involving 1D elastic collisions using conservation of momentum and internal kinetic energy.  We can write the conservation of momentum for two objects by setting the momentum of the system <em>before the collision</em> equal to the momentum of the system <em>after the collision</em>.  Here we use the prime <span class="math notranslate nohighlight">\(^\prime\)</span> to denote the state of a variable after the collision.</p>
+<p>Mathematically, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-55fe425c-4cea-4e0a-8741-3c529889e3e6">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-55fe425c-4cea-4e0a-8741-3c529889e3e6" title="Permalink to this equation">#</a></span>\[\begin{align}
+p_1 + p_2 &amp;= p_1^\prime + p_2^\prime , \\
+m_1v_1 + m_2v_2 &amp;= m_1v_1^\prime + m_2v_2^\prime,
+\end{align}\]</div>
+<p>which includes the masses of the railcars <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>, as well as their respective velocities before (<span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>) and after (<span class="math notranslate nohighlight">\(v_1^\prime\)</span> and <span class="math notranslate nohighlight">\(v_2^\prime\)</span>) the collision.</p>
+<p>An <em>elastic</em> collision conserves internal kinetic energy, where we have an additional equation given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6bbe6db0-5910-41e2-9177-ed25d066c93b">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-6bbe6db0-5910-41e2-9177-ed25d066c93b" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m_1{v^\prime_1}^2 + \frac{1}{2}m_2{v^\prime_2}^2.
+\end{align}\]</div>
+<p>Typically these relations are used together to solve problems for elastic collisions, where the post-collision velocities (primed) depend on the pre-collision velocities (unprimed) and the masses:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v_1^\prime &amp;= \frac{m_1 - m_2}{m_1 + m_2} v_1 + \frac{2 m_2}{m_1 + m_2} v_2, \\
+v_2^\prime  &amp;= \frac{2 m_1}{m_1 + m_2} v_1  + \frac{m_2 - m_1}{m_1 + m_2} v_2.
+\end{align*}\]</div>
+</section>
+<section id="inelastic-collisions-in-1d">
+<h2><span class="section-number">7.5. </span>Inelastic Collisions in 1D<a class="headerlink" href="#inelastic-collisions-in-1d" title="Link to this heading">#</a></h2>
+<p>For an <strong>inelastic collision</strong> the internal kinetic energy changes (it is not conserved).  This means that the forces between colliding objects may remove or add internal kinetic energy. Work done by internal forces may change the forms of energy within a system.</p>
+<p>For inelastic collisions, this internal work may transform some internal kinetic energy into heat transfer.  Or it may convert stored energy into internal kinetic energy (e.g., exploding bolts separate a satellite from its launch vehicle).  A <strong>perfectly inelastic collision</strong> (sometimes called “sticky collisions”) occurs when the objects stick together and reduces the internal kinetic energy to the minimum it can have while still conserving momentum.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Railcar Collision</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-perfectly-inelastic-railcars">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/perfectly_inelastic_railroad_car_collision.png"><img alt="Two-panel diagram of a perfectly inelastic collision between two railroad cars. Before the collision, cars of masses m1 and m2 move separately to the right with velocities v1 and v2. After the collision, the cars are coupled together and move to the right with the same final velocity v prime. The two-car system has negligible net external force, so total momentum is conserved." class="custom-wide-figure" src="../_images/perfectly_inelastic_railroad_car_collision.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.9 </span><span class="caption-text"><strong>Perfectly inelastic collision between two railroad cars.</strong> Before the collision, the railcars of masses <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> move independently with velocities <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>. During a perfectly inelastic collision, the cars couple together and subsequently move with the same velocity, so <span class="math notranslate nohighlight">\(v_1^\prime=v_2^\prime=v^\prime\)</span>. Because the net external force on the two-car system is negligible during the collision, the total momentum is conserved. Kinetic energy, however, is not conserved in a perfectly inelastic collision.</span><a class="headerlink" href="#fig-perfectly-inelastic-railcars" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+Building the Model</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-perfectly-inelastic-before-after-frames">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/choosing_collision_frames_wisely.png"><img alt="Instructional diagram showing how to construct the before and after frames for a perfectly inelastic collision. A sequence shows two objects approaching, just before contact, coupling during the collision, just after coupling, and then moving together. The highlighted snapshots immediately before contact and immediately after coupling are used to construct simplified before and after diagrams for applying conservation of momentum." class="custom-wide-figure" src="../_images/choosing_collision_frames_wisely.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.10 </span><span class="caption-text"><strong>Building the before and after frames.</strong> A collision problem can be simplified by choosing two snapshots: one <strong>just before contact</strong> and one <strong>just after the collision is complete</strong>. The complicated forces and deformation that occur during the brief collision do not need to be modeled directly. In the before frame, the objects have separate velocities <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>. In the after frame of a perfectly inelastic collision, the objects are joined and therefore share a common velocity, <span class="math notranslate nohighlight">\(v_1^\prime=v_2^\prime=v^\prime\)</span>. These two snapshots provide the states that are compared using conservation of momentum.</span><a class="headerlink" href="#fig-perfectly-inelastic-before-after-frames" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+Rear-End Collision</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-perfectly-inelastic-rear-end-animation">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/perfectly_inelastic_rear_end.gif"><img alt="Animation of a perfectly inelastic rear-end collision between two equal-mass billiard balls. Ball 1 moves to the right toward a stationary ball 2. After the collision, the balls remain together and move to the right with a common final velocity. Velocity vectors show the initial and final motion." class="custom-wide-figure" src="../_images/perfectly_inelastic_rear_end.gif" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.11 </span><span class="caption-text"><strong>Perfectly inelastic rear-end collision.</strong> Ball 1 initially moves toward the stationary ball 2. After the collision, the two equal-mass objects remain together and move with the same final velocity <span class="math notranslate nohighlight">\(\vec{v}^{\,\prime}\)</span>. Conservation of momentum requires the momentum carried initially by ball 1 to become the momentum of the combined system. Because the combined mass is larger, its final speed is smaller than the initial speed of ball 1. Momentum is conserved, but kinetic energy is not.</span><a class="headerlink" href="#fig-perfectly-inelastic-rear-end-animation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+Head-On Collision</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-perfectly-inelastic-head-on-animation">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/perfectly_inelastic_head_on_stop.gif"><img alt="Animation of a perfectly inelastic head-on collision between two equal-mass billiard balls. The balls approach one another with equal speeds in opposite directions. After the collision, they remain together and come to rest because their initial momenta are equal in magnitude and opposite in direction." class="custom-wide-figure" src="../_images/perfectly_inelastic_head_on_stop.gif" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.12 </span><span class="caption-text"><strong>Perfectly inelastic head-on collision.</strong> The two equal-mass objects approach one another with equal speeds in opposite directions. Their momenta therefore have equal magnitudes but opposite directions, giving the system zero total momentum before the collision. After the objects stick together, conservation of momentum requires the combined system to remain at rest, so <span class="math notranslate nohighlight">\(\vec{v}^{\,\prime}=0\)</span>. This example emphasizes that momentum is a vector: two moving objects can have a total momentum of zero.</span><a class="headerlink" href="#fig-perfectly-inelastic-head-on-animation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Consider two objects with equal mass <span class="math notranslate nohighlight">\(m\)</span> and speed <span class="math notranslate nohighlight">\(v\)</span> head toward each other and stick together. Their total initial kinetic energy is</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}mv^2 + \frac{1}{2}mv^2 = mv^2. \]</div>
+<p>Since the two objects have the same speed but are moving in opposite directions, we have <span class="math notranslate nohighlight">\(v_1 = v\)</span> and <span class="math notranslate nohighlight">\(v_2 = -v\)</span>.  Through conservation of momentum we must have <span class="math notranslate nohighlight">\(p_{\rm sys} = p_{\rm sys}^\prime\)</span>.  When we equate these momenta, we get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-127b59bf-93f9-449a-ad99-78caa4345e5e">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-127b59bf-93f9-449a-ad99-78caa4345e5e" title="Permalink to this equation">#</a></span>\[\begin{align}
+m_1 \vec{v}_1 + m_2 \vec{v}_2 &amp;= (m_1 + m_2) \vec{v}^\prime, \\
+mv - mv &amp;= (2m)v^\prime,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v^\prime\)</span> is velocity of the combined masses (i.e., masses stuck together).  We can see that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2ac4b0a8-7212-45e8-a432-e33d60bd69d6">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-2ac4b0a8-7212-45e8-a432-e33d60bd69d6" title="Permalink to this equation">#</a></span>\[\begin{align}
+0 &amp;= 2mv^\prime, \\
+v^\prime &amp;= 0,
+\end{align}\]</div>
+<p>because the mass doesn’t go to zero and therefore the final velocity must be zero.  Consider two billiard balls moving towards each other at the same speed, you may have seen them stop right after the collision and makes this scenario seem less strange.</p>
+<p>If the final velocity is zero, then the final internal kinetic energy of the system is also zero. In the case of the billiard balls, the energy escapes through friction and/or sound.</p>
+<p>In general, we can solve for the final velocity <span class="math notranslate nohighlight">\(\vec{v}^\prime\)</span> given a two-body collision consisting of two masses (<span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>) with an before collision velocity (<span class="math notranslate nohighlight">\(\vec{v}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{v}_2\)</span>), respectively.  We use the conservation of momentum equation to get:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-10a3564c-0a37-4980-b512-629f929f86b7">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-10a3564c-0a37-4980-b512-629f929f86b7" title="Permalink to this equation">#</a></span>\[\begin{align}
+m_1 \vec{v}_1 + m_2 \vec{v}_2 &amp;= (m_1 + m_2) \vec{v}^\prime, \\
+\vec{v}^\prime &amp;= \left(\frac{m_1}{m_1+m_2}\right)\vec{v}_1 + \left(\frac{m_2}{m_1+m_2}\right)\vec{v}_2.
+\end{align}\]</div>
+<p>Note that you need to account for the (positive/negative) direction of the <em>before collision</em> velocities (<span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>) when using this result in scalar form.</p>
+</section>
+<section id="collisions-of-point-masses-in-2d">
+<h2><span class="section-number">7.6. </span>Collisions of Point Masses in 2D<a class="headerlink" href="#collisions-of-point-masses-in-2d" title="Link to this heading">#</a></h2>
+<p>For 1D collisions, the incoming and outgoing velocities are all along the same line.  Not all (or most) collisions occur along single axis.  In this case, we consider the collisions within a plane as a <strong>two-dimensional collision</strong>.  The general approach is to choose a convenient coordinate system and resolve the motion into <em>components</em> (see <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter03/2D-kinematics.html#">Chapter 2</a>) along perpendicular axes.  This allows us to find a pair of 1D problems to be solved simultaneously.</p>
+<p>A classic example includes the 2D collision of billiard (pool) balls.  However, a complication arises when the balls have spin before or after their collision.  We will not consider rotation until later, which means we ignore it for now.  To avoid the possibility of spin, we consider only the scattering of <strong>point masses</strong> (e.g., structureless particles that cannot rotate or spin).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
+Collision Geometry</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-2d-billiard-collision">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/2D_collision.png"><img alt="Before-and-after illustration of an off-center billiard-ball collision. Before the collision, a moving cue ball approaches a stationary 1 ball along the positive x direction. After the collision, the cue ball and 1 ball move away along two different directions at angles theta 1 and theta 2 relative to the original line of motion." class="custom-wide-figure" src="../_images/2D_collision.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.13 </span><span class="caption-text"><strong>Two-dimensional elastic collision.</strong> Before the collision, the cue ball moves along the <span class="math notranslate nohighlight">\(+x\)</span> direction while the 1 ball is initially at rest. Because the cue ball strikes the 1 ball off-center, both balls change direction during the collision. Afterward, the cue ball moves at an angle <span class="math notranslate nohighlight">\(\theta_1\)</span> above the original line of motion while the 1 ball moves at an angle <span class="math notranslate nohighlight">\(\theta_2\)</span> below it. The two balls together form the system of interest, so the total momentum before and after the collision is the same when the net external force is negligible.</span><a class="headerlink" href="#fig-2d-billiard-collision" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
+Momentum Accounting</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-2d-collision-momentum-vectors">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/2D_collision_vectors.png"><img alt="Simplified two-panel momentum diagram for an off-center billiard-ball collision. Before the collision, the cue ball carries all of the momentum along the positive x direction while the 1 ball is at rest. After the collision, the two momentum vectors point above and below the positive x axis, with their y components canceling and their x components adding to the initial momentum." class="custom-wide-figure" src="../_images/2D_collision_vectors.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.14 </span><span class="caption-text"><strong>Accounting for momentum before and after the collision.</strong> In the before frame, the 1 ball is at rest, so all of the system’s initial momentum is carried by the cue ball along <span class="math notranslate nohighlight">\(+x\)</span>. After the collision, the momentum is shared between the two balls. Conservation of momentum must hold independently in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions: the two final <span class="math notranslate nohighlight">\(x\)</span>-components combine to reproduce the initial momentum, while the final <span class="math notranslate nohighlight">\(y\)</span>-components must cancel because the system initially had no momentum in the <span class="math notranslate nohighlight">\(y\)</span> direction. With counterclockwise rotation defined as positive, <span class="math notranslate nohighlight">\(\theta_1&gt;0\)</span>, while <span class="math notranslate nohighlight">\(\theta_2&lt;0\)</span> because the 1 ball moves clockwise from the original <span class="math notranslate nohighlight">\(+x\)</span> direction.</span><a class="headerlink" href="#fig-2d-collision-momentum-vectors" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-11">
+Animation</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-2d-billiard-cut-shot-animation">
+<a class="custom-wide-figure reference internal image-reference" href="../_images/elastic_billiard_cut_shot.gif"><img alt="Overhead animation of an elastic billiard cut shot. A cue ball moves toward a stationary 1 ball and strikes it off-center. After the collision, the cue ball and 1 ball move away along perpendicular trajectories." class="custom-wide-figure" src="../_images/elastic_billiard_cut_shot.gif" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.15 </span><span class="caption-text"><strong>A billiard cut shot in motion.</strong> The cue ball approaches the stationary 1 ball along the original line of motion and strikes it off-center. At the collision, the incoming velocity is redistributed between the two equal-mass balls. The cue ball and 1 ball then move away along different trajectories. For an ideal elastic collision between equal masses when one ball is initially at rest, the two final velocity vectors are perpendicular, producing the characteristic <span class="math notranslate nohighlight">\(90^\circ\)</span> geometry of a cut shot.</span><a class="headerlink" href="#fig-2d-billiard-cut-shot-animation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>As in the case for 1D collisions, we start by assuming that <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>, so that the momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is conserved.  Let’s consider a shot in billiards where one ball (with mass <span class="math notranslate nohighlight">\(m_1\)</span>) is launched towards another ball (with mass <span class="math notranslate nohighlight">\(m_2\)</span>) that is initially at rest.  The easiest coordinate system to choose aligns the <span class="math notranslate nohighlight">\(x\)</span>-axis with the motion of the of the incoming ball towards the ball at rest.  The initial momentum of the system <span class="math notranslate nohighlight">\(\vec{p}\)</span> must equal the momentum after the collision <span class="math notranslate nohighlight">\(\vec{p}^\prime\)</span>, or <span class="math notranslate nohighlight">\(\vec{p} = \vec{p}^\prime\)</span>, for the momentum to be conserved.</p>
+<p>In the <em>before collision</em> frame we have only <span class="math notranslate nohighlight">\(p_x\)</span> components for each ball, which we denote with a subscript 1 and 2 (i.e., <span class="math notranslate nohighlight">\(p_{1x}\)</span> and <span class="math notranslate nohighlight">\(p_{2x}\)</span>).  In the <em>after collision</em> frame, there can be both <span class="math notranslate nohighlight">\(p_x^\prime\)</span> and <span class="math notranslate nohighlight">\(p_y^\prime\)</span> components, also with the appropriate subscripts.</p>
+<p><em>How can this be?</em>  If the shot is taken where the incoming ball does not impact the target ball <em>head-on</em>, then the incoming ball’s initial (before collision) momentum is distributed into the target ball’s momentum, while the incoming ball is scattered.  This same process happens with elementary particles, which led to the discovery of the nucleus in the early 20th century.</p>
+<p>In general, we have in component form along the <span class="math notranslate nohighlight">\(x\)</span>-direction the following:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+p_{1x} + p_{2x} &amp;= p_{1x}^\prime + p_{2x}^\prime, \\
+ &amp;= p_{1}^\prime\cos{\theta_1} + p_{2}^\prime\cos{\theta_2}, \\
+m_1v_1 + m_2v_2 &amp;= m_1v_{1}^\prime\cos{\theta_1} + m_2v_{2}^\prime\cos{\theta_2}.
+\end{align*}\]</div>
+<p>Similarly, we can write the component form along the <span class="math notranslate nohighlight">\(y\)</span>-direction as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+p_{1y} + p_{2y} &amp;= p_{1y}^\prime + p_{2y}^\prime, \\
+ &amp;= p_{1}^\prime\sin{\theta_1} + p_{2}^\prime\sin{\theta_2}, \\
+0 &amp;= m_1v_{1}^\prime\sin{\theta_1} + m_2v_{2}^\prime\sin{\theta_2}.
+\end{align*}\]</div>
+<div class="note admonition">
+<p class="admonition-title">Conservation of Momentum in 2D Collisions</p>
+<p>If we align the <span class="math notranslate nohighlight">\(x\)</span>-axis of our coordinate system along the direction of the collision of two particles, then the conservation of momentum equations become:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e782ce95-54e5-4014-bd82-5b87181efc72">
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-e782ce95-54e5-4014-bd82-5b87181efc72" title="Permalink to this equation">#</a></span>\[\begin{align}
+m_1v_1 + m_2v_2  &amp;= m_1v_{1}^\prime\cos{\theta_1} + m_2v_{2}^\prime\cos{\theta_2}, \\
+0 &amp;= m_1v_{1}^\prime\sin{\theta_1} + m_2v_{2}^\prime\sin{\theta_2},
+\end{align}\]</div>
+<p>where the primed velocities represent the outgoing velocities of the particles.  The angles <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span> are measured relative to the collision axis.  <em>Note that one angle will be measured down, so your must take the sign (positive/negative) into account when assigning values for <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>.</em></p>
+</div>
+<p>Returning to our example, we have</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_{1x} = v_1\)</span> and <span class="math notranslate nohighlight">\(v_{1y} = 0\)</span> for the incoming ball,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_{2x} = 0\)</span> and <span class="math notranslate nohighlight">\(v_{2y} = 0\)</span> for the target ball.</p></li>
+</ul>
+<p>This results in a pair of 1D equations describing the conservation of momentum along each axis as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-532f674b-cdd0-486f-8b2d-9b7a50f42254">
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-532f674b-cdd0-486f-8b2d-9b7a50f42254" title="Permalink to this equation">#</a></span>\[\begin{align}
+m_1v_1 &amp;= m_1v_{1}^\prime\cos{\theta_1} + m_2v_{2}^\prime\cos{\theta_2}, \qquad \text{(along the x-axis)}\\
+0 &amp;= m_1v_{1}^\prime\sin{\theta_1} + m_2v_{2}^\prime\sin{\theta_2}. \qquad \text{(along the y-axis)}
+\end{align}\]</div>
+<section id="elastic-collisions-of-two-objects-with-equal-mass">
+<h3><span class="section-number">7.6.1. </span>Elastic Collisions of Two Objects with Equal Mass<a class="headerlink" href="#elastic-collisions-of-two-objects-with-equal-mass" title="Link to this heading">#</a></h3>
+<p>Let’s now consider an elastic collision between two billiard balls.  This is appropriate because billiard balls all have about the same mass.  Recall that for an elastic collision, the internal kinetic energy is conserved.  Again, let us assume that the target ball (<span class="math notranslate nohighlight">\(m_2\)</span>) is initially at rest.  Then, the internal kinetic energy before and after the collision (for equal masses; <span class="math notranslate nohighlight">\(m_1 = m_2 = m\)</span>) is</p>
+<div class="math notranslate nohighlight" id="equation-cons-energy-2d-elastic">
+<span class="eqno">(7.14)<a class="headerlink" href="#equation-cons-energy-2d-elastic" title="Link to this equation">#</a></span>\[\frac{1}{2}mv_1^2 = \frac{1}{2}m{v_1^\prime}^2 + \frac{1}{2}m{v_2^\prime}^2.\]</div>
+<p>We also have to consider the conservation of momentum in the <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>-directions, or</p>
+<div class="math notranslate nohighlight" id="equation-cons-momentum-2d-elastic">
+<span class="eqno">(7.15)<a class="headerlink" href="#equation-cons-momentum-2d-elastic" title="Link to this equation">#</a></span>\[\begin{split}\begin{align}
+mv_1 &amp;= mv_{1}^\prime\cos{\theta_1} + mv_{2}^\prime\cos{\theta_2}, \\
+0 &amp;= mv_{1}^\prime\sin{\theta_1} + mv_{2}^\prime\sin{\theta_2}. 
+\end{align}\end{split}\]</div>
+<p>Notice how similar the left-hand side of Eqn. <a class="reference internal" href="#equation-cons-momentum-2d-elastic">(7.15)</a> appears compared to Eqn. <a class="reference internal" href="#equation-cons-energy-2d-elastic">(7.14)</a>.  We could square both sides (of each equation) in Eqn. <a class="reference internal" href="#equation-cons-momentum-2d-elastic">(7.15)</a> and multiply by <span class="math notranslate nohighlight">\(1/2\)</span>.  Then the left-hand side would have the form of kinetic energy.  Since the bottom equation of Eqn. Eqn. <a class="reference internal" href="#equation-cons-momentum-2d-elastic">(7.15)</a> is zero, we can add the two momentum equations together.  After some algebra (and a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#angle_sum_and_difference_identities">trig identity</a>), we find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7b285257-a5b0-4352-9109-a1ccfcd74f94">
+<span class="eqno">(7.16)<a class="headerlink" href="#equation-7b285257-a5b0-4352-9109-a1ccfcd74f94" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}mv_1^2 = \frac{1}{2}m{v_1^\prime}^2 + \frac{1}{2}m{v_2^\prime}^2 + m{v_1^\prime}{v_2^\prime}\cos(\theta_1-\theta_2).
+\end{align}\]</div>
+<p><em>Remember that <span class="math notranslate nohighlight">\(\theta_2\)</span> is negative here.</em>  This result can only be true if</p>
+<div class="math notranslate nohighlight">
+\[ m{v_1^\prime}{v_2^\prime}\cos(\theta_1-\theta_2) = 0, \]</div>
+<p>and then it would match Eqn. <a class="reference internal" href="#equation-cons-energy-2d-elastic">(7.14)</a>.  There are three ways that this term can be zero:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(v_1^\prime = 0\)</span>; it is a head-on collision and the incoming ball stops (i.e., a stun),</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2^\prime = 0\)</span>; there is no collision and the incoming ball continues unaffected,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos(\theta_1 - \theta_2) = 0\)</span>; The relative angle of separation <span class="math notranslate nohighlight">\(\theta_1 - \theta_2 = 90^\circ\)</span> after the collision (i.e., a cut).</p></li>
+</ol>
+<p>If you play enough pool, you will notice that the angle between the balls is very close to <span class="math notranslate nohighlight">\(90^\circ\)</span> after the collision (when it is not head-on and without spin).  The assumption that the scattering of billiard balls is elastic is reasonable because it can produce all three results.</p>
+</section>
+</section>
+<section id="introduction-to-rocket-propulsion">
+<h2><span class="section-number">7.7. </span>Introduction to Rocket Propulsion<a class="headerlink" href="#introduction-to-rocket-propulsion" title="Link to this heading">#</a></h2>
+<p>The propulsion of all rockets, jet engines, and even squid is explained by Newton’s third law of motion.  Matter is forcefully ejected from a system, which produces and equal and opposite reaction force on what remains.</p>
+<figure class="align-default" id="fig-rocket-momentum-mass-change">
+<a class="custom-tall-figure reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/7d8e8b0fc3b929838916ab2bcc921bb288e072ad"><img alt="OpenStax rocket-propulsion diagram showing a rocket before and after a short time interval, with decreasing mass, changing velocity, expelled exhaust, and a small free-body diagram indicating thrust upward and weight downward." class="custom-tall-figure" src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/7d8e8b0fc3b929838916ab2bcc921bb288e072ad" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.16 </span><span class="caption-text"><strong>Rocket propulsion over a short time interval.</strong> Panel <strong>(a)</strong> shows the rocket at time <span class="math notranslate nohighlight">\(t\)</span>, moving upward with velocity <span class="math notranslate nohighlight">\(v\)</span> and mass <span class="math notranslate nohighlight">\(m\)</span>. Panel <strong>(b)</strong> shows the rocket a short time later at <span class="math notranslate nohighlight">\(t+\Delta t\)</span>, after expelling a small mass <span class="math notranslate nohighlight">\(\Delta m\)</span> of exhaust downward. The rocket’s mass is reduced to <span class="math notranslate nohighlight">\(m-\Delta m\)</span>, while its speed increases to <span class="math notranslate nohighlight">\(v+\Delta v\)</span>. The exhaust leaves downward relative to the rocket, and the accompanying free-body diagram identifies the upward reaction force and the downward weight. This sequence helps illustrate how expelling mass produces a change in the rocket’s momentum.  Image credit: OpenStax, <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-7-introduction-to-rocket-propulsion">College Physics 2e, Figure 8.12</a></span><a class="headerlink" href="#fig-rocket-momentum-mass-change" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Figure <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.16</span></a> shows a rocket accelerating straight up with a mass <span class="math notranslate nohighlight">\(m\)</span> and a velocity <span class="math notranslate nohighlight">\(v\)</span> (see Fig. <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.16</span></a>a).  Therefore, it also has a momentum <span class="math notranslate nohighlight">\(mv\)</span>.  After some time <span class="math notranslate nohighlight">\(\Delta t\)</span> has passed, the rocket has ejected a mass <span class="math notranslate nohighlight">\(\Delta m\)</span> of hot gas, which has a velocity <span class="math notranslate nohighlight">\(v_e\)</span> relative to the rocket (see Fig. <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.16</span></a>b).  The remainder of the mass (<span class="math notranslate nohighlight">\(m-\Delta v\)</span>) now has a greater velocity (<span class="math notranslate nohighlight">\(v+\Delta v\)</span>).</p>
+<p>The momentum of the entire system (i.e., rocket and expelled gas) has decreased because the force of gravity has acted over the time <span class="math notranslate nohighlight">\(\Delta t\)</span> through a negative impulse</p>
+<div class="math notranslate nohighlight">
+\[ \Delta p = F_g\Delta t = -mg\Delta t.\]</div>
+<p>The center-of-mass is in free-fall, but part of the system can accelerate upward due to the rapidly expelling gas.</p>
+<div class="warning admonition">
+<p class="admonition-title">Rocket exhaust does not push on the ground</p>
+<p>It is a common misconception that rocket exhaust pushes on the ground.  The force exerted on the rocket by the exhaust gases (i.e., thrust) is greater in outer space than in the atmosphere or on the launchpad.  Exhaust gases are easier to expel in a vacuum.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Acceleration of a Rocket</p>
+<p>We calculate the acceleration of a rocket by considering the change in momentum of the entire system over <span class="math notranslate nohighlight">\(\Delta t\)</span> and equating this change to the impulse.  This includes the part of the system remaining (i.e., the rocket) after the gas is ejected, and the acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span>.  Through some algebra, we find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8960200e-325a-455c-bd82-b1844e9b7347">
+<span class="eqno">(7.17)<a class="headerlink" href="#equation-8960200e-325a-455c-bd82-b1844e9b7347" title="Permalink to this equation">#</a></span>\[\begin{align} 
+a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is the acceleration of the rocket, <span class="math notranslate nohighlight">\(v_e\)</span> is the exhaust velocity, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the rocket, <span class="math notranslate nohighlight">\(\Delta m\)</span> is the mass of the ejected gas, and <span class="math notranslate nohighlight">\(\Delta t\)</span> is the time in which the gas is ejected.</p>
+</div>
+<p>A rocket’s acceleration depends on three major factors:</p>
+<ol class="arabic simple">
+<li><p><em>The greater the exhaust velocity <span class="math notranslate nohighlight">\(v_e\)</span>, the greater the acceleration is.</em>  The practical limit for <span class="math notranslate nohighlight">\(v_e\)</span> is about <span class="math notranslate nohighlight">\(2.5\ {\rm km/s}\)</span> for conventional (non-nuclear) hot-gas propulsion systems.</p></li>
+<li><p>The rate for which the gas is ejected (<span class="math notranslate nohighlight">\(\Delta m/\Delta t\)</span>) multiplied by the exhaust velocity <span class="math notranslate nohighlight">\(v_e\)</span> is the <em>thrust</em>.  <em>The faster the rocket burns its fuel, the greater the thrust and hence, the acceleration.</em></p></li>
+<li><p><em>The smaller the mass <span class="math notranslate nohighlight">\(m\)</span> of the rocket, the greater the acceleration.</em>  The mass decreases dramatically during flight, so the acceleration is larger at the end than the beginning of the flight.</p></li>
+</ol>
+</section>
+<section id="in-class-exercises">
+<h2><span class="section-number">7.8. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">7.8.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3><span class="section-number">7.8.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">7.9. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">7.9.1. </span>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples and <strong>Check Your Understanding</strong> questions on the course webpage provide examples of the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">7.9.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">7.9.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +1194,45 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum-and-force">7.1. Linear Momentum and Force</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">7.1.1. Linear Momentum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-and-newton-s-second-law">7.1.2. Momentum and Newton’s Second Law</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse">7.2. Impulse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">7.3. Conservation of Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-in-1d">7.4. Elastic Collisions in 1D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collisions-in-1d">7.5. Inelastic Collisions in 1D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-point-masses-in-2d">7.6. Collisions of Point Masses in 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-of-two-objects-with-equal-mass">7.6.1. Elastic Collisions of Two Objects with Equal Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-rocket-propulsion">7.7. Introduction to Rocket Propulsion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">7.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">7.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">7.8.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">7.9. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.9.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">7.9.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">7.9.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
