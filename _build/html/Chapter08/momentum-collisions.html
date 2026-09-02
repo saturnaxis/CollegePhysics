@@ -495,18 +495,34 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum-and-force">7.1. Linear Momentum and Force</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">7.1.1. Linear Momentum</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-and-newton-s-second-law">7.1.2. Momentum and Newton’s Second Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-momentum-of-a-football-player-and-a-football">7.1.2. Example Problem: Momentum of a Football Player and a Football</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-and-newton-s-second-law">7.1.3. Momentum and Newton’s Second Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-average-force-from-a-tennis-racquet">7.1.4. Example Problem: Average Force from a Tennis Racquet</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse">7.2. Impulse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse">7.2. Impulse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-billiard-ball-impulses-at-a-wall">7.2.1. Example Problem: Billiard-Ball Impulses at a Wall</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">7.3. Conservation of Momentum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-in-1d">7.4. Elastic Collisions in 1D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collisions-in-1d">7.5. Inelastic Collisions in 1D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-point-masses-in-2d">7.6. Collisions of Point Masses in 2D</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-of-two-objects-with-equal-mass">7.6.1. Elastic Collisions of Two Objects with Equal Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-in-1d">7.4. Elastic Collisions in 1D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-velocities-after-an-elastic-collision">7.4.1. Example Problem: Velocities After an Elastic Collision</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-rocket-propulsion">7.7. Introduction to Rocket Propulsion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collisions-in-1d">7.5. Inelastic Collisions in 1D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-a-goalie-catches-a-hockey-puck">7.5.1. Example Problem: A Goalie Catches a Hockey Puck</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-energy-released-in-a-cart-collision">7.5.2. Example Problem: Energy Released in a Cart Collision</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-point-masses-in-2d">7.6. Collisions of Point Masses in 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-velocity-of-an-unseen-object">7.6.1. Example Problem: Velocity of an Unseen Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-of-two-objects-with-equal-mass">7.6.2. Elastic Collisions of Two Objects with Equal Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-rocket-propulsion">7.7. Introduction to Rocket Propulsion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-initial-acceleration-of-a-saturn-v">7.7.1. Example Problem: Initial Acceleration of a Saturn V</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">7.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">7.8.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">7.8.2. Problems</a></li>
@@ -531,25 +547,78 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="momentum-collisions">
 <h1><span class="section-number">7. </span>Momentum &amp; Collisions<a class="headerlink" href="#momentum-collisions" title="Link to this heading">#</a></h1>
-<p>Sep 01, 2026 | 4831 words | 32 min read</p>
+<p>Sep 02, 2026 | 7198 words | 48 min read</p>
+<div class="tip admonition">
+<p class="admonition-title">Chapter roadmap</p>
+<p>Momentum provides a powerful way to analyze interactions, especially collisions that happen too quickly for the contact forces to be easy to track. This chapter connects force and impulse to changes in momentum, then uses momentum conservation to compare a system before and after a collision.</p>
+<p>As you read, focus on three questions:</p>
+<ol class="arabic simple">
+<li><p>How do mass and velocity together determine an object’s momentum?</p></li>
+<li><p>How does impulse change momentum, and why does the interaction time affect the average force?</p></li>
+<li><p>How can a carefully chosen system and coordinate axis simplify one- and two-dimensional collision problems?</p></li>
+</ol>
+<p>These ideas will let you model elastic and inelastic collisions and explain how rockets accelerate by ejecting mass.</p>
+</div>
 <section id="linear-momentum-and-force">
 <h2><span class="section-number">7.1. </span>Linear Momentum and Force<a class="headerlink" href="#linear-momentum-and-force" title="Link to this heading">#</a></h2>
 <section id="linear-momentum">
 <h3><span class="section-number">7.1.1. </span>Linear Momentum<a class="headerlink" href="#linear-momentum" title="Link to this heading">#</a></h3>
-<p>The scientific definition of linear momentum is consistent with people’s intuitive understanding of momentum: a large, fast-moving object has a greater momentum than a smaller, slower object.  Momentum is directly proportional to <strong>both</strong> the object’s mass and velocity.  Thus, a massive, slow-moving object can have the same momentum as low mass, fast-moving object. Momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is a vector describes how a mass <span class="math notranslate nohighlight">\(m\)</span> moves in the direction of its velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span>.  The SI unit for momentum is <span class="math notranslate nohighlight">\({\rm kg\cdot m/s}\)</span>.</p>
+<p>The scientific definition of linear momentum is consistent with people’s intuitive understanding of momentum: a large, fast-moving object has a greater momentum than a smaller, slower object.  Momentum is directly proportional to <strong>both</strong> the object’s mass and velocity.  Thus, a massive, slow-moving object can have the same momentum as a low-mass, fast-moving object. Momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is a vector that describes how a mass <span class="math notranslate nohighlight">\(m\)</span> moves in the direction of its velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span>.  The SI unit for momentum is <span class="math notranslate nohighlight">\({\rm kg\cdot m/s}\)</span>.</p>
 <div class="note admonition">
 <p class="admonition-title">Linear Momentum</p>
 <p>Linear momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is defined as the product of a system’s mass <span class="math notranslate nohighlight">\(m\)</span> multiplied by its velocity <span class="math notranslate nohighlight">\(\vec{v}\)</span>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7ea8210-e71c-4fb8-a17b-35a613233942">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-e7ea8210-e71c-4fb8-a17b-35a613233942" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-eae64979-2330-48a4-beac-c539de9890d8">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-eae64979-2330-48a4-beac-c539de9890d8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{p} = m\vec{v}.
 \end{align}\]</div>
-<p>For motion in 1D, we may use the scalar version <span class="math notranslate nohighlight">\(p = mv\)</span> and assign the direction of <span class="math notranslate nohighlight">\(\vec{v}\)</span> using positive or negative relative to our chosen coordinate system.</p>
+<p>For motion in 1D, we may use the scalar version <span class="math notranslate nohighlight">\(p = mv\)</span> and assign the direction of <span class="math notranslate nohighlight">\(\vec{v}\)</span> using a positive or negative sign relative to our chosen coordinate system.</p>
 </div>
 </section>
+<section id="example-problem-momentum-of-a-football-player-and-a-football">
+<h3><span class="section-number">7.1.2. </span>Example Problem: Momentum of a Football Player and a Football<a class="headerlink" href="#example-problem-momentum-of-a-football-player-and-a-football" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Momentum—A Football Player and a Football</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p><strong>(a)</strong> Calculate the momentum of a <span class="math notranslate nohighlight">\(110\ {\rm kg}\)</span> football player running at <span class="math notranslate nohighlight">\(8.00\ {\rm m/s}\)</span>. <strong>(b)</strong> Compare the player’s momentum with the momentum of a hard-thrown <span class="math notranslate nohighlight">\(0.410\ {\rm kg}\)</span> football moving at <span class="math notranslate nohighlight">\(25.0\ {\rm m/s}\)</span>.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The player and football are treated as separate objects. Their masses and speeds are given, but no direction is specified, so we calculate the magnitude of each momentum. The known values are <span class="math notranslate nohighlight">\(m_{\rm player}=110\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(v_{\rm player}=8.00\ {\rm m/s}\)</span>, <span class="math notranslate nohighlight">\(m_{\rm ball}=0.410\ {\rm kg}\)</span>, and <span class="math notranslate nohighlight">\(v_{\rm ball}=25.0\ {\rm m/s}\)</span>. The unknowns are the two momentum magnitudes and their ratio.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The magnitude of an object’s momentum is the product of its mass and speed.</p>
+<div class="math notranslate nohighlight">
+\[
+p=mv.
+\]</div>
+<p class="sd-card-text"><strong>(a)</strong> The player’s momentum is</p>
+<div class="math notranslate nohighlight">
+\[
+p_{\rm player}=(110\ {\rm kg})(8.00\ {\rm m/s})=880\ {\rm kg\cdot m/s}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The football’s momentum is</p>
+<div class="math notranslate nohighlight">
+\[
+p_{\rm ball}=(0.410\ {\rm kg})(25.0\ {\rm m/s})=10.3\ {\rm kg\cdot m/s}.
+\]</div>
+<p class="sd-card-text">The ratio compares the two momentum magnitudes directly.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_{\rm player}}{p_{\rm ball}}=\frac{(110)(8.00)}{(0.410)(25.0)}=85.9.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The player has a momentum of <span class="math notranslate nohighlight">\(880\ {\rm kg\cdot m/s}\)</span>, while the football has a momentum of <span class="math notranslate nohighlight">\(10.3\ {\rm kg\cdot m/s}\)</span>. The player’s momentum is about <span class="math notranslate nohighlight">\(86\)</span> times the football’s momentum. This is reasonable because the player’s much larger mass more than compensates for the football’s greater speed.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-1-linear-momentum-and-force">OpenStax, College Physics 2e, Example 8.1</a>.</em></p>
+</section>
 <section id="momentum-and-newton-s-second-law">
-<h3><span class="section-number">7.1.2. </span>Momentum and Newton’s Second Law<a class="headerlink" href="#momentum-and-newton-s-second-law" title="Link to this heading">#</a></h3>
-<p>The importance of momentum was recognized early in the development of mechanics.  Momentum was called the <code class="docutils literal notranslate"><span class="pre">quantity</span> <span class="pre">of</span> <span class="pre">motion</span></code>, where Newton stated his second law of motion in terms of momentum.</p>
+<h3><span class="section-number">7.1.3. </span>Momentum and Newton’s Second Law<a class="headerlink" href="#momentum-and-newton-s-second-law" title="Link to this heading">#</a></h3>
+<p>The importance of momentum was recognized early in the development of mechanics.  Momentum was called the “quantity of motion,” where Newton stated his second law of motion in terms of momentum.</p>
 <div class="note admonition">
 <p class="admonition-title">Newton’s Second Law of Motion in Terms of Momentum</p>
 <p>The net external force <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\)</span> equals the change in momentum <span class="math notranslate nohighlight">\(\Delta \vec{p}\)</span> of a system divided by the time <span class="math notranslate nohighlight">\(\Delta t\)</span> over which it changes, or</p>
@@ -558,8 +627,8 @@ document.write(`
 </div>
 <p>Recall that we defined Newton’s second law as <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span> in <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter04/dynamics.html#newton-s-second-law-of-motion">Chapter 3</a>.  We can see how this form is related to the change in momentum <span class="math notranslate nohighlight">\(\Delta \vec{p}\)</span>.</p>
 <p>First, we write directly the change in momentum as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31f12296-55bd-4ca2-8e1a-f351a9bd2903">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-31f12296-55bd-4ca2-8e1a-f351a9bd2903" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-090f8e85-3afb-42f9-990e-a143d18d002b">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-090f8e85-3afb-42f9-990e-a143d18d002b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \vec{p} = \Delta (m\vec{v}).
 \end{align}\]</div>
 <p>If the mass of the system is <em>constant</em>, we can factor out the <span class="math notranslate nohighlight">\(m\)</span> on the right side to get</p>
@@ -581,6 +650,43 @@ document.write(`
 </figcaption>
 </figure>
 </section>
+<section id="example-problem-average-force-from-a-tennis-racquet">
+<h3><span class="section-number">7.1.4. </span>Example Problem: Average Force from a Tennis Racquet<a class="headerlink" href="#example-problem-average-force-from-a-tennis-racquet" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Force—Venus Williams’ Racquet</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>During the 2007 French Open, Venus Williams hit a serve at <span class="math notranslate nohighlight">\(58\ {\rm m/s}\)</span>. What average force did her racquet exert on the <span class="math notranslate nohighlight">\(0.057\ {\rm kg}\)</span> tennis ball if its horizontal velocity immediately before impact was negligible and it remained in contact with the racquet for <span class="math notranslate nohighlight">\(5.0\ {\rm ms}\)</span>?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The tennis ball is the system of interest. We define the horizontal <span class="math notranslate nohighlight">\(x\)</span>-axis with <span class="math notranslate nohighlight">\(+x\)</span> in the direction of the outgoing serve. The ball’s initial horizontal velocity is <span class="math notranslate nohighlight">\(v_i=0\)</span>, its final velocity is <span class="math notranslate nohighlight">\(v_f=+58\ {\rm m/s}\)</span>, its mass is <span class="math notranslate nohighlight">\(m=0.057\ {\rm kg}\)</span>, and the contact time is <span class="math notranslate nohighlight">\(\Delta t=5.0\ {\rm ms}=5.0\times10^{-3}\ {\rm s}\)</span>. The unknown is the average horizontal force exerted by the racquet.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">For a constant-mass object, the momentum change follows from the change in velocity.</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta p=m(v_f-v_i).
+\]</div>
+<p class="sd-card-text">The horizontal momentum change is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta p=(0.057\ {\rm kg})(58\ {\rm m/s}-0\ {\rm m/s})=3.306\ {\rm kg\cdot m/s}.
+\]</div>
+<p class="sd-card-text">Newton’s second law in momentum form relates the average force to this momentum change.</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\rm ave}=\frac{\Delta p}{\Delta t}=\frac{3.306\ {\rm kg\cdot m/s}}{5.0\times10^{-3}\ {\rm s}}=6.6\times10^2\ {\rm N}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The racquet exerts an average horizontal force of approximately <span class="math notranslate nohighlight">\(6.6\times10^2\ {\rm N}\)</span> in the <span class="math notranslate nohighlight">\(+x\)</span> direction. A force of this magnitude is reasonable because a substantial momentum change occurs during only <span class="math notranslate nohighlight">\(5.0\ {\rm ms}\)</span> of contact.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-1-linear-momentum-and-force">OpenStax, College Physics 2e, Example 8.2</a>.</em></p>
+</section>
 </section>
 <section id="impulse">
 <h2><span class="section-number">7.2. </span>Impulse<a class="headerlink" href="#impulse" title="Link to this heading">#</a></h2>
@@ -593,20 +699,20 @@ document.write(`
 <div class="admonition-impulse-change-in-momentum admonition">
 <p class="admonition-title">Impulse: Change in Momentum</p>
 <p>We write the change in momentum by rearranging Eqn. <a class="reference internal" href="#equation-mom-second-law-eqn">(7.2)</a> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f7d94e7-0d8b-47db-9cd9-4dff18b1d669">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-3f7d94e7-0d8b-47db-9cd9-4dff18b1d669" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5bac90e3-8a41-4bf0-ade8-7d4833507f25">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-5bac90e3-8a41-4bf0-ade8-7d4833507f25" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \vec{p} = \vec{F}_{\rm net}\Delta t,
 \end{align}\]</div>
 <p>where the right-hand side <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}\Delta t\)</span> is called the <strong>impulse</strong>.  Impulse is the same as the change in momentum.</p>
 </div>
-<p>There are many ways in which an understanding of impulse affects us in our everyday life.  The dashboard padding (and airbags) allow the net force on the occupants in a car to act over a much longer time when there is a sudden stop.  The momentum change is the same for an occupant, whether the airbag is deployed or not, but the force will be much less if acts over a larger time.</p>
-<p>Modern cars have many plastic components because of primary reasons:</p>
+<p>There are many ways in which an understanding of impulse affects us in our everyday life.  The dashboard padding (and airbags) allow the net force on the occupants in a car to act over a much longer time when there is a sudden stop.  The momentum change is the same for an occupant, whether the airbag is deployed or not, but the force will be much less if it acts over a larger time.</p>
+<p>Modern cars incorporate lightweight materials and energy-absorbing structures for two primary reasons:</p>
 <ol class="arabic simple">
-<li><p>Lightweight plastics allow for a lighter vehicle, which means the engine needs to do less work to move the car and you get better gas mileage.</p></li>
-<li><p>Plastic components crumple in a collision, which results in a longer collision time and lessens the force felt by the occupants.</p></li>
+<li><p>Lightweight materials allow for a lighter vehicle, which means the engine needs to do less work to move the car and you get better gas mileage.</p></li>
+<li><p>Vehicle crumple zones deform in a collision, which results in a longer collision time and lessens the force felt by the occupants.</p></li>
 </ol>
 <p>Deaths during car races decreased dramatically when the rigid frames were replaced with parts that could crumple or collapse in the event of an accident.</p>
-<p>The bones in your body will fracture if the force on them is too large.  If you jump on the floor from a table, the force on your legs can be immense if you land stiff-legged on a hard surface.  Rolling on the ground after jumping from the table (on a soft mat) extends the time over which the force (on you from the ground) acts.  This helps explain how Jackie Chan could survive with minimal injury after performing all of his martial arts stunts.</p>
+<p>The bones in your body will fracture if the force on them is too large.  If you jump onto the floor from a table, the force on your legs can be immense if you land stiff-legged on a hard surface.  Rolling on the ground after jumping from the table (on a soft mat) extends the time over which the force (on you from the ground) acts.  This helps explain how Jackie Chan could survive with minimal injury after performing all of his martial arts stunts.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
@@ -631,12 +737,48 @@ Jackie Chan stunt</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 </div>
+<section id="example-problem-billiard-ball-impulses-at-a-wall">
+<h3><span class="section-number">7.2.1. </span>Example Problem: Billiard-Ball Impulses at a Wall<a class="headerlink" href="#example-problem-billiard-ball-impulses-at-a-wall" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Impulses—Two Billiard Balls Striking a Rigid Wall</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Two identical billiard balls strike a rigid wall with the same speed and rebound without a change in speed. The first ball strikes perpendicular to the wall. The second strikes at an angle of <span class="math notranslate nohighlight">\(30^\circ\)</span> from the perpendicular and rebounds at the same angle. <strong>(a)</strong> Determine the direction of the force on the wall due to each ball. <strong>(b)</strong> Calculate the ratio of the impulse magnitude for the perpendicular collision to that for the angled collision.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Each billiard ball has mass <span class="math notranslate nohighlight">\(m\)</span> and speed <span class="math notranslate nohighlight">\(u\)</span>. We define the <span class="math notranslate nohighlight">\(x\)</span>-axis perpendicular to the wall, with <span class="math notranslate nohighlight">\(+x\)</span> pointing toward the wall, and the <span class="math notranslate nohighlight">\(y\)</span>-axis parallel to the wall. During each rebound, the <span class="math notranslate nohighlight">\(x\)</span>-component of momentum reverses while the <span class="math notranslate nohighlight">\(y\)</span>-component remains unchanged. The impulse on a ball is its momentum change; Newton’s third law gives the opposite force direction on the wall.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">For the ball that strikes perpendicular to the wall, the initial and final <span class="math notranslate nohighlight">\(x\)</span>-momenta are <span class="math notranslate nohighlight">\(+mu\)</span> and <span class="math notranslate nohighlight">\(-mu\)</span>. Its impulse is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+J_{\perp,x}=\Delta p_x=-mu-(+mu)=-2mu.
+\]</div>
+<p class="sd-card-text">For the ball that strikes at <span class="math notranslate nohighlight">\(30^\circ\)</span> from the perpendicular, the <span class="math notranslate nohighlight">\(x\)</span>-component has magnitude <span class="math notranslate nohighlight">\(mu\cos(30^\circ)\)</span> and reverses during the rebound. Its impulse is</p>
+<div class="math notranslate nohighlight">
+\[
+J_{30,x}=-mu\cos(30^\circ)-mu\cos(30^\circ)=-2mu\cos(30^\circ).
+\]</div>
+<p class="sd-card-text">The impulses have no <span class="math notranslate nohighlight">\(y\)</span>-component because the parallel momentum component does not change. The ratio of their magnitudes is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{|J_\perp|}{|J_{30}|}=\frac{2mu}{2mu\cos(30^\circ)}=\frac{1}{\cos(30^\circ)}=\frac{2}{\sqrt{3}}=1.15.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The wall exerts an impulse on each ball in the <span class="math notranslate nohighlight">\(-x\)</span> direction, so each ball exerts a force on the wall in the <span class="math notranslate nohighlight">\(+x\)</span> direction. The perpendicular collision produces an impulse about <span class="math notranslate nohighlight">\(1.15\)</span> times as large as the angled collision because the entire momentum reverses along the wall’s normal direction.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-2-impulse">OpenStax, College Physics 2e, Example 8.3</a>.</em></p>
 <p>Our definition of impulse includes an assumption that the force is constant over time interval <span class="math notranslate nohighlight">\(\Delta t\)</span>.  Forces are <em>usually not constant</em>, where they vary considerably even during brief time intervals.  It is possible to find the average force <span class="math notranslate nohighlight">\(\vec{F}_{\rm eff}\)</span> that produces the same result as the corresponding time-varying force.</p>
-<p>Figure <a class="reference internal" href="#fig-impulse-force-time"><span class="std std-numref">7.4</span></a> illustrates the force for a ball bouncing off the floor qualitatively.  The area under the curve has units of momentum and is equal to the impulse or change in momentum between time <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>.  The area under the curve is equal tot he rectangle bounded by <span class="math notranslate nohighlight">\(F_{\rm eff}\)</span>, <span class="math notranslate nohighlight">\(t_1\)</span>, and <span class="math notranslate nohighlight">\(t_2\)</span>.</p>
+<p>Figure <a class="reference internal" href="#fig-impulse-force-time"><span class="std std-numref">7.4</span></a> illustrates the force for a ball bouncing off the floor qualitatively.  The area under the curve has units of momentum and is equal to the impulse or change in momentum between time <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>.  The area under the curve is equal to the area of the rectangle bounded by <span class="math notranslate nohighlight">\(F_{\rm eff}\)</span>, <span class="math notranslate nohighlight">\(t_1\)</span>, and <span class="math notranslate nohighlight">\(t_2\)</span>.</p>
 <figure class="align-center" id="fig-impulse-force-time">
 <img alt="../_images/bdc9b49e12446f5424fe0610d4d56b9fe74fde416a5b7ae1fc6054886cbbdda8.png" src="../_images/bdc9b49e12446f5424fe0610d4d56b9fe74fde416a5b7ae1fc6054886cbbdda8.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text"><strong>Impulse for a time-varying force.</strong> The force during a collision generally changes with time. The impulse is the area under the actual force-versus-time curve between <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>. An effective constant force <span class="math notranslate nohighlight">\(F_{\rm eff}\)</span> can be defined so that the area of the rectangle <span class="math notranslate nohighlight">\(F_{\rm eff}(t_2-t_1)\)</span> is equal to the area under the time-varying force curve. Because the two areas are equal, the actual and effective forces produce the same impulse and therefore the same change in momentum. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-2-impulse">OpenStax, <em>College Physics 2e</em>, Figure 8.2</a>.</span><a class="headerlink" href="#fig-impulse-force-time" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text"><strong>Impulse for a time-varying force.</strong> The force during a collision generally changes with time. The impulse is the area under the actual force-versus-time curve between <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>. An effective constant force <span class="math notranslate nohighlight">\(F_{\rm eff}\)</span> can be defined so that the area of the rectangle <span class="math notranslate nohighlight">\(F_{\rm eff}(t_2-t_1)\)</span> is equal to the area under the time-varying force curve. Because the two areas are equal, the actual and effective forces produce the same impulse and therefore the same change in momentum. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-2-impulse">OpenStax, College Physics 2e, Figure 8.2</a>.</em></span><a class="headerlink" href="#fig-impulse-force-time" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="cell tag_hide-cell docutils container">
@@ -729,10 +871,11 @@ Jackie Chan stunt</label><div class="sd-tab-content docutils">
 </details>
 </div>
 </section>
+</section>
 <section id="conservation-of-momentum">
 <h2><span class="section-number">7.3. </span>Conservation of Momentum<a class="headerlink" href="#conservation-of-momentum" title="Link to this heading">#</a></h2>
-<p>For a sufficiently large system, the momentum of the system is conserved where there can be changes in momentum for components of the system.  For example, if a football player runs into the goalpost in teh end zone, there will be a force on him that causes him to bounce backward. The backward momentum felt by an object (or person) exerting force on another object is often called a <em>recoil</em>.  The Earth recoils (conserving momentum) because of the force applied to it through the goalpost.  The Earth is several orders of magnitude more massive than the player, where its recoil is immeasurably small and can be neglected.</p>
-<p>Consider what happens if the masses of two colliding objects are more similar than the masses of a football player and Earth.  For example, two railcars bumping into one another.  Both cars are coasting along the track in the same direction when the lead car with a mass <span class="math notranslate nohighlight">\(m_2\)</span> is bumped by the trailing car with a mass <span class="math notranslate nohighlight">\(m_1\)</span>.</p>
+<p>For a sufficiently large, isolated system, the momentum of the system is conserved, where there can be changes in momentum for components of the system.  For example, if a football player runs into the goalpost in the end zone, there will be a force on him that causes him to bounce backward. The backward momentum felt by an object (or person) exerting force on another object is often called a <em>recoil</em>.  The Earth recoils (conserving momentum) because of the force applied to it through the goalpost.  Earth is several orders of magnitude more massive than the player, where its recoil is immeasurably small and can be neglected.</p>
+<p>Consider what happens if the masses of two colliding objects are more similar than the masses of a football player and Earth.  For example, consider two railcars bumping into one another.  Both cars are coasting along the track in the same direction when the lead car with a mass <span class="math notranslate nohighlight">\(m_2\)</span> is bumped by the trailing car with a mass <span class="math notranslate nohighlight">\(m_1\)</span>.</p>
 <p>The only unbalanced force on each car is the force of the collision, assuming that friction is negligible.  Car 1 slows down as a result of the collision (losing some momentum), while car 2 speeds up (gains some momentum).  The total momentum of the two-car system remains constant.</p>
 <figure class="align-default" id="fig-conservation-of-momentum-railroad-cars">
 <a class="custom-wide-figure reference internal image-reference" href="../_images/conservation_of_momentum_train_collision.png"><img alt="Two-panel diagram showing conservation of momentum for two railcars before and after a collision. In the top panel, railcars of masses m1 and m2 move to the right with velocities v1 and v2. In the bottom panel, after the collision, the cars move with new velocities v1 prime and v2 prime. Both panels identify the two-car system as the system of interest and indicate that the net external force is zero." class="custom-wide-figure" src="../_images/conservation_of_momentum_train_collision.png" style="width: 100%;" />
@@ -743,11 +886,11 @@ Jackie Chan stunt</label><div class="sd-tab-content docutils">
 </figure>
 <p>Using the definition of impulse, we can write the change in momentum of car 1 <span class="math notranslate nohighlight">\(\Delta p_1\)</span> in terms of the force <span class="math notranslate nohighlight">\(F_1\)</span> on car 1 due to car 2 and time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> as</p>
 <div class="math notranslate nohighlight">
-\[ \Delta p_1 = F_1 \delta t,\]</div>
+\[ \Delta p_1 = F_1 \Delta t,\]</div>
 <p>where we drop the vector notation because the cars are moving in the same direction (to the right).  Intuitively, it makes sense that the collision time <span class="math notranslate nohighlight">\(\Delta t\)</span> is the same for both cars.  This assumption has to be modified for objects moving near the speed of light.</p>
 <p>Similarly, we find the change in momentum of car 2 <span class="math notranslate nohighlight">\(\Delta p_2\)</span> as</p>
 <div class="math notranslate nohighlight">
-\[ \Delta p_2 = F_2 \delta t, \]</div>
+\[ \Delta p_2 = F_2 \Delta t, \]</div>
 <p>where <span class="math notranslate nohighlight">\(F_2\)</span> is the force on car 2 due to car 1.  We know from Newton’s third law that <span class="math notranslate nohighlight">\(F_2 = -F_1\)</span>, so we have</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -762,28 +905,28 @@ F_2 &amp;= \frac{\Delta p_2}{\Delta t}, \\
 \Delta p_2 + \Delta p_1 &amp;= 0.
 \end{align*}\]</div>
 <p>The changes in momentum add to zero, which means the total momentum of the two-car system is constant.  We write this mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b6eaeaf-90d3-4ebe-b4cf-f802f2034915">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-5b6eaeaf-90d3-4ebe-b4cf-f802f2034915" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-10236e14-23b0-4561-be6b-64aea71b9f86">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-10236e14-23b0-4561-be6b-64aea71b9f86" title="Permalink to this equation">#</a></span>\[\begin{align}
 p_1 + p_2 &amp;= \text{constant}, \\
 p_1 + p_2 &amp;= p_1^\prime + p_2^\prime,
 \end{align}\]</div>
 <p>where <strong>primed</strong> momenta (<span class="math notranslate nohighlight">\(p_1^\prime\)</span> and <span class="math notranslate nohighlight">\(p_2^\prime\)</span>) represent the state of cars 1 and 2 <em>after</em> the collision and the <strong>unprimed</strong> momenta denote the state of the cars <em>before</em> the collision.</p>
 <div class="note admonition">
 <p class="admonition-title">Conservation of Momentum</p>
-<p>The <strong>conservation of momentum principle</strong> is valid our 1D treatment, where it can be applied to any isolated system with any number of objects in it.  In general the relation is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d6c94bfe-f430-4138-af7f-9576558ba4ea">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-d6c94bfe-f430-4138-af7f-9576558ba4ea" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>The <strong>conservation of momentum principle</strong> is valid in our 1D treatment, where it can be applied to any isolated system with any number of objects in it.  In general, the relation is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-82bb0e01-9598-418a-8049-b9afcd8a7dc5">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-82bb0e01-9598-418a-8049-b9afcd8a7dc5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{p}_{\rm tot} &amp;= {\displaystyle \sum_i^N \vec{p}_i} = \text{constant}, \\
 \vec{p}_{\rm tot}^\prime &amp;= {\displaystyle \sum_i^N \vec{p}_i^\prime} = \text{constant}, \\
 \vec{p}_{\rm tot} &amp;= \vec{p}_{\rm tot}^\prime.
 \end{align}\]</div>
-<p>Recall that the center-of-mass of a system is the effective average location of the mass of the system.  The total momentum can be represented as the momentum of the center of mass of the system.  An <strong>isolated system</strong> is defined as one where the net external force is zero (<span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>).</p>
+<p>Recall that the center-of-mass of a system is the effective average location of the mass of the system.  The total momentum can be represented as the momentum of the center-of-mass of the system.  An <strong>isolated system</strong> is defined as one where the net external force is zero (<span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>).</p>
 </div>
-<p>The conservation of momentum principle can be applied to systems as different as a comet striking the Earth and a gas containing huge numbers of atoms and molecules.  Conservation of momentum is violated only when the <em>net external force is not zero</em>.  But another larger system can always be considered in which momentum is conserved by simply including the source of the external force.  For example, the collision withing the two railroad car system conserves momentum, while each one-car system does not.</p>
+<p>The conservation of momentum principle can be applied to systems as different as a comet striking the Earth and a gas containing huge numbers of atoms and molecules.  Conservation of momentum is violated only when the <em>net external force is not zero</em>.  But another larger system can always be considered in which momentum is conserved by simply including the source of the external force.  For example, the collision within the two-railcar system conserves momentum, while each one-car system does not.</p>
 </section>
 <section id="elastic-collisions-in-1d">
 <h2><span class="section-number">7.4. </span>Elastic Collisions in 1D<a class="headerlink" href="#elastic-collisions-in-1d" title="Link to this heading">#</a></h2>
-<p>Let’s consider an elastic collision of two railcars because the railroad track necessarily presents a one-dimensional (1D) problem.  An <strong>elastic collision</strong> is one that also conserves internal kinetic energy.  These are also called “bouncy collisions” where the two objects recoil from each other relative to center-of-mass of the system.  <strong>Internal kinetic energy</strong> is the sum of the kinetic energies of the objects in the system.</p>
+<p>Let’s consider an elastic collision of two railcars because the railroad track necessarily presents a one-dimensional (1D) problem.  An <strong>elastic collision</strong> is one that also conserves internal kinetic energy.  Elastic collisions are also called “bouncy collisions” where the two objects recoil from each other relative to the center-of-mass of the system.  <strong>Internal kinetic energy</strong> is the sum of the kinetic energies of the objects in the system.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
@@ -819,18 +962,18 @@ Head-on Collision</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 </div>
-<p>Truly elastic collisions can only be achieved for subatomic particles (e.g., electrons striking nuclei).  Macroscopic collisions can be very nearly (but not quite) elastic, where some kinetic energy is always converted into other forms of energy (e.g.,heat transfer due to friction and sound).  Two common scenarios used to illustrate macroscopic collisions are: two steel blocks on ice and two carts with spring bumpers on an air track.  Icy surfaces and air tracks are nearly frictionless which allows nearly elastic collisions on them.</p>
+<p>Truly elastic collisions can only be achieved for subatomic particles (e.g., electrons striking nuclei).  Macroscopic collisions can be very nearly (but not quite) elastic, where some kinetic energy is always converted into other forms of energy (e.g., heat transfer due to friction and sound).  Two common scenarios used to illustrate macroscopic collisions are two steel blocks on ice and two carts with spring bumpers on an air track.  Icy surfaces and air tracks are nearly frictionless, which allow nearly elastic collisions on them.</p>
 <p>Let’s consider two railcars as an approximation of two carts on an air track.  From there we can solve problems involving 1D elastic collisions using conservation of momentum and internal kinetic energy.  We can write the conservation of momentum for two objects by setting the momentum of the system <em>before the collision</em> equal to the momentum of the system <em>after the collision</em>.  Here we use the prime <span class="math notranslate nohighlight">\(^\prime\)</span> to denote the state of a variable after the collision.</p>
 <p>Mathematically, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-55fe425c-4cea-4e0a-8741-3c529889e3e6">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-55fe425c-4cea-4e0a-8741-3c529889e3e6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e1dc72e4-4b38-4779-8574-5e6330e385eb">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-e1dc72e4-4b38-4779-8574-5e6330e385eb" title="Permalink to this equation">#</a></span>\[\begin{align}
 p_1 + p_2 &amp;= p_1^\prime + p_2^\prime , \\
 m_1v_1 + m_2v_2 &amp;= m_1v_1^\prime + m_2v_2^\prime,
 \end{align}\]</div>
 <p>which includes the masses of the railcars <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>, as well as their respective velocities before (<span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>) and after (<span class="math notranslate nohighlight">\(v_1^\prime\)</span> and <span class="math notranslate nohighlight">\(v_2^\prime\)</span>) the collision.</p>
 <p>An <em>elastic</em> collision conserves internal kinetic energy, where we have an additional equation given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6bbe6db0-5910-41e2-9177-ed25d066c93b">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-6bbe6db0-5910-41e2-9177-ed25d066c93b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1cdf8c5e-7406-431c-bcde-6f76737cc8e0">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-1cdf8c5e-7406-431c-bcde-6f76737cc8e0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2 = \frac{1}{2}m_1{v^\prime_1}^2 + \frac{1}{2}m_2{v^\prime_2}^2.
 \end{align}\]</div>
 <p>Typically these relations are used together to solve problems for elastic collisions, where the post-collision velocities (primed) depend on the pre-collision velocities (unprimed) and the masses:</p>
@@ -839,11 +982,44 @@ m_1v_1 + m_2v_2 &amp;= m_1v_1^\prime + m_2v_2^\prime,
 v_1^\prime &amp;= \frac{m_1 - m_2}{m_1 + m_2} v_1 + \frac{2 m_2}{m_1 + m_2} v_2, \\
 v_2^\prime  &amp;= \frac{2 m_1}{m_1 + m_2} v_1  + \frac{m_2 - m_1}{m_1 + m_2} v_2.
 \end{align*}\]</div>
+<section id="example-problem-velocities-after-an-elastic-collision">
+<h3><span class="section-number">7.4.1. </span>Example Problem: Velocities After an Elastic Collision<a class="headerlink" href="#example-problem-velocities-after-an-elastic-collision" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Velocities Following an Elastic Collision</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(0.500\ {\rm kg}\)</span> object moving at <span class="math notranslate nohighlight">\(4.00\ {\rm m/s}\)</span> collides elastically with a stationary <span class="math notranslate nohighlight">\(3.50\ {\rm kg}\)</span> object. Calculate the final velocity of each object.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The two objects form the system of interest. We define the <span class="math notranslate nohighlight">\(x\)</span>-axis along the motion of object 1, with <span class="math notranslate nohighlight">\(+x\)</span> in its initial direction. The known quantities are <span class="math notranslate nohighlight">\(m_1=0.500\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(m_2=3.50\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(v_1=+4.00\ {\rm m/s}\)</span>, and <span class="math notranslate nohighlight">\(v_2=0\)</span>. Because the collision is elastic and the net external force is negligible, both momentum and kinetic energy are conserved. The unknowns are <span class="math notranslate nohighlight">\(v_1^\prime\)</span> and <span class="math notranslate nohighlight">\(v_2^\prime\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The one-dimensional elastic-collision relations express each final velocity in terms of the masses and initial velocities. Because object 2 is initially at rest, the relation for object 1 becomes</p>
+<div class="math notranslate nohighlight">
+\[
+v_1^\prime=\frac{m_1-m_2}{m_1+m_2}v_1=\frac{0.500\ {\rm kg}-3.50\ {\rm kg}}{0.500\ {\rm kg}+3.50\ {\rm kg}}(4.00\ {\rm m/s})=-3.00\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text">The relation for object 2 gives</p>
+<div class="math notranslate nohighlight">
+\[
+v_2^\prime=\frac{2m_1}{m_1+m_2}v_1=\frac{2(0.500\ {\rm kg})}{0.500\ {\rm kg}+3.50\ {\rm kg}}(4.00\ {\rm m/s})=+1.00\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text">The initial and final total momenta both equal <span class="math notranslate nohighlight">\(2.00\ {\rm kg\cdot m/s}\)</span>, and the initial and final kinetic energies both equal <span class="math notranslate nohighlight">\(4.00\ {\rm J}\)</span>, consistent with an elastic collision.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">After the collision, the smaller object moves at <span class="math notranslate nohighlight">\(-3.00\ {\rm m/s}\)</span> and therefore rebounds opposite its initial direction. The larger object moves forward at <span class="math notranslate nohighlight">\(+1.00\ {\rm m/s}\)</span>. This behavior is reasonable: a light object striking a much heavier stationary object rebounds while transferring some momentum to the heavier object.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-4-elastic-collisions-in-one-dimension">OpenStax, College Physics 2e, Example 8.4</a>.</em></p>
+</section>
 </section>
 <section id="inelastic-collisions-in-1d">
 <h2><span class="section-number">7.5. </span>Inelastic Collisions in 1D<a class="headerlink" href="#inelastic-collisions-in-1d" title="Link to this heading">#</a></h2>
-<p>For an <strong>inelastic collision</strong> the internal kinetic energy changes (it is not conserved).  This means that the forces between colliding objects may remove or add internal kinetic energy. Work done by internal forces may change the forms of energy within a system.</p>
-<p>For inelastic collisions, this internal work may transform some internal kinetic energy into heat transfer.  Or it may convert stored energy into internal kinetic energy (e.g., exploding bolts separate a satellite from its launch vehicle).  A <strong>perfectly inelastic collision</strong> (sometimes called “sticky collisions”) occurs when the objects stick together and reduces the internal kinetic energy to the minimum it can have while still conserving momentum.</p>
+<p>For an <strong>inelastic collision</strong>, the internal kinetic energy changes (it is not conserved).  This means that the forces between colliding objects may remove or add internal kinetic energy. Work done by internal forces may change the forms of energy within a system.</p>
+<p>For inelastic collisions, this internal work may transform some internal kinetic energy into heat transfer.  Or it may convert stored energy into internal kinetic energy (e.g., exploding bolts separate a satellite from its launch vehicle).  A <strong>perfectly inelastic collision</strong> (sometimes called “sticky collisions”) occurs when the objects stick together, reducing the internal kinetic energy to the minimum it can have while still conserving momentum.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-5">
@@ -890,35 +1066,143 @@ Head-On Collision</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 </div>
-<p>Consider two objects with equal mass <span class="math notranslate nohighlight">\(m\)</span> and speed <span class="math notranslate nohighlight">\(v\)</span> head toward each other and stick together. Their total initial kinetic energy is</p>
+<p>Consider two objects with equal masses <span class="math notranslate nohighlight">\(m\)</span> and equal speeds <span class="math notranslate nohighlight">\(v\)</span> that head toward each other and stick together. Their total initial kinetic energy is</p>
 <div class="math notranslate nohighlight">
 \[ \frac{1}{2}mv^2 + \frac{1}{2}mv^2 = mv^2. \]</div>
 <p>Since the two objects have the same speed but are moving in opposite directions, we have <span class="math notranslate nohighlight">\(v_1 = v\)</span> and <span class="math notranslate nohighlight">\(v_2 = -v\)</span>.  Through conservation of momentum we must have <span class="math notranslate nohighlight">\(p_{\rm sys} = p_{\rm sys}^\prime\)</span>.  When we equate these momenta, we get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-127b59bf-93f9-449a-ad99-78caa4345e5e">
-<span class="eqno">(7.9)<a class="headerlink" href="#equation-127b59bf-93f9-449a-ad99-78caa4345e5e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bf460b51-d604-4298-af6d-859b0f498434">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-bf460b51-d604-4298-af6d-859b0f498434" title="Permalink to this equation">#</a></span>\[\begin{align}
 m_1 \vec{v}_1 + m_2 \vec{v}_2 &amp;= (m_1 + m_2) \vec{v}^\prime, \\
 mv - mv &amp;= (2m)v^\prime,
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(v^\prime\)</span> is velocity of the combined masses (i.e., masses stuck together).  We can see that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ac4b0a8-7212-45e8-a432-e33d60bd69d6">
-<span class="eqno">(7.10)<a class="headerlink" href="#equation-2ac4b0a8-7212-45e8-a432-e33d60bd69d6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>where <span class="math notranslate nohighlight">\(v^\prime\)</span> is the velocity of the combined masses (i.e., masses stuck together).  We can see that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1ef9b849-c756-4832-8fb2-f850cd40aec4">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-1ef9b849-c756-4832-8fb2-f850cd40aec4" title="Permalink to this equation">#</a></span>\[\begin{align}
 0 &amp;= 2mv^\prime, \\
 v^\prime &amp;= 0,
 \end{align}\]</div>
-<p>because the mass doesn’t go to zero and therefore the final velocity must be zero.  Consider two billiard balls moving towards each other at the same speed, you may have seen them stop right after the collision and makes this scenario seem less strange.</p>
+<p>because the mass does not go to zero, so the final velocity must be zero.  The animation illustrates this idealized result. Real billiard balls do not stick together, so their collision is not perfectly inelastic.</p>
 <p>If the final velocity is zero, then the final internal kinetic energy of the system is also zero. In the case of the billiard balls, the energy escapes through friction and/or sound.</p>
-<p>In general, we can solve for the final velocity <span class="math notranslate nohighlight">\(\vec{v}^\prime\)</span> given a two-body collision consisting of two masses (<span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>) with an before collision velocity (<span class="math notranslate nohighlight">\(\vec{v}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{v}_2\)</span>), respectively.  We use the conservation of momentum equation to get:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-10a3564c-0a37-4980-b512-629f929f86b7">
-<span class="eqno">(7.11)<a class="headerlink" href="#equation-10a3564c-0a37-4980-b512-629f929f86b7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>In general, we can solve for the final velocity <span class="math notranslate nohighlight">\(\vec{v}^\prime\)</span> given a two-body collision consisting of two masses (<span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>) with before-collision velocities <span class="math notranslate nohighlight">\(\vec{v}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{v}_2\)</span>, respectively.  We use the conservation of momentum equation to get:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-334ba80d-fe5d-43e8-a309-40e4e143cd13">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-334ba80d-fe5d-43e8-a309-40e4e143cd13" title="Permalink to this equation">#</a></span>\[\begin{align}
 m_1 \vec{v}_1 + m_2 \vec{v}_2 &amp;= (m_1 + m_2) \vec{v}^\prime, \\
 \vec{v}^\prime &amp;= \left(\frac{m_1}{m_1+m_2}\right)\vec{v}_1 + \left(\frac{m_2}{m_1+m_2}\right)\vec{v}_2.
 \end{align}\]</div>
 <p>Note that you need to account for the (positive/negative) direction of the <em>before collision</em> velocities (<span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>) when using this result in scalar form.</p>
+<section id="example-problem-a-goalie-catches-a-hockey-puck">
+<h3><span class="section-number">7.5.1. </span>Example Problem: A Goalie Catches a Hockey Puck<a class="headerlink" href="#example-problem-a-goalie-catches-a-hockey-puck" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Velocity and Kinetic-Energy Change—A Puck and a Goalie</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(70.0\ {\rm kg}\)</span> ice hockey goalie, initially at rest on nearly frictionless ice, catches a <span class="math notranslate nohighlight">\(0.150\ {\rm kg}\)</span> puck moving at <span class="math notranslate nohighlight">\(35.0\ {\rm m/s}\)</span>. <strong>(a)</strong> Find the recoil velocity of the goalie and puck. <strong>(b)</strong> How much kinetic energy is lost during the collision?</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-puck-goalie">
+<a class="custom-wide-figure reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/0df304478b6dd869f68adfc589c8063d1e315b3c"><img alt="Two-stage diagram of a hockey puck approaching a stationary goalie and the goalie moving with the caught puck after a perfectly inelastic collision on frictionless ice." class="custom-wide-figure" src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/0df304478b6dd869f68adfc589c8063d1e315b3c" style="width: 85%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.13 </span><span class="caption-text"><strong>A puck and goalie before and after a perfectly inelastic collision.</strong> Before the collision, the puck carries all of the system’s momentum while the goalie is at rest. After the goalie catches the puck, both move together with the same final velocity. Momentum is conserved, but kinetic energy is not. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-5-inelastic-collisions-in-one-dimension">OpenStax, College Physics 2e, Figure 8.8</a>.</em></span><a class="headerlink" href="#fig-example-puck-goalie" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The puck and goalie form the system of interest. We define the <span class="math notranslate nohighlight">\(x\)</span>-axis along the puck’s initial motion, with <span class="math notranslate nohighlight">\(+x\)</span> in that direction. The puck has <span class="math notranslate nohighlight">\(m_1=0.150\ {\rm kg}\)</span> and <span class="math notranslate nohighlight">\(v_1=+35.0\ {\rm m/s}\)</span>; the goalie has <span class="math notranslate nohighlight">\(m_2=70.0\ {\rm kg}\)</span> and <span class="math notranslate nohighlight">\(v_2=0\)</span>. Because the goalie catches the puck, they share a common final velocity <span class="math notranslate nohighlight">\(v^\prime\)</span>. Momentum is conserved, but kinetic energy is not conserved in this perfectly inelastic collision.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> Conservation of momentum relates the state before the collision to the combined motion afterward.</p>
+<div class="math notranslate nohighlight">
+\[
+m_1v_1+m_2v_2=(m_1+m_2)v^\prime.
+\]</div>
+<p class="sd-card-text">Because the goalie is initially at rest, the common final velocity is</p>
+<div class="math notranslate nohighlight">
+\[
+v^\prime=\frac{m_1v_1}{m_1+m_2}=\frac{(0.150\ {\rm kg})(35.0\ {\rm m/s})}{0.150\ {\rm kg}+70.0\ {\rm kg}}=7.48\times10^{-2}\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Before the collision, only the puck has kinetic energy.</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm KE}_i=\frac{1}{2}m_1v_1^2=\frac{1}{2}(0.150\ {\rm kg})(35.0\ {\rm m/s})^2=91.9\ {\rm J}.
+\]</div>
+<p class="sd-card-text">After the collision, the goalie and puck move together.</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm KE}_f=\frac{1}{2}(m_1+m_2){v^\prime}^2=\frac{1}{2}(70.15\ {\rm kg})(7.48\times10^{-2}\ {\rm m/s})^2=0.196\ {\rm J}.
+\]</div>
+<p class="sd-card-text">The change in kinetic energy is</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta {\rm KE}={\rm KE}_f-{\rm KE}_i=0.196\ {\rm J}-91.9\ {\rm J}=-91.7\ {\rm J}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The goalie and puck move together at <span class="math notranslate nohighlight">\(7.48\times10^{-2}\ {\rm m/s}\)</span> in the puck’s original direction. The system loses <span class="math notranslate nohighlight">\(91.7\ {\rm J}\)</span> of kinetic energy, with nearly all of the puck’s initial kinetic energy transformed into thermal energy, sound, and deformation. The small final speed is reasonable because the goalie’s mass is much larger than the puck’s mass.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-5-inelastic-collisions-in-one-dimension">OpenStax, College Physics 2e, Example 8.5</a>.</em></p>
+</section>
+<section id="example-problem-energy-released-in-a-cart-collision">
+<h3><span class="section-number">7.5.2. </span>Example Problem: Energy Released in a Cart Collision<a class="headerlink" href="#example-problem-energy-released-in-a-cart-collision" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Final Velocity and Energy Release—Two Carts Collide</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Cart 1 carries a compressed spring and has a combined mass of <span class="math notranslate nohighlight">\(0.350\ {\rm kg}\)</span> and an initial velocity of <span class="math notranslate nohighlight">\(+2.00\ {\rm m/s}\)</span>. Cart 2 has a mass of <span class="math notranslate nohighlight">\(0.500\ {\rm kg}\)</span> and an initial velocity of <span class="math notranslate nohighlight">\(-0.500\ {\rm m/s}\)</span>. After the carts collide inelastically on a frictionless track, cart 1 recoils at <span class="math notranslate nohighlight">\(-4.00\ {\rm m/s}\)</span>. <strong>(a)</strong> What is the final velocity of cart 2? <strong>(b)</strong> How much energy did the spring release if all of it became kinetic energy?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<figure class="align-default" id="fig-example-spring-cart-collision">
+<a class="custom-wide-figure reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/e295282a986ab3e5abe88f1d3ec4622b73eed5d4"><img alt="Before-and-after diagram of two carts colliding on a frictionless air track as a compressed spring releases energy, with cart 1 recoiling left and cart 2 moving right afterward." class="custom-wide-figure" src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/e295282a986ab3e5abe88f1d3ec4622b73eed5d4" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.14 </span><span class="caption-text"><strong>A spring releases energy during a cart collision.</strong> The air track makes the net external horizontal force negligible, so the two-cart system conserves momentum. The compressed spring stores energy before the collision and releases it during the interaction, increasing the system’s kinetic energy. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-5-inelastic-collisions-in-one-dimension">OpenStax, College Physics 2e, Figure 8.9</a>.</em></span><a class="headerlink" href="#fig-example-spring-cart-collision" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The two carts and compressed spring form the system of interest. We define the <span class="math notranslate nohighlight">\(x\)</span>-axis along the track with <span class="math notranslate nohighlight">\(+x\)</span> in cart 1’s initial direction. The known quantities are <span class="math notranslate nohighlight">\(m_1=0.350\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(m_2=0.500\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(v_1=+2.00\ {\rm m/s}\)</span>, <span class="math notranslate nohighlight">\(v_2=-0.500\ {\rm m/s}\)</span>, and <span class="math notranslate nohighlight">\(v_1^\prime=-4.00\ {\rm m/s}\)</span>. The track is frictionless, so momentum is conserved. The spring force is internal to the system and may increase the system’s kinetic energy.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> Conservation of momentum for the two carts is</p>
+<div class="math notranslate nohighlight">
+\[
+m_1v_1+m_2v_2=m_1v_1^\prime+m_2v_2^\prime.
+\]</div>
+<p class="sd-card-text">Solving for cart 2’s final velocity gives</p>
+<div class="math notranslate nohighlight">
+\[
+v_2^\prime=\frac{m_1v_1+m_2v_2-m_1v_1^\prime}{m_2}=\frac{(0.350\ {\rm kg})(2.00\ {\rm m/s})+(0.500\ {\rm kg})(-0.500\ {\rm m/s})-(0.350\ {\rm kg})(-4.00\ {\rm m/s})}{0.500\ {\rm kg}}=+3.70\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The system’s kinetic energy before the collision is</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm KE}_i=\frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2=0.763\ {\rm J}.
+\]</div>
+<p class="sd-card-text">The kinetic energy after the collision is</p>
+<div class="math notranslate nohighlight">
+\[
+{\rm KE}_f=\frac{1}{2}m_1{v_1^\prime}^2+\frac{1}{2}m_2{v_2^\prime}^2=6.22\ {\rm J}.
+\]</div>
+<p class="sd-card-text">The released spring energy equals the increase in kinetic energy.</p>
+<div class="math notranslate nohighlight">
+\[
+E_{\rm released}={\rm KE}_f-{\rm KE}_i=6.22\ {\rm J}-0.763\ {\rm J}=5.46\ {\rm J}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Cart 2 moves at <span class="math notranslate nohighlight">\(+3.70\ {\rm m/s}\)</span> after the interaction, so it travels in the <span class="math notranslate nohighlight">\(+x\)</span> direction. The spring releases <span class="math notranslate nohighlight">\(5.46\ {\rm J}\)</span>, increasing the system’s kinetic energy. Momentum remains conserved because the spring transfers momentum internally between the carts.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-5-inelastic-collisions-in-one-dimension">OpenStax, College Physics 2e, Example 8.6</a>.</em></p>
+</section>
 </section>
 <section id="collisions-of-point-masses-in-2d">
 <h2><span class="section-number">7.6. </span>Collisions of Point Masses in 2D<a class="headerlink" href="#collisions-of-point-masses-in-2d" title="Link to this heading">#</a></h2>
-<p>For 1D collisions, the incoming and outgoing velocities are all along the same line.  Not all (or most) collisions occur along single axis.  In this case, we consider the collisions within a plane as a <strong>two-dimensional collision</strong>.  The general approach is to choose a convenient coordinate system and resolve the motion into <em>components</em> (see <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter03/2D-kinematics.html#">Chapter 2</a>) along perpendicular axes.  This allows us to find a pair of 1D problems to be solved simultaneously.</p>
-<p>A classic example includes the 2D collision of billiard (pool) balls.  However, a complication arises when the balls have spin before or after their collision.  We will not consider rotation until later, which means we ignore it for now.  To avoid the possibility of spin, we consider only the scattering of <strong>point masses</strong> (e.g., structureless particles that cannot rotate or spin).</p>
+<p>For 1D collisions, the incoming and outgoing velocities are all along the same line.  Most collisions do not occur along a single axis.  In this case, we consider the collisions within a plane as a <strong>two-dimensional collision</strong>.  The general approach is to choose a convenient coordinate system and resolve the motion into <em>components</em> (see <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter03/2D-kinematics.html">Chapter 2</a>) along perpendicular axes.  This allows us to find a pair of 1D problems to be solved simultaneously.</p>
+<p>A classic example is a 2D collision of billiard (pool) balls.  However, a complication arises when the balls have spin before or after their collision.  We will not consider rotation until later, which means we ignore it for now.  To avoid the possibility of spin, we consider only the scattering of <strong>point masses</strong> (e.g., structureless particles that cannot rotate or spin).</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-9">
@@ -927,7 +1211,7 @@ Collision Geometry</label><div class="sd-tab-content docutils">
 <a class="custom-wide-figure reference internal image-reference" href="../_images/2D_collision.png"><img alt="Before-and-after illustration of an off-center billiard-ball collision. Before the collision, a moving cue ball approaches a stationary 1 ball along the positive x direction. After the collision, the cue ball and 1 ball move away along two different directions at angles theta 1 and theta 2 relative to the original line of motion." class="custom-wide-figure" src="../_images/2D_collision.png" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 7.13 </span><span class="caption-text"><strong>Two-dimensional elastic collision.</strong> Before the collision, the cue ball moves along the <span class="math notranslate nohighlight">\(+x\)</span> direction while the 1 ball is initially at rest. Because the cue ball strikes the 1 ball off-center, both balls change direction during the collision. Afterward, the cue ball moves at an angle <span class="math notranslate nohighlight">\(\theta_1\)</span> above the original line of motion while the 1 ball moves at an angle <span class="math notranslate nohighlight">\(\theta_2\)</span> below it. The two balls together form the system of interest, so the total momentum before and after the collision is the same when the net external force is negligible.</span><a class="headerlink" href="#fig-2d-billiard-collision" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.15 </span><span class="caption-text"><strong>Two-dimensional elastic collision.</strong> Before the collision, the cue ball moves along the <span class="math notranslate nohighlight">\(+x\)</span> direction while the 1 ball is initially at rest. Because the cue ball strikes the 1 ball off-center, both balls change direction during the collision. Afterward, the cue ball moves at an angle <span class="math notranslate nohighlight">\(\theta_1\)</span> above the original line of motion while the 1 ball moves at an angle <span class="math notranslate nohighlight">\(\theta_2\)</span> below it. The two balls together form the system of interest, so the total momentum before and after the collision is the same when the net external force is negligible.</span><a class="headerlink" href="#fig-2d-billiard-collision" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -938,7 +1222,7 @@ Momentum Accounting</label><div class="sd-tab-content docutils">
 <a class="custom-wide-figure reference internal image-reference" href="../_images/2D_collision_vectors.png"><img alt="Simplified two-panel momentum diagram for an off-center billiard-ball collision. Before the collision, the cue ball carries all of the momentum along the positive x direction while the 1 ball is at rest. After the collision, the two momentum vectors point above and below the positive x axis, with their y components canceling and their x components adding to the initial momentum." class="custom-wide-figure" src="../_images/2D_collision_vectors.png" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 7.14 </span><span class="caption-text"><strong>Accounting for momentum before and after the collision.</strong> In the before frame, the 1 ball is at rest, so all of the system’s initial momentum is carried by the cue ball along <span class="math notranslate nohighlight">\(+x\)</span>. After the collision, the momentum is shared between the two balls. Conservation of momentum must hold independently in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions: the two final <span class="math notranslate nohighlight">\(x\)</span>-components combine to reproduce the initial momentum, while the final <span class="math notranslate nohighlight">\(y\)</span>-components must cancel because the system initially had no momentum in the <span class="math notranslate nohighlight">\(y\)</span> direction. With counterclockwise rotation defined as positive, <span class="math notranslate nohighlight">\(\theta_1&gt;0\)</span>, while <span class="math notranslate nohighlight">\(\theta_2&lt;0\)</span> because the 1 ball moves clockwise from the original <span class="math notranslate nohighlight">\(+x\)</span> direction.</span><a class="headerlink" href="#fig-2d-collision-momentum-vectors" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.16 </span><span class="caption-text"><strong>Accounting for momentum before and after the collision.</strong> In the before frame, the 1 ball is at rest, so all of the system’s initial momentum is carried by the cue ball along <span class="math notranslate nohighlight">\(+x\)</span>. After the collision, the momentum is shared between the two balls. Conservation of momentum must hold independently in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions: the two final <span class="math notranslate nohighlight">\(x\)</span>-components combine to reproduce the initial momentum, while the final <span class="math notranslate nohighlight">\(y\)</span>-components must cancel because the system initially had no momentum in the <span class="math notranslate nohighlight">\(y\)</span> direction. With counterclockwise rotation defined as positive, <span class="math notranslate nohighlight">\(\theta_1&gt;0\)</span>, while <span class="math notranslate nohighlight">\(\theta_2&lt;0\)</span> because the 1 ball moves clockwise from the original <span class="math notranslate nohighlight">\(+x\)</span> direction.</span><a class="headerlink" href="#fig-2d-collision-momentum-vectors" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -949,22 +1233,22 @@ Animation</label><div class="sd-tab-content docutils">
 <a class="custom-wide-figure reference internal image-reference" href="../_images/elastic_billiard_cut_shot.gif"><img alt="Overhead animation of an elastic billiard cut shot. A cue ball moves toward a stationary 1 ball and strikes it off-center. After the collision, the cue ball and 1 ball move away along perpendicular trajectories." class="custom-wide-figure" src="../_images/elastic_billiard_cut_shot.gif" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 7.15 </span><span class="caption-text"><strong>A billiard cut shot in motion.</strong> The cue ball approaches the stationary 1 ball along the original line of motion and strikes it off-center. At the collision, the incoming velocity is redistributed between the two equal-mass balls. The cue ball and 1 ball then move away along different trajectories. For an ideal elastic collision between equal masses when one ball is initially at rest, the two final velocity vectors are perpendicular, producing the characteristic <span class="math notranslate nohighlight">\(90^\circ\)</span> geometry of a cut shot.</span><a class="headerlink" href="#fig-2d-billiard-cut-shot-animation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.17 </span><span class="caption-text"><strong>A billiard cut shot in motion.</strong> The cue ball approaches the stationary 1 ball along the original line of motion and strikes it off-center. At the collision, the incoming velocity is redistributed between the two equal-mass balls. The cue ball and 1 ball then move away along different trajectories. For an ideal elastic collision between equal masses when one ball is initially at rest, the two final velocity vectors are perpendicular, producing the characteristic <span class="math notranslate nohighlight">\(90^\circ\)</span> geometry of a cut shot.</span><a class="headerlink" href="#fig-2d-billiard-cut-shot-animation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
 </div>
-<p>As in the case for 1D collisions, we start by assuming that <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>, so that the momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is conserved.  Let’s consider a shot in billiards where one ball (with mass <span class="math notranslate nohighlight">\(m_1\)</span>) is launched towards another ball (with mass <span class="math notranslate nohighlight">\(m_2\)</span>) that is initially at rest.  The easiest coordinate system to choose aligns the <span class="math notranslate nohighlight">\(x\)</span>-axis with the motion of the of the incoming ball towards the ball at rest.  The initial momentum of the system <span class="math notranslate nohighlight">\(\vec{p}\)</span> must equal the momentum after the collision <span class="math notranslate nohighlight">\(\vec{p}^\prime\)</span>, or <span class="math notranslate nohighlight">\(\vec{p} = \vec{p}^\prime\)</span>, for the momentum to be conserved.</p>
-<p>In the <em>before collision</em> frame we have only <span class="math notranslate nohighlight">\(p_x\)</span> components for each ball, which we denote with a subscript 1 and 2 (i.e., <span class="math notranslate nohighlight">\(p_{1x}\)</span> and <span class="math notranslate nohighlight">\(p_{2x}\)</span>).  In the <em>after collision</em> frame, there can be both <span class="math notranslate nohighlight">\(p_x^\prime\)</span> and <span class="math notranslate nohighlight">\(p_y^\prime\)</span> components, also with the appropriate subscripts.</p>
-<p><em>How can this be?</em>  If the shot is taken where the incoming ball does not impact the target ball <em>head-on</em>, then the incoming ball’s initial (before collision) momentum is distributed into the target ball’s momentum, while the incoming ball is scattered.  This same process happens with elementary particles, which led to the discovery of the nucleus in the early 20th century.</p>
-<p>In general, we have in component form along the <span class="math notranslate nohighlight">\(x\)</span>-direction the following:</p>
+<p>As in the case for 1D collisions, we start by assuming that <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>, so that the momentum <span class="math notranslate nohighlight">\(\vec{p}\)</span> is conserved.  Let’s consider a shot in billiards where one ball (with mass <span class="math notranslate nohighlight">\(m_1\)</span>) is launched towards another ball (with mass <span class="math notranslate nohighlight">\(m_2\)</span>) that is initially at rest.  The easiest coordinate system to choose aligns the <span class="math notranslate nohighlight">\(x\)</span>-axis with the motion of the incoming ball towards the ball at rest.  The initial momentum of the system <span class="math notranslate nohighlight">\(\vec{p}\)</span> must equal the momentum after the collision <span class="math notranslate nohighlight">\(\vec{p}^\prime\)</span>, or <span class="math notranslate nohighlight">\(\vec{p} = \vec{p}^\prime\)</span>, for the momentum to be conserved.</p>
+<p>In the <em>before collision</em> frame we have only <span class="math notranslate nohighlight">\(p_x\)</span> components for each ball, which we denote with subscripts 1 and 2 (i.e., <span class="math notranslate nohighlight">\(p_{1x}\)</span> and <span class="math notranslate nohighlight">\(p_{2x}\)</span>).  In the <em>after collision</em> frame, there can be both <span class="math notranslate nohighlight">\(p_x^\prime\)</span> and <span class="math notranslate nohighlight">\(p_y^\prime\)</span> components, also with the appropriate subscripts.</p>
+<p><em>How can this be?</em>  If the shot is taken where the incoming ball does not strike the target ball <em>head-on</em>, then the initial momentum is redistributed between the scattered incoming ball and the target ball.  This same process happens with elementary particles, which led to the discovery of the nucleus in the early 20th century.</p>
+<p>In general, conservation of momentum along the <span class="math notranslate nohighlight">\(x\)</span>-direction has the following component form:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 p_{1x} + p_{2x} &amp;= p_{1x}^\prime + p_{2x}^\prime, \\
  &amp;= p_{1}^\prime\cos{\theta_1} + p_{2}^\prime\cos{\theta_2}, \\
 m_1v_1 + m_2v_2 &amp;= m_1v_{1}^\prime\cos{\theta_1} + m_2v_{2}^\prime\cos{\theta_2}.
 \end{align*}\]</div>
-<p>Similarly, we can write the component form along the <span class="math notranslate nohighlight">\(y\)</span>-direction as</p>
+<p>Similarly, conservation of momentum along the <span class="math notranslate nohighlight">\(y\)</span>-direction has the component form</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 p_{1y} + p_{2y} &amp;= p_{1y}^\prime + p_{2y}^\prime, \\
@@ -974,26 +1258,86 @@ p_{1y} + p_{2y} &amp;= p_{1y}^\prime + p_{2y}^\prime, \\
 <div class="note admonition">
 <p class="admonition-title">Conservation of Momentum in 2D Collisions</p>
 <p>If we align the <span class="math notranslate nohighlight">\(x\)</span>-axis of our coordinate system along the direction of the collision of two particles, then the conservation of momentum equations become:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e782ce95-54e5-4014-bd82-5b87181efc72">
-<span class="eqno">(7.12)<a class="headerlink" href="#equation-e782ce95-54e5-4014-bd82-5b87181efc72" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-015f3ec2-3074-48b9-a431-9926fd380798">
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-015f3ec2-3074-48b9-a431-9926fd380798" title="Permalink to this equation">#</a></span>\[\begin{align}
 m_1v_1 + m_2v_2  &amp;= m_1v_{1}^\prime\cos{\theta_1} + m_2v_{2}^\prime\cos{\theta_2}, \\
 0 &amp;= m_1v_{1}^\prime\sin{\theta_1} + m_2v_{2}^\prime\sin{\theta_2},
 \end{align}\]</div>
-<p>where the primed velocities represent the outgoing velocities of the particles.  The angles <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span> are measured relative to the collision axis.  <em>Note that one angle will be measured down, so your must take the sign (positive/negative) into account when assigning values for <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span>.</em></p>
+<p>where the primed velocities represent the outgoing velocities of the particles.  The angles <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span> are measured relative to the collision axis.  <em>Note that one outgoing angle is measured below the <span class="math notranslate nohighlight">\(+x\)</span>-axis, so you must take the negative sign into account when assigning a value to <span class="math notranslate nohighlight">\(\theta_2\)</span>.</em></p>
 </div>
 <p>Returning to our example, we have</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(v_{1x} = v_1\)</span> and <span class="math notranslate nohighlight">\(v_{1y} = 0\)</span> for the incoming ball,</p></li>
 <li><p><span class="math notranslate nohighlight">\(v_{2x} = 0\)</span> and <span class="math notranslate nohighlight">\(v_{2y} = 0\)</span> for the target ball.</p></li>
 </ul>
-<p>This results in a pair of 1D equations describing the conservation of momentum along each axis as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-532f674b-cdd0-486f-8b2d-9b7a50f42254">
-<span class="eqno">(7.13)<a class="headerlink" href="#equation-532f674b-cdd0-486f-8b2d-9b7a50f42254" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>This results in a pair of 1D equations describing the conservation of momentum along each axis as follows:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-106e48d3-a8ec-451a-88d5-03533e8d166e">
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-106e48d3-a8ec-451a-88d5-03533e8d166e" title="Permalink to this equation">#</a></span>\[\begin{align}
 m_1v_1 &amp;= m_1v_{1}^\prime\cos{\theta_1} + m_2v_{2}^\prime\cos{\theta_2}, \qquad \text{(along the x-axis)}\\
 0 &amp;= m_1v_{1}^\prime\sin{\theta_1} + m_2v_{2}^\prime\sin{\theta_2}. \qquad \text{(along the y-axis)}
 \end{align}\]</div>
+<section id="example-problem-velocity-of-an-unseen-object">
+<h3><span class="section-number">7.6.1. </span>Example Problem: Velocity of an Unseen Object<a class="headerlink" href="#example-problem-velocity-of-an-unseen-object" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Determining an Unseen Object’s Velocity from Scattering</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(0.250\ {\rm kg}\)</span> object moves at <span class="math notranslate nohighlight">\(2.00\ {\rm m/s}\)</span> along the <span class="math notranslate nohighlight">\(+x\)</span>-axis on a frictionless surface and enters a dark room. It collides with an initially stationary <span class="math notranslate nohighlight">\(0.400\ {\rm kg}\)</span> object. The first object emerges at <span class="math notranslate nohighlight">\(1.50\ {\rm m/s}\)</span> and <span class="math notranslate nohighlight">\(45.0^\circ\)</span> above its original direction. Calculate the magnitude and direction of the second object’s final velocity.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-dark-room-scattering">
+<a class="custom-wide-figure reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/9fe0a0484f70395f8895a83bfbe181d6d2c15cbe"><img alt="Scattering diagram showing object 1 entering a dark room along the positive x-axis and emerging at 45 degrees above it, while the final velocity of an initially stationary object 2 must be inferred from momentum conservation." class="custom-wide-figure" src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/9fe0a0484f70395f8895a83bfbe181d6d2c15cbe" style="width: 85%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.18 </span><span class="caption-text"><strong>Inferring an unseen object’s motion from scattering.</strong> Object 1 enters along the <span class="math notranslate nohighlight">\(+x\)</span>-axis and emerges at <span class="math notranslate nohighlight">\(45.0^\circ\)</span> with a lower speed. Object 2 is initially at rest inside the dark room, so its final velocity must account for the remaining momentum in both coordinate directions. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-6-collisions-of-point-masses-in-two-dimensions">OpenStax, College Physics 2e, Figure 8.11</a>.</em></span><a class="headerlink" href="#fig-example-dark-room-scattering" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The two objects form the system of interest. We define the <span class="math notranslate nohighlight">\(x\)</span>-axis along object 1’s initial motion, with <span class="math notranslate nohighlight">\(+x\)</span> to the right, and the <span class="math notranslate nohighlight">\(y\)</span>-axis with <span class="math notranslate nohighlight">\(+y\)</span> upward. The known quantities are <span class="math notranslate nohighlight">\(m_1=0.250\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(m_2=0.400\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(v_1=2.00\ {\rm m/s}\)</span>, <span class="math notranslate nohighlight">\(v_1^\prime=1.50\ {\rm m/s}\)</span>, and <span class="math notranslate nohighlight">\(\theta_1=+45.0^\circ\)</span>. The surface is frictionless, so momentum is conserved independently along both axes. The unknowns are the magnitude <span class="math notranslate nohighlight">\(v_2^\prime\)</span> and direction <span class="math notranslate nohighlight">\(\theta_2\)</span>.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">Conservation of momentum along the <span class="math notranslate nohighlight">\(x\)</span>-axis determines the second object’s final <span class="math notranslate nohighlight">\(x\)</span>-component.</p>
+<div class="math notranslate nohighlight">
+\[
+m_1v_1=m_1v_1^\prime\cos\theta_1+m_2v_{2x}^\prime.
+\]</div>
+<p class="sd-card-text">Solving for this component gives</p>
+<div class="math notranslate nohighlight">
+\[
+v_{2x}^\prime=\frac{m_1}{m_2}(v_1-v_1^\prime\cos\theta_1)=\frac{0.250\ {\rm kg}}{0.400\ {\rm kg}}[2.00\ {\rm m/s}-(1.50\ {\rm m/s})\cos(45.0^\circ)]=+0.587\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text">The initial <span class="math notranslate nohighlight">\(y\)</span>-momentum is zero, so the two final <span class="math notranslate nohighlight">\(y\)</span>-components must cancel.</p>
+<div class="math notranslate nohighlight">
+\[
+0=m_1v_1^\prime\sin\theta_1+m_2v_{2y}^\prime.
+\]</div>
+<p class="sd-card-text">The second object’s final <span class="math notranslate nohighlight">\(y\)</span>-component is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+v_{2y}^\prime=-\frac{m_1}{m_2}v_1^\prime\sin\theta_1=-\frac{0.250\ {\rm kg}}{0.400\ {\rm kg}}(1.50\ {\rm m/s})\sin(45.0^\circ)=-0.663\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text">The velocity magnitude follows from its perpendicular components.</p>
+<div class="math notranslate nohighlight">
+\[
+v_2^\prime=\sqrt{{v_{2x}^\prime}^2+{v_{2y}^\prime}^2}=\sqrt{(0.587\ {\rm m/s})^2+(-0.663\ {\rm m/s})^2}=0.886\ {\rm m/s}.
+\]</div>
+<p class="sd-card-text">The signs place the vector in the fourth quadrant. Its angle measured from the <span class="math notranslate nohighlight">\(+x\)</span>-axis is</p>
+<div class="math notranslate nohighlight">
+\[
+\theta_2=\tan^{-1}\!\left(\frac{v_{2y}^\prime}{v_{2x}^\prime}\right)=-48.5^\circ,
+\]</div>
+<p class="sd-card-text">which is equivalent to <span class="math notranslate nohighlight">\(311.5^\circ\)</span> measured counterclockwise from the <span class="math notranslate nohighlight">\(+x\)</span>-axis.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The second object leaves the collision with a speed of <span class="math notranslate nohighlight">\(0.886\ {\rm m/s}\)</span> at <span class="math notranslate nohighlight">\(48.5^\circ\)</span> below the <span class="math notranslate nohighlight">\(+x\)</span>-axis. Its downward momentum component balances the upward component carried by the first object, while the two final <span class="math notranslate nohighlight">\(x\)</span>-components reproduce the system’s initial momentum.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-6-collisions-of-point-masses-in-two-dimensions">OpenStax, College Physics 2e, Example 8.7</a>.</em></p>
+</section>
 <section id="elastic-collisions-of-two-objects-with-equal-mass">
-<h3><span class="section-number">7.6.1. </span>Elastic Collisions of Two Objects with Equal Mass<a class="headerlink" href="#elastic-collisions-of-two-objects-with-equal-mass" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.6.2. </span>Elastic Collisions of Two Objects with Equal Mass<a class="headerlink" href="#elastic-collisions-of-two-objects-with-equal-mass" title="Link to this heading">#</a></h3>
 <p>Let’s now consider an elastic collision between two billiard balls.  This is appropriate because billiard balls all have about the same mass.  Recall that for an elastic collision, the internal kinetic energy is conserved.  Again, let us assume that the target ball (<span class="math notranslate nohighlight">\(m_2\)</span>) is initially at rest.  Then, the internal kinetic energy before and after the collision (for equal masses; <span class="math notranslate nohighlight">\(m_1 = m_2 = m\)</span>) is</p>
 <div class="math notranslate nohighlight" id="equation-cons-energy-2d-elastic">
 <span class="eqno">(7.14)<a class="headerlink" href="#equation-cons-energy-2d-elastic" title="Link to this equation">#</a></span>\[\frac{1}{2}mv_1^2 = \frac{1}{2}m{v_1^\prime}^2 + \frac{1}{2}m{v_2^\prime}^2.\]</div>
@@ -1004,8 +1348,8 @@ mv_1 &amp;= mv_{1}^\prime\cos{\theta_1} + mv_{2}^\prime\cos{\theta_2}, \\
 0 &amp;= mv_{1}^\prime\sin{\theta_1} + mv_{2}^\prime\sin{\theta_2}. 
 \end{align}\end{split}\]</div>
 <p>Notice how similar the left-hand side of Eqn. <a class="reference internal" href="#equation-cons-momentum-2d-elastic">(7.15)</a> appears compared to Eqn. <a class="reference internal" href="#equation-cons-energy-2d-elastic">(7.14)</a>.  We could square both sides (of each equation) in Eqn. <a class="reference internal" href="#equation-cons-momentum-2d-elastic">(7.15)</a> and multiply by <span class="math notranslate nohighlight">\(1/2\)</span>.  Then the left-hand side would have the form of kinetic energy.  Since the bottom equation of Eqn. Eqn. <a class="reference internal" href="#equation-cons-momentum-2d-elastic">(7.15)</a> is zero, we can add the two momentum equations together.  After some algebra (and a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#angle_sum_and_difference_identities">trig identity</a>), we find that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7b285257-a5b0-4352-9109-a1ccfcd74f94">
-<span class="eqno">(7.16)<a class="headerlink" href="#equation-7b285257-a5b0-4352-9109-a1ccfcd74f94" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-011172bc-9732-4815-b796-40c05a3bfd3e">
+<span class="eqno">(7.16)<a class="headerlink" href="#equation-011172bc-9732-4815-b796-40c05a3bfd3e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}mv_1^2 = \frac{1}{2}m{v_1^\prime}^2 + \frac{1}{2}m{v_2^\prime}^2 + m{v_1^\prime}{v_2^\prime}\cos(\theta_1-\theta_2).
 \end{align}\]</div>
 <p><em>Remember that <span class="math notranslate nohighlight">\(\theta_2\)</span> is negative here.</em>  This result can only be true if</p>
@@ -1015,35 +1359,35 @@ mv_1 &amp;= mv_{1}^\prime\cos{\theta_1} + mv_{2}^\prime\cos{\theta_2}, \\
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(v_1^\prime = 0\)</span>; it is a head-on collision and the incoming ball stops (i.e., a stun),</p></li>
 <li><p><span class="math notranslate nohighlight">\(v_2^\prime = 0\)</span>; there is no collision and the incoming ball continues unaffected,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\cos(\theta_1 - \theta_2) = 0\)</span>; The relative angle of separation <span class="math notranslate nohighlight">\(\theta_1 - \theta_2 = 90^\circ\)</span> after the collision (i.e., a cut).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos(\theta_1 - \theta_2) = 0\)</span>; the relative angle of separation <span class="math notranslate nohighlight">\(\theta_1 - \theta_2 = 90^\circ\)</span> after the collision (i.e., a cut).</p></li>
 </ol>
-<p>If you play enough pool, you will notice that the angle between the balls is very close to <span class="math notranslate nohighlight">\(90^\circ\)</span> after the collision (when it is not head-on and without spin).  The assumption that the scattering of billiard balls is elastic is reasonable because it can produce all three results.</p>
+<p>If you play enough pool, you will notice that the angle between the balls is very close to <span class="math notranslate nohighlight">\(90^\circ\)</span> after the collision (provided the collision is not head-on and the balls have little spin).  The assumption that the scattering of billiard balls is elastic is reasonable because it can produce all three results.</p>
 </section>
 </section>
 <section id="introduction-to-rocket-propulsion">
 <h2><span class="section-number">7.7. </span>Introduction to Rocket Propulsion<a class="headerlink" href="#introduction-to-rocket-propulsion" title="Link to this heading">#</a></h2>
-<p>The propulsion of all rockets, jet engines, and even squid is explained by Newton’s third law of motion.  Matter is forcefully ejected from a system, which produces and equal and opposite reaction force on what remains.</p>
+<p>The propulsion of all rockets, jet engines, and even squids is explained by Newton’s third law of motion.  Matter is forcefully ejected from a system, which produces an equal and opposite reaction force on what remains.</p>
 <figure class="align-default" id="fig-rocket-momentum-mass-change">
 <a class="custom-tall-figure reference internal image-reference" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/7d8e8b0fc3b929838916ab2bcc921bb288e072ad"><img alt="OpenStax rocket-propulsion diagram showing a rocket before and after a short time interval, with decreasing mass, changing velocity, expelled exhaust, and a small free-body diagram indicating thrust upward and weight downward." class="custom-tall-figure" src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/7d8e8b0fc3b929838916ab2bcc921bb288e072ad" style="width: 70%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 7.16 </span><span class="caption-text"><strong>Rocket propulsion over a short time interval.</strong> Panel <strong>(a)</strong> shows the rocket at time <span class="math notranslate nohighlight">\(t\)</span>, moving upward with velocity <span class="math notranslate nohighlight">\(v\)</span> and mass <span class="math notranslate nohighlight">\(m\)</span>. Panel <strong>(b)</strong> shows the rocket a short time later at <span class="math notranslate nohighlight">\(t+\Delta t\)</span>, after expelling a small mass <span class="math notranslate nohighlight">\(\Delta m\)</span> of exhaust downward. The rocket’s mass is reduced to <span class="math notranslate nohighlight">\(m-\Delta m\)</span>, while its speed increases to <span class="math notranslate nohighlight">\(v+\Delta v\)</span>. The exhaust leaves downward relative to the rocket, and the accompanying free-body diagram identifies the upward reaction force and the downward weight. This sequence helps illustrate how expelling mass produces a change in the rocket’s momentum.  Image credit: OpenStax, <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-7-introduction-to-rocket-propulsion">College Physics 2e, Figure 8.12</a></span><a class="headerlink" href="#fig-rocket-momentum-mass-change" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.19 </span><span class="caption-text"><strong>Rocket propulsion over a short time interval.</strong> Panel <strong>(a)</strong> shows the rocket at time <span class="math notranslate nohighlight">\(t\)</span>, moving upward with velocity <span class="math notranslate nohighlight">\(v\)</span> and mass <span class="math notranslate nohighlight">\(m\)</span>. Panel <strong>(b)</strong> shows the rocket a short time later at <span class="math notranslate nohighlight">\(t+\Delta t\)</span>, after expelling a small mass <span class="math notranslate nohighlight">\(\Delta m\)</span> of exhaust downward. The rocket’s mass is reduced to <span class="math notranslate nohighlight">\(m-\Delta m\)</span>, while its speed increases to <span class="math notranslate nohighlight">\(v+\Delta v\)</span>. The exhaust leaves downward relative to the rocket, and the accompanying free-body diagram identifies the upward reaction force and the downward weight. This sequence helps illustrate how expelling mass produces a change in the rocket’s momentum.  <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-7-introduction-to-rocket-propulsion">OpenStax, College Physics 2e, Figure 8.12</a>.</em></span><a class="headerlink" href="#fig-rocket-momentum-mass-change" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Figure <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.16</span></a> shows a rocket accelerating straight up with a mass <span class="math notranslate nohighlight">\(m\)</span> and a velocity <span class="math notranslate nohighlight">\(v\)</span> (see Fig. <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.16</span></a>a).  Therefore, it also has a momentum <span class="math notranslate nohighlight">\(mv\)</span>.  After some time <span class="math notranslate nohighlight">\(\Delta t\)</span> has passed, the rocket has ejected a mass <span class="math notranslate nohighlight">\(\Delta m\)</span> of hot gas, which has a velocity <span class="math notranslate nohighlight">\(v_e\)</span> relative to the rocket (see Fig. <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.16</span></a>b).  The remainder of the mass (<span class="math notranslate nohighlight">\(m-\Delta v\)</span>) now has a greater velocity (<span class="math notranslate nohighlight">\(v+\Delta v\)</span>).</p>
+<p>Figure <a class="reference internal" href="#fig-rocket-momentum-mass-change"><span class="std std-numref">7.19</span></a> shows a rocket accelerating straight up. In panel <strong>(a)</strong>, it has a mass <span class="math notranslate nohighlight">\(m\)</span>, a velocity <span class="math notranslate nohighlight">\(v\)</span>, and therefore a momentum <span class="math notranslate nohighlight">\(mv\)</span>. After a time <span class="math notranslate nohighlight">\(\Delta t\)</span>, the rocket has ejected a mass <span class="math notranslate nohighlight">\(\Delta m\)</span> of hot gas with velocity <span class="math notranslate nohighlight">\(v_e\)</span> relative to the rocket, as shown in panel <strong>(b)</strong>.  The remainder of the mass (<span class="math notranslate nohighlight">\(m-\Delta m\)</span>) now has a greater velocity (<span class="math notranslate nohighlight">\(v+\Delta v\)</span>).</p>
 <p>The momentum of the entire system (i.e., rocket and expelled gas) has decreased because the force of gravity has acted over the time <span class="math notranslate nohighlight">\(\Delta t\)</span> through a negative impulse</p>
 <div class="math notranslate nohighlight">
 \[ \Delta p = F_g\Delta t = -mg\Delta t.\]</div>
-<p>The center-of-mass is in free-fall, but part of the system can accelerate upward due to the rapidly expelling gas.</p>
+<p>The center-of-mass is in free fall, but part of the system can accelerate upward due to the rapid expulsion of gas.</p>
 <div class="warning admonition">
 <p class="admonition-title">Rocket exhaust does not push on the ground</p>
 <p>It is a common misconception that rocket exhaust pushes on the ground.  The force exerted on the rocket by the exhaust gases (i.e., thrust) is greater in outer space than in the atmosphere or on the launchpad.  Exhaust gases are easier to expel in a vacuum.</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Acceleration of a Rocket</p>
-<p>We calculate the acceleration of a rocket by considering the change in momentum of the entire system over <span class="math notranslate nohighlight">\(\Delta t\)</span> and equating this change to the impulse.  This includes the part of the system remaining (i.e., the rocket) after the gas is ejected, and the acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span>.  Through some algebra, we find that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8960200e-325a-455c-bd82-b1844e9b7347">
-<span class="eqno">(7.17)<a class="headerlink" href="#equation-8960200e-325a-455c-bd82-b1844e9b7347" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<p>We calculate the acceleration of a rocket by considering the change in momentum of the entire system over <span class="math notranslate nohighlight">\(\Delta t\)</span> and equating this change to the impulse.  Here, the rocket is the part of the system remaining after the gas is ejected, and the model includes the downward acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span>.  Through some algebra, we find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b855ef56-09f3-4b48-85e9-6dc08e68a0ea">
+<span class="eqno">(7.17)<a class="headerlink" href="#equation-b855ef56-09f3-4b48-85e9-6dc08e68a0ea" title="Permalink to this equation">#</a></span>\[\begin{align} 
 a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is the acceleration of the rocket, <span class="math notranslate nohighlight">\(v_e\)</span> is the exhaust velocity, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the rocket, <span class="math notranslate nohighlight">\(\Delta m\)</span> is the mass of the ejected gas, and <span class="math notranslate nohighlight">\(\Delta t\)</span> is the time in which the gas is ejected.</p>
@@ -1051,9 +1395,41 @@ a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
 <p>A rocket’s acceleration depends on three major factors:</p>
 <ol class="arabic simple">
 <li><p><em>The greater the exhaust velocity <span class="math notranslate nohighlight">\(v_e\)</span>, the greater the acceleration is.</em>  The practical limit for <span class="math notranslate nohighlight">\(v_e\)</span> is about <span class="math notranslate nohighlight">\(2.5\ {\rm km/s}\)</span> for conventional (non-nuclear) hot-gas propulsion systems.</p></li>
-<li><p>The rate for which the gas is ejected (<span class="math notranslate nohighlight">\(\Delta m/\Delta t\)</span>) multiplied by the exhaust velocity <span class="math notranslate nohighlight">\(v_e\)</span> is the <em>thrust</em>.  <em>The faster the rocket burns its fuel, the greater the thrust and hence, the acceleration.</em></p></li>
-<li><p><em>The smaller the mass <span class="math notranslate nohighlight">\(m\)</span> of the rocket, the greater the acceleration.</em>  The mass decreases dramatically during flight, so the acceleration is larger at the end than the beginning of the flight.</p></li>
+<li><p>The rate for which the gas is ejected (<span class="math notranslate nohighlight">\(\Delta m/\Delta t\)</span>) multiplied by the exhaust velocity <span class="math notranslate nohighlight">\(v_e\)</span> is the <em>thrust</em>.  <em>The faster the rocket burns its fuel, the greater the thrust and hence the acceleration.</em></p></li>
+<li><p><em>The smaller the mass <span class="math notranslate nohighlight">\(m\)</span> of the rocket, the greater the acceleration.</em>  The mass decreases dramatically during flight, so the acceleration is larger at the end than at the beginning of the flight.</p></li>
 </ol>
+<section id="example-problem-initial-acceleration-of-a-saturn-v">
+<h3><span class="section-number">7.7.1. </span>Example Problem: Initial Acceleration of a Saturn V<a class="headerlink" href="#example-problem-initial-acceleration-of-a-saturn-v" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Acceleration—Initial Acceleration of a Moon Launch</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>At liftoff, a Saturn V had a mass of <span class="math notranslate nohighlight">\(2.80\times10^6\ {\rm kg}\)</span>, expelled fuel at <span class="math notranslate nohighlight">\(1.40\times10^4\ {\rm kg/s}\)</span>, and had an exhaust velocity of <span class="math notranslate nohighlight">\(2.40\times10^3\ {\rm m/s}\)</span>. Calculate its initial acceleration.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The rocket is the system of interest. We define the vertical <span class="math notranslate nohighlight">\(y\)</span>-axis with <span class="math notranslate nohighlight">\(+y\)</span> upward. At liftoff, the known quantities are <span class="math notranslate nohighlight">\(m=2.80\times10^6\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(\Delta m/\Delta t=1.40\times10^4\ {\rm kg/s}\)</span>, <span class="math notranslate nohighlight">\(v_e=2.40\times10^3\ {\rm m/s}\)</span>, and <span class="math notranslate nohighlight">\(g=9.80\ {\rm m/s^2}\)</span>. The exhaust speed and mass-ejection rate are treated as positive magnitudes. The unknown is the rocket’s initial vertical acceleration.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The rocket’s upward acceleration equals the thrust contribution per unit mass minus the downward acceleration due to gravity.</p>
+<div class="math notranslate nohighlight">
+\[
+a=\frac{v_e}{m}\frac{\Delta m}{\Delta t}-g.
+\]</div>
+<p class="sd-card-text">Substituting the launch values gives</p>
+<div class="math notranslate nohighlight">
+\[
+a=\frac{2.40\times10^3\ {\rm m/s}}{2.80\times10^6\ {\rm kg}}(1.40\times10^4\ {\rm kg/s})-9.80\ {\rm m/s^2}=2.20\ {\rm m/s^2}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The Saturn V’s initial acceleration was <span class="math notranslate nohighlight">\(+2.20\ {\rm m/s^2}\)</span>, directed upward. The value is modest because much of the initial thrust is needed to balance the rocket’s weight. As fuel is expelled and the rocket’s mass decreases, the same mass-ejection rate and exhaust speed produce a larger acceleration.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/8-7-introduction-to-rocket-propulsion">OpenStax, College Physics 2e, Example 8.8</a>.</em></p>
+</section>
 </section>
 <section id="in-class-exercises">
 <h2><span class="section-number">7.8. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
@@ -1075,18 +1451,40 @@ a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
 <h3><span class="section-number">7.8.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
 <div class="admonition-problem-1 admonition">
 <p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>A garbage truck has a mass of <span class="math notranslate nohighlight">\(1.20\times10^4\ {\rm kg}\)</span> and is moving at <span class="math notranslate nohighlight">\(30.0\ {\rm m/s}\)</span>.</p>
+<p><strong>(a)</strong> What is the momentum of the garbage truck?</p>
+<p><strong>(b)</strong> At what speed would an <span class="math notranslate nohighlight">\(8.00\ {\rm kg}\)</span> trash can have the same momentum as the truck?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-2 admonition">
 <p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>A car moving at <span class="math notranslate nohighlight">\(10.0\ {\rm m/s}\)</span> crashes into a tree and stops in <span class="math notranslate nohighlight">\(0.26\ {\rm s}\)</span>. Calculate the force the seat belt exerts on a passenger in the car to bring the passenger to a halt. The mass of the passenger is <span class="math notranslate nohighlight">\(70.0\ {\rm kg}\)</span>.</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-3 admonition">
 <p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(70\ {\rm kg}\)</span> ice hockey goalie, originally at rest, intercepts a <span class="math notranslate nohighlight">\(0.15\ {\rm kg}\)</span> hockey puck slapped at him at a velocity of <span class="math notranslate nohighlight">\(35\ {\rm m/s}\)</span>. Suppose the goalie and the ice puck have an <strong>elastic collision</strong> and the puck is reflected back in the direction from which it came. What would their final velocities be in this case?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-4 admonition">
 <p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>During an ice show, a <span class="math notranslate nohighlight">\(60.0\ {\rm kg}\)</span> skater leaps into the air and is caught by an initially stationary <span class="math notranslate nohighlight">\(75.0\ {\rm kg}\)</span> skater.</p>
+<p><strong>(a)</strong> What is their final velocity, assuming negligible friction and that the <span class="math notranslate nohighlight">\(60.0\ {\rm kg}\)</span> skater’s original horizontal velocity is <span class="math notranslate nohighlight">\(4.00\ {\rm m/s}\)</span>?</p>
+<p><strong>(b)</strong> How much kinetic energy is lost?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-5 admonition">
 <p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(5.50\ {\rm kg}\)</span> bowling ball moving at <span class="math notranslate nohighlight">\(9.00\ {\rm m/s}\)</span> collides with a <span class="math notranslate nohighlight">\(0.850\ {\rm kg}\)</span> bowling pin, which is scattered at an angle of <span class="math notranslate nohighlight">\(85.0^\circ\)</span> to the initial direction of the bowling ball and with a speed of <span class="math notranslate nohighlight">\(15.0\ {\rm m/s}\)</span>.</p>
+<p><strong>(a)</strong> Calculate the final velocity (magnitude and direction) of the bowling ball.</p>
+<p><strong>(b)</strong> Is the collision elastic?</p>
+<p><strong>(c)</strong> The linear kinetic energy is greater after the collision. Discuss how spin on the ball might be converted to linear kinetic energy in the collision.</p>
+</div></blockquote>
 </div>
 </section>
 </section>
@@ -1100,7 +1498,7 @@ a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
 <p>There are two types of homework questions:</p>
 <p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
 <p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
-<p>The worked examples and <strong>Check Your Understanding</strong> questions on the course webpage provide examples of the reasoning and solution style expected in your homework.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Don’t wait until the night it is due</p>
@@ -1117,24 +1515,44 @@ a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
 <h3><span class="section-number">7.9.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
 <div class="admonition-problem-1 admonition">
 <p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>An object that has a small mass and an object that has a large mass have the same momentum. Which object has the greater kinetic energy?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-2 admonition">
 <p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Explain in terms of impulse how padding reduces forces in a collision. State this in terms of a real example, such as the advantages of a carpeted floor versus a tile floor for a day care center.</p>
+</div></blockquote>
 </div>
 </section>
 <section id="quantitative-questions">
 <h3><span class="section-number">7.9.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
 <div class="admonition-problem-3 admonition">
 <p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>Train cars are coupled together by being bumped into one another. Suppose two loaded train cars are moving toward one another, the first having a mass of <span class="math notranslate nohighlight">\(150{,}000\ {\rm kg}\)</span> and a velocity of <span class="math notranslate nohighlight">\(0.300\ {\rm m/s}\)</span>, and the second having a mass of <span class="math notranslate nohighlight">\(110{,}000\ {\rm kg}\)</span> and a velocity of <span class="math notranslate nohighlight">\(-0.120\ {\rm m/s}\)</span>. The minus sign indicates the direction of motion. What is their final velocity?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-4 admonition">
 <p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>What is the speed of a garbage truck that has a mass of <span class="math notranslate nohighlight">\(1.20\times10^4\ {\rm kg}\)</span> and is initially moving at <span class="math notranslate nohighlight">\(25.0\ {\rm m/s}\)</span> just after it hits and adheres to a trash can that has a mass of <span class="math notranslate nohighlight">\(80.0\ {\rm kg}\)</span> and is initially at rest?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-5 admonition">
 <p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>Two cars collide at an icy intersection and stick together afterward. The first car has a mass of <span class="math notranslate nohighlight">\(1200\ {\rm kg}\)</span> and is approaching at <span class="math notranslate nohighlight">\(8.00\ {\rm m/s}\)</span> due south. The second car has a mass of <span class="math notranslate nohighlight">\(850\ {\rm kg}\)</span> and is approaching at <span class="math notranslate nohighlight">\(17.0\ {\rm m/s}\)</span> due west.</p>
+<p><strong>(a)</strong> Calculate the final velocity (magnitude and direction) of the cars.</p>
+<p><strong>(b)</strong> How much kinetic energy is lost in the collision?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-6 admonition">
 <p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>What is the acceleration of a <span class="math notranslate nohighlight">\(5000\ {\rm kg}\)</span> rocket taking off from the Moon, where the acceleration due to gravity is only <span class="math notranslate nohighlight">\(1.6\ {\rm m/s^2}\)</span>, if the rocket expels <span class="math notranslate nohighlight">\(8.00\ {\rm kg}\)</span> of gas per second at an exhaust velocity of <span class="math notranslate nohighlight">\(2.20\times10^3\ {\rm m/s}\)</span>?</p>
+</div></blockquote>
 </div>
 </section>
 </section>
@@ -1206,18 +1624,34 @@ a = \frac{v_e}{m}\frac{\Delta m}{\Delta t} - g,
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum-and-force">7.1. Linear Momentum and Force</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-momentum">7.1.1. Linear Momentum</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-and-newton-s-second-law">7.1.2. Momentum and Newton’s Second Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-momentum-of-a-football-player-and-a-football">7.1.2. Example Problem: Momentum of a Football Player and a Football</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-and-newton-s-second-law">7.1.3. Momentum and Newton’s Second Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-average-force-from-a-tennis-racquet">7.1.4. Example Problem: Average Force from a Tennis Racquet</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse">7.2. Impulse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse">7.2. Impulse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-billiard-ball-impulses-at-a-wall">7.2.1. Example Problem: Billiard-Ball Impulses at a Wall</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">7.3. Conservation of Momentum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-in-1d">7.4. Elastic Collisions in 1D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collisions-in-1d">7.5. Inelastic Collisions in 1D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-point-masses-in-2d">7.6. Collisions of Point Masses in 2D</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-of-two-objects-with-equal-mass">7.6.1. Elastic Collisions of Two Objects with Equal Mass</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-in-1d">7.4. Elastic Collisions in 1D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-velocities-after-an-elastic-collision">7.4.1. Example Problem: Velocities After an Elastic Collision</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-rocket-propulsion">7.7. Introduction to Rocket Propulsion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inelastic-collisions-in-1d">7.5. Inelastic Collisions in 1D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-a-goalie-catches-a-hockey-puck">7.5.1. Example Problem: A Goalie Catches a Hockey Puck</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-energy-released-in-a-cart-collision">7.5.2. Example Problem: Energy Released in a Cart Collision</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-point-masses-in-2d">7.6. Collisions of Point Masses in 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-velocity-of-an-unseen-object">7.6.1. Example Problem: Velocity of an Unseen Object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elastic-collisions-of-two-objects-with-equal-mass">7.6.2. Elastic Collisions of Two Objects with Equal Mass</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-rocket-propulsion">7.7. Introduction to Rocket Propulsion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-initial-acceleration-of-a-saturn-v">7.7.1. Example Problem: Initial Acceleration of a Saturn V</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">7.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">7.8.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">7.8.2. Problems</a></li>
