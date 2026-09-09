@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter09/statics-torque';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,30 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-condition-for-equilibrium">8.1. The First Condition for Equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-condition-for-equilibrium">8.2. The Second Condition for Equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability">8.3. Stability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-statics">8.4. Applications of Statics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-machines">8.5. Simple Machines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forces-and-torques-in-muscles-and-joints">8.6. Forces and Torques in Muscles and Joints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">8.7. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">8.7.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">8.7.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">8.8. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">8.8.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">8.8.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +523,307 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statics-torque">
 <h1><span class="section-number">8. </span>Statics &amp; Torque<a class="headerlink" href="#statics-torque" title="Link to this heading">#</a></h1>
-<p>Aug 23, 2026 | 5 words | 0 min read</p>
+<p>Sep 09, 2026 | 3362 words | 22 min read</p>
+<p><em>What does a car moving at constant velocity and a desk have in common?</em></p>
+<p>In the eyes of a physicist, they both have an acceleration of zero.  Recall that Newton’s second law states <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span>.  This means that the net external forces is zero for all stationary objects (e.g., the desk) and for all objects at constant velocity (e.g., the car).  There are forces acting but they are balanced or in <em>equilibrium</em>.</p>
+<div class="note admonition">
+<p class="admonition-title">Statics</p>
+<p>Statics is the study of forces in equilibrium, which is a large group of situations that makes up a special case of Newton’s second law.</p>
+</div>
+<section id="the-first-condition-for-equilibrium">
+<h2><span class="section-number">8.1. </span>The First Condition for Equilibrium<a class="headerlink" href="#the-first-condition-for-equilibrium" title="Link to this heading">#</a></h2>
+<p>The first condition necessary for equilibrium is that the <strong>net external force on the system must be zero.</strong>  If the <span class="math notranslate nohighlight">\(\vec{F}{\rm net} = 0\)</span>, then the net external force in <em>any direction</em> is zero. Mathematically, this is represented by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-01613db1-6687-4170-961e-d7e4122a8abf">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-01613db1-6687-4170-961e-d7e4122a8abf" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{F}_{\rm net} &amp;= m\vec{a} = 0, \\
+{\displaystyle \sum_i F_{ix}} &amp;= ma_x = 0, \\
+{\displaystyle \sum_i F_{iy}} &amp;= ma_y = 0.
+\end{align} \]</div>
+<p>Figures <a class="reference internal" href="#fig-static-equilibrium-fbd"><span class="std std-numref">8.1</span></a> and <a class="reference internal" href="#fig-dynamic-equilibrium-fbd"><span class="std std-numref">8.2</span></a> illustrate situations where <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span> for both <strong>static equilibrium</strong> (motionless) and <strong>dynamic equilibrium</strong> (constant velocity).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Static Equilibrium</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-static-equilibrium-fbd">
+<img alt="Three-panel sequence showing how to construct a free-body diagram for a stationary person. Panel a identifies the person as the system and shows the normal force and weight. Panel b replaces the person with a box while retaining the same external forces. Panel c reduces the system to a point with equal upward normal force and downward weight." src="../_images/Static_equilibrium_1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text"><strong>Static equilibrium.</strong> A stationary person is chosen as the system and then progressively simplified to construct a free-body diagram. In (a), the person is enclosed by the system boundary and the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> and weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> are identified as the external forces. In (b), the physical details of the person are replaced by a box while the same forces are retained. In (c), the system is reduced to a point and only the external-force vectors remain. Because <span class="math notranslate nohighlight">\(\vec{N}\)</span> and <span class="math notranslate nohighlight">\(\vec{w}\)</span> are equal in magnitude and opposite in direction, the net force is zero. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-1-the-first-condition-for-equilibrium">OpenStax, <em>College Physics 2e</em>, Figure 9.2</a>.</span><a class="headerlink" href="#fig-static-equilibrium-fbd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Dynamic Equilibrium</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-dynamic-equilibrium-fbd">
+<img alt="Three-panel sequence showing how to construct a free-body diagram for a car moving at constant velocity. Panel a identifies the car as the system and shows the applied force, friction, normal force, and weight. Panel b replaces the car with a box while retaining the same external forces. Panel c reduces the system to a point with balanced horizontal and vertical forces." src="../_images/Static_equilibrium_2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.2 </span><span class="caption-text"><strong>Dynamic equilibrium.</strong> A car moving at constant velocity is chosen as the system and progressively simplified to construct its free-body diagram. In (a), the applied force <span class="math notranslate nohighlight">\(\vec{F}_{\rm app}\)</span>, friction <span class="math notranslate nohighlight">\(\vec{f}\)</span>, normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span>, and weight <span class="math notranslate nohighlight">\(\vec{w}\)</span> are identified as the external forces acting on the car. In (b), the car is replaced by a box while the same forces are retained. In (c), only the external-force vectors remain. The horizontal forces balance one another, as do the vertical forces, so the net force is zero even though the car is moving. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-1-the-first-condition-for-equilibrium">OpenStax, <em>College Physics 2e</em>, Figure 9.3</a>.</span><a class="headerlink" href="#fig-dynamic-equilibrium-fbd" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>A zero net force tells us that the translational acceleration of a system is zero. For an extended object, however, this does not necessarily mean that the object cannot turn. Recall from our discussion of circular motion that an object can rotate about a fixed center while points on the object move along circular paths. Therefore, we also need to consider <strong>where the forces are applied</strong>.</p>
+<p>Consider the two situations shown in <a class="reference internal" href="#fig-record-lines-of-action"><span class="std std-numref">Fig. 8.3</span></a>. In both cases, two equal and opposite forces act on a record, so the net external force is zero. In Fig. <a class="reference internal" href="#fig-record-lines-of-action"><span class="std std-numref">Fig. 8.3</span></a>a, the forces act along the same line through the center of the record. The record remains stationary, so it is in equilibrium. In Fig. <a class="reference internal" href="#fig-record-lines-of-action"><span class="std std-numref">Fig. 8.3</span></a>b, the same forces act at different locations. The center of the record still does not accelerate because the forces balance, but the record begins to turn.</p>
+<figure class="align-default" id="fig-record-lines-of-action">
+<img alt="Two-panel diagram using a vinyl record to show that equal and opposite forces can either keep an object stationary or make it begin to turn, depending on where the forces are applied." src="../_images/balanced_forces_different_rotation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.3 </span><span class="caption-text"><strong>Equal and opposite forces applied to a record.</strong> In (a), the forces act along the same line through the center, so the record remains stationary and <span class="math notranslate nohighlight">\(\vec{F}_{\rm net}=0\)</span>. In (b), the same equal and opposite forces act at different locations. The net force is still zero, so the center does not accelerate, but the record begins to turn. This illustrates that zero net force is necessary but not sufficient for equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-1-the-first-condition-for-equilibrium">OpenStax, <em>College Physics 2e</em>, Figures 9.4 and 9.5</a>.</span><a class="headerlink" href="#fig-record-lines-of-action" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This example shows an important limitation of the first condition for equilibrium. The condition</p>
+<div class="math notranslate nohighlight">
+\[ \vec{F}_{\rm net}=0 \]</div>
+<p>is sufficient to prevent translational acceleration, but it does not by itself prevent an extended object from changing its rotational motion. The location at which a force acts therefore matters.</p>
+</section>
+<section id="the-second-condition-for-equilibrium">
+<h2><span class="section-number">8.2. </span>The Second Condition for Equilibrium<a class="headerlink" href="#the-second-condition-for-equilibrium" title="Link to this heading">#</a></h2>
+<p>The second condition necessary to achieve equilibrium involves maintaining a constant angular velocity (or zero angular acceleration).  A rotating body or system can be in equilibrium if its rate of rotation is constant and remains unchanged by the forces acting on it.</p>
+<p>Several factors determine how effective (or easy) you are in opening a door.</p>
+<ol class="arabic simple">
+<li><p>The <em>larger the force</em>, the more effective it is in opening a door.  The <em>harder you push</em>, the faster the door moves to open.</p></li>
+<li><p>The <em>point at which you push</em> is critical.  If you apply your force too close to the hinges, the door will open slowly, if at all.</p></li>
+<li><p>The <em>direction in which you push</em> is important.  The most effective direction is <em>perpendicular</em> to the door.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Torque</p>
+<p>The magnitude, direction, point of application of the force combine to define the <strong>torque</strong>.  Torque is the rotational equivalent of a force, where it is written mathematically as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ebb2b1b2-15fa-42f4-a676-4d6316555515">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-ebb2b1b2-15fa-42f4-a676-4d6316555515" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau = rF\sin{\theta},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the torque, <span class="math notranslate nohighlight">\(r\)</span> is the distance from the pivot to the point where the force <span class="math notranslate nohighlight">\(F\)</span> is applied, and <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the distance <span class="math notranslate nohighlight">\(r\)</span> and the force <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<p>An alternative expression for torque is given in terms of the <strong>perpendicular lever arm</strong> <span class="math notranslate nohighlight">\(r_\perp\)</span>, which is defined as</p>
+<div class="math notranslate nohighlight">
+\[ r_\perp = r\sin{\theta}, \]</div>
+<p>so that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aa6a847f-c46a-4785-b3d6-57959675657a">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-aa6a847f-c46a-4785-b3d6-57959675657a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau = r_\perp F.
+\end{align}\]</div>
+<p>The perpendicular lever arm <span class="math notranslate nohighlight">\(r_\perp\)</span> is the shortest distance from the pivot point to the line where the force <span class="math notranslate nohighlight">\(F\)</span> acts.</p>
+</div>
+<p>The <strong>SI unit of torque</strong> is newtons time meters, usually written as <span class="math notranslate nohighlight">\(\rm N\dot m\)</span> (<code class="docutils literal notranslate"><span class="pre">${\rm</span> <span class="pre">N\cdot</span> <span class="pre">m}$</span></code> in Markdown).  If you push perpendicular to a door with a force of <span class="math notranslate nohighlight">\(40\ {\rm N}\)</span>, where the force is applied about <span class="math notranslate nohighlight">\(0.8\ {\rm m}\)</span> from the hinges, then we can calculate the torque by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\tau = r_\perp F = (0.8\ {\rm m})(40\ {\rm N}) = 32\ {\rm N\cdot m},
+\end{align*}\]</div>
+<p>relative to the hinges.  If you reduce the force to <span class="math notranslate nohighlight">\(20\ {\rm N}\)</span>, then the torque is half as much, or <span class="math notranslate nohighlight">\(16\ {\rm N\cdot m}\)</span>.  <em>The magnitude of the torque <span class="math notranslate nohighlight">\(\tau\)</span> is proportional (in part) to the applied force <span class="math notranslate nohighlight">\(F\)</span>.</em></p>
+<p>The torque is always calculated relative to some <em>chosen</em> pivot point.  For the same applied force, a different choice for the location of the pivot will give you a different magnitude for the torque.  Both <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span> are defined relative to the location of the pivot.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any point in any object can be chosen to calculate the torque about that point.  The object may not actually pivot about the chosen “pivot point”.</p>
+<p>The torque at the pivot is zero because the distance <span class="math notranslate nohighlight">\(r=0\)</span>.</p>
+</div>
+<p>Torque has two possible directions: clockwise or counterclockwise relative to the chosen pivot point.  A common convention defines the counterclockwise (ccw) torque as positive, while the clockwise (cw) torque is negative.  Torques assigned in opposite directions have opposite signs.</p>
+<p>The <strong>second condition for equilibrium</strong> requires that the net <em>external torque on a system must be zero</em>.  An external torque is one that created by an external force.  <em>You can choose the point around which the torque is calculated.</em></p>
+<p>The point can be the physical point of a system or any other point in space.  However, it must be the same point for all the calculated torques for  that system.  If the net external torque is zero for one choice of the pivot point, then it will hold true for any other choice of pivot point (within an inertial frame of reference).  The second condition necessary for equilibrium is stated in equation form as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-402cca89-6636-48e7-b1df-3ae6bc99b1d1">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-402cca89-6636-48e7-b1df-3ae6bc99b1d1" title="Permalink to this equation">#</a></span>\[\begin{align}
+\vec{\tau}_{\rm net} = {\displaystyle \sum_i \vec{\tau}_i} = 0.
+\end{align}\]</div>
+<p>Two children (of unequal weight: <span class="math notranslate nohighlight">\(w_1\)</span> and <span class="math notranslate nohighlight">\(w_2\)</span>) balanced on a seesaw satisfy both conditions for equilibrium. To balance the seesaw, the heavier child (<span class="math notranslate nohighlight">\(w_2\)</span>) must sit closer to the pivot compared to the lighter child (<span class="math notranslate nohighlight">\(w_1\)</span>).</p>
+<p>If we choose the center as the pivot point, then we measure the distance from pivot for each child as <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span>, respectively.  Each child feels the gravitational force through their weight, so that each has a torque</p>
+<div class="math notranslate nohighlight">
+\[ \tau_i = r_iF_i\sin{\theta_i} = \pm r_i w_i\sin{\theta_i}. \]</div>
+<p>The weight of each child is perpendicular to the seesaw, which means <span class="math notranslate nohighlight">\(\theta_i = 90^\circ\)</span>, or <span class="math notranslate nohighlight">\(\sin{\theta_i} = 1\)</span>.  To determine the sign for each torque:</p>
+<ol class="arabic simple">
+<li><p>point your fingers (on your right hand) from the pivot to the point where the force <span class="math notranslate nohighlight">\(F_i\)</span> is perpendicular to <span class="math notranslate nohighlight">\(r_i\)</span>,</p></li>
+<li><p>curl your fingers in the direction of the applied force <span class="math notranslate nohighlight">\(F_i\)</span>.</p></li>
+</ol>
+<p>The direction in which your fingers curl determines the sign: counterclockwise (positive) or clockwise (negative).  The net torque is then calculated for equilibrium as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-10d62873-79d6-41f5-9f6d-d6622120a15a">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-10d62873-79d6-41f5-9f6d-d6622120a15a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau_{\rm net} &amp;= \tau_1 + \tau_2= 0, \\
+&amp;= +r_1w_1 + (-r_2w_2) = 0, \\
+r_1w_1 &amp;= r_2w_2.
+\end{align}\]</div>
+<p>This example provides some insights:</p>
+<ol class="arabic simple">
+<li><p>The choice of the pivot point can simplify the problem.</p></li>
+<li><p>The torque at the pivot is due to the force <span class="math notranslate nohighlight">\(\vec{F}_p\)</span> and has <span class="math notranslate nohighlight">\(r_\perp = 0\)</span>, so the torque is zero.</p></li>
+<li><p>The weight of each child is distributed over an area of the seesaw, but we can treat the weights acting over a single point.  The distances <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the distances to point directly below the center of gravity of each child.</p></li>
+<li><p><em>Torque plays the same role in rotational motion that force plays in linear motion.</em></p></li>
+</ol>
+</section>
+<section id="stability">
+<h2><span class="section-number">8.3. </span>Stability<a class="headerlink" href="#stability" title="Link to this heading">#</a></h2>
+<p>In contrast to <code class="docutils literal notranslate"><span class="pre">Mario</span> <span class="pre">World</span></code>, the real world does not have bricks in equilibrium in the sky.  If a brick were placed in the sky, it would be in an unstable state because it would immediately move under the pull of gravity.  Other objects can be oriented in a specific way so that they can achieve equilibrium, but they are <em>not</em> in a stable equilibrium.  There are three types of equilibrium: <em>stable</em>, <em>unstable</em>, and <em>neutral</em>.</p>
+<figure class="align-default" id="fig-football-unstable-equilibrium">
+<img alt="Two-panel diagram showing a college football player balancing an American football on his fingertip. In panel (a), the football is perfectly upright so the center of gravity lies directly above the support point. In panel (b), the football is slightly tilted so the weight produces a turning effect that increases the tilt." src="../_images/football_balance_and_stability.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.4 </span><span class="caption-text"><strong>Unstable equilibrium for a balanced football.</strong> In (a), the football is balanced upright on the player’s fingertip, so the center of gravity lies directly above the support point and the torque due to the weight is zero. In (b), a slight tilt shifts the line of action of the weight away from the support point, producing a torque that increases the displacement. This illustrates an example of unstable equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-3-stability">OpenStax, <em>College Physics 2e</em>, Figure 9.9</a>.</span><a class="headerlink" href="#fig-football-unstable-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Figure <a class="reference internal" href="#fig-football-unstable-equilibrium"><span class="std std-numref">8.4</span></a> demonstrates two configurations of the same system: (a) a football balanced upright on a player’s fingertip and (b) the same football after a small tilt. In Fig. <a class="reference internal" href="#fig-football-unstable-equilibrium"><span class="std std-numref">8.4</span></a>a, the center of gravity (<span class="math notranslate nohighlight">\({\rm CG}\)</span>) of the football lies directly above the pivot point. If <span class="math notranslate nohighlight">\(\theta\)</span> is the angle that the football is tilted from the vertical, then <span class="math notranslate nohighlight">\(\theta=0^\circ\)</span> and the weight produces no torque about the pivot:</p>
+<div class="math notranslate nohighlight">
+\[ \tau_{\rm net}=rw\sin\theta=0. \]</div>
+<p>In Fig. <a class="reference internal" href="#fig-football-unstable-equilibrium"><span class="std std-numref">8.4</span></a>b, the football has been tilted so that its <span class="math notranslate nohighlight">\({\rm CG}\)</span> is no longer directly above the pivot. The weight now has a nonzero lever arm and produces a net torque,</p>
+<div class="math notranslate nohighlight">
+\[ \tau_{\rm net}=rw\sin\theta, \]</div>
+<p>that causes the football to tilt farther away from its original position. The perfectly upright football is therefore an example of <strong>unstable equilibrium</strong>: although it can momentarily satisfy the conditions for equilibrium, even a small displacement produces a torque that increases the displacement.</p>
+<p>A system is said to be in <strong>stable equilibrium</strong> if, when displaced from equilibrium, it experiences a net force or torque in a direction opposite to the displacement. For example, a marble at the bottom of a bowl experiences a <em>restoring</em> force when displaced from its equilibrium position. This force moves the marble back toward equilibrium.  Another example of stable equilibrium can occur for a gymnast (see Figure <a class="reference internal" href="#fig-gymnast-stable-equilibrium"><span class="std std-numref">8.5</span></a>a).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Stable Equilibrium</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-gymnast-stable-equilibrium">
+<img alt="Three-panel diagram showing a gymnast balancing on one foot. In panel a, the gymnast is upright with the center of gravity above the base of support. In panel b, a small sideways displacement produces a restoring torque about the outer edge of the foot. In panel c, a larger displacement moves the line of action of the weight beyond the pivot, producing a torque that increases the displacement." src="../_images/gymnastics_balance_and_torque_illustrated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.5 </span><span class="caption-text"><strong>Stable equilibrium and the limits of stability.</strong> In (a), the gymnast is upright on one foot with the line of action of her weight passing through the base of support, so the net torque is zero. In (b), a small sideways displacement shifts the center of gravity but leaves the line of action of the weight on the restoring side of the pivot at the outer edge of the foot. The resulting torque acts opposite the displacement and tends to return the gymnast toward equilibrium. In (c), a larger displacement moves the line of action of the weight beyond the pivot. The torque then acts in the same direction as the displacement, causing the gymnast to tip farther from equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-3-stability">OpenStax, <em>College Physics 2e</em>, Figures 9.10–9.12</a>.</span><a class="headerlink" href="#fig-gymnast-stable-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Unstable Equilibrium</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-gymnast-unstable-equilibrium">
+<img alt="Two-panel diagram showing a gymnast performing a one-handed straddle handstand viewed from behind. In panel a, the center of gravity is aligned vertically above the supporting hand so the net torque is zero. In panel b, one leg is raised relative to the other and the center of gravity is displaced from the pivot, producing a torque that increases the tilt." src="../_images/biomechanics_handstand_equilibrium_infographic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.6 </span><span class="caption-text"><strong>Unstable equilibrium in a one-handed handstand.</strong> In (a), the gymnast is balanced so that the line of action of her weight passes through the supporting hand, which serves as the pivot, and the net torque about that point is zero. In (b), a small displacement shifts the center of gravity so that the weight no longer acts through the pivot. The resulting torque acts in the same direction as the displacement and increases the tilt. The balanced handstand is therefore an example of unstable equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-3-stability">OpenStax, <em>College Physics 2e</em>, Figures 9.13–9.14</a>.</span><a class="headerlink" href="#fig-gymnast-unstable-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Neutral Equilibrium</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-neutral-equilibrium">
+<img alt="Two-panel diagram illustrating neutral equilibrium. Panel a shows an exercise ball displaced along a flat surface while its center of gravity remains at the same height. Panel b shows a gymnast in a compact tucked position rolling through a small displacement while the center of gravity remains at nearly the same height." src="../_images/neutral_equilibrium_ball_and_gymnast.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.7 </span><span class="caption-text"><strong>Neutral and limited neutral equilibrium.</strong> In (a), an exercise ball can be displaced along a flat surface without changing the height of its center of gravity. The weight and normal force remain aligned, so no net torque develops and the ball is in neutral equilibrium. In (b), a gymnast with her arms tucked and legs together forms a compact shape that can roll through small angular displacements without substantially changing the height of her center of gravity. Over this limited range, the weight and normal force remain approximately aligned and the gymnast is in limited neutral equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-3-stability">OpenStax, <em>College Physics 2e</em>, Figure 9.15</a>.</span><a class="headerlink" href="#fig-neutral-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>A system is in <strong>unstable equilibrium</strong>, if a net force or torque in the <em>same</em> direction as the displacement from equilibrium when displaced.  An unstable equilibrium can be prevented when there is a restoring torque applied, typical of small displacements (see Figure <a class="reference internal" href="#fig-gymnast-stable-equilibrium"><span class="std std-numref">8.5</span></a>b).  However, the unstable equilibrium continues under a large enough displacement (see Figure <a class="reference internal" href="#fig-gymnast-stable-equilibrium"><span class="std std-numref">8.5</span></a>c).  Figure <a class="reference internal" href="#fig-gymnast-unstable-equilibrium"><span class="std std-numref">8.6</span></a> illustrates two other examples of unstable equilibrium.  In panel (a), stability is achieved only in the case of perfect alignment.  Panel (b) shows that a displacement away from alignment produces a torque in the direction of the displacement.</p>
+<p>Another simple example is a ball resting on top of a hill, where it accelerates away from the crest once displaced.</p>
+<div class="tip admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.youtube.com/&#64;SteveMould"><strong>Steve Mould</strong></a></p>
+<div class="video_wrapper align-center" style="text-align: center">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/1EyN9_QO4_A" style="border: 0; height: 345px; width: 560px">
+</iframe></div><p>The stability examples above describe how forces and torques can passively return a system toward equilibrium. Humans can also actively respond when balance is lost. In this video, Steve Mould explores how rapid arm motion can help redirect the body’s rotational motion and prevent a fall.</p>
+<p>The video introduces ideas involving angular momentum that we will study more fully later. For now, focus on the connection between <strong>losing balance, rotational motion, and the body’s attempt to return toward an upright position</strong>.</p>
+</div>
+<p>A system is in <strong>neutral equilibrium</strong> if its equilibrium is <em>independent</em> from its original position.  The exercise ball (in Figure <a class="reference internal" href="#fig-neutral-equilibrium"><span class="std std-numref">8.7</span></a>a) on a flat surface.  A gymnast can also have neutral equilibrium when here arms and legs are tucked in because she can roll in one direction easily, but not in another direction.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Human balance and stability</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-human-balance-and-stability">
+<img alt="Two-panel diagram comparing human center of gravity and balance. In panel (a), a man and a woman stand upright with their centers of gravity and bases of support marked. In panel (b), a martial artist is shown in a taller stance and in a lower, wider stance to illustrate how lowering the center of gravity and widening the base of support increases stability." src="../_images/comparing_center_of_gravity_and_stability.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.8 </span><span class="caption-text"><strong>Center of gravity and base of support in human stability.</strong> In (a), the center of gravity of the woman is shown slightly lower than that of the man, while both remain above their bases of support. In (b), a martial artist lowers the center of gravity and widens the base of support to gain stability. This helps illustrate why body position can strongly affect balance and resistance to tipping. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-3-stability">OpenStax, <em>College Physics 2e</em>, Figure 9.16</a>.</span><a class="headerlink" href="#fig-human-balance-and-stability" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+Animal balance</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-animal-balance">
+<img alt="Two-panel diagram comparing animal balance. In panel (a), a chicken stands with its center of gravity below the hips and above a broad base of support. In panel (b), a Tyrannosaurus rex is shown with a long tail that helps keep the center of gravity over the feet." src="../_images/animal_balance_chicken.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.9 </span><span class="caption-text"><strong>Animal examples of balance and stability.</strong> In (a), the chicken has a broad base of support and a center of gravity below the hips, which makes it very stable. In (b), the long tail of a <em>T. rex</em> acts as a counterbalance that helps keep the center of gravity over the feet. Together, these examples show how body shape and mass distribution can improve stability. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-3-stability">OpenStax, <em>College Physics 2e</em>, Figure 9.17</a>.</span><a class="headerlink" href="#fig-animal-balance" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>When we consider how far a system in stable equilibrium can be displaced before it becomes unstable, some systems (e.g., Fig. <a class="reference internal" href="#fig-gymnast-stable-equilibrium"><span class="std std-numref">8.5</span></a>a or <a class="reference internal" href="#fig-human-balance-and-stability"><span class="std std-numref">8.8</span></a>a) can become unstable for relatively small displacements to the side. The critical point is reached when the <span class="math notranslate nohighlight">\(\rm CG\)</span> is no longer above the base of support.</p>
+<p>Because the <span class="math notranslate nohighlight">\(\rm CG\)</span> of a person’s body is above the pivots in the hips, displacements must be controlled quickly by the central nervous system. This skill is developed as we learn to stand and walk. Stability can be increased by spreading the feet farther apart, which widens the base of support, or by lowering the center of gravity (see Fig. <a class="reference internal" href="#fig-human-balance-and-stability"><span class="std std-numref">8.8</span></a>b). A cane, crutch, or walker similarly increases stability by widening the effective base of support.</p>
+<p>Chickens have a body structure that makes balance easier to maintain. Figure <a class="reference internal" href="#fig-animal-balance"><span class="std std-numref">8.9</span></a>a shows that the <span class="math notranslate nohighlight">\(\rm CG\)</span> of a chicken lies below its hip joints and between its widely separated feet. Even relatively large displacements of the chicken’s <span class="math notranslate nohighlight">\(\rm CG\)</span> can therefore remain stable, with restoring forces and torques tending to return the body toward its equilibrium position.</p>
+<p>The <em>T. rex</em> in Fig. <a class="reference internal" href="#fig-animal-balance"><span class="std std-numref">8.9</span></a>b provides an interesting comparison. Like a chicken, it was a biped, but its large head and torso extended far in front of the hips. The long, massive tail acted as a counterbalance, shifting the overall <span class="math notranslate nohighlight">\(\rm CG\)</span> rearward so that it remained above the feet. Without this rearward mass distribution, maintaining equilibrium while standing or moving on two legs would have been much more difficult.</p>
+<p>Different animals solve the problem of balance in different ways. Flamingos, for example, can remain stable while standing on a single leg because their skeletal geometry allows the body to settle into a mechanically favorable position with relatively little muscular effort. Four-legged animals generally have an even larger base of support, making them less likely to tip from small side-to-side or front-to-back displacements. In each case, stability depends on the same basic ideas: the location of the center of gravity, the size and shape of the base of support, and whether a displacement produces a restoring or tipping torque.</p>
+</section>
+<section id="applications-of-statics">
+<h2><span class="section-number">8.4. </span>Applications of Statics<a class="headerlink" href="#applications-of-statics" title="Link to this heading">#</a></h2>
+</section>
+<section id="simple-machines">
+<h2><span class="section-number">8.5. </span>Simple Machines<a class="headerlink" href="#simple-machines" title="Link to this heading">#</a></h2>
+</section>
+<section id="forces-and-torques-in-muscles-and-joints">
+<h2><span class="section-number">8.6. </span>Forces and Torques in Muscles and Joints<a class="headerlink" href="#forces-and-torques-in-muscles-and-joints" title="Link to this heading">#</a></h2>
+</section>
+<section id="in-class-exercises">
+<h2><span class="section-number">8.7. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">8.7.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3><span class="section-number">8.7.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">8.8. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">8.8.1. </span>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">8.8.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">8.8.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +880,37 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-condition-for-equilibrium">8.1. The First Condition for Equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-condition-for-equilibrium">8.2. The Second Condition for Equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability">8.3. Stability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-statics">8.4. Applications of Statics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-machines">8.5. Simple Machines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forces-and-torques-in-muscles-and-joints">8.6. Forces and Torques in Muscles and Joints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">8.7. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">8.7.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">8.7.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">8.8. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">8.8.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">8.8.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
