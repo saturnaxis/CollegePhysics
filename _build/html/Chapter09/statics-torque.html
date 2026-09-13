@@ -523,7 +523,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statics-torque">
 <h1><span class="section-number">8. </span>Statics &amp; Torque<a class="headerlink" href="#statics-torque" title="Link to this heading">#</a></h1>
-<p>Sep 09, 2026 | 3362 words | 22 min read</p>
+<p>Sep 13, 2026 | 4897 words | 33 min read</p>
 <p><em>What does a car moving at constant velocity and a desk have in common?</em></p>
 <p>In the eyes of a physicist, they both have an acceleration of zero.  Recall that Newton’s second law states <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span>.  This means that the net external forces is zero for all stationary objects (e.g., the desk) and for all objects at constant velocity (e.g., the car).  There are forces acting but they are balanced or in <em>equilibrium</em>.</p>
 <div class="note admonition">
@@ -533,8 +533,8 @@ document.write(`
 <section id="the-first-condition-for-equilibrium">
 <h2><span class="section-number">8.1. </span>The First Condition for Equilibrium<a class="headerlink" href="#the-first-condition-for-equilibrium" title="Link to this heading">#</a></h2>
 <p>The first condition necessary for equilibrium is that the <strong>net external force on the system must be zero.</strong>  If the <span class="math notranslate nohighlight">\(\vec{F}{\rm net} = 0\)</span>, then the net external force in <em>any direction</em> is zero. Mathematically, this is represented by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01613db1-6687-4170-961e-d7e4122a8abf">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-01613db1-6687-4170-961e-d7e4122a8abf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-44a0e2c6-defd-4561-864d-862623429c22">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-44a0e2c6-defd-4561-864d-862623429c22" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{F}_{\rm net} &amp;= m\vec{a} = 0, \\
 {\displaystyle \sum_i F_{ix}} &amp;= ma_x = 0, \\
 {\displaystyle \sum_i F_{iy}} &amp;= ma_y = 0.
@@ -587,8 +587,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <div class="note admonition">
 <p class="admonition-title">Torque</p>
 <p>The magnitude, direction, point of application of the force combine to define the <strong>torque</strong>.  Torque is the rotational equivalent of a force, where it is written mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ebb2b1b2-15fa-42f4-a676-4d6316555515">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-ebb2b1b2-15fa-42f4-a676-4d6316555515" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-38f10b48-b35c-4b33-98b3-101827b02067">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-38f10b48-b35c-4b33-98b3-101827b02067" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = rF\sin{\theta},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the torque, <span class="math notranslate nohighlight">\(r\)</span> is the distance from the pivot to the point where the force <span class="math notranslate nohighlight">\(F\)</span> is applied, and <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the distance <span class="math notranslate nohighlight">\(r\)</span> and the force <span class="math notranslate nohighlight">\(F\)</span>.</p>
@@ -596,8 +596,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[ r_\perp = r\sin{\theta}, \]</div>
 <p>so that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa6a847f-c46a-4785-b3d6-57959675657a">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-aa6a847f-c46a-4785-b3d6-57959675657a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f1f48ae3-3ff0-4b6d-b120-f7e458469456">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-f1f48ae3-3ff0-4b6d-b120-f7e458469456" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = r_\perp F.
 \end{align}\]</div>
 <p>The perpendicular lever arm <span class="math notranslate nohighlight">\(r_\perp\)</span> is the shortest distance from the pivot point to the line where the force <span class="math notranslate nohighlight">\(F\)</span> acts.</p>
@@ -617,8 +617,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <p>Torque has two possible directions: clockwise or counterclockwise relative to the chosen pivot point.  A common convention defines the counterclockwise (ccw) torque as positive, while the clockwise (cw) torque is negative.  Torques assigned in opposite directions have opposite signs.</p>
 <p>The <strong>second condition for equilibrium</strong> requires that the net <em>external torque on a system must be zero</em>.  An external torque is one that created by an external force.  <em>You can choose the point around which the torque is calculated.</em></p>
 <p>The point can be the physical point of a system or any other point in space.  However, it must be the same point for all the calculated torques for  that system.  If the net external torque is zero for one choice of the pivot point, then it will hold true for any other choice of pivot point (within an inertial frame of reference).  The second condition necessary for equilibrium is stated in equation form as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-402cca89-6636-48e7-b1df-3ae6bc99b1d1">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-402cca89-6636-48e7-b1df-3ae6bc99b1d1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-59ec1307-5b16-4e2e-a156-34bc8be35cf9">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-59ec1307-5b16-4e2e-a156-34bc8be35cf9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{\tau}_{\rm net} = {\displaystyle \sum_i \vec{\tau}_i} = 0.
 \end{align}\]</div>
 <p>Two children (of unequal weight: <span class="math notranslate nohighlight">\(w_1\)</span> and <span class="math notranslate nohighlight">\(w_2\)</span>) balanced on a seesaw satisfy both conditions for equilibrium. To balance the seesaw, the heavier child (<span class="math notranslate nohighlight">\(w_2\)</span>) must sit closer to the pivot compared to the lighter child (<span class="math notranslate nohighlight">\(w_1\)</span>).</p>
@@ -631,8 +631,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <li><p>curl your fingers in the direction of the applied force <span class="math notranslate nohighlight">\(F_i\)</span>.</p></li>
 </ol>
 <p>The direction in which your fingers curl determines the sign: counterclockwise (positive) or clockwise (negative).  The net torque is then calculated for equilibrium as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-10d62873-79d6-41f5-9f6d-d6622120a15a">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-10d62873-79d6-41f5-9f6d-d6622120a15a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f7ad93cb-e098-468a-bf57-b1c8517578bf">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-f7ad93cb-e098-468a-bf57-b1c8517578bf" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau_{\rm net} &amp;= \tau_1 + \tau_2= 0, \\
 &amp;= +r_1w_1 + (-r_2w_2) = 0, \\
 r_1w_1 &amp;= r_2w_2.
@@ -734,9 +734,89 @@ Animal balance</label><div class="sd-tab-content docutils">
 </section>
 <section id="applications-of-statics">
 <h2><span class="section-number">8.4. </span>Applications of Statics<a class="headerlink" href="#applications-of-statics" title="Link to this heading">#</a></h2>
+<p>Statics can be applied to a variety of situations, including bad posture and back strain.  Statics is a special case of Newton’s law, which involve their own special problem-solving strategies.</p>
+<div class="note admonition">
+<p class="admonition-title">Problem Solving Strategy: Static Equilibrium</p>
+<ol class="arabic simple">
+<li><p>Determine whether or not the system is in <strong>static equilibrium</strong>.  This is valid when the acceleration of the system is zero <em>and</em> accelerated rotation odes not occur.</p></li>
+<li><p><em>Draw a free body diagram for the system of interest</em>.  Label all forces.  Note their relative magnitudes, directions, and points of application, whenever these are known.</p></li>
+<li><p>Solve the problem by applying either (or both) conditions for equilibrium:
+$<span class="math notranslate nohighlight">\( \vec{F}_{\rm net} = 0; \qquad \vec{\tau}_{\rm net} = 0, \)</span>$</p></li>
+</ol>
+<p>depending on the list of known and unknown factors.  <em>Choose the pivot point to simplify the solution.</em>  The most useful pivots cause torques by unknown forces to be zero.
+4. <em>Check the solution to see if it is reasonable</em> by examining the magnitude, direction, and units of the answer.</p>
+</div>
+<figure class="align-default" id="fig-static-equilibrium-problem-solving-strategy">
+<img alt="Flowchart summarizing a problem-solving strategy for static equilibrium. The diagram shows four steps: check for static equilibrium, draw the free-body diagram, apply the equilibrium conditions, and check the solution. A final summary states that static equilibrium requires both the net force and net torque to be zero." src="../_images/static_equilibrium_problem_solving_strategy.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.10 </span><span class="caption-text"><strong>Problem-solving strategy for static equilibrium situations.</strong> This flowchart summarizes a four-step approach for solving static-equilibrium problems. First, determine whether the system is in static equilibrium by checking that there is no translational acceleration and no accelerated rotation. Next, draw a free-body diagram for the system of interest and label the external forces. Then apply one or both equilibrium conditions, <span class="math notranslate nohighlight">\(\sum \vec{F}=0\)</span> and <span class="math notranslate nohighlight">\(\sum \tau=0\)</span>, choosing a convenient pivot point when torques are involved. Finally, check that the result is physically reasonable and that the units are correct. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-4-applications-of-statics-including-problem-solving-strategies">OpenStax, <em>College Physics 2e</em>, Section 9.4</a>.</span><a class="headerlink" href="#fig-static-equilibrium-problem-solving-strategy" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Let’s apply the problem-solving strategy for the pole vaulter in Figure <a class="reference internal" href="#fig-support-forces-uniform-rod"><span class="std std-numref">8.11</span></a>.  The pole is uniform and has a mass of <span class="math notranslate nohighlight">\(5\)</span>-<span class="math notranslate nohighlight">\({\rm kg}\)</span>.  In Fig. <a class="reference internal" href="#fig-support-forces-uniform-rod"><span class="std std-numref">8.11</span></a>a, the pole’s center-of-gravity (<span class="math notranslate nohighlight">\(\rm CG\)</span>) lies halfway between the vaulter’s hands (and in the middle of the pole).  The force exerted by each hand is equal to half the weight of the pole, or <span class="math notranslate nohighlight">\(24.5\ {\rm N}\)</span> (recall the <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter04/dynamics.html#large-tension">large tension</a> problem in Chapter 3).  This satisfies the first condition for equilibrium (<span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>).  The second condition (<span class="math notranslate nohighlight">\(\vec{\tau}_{\rm net} = 0\)</span>) is also satisfied, if we choose the <span class="math notranslate nohighlight">\(\rm CG\)</span> as the pivot point.</p>
+<ul class="simple">
+<li><p>The weight exerts no torque about a pivot point located at the <span class="math notranslate nohighlight">\(rm CG\)</span> because its lever arm is zero.</p></li>
+<li><p>The equal forces exerted by the hands are equidistant from the pivot.  Thus,they provide equal and opposite torques.</p></li>
+</ul>
+<p>In Fig. <a class="reference internal" href="#fig-support-forces-uniform-rod"><span class="std std-numref">8.11</span></a>a, each hand exerts a force equal to half the weight of the pole, or <span class="math notranslate nohighlight">\(F_{\rm R} = F_{\rm L} = w/2.\)</span></p>
+<figure class="align-default" id="fig-support-forces-uniform-rod">
+<img alt="Three-panel diagram showing a pole vaulter holding a horizontal uniform rod. Panel (a) shows the center of gravity halfway between the hands with equal upward support forces. Panel (b) shows the center of gravity closer to the right hand, so the right-hand support force is larger. Panel (c) shows the center of gravity outside the hands, so one hand pushes down while the other pushes up." src="../_images/pole_vaulter.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.11 </span><span class="caption-text"><strong>Support forces for a horizontal uniform rod.</strong> In (a), the rod’s center of gravity (<span class="math notranslate nohighlight">\(\rm CG\)</span>) lies halfway between the vaulter’s hands, so the support forces are equal: <span class="math notranslate nohighlight">\(F_R = F_L = w/2\)</span>. In (b), the <span class="math notranslate nohighlight">\(\rm CG\)</span> is closer to the right hand, so the right hand supports more of the rod’s weight and <span class="math notranslate nohighlight">\(F_R &gt; F_L\)</span>. In (c), the <span class="math notranslate nohighlight">\(\rm CG\)</span> lies outside the hands, so one hand pushes downward while the other pushes upward to maintain equilibrium. In panel (b) and (c), the rod extends farther to the right <em>behind the free-body diagram</em>. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-4-applications-of-statics-including-problem-solving-strategies">OpenStax, <em>College Physics 2e</em>, Figures 9.18–9.20</a>.</span><a class="headerlink" href="#fig-support-forces-uniform-rod" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In Fig. <a class="reference internal" href="#fig-support-forces-uniform-rod"><span class="std std-numref">8.11</span></a>b, the pole is shifted to the vaulter’s right so his right arm supports more of the weight and the forces on the hands are no longer equal.  If the <span class="math notranslate nohighlight">\(\rm CG\)</span> moves to his left, so he must push down with his right and up with his left.  The total force is still equal to weight of the pole, but it is not evenly divided.  In Fig. <a class="reference internal" href="#fig-support-forces-uniform-rod"><span class="std std-numref">8.11</span></a>c shows this scenario with the man holding one hand near the end of the pole, which results in a reversal of the applied force because the <span class="math notranslate nohighlight">\(\rm CG\)</span> is no longer between the hands.</p>
 </section>
 <section id="simple-machines">
 <h2><span class="section-number">8.5. </span>Simple Machines<a class="headerlink" href="#simple-machines" title="Link to this heading">#</a></h2>
+<p>Simple machines are devices that multiply (or augment) a force that we apply at the expense of a distance through which we apply the force.  Levers, gears, pulleys, wedges, and screws are some examples of machines.  Energy is still conserved for these devices because a machine cannot do more work than the energy put into it.  However, machines can reduce the input force necessary.  The <strong>mechanical advantage</strong> (<span class="math notranslate nohighlight">\(\rm MA\)</span>) is the ratio of output to input force magnitudes, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5625b68b-b518-4cd9-b672-81c47f769072">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-5625b68b-b518-4cd9-b672-81c47f769072" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\rm MA} = \frac{F_{\rm o}}{F_{\rm i}}, 
+\end{align}\]</div>
+<p>where the <span class="math notranslate nohighlight">\(F_{\rm o}\)</span> is the output force magnitude and <span class="math notranslate nohighlight">\(F_{\rm i}\)</span> is the input force magnitude.</p>
+<p>One of the simplest machines is the lever, which is a rigid bar pivoted at a fixed place called the <em>fulcrum</em>.  Torques are involved in levers, since there is rotation about a pivot point.  Distances from the physical pivot of the lever are crucial, where we can find a useful expression for the <span class="math notranslate nohighlight">\(\rm MA\)</span> in terms of these distances.</p>
+<figure class="align-default" id="fig-nail-puller-lever">
+<img alt="Nail puller used as a lever. A downward input force acts on the handle, the nail exerts a downward reaction force on the puller, and the supporting surface exerts an upward normal force at the pivot. The input and output perpendicular lever arms are labeled." src="https://openstax.org/apps/image-cdn/v1/f%3Dwebp/apps/archive/20260604.144757/resources/8f170494c224e9944ff1784b2b7e8c8c6390b1cb" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.12 </span><span class="caption-text"><strong>A nail puller acts as a lever with a large mechanical advantage.</strong> The applied input force <span class="math notranslate nohighlight">\(F_i\)</span> acts downward on the handle, while the nail exerts a downward reaction force <span class="math notranslate nohighlight">\(F_n\)</span> on the puller. The supporting surface provides the normal force <span class="math notranslate nohighlight">\(N\)</span> at the pivot, so this force produces no torque about the pivot. The perpendicular lever arms of the input and output forces are <span class="math notranslate nohighlight">\(l_i=r_{i\perp}\)</span> and <span class="math notranslate nohighlight">\(l_o=r_{o\perp}\)</span>, respectively. Because <span class="math notranslate nohighlight">\(l_i\)</span> is much larger than <span class="math notranslate nohighlight">\(l_o\)</span>, a relatively small input force can produce a much larger output force <span class="math notranslate nohighlight">\(F_o\)</span> on the nail. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-5-simple-machines">OpenStax, <em>College Physics 2e</em>, Figure 9.21</a>.</span><a class="headerlink" href="#fig-nail-puller-lever" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>One of the simplest machines is the <strong>lever</strong>, which is a rigid bar that can rotate about a fixed point called the <em>fulcrum</em>. The key idea is that a force applied farther from the pivot can produce a larger torque than the same force applied closer to the pivot. This makes the distances from the pivot just as important as the magnitudes of the forces.</p>
+<p>A familiar example is a seesaw. If the seesaw is balanced and remains at rest, then it satisfies the conditions for equilibrium. In that case, the clockwise and counterclockwise torques about the pivot must be equal in magnitude, so</p>
+<div class="math notranslate nohighlight">
+\[ w_1 r_1 = w_2 r_2. \]</div>
+<p>This shows that a smaller force can balance a larger force if it acts at a greater distance from the pivot. That same idea is what gives a lever its mechanical advantage.</p>
+<figure class="align-default" id="fig-seesaw-lever-equilibrium">
+<img alt="Two children balance on a seesaw. The heavier child sits closer to the pivot, while the lighter child sits farther away. The distances from the pivot are labeled r1 and r2, and the weights are labeled w1 and w2." src="../_images/seesaw_example.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.13 </span><span class="caption-text"><strong>A seesaw illustrates torque balance in a lever.</strong> Two children balance on a seesaw by satisfying both conditions for equilibrium. The upward support force acts at the pivot, while the children’s weights act downward at distances <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> from the pivot. The lighter child sits farther from the pivot so that the torque due to <span class="math notranslate nohighlight">\(w_1\)</span> balances the torque due to <span class="math notranslate nohighlight">\(w_2\)</span>. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-2-the-second-condition-for-equilibrium">OpenStax, <em>College Physics 2e</em>, Figure 9.8</a>.</span><a class="headerlink" href="#fig-seesaw-lever-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The seesaw and pry bar illustrate the same basic principle. A force acting farther from the pivot can balance, or overcome, a larger force acting closer to the pivot. For the balanced seesaw, this relationship follows directly from the condition that the net torque is zero.</p>
+<p>Figure <a class="reference internal" href="#fig-nail-puller-lever"><span class="std std-numref">8.12</span></a> shows the same principle applied to a lever used to pull a nail. Crowbars, seesaws, and other such levers are analogous because their behavior depends on the forces and their perpendicular distances from the pivot.</p>
+<p>For the pry bar, we choose the <em>pry bar itself</em> as the system of interest. There are three vertical forces acting on this system: the input force <span class="math notranslate nohighlight">\(\vec{F}_{\rm i}\)</span> exerted by the hand, the reaction force <span class="math notranslate nohighlight">\(\vec{F}_{\rm n}\)</span> exerted by the nail on the pry bar, and the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> exerted by the supporting surface at the pivot. <strong>The output force <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> is not a force acting on the pry bar.</strong> Instead, <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> is the force that the pry bar exerts on the nail.</p>
+<p>The forces <span class="math notranslate nohighlight">\(\vec{F}_{\rm n}\)</span> and <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> form a Newton’s third-law pair, so they have equal magnitudes and opposite directions. The normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> produces no torque about the chosen pivot because it acts at the pivot.</p>
+<p>A pry bar is intended to move the nail, rather than remain permanently in equilibrium. We therefore analyze the system at the <em>threshold of motion</em>, just before the nail begins to move. At this instant, the torques are balanced, so</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3be25582-e8cb-476c-a69c-fa49df8aeacd">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-3be25582-e8cb-476c-a69c-fa49df8aeacd" title="Permalink to this equation">#</a></span>\[\begin{align}
+l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm n}.
+\end{align}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(F_{\rm n}=F_{\rm o}\)</span> in magnitude, this becomes</p>
+<div class="math notranslate nohighlight">
+\[ l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm o}. \]</div>
+<p>We can group the forces on one side and the lever arms on the other to get</p>
+<div class="math notranslate nohighlight" id="equation-mech-advant-eqn">
+<span class="eqno">(8.8)<a class="headerlink" href="#equation-mech-advant-eqn" title="Link to this equation">#</a></span>\[{\rm MA} = \frac{F_{\rm o}}{F_{\rm i}}=\frac{l_{\rm i}}{l_{\rm o}}.\]</div>
+<p>The ratio <span class="math notranslate nohighlight">\(F_{\rm o}/F_{\rm i}\)</span> is the <strong>mechanical advantage</strong> (<span class="math notranslate nohighlight">\(\rm MA\)</span>) of the lever. Because the input force is applied much farther from the pivot than the output force, <span class="math notranslate nohighlight">\(l_{\rm i}\gg l_{\rm o}\)</span>, so the pry bar can exert a much larger force on the nail than the force applied by the hand. Once the input torque becomes slightly larger than the opposing torque, the pry bar rotates and the nail begins to move.</p>
+<hr class="docutils" />
+<p>Two other types of levers that differ slightly from the nail puller are a wheel barrow and a shovel (see Figure <a class="reference internal" href="#fig-wheelbarrow-and-shovel-levers"><span class="std std-numref">8.14</span></a>).  All these lever types are similar in that only three force are involved: (1) the input force, (2) the output force, and (3) the force on the pivot.  Also there <span class="math notranslate nohighlight">\(\rm MA\)</span> (Eqn. <a class="reference internal" href="#equation-mech-advant-eqn">(8.8)</a>) are the same with the distances measured relative to the physical pivot.</p>
+<figure class="align-default" id="fig-wheelbarrow-and-shovel-levers">
+<img alt="Side-by-side lever diagrams for a wheelbarrow and a shovel. Panel (a) shows a realistic wheelbarrow carrying dirt, with the input force, output force, weight, normal force, center of gravity, and lever arms labeled. Panel (b) shows a realistic shovel carrying dirt, with the hands, load, input force, reaction force, weight, center of gravity, and lever arms labeled." src="../_images/shovel_wheelbarrow_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.14 </span><span class="caption-text"><strong>Wheelbarrows and shovels are examples of levers.</strong> In (a), the wheelbarrow acts as a second-class lever, where the load lies between the pivot and the input force. This arrangement allows the output force to be greater than the input force. In (b), the shovel acts as a third-class lever, where the input force is applied between the pivot and the load. In this case, the output force is less than the input force, but the arrangement allows the load to move through a larger distance. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-5-simple-machines">OpenStax, <em>College Physics 2e</em>, Figure 9.22</a>.</span><a class="headerlink" href="#fig-wheelbarrow-and-shovel-levers" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The wheelbarrow and shovel differ from the pry bar because both the input and output force are on the same side of the pivot.   In the case of the wheelbarrow, the output force (or load) is between the pivot (wheel’s axle) and the input (or applied force).  In the case of the shovel, the input force is between the pivot (at the bottom of the handle) and the load, but the input lever arm is shorter than the output lever arm.  In this case, the <span class="math notranslate nohighlight">\(\rm MA\)</span> is less than one.</p>
 </section>
 <section id="forces-and-torques-in-muscles-and-joints">
 <h2><span class="section-number">8.6. </span>Forces and Torques in Muscles and Joints<a class="headerlink" href="#forces-and-torques-in-muscles-and-joints" title="Link to this heading">#</a></h2>
