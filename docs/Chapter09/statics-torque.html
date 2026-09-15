@@ -523,7 +523,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statics-torque">
 <h1><span class="section-number">8. </span>Statics &amp; Torque<a class="headerlink" href="#statics-torque" title="Link to this heading">#</a></h1>
-<p>Sep 13, 2026 | 4897 words | 33 min read</p>
+<p>Sep 14, 2026 | 6903 words | 46 min read</p>
 <p><em>What does a car moving at constant velocity and a desk have in common?</em></p>
 <p>In the eyes of a physicist, they both have an acceleration of zero.  Recall that Newton’s second law states <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = m\vec{a}\)</span>.  This means that the net external forces is zero for all stationary objects (e.g., the desk) and for all objects at constant velocity (e.g., the car).  There are forces acting but they are balanced or in <em>equilibrium</em>.</p>
 <div class="note admonition">
@@ -533,8 +533,8 @@ document.write(`
 <section id="the-first-condition-for-equilibrium">
 <h2><span class="section-number">8.1. </span>The First Condition for Equilibrium<a class="headerlink" href="#the-first-condition-for-equilibrium" title="Link to this heading">#</a></h2>
 <p>The first condition necessary for equilibrium is that the <strong>net external force on the system must be zero.</strong>  If the <span class="math notranslate nohighlight">\(\vec{F}{\rm net} = 0\)</span>, then the net external force in <em>any direction</em> is zero. Mathematically, this is represented by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a9857fc7-fe38-4569-9ca7-906bb913f070">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-a9857fc7-fe38-4569-9ca7-906bb913f070" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d32c6a30-e2cd-4991-9730-2687d8ebc93b">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-d32c6a30-e2cd-4991-9730-2687d8ebc93b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{F}_{\rm net} &amp;= m\vec{a} = 0, \\
 {\displaystyle \sum_i F_{ix}} &amp;= ma_x = 0, \\
 {\displaystyle \sum_i F_{iy}} &amp;= ma_y = 0.
@@ -587,8 +587,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <div class="note admonition">
 <p class="admonition-title">Torque</p>
 <p>The magnitude, direction, point of application of the force combine to define the <strong>torque</strong>.  Torque is the rotational equivalent of a force, where it is written mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba836a66-12a7-4cac-a8ee-c2490464ffde">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-ba836a66-12a7-4cac-a8ee-c2490464ffde" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d1297206-cdb3-4c0c-93a6-1915623e09c9">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-d1297206-cdb3-4c0c-93a6-1915623e09c9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = rF\sin{\theta},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the torque, <span class="math notranslate nohighlight">\(r\)</span> is the distance from the pivot to the point where the force <span class="math notranslate nohighlight">\(F\)</span> is applied, and <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the distance <span class="math notranslate nohighlight">\(r\)</span> and the force <span class="math notranslate nohighlight">\(F\)</span>.</p>
@@ -596,8 +596,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[ r_\perp = r\sin{\theta}, \]</div>
 <p>so that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08d4b44b-d4ab-448c-a6bf-ca7c5950acfe">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-08d4b44b-d4ab-448c-a6bf-ca7c5950acfe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c2ce39d3-3606-4e09-9ee4-9a80cd20c966">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-c2ce39d3-3606-4e09-9ee4-9a80cd20c966" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = r_\perp F.
 \end{align}\]</div>
 <p>The perpendicular lever arm <span class="math notranslate nohighlight">\(r_\perp\)</span> is the shortest distance from the pivot point to the line where the force <span class="math notranslate nohighlight">\(F\)</span> acts.</p>
@@ -617,8 +617,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <p>Torque has two possible directions: clockwise or counterclockwise relative to the chosen pivot point.  A common convention defines the counterclockwise (ccw) torque as positive, while the clockwise (cw) torque is negative.  Torques assigned in opposite directions have opposite signs.</p>
 <p>The <strong>second condition for equilibrium</strong> requires that the net <em>external torque on a system must be zero</em>.  An external torque is one that created by an external force.  <em>You can choose the point around which the torque is calculated.</em></p>
 <p>The point can be the physical point of a system or any other point in space.  However, it must be the same point for all the calculated torques for  that system.  If the net external torque is zero for one choice of the pivot point, then it will hold true for any other choice of pivot point (within an inertial frame of reference).  The second condition necessary for equilibrium is stated in equation form as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c4b82f4c-c85b-431f-a13e-ae5415aa78b2">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-c4b82f4c-c85b-431f-a13e-ae5415aa78b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5eb5ce2-8f42-40c7-ad00-6916385c989f">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-a5eb5ce2-8f42-40c7-ad00-6916385c989f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{\tau}_{\rm net} = {\displaystyle \sum_i \vec{\tau}_i} = 0.
 \end{align}\]</div>
 <p>Two children (of unequal weight: <span class="math notranslate nohighlight">\(w_1\)</span> and <span class="math notranslate nohighlight">\(w_2\)</span>) balanced on a seesaw satisfy both conditions for equilibrium. To balance the seesaw, the heavier child (<span class="math notranslate nohighlight">\(w_2\)</span>) must sit closer to the pivot compared to the lighter child (<span class="math notranslate nohighlight">\(w_1\)</span>).</p>
@@ -631,8 +631,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <li><p>curl your fingers in the direction of the applied force <span class="math notranslate nohighlight">\(F_i\)</span>.</p></li>
 </ol>
 <p>The direction in which your fingers curl determines the sign: counterclockwise (positive) or clockwise (negative).  The net torque is then calculated for equilibrium as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce50d383-2d21-402b-afbf-0823b0c70d84">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-ce50d383-2d21-402b-afbf-0823b0c70d84" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fce3960e-8bc6-4de0-8ead-3f56b4b5799f">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-fce3960e-8bc6-4de0-8ead-3f56b4b5799f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau_{\rm net} &amp;= \tau_1 + \tau_2= 0, \\
 &amp;= +r_1w_1 + (-r_2w_2) = 0, \\
 r_1w_1 &amp;= r_2w_2.
@@ -771,8 +771,8 @@ Animal balance</label><div class="sd-tab-content docutils">
 <section id="simple-machines">
 <h2><span class="section-number">8.5. </span>Simple Machines<a class="headerlink" href="#simple-machines" title="Link to this heading">#</a></h2>
 <p>Simple machines are devices that multiply (or augment) a force that we apply at the expense of a distance through which we apply the force.  Levers, gears, pulleys, wedges, and screws are some examples of machines.  Energy is still conserved for these devices because a machine cannot do more work than the energy put into it.  However, machines can reduce the input force necessary.  The <strong>mechanical advantage</strong> (<span class="math notranslate nohighlight">\(\rm MA\)</span>) is the ratio of output to input force magnitudes, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-469a3c9a-2b6c-4012-a21b-1be42eae3de4">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-469a3c9a-2b6c-4012-a21b-1be42eae3de4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-73c6abef-39c9-4bef-bf66-f4065c0197fc">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-73c6abef-39c9-4bef-bf66-f4065c0197fc" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm MA} = \frac{F_{\rm o}}{F_{\rm i}}, 
 \end{align}\]</div>
 <p>where the <span class="math notranslate nohighlight">\(F_{\rm o}\)</span> is the output force magnitude and <span class="math notranslate nohighlight">\(F_{\rm i}\)</span> is the input force magnitude.</p>
@@ -799,8 +799,8 @@ Animal balance</label><div class="sd-tab-content docutils">
 <p>For the pry bar, we choose the <em>pry bar itself</em> as the system of interest. There are three vertical forces acting on this system: the input force <span class="math notranslate nohighlight">\(\vec{F}_{\rm i}\)</span> exerted by the hand, the reaction force <span class="math notranslate nohighlight">\(\vec{F}_{\rm n}\)</span> exerted by the nail on the pry bar, and the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> exerted by the supporting surface at the pivot. <strong>The output force <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> is not a force acting on the pry bar.</strong> Instead, <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> is the force that the pry bar exerts on the nail.</p>
 <p>The forces <span class="math notranslate nohighlight">\(\vec{F}_{\rm n}\)</span> and <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> form a Newton’s third-law pair, so they have equal magnitudes and opposite directions. The normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> produces no torque about the chosen pivot because it acts at the pivot.</p>
 <p>A pry bar is intended to move the nail, rather than remain permanently in equilibrium. We therefore analyze the system at the <em>threshold of motion</em>, just before the nail begins to move. At this instant, the torques are balanced, so</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f173d7f-648d-4aa6-b055-37c5778c4118">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-8f173d7f-648d-4aa6-b055-37c5778c4118" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3b49cd72-8d73-40c8-8afd-0df1e08ab4a0">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-3b49cd72-8d73-40c8-8afd-0df1e08ab4a0" title="Permalink to this equation">#</a></span>\[\begin{align}
 l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm n}.
 \end{align}\]</div>
 <p>Because <span class="math notranslate nohighlight">\(F_{\rm n}=F_{\rm o}\)</span> in magnitude, this becomes</p>
@@ -819,9 +819,75 @@ l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm n}.
 </figcaption>
 </figure>
 <p>The wheelbarrow and shovel differ from the pry bar because both the input and output force are on the same side of the pivot.   In the case of the wheelbarrow, the output force (or load) is between the pivot (wheel’s axle) and the input (or applied force).  In the case of the shovel, the input force is between the pivot (at the bottom of the handle) and the load, but the input lever arm is shorter than the output lever arm.  In this case, the <span class="math notranslate nohighlight">\(\rm MA\)</span> is less than one.</p>
+<hr class="docutils" />
+<p>Another simple machine is the inclined plane.  Pushing a cart up a plane is easier than lifting the same cart straight up to the top using a ladder because the plane splits the weight and only the component along the plane needs to be overcome.  The work done whether lifting or pushing up a plane is the same.</p>
+<p>A crank is a lever than can rotate <span class="math notranslate nohighlight">\(360^\circ\)</span> about its pivot (see Figure <a class="reference internal" href="#fig-crank-wheel-pulley"><span class="std std-numref">8.15</span></a>a).  Although it doesn’t look like a lever, the physics of its actions remain the same.  The <span class="math notranslate nohighlight">\(\rm MA\)</span> for a crank is imply the ratio of the radii <span class="math notranslate nohighlight">\(r_i/r_o\)</span>.  Wheels and gears have this simple expression of their mechanical advantages too.</p>
+<p>The <span class="math notranslate nohighlight">\(\rm MA\)</span> can be greater than 1 (as it is for the crank) or less than 1, as it is for a simplified car axle driving the wheels (see Figure <a class="reference internal" href="#fig-crank-wheel-pulley"><span class="std std-numref">8.15</span></a>b).  If the axle’s radius is <span class="math notranslate nohighlight">\(2\ {\rm cm}\)</span> and the wheel’s radius is <span class="math notranslate nohighlight">\(24\ {\rm cm}\)</span>, then the</p>
+<div class="math notranslate nohighlight">
+\[ {\rm MA} = \frac{ 2\ {\rm cm}}{24\ {\rm cm}} = 0.083\]</div>
+<p>and the axle needs to exert a force of <span class="math notranslate nohighlight">\(12{,}000\ {\rm N}\)</span> on the wheel to enable it to exert a force of <span class="math notranslate nohighlight">\(1000\ {\rm N}\)</span> on the ground.</p>
+<figure class="align-default" id="fig-crank-wheel-pulley">
+<img alt="Three side-by-side diagrams of simple machines. Panel a shows a hand turning a crank with input and output forces and their perpendicular lever arms. Panel b shows an automobile axle driving a larger wheel with input and output forces and radii labeled. Panel c shows a fixed pulley with equal input and output tensions acting at equal radii from the pivot." src="../_images/physics_mechanics_levers_wheels_and_pulley.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.15 </span><span class="caption-text"><strong>Cranks, wheels and axles, and pulleys use rotational motion to transmit forces.</strong> In (a), a crank acts as a rotating lever and can provide a mechanical advantage when the input radius exceeds the output radius. In (b), a small automobile axle drives a much larger wheel, giving a mechanical advantage less than one. In (c), an ideal fixed pulley has equal input and output radii and therefore changes the direction of the force without changing its magnitude. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-5-simple-machines">OpenStax, <em>College Physics 2e</em>, Figure 9.23</a>.</span><a class="headerlink" href="#fig-crank-wheel-pulley" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>An ordinary pulley has an <span class="math notranslate nohighlight">\(\rm MA = 1\)</span>, where it only changes the direction of the force and not its magnitude (see Figure <a class="reference internal" href="#fig-crank-wheel-pulley"><span class="std std-numref">8.15</span></a>c).  Combinations of pulleys are used to <em>multiply</em> force.  If the pulleys are frictionless, then the force output is approximately an integral multiple of hte tension in the cable.  The number of cables pulling directly upward on the system of interest is approximately the <span class="math notranslate nohighlight">\(\rm MA\)</span> of the pulley system.</p>
+<p>Each attachment applies an external force in approximately the same direction as the others, where they add  and produce a total force that is nearly an integral multiple of the input force <span class="math notranslate nohighlight">\(\vec{T}\)</span>.</p>
+<figure class="align-default" id="fig-pulley-mechanical-advantage">
+<img alt="Three pulley systems with increasing mechanical advantage. Panel (a) has mechanical advantage approximately 2, panel (b) approximately 3, and panel (c) approximately 4. Each panel shows the rope tension T in the supporting strands and the weight w of the load." src="https://openstax.org/apps/image-cdn/v1/f%3Dwebp/apps/archive/20260604.144757/resources/c74fd438d5bbc5d76eb08d54eb36933b3fac1fc7" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.16 </span><span class="caption-text"><strong>Pulley systems can increase mechanical advantage by increasing the number of supporting rope segments.</strong> In (a), the load is supported by two rope segments, giving a mechanical advantage of approximately 2. In (b), three supporting rope segments give a mechanical advantage of approximately 3. In (c), four supporting rope segments give a mechanical advantage of approximately 4. In each case, the upward supporting tensions add to balance the downward weight of the load. Source: <a class="reference external" href="https://openstax.org/">OpenStax, <em>College Physics 2e</em></a>.</span><a class="headerlink" href="#fig-pulley-mechanical-advantage" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="forces-and-torques-in-muscles-and-joints">
 <h2><span class="section-number">8.6. </span>Forces and Torques in Muscles and Joints<a class="headerlink" href="#forces-and-torques-in-muscles-and-joints" title="Link to this heading">#</a></h2>
+<p>Muscles, bones, and joints are some interesting applications of statics in biological systems.  Muscles exert a large force to hold a book, which we can analyze through a free-body diagram (see Figure <a class="reference internal" href="#fig-forearm-biceps-lever"><span class="std std-numref">8.17</span></a>).</p>
+<figure class="align-default" id="fig-forearm-biceps-lever">
+<img alt="Two-panel diagram of a forearm holding a physics book. Panel (a) shows a realistic arm with the biceps force, elbow-joint force, forearm weight, book weight, centers of gravity, and lever-arm distances labeled. Panel (b) shows the equivalent simplified mechanical model with the same forces and distances from the elbow pivot." src="../_images/forearm_weight.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.17 </span><span class="caption-text"><strong>The forearm acts as a lever when supporting a load.</strong> In (a), the biceps exert an upward force <span class="math notranslate nohighlight">\(F_B\)</span> while the elbow joint exerts the force <span class="math notranslate nohighlight">\(F_E\)</span>; the weights of the forearm and book act downward at their respective centers of gravity. In (b), the same system is represented as a simplified lever with the elbow as the pivot and lever arms <span class="math notranslate nohighlight">\(r_1\)</span>, <span class="math notranslate nohighlight">\(r_2\)</span>, and <span class="math notranslate nohighlight">\(r_3\)</span>. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-6-forces-and-torques-in-muscles-and-joints">OpenStax, <em>College Physics 2e</em>, Figure 9.25</a>.</span><a class="headerlink" href="#fig-forearm-biceps-lever" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Muscles can only contract, so they occur in pairs.  In the arm, the biceps muscle closes the limb as a <em>flexor</em>, where the triceps muscle opens the limb (i.e., a <em>extensor</em>).  Most skeletal muscles exert a much larger force within the body than the limbs apply to the outside world.  Most muscles are attached to bones via tendons close to joints, which causes these systems to have mechanical advantages less than one.</p>
+<p>Very large forces are also created in the joints.  Joints and muscles often exert forces that act in opposite directions and subtract because muscles can contract, but not expand beyond their resting length.  Forces in muscles and joints are largest when their load is a long distance from the joint.</p>
+<p>In racquet sports (e.g., tennis), the constant extension of the arm during the game creates large forces.  The mass times the lever ar of a tennis racquet is an important factor, and many players use the heaviest racquet they can handle.  As a result, joint deterioration and damage to the tendons in the elbow (i.e., “tennis elbow”) can result from repetitive motion, undue torques, and possibly poor racquet selection.</p>
+<p>Various techniques for holding and using a racquet, bat, or stick can increase the user’s sporting prowess, but can also minimize fatigue and long-term damage to the body.  For example, tennis balls correctly hit at the “sweet spot” on the racquet will result in little vibration or impact force being felt in the racquet and the body.  Twisting the hand to provide top sin on the ball or using an extended rigid elbow in a backhand stroke can also aggravate the tendons in the elbow.</p>
+<p>Training coaches and physical therapists use the knowledge of relationships between forces and torques in the treatment of muscles and joints.  In physical therapy, an exercise routine can apply a particular force an torque that can revive muscles and joints over a period of time.  Some exercise are carried out under water (by design) because this requires greater forces to be exerted, which can further strengthen the muscles.  However, heavily muscled athletes (e.g., weightlifters) can tear muscles and connecting tissue through effort alone.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+Posture</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-posture-and-back-muscles">
+<img alt="Two-panel diagram showing the biomechanics of posture. In panel (a), a woman stands upright with the center of gravity of the upper body directly above the upper-body pivot point, so the perpendicular lever arm of the weight is zero. In panel (b), the same woman bends forward, creating a lever arm for the upper-body weight and requiring a back-muscle force to maintain equilibrium." src="../_images/biomechanics_diagram_upper_body_forces.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.18 </span><span class="caption-text"><strong>Posture affects the torque produced by the upper body.</strong> In (a), the center of gravity of the upper body lies directly above the pivot point, so the perpendicular lever arm of the weight is zero ((r_{w\perp}=0)), and the back muscles do not need to provide a balancing torque. In (b), bending forward moves the line of action of the upper-body weight away from the pivot, creating a nonzero lever arm (r_{w\perp}). The back muscles must then exert the force (F_b) with lever arm (r_{b\perp}) to maintain equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/fe3c171dc79911a5a78412509748cff54a4efd17">OpenStax, <em>College Physics 2e</em></a>.</span><a class="headerlink" href="#fig-posture-and-back-muscles" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+Adjusting the center of gravity</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-adjusting-center-of-gravity">
+<img alt="Three-panel realistic figure showing people adjusting their body positions to keep balanced while carrying loads. In panel (a), an adult carrying a child on the shoulders leans forward slightly. In panel (b), a man carrying a shoulder bag shifts his posture so the center of gravity remains over the feet. In panel (c), a woman carrying books shifts her body position while walking. Each panel marks the center of gravity with a red dot labeled CG." src="../_images/center_of_gravity_illustrated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.19 </span><span class="caption-text"><strong>People shift their bodies to keep the center of gravity over the base of support.</strong> In each example, the position of the body changes so that the combined center of gravity remains in a stable position relative to the feet. In (a), carrying a child high on the body causes the adult to lean forward. In (b), the weight of a shoulder bag shifts the center of gravity, so the person adjusts posture to maintain balance. In (c), carrying books in front of the torso also changes the body position needed for stable equilibrium. Adapted from: <a class="reference external" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ce3d897a0761f119bdae12f9610ec9e59db5f513">OpenStax, <em>College Physics 2e</em></a>.</span><a class="headerlink" href="#fig-adjusting-center-of-gravity" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Figure <a class="reference internal" href="#fig-posture-and-back-muscles"><span class="std std-numref">8.18</span></a> shows how bad posture causes back strain.  Good posture is when your upper body’s <span class="math notranslate nohighlight">\(\rm CG\)</span> is directly above the pivot point in the hips (see Fig. <a class="reference internal" href="#fig-posture-and-back-muscles"><span class="std std-numref">8.18</span></a>a), which in turn is directly above the base of support at your feet.  Because of this, your upper body’s weight exerts no torque about the hips.  The only force needed is a vertical force at the hips equal to the weight supported.  No muscle action is required, since the bones are rigid and transmit the force from the floor.  Thi is a position of unstable equilibrium, but only small forces are needed to bring the upper body back to vertical if it is slightly displaced.</p>
+<p>Bad posture occurs when the upper body’s <span class="math notranslate nohighlight">\(\rm CG\)</span> lies in front of the pivot in the hips (see Fig. <a class="reference internal" href="#fig-posture-and-back-muscles"><span class="std std-numref">8.18</span></a>b).  This creates a <em>clockwise</em> torque around the hips that is counteracted by the muscles in the lower back.  These muscles must exert large forces, since they have typically small mechanical advantages.  <em>Poor posture can also cause muscle strain for people sitting at their desks using computers.</em>  Special chairs ar available tha tallow the body’s <span class="math notranslate nohighlight">\(\rm CG\)</span> to be more easily situated above the seat to reduce back pain.</p>
+<figure class="align-default" id="fig-lifting-biomechanics">
+<img alt="Biomechanics diagram of a person lifting a box. The figure shows the upper-body center of gravity, the box center of gravity, their weights, the back-muscle force, the vertebral force, the hip pivot point, relevant angles, and horizontal distances used to calculate torques." src="../_images/back_torque.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.20 </span><span class="caption-text"><strong>Forces and torques on the lower back while lifting a box.</strong> The hips are treated as the pivot point. The weights of the upper body and box act at their respective centers of gravity, while the back muscles exert the force <span class="math notranslate nohighlight">\(F_B\)</span> and the vertebrae exert the force <span class="math notranslate nohighlight">\(F_V\)</span>. The labeled distances and angles determine the corresponding lever arms and torques about the pivot. Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-6-forces-and-torques-in-muscles-and-joints">OpenStax, <em>College Physics 2e</em></a>.</span><a class="headerlink" href="#fig-lifting-biomechanics" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><em>What are the benefits of having most skeletal muscles so close to joints?</em></p>
+<p>One advantage is speed because small muscle contractions can produce large movements of limbs in a short period of time.  Other advantages are flexibility and agility made possible by the large numbers of joints and the ranges over which they function.</p>
+<p>There are some interesting complexities in real systems of muscle, bones, and joints.  For instance, the pivot point in many joints changes location as the joint is flexed, so that the perpendicular lever arms and the mechanical advantage of the system change too.  The force in the biceps muscle must exert hold up a book varies as the forearm is flexed.  Similar mechanisms operate in the legs, which explain why there is less leg strain when a bicycle seat is set a the proper height.</p>
 </section>
 <section id="in-class-exercises">
 <h2><span class="section-number">8.7. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
@@ -843,18 +909,34 @@ l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm n}.
 <h3><span class="section-number">8.7.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
 <div class="admonition-problem-1 admonition">
 <p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p><strong>(a)</strong> When opening a door, you push on it perpendicularly with a force of <span class="math notranslate nohighlight">\(55.0\ {\rm N}\)</span> at a distance of <span class="math notranslate nohighlight">\(0.850\ {\rm m}\)</span> from the hinges. What torque are you exerting relative to the hinges?</p>
+<p><strong>(b)</strong> Does it matter if you push at the same height as the hinges?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-2 admonition">
 <p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Two children of mass <span class="math notranslate nohighlight">\(20.0\ {\rm kg}\)</span> and <span class="math notranslate nohighlight">\(30.0\ {\rm kg}\)</span> sit balanced on a seesaw with the pivot point located at the center of the seesaw. If the children are separated by a distance of <span class="math notranslate nohighlight">\(3.00\ {\rm m}\)</span>, at what distance from the pivot point is the smaller child sitting in order to maintain the balance?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-3 admonition">
 <p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>Suppose you need to raise a <span class="math notranslate nohighlight">\(250\ {\rm kg}\)</span> mower a distance of <span class="math notranslate nohighlight">\(6.0\ {\rm cm}\)</span> above the ground to change a tire. If you have a <span class="math notranslate nohighlight">\(2.0\ {\rm m}\)</span> long lever, where would you place the fulcrum if your force was limited to <span class="math notranslate nohighlight">\(300\ {\rm N}\)</span>?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-4 admonition">
 <p class="admonition-title">Problem 4</p>
-</div>
-<div class="admonition-problem-5 admonition">
-<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>Two muscles in the back of the leg pull on the Achilles tendon as shown below. What total force do they exert?</p>
+</div></blockquote>
+<figure class="align-default" id="fig-achilles-tendon-forces">
+<img alt="Rear view of the lower leg showing the Achilles tendon and the two gastrocnemius muscles. Two equal muscle forces of 200 newtons act symmetrically at 20 degrees from the vertical on either side of the tendon." src="https://openstax.org/apps/image-cdn/v1/f%3Dwebp/apps/archive/20260604.144757/resources/4502dd59707b9fe82265fea09008d76f5778a465" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.21 </span><span class="caption-text"><strong>Forces from the gastrocnemius muscles on the Achilles tendon.</strong> The medial and lateral gastrocnemius muscles each exert a force of <span class="math notranslate nohighlight">\(200\ {\rm N}\)</span> on the Achilles tendon. Because the two forces are equal in magnitude and symmetrically oriented at <span class="math notranslate nohighlight">\(20^\circ\)</span> from the vertical, their horizontal components cancel and their vertical components combine to produce the total force on the tendon. Source: <a class="reference external" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/4502dd59707b9fe82265fea09008d76f5778a465">OpenStax, <em>College Physics 2e</em></a>.</span><a class="headerlink" href="#fig-achilles-tendon-forces" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 </section>
 </section>
@@ -885,24 +967,50 @@ l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm n}.
 <h3><span class="section-number">8.8.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
 <div class="admonition-problem-1 admonition">
 <p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>Mechanics sometimes put a length of pipe over the handle of a wrench when trying to remove a very tight bolt. How does this help? (It is also hazardous since it can break the bolt.)</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-2 admonition">
 <p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Certain types of dinosaurs were bipedal (walked on two legs). What is a good reason that these creatures invariably had long tails if they had long necks?</p>
+</div></blockquote>
 </div>
 </section>
 <section id="quantitative-questions">
 <h3><span class="section-number">8.8.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
 <div class="admonition-problem-3 admonition">
 <p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>Two children push on opposite sides of a door during play. Both push horizontally and perpendicular to the door. One child pushes with a force of <span class="math notranslate nohighlight">\(17.5\ {\rm N}\)</span> at a distance of <span class="math notranslate nohighlight">\(0.600\ {\rm m}\)</span> from the hinges, and the second child pushes at a distance of <span class="math notranslate nohighlight">\(0.450\ {\rm m}\)</span>. What force must the second child exert to keep the door from moving? Assume friction is negligible.</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-4 admonition">
 <p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>A person carries a plank of wood <span class="math notranslate nohighlight">\(2.00\ {\rm m}\)</span> long with one hand pushing down on it at one end with a force <span class="math notranslate nohighlight">\(F_1\)</span> and the other hand holding it up at <span class="math notranslate nohighlight">\(0.500\ {\rm m}\)</span> from the end of the plank with force <span class="math notranslate nohighlight">\(F_2\)</span>. If the plank has a mass of <span class="math notranslate nohighlight">\(20.0\ {\rm kg}\)</span> and its center of gravity is at the middle of the plank, what are the magnitudes of the forces <span class="math notranslate nohighlight">\(F_1\)</span> and <span class="math notranslate nohighlight">\(F_2\)</span>?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-5 admonition">
 <p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>A typical car has an axle with <span class="math notranslate nohighlight">\(1.10\ {\rm cm}\)</span> radius driving a tire with a radius of <span class="math notranslate nohighlight">\(27.5\ {\rm cm}\)</span>. What is its mechanical advantage assuming the very simplified model in Figure <a class="reference internal" href="#fig-crank-wheel-pulley"><span class="std std-numref">8.15</span></a>b?</p>
+</div></blockquote>
 </div>
 <div class="admonition-problem-6 admonition">
 <p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(75\ {\rm kg}\)</span> man stands on his toes by exerting an upward force through the Achilles tendon, as shown in the figure below.</p>
+<p><strong>(a)</strong> What is the force in the Achilles tendon if he stands on one foot?</p>
+<p><strong>(b)</strong> Calculate the force at the pivot of the simplified lever system shown. This force is representative of forces in the ankle joint.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-standing-on-toes-achilles">
+<img alt="Simplified lever model of a foot while standing on the toes. The Achilles tendon exerts an upward force F_A at the heel, the ankle-joint force F_p acts downward at the pivot, and the ground exerts an upward normal force N at the ball of the foot. The center of gravity is marked above the ankle, and the distances from the pivot to the Achilles tendon and normal force are labeled 4.0 cm and 12 cm." src="https://openstax.org/apps/image-cdn/v1/f%3Dwebp/apps/archive/20260604.144757/resources/450ce58f3f05416be835508db4a6128637be281e" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.22 </span><span class="caption-text"><strong>Standing on the toes can be modeled as a lever system.</strong> The Achilles tendon exerts the upward force <span class="math notranslate nohighlight">\(F_A\)</span> at the heel, while the ground exerts the upward normal force <span class="math notranslate nohighlight">\(N\)</span> at the ball of the foot. The force <span class="math notranslate nohighlight">\(F_p\)</span> acts at the ankle-joint pivot, and the labeled distances determine the torques used to analyze the system. Source: <a class="reference external" href="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/450ce58f3f05416be835508db4a6128637be281e">OpenStax, <em>College Physics 2e</em></a>.</span><a class="headerlink" href="#fig-standing-on-toes-achilles" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 </section>
 </section>
