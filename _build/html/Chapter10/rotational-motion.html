@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter10/rotational-motion';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,63 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-acceleration">9.1. Angular Acceleration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-acceleration-of-a-bike-wheel">9.1.1. Example Problem: Angular Acceleration of a Bike Wheel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-acceleration-of-a-motorcycle-wheel">9.1.2. Example Problem: Angular Acceleration of a Motorcycle Wheel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-rotational-motion">9.2. Kinematics of Rotational Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-acceleration-of-a-fishing-reel">9.2.1. Example Problem: Acceleration of a Fishing Reel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-stopping-a-fishing-reel">9.2.2. Example Problem: Stopping a Fishing Reel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-slow-acceleration-of-a-freight-train">9.2.3. Example Problem: Slow Acceleration of a Freight Train</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-distance-traveled-on-a-microwave-plate">9.2.4. Example Problem: Distance Traveled on a Microwave Plate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics-of-rotational-motion-rotational-inertia">9.3. Dynamics of Rotational Motion: Rotational Inertia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-inertia-and-moment-of-inertia">9.3.1. Rotational Inertia and Moment of Inertia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-mass-distribution-on-a-merry-go-round">9.3.2. Example Problem: Mass Distribution on a Merry-Go-Round</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-kinetic-energy">9.4. Rotational Kinetic Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-work-and-energy-of-a-grindstone">9.4.1. Example Problem: Work and Energy of a Grindstone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-energy-in-helicopter-blades">9.4.2. Example Problem: Energy in Helicopter Blades</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-don-t-all-objects-roll-downhill-at-the-same-rate">9.4.3. Why Don’t all Objects Roll Downhill at the Same Rate?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cylinder-rolling-down-an-incline">9.4.4. Example Problem: Cylinder Rolling Down an Incline</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-and-its-conservation">9.5. Angular Momentum and its Conservation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-momentum-of-earth">9.5.1. Example Problem: Angular Momentum of Earth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-momentum-of-a-lazy-susan">9.5.2. Example Problem: Angular Momentum of a Lazy Susan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-torque-in-a-kick">9.5.3. Example Problem: Torque in a Kick</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-angular-momentum">9.5.4. Conservation of Angular Momentum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-spinning-ice-skater">9.5.5. Example Problem: Spinning Ice Skater</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-extended-bodies-in-2d">9.6. Collisions of Extended Bodies in 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-angular-momentum-in-a-collision">9.6.1. Using Angular Momentum in a Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-rotation-in-a-collision">9.6.2. Example Problem: Rotation in a Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-percussion-point">9.6.3. The Percussion Point</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gyroscopic-effects">9.7. Gyroscopic Effects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">9.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">9.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">9.8.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">9.9. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.9.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">9.9.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">9.9.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +556,1221 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rotational-motion">
 <h1><span class="section-number">9. </span>Rotational Motion<a class="headerlink" href="#rotational-motion" title="Link to this heading">#</a></h1>
-<p>Aug 23, 2026 | 5 words | 0 min read</p>
+<p>Sep 25, 2026 | 10146 words | 68 min read</p>
+<div class="tip admonition">
+<p class="admonition-title">Chapter roadmap</p>
+<p>This chapter extends the ideas of motion, force, energy, and momentum to rotating objects. The same physical principles still apply, but the distribution of mass and the choice of rotation axis now matter.</p>
+<p>As you read, focus on three questions:</p>
+<ol class="arabic simple">
+<li><p>How do angular position, angular velocity, and angular acceleration connect to their translational counterparts?</p></li>
+<li><p>How do torque and moment of inertia determine changes in rotational motion?</p></li>
+<li><p>When can energy or angular momentum simplify a rotational problem?</p></li>
+</ol>
+<p>These connections will let you analyze rolling objects, spinning systems, and collisions that produce rotation.</p>
+</div>
+<section id="angular-acceleration">
+<h2><span class="section-number">9.1. </span>Angular Acceleration<a class="headerlink" href="#angular-acceleration" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter06/circular-motion-gravitation.html">Circular Motion and Gravitation</a> focused only on uniform circular motion, where the motion is described by moving at a constant speed or constant angular velocity.  The angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> is defined as the time rate of change of <span class="math notranslate nohighlight">\(\theta\)</span> or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-026e5512-7525-4b5b-8efa-7961c72fa9b2">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-026e5512-7525-4b5b-8efa-7961c72fa9b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+\omega = \frac{\Delta \theta}{\Delta t},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle of rotation relative to a reference direction.  There is a relationship between the angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> and the linear velocity, which is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d0038197-72ca-41c9-bc87-7c6159a752f8">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-d0038197-72ca-41c9-bc87-7c6159a752f8" title="Permalink to this equation">#</a></span>\[\begin{align}
+v &amp;=r\omega, \\
+\omega &amp;= \frac{v}{r},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the radius of curvature.  Recall that the counterclockwise direction is considered as the positive direction and clockwise is the negative direction.</p>
+<p>Angular velocity is not constant when an ice skater pulls in her arms or when a child starts up a merry-go-round from rest.  In these cases there is an <strong>angular acceleration</strong>, where <span class="math notranslate nohighlight">\(\omega\)</span> changes over a time interval <span class="math notranslate nohighlight">\(\Delta t\)</span>.  The faster the change occurs, the greater the angular acceleration.</p>
+<p>Angular acceleration is the rate of change of angular velocity, which is written as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d6d7254a-b4df-4e2f-8cc1-2f35e3f7f6fd">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-d6d7254a-b4df-4e2f-8cc1-2f35e3f7f6fd" title="Permalink to this equation">#</a></span>\[\begin{align}
+\alpha = \frac{\Delta \omega}{\Delta t},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta \omega\)</span> is the <em>change in angular velocity</em>.  The units of angular acceleration are in <span class="math notranslate nohighlight">\(\rm rad/s/s\)</span> or <span class="math notranslate nohighlight">\(\rm rad/s^2\)</span>.  Similar to linear acceleration, the sign of angular acceleration comes from the sign of <span class="math notranslate nohighlight">\(\Delta \omega\)</span>.  If <span class="math notranslate nohighlight">\(\omega\)</span> increases (<span class="math notranslate nohighlight">\(\Delta \omega &gt; 0\)</span>), then <span class="math notranslate nohighlight">\(\alpha\)</span> is positive.</p>
+<section id="example-problem-angular-acceleration-of-a-bike-wheel">
+<h3><span class="section-number">9.1.1. </span>Example Problem: Angular Acceleration of a Bike Wheel<a class="headerlink" href="#example-problem-angular-acceleration-of-a-bike-wheel" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Angular Acceleration and Deceleration of a Bike Wheel</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A teenager spins a bicycle’s rear wheel from rest to <span class="math notranslate nohighlight">\(2.5\times10^2\ {\rm rpm}\)</span> in <span class="math notranslate nohighlight">\(5.0\ {\rm s}\)</span>. <strong>(a)</strong> Calculate its angular acceleration in <span class="math notranslate nohighlight">\({\rm rad/s^2}\)</span>. <strong>(b)</strong> She then applies the brakes, producing an angular acceleration of <span class="math notranslate nohighlight">\(-87\ {\rm rad/s^2}\)</span>. How long does the wheel take to stop?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Treat the wheel as a rigid body rotating about its axle, and take its initial direction of rotation as positive. The change in angular velocity over the spin-up time gives its average angular acceleration. For braking, use the given constant negative acceleration and set the final angular velocity to zero.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The measured inputs limit the answers to two significant figures. We display intermediate values with one guard digit (three significant figures) and retain full calculator precision for subsequent calculations. Final answers use two significant figures; exact conversion factors do not limit precision.</p>
+<p class="sd-card-text"><strong>(a)</strong> The angular velocity must be expressed in radians per second before we calculate acceleration in the requested units. One revolution is <span class="math notranslate nohighlight">\(2\pi\)</span> radians, and one minute is 60 seconds.</p>
+<div class="math notranslate nohighlight">
+\[\omega=(2.5\times10^2\ {\rm rev/min})\left(\frac{2\pi\ {\rm rad}}{1\ {\rm rev}}\right)\left(\frac{1\ {\rm min}}{60\ {\rm s}}\right)\approx26.2\ {\rm rad/s}.\]</div>
+<p class="sd-card-text">The wheel starts from rest, so its change in angular velocity equals this final value. Dividing that change by the elapsed time gives the average angular acceleration.</p>
+<div class="math notranslate nohighlight">
+\[\alpha_{\rm av}=\frac{\omega-\omega_0}{\Delta t}=\frac{26.2\ {\rm rad/s}-0}{5.0\ {\rm s}}=5.2\ {\rm rad/s^2}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The spin-up final velocity becomes the initial velocity for braking. Solving the constant-acceleration relation for time gives a positive stopping time because both the velocity change and acceleration are negative.</p>
+<div class="math notranslate nohighlight">
+\[t=\frac{\omega-\omega_0}{\alpha}=\frac{0-26.2\ {\rm rad/s}}{-87\ {\rm rad/s^2}}=0.30\ {\rm s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The average spin-up acceleration is <span class="math notranslate nohighlight">\(5.2\ {\rm rad/s^2}\)</span>, and the wheel stops in <span class="math notranslate nohighlight">\(0.30\ {\rm s}\)</span>. The braking acceleration has a much larger magnitude than the spin-up acceleration, so removing the same angular velocity takes much less time. Its negative sign indicates slowing, not a negative elapsed time.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-1-angular-acceleration">OpenStax, College Physics 2e, Example 10.1</a>.</em></p>
+<hr class="docutils" />
+<p>It would be useful to know how linear and angular acceleration are related.  In circular motion, linear acceleration is <em>tangent</em> to the circle at the point of interest.  Thus linear acceleration is also called the <strong>tangential acceleration</strong> <span class="math notranslate nohighlight">\(a_{\rm t}\)</span>.  Linear or tangential acceleration refers to changes in the <em>magnitude of velocity</em> but not its direction.  An object undergoing circular motion experiences centripetal acceleration <span class="math notranslate nohighlight">\(a_c\)</span>, which is due to the changing <em>direction of the velocity</em> but not its magnitude.</p>
+<ul class="simple">
+<li><p>Tangential acceleration <span class="math notranslate nohighlight">\(a_{\rm t}\)</span> and centripetal acceleration <span class="math notranslate nohighlight">\(a_c\)</span> are perpendicular and independent of one another.</p></li>
+</ul>
+<p>Because linear acceleration is proportional to a change in the magnitude of the velocity, it is defined as</p>
+<div class="math notranslate nohighlight">
+\[ a_{\rm t} = \frac{\Delta v}{\Delta t}, \]</div>
+<p>where we can substitute <span class="math notranslate nohighlight">\(v=r\omega\)</span> for circular motion to get</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+a_{\rm t} &amp;= \frac{\Delta (r\omega)}{\Delta t}, \\
+&amp;= r\frac{\Delta \omega}{\Delta t}.
+\end{align*}\]</div>
+<p>By definition, we have <span class="math notranslate nohighlight">\(\alpha = \frac{\Delta \omega}{\Delta t}\)</span>.  Then we find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e94dda80-c29c-4fe5-805c-f6953c385c5e">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-e94dda80-c29c-4fe5-805c-f6953c385c5e" title="Permalink to this equation">#</a></span>\[\begin{align}
+a_{\rm t} &amp;= r\alpha, \\
+\alpha &amp;= \frac{a_{\rm t}}{r}.
+\end{align}\]</div>
+<p>This shows that linear and angular acceleration are directly proportional.</p>
+<ul class="simple">
+<li><p>The greater the angular acceleration, the larger the linear (tangential) acceleration.</p></li>
+</ul>
+<p>For example, the greater the angular acceleration of a car’s drive wheels, the greater the acceleration of the car.  The radius also matters, where a small wheel has a smaller linear acceleration for a given angular acceleration <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+</section>
+<section id="example-problem-angular-acceleration-of-a-motorcycle-wheel">
+<h3><span class="section-number">9.1.2. </span>Example Problem: Angular Acceleration of a Motorcycle Wheel<a class="headerlink" href="#example-problem-angular-acceleration-of-a-motorcycle-wheel" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Angular Acceleration of a Motorcycle Wheel</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A motorcycle accelerates from rest to <span class="math notranslate nohighlight">\(30\ {\rm m/s}\)</span> (measured to the nearest <span class="math notranslate nohighlight">\(1\ {\rm m/s}\)</span>) in <span class="math notranslate nohighlight">\(4.2\ {\rm s}\)</span>. What is the angular acceleration of its <span class="math notranslate nohighlight">\(0.32\ {\rm m}\)</span>-radius wheels if they roll without slipping?</p>
+</div></blockquote>
+<figure class="align-default" id="fig-motorcycle-rotational-acceleration">
+<img alt="A motorcycle accelerating to the right. The motorcycle has tangential acceleration a_t, while both wheels have angular acceleration alpha. A radius r is shown from the center of the front wheel to its rim." class="custom-wide-figure" src="../_images/motorcycle-rotational-acceleration.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text"><strong>Translational and rotational acceleration of a motorcycle.</strong> As the motorcycle accelerates forward, the centers of the wheels have tangential acceleration <span class="math notranslate nohighlight">\(a_t\)</span>, while the wheels have angular acceleration <span class="math notranslate nohighlight">\(\alpha\)</span>. For a wheel rolling without slipping, these quantities are related by <span class="math notranslate nohighlight">\(a_t=r\alpha\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> is the wheel radius. <em>Adapted from OpenStax, College Physics 2e.</em></span><a class="headerlink" href="#fig-motorcycle-rotational-acceleration" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Model each wheel as a rigid body rolling without slipping. This condition links the motorcycle’s forward speed to the wheel’s angular speed through its radius. First find the motorcycle’s average linear acceleration, then use the rolling constraint to find the angular acceleration magnitude. Choose the positive rotational direction to match forward rolling.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The motorcycle starts from rest, so its average forward acceleration follows from its speed increase over the given time.</p>
+<div class="math notranslate nohighlight">
+\[a_{\rm av}=\frac{v-v_0}{\Delta t}=\frac{30\ {\rm m/s}-0}{4.2\ {\rm s}}\approx7.14\ {\rm m/s^2}.\]</div>
+<p class="sd-card-text">For a fixed wheel radius, the no-slip relation <span class="math notranslate nohighlight">\(v=r\omega\)</span> gives <span class="math notranslate nohighlight">\(a=r\alpha\)</span>. The wheel’s angular acceleration is therefore the motorcycle’s linear acceleration divided by the radius.</p>
+<div class="math notranslate nohighlight">
+\[\alpha_{\rm av}=\frac{a_{\rm av}}{r}=\frac{7.14\ {\rm m/s^2}}{0.32\ {\rm m}}=22\ {\rm rad/s^2}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Each wheel has an average angular acceleration of <span class="math notranslate nohighlight">\(22\ {\rm rad/s^2}\)</span> in the direction of forward rolling. This result makes sense because a small wheel must change its rotation rate substantially to produce the motorcycle’s speed increase. A larger wheel would need less angular acceleration for the same forward acceleration.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-1-angular-acceleration">OpenStax, College Physics 2e, Example 10.2</a>.</em></p>
+<p>In kinematics, we identified physical variables that played a certain role (e.g., <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, and <span class="math notranslate nohighlight">\(a\)</span>).  Here we have identified the analogous quantities for rotational motion.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id2">
+<caption><span class="caption-number">Table 9.1 </span><span class="caption-text">Rotational and Translational Quantities</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Rotational</strong></p></th>
+<th class="head"><p><strong>Translational</strong></p></th>
+<th class="head"><p><strong>Relationship</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\theta = \dfrac{x}{r}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\omega = \dfrac{v}{r}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\alpha = \dfrac{a_{\rm t}}{r}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Angular acceleration is a vector with both magnitude and direction. How do we denote its magnitude and direction? Illustrate with an example.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The magnitude is denoted by <span class="math notranslate nohighlight">\(\alpha\)</span> and is commonly measured in <span class="math notranslate nohighlight">\({\rm rad/s^2}\)</span>. For rotation about a fixed axis, a plus or minus sign records the direction relative to the chosen positive rotation; in three dimensions, the right-hand rule gives the direction of <span class="math notranslate nohighlight">\(\vec{\alpha}\)</span> along the rotation axis. For example, if counterclockwise rotation is positive, a wheel that spins faster counterclockwise has positive angular acceleration.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-1-angular-acceleration">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+</section>
+<section id="kinematics-of-rotational-motion">
+<h2><span class="section-number">9.2. </span>Kinematics of Rotational Motion<a class="headerlink" href="#kinematics-of-rotational-motion" title="Link to this heading">#</a></h2>
+<p>Kinematics is the description of motion, where <strong>kinematics of rotational motion</strong> is more specific.  It describes the relationships between the rotation angle, angular velocity, angular acceleration, and time.  Similar to how we determined equations relating the physical variables in 1d (see <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter02/kinematics.html">Kinematics</a>), we can find an equation relating <span class="math notranslate nohighlight">\(\omega\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span>, and time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>To simplify, we use <span class="math notranslate nohighlight">\(a=a_t\)</span> where the symbol <span class="math notranslate nohighlight">\(a\)</span> describes the tangential or linear acceleration.  As in linear kinematics, we assume <span class="math notranslate nohighlight">\(a\)</span> is constant, which means that angular acceleration <span class="math notranslate nohighlight">\(\alpha\)</span> is also a constant.  We now know that <span class="math notranslate nohighlight">\(v=r\omega\)</span> and <span class="math notranslate nohighlight">\(a = r\alpha\)</span> so we can substitute into our linear equation for velocity, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d67d4b4e-b7b0-4847-9cb2-addeed5263a9">
+<span class="eqno">(9.5)<a class="headerlink" href="#equation-d67d4b4e-b7b0-4847-9cb2-addeed5263a9" title="Permalink to this equation">#</a></span>\[\begin{align}
+v &amp;= v_0 + at, \nonumber \\
+r\omega &amp;= r\omega_0 + r\alpha t.
+\end{align}\]</div>
+<p>The <span class="math notranslate nohighlight">\(r\)</span> cancels as a common factor in the above equation, which then yields</p>
+<div class="amsmath math notranslate nohighlight" id="equation-07d692f7-6ccf-433c-ace1-435221d74769">
+<span class="eqno">(9.6)<a class="headerlink" href="#equation-07d692f7-6ccf-433c-ace1-435221d74769" title="Permalink to this equation">#</a></span>\[\begin{align}
+\omega &amp;= \omega_0 + \alpha t,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega_0\)</span> is the initial angular velocity.  This equation describes the relationship (without reference to forces or masses) that may affect rotation.  It is analogous in form to our linear equation for velocity.</p>
+<p>Starting with the kinematic equations, we can derive the rotational kinematic equations.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-number">Table 9.2 </span><span class="caption-text">Rotational Kinematic Equations</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 40.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Rotational</strong></p></th>
+<th class="head"><p><strong>Translational</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta=\overline{\omega}t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x=\overline{v}t\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\omega=\omega_0+\alpha t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(v=v_0+at\)</span></p></td>
+<td><p>(constant <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(a\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta=\omega_0t+\dfrac{1}{2}\alpha t^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x=v_0t+\dfrac{1}{2}at^2\)</span></p></td>
+<td><p>(constant <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(a\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\omega^2=\omega_0^2+2\alpha\theta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(v^2=v_0^2+2ax\)</span></p></td>
+<td><p>(constant <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(a\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\bar{\omega} = \frac{\omega+\omega_0}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\bar{v} = \frac{v + v_0}{2}\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Problem-Solving Strategy for Rotational Kinematics</p>
+<p>When solving a rotational kinematics problem, use the same general approach that you used for translational motion.</p>
+<ol class="arabic simple">
+<li><p><strong>Identify the type of motion.</strong>  Decide whether the object is rotating and whether the problem can be solved using rotational kinematics. If forces or torques are needed to describe the motion, you will need methods from later sections.</p></li>
+<li><p><strong>Identify what you need to find.</strong>  Determine the unknown quantity, such as angular displacement <span class="math notranslate nohighlight">\(\theta\)</span>, angular velocity <span class="math notranslate nohighlight">\(\omega\)</span>, angular acceleration <span class="math notranslate nohighlight">\(\alpha\)</span>, or time <span class="math notranslate nohighlight">\(t\)</span>. A quick sketch can help you understand the motion.</p></li>
+<li><p><strong>Write down what you know.</strong>  Identify the quantities given in the problem and any information you can infer. For example, “starts from rest” means <span class="math notranslate nohighlight">\(\omega_0=0\)</span>.</p></li>
+<li><p><strong>Choose the appropriate equation.</strong>  Select a rotational kinematics equation that connects the known quantities to the unknown. It can help to compare the problem with the corresponding translational kinematics equation.</p></li>
+<li><p><strong>Solve and substitute the values.</strong>  Rearrange the equation for the unknown when needed, then substitute the known values with their units. Use <em>radians</em> for angular quantities when performing calculations.</p></li>
+<li><p><strong>Check the result.</strong>  Make sure the units are correct and ask whether the magnitude and direction of your answer make physical sense.</p></li>
+</ol>
+</div>
+<section id="example-problem-acceleration-of-a-fishing-reel">
+<h3><span class="section-number">9.2.1. </span>Example Problem: Acceleration of a Fishing Reel<a class="headerlink" href="#example-problem-acceleration-of-a-fishing-reel" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Acceleration of a Fishing Reel</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A fishing reel starts from rest and unwinds line at a radius of <span class="math notranslate nohighlight">\(4.5\ {\rm cm}\)</span>. Its angular acceleration is <span class="math notranslate nohighlight">\(1.1\times10^2\ {\rm rad/s^2}\)</span> for <span class="math notranslate nohighlight">\(2.0\ {\rm s}\)</span>. Find <strong>(a)</strong> its final angular velocity, <strong>(b)</strong> the line’s final speed, <strong>(c)</strong> the number of revolutions, and <strong>(d)</strong> the length of line released.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-3-fishing-reel">
+<img alt="Fishing reel of radius 4.50 centimeters with counterclockwise angular quantities theta, omega, and alpha and a line leaving the reel with linear quantities x, v, and a." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/b559450ca4017eb45e220200a95e58f61993acd2" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.2 </span><span class="caption-text">The reel’s rotation produces the linear motion of the fishing line at radius <span class="math notranslate nohighlight">\(r\)</span>. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Figure 10.7</a>.</em></span><a class="headerlink" href="#os-example-10-3-fishing-reel" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Treat the reel as rotating with constant angular acceleration, and take the unwinding direction as positive. Assume the line does not slip and the unwinding radius remains constant. Rotational kinematics will give the reel’s angular velocity and displacement; the radius then converts these quantities into the line’s speed and released length.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The reel starts from rest, and the acceleration and elapsed time are known. The constant-acceleration velocity relation gives its final angular velocity.</p>
+<div class="math notranslate nohighlight">
+\[\omega=\omega_0+\alpha t=0+(1.1\times10^2\ {\rm rad/s^2})(2.0\ {\rm s})=2.2\times10^2\ {\rm rad/s}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The line moves at the tangential speed of the reel’s rim because it does not slip. The radius is <span class="math notranslate nohighlight">\(0.045\ {\rm m}\)</span> in SI units.</p>
+<div class="math notranslate nohighlight">
+\[v=r\omega=(0.045\ {\rm m})(2.2\times10^2\ {\rm rad/s})=9.9\ {\rm m/s}.\]</div>
+<p class="sd-card-text"><strong>(c)</strong> The angular displacement depends on the average angular velocity during the acceleration, not just the final velocity. The displacement relation accounts for the increase from rest.</p>
+<div class="math notranslate nohighlight">
+\[\Delta\theta=\omega_0t+\frac12\alpha t^2=\frac12(1.1\times10^2\ {\rm rad/s^2})(2.0\ {\rm s})^2=2.2\times10^2\ {\rm rad}.\]</div>
+<p class="sd-card-text">Dividing by the angle in one revolution converts the angular displacement into the number of turns.</p>
+<div class="math notranslate nohighlight">
+\[N=\frac{\Delta\theta}{2\pi\ {\rm rad/rev}}=\frac{2.2\times10^2\ {\rm rad}}{2\pi\ {\rm rad/rev}}=35\ {\rm rev}.\]</div>
+<p class="sd-card-text"><strong>(d)</strong> Each turn releases one circumference of line. The arc-length relation expresses the same connection for an angle measured in radians.</p>
+<div class="math notranslate nohighlight">
+\[x=r\Delta\theta=(0.045\ {\rm m})(2.2\times10^2\ {\rm rad})=9.9\ {\rm m}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The reel reaches <span class="math notranslate nohighlight">\(2.2\times10^2\ {\rm rad/s}\)</span> and the line reaches <span class="math notranslate nohighlight">\(9.9\ {\rm m/s}\)</span>. During <span class="math notranslate nohighlight">\(35\)</span> revolutions, it releases <span class="math notranslate nohighlight">\(9.9\ {\rm m}\)</span> of line. Because the line accelerates uniformly from rest, its average speed is half its final speed; over two seconds, that agrees with the released length.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Example 10.3</a>.</em></p>
+</section>
+<section id="example-problem-stopping-a-fishing-reel">
+<h3><span class="section-number">9.2.2. </span>Example Problem: Stopping a Fishing Reel<a class="headerlink" href="#example-problem-stopping-a-fishing-reel" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Stopping a Fishing Reel</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>The fishing reel from the preceding example rotates initially at <span class="math notranslate nohighlight">\(2.2\times10^2\ {\rm rad/s}\)</span>. A brake produces a constant angular acceleration of <span class="math notranslate nohighlight">\(-3.0\times10^2\ {\rm rad/s^2}\)</span>. How long does the reel take to stop?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Take the reel’s initial rotation as positive. The brake supplies a constant acceleration opposite that rotation, so angular velocity decreases linearly with time. Use the angular-velocity relation with a final velocity of zero to find when the reel first stops.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The constant-acceleration relation connects the known initial velocity and braking acceleration to the unknown stopping time.</p>
+<div class="math notranslate nohighlight">
+\[\omega=\omega_0+\alpha t.\]</div>
+<p class="sd-card-text">Solving for time and setting the final angular velocity to zero gives the stopping time. The negative velocity change and negative acceleration cancel.</p>
+<div class="math notranslate nohighlight">
+\[t=\frac{\omega-\omega_0}{\alpha}=\frac{0-2.2\times10^2\ {\rm rad/s}}{-3.0\times10^2\ {\rm rad/s^2}}=0.73\ {\rm s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The reel stops after <span class="math notranslate nohighlight">\(0.73\ {\rm s}\)</span>. This is reasonable because the brake removes <span class="math notranslate nohighlight">\(3.0\times10^2\ {\rm rad/s}\)</span> of angular velocity each second, while the reel initially has only <span class="math notranslate nohighlight">\(2.2\times10^2\ {\rm rad/s}\)</span>. It must therefore stop in less than one second; the result does not describe any later reverse rotation.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Example 10.4</a>.</em></p>
+</section>
+<section id="example-problem-slow-acceleration-of-a-freight-train">
+<h3><span class="section-number">9.2.3. </span>Example Problem: Slow Acceleration of a Freight Train<a class="headerlink" href="#example-problem-slow-acceleration-of-a-freight-train" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Slow Acceleration of a Freight Train</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A freight train starts from rest. Its <span class="math notranslate nohighlight">\(0.35\ {\rm m}\)</span>-radius wheels have an angular acceleration of <span class="math notranslate nohighlight">\(0.25\ {\rm rad/s^2}\)</span> and roll without slipping. After the wheels complete exactly <span class="math notranslate nohighlight">\(200\)</span> revolutions, find <strong>(a)</strong> the distance traveled and <strong>(b)</strong> the final angular velocity of the wheels and linear velocity of the train.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Assume constant angular acceleration and rolling without slipping. Choose forward travel and the corresponding wheel rotation as positive. The wheel’s angular displacement determines the train’s distance through the rolling constraint. Since time is not given, use the kinematic relation connecting angular velocity directly to angular displacement.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The rolling and kinematic relations require the angle in radians. Converting the given revolutions provides that angle.</p>
+<div class="math notranslate nohighlight">
+\[\Delta\theta=(200\ {\rm rev})\left(\frac{2\pi\ {\rm rad}}{1\ {\rm rev}}\right)=400\pi\ {\rm rad}.\]</div>
+<p class="sd-card-text">Without slipping, each revolution advances the train by one wheel circumference. The equivalent arc-length relation gives the total distance.</p>
+<div class="math notranslate nohighlight">
+\[x=r\Delta\theta=(0.35\ {\rm m})(400\pi\ {\rm rad})=4.4\times10^2\ {\rm m}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The train starts from rest, so the initial angular velocity is zero. The time-independent kinematic relation determines the final angular velocity, with the positive root matching our chosen direction.</p>
+<div class="math notranslate nohighlight">
+\[\omega=\sqrt{\omega_0^2+2\alpha\Delta\theta}=\sqrt{2(0.25\ {\rm rad/s^2})(400\pi\ {\rm rad})}=25\ {\rm rad/s}.\]</div>
+<p class="sd-card-text">The no-slip constraint converts angular velocity into the train’s forward velocity. The displayed angular velocity includes one guard digit for this step.</p>
+<div class="math notranslate nohighlight">
+\[v=r\omega=(0.35\ {\rm m})(25.1\ {\rm rad/s})=8.8\ {\rm m/s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The train travels <span class="math notranslate nohighlight">\(4.4\times10^2\ {\rm m}\)</span> and reaches <span class="math notranslate nohighlight">\(8.8\ {\rm m/s}\)</span>, while its wheels reach <span class="math notranslate nohighlight">\(25\ {\rm rad/s}\)</span>. The modest final speed after hundreds of meters is consistent with the small angular acceleration. The distance also corresponds to 200 wheel circumferences, as rolling without slipping requires.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Example 10.5</a>.</em></p>
+</section>
+<section id="example-problem-distance-traveled-on-a-microwave-plate">
+<h3><span class="section-number">9.2.4. </span>Example Problem: Distance Traveled on a Microwave Plate<a class="headerlink" href="#example-problem-distance-traveled-on-a-microwave-plate" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Distance Traveled by a Fly on a Microwave Plate</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A fly remains on the outer edge of a microwave plate of radius <span class="math notranslate nohighlight">\(0.15\ {\rm m}\)</span>. The plate rotates at <span class="math notranslate nohighlight">\(6.0\ {\rm rpm}\)</span> for <span class="math notranslate nohighlight">\(2.0\ {\rm min}\)</span>. Ignoring start-up and slow-down, what total distance does the fly travel?</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-6-microwave-plate">
+<img alt="Top view of a microwave plate rotating counterclockwise with a fly near its outer edge." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/f7fbafdbc3129dfb48c1401db35995a7f46b40df" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.3 </span><span class="caption-text">The fly follows a circular path at the outer radius of the rotating plate. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Figure 10.8</a>.</em></span><a class="headerlink" href="#os-example-10-6-microwave-plate" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Treat the fly as remaining at a fixed radius on a plate rotating at constant speed. Find how many revolutions occur during the heating time, then multiply by the distance around one circular path. The requested quantity is total distance traveled, not displacement from the starting point.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The rotation rate and time are both given in minutes, so their units are already compatible. Their product gives the number of completed revolutions.</p>
+<div class="math notranslate nohighlight">
+\[N=(6.0\ {\rm rev/min})(2.0\ {\rm min})=12\ {\rm rev}.\]</div>
+<p class="sd-card-text">Each revolution carries the fly through a distance equal to the circumference of its circular path. Multiplying by the number of turns gives the total distance.</p>
+<div class="math notranslate nohighlight">
+\[s=N(2\pi r)=(12)(2\pi)(0.15\ {\rm m})=11\ {\rm m}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The fly travels about <span class="math notranslate nohighlight">\(11\ {\rm m}\)</span> despite remaining inside the microwave. This is reasonable because it repeats a path almost a meter long twelve times. Returning to its starting point after complete revolutions can give zero displacement without making the distance traveled zero.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Example 10.6</a>.</em></p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Rotational kinematics has many useful relationships, often written as equations. Are these relationships laws of physics, or are they descriptive?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Rotational kinematics is descriptive. Its equations relate angular position, angular velocity, angular acceleration, and time, but they do not explain what causes the motion. Dynamics supplies the causal laws by connecting torque and moment of inertia to angular acceleration.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-2-kinematics-of-rotational-motion">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+</section>
+<section id="dynamics-of-rotational-motion-rotational-inertia">
+<h2><span class="section-number">9.3. </span>Dynamics of Rotational Motion: Rotational Inertia<a class="headerlink" href="#dynamics-of-rotational-motion-rotational-inertia" title="Link to this heading">#</a></h2>
+<p>From experience, you know that a force is needed to change angular velocity (i.e., change the spin of an object).  For example, a door opens slowly if we push too close to its hinges or if the door is more massive.</p>
+<p>In the first case, a force applied too close to the pivot produces a small angular acceleration.  In the other case it seems like the mass is related to its inertia and is correlated to how it should accelerate.  The angular acceleration is inversely proportional to its mass.  These relationships appear similar to those among force, mass, and acceleration embodied in <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter04/dynamics.html#newton-s-second-law-of-motion">Newton’s second law of motion</a>.  In fact, they are the precise analogs to both force and mass.</p>
+<p>Consider what happens if we exert a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> on a point mass <span class="math notranslate nohighlight">\(m\)</span> that is located by <span class="math notranslate nohighlight">\(\vec{r}\)</span> from a pivot point.  Because the force is perpendicular to <span class="math notranslate nohighlight">\(\vec{r}\)</span>, an acceleration of <span class="math notranslate nohighlight">\(\vec{a} = \vec{F}/m\)</span> is found in the direction of <span class="math notranslate nohighlight">\(\vec{F}\)</span>.</p>
+<p>We can use the alternative scalar form, <span class="math notranslate nohighlight">\(F = ma\)</span> and relate it to expressions for rotational quantities.  Recall that <span class="math notranslate nohighlight">\(a = r\alpha\)</span>, which we can substitute to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c7ba6a62-88fe-408c-87c7-203d1a2a9e58">
+<span class="eqno">(9.7)<a class="headerlink" href="#equation-c7ba6a62-88fe-408c-87c7-203d1a2a9e58" title="Permalink to this equation">#</a></span>\[\begin{align}
+F = ma = mr\alpha.
+\end{align}\]</div>
+<p>Recall that <em>torque</em> is the turning effectiveness of a force.  In this case, torque is <span class="math notranslate nohighlight">\(\tau = Fr_\perp\)</span>, where the force <span class="math notranslate nohighlight">\(F\)</span> is already perpendicular to <span class="math notranslate nohighlight">\(r\)</span> so we can drop the <span class="math notranslate nohighlight">\(\perp\)</span> subscript.  To turn the above equation into a torque, we multiply both sides by <span class="math notranslate nohighlight">\(r\)</span> to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-063051ad-f525-470e-9307-4bc0b6fd4605">
+<span class="eqno">(9.8)<a class="headerlink" href="#equation-063051ad-f525-470e-9307-4bc0b6fd4605" title="Permalink to this equation">#</a></span>\[\begin{align}
+rF &amp;= (mr\alpha)r, \\
+\tau &amp;= mr^2 \alpha.
+\end{align}\]</div>
+<p>This is the rotational analog of Newton’s second law (<span class="math notranslate nohighlight">\(F=ma\)</span>).  The torque plays the role of force, where the angular acceleration <span class="math notranslate nohighlight">\(\alpha\)</span> plays the role of <span class="math notranslate nohighlight">\(a\)</span>, and the remainder <span class="math notranslate nohighlight">\(mr^2\)</span> is analogous to a non-rotating mass (or to inertia).  As a result, we call the quantity <span class="math notranslate nohighlight">\(mr^2\)</span> <strong>rotational inertia</strong> or the <strong>moment of inertia</strong> of a point mass <span class="math notranslate nohighlight">\(m\)</span> a distance <span class="math notranslate nohighlight">\(r\)</span> from the center of rotation.</p>
+<figure class="align-default" id="fig-puck-tangential-force">
+<img alt="A puck of mass m on a horizontal table is connected to a central pivot by a cord of length r. The applied force F acts tangentially at the puck, perpendicular to the radius." class="custom-wide-figure" src="../_images/puck-tangential-force.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.4 </span><span class="caption-text"><strong>Tangential force and angular acceleration.</strong> A puck of mass <span class="math notranslate nohighlight">\(m\)</span> moves along a circular path of radius <span class="math notranslate nohighlight">\(r\)</span> on a frictionless table. The cord supplies the inward centripetal force, while the applied tangential force <span class="math notranslate nohighlight">\(F\)</span> changes the puck’s speed. Because <span class="math notranslate nohighlight">\(F\)</span> is perpendicular to the radius, its torque about the pivot has magnitude <span class="math notranslate nohighlight">\(\tau=rF\)</span> and produces an angular acceleration according to <span class="math notranslate nohighlight">\(\tau=I\alpha\)</span>, where <span class="math notranslate nohighlight">\(I=mr^2\)</span> for a point mass. Adapted from: OpenStax, <em>College Physics 2e</em>, Figure 10.10, <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-3-dynamics-of-rotational-motion-rotational-inertia">Section 10.3</a>.</span><a class="headerlink" href="#fig-puck-tangential-force" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="rotational-inertia-and-moment-of-inertia">
+<h3><span class="section-number">9.3.1. </span>Rotational Inertia and Moment of Inertia<a class="headerlink" href="#rotational-inertia-and-moment-of-inertia" title="Link to this heading">#</a></h3>
+<p>To expand our concept of rotational inertia, we define the <strong>moment of inertia</strong> <span class="math notranslate nohighlight">\(I\)</span> of an object to be the sum of <span class="math notranslate nohighlight">\(mr^2\)</span> for all the point masses of which it is composed.  In mathematical form, this is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-eefbe28a-0a60-411a-a54c-81397f8e78c6">
+<span class="eqno">(9.9)<a class="headerlink" href="#equation-eefbe28a-0a60-411a-a54c-81397f8e78c6" title="Permalink to this equation">#</a></span>\[\begin{align}
+I = {\displaystyle \sum_j m_jr_j^2}.
+\end{align}\]</div>
+<p>The moment of inertia <span class="math notranslate nohighlight">\(I\)</span> is analogous to the mass <span class="math notranslate nohighlight">\(m\)</span> in translational motion.  It also depends on the chosen axis of rotation through the distance <span class="math notranslate nohighlight">\(r_j\)</span>.  We limit this discussion to calculating the moment of inertia for a simple example that is a hoop, which has all its mass at the same distance from the rotational axis (i.e., cylindrical symmetry).</p>
+<p>A hoop’s moment of inertia around its axis is therefore <span class="math notranslate nohighlight">\(MR^2\)</span>, where <span class="math notranslate nohighlight">\(M\)</span> represents the total mass and <span class="math notranslate nohighlight">\(R\)</span> is the radius of the hoop.  Note that <span class="math notranslate nohighlight">\(I\)</span> has units of mass multiplied by distance squared (<span class="math notranslate nohighlight">\(\rm kg \cdot m^2\)</span>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(R\)</span> for an entire object to distinguish them from <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(r\)</span> for point masses.</p>
+</div>
+<figure class="align-default" id="fig-common-moments-inertia">
+<img alt="Reference chart showing common rigid-body shapes, their rotation axes, dimensions, and corresponding moments of inertia. The objects include hoops, cylinders, rods, spheres, a spherical shell, and a rectangular slab." class="custom-wide-figure" src="../_images/rotational_inertia_reference_chart.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.5 </span><span class="caption-text"><strong>Moments of inertia for common rigid bodies.</strong> The moment of inertia depends on how an object’s mass is distributed relative to the chosen rotation axis. The same object can therefore have different moments of inertia when it rotates about different axes. Here <span class="math notranslate nohighlight">\(M\)</span> is the object’s mass, <span class="math notranslate nohighlight">\(R\)</span> is a radius, <span class="math notranslate nohighlight">\(\ell\)</span> is a length, and <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are side lengths. <em>Adapted from OpenStax, College Physics 2e.</em></span><a class="headerlink" href="#fig-common-moments-inertia" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The general relationship among the net torque <span class="math notranslate nohighlight">\(\tau_{\rm net}\)</span>, moment of inertia <span class="math notranslate nohighlight">\(I\)</span>, and the angular acceleration <span class="math notranslate nohighlight">\(\alpha\)</span> is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6d7ded2b-25ff-4286-a587-47481e2c4e9d">
+<span class="eqno">(9.10)<a class="headerlink" href="#equation-6d7ded2b-25ff-4286-a587-47481e2c4e9d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau_{\rm net} &amp;= I\alpha, \\
+\alpha &amp;= \frac{\tau_{\rm net}}{I},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau_{\rm net} = {\displaystyle \sum_j \tau_j}\)</span>, or the sum of the torques relative to a chosen axis of rotation.  For simplicity, we only consider torques exerted by forces in the plane of the rotation.  Such torques are either positive or negative and add like ordinary numbers.</p>
+<p>As we might expect, the larger the torque is, the larger the angular acceleration.  For example,</p>
+<ul class="simple">
+<li><p>the harder a child pushes a merry-go-round, the faster it accelerates.</p></li>
+<li><p>the more massive a merry-go-round, the slower it accelerates for the <em>same</em> torque.</p></li>
+</ul>
+<p>The basic relationship between moment of inertia and angular acceleration is that the larger the moment of inertia, the smaller the angular acceleration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The moment of inertia depends not only on the mass of an object, but also how the mass is distributed relative to the axis of rotation.</p>
+</div>
+<p>It is easier to accelerate a merry-go-round (with children) if they all stand near the center (axis of rotation) rather than if they all stand at the outer edge.  The mass is the same in both cases, but the moment of inertia is much larger when the children are at the edge.</p>
+<div class="tip admonition">
+<p class="admonition-title">Problem-Solving Strategy for Rotational Dynamics</p>
+<p>When forces cause an object to rotate, use the rotational form of Newton’s second law.</p>
+<ol class="arabic simple">
+<li><p><strong>Identify the rotating system.</strong>  Decide what object or group of objects you are analyzing and identify the point or axis about which it rotates.</p></li>
+<li><p><strong>Draw the situation.</strong>  Make a clear sketch showing the object, the rotation axis, and any important distances.</p></li>
+<li><p><strong>Draw a free-body diagram.</strong>  Show and label all external forces acting on the system. Pay attention to where each force acts relative to the rotation axis.</p></li>
+<li><p><strong>Calculate the net torque.</strong>  Determine the torque produced by each force and add the torques using a consistent sign convention for clockwise and counterclockwise rotation.</p></li>
+<li><p><strong>Apply Newton’s second law for rotation.</strong>  Use <span class="math notranslate nohighlight">\(\tau_{\rm net}=I\alpha,\)</span> where <span class="math notranslate nohighlight">\(I\)</span> is the moment of inertia about the chosen rotation axis and <span class="math notranslate nohighlight">\(\alpha\)</span> is the angular acceleration. Make sure you use the correct moment of inertia for both the object’s shape and the location of the rotation axis.</p></li>
+<li><p><strong>Check the result.</strong>  Make sure the units are correct and ask whether the direction and size of the angular acceleration make physical sense.</p></li>
+</ol>
+</div>
+</section>
+<section id="example-problem-mass-distribution-on-a-merry-go-round">
+<h3><span class="section-number">9.3.2. </span>Example Problem: Mass Distribution on a Merry-Go-Round<a class="headerlink" href="#example-problem-mass-distribution-on-a-merry-go-round" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Effect of Mass Distribution on a Merry-Go-Round</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A father exerts a tangential force of <span class="math notranslate nohighlight">\(2.5\times10^2\ {\rm N}\)</span> at the edge of a <span class="math notranslate nohighlight">\(5.0\times10^1\ {\rm kg}\)</span> uniform-disk merry-go-round of radius <span class="math notranslate nohighlight">\(1.5\ {\rm m}\)</span>. Find the angular acceleration <strong>(a)</strong> when it is empty and <strong>(b)</strong> when an <span class="math notranslate nohighlight">\(18\ {\rm kg}\)</span> child sits <span class="math notranslate nohighlight">\(1.25\ {\rm m}\)</span> from the center. Neglect friction.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-7-merry-go-round">
+<img alt="A man pushes tangentially at the rim of a merry-go-round while a child sits on the platform. The applied force F is perpendicular to the radius r and produces counterclockwise rotation." src="../_images/merry_go_round.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.6 </span><span class="caption-text"><strong>Applying torque to a merry-go-round.</strong> The man pushes tangentially at the rim, perpendicular to the radius <span class="math notranslate nohighlight">\(r\)</span>, producing a torque of magnitude <span class="math notranslate nohighlight">\(\tau=rF\)</span> about the central axis. The seated child increases the system’s moment of inertia, so the same applied torque produces a smaller angular acceleration. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-3-dynamics-of-rotational-motion-rotational-inertia">OpenStax, College Physics 2e, Figure 10.12</a>.</em></span><a class="headerlink" href="#os-example-10-7-merry-go-round" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Take moments about the merry-go-round’s central vertical axis, with positive rotation in the direction of the father’s push. Model the platform as a uniform disk and the child as a point mass at the stated radius. With friction neglected, the applied torque is the net torque in both cases; only the total moment of inertia changes.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The push is tangential, so the force is perpendicular to the radius and its full magnitude produces torque.</p>
+<div class="math notranslate nohighlight">
+\[\tau=RF=(1.5\ {\rm m})(2.5\times10^2\ {\rm N})=375\ {\rm N\cdot m}.\]</div>
+<p class="sd-card-text"><strong>(a)</strong> The empty platform’s resistance to angular acceleration is determined by the moment of inertia of a uniform disk.</p>
+<div class="math notranslate nohighlight">
+\[I_{\rm disk}=\frac12MR^2=\frac12(5.0\times10^1\ {\rm kg})(1.5\ {\rm m})^2\approx56.3\ {\rm kg\cdot m^2}.\]</div>
+<p class="sd-card-text">Newton’s rotational second law gives the acceleration from the net torque divided by that moment of inertia.</p>
+<div class="math notranslate nohighlight">
+\[\alpha=\frac{\tau}{I_{\rm disk}}=\frac{375\ {\rm N\cdot m}}{56.3\ {\rm kg\cdot m^2}}=6.7\ {\rm rad/s^2}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The child rotates with the platform, so the child’s point-mass moment of inertia must be added about the same axis.</p>
+<div class="math notranslate nohighlight">
+\[I_{\rm total}=I_{\rm disk}+mr^2\approx56.3\ {\rm kg\cdot m^2}+(18\ {\rm kg})(1.25\ {\rm m})^2\approx84.4\ {\rm kg\cdot m^2}.\]</div>
+<p class="sd-card-text">The same applied torque now accelerates the larger total moment of inertia.</p>
+<div class="math notranslate nohighlight">
+\[\alpha=\frac{\tau}{I_{\rm total}}=\frac{375\ {\rm N\cdot m}}{84.4\ {\rm kg\cdot m^2}}=4.4\ {\rm rad/s^2}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The angular acceleration decreases from <span class="math notranslate nohighlight">\(6.7\ {\rm rad/s^2}\)</span> to <span class="math notranslate nohighlight">\(4.4\ {\rm rad/s^2}\)</span> when the child sits on the platform. The child increases the moment of inertia by one-half, so the unchanged torque produces two-thirds of the original acceleration. This agrees with the expected greater resistance to changes in rotation.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-3-dynamics-of-rotational-motion-rotational-inertia">OpenStax, College Physics 2e, Example 10.7</a>.</em></p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Torque is analogous to force, and moment of inertia is analogous to mass. Are torque and moment of inertia as simple as their translational analogs?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">No. A torque depends on the force magnitude, its direction, and its point of application relative to the chosen axis. A moment of inertia depends on both the amount of mass and how that mass is distributed relative to the axis. The rotational analogies are precise, but the rotational quantities depend on additional geometric information.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-3-dynamics-of-rotational-motion-rotational-inertia">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+</section>
+<section id="rotational-kinetic-energy">
+<h2><span class="section-number">9.4. </span>Rotational Kinetic Energy<a class="headerlink" href="#rotational-kinetic-energy" title="Link to this heading">#</a></h2>
+<p>Work and energy are associated with rotational motion.  Work must be done to rotate objects (e.g., grindstones or merry-go-rounds).  Work was defined in <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter07/work-energy.html">Work and Energy</a> for translational motion, where we can build on that knowledge when considering work done in rotational motion.</p>
+<p>The simplest situation is one in which the net force is exerted perpendicular to the radius of a disk and remains perpendicular as the disk begins to rotate.  The force is parallel to the displacement, and so the net work done is the product of the force times the arclength traveled or</p>
+<div class="math notranslate nohighlight">
+\[ W_{\rm net} = F_{\rm net}\Delta s. \]</div>
+<p>To get torque and other rotational quantities into equations we multiply and divide the right-hand side of the equation by <span class="math notranslate nohighlight">\(r\)</span> to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-caa740d0-043d-4766-bf35-fd3e99615565">
+<span class="eqno">(9.11)<a class="headerlink" href="#equation-caa740d0-043d-4766-bf35-fd3e99615565" title="Permalink to this equation">#</a></span>\[\begin{align}
+W_{\rm net} &amp;= F_{\rm net}\Delta s \times \frac{r}{r}, \\
+&amp;= \left(rF_{\rm net}\right)\left(\frac{\Delta s}{r}\right).
+\end{align}\]</div>
+<p>We recognize that <span class="math notranslate nohighlight">\(\tau_{\rm net} = rF_{\rm net}\)</span> and <span class="math notranslate nohighlight">\(\Delta s/r = \theta\)</span>, so that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f17fb4c7-36da-40c7-8f40-f8d6f62a69d9">
+<span class="eqno">(9.12)<a class="headerlink" href="#equation-f17fb4c7-36da-40c7-8f40-f8d6f62a69d9" title="Permalink to this equation">#</a></span>\[\begin{align}
+W_{\rm net} &amp;= \tau_{\rm net} \theta, \\
+&amp;= \left( I\alpha\right) \theta.
+\end{align}\]</div>
+<p>This expression for rotational work is very similar to the familiar definition <span class="math notranslate nohighlight">\(W_{\rm net} = Fd\)</span>.  Here, torque is analogous to force, while the angle is analogous to distance <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>To get an expression for rotational kinetic energy, we start with <span class="math notranslate nohighlight">\(\tau_{\rm net} = I\alpha\)</span>.  Recall from <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter07/work-energy.html#kinetic-energy-and-the-work-energy-theorem">Work and Energy</a>, we used the net work done to define a change in kinetic energy.  This means we need to find <span class="math notranslate nohighlight">\(\alpha \theta\)</span>, which can come from one of the rotational kinematics equations.  We start with</p>
+<div class="math notranslate nohighlight">
+\[ \omega^2 = \omega_0^2 + 2\alpha\theta, \]</div>
+<p>and solve for <span class="math notranslate nohighlight">\(\alpha \theta\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ \alpha \theta = \frac{\omega^2 - \omega_0^2}{2}. \]</div>
+<figure class="align-default" id="fig-rotational-work-disk">
+<img alt="A disk with radius r rotates counterclockwise through angle theta. The corresponding rim arc is labeled delta s. A magenta force arrow is tangent to the right rim and perpendicular to the radius." class="custom-wide-figure" src="../_images/rotational-work-disk.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.7 </span><span class="caption-text"><strong>Work done by a tangential force.</strong> The force <span class="math notranslate nohighlight">\(F_{\rm net}\)</span> acts perpendicular to the radius <span class="math notranslate nohighlight">\(r\)</span> and tangent to the rim. As the disk rotates through an angle <span class="math notranslate nohighlight">\(\theta\)</span>, a point on its rim travels an arc length <span class="math notranslate nohighlight">\(\Delta s=r\theta\)</span>, with <span class="math notranslate nohighlight">\(\theta\)</span> measured in radians. For a constant force magnitude that remains tangential, the work is <span class="math notranslate nohighlight">\(W_{\rm net}=F_{\rm net}\Delta s=\tau_{\rm net}\theta\)</span>. Adapted from: OpenStax, <em>College Physics 2e</em>, Figure 10.14, <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">Section 10.4</a>.</span><a class="headerlink" href="#fig-rotational-work-disk" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We substitute this back into our equation for the net work to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0b68f88e-d109-402d-898d-cf1d4df35333">
+<span class="eqno">(9.13)<a class="headerlink" href="#equation-0b68f88e-d109-402d-898d-cf1d4df35333" title="Permalink to this equation">#</a></span>\[\begin{align}
+W_{\rm net} = \frac{1}{2}I\omega^2 - \frac{1}{2}I\omega_0^2.
+\end{align}\]</div>
+<p>This is the <strong>work-energy theorem</strong> for rotational motion.  We can see that it is a change in the kinetic energy from the net work.  Analogous to the kinetic energy with translational motion, we define the <strong>rotational kinetic energy</strong> <span class="math notranslate nohighlight">\(\rm KE_{rot}\)</span> for an object with a moment of inertia <span class="math notranslate nohighlight">\(I\)</span> and an angular velocity <span class="math notranslate nohighlight">\(\omega\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b3ae622a-33ed-46e6-84c3-0c095ccda237">
+<span class="eqno">(9.14)<a class="headerlink" href="#equation-b3ae622a-33ed-46e6-84c3-0c095ccda237" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\rm KE_{rot}} = \frac{1}{2}I\omega^2.
+\end{align}\]</div>
+<p>In this equation, the moment of inertia <span class="math notranslate nohighlight">\(I\)</span> plays the role of mass <span class="math notranslate nohighlight">\(m\)</span> (or inertia) and the angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> plays the role of velocity <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<section id="example-problem-work-and-energy-of-a-grindstone">
+<h3><span class="section-number">9.4.1. </span>Example Problem: Work and Energy of a Grindstone<a class="headerlink" href="#example-problem-work-and-energy-of-a-grindstone" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Work and Energy of a Grindstone</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A person applies a <span class="math notranslate nohighlight">\(2.0\times10^2\ {\rm N}\)</span> tangential force to the edge of a <span class="math notranslate nohighlight">\(0.32\ {\rm m}\)</span>-radius grindstone through <span class="math notranslate nohighlight">\(1.0\ {\rm rad}\)</span>. The <span class="math notranslate nohighlight">\(85\ {\rm kg}\)</span> grindstone is a uniform disk that starts from rest. Neglect friction. Find <strong>(a)</strong> the work done, <strong>(b)</strong> the final angular velocity, and <strong>(c)</strong> the final rotational kinetic energy.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-8-grindstone">
+<img alt="A hand applies a tangential force at the edge of a grindstone of radius r, producing counterclockwise rotation." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/5ee6bd35dbbfc11879ab54ee69257f7f6810bbbe" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.8 </span><span class="caption-text">A tangential force at the grindstone’s edge produces torque through the rotation angle. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">OpenStax, College Physics 2e, Figure 10.16</a>.</em></span><a class="headerlink" href="#os-example-10-8-grindstone" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Model the grindstone as a uniform disk rotating about a fixed axle. The constant tangential force supplies a constant torque in the positive direction of rotation. With friction neglected, its work becomes rotational kinetic energy. Find the angular velocity independently from torque and rotational kinematics, then compare the kinetic energy with the work.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The tangential force acts with a lever arm equal to the radius, so the torque is the product of radius and force.</p>
+<div class="math notranslate nohighlight">
+\[\tau=RF=(0.32\ {\rm m})(2.0\times10^2\ {\rm N})=64\ {\rm N\cdot m}.\]</div>
+<p class="sd-card-text">A constant torque does work in proportion to the angular displacement measured in radians.</p>
+<div class="math notranslate nohighlight">
+\[W=\tau\Delta\theta=(64\ {\rm N\cdot m})(1.0\ {\rm rad})=64\ {\rm J}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The uniform-disk model determines the moment of inertia about the axle.</p>
+<div class="math notranslate nohighlight">
+\[I=\frac12MR^2=\frac12(85\ {\rm kg})(0.32\ {\rm m})^2\approx4.35\ {\rm kg\cdot m^2}.\]</div>
+<p class="sd-card-text">Dividing the torque by the moment of inertia gives the constant angular acceleration.</p>
+<div class="math notranslate nohighlight">
+\[\alpha=\frac{\tau}{I}=\frac{64\ {\rm N\cdot m}}{4.35\ {\rm kg\cdot m^2}}\approx14.7\ {\rm rad/s^2}.\]</div>
+<p class="sd-card-text">The grindstone starts from rest and rotates through a known angle. The kinematic relation without time therefore gives its final angular velocity.</p>
+<div class="math notranslate nohighlight">
+\[\omega=\sqrt{2\alpha\Delta\theta}=\sqrt{2(14.7\ {\rm rad/s^2})(1.0\ {\rm rad})}=5.4\ {\rm rad/s}.\]</div>
+<p class="sd-card-text"><strong>(c)</strong> The final energy is entirely rotational because the axle remains fixed. Using the angular velocity with one displayed guard digit gives the rotational kinetic energy.</p>
+<div class="math notranslate nohighlight">
+\[K=\frac12I\omega^2=\frac12(4.35\ {\rm kg\cdot m^2})(5.42\ {\rm rad/s})^2=64\ {\rm J}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The force does <span class="math notranslate nohighlight">\(64\ {\rm J}\)</span> of work, bringing the grindstone to <span class="math notranslate nohighlight">\(5.4\ {\rm rad/s}\)</span> with <span class="math notranslate nohighlight">\(64\ {\rm J}\)</span> of kinetic energy. The equality of work and energy gain is the expected consistency check: the stone starts from rest, and the model includes no friction or other energy transfer.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">OpenStax, College Physics 2e, Example 10.8</a>.</em></p>
+<div class="tip admonition">
+<p class="admonition-title">Problem-Solving Strategy for Rotational Energy</p>
+<p>When rotation is involved in a work or energy problem, use the same energy ideas that apply to translational motion.</p>
+<ol class="arabic simple">
+<li><p><strong>Identify the system.</strong>  Decide which object or group of objects you are analyzing. A quick sketch can help you identify the motion and the important energy changes.</p></li>
+<li><p><strong>Identify the types of energy involved.</strong>  Determine whether the system has translational kinetic energy, rotational kinetic energy, gravitational potential energy, elastic potential energy, or some combination of these.</p></li>
+<li><p><strong>Decide whether energy is conserved.</strong>  If no energy enters or leaves the system, mechanical energy is conserved: <span class="math notranslate nohighlight">\(KE_i+PE_i=KE_f+PE_f.\)</span>  Remember that the kinetic energy may include both translational and rotational motion.</p></li>
+<li><p><strong>Include any energy transferred into or out of the system.</strong>  If external work, friction, heating, or another energy transfer occurs, include it in the energy equation rather than assuming mechanical energy is conserved.</p></li>
+<li><p><strong>Simplify before calculating.</strong>  Remove any terms that are zero or unchanged between the initial and final states. This often makes the calculation much easier.</p></li>
+<li><p><strong>Solve for the unknown.</strong>  Rearrange the energy equation as needed, then substitute the known values with their units.</p></li>
+<li><p><strong>Check the result.</strong>  Make sure the units are correct and ask whether the size of the answer makes physical sense.</p></li>
+</ol>
+</div>
+</section>
+<section id="example-problem-energy-in-helicopter-blades">
+<h3><span class="section-number">9.4.2. </span>Example Problem: Energy in Helicopter Blades<a class="headerlink" href="#example-problem-energy-in-helicopter-blades" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Energy in Helicopter Blades</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(1.0\times10^3\ {\rm kg}\)</span> rescue helicopter has four blades, each <span class="math notranslate nohighlight">\(4.0\ {\rm m}\)</span> long and <span class="math notranslate nohighlight">\(5.0\times10^1\ {\rm kg}\)</span>. Model each blade as a thin rod rotating about one end. Find <strong>(a)</strong> the blades’ rotational kinetic energy at <span class="math notranslate nohighlight">\(3.0\times10^2\ {\rm rpm}\)</span>, <strong>(b)</strong> the helicopter’s translational kinetic energy at <span class="math notranslate nohighlight">\(2.0\times10^1\ {\rm m/s}\)</span> and its ratio to the blade energy, and <strong>(c)</strong> the height to which the blade energy could lift the helicopter.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Treat the four blades as identical thin rods rotating about their inner ends. Add their moments of inertia to find their rotational energy; use the full helicopter mass for translational energy and gravitational potential energy. For the lifting estimate, assume all blade rotational energy could become gravitational potential energy, an ideal upper limit rather than a prediction of actual flight.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> Each blade contributes one-third of its mass times its squared length to the moment of inertia. All four rotate about the same axis, so their contributions add.</p>
+<div class="math notranslate nohighlight">
+\[I=4\left(\frac13M_{\rm blade}\ell^2\right)=\frac43(5.0\times10^1\ {\rm kg})(4.0\ {\rm m})^2\approx1.07\times10^3\ {\rm kg\cdot m^2}.\]</div>
+<p class="sd-card-text">The energy formula requires angular velocity in radians per second. The unit conversion gives the appropriate value.</p>
+<div class="math notranslate nohighlight">
+\[\omega=(3.0\times10^2\ {\rm rev/min})\left(\frac{2\pi\ {\rm rad}}{1\ {\rm rev}}\right)\left(\frac{1\ {\rm min}}{60\ {\rm s}}\right)=10\pi\ {\rm rad/s}.\]</div>
+<p class="sd-card-text">The blades’ rotational energy depends on their combined moment of inertia and the square of this angular velocity.</p>
+<div class="math notranslate nohighlight">
+\[K_{\rm rot}=\frac12I\omega^2=\frac12(1.07\times10^3\ {\rm kg\cdot m^2})(10\pi\ {\rm rad/s})^2=5.3\times10^5\ {\rm J}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Translation carries the entire helicopter forward, so the relevant mass is <span class="math notranslate nohighlight">\(1.0\times10^3\ {\rm kg}\)</span> rather than the blade mass alone.</p>
+<div class="math notranslate nohighlight">
+\[K_{\rm trans}=\frac12mv^2=\frac12(1.0\times10^3\ {\rm kg})(2.0\times10^1\ {\rm m/s})^2=2.0\times10^5\ {\rm J}.\]</div>
+<p class="sd-card-text">The requested ratio compares this translational energy with the blade energy.</p>
+<div class="math notranslate nohighlight">
+\[\frac{K_{\rm trans}}{K_{\rm rot}}=\frac{2.0\times10^5\ {\rm J}}{5.26\times10^5\ {\rm J}}=0.38.\]</div>
+<p class="sd-card-text"><strong>(c)</strong> Complete conversion of blade energy into gravitational potential energy would satisfy <span class="math notranslate nohighlight">\(mgh=K_{\rm rot}\)</span>. Solving for height gives the ideal lifting estimate.</p>
+<div class="math notranslate nohighlight">
+\[h=\frac{K_{\rm rot}}{mg}=\frac{5.26\times10^5\ {\rm J}}{(1.0\times10^3\ {\rm kg})(9.80\ {\rm m/s^2})}=54\ {\rm m}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The blades store <span class="math notranslate nohighlight">\(5.3\times10^5\ {\rm J}\)</span>, while the helicopter’s translational energy is <span class="math notranslate nohighlight">\(2.0\times10^5\ {\rm J}\)</span>, or <span class="math notranslate nohighlight">\(38\%\)</span> as much. The large blade energy is plausible because their mass extends far from the axis and rotates rapidly. Its ideal lifting equivalent is <span class="math notranslate nohighlight">\(54\ {\rm m}\)</span>; losses and the need to maintain rotor motion prevent treating that height as an actual flight capability.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">OpenStax, College Physics 2e, Example 10.9</a>.</em></p>
+</section>
+<section id="why-don-t-all-objects-roll-downhill-at-the-same-rate">
+<h3><span class="section-number">9.4.3. </span>Why Don’t all Objects Roll Downhill at the Same Rate?<a class="headerlink" href="#why-don-t-all-objects-roll-downhill-at-the-same-rate" title="Link to this heading">#</a></h3>
+<p>One of the quality controls in a tomato soup factory consists of rolling filled cans down a ramp.  If they roll too fast, the soup is too thin. <em>Why should cans of identical size and mass roll down an incline at different rates?</em>  <em>Why should the thickest soup roll the slowest?</em></p>
+<figure class="align-default" id="fig-soup-cans-incline">
+<img alt="Three equal-mass soup cans labeled 1, 2, and 3 start at the same height on an incline. Arrows and faint later positions show can 1 traveling farthest, can 2 an intermediate distance, and can 3 the shortest distance. The ramp's vertical height is labeled h." src="../_images/rolling_soup_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.9 </span><span class="caption-text"><strong>Sliding and rolling cans on an incline.</strong> Three soup cans of equal mass start from rest at the same height <span class="math notranslate nohighlight">\(h\)</span>. Can 1 has a low-friction coating and slides without rotating, reaching the bottom first because essentially all of its lost gravitational potential energy becomes translational kinetic energy. Cans 2 and 3 roll without slipping. Can 2 contains thin soup that remains largely nonrotating while the container turns, so it finishes second. Can 3 contains thick soup that rotates with the container, directing more energy into rotation and leaving less for translation, so it finishes last. The faint images indicate later positions of the same three cans. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">OpenStax, College Physics 2e, Figure 10.18</a>.</em></span><a class="headerlink" href="#fig-soup-cans-incline" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The easiest way to answer these questions is to consider energy.  Suppose each can starts down the ramp from rest.  Each can starting from rest means each starts with the same gravitational potential energy <span class="math notranslate nohighlight">\(\rm PE_{grav}\)</span>, which is converted entirely to <span class="math notranslate nohighlight">\(\rm KE\)</span> (provided each rolls without slipping).</p>
+<p>The kinetic energy <span class="math notranslate nohighlight">\(\rm KE\)</span> can take the form of <span class="math notranslate nohighlight">\(\rm KE_{trans}\)</span> or <span class="math notranslate nohighlight">\(\rm KE_{rot}\)</span>, where the total <span class="math notranslate nohighlight">\(\rm KE\)</span> is the sum of the two.  If a can rolls down a ramp, it puts part of its energy into rotation, leaving less for translation.  Thus, the can goes slower than if it slid down.  The thin soup does not rotate, whereas the thick soup does because it sticks to the can.  The thick soup puts more of the can’s original <span class="math notranslate nohighlight">\(\rm PE_{grav}\)</span> into rotation than the thin soup, and the can rolls more slowly.</p>
+<p>Assuming no losses due to friction, there is only one force doing work: gravity.  The total work done is the change in kinetic energy.  As the cans start moving, the potential energy is changing into kinetic energy.  Conservation of energy requires the following:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a425339d-6483-4cef-9ca3-167384eb2386">
+<span class="eqno">(9.15)<a class="headerlink" href="#equation-a425339d-6483-4cef-9ca3-167384eb2386" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\rm PE}_i &amp;= {\rm KE}_f, \\
+{\rm PE_{grav}} &amp;= {\rm KE_{trans}} + {\rm KE_{rot}}.
+\end{align}\]</div>
+<p>We can substitute more specific expressions to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0956145b-8a10-44b9-b34d-a27dd7d07005">
+<span class="eqno">(9.16)<a class="headerlink" href="#equation-0956145b-8a10-44b9-b34d-a27dd7d07005" title="Permalink to this equation">#</a></span>\[\begin{align}
+mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2.
+\end{align}\]</div>
+<p>The initial <span class="math notranslate nohighlight">\(mgh\)</span> is divided between translational kinetic energy and rotational kinetic energy.  A greater value of <span class="math notranslate nohighlight">\(I\)</span> means that less energy goes into translation.  If the can slides down without friction, then <span class="math notranslate nohighlight">\(\omega=0\)</span> and all the energy goes into translation.  Thus the can goes faster.</p>
+</section>
+<section id="example-problem-cylinder-rolling-down-an-incline">
+<h3><span class="section-number">9.4.4. </span>Example Problem: Cylinder Rolling Down an Incline<a class="headerlink" href="#example-problem-cylinder-rolling-down-an-incline" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Speed of a Cylinder Rolling Down an Incline</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A solid cylinder starts from rest and rolls without slipping down an incline with a vertical height of <span class="math notranslate nohighlight">\(2.0\ {\rm m}\)</span>. Its mass is <span class="math notranslate nohighlight">\(0.75\ {\rm kg}\)</span> and its radius is <span class="math notranslate nohighlight">\(4.0\ {\rm cm}\)</span>. What is its speed at the bottom?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Use conservation of mechanical energy for the cylinder–Earth system, with gravitational potential energy zero at the bottom. Model the cylinder as uniform and solid, and neglect rolling resistance. For ideal rolling without slipping on a stationary incline, static friction supplies the needed torque without dissipating energy. The lost gravitational potential energy becomes both translational and rotational kinetic energy.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The cylinder starts from rest, so all of its initial mechanical energy is gravitational potential energy. At the bottom, that energy is shared between motion of the center-of-mass and rotation about it.</p>
+<div class="math notranslate nohighlight">
+\[mgh=\frac12mv^2+\frac12I\omega^2.\]</div>
+<p class="sd-card-text">The solid-cylinder relation <span class="math notranslate nohighlight">\(I=\frac12mR^2\)</span> and rolling constraint <span class="math notranslate nohighlight">\(\omega=v/R\)</span> express both kinetic-energy terms using the same unknown speed. Substitution shows that the radius cancels.</p>
+<div class="math notranslate nohighlight">
+\[mgh=\frac12mv^2+\frac12\left(\frac12mR^2\right)\left(\frac{v}{R}\right)^2=\frac34mv^2.\]</div>
+<p class="sd-card-text">The mass also cancels because both the available potential energy and the required kinetic energy are proportional to it. Solving for the positive speed gives the result.</p>
+<div class="math notranslate nohighlight">
+\[v=\sqrt{\frac{4gh}{3}}=\sqrt{\frac{4(9.80\ {\rm m/s^2})(2.0\ {\rm m})}{3}}=5.1\ {\rm m/s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The cylinder reaches <span class="math notranslate nohighlight">\(5.1\ {\rm m/s}\)</span> at the bottom. It moves more slowly than a nonrotating object sliding without friction through the same height because some energy goes into rotation. The independence from mass and radius is consistent with this ideal model: cylinders of the same shape divide their energy in the same proportion.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">OpenStax, College Physics 2e, Example 10.10</a>.</em></p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Is rotational kinetic energy completely analogous to translational kinetic energy? What differences remain? Give an example of each type.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Yes. Both are scalar energies of organized motion. Translational kinetic energy depends on a system’s mass and linear speed, while rotational kinetic energy depends on its moment of inertia and angular speed. A rolling bicycle wheel has both forms: its center-of-mass motion contributes translational kinetic energy, and its spin contributes rotational kinetic energy.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-4-rotational-kinetic-energy-work-and-energy-revisited">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+</section>
+<section id="angular-momentum-and-its-conservation">
+<h2><span class="section-number">9.5. </span>Angular Momentum and its Conservation<a class="headerlink" href="#angular-momentum-and-its-conservation" title="Link to this heading">#</a></h2>
+<p>Every rotational phenomenon has a direct translational analog.  Thus, we can define the rotational analog of momentum (<span class="math notranslate nohighlight">\(p = mv\)</span>) as the <strong>angular momentum</strong> <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9d49ff39-fd2d-40cf-a931-ef6d69c57315">
+<span class="eqno">(9.17)<a class="headerlink" href="#equation-9d49ff39-fd2d-40cf-a931-ef6d69c57315" title="Permalink to this equation">#</a></span>\[\begin{align}
+L = I\omega.
+\end{align}\]</div>
+<p>Units for angular momentum are <span class="math notranslate nohighlight">\(\rm kg\cdot m^2/s\)</span>.  An object that has a large moment of inertia <span class="math notranslate nohighlight">\(I\)</span> or angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> has a very large angular momentum.</p>
+<section id="example-problem-angular-momentum-of-earth">
+<h3><span class="section-number">9.5.1. </span>Example Problem: Angular Momentum of Earth<a class="headerlink" href="#example-problem-angular-momentum-of-earth" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Angular Momentum of Earth</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Estimate Earth’s angular momentum due to its daily rotation. Model Earth as a uniform solid sphere with mass <span class="math notranslate nohighlight">\(6.0\times10^{24}\ {\rm kg}\)</span>, radius <span class="math notranslate nohighlight">\(6.4\times10^6\ {\rm m}\)</span>, and rotation period of exactly <span class="math notranslate nohighlight">\(24\ {\rm h}\)</span>.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Estimate Earth’s spin angular momentum about its polar axis, not its orbital angular momentum around the Sun. Use the specified uniform-solid-sphere model to determine the moment of inertia, then combine it with the angular velocity obtained from one rotation per day. The result is a magnitude; its direction follows the right-hand rule for Earth’s rotation.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">Earth turns through <span class="math notranslate nohighlight">\(2\pi\)</span> radians during one rotation period. Treating the stipulated 24-hour period as exact for this model and converting it to seconds gives the angular velocity in SI units.</p>
+<div class="math notranslate nohighlight">
+\[\omega=\frac{2\pi}{T}=\frac{2\pi\ {\rm rad}}{(24\ {\rm h})(3600\ {\rm s/h})}\approx7.27\times10^{-5}\ {\rm rad/s}.\]</div>
+<p class="sd-card-text">A uniform solid sphere has moment of inertia <span class="math notranslate nohighlight">\(I=\frac25MR^2\)</span>. Multiplying this by angular velocity gives the spin angular momentum.</p>
+<div class="math notranslate nohighlight">
+\[L=I\omega=\frac25MR^2\omega=\frac25(6.0\times10^{24}\ {\rm kg})(6.4\times10^6\ {\rm m})^2(7.27\times10^{-5}\ {\rm rad/s})\approx7.1\times10^{33}\ {\rm kg\cdot m^2/s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The uniform-sphere estimate is approximately <span class="math notranslate nohighlight">\(7.1\times10^{33}\ {\rm kg\cdot m^2/s}\)</span>. This enormous angular momentum is reasonable despite Earth’s slow rotation rate because its moment of inertia includes both a very large mass and the square of a very large radius. Earth’s nonuniform internal density makes this a model-based estimate, not an exact value.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Example 10.11</a>.</em></p>
+<p>When you push a merry-go-round, spin a bike wheel, or open a door, you exert a torque.  If the torque you exert is greater than opposing torques, then the rotation accelerates and the angular momentum increases.  The greater the net torque, the more rapid the increase in <span class="math notranslate nohighlight">\(L\)</span>.  The relationship between torque and angular momentum is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e44a32b1-5c14-40bb-a5c5-fe3a884dfe0c">
+<span class="eqno">(9.18)<a class="headerlink" href="#equation-e44a32b1-5c14-40bb-a5c5-fe3a884dfe0c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau_{\rm net} = \frac{\Delta L}{\Delta t}.
+\end{align}\]</div>
+<p>This expression is analogous to the relationship between force and linear momentum, <span class="math notranslate nohighlight">\(F = \Delta p/\Delta t\)</span>.  The equation is the rotational form of Newton’s second law.</p>
+</section>
+<section id="example-problem-angular-momentum-of-a-lazy-susan">
+<h3><span class="section-number">9.5.2. </span>Example Problem: Angular Momentum of a Lazy Susan<a class="headerlink" href="#example-problem-angular-momentum-of-a-lazy-susan" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Angular Momentum of a Lazy Susan</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A person applies a <span class="math notranslate nohighlight">\(2.5\ {\rm N}\)</span> tangential force to the edge of a lazy Susan of radius <span class="math notranslate nohighlight">\(0.26\ {\rm m}\)</span> for <span class="math notranslate nohighlight">\(0.15\ {\rm s}\)</span>. It starts from rest, has mass <span class="math notranslate nohighlight">\(4.0\ {\rm kg}\)</span>, and is modeled as a uniform disk. Neglect friction. Find <strong>(a)</strong> its final angular momentum and <strong>(b)</strong> its final angular velocity.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-12-lazy-susan">
+<img alt="A hand applies a tangential force to the edge of a rotating circular food tray of radius r." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ff3b4ebed38616c79f6fd1bad11d1ab3c66ab6da" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.10 </span><span class="caption-text">The force is perpendicular to the tray’s radius, so it produces the torque used in the angular-impulse calculation. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Figure 10.19</a>.</em></span><a class="headerlink" href="#os-example-10-12-lazy-susan" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Model the lazy Susan as a uniform disk rotating about its central axle, initially at rest. Take the direction of the applied torque as positive and neglect friction. First use angular impulse to find the angular momentum gained during the push. Then use the disk’s moment of inertia to convert angular momentum into angular velocity.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The force is tangential, so its perpendicular lever arm equals the disk radius.</p>
+<div class="math notranslate nohighlight">
+\[\tau=rF=(0.26\ {\rm m})(2.5\ {\rm N})=0.650\ {\rm N\cdot m}.\]</div>
+<p class="sd-card-text">The constant torque acts for the given time, producing an angular impulse equal to the change in angular momentum. Since the disk starts from rest, this change is also its final angular momentum.</p>
+<div class="math notranslate nohighlight">
+\[L=L_0+\tau\Delta t=0+(0.650\ {\rm N\cdot m})(0.15\ {\rm s})\approx0.098\ {\rm kg\cdot m^2/s}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Angular momentum alone does not specify angular velocity; the mass distribution also matters. The uniform-disk model supplies the required moment of inertia.</p>
+<div class="math notranslate nohighlight">
+\[I=\frac12Mr^2=\frac12(4.0\ {\rm kg})(0.26\ {\rm m})^2\approx0.135\ {\rm kg\cdot m^2}.\]</div>
+<p class="sd-card-text">Solving <span class="math notranslate nohighlight">\(L=I\omega\)</span> for angular velocity gives the rotation rate after the push. The displayed angular momentum retains one guard digit in this calculation.</p>
+<div class="math notranslate nohighlight">
+\[\omega=\frac{L}{I}=\frac{0.0975\ {\rm kg\cdot m^2/s}}{0.135\ {\rm kg\cdot m^2}}=0.72\ {\rm rad/s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The lazy Susan gains <span class="math notranslate nohighlight">\(0.098\ {\rm kg\cdot m^2/s}\)</span> of angular momentum and reaches <span class="math notranslate nohighlight">\(0.72\ {\rm rad/s}\)</span> in the direction of the push. A short, gentle push producing a modest rotation rate is physically plausible. For the same angular impulse, a larger moment of inertia would produce a smaller angular velocity.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Example 10.12</a>.</em></p>
+</section>
+<section id="example-problem-torque-in-a-kick">
+<h3><span class="section-number">9.5.3. </span>Example Problem: Torque in a Kick<a class="headerlink" href="#example-problem-torque-in-a-kick" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Torque in a Kick</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>An upper-leg muscle exerts a <span class="math notranslate nohighlight">\(2.0\times10^3\ {\rm N}\)</span> force with an effective perpendicular lever arm of <span class="math notranslate nohighlight">\(2.2\ {\rm cm}\)</span>. The lower leg has a moment of inertia of <span class="math notranslate nohighlight">\(1.3\ {\rm kg\cdot m^2}\)</span>. <strong>(a)</strong> Find its angular acceleration. <strong>(b)</strong> Starting from rest and neglecting gravity, find its rotational kinetic energy after it rotates through <span class="math notranslate nohighlight">\(1.0\ {\rm rad}\)</span>.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-13-kick">
+<img alt="Side-view cutaway of a bent leg showing an upward tendon force F with a perpendicular lever arm of 2.20 cm about the knee pivot. A dashed boundary encloses the lower leg and foot, with moment of inertia 1.25 kilogram meters squared. A pale silhouette shows the leg extending forward." src="../_images/knee-extension-torque.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.11 </span><span class="caption-text"><strong>Muscle torque during a kick.</strong> The thigh muscle pulls through the tendon, exerting a force <span class="math notranslate nohighlight">\(F\)</span> that produces counterclockwise torque about the knee. The effective lever arm <span class="math notranslate nohighlight">\(r_\perp=2.20\ {\rm cm}\)</span> is the perpendicular distance from the knee pivot to the force’s line of action, giving a torque magnitude <span class="math notranslate nohighlight">\(\tau=r_\perp F\)</span>. The lower leg and foot have a moment of inertia <span class="math notranslate nohighlight">\(I=1.25\ {\rm kg}\cdot{\rm m}^2\)</span> about the knee; the pale silhouette indicates their forward rotation during extension. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Figure 10.20</a>.</em></span><a class="headerlink" href="#os-example-10-13-kick" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Treat the lower leg as a rigid body rotating about the knee, with positive rotation in the direction of the kick. The given perpendicular lever arm converts muscle force into torque. Initially the lower leg is vertical, so gravity produces no torque about the knee; neglect gravity during the subsequent rotation as specified. Assume the muscle force and effective lever arm remain constant.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The effective lever arm is <span class="math notranslate nohighlight">\(0.022\ {\rm m}\)</span>. Because it is already the perpendicular distance to the force’s line of action, no additional angle factor is needed in the torque.</p>
+<div class="math notranslate nohighlight">
+\[\tau=r_\perp F=(0.022\ {\rm m})(2.0\times10^3\ {\rm N})=44\ {\rm N\cdot m}.\]</div>
+<p class="sd-card-text">The angular acceleration follows from the net torque and the lower leg’s moment of inertia about the knee.</p>
+<div class="math notranslate nohighlight">
+\[\alpha=\frac{\tau}{I}=\frac{44\ {\rm N\cdot m}}{1.3\ {\rm kg\cdot m^2}}=34\ {\rm rad/s^2}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The leg starts from rest, and the muscle supplies the net work in this model. The work–energy theorem therefore equates its final rotational kinetic energy to the torque acting through the given angle.</p>
+<div class="math notranslate nohighlight">
+\[K_f=K_i+W_{\rm net}=0+\tau\Delta\theta=(44\ {\rm N\cdot m})(1.0\ {\rm rad})=44\ {\rm J}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The leg’s angular acceleration is <span class="math notranslate nohighlight">\(34\ {\rm rad/s^2}\)</span>, and its rotational kinetic energy becomes <span class="math notranslate nohighlight">\(44\ {\rm J}\)</span>. The substantial muscle force produces only <span class="math notranslate nohighlight">\(44\ {\rm N\cdot m}\)</span> of torque because its lever arm is short. The energy result matches the positive work done through one radian, as expected when gravity and losses are neglected.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Example 10.13</a>.</em></p>
+</section>
+<section id="conservation-of-angular-momentum">
+<h3><span class="section-number">9.5.4. </span>Conservation of Angular Momentum<a class="headerlink" href="#conservation-of-angular-momentum" title="Link to this heading">#</a></h3>
+<p>To change angular momentum, a torque must act over some period of time.  Earth has a large angular momentum, which means that a large torque acting over a long time is needed to change its rate of spin.  <em>What external torques are there?</em></p>
+<p>Tidal friction exerts torque that is slowing Earth’s rotation, but 10s of millions of years must pass before the change is significant.  The length of the day was not always <span class="math notranslate nohighlight">\(24\ {\rm h}\)</span>, but 900 million years ago, it was <span class="math notranslate nohighlight">\(18\ {\rm h}\)</span>.</p>
+<p>If the net torque is zero, then angular momentum is constant (or conserved).  We can see this by considering the situation where the net torque is zero, which implies that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c592ac67-d448-4dca-a350-50bbd120389c">
+<span class="eqno">(9.19)<a class="headerlink" href="#equation-c592ac67-d448-4dca-a350-50bbd120389c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\tau_{\rm net} &amp;= 0, \\
+0 &amp;= \frac{\Delta L}{\Delta t}.
+\end{align}\]</div>
+<p>If the change in angular momentum <span class="math notranslate nohighlight">\(\Delta L = 0\)</span>, then the total angular momentum is constant.  Consider a system with an angular momentum <span class="math notranslate nohighlight">\(L\)</span> at a time <span class="math notranslate nohighlight">\(t\)</span>, then after some time the angular momentum is measured again as <span class="math notranslate nohighlight">\(L^\prime\)</span>.  Then we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0bc638d4-fd27-4202-8edb-5a387eb1467e">
+<span class="eqno">(9.20)<a class="headerlink" href="#equation-0bc638d4-fd27-4202-8edb-5a387eb1467e" title="Permalink to this equation">#</a></span>\[\begin{align}
+L &amp;= \text{constant}, \qquad &amp;(\tau_{\rm net} = 0) \\
+L &amp;= L^\prime. \qquad &amp;(\tau_{\rm net} = 0)
+\end{align}\]</div>
+<p>These expressions are the <strong>law of conservation of angular momentum</strong>.</p>
+<p>An example of the conservation of angular momentum considers an ice skater spinning.  The net torque on her is very close to zero because there is relatively little friction between her skates and the ice.  Also the friction exerted is very close to the pivot point, so <span class="math notranslate nohighlight">\(\tau\)</span> is negligibly small.</p>
+<p>The skater can spin for a long time or increase her rate of spin by pulling her arms and legs in.  <em>Why does pulling her arms and legs in increase her spin rate?</em></p>
+<p>Her angular momentum is constant so that <span class="math notranslate nohighlight">\(L = L^\prime\)</span>, which we can express in terms of the moment of inertia to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-207f4c22-3669-43ae-b882-67caad83e0d8">
+<span class="eqno">(9.21)<a class="headerlink" href="#equation-207f4c22-3669-43ae-b882-67caad83e0d8" title="Permalink to this equation">#</a></span>\[\begin{align}
+L &amp;= L^\prime, \\
+I\omega &amp;= I^\prime \omega^\prime, 
+\end{align}\]</div>
+<p>where the primed quantities refer to the time after she has pulled in her arms and reduced her moment of inertia.  Because <span class="math notranslate nohighlight">\(I^\prime\)</span> is smaller, the angular velocity <span class="math notranslate nohighlight">\(\omega^\prime\)</span> must increase to keep the angular momentum constant.</p>
+<figure class="align-default" id="fig-skater-angular-momentum">
+<img alt="Two views of an ice skater spinning in the same direction. In panel a, her arms and free leg are extended. In panel b, she pulls her arms and free leg inward, decreasing her moment of inertia and increasing her angular speed while conserving angular momentum." src="../_images/skater-angular-momentum.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.12 </span><span class="caption-text"><strong>Conservation of angular momentum in a spinning skater.</strong> (a) With her arms and free leg extended, the skater has a relatively large moment of inertia <span class="math notranslate nohighlight">\(I\)</span>. (b) Pulling them inward reduces her moment of inertia to <span class="math notranslate nohighlight">\(I'\)</span> and increases her angular speed to <span class="math notranslate nohighlight">\(\omega'\)</span>. Because the net external torque about her spin axis is negligible, her angular momentum remains constant: <span class="math notranslate nohighlight">\(L=I\omega=I'\omega'\)</span>. Her rotational kinetic energy increases because her muscles do work as she pulls inward. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Figure 10.21</a>.</em></span><a class="headerlink" href="#fig-skater-angular-momentum" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="example-problem-spinning-ice-skater">
+<h3><span class="section-number">9.5.5. </span>Example Problem: Spinning Ice Skater<a class="headerlink" href="#example-problem-spinning-ice-skater" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Angular Momentum of a Spinning Ice Skater</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>An ice skater spins at <span class="math notranslate nohighlight">\(0.80\ {\rm rev/s}\)</span> with her arms extended. Her moment of inertia changes from <span class="math notranslate nohighlight">\(2.3\ {\rm kg\cdot m^2}\)</span> to <span class="math notranslate nohighlight">\(0.36\ {\rm kg\cdot m^2}\)</span> when she pulls in her arms. <strong>(a)</strong> Find her final angular velocity. <strong>(b)</strong> Find her rotational kinetic energy before and after the change.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-14-ice-skater">
+<img alt="Two views of an ice skater: first spinning with arms and one leg extended, then spinning with arms and leg pulled close to the body." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/be7c73bd2cd5a8845861c83453718b277357c40a" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.13 </span><span class="caption-text">Pulling the arms and leg inward decreases the skater’s moment of inertia and increases her angular velocity. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Figure 10.21</a>.</em></span><a class="headerlink" href="#os-example-10-14-ice-skater" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Take the skater’s initial spin direction as positive and assume negligible external torque about her vertical rotation axis. Her changing body configuration changes the moment of inertia, but angular momentum remains constant. Use that conservation law to find the new angular velocity, then calculate each kinetic energy separately; internal muscular work means rotational kinetic energy need not be conserved.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> Conservation of angular momentum requires <span class="math notranslate nohighlight">\(I_i\omega_i=I_f\omega_f\)</span>. Solving for the final angular velocity shows that it increases in inverse proportion to the moment of inertia. The inertia ratio is dimensionless, so revolutions per second can be retained in this step.</p>
+<div class="math notranslate nohighlight">
+\[\omega_f=\frac{I_i}{I_f}\omega_i=\frac{2.3\ {\rm kg\cdot m^2}}{0.36\ {\rm kg\cdot m^2}}(0.80\ {\rm rev/s})=5.1\ {\rm rev/s}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Kinetic energy requires angular velocity in radians per second. Converting the initial rate within the substitution gives the initial rotational energy.</p>
+<div class="math notranslate nohighlight">
+\[K_i=\frac12I_i\omega_i^2=\frac12(2.3\ {\rm kg\cdot m^2})\left[(0.80\ {\rm rev/s})\left(\frac{2\pi\ {\rm rad}}{1\ {\rm rev}}\right)\right]^2=29\ {\rm J}.\]</div>
+<p class="sd-card-text">The final energy uses the smaller final moment of inertia and the larger final angular velocity. The displayed angular velocity retains one guard digit for this calculation.</p>
+<div class="math notranslate nohighlight">
+\[K_f=\frac12I_f\omega_f^2=\frac12(0.36\ {\rm kg\cdot m^2})\left[(5.11\ {\rm rev/s})\left(\frac{2\pi\ {\rm rad}}{1\ {\rm rev}}\right)\right]^2=1.9\times10^2\ {\rm J}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The skater speeds up to <span class="math notranslate nohighlight">\(5.1\ {\rm rev/s}\)</span>, and her rotational kinetic energy increases from <span class="math notranslate nohighlight">\(29\ {\rm J}\)</span> to <span class="math notranslate nohighlight">\(1.9\times10^2\ {\rm J}\)</span>. Faster rotation is expected when the same angular momentum is concentrated into a smaller moment of inertia. The energy increase comes from muscular work while pulling inward, so it does not contradict conservation of angular momentum or total energy.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Example 10.14</a>.</em></p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Is angular momentum completely analogous to linear momentum? What differences remain?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Angular and linear momentum play analogous roles: each changes in response to an external influence and is conserved when the corresponding net external influence is zero. They nevertheless describe different motion, have different units, and cannot be directly converted into one another. Angular momentum also depends on the chosen origin or rotation axis.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-5-angular-momentum-and-its-conservation">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+</section>
+<section id="collisions-of-extended-bodies-in-2d">
+<h2><span class="section-number">9.6. </span>Collisions of Extended Bodies in 2D<a class="headerlink" href="#collisions-of-extended-bodies-in-2d" title="Link to this heading">#</a></h2>
+<p>Some objects rotate and collide, which makes the scenario a little more complicated to analyze.  For example, bowling pins are sent flying and spinning when hit by a bowling ball, where angular momentum, linear momentum, and energy was imparted to the pins.</p>
+<p>Consider the collision, in which a disk strikes and sticks (adheres) to a stick (initially at rest) nailed at one end to a frictionless surface.</p>
+<p>After the collision, the two (stick and disk) rotate about the nail.  There is an unbalanced external force on the system at the nail. This force exerts no torque because its lever arm <span class="math notranslate nohighlight">\(r\)</span> is zero.  Angular momentum is conserved in the collision, but kinetic energy is not conserved because the collision is <em>inelastic</em>.</p>
+<section id="using-angular-momentum-in-a-collision">
+<h3><span class="section-number">9.6.1. </span>Using Angular Momentum in a Collision<a class="headerlink" href="#using-angular-momentum-in-a-collision" title="Link to this heading">#</a></h3>
+<p>A collision that produces rotation can look different from the collisions we studied earlier, but the same conservation idea still applies. The important question is <em>which quantity is conserved for the system during the collision</em>.</p>
+<p>For the disk and stick, the nail exerts an external force, so the linear momentum of the disk-stick system does not have to be conserved. However, if we calculate angular momentum about the nail, that force has no lever arm and therefore produces no torque about that point. The <em>angular momentum about the nail is conserved</em> during the collision.</p>
+<p>Before the collision, the disk is moving in a straight line rather than rotating about the nail. A moving object can still have angular momentum about a chosen point. Its angular momentum is</p>
+<div class="math notranslate nohighlight">
+\[ L_i=r_\perp mv,\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_\perp\)</span> is the perpendicular distance from the rotation axis to the disk’s direction of motion.  After the collision, the disk sticks to the rod and they rotate together about the nail. Their final angular momentum is</p>
+<div class="math notranslate nohighlight">
+\[ L_f=I_{\rm total}\omega_f, \]</div>
+<p>where <span class="math notranslate nohighlight">\(I_{\rm total}\)</span> is the combined moment of inertia of the stick and disk about the nail.  Because the external torque about the nail is zero during the collision,</p>
+<div class="math notranslate nohighlight">
+\[ L_i=L_f,  \]</div>
+<p>so a collision like this can be analyzed using</p>
+<div class="math notranslate nohighlight">
+\[ r_\perp mv=I_{\rm total}\omega_f.\]</div>
+<blockquote>
+<div><p>The important strategy is to <strong>choose the rotation axis first</strong>. Then determine the angular momentum of each object about that axis before the collision, determine the total moment of inertia after the collision, and apply conservation of angular momentum.</p>
+</div></blockquote>
+<p>Because the disk sticks to the rod, this is an <strong>inelastic collision</strong>. Angular momentum is conserved about the nail, but kinetic energy is not.</p>
+<figure class="align-default" id="fig-puck-rod-collision">
+<img alt="Before and after a puck collides with a pivoted rod on a frictionless table. Before impact, the puck of mass m moves with velocity v toward the far end of the stationary rod of mass M. After impact, the puck remains attached, and the pair rotates about the fixed pivot with angular velocity omega." src="../_images/puck-rod-collision.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.14 </span><span class="caption-text"><strong>Angular momentum in an inelastic rotational collision.</strong> Before impact, a puck of mass <span class="math notranslate nohighlight">\(m\)</span> moves toward a stationary rod of mass <span class="math notranslate nohighlight">\(M\)</span> on a frictionless table. The puck strikes near the rod’s free end and becomes attached, causing both objects to rotate about the fixed pivot with angular velocity <span class="math notranslate nohighlight">\(\omega\)</span>. Angular momentum about the pivot is conserved during the collision because the pivot force produces no torque about that point and other external torques are negligible. Kinetic energy is not conserved because the collision is inelastic. <em>Adapted from: OpenStax, College Physics 2e.</em></span><a class="headerlink" href="#fig-puck-rod-collision" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="example-problem-rotation-in-a-collision">
+<h3><span class="section-number">9.6.2. </span>Example Problem: Rotation in a Collision<a class="headerlink" href="#example-problem-rotation-in-a-collision" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Rotation in a Collision</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(5.0\times10^1\ {\rm g}\)</span> disk moving at <span class="math notranslate nohighlight">\(30\ {\rm m/s}\)</span> (measured to the nearest <span class="math notranslate nohighlight">\(1\ {\rm m/s}\)</span>) strikes and sticks to the end of a stationary <span class="math notranslate nohighlight">\(1.2\ {\rm m}\)</span>, <span class="math notranslate nohighlight">\(2.0\ {\rm kg}\)</span> uniform stick pivoted at its other end on a frictionless surface. Find <strong>(a)</strong> the final angular velocity, <strong>(b)</strong> the kinetic energy before and after the collision, and <strong>(c)</strong> the total linear momentum before and after the collision.</p>
+</div></blockquote>
+<figure class="align-default" id="os-example-10-15-disk-stick-collision">
+<img alt="Before-and-after diagram of a moving disk striking and sticking to the free end of a stationary stick pivoted by a nail, after which the disk and stick rotate together." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/d09df6de3895235faf2dc396821ed222f1bdeb2e" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.15 </span><span class="caption-text">The pivot force has zero lever arm about the nail, so angular momentum about that point is conserved during the inelastic collision. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-6-collisions-of-extended-bodies-in-two-dimensions">OpenStax, College Physics 2e, Figure 10.24</a>.</em></span><a class="headerlink" href="#os-example-10-15-disk-stick-collision" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Take moments about the nail and use the rotation caused by the impact as positive. As shown in the diagram, the disk strikes perpendicular to the stick; treat the disk as a point mass and the stick as a uniform rod. The nail exerts an impulse but no torque about itself, so angular momentum about the nail is conserved during the brief collision. Sticking makes the collision inelastic, and the external pivot impulse means linear momentum need not be conserved.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> After impact, the disk and stick rotate together. Their moments of inertia about the nail add, with the disk at radius <span class="math notranslate nohighlight">\(r\)</span> and the rod pivoted at one end.</p>
+<div class="math notranslate nohighlight">
+\[I_f=mr^2+\frac13Mr^2=\left(0.050\ {\rm kg}+\frac{2.0\ {\rm kg}}{3}\right)(1.2\ {\rm m})^2\approx1.03\ {\rm kg\cdot m^2}.\]</div>
+<p class="sd-card-text">Before impact, only the disk moves. Its velocity is perpendicular to the radius from the nail, so its angular momentum is <span class="math notranslate nohighlight">\(mvr\)</span>. Conservation equates this initial value to the final rotational angular momentum.</p>
+<div class="math notranslate nohighlight">
+\[\omega_f=\frac{mvr}{I_f}=\frac{(0.050\ {\rm kg})(30\ {\rm m/s})(1.2\ {\rm m})}{1.03\ {\rm kg\cdot m^2}}=1.7\ {\rm rad/s}.\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Initially the system’s kinetic energy is entirely the disk’s translational energy.</p>
+<div class="math notranslate nohighlight">
+\[K_i=\frac12mv^2=\frac12(0.050\ {\rm kg})(30\ {\rm m/s})^2=23\ {\rm J}.\]</div>
+<p class="sd-card-text">Immediately afterward, both objects rotate about the fixed nail. Their combined moment of inertia includes the motion of both objects, so the rotational expression gives the entire final kinetic energy.</p>
+<div class="math notranslate nohighlight">
+\[K_f=\frac12I_f\omega_f^2=\frac12(1.03\ {\rm kg\cdot m^2})(1.74\ {\rm rad/s})^2=1.6\ {\rm J}.\]</div>
+<p class="sd-card-text"><strong>(c)</strong> Choose the positive linear direction along the disk’s incoming velocity. The stationary stick contributes no initial momentum.</p>
+<div class="math notranslate nohighlight">
+\[p_i=mv=(0.050\ {\rm kg})(30\ {\rm m/s})=1.5\ {\rm kg\cdot m/s}.\]</div>
+<p class="sd-card-text">Immediately after impact, the disk and the stick’s center-of-mass move in that same direction. Their speeds differ: the disk moves at <span class="math notranslate nohighlight">\(r\omega_f\)</span>, while the rod’s center-of-mass, halfway from the pivot, moves at <span class="math notranslate nohighlight">\((r/2)\omega_f\)</span>. Adding their linear momenta gives the total.</p>
+<div class="math notranslate nohighlight">
+\[p_f=mr\omega_f+M\frac{r}{2}\omega_f=\left(0.050\ {\rm kg}+\frac{2.0\ {\rm kg}}{2}\right)(1.2\ {\rm m})(1.74\ {\rm rad/s})=2.2\ {\rm kg\cdot m/s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The joined objects rotate at <span class="math notranslate nohighlight">\(1.7\ {\rm rad/s}\)</span>. Kinetic energy decreases from <span class="math notranslate nohighlight">\(23\ {\rm J}\)</span> to <span class="math notranslate nohighlight">\(1.6\ {\rm J}\)</span> as energy is transferred into deformation, heating, and sound during sticking. Linear momentum increases from <span class="math notranslate nohighlight">\(1.5\)</span> to <span class="math notranslate nohighlight">\(2.2\ {\rm kg\cdot m/s}\)</span> because the nail supplies an external impulse. These results are consistent: the fixed nail can change linear momentum without doing work or exerting torque about itself.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-6-collisions-of-extended-bodies-in-two-dimensions">OpenStax, College Physics 2e, Example 10.15</a>.</em></p>
+</section>
+<section id="the-percussion-point">
+<h3><span class="section-number">9.6.3. </span>The Percussion Point<a class="headerlink" href="#the-percussion-point" title="Link to this heading">#</a></h3>
+<p><em>What would happen if the disk hit very close to the nail?</em> A force would be exerted on the nail in the forward direction.  Consider these two scenarios:</p>
+<ol class="arabic simple">
+<li><p>The stick is struck at the end farthest from the nail, where a backward force is exerted on the nail.</p></li>
+<li><p>The stick is struck at the end nearest the nail, and a forward force is exerted on the nail.</p></li>
+</ol>
+<p>Striking the stick at a certain point between these points produces no force on the nail.  This intermediate point is known as the <em>percussion point</em>.</p>
+<p>An analogous situation occurs in tennis.</p>
+<ol class="arabic simple">
+<li><p>If you hit a ball with the end of your racquet, the handle is pulled away from your hand.</p></li>
+<li><p>If you hit a ball much farther down on the shaft of the racquet, the handle is pushed into your palm.</p></li>
+<li><p>If you hit the ball at the racquet’s percussion point (aka the “sweet spot”), then little or no force is exerted on your hand and there is less vibration.</p></li>
+</ol>
+<p>This reduces the chances of getting a tennis elbow, where the same effect occurs for a baseball bat.</p>
+<figure class="align-default" id="fig-percussion-point-racquet">
+<img alt="Three-panel comparison of a disk striking a pivoted stick and a tennis ball striking a racquet at different locations. Near the end, the hand experiences a backward force; closer to the handle, the force is forward; at the percussion point, the force on the hand is approximately zero." class="custom-wide-figure" src="../_images/percussion-point.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.16 </span><span class="caption-text"><strong>The percussion point of an extended object.</strong> A disk striking a pivoted stick is analogous to a tennis ball striking a racquet. <strong>(a)</strong> An impact near the far end produces a backward force at the pivot or hand. <strong>(b)</strong> An impact closer to the pivot produces a forward force. <strong>(c)</strong> At the percussion point, the impact produces essentially no force at the pivot or hand. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-ap-courses-2e/pages/10-6-collisions-of-extended-bodies-in-two-dimensions">OpenStax, College Physics 2e, Figure 10.25</a>.</em></span><a class="headerlink" href="#fig-percussion-point-racquet" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Is rotational kinetic energy a vector? Justify your answer.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">No. Rotational kinetic energy is a scalar. Reversing the direction of rotation changes the sign or direction of angular velocity, but <span class="math notranslate nohighlight">\({\rm KE}_{\rm rot}=\frac12I\omega^2\)</span> is unchanged because angular speed is squared. Like every form of energy, rotational kinetic energy has no direction in space.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-6-collisions-of-extended-bodies-in-two-dimensions">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+</section>
+<section id="gyroscopic-effects">
+<h2><span class="section-number">9.7. </span>Gyroscopic Effects<a class="headerlink" href="#gyroscopic-effects" title="Link to this heading">#</a></h2>
+<p>Angular momentum is a vector, which has <em>magnitude</em> and <em>direction</em>.  Torque affects both the direction and magnitude of angular momentum.  <em>What is the direction of the angular momentum of a rotating disk?</em></p>
+<p>The direction of both the angular momentum and angular velocity can be found using the <strong>right-hand rule</strong>.  The right-hand rule defines both <span class="math notranslate nohighlight">\(\vec{L}\)</span> and <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> to be perpendicular to the plane of rotation.  Because angular momentum is related to angular velocity (<span class="math notranslate nohighlight">\(\vec{L}=I\vec{\omega}\)</span>), the direction of <span class="math notranslate nohighlight">\(\vec{L}\)</span> is the same as the direction of <span class="math notranslate nohighlight">\(\vec{\omega}\)</span>.</p>
+<figure class="align-default" id="fig-angular-momentum-right-hand-rule">
+<img alt="A rotating disk with angular velocity omega and angular momentum L directed along the rotation axis, alongside a right hand illustrating the right-hand rule for determining the direction of the angular momentum vector." class="custom-wide-figure" src="../_images/angular_momentum_and_the_right_hand_rule.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.17 </span><span class="caption-text"><strong>Angular momentum and the right-hand rule.</strong> <strong>(a)</strong> For a rigid object rotating about a fixed axis, the angular momentum <span class="math notranslate nohighlight">\(\vec{L}\)</span> points along the rotation axis and has magnitude <span class="math notranslate nohighlight">\(L=I\omega\)</span>. <strong>(b)</strong> The direction follows the right-hand rule: curl the fingers of your right hand in the direction of rotation, and your thumb points in the direction of both <span class="math notranslate nohighlight">\(\vec{\omega}\)</span> and <span class="math notranslate nohighlight">\(\vec{L}\)</span>. <em>Adapted from OpenStax, College Physics 2e.</em></span><a class="headerlink" href="#fig-angular-momentum-right-hand-rule" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Recall that torque changes the angular momentum, which can be expressed by</p>
+<div class="math notranslate nohighlight">
+\[ \vec{\tau}_{\rm net} = \frac{\Delta \vec{L}}{\Delta t}. \]</div>
+<p>This equation means that the direction of <span class="math notranslate nohighlight">\(\Delta \vec{L}\)</span> is the same as the direction of the torque <span class="math notranslate nohighlight">\(\vec{\tau}\)</span> that creates it.</p>
+<p>Consider a bicycle wheel held by a woman with a couple of handles attached to it.  With the wheel rotating, its angular momentum is to her left.  Suppose she tries to rotate it, where her natural expectation is that the wheel will rotate in the direction she pushes it.  But, the forces exerted create a torque that is horizontal toward the person.</p>
+<figure class="align-default" id="fig-bike-wheel-precession">
+<img alt="Two-panel illustration of gyroscopic precession. In panel a, a person holds a spinning bicycle wheel and applies upward and downward forces at opposite ends of the axle while the wheel has angular momentum L and angular velocity omega along its axle. In panel b, the vectors L and delta L add to produce a new angular momentum L plus delta L, causing the wheel to precess." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/4951f82df523d75980a31d0b64388d0d07da0310" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.18 </span><span class="caption-text"><strong>Gyroscopic precession of a spinning bicycle wheel.</strong> <strong>(a)</strong> A person lifts one end of the axle and pushes down on the other, creating a torque directed toward the person. The torque produces a change in angular momentum <span class="math notranslate nohighlight">\(\Delta\vec{L}\)</span> in the same direction. <strong>(b)</strong> Adding <span class="math notranslate nohighlight">\(\Delta\vec{L}\)</span> to the original angular momentum <span class="math notranslate nohighlight">\(\vec{L}\)</span> changes the direction of the wheel’s angular momentum, causing the wheel to move toward the person rather than in the direction of the applied forces. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-7-gyroscopic-effects-vector-aspects-of-angular-momentum">OpenStax, College Physics 2e, Figure 10.28</a>.</em></span><a class="headerlink" href="#fig-bike-wheel-precession" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This torque creates a change in angular momentum <span class="math notranslate nohighlight">\(\Delta \vec{L}\)</span> in the same direction (perpendicular to the original angular momentum), thus changing the direction of <span class="math notranslate nohighlight">\(\vec{L}\)</span> but not the magnitude of <span class="math notranslate nohighlight">\(\vec{L}\)</span>.  As a result, <span class="math notranslate nohighlight">\(\Delta \vec{L}\)</span> and <span class="math notranslate nohighlight">\(\vec{L}\)</span> add together and give a new angular momentum with direction that is inclined more toward the person than before.  The axis of the wheel has moved <em>perpendicular to the forces exerted on it</em> instead of in the expected direction.</p>
+<p>The same logic explains the behavior of gyroscopes.  The torque produced is perpendicular to the angular momentum.  Thus the direction of the angular momentum is changed but not its magnitude.  The gyroscope <em>precesses</em> around a vertical axis since the torque is always horizontal and perpendicular to <span class="math notranslate nohighlight">\(\vec{L}\)</span>.  If the gyroscope is <em>not spinning</em>, it acquires angular momentum in the direction of the torque (i.e., <span class="math notranslate nohighlight">\(\vec{L} = \Delta\vec{L}\)</span>) and falls over (rotates about a horizontal axis) just as we would expect.</p>
+<figure class="align-default" id="fig-gyroscope-precession">
+<img alt="Two-panel diagram of a gyroscope. In panel a, a spinning gyroscope has angular momentum L along its axis, weight w acting downward, torque tau perpendicular to L, and a precession angular velocity omega sub p. In panel b, vector addition shows that adding delta L to L changes the direction of angular momentum to L plus delta L, producing precession." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ec4676dd7dfad52fcbacf85d6f20197de21d0be6" />
+<figcaption>
+<p><span class="caption-number">Fig. 9.19 </span><span class="caption-text"><strong>Precession of a gyroscope.</strong> <strong>(a)</strong> The weight of the gyroscope produces a torque <span class="math notranslate nohighlight">\(\vec{\tau}\)</span> that is perpendicular to the angular momentum <span class="math notranslate nohighlight">\(\vec{L}\)</span>. Rather than tipping over directly, the gyroscope responds by changing the direction of <span class="math notranslate nohighlight">\(\vec{L}\)</span> and precessing about the vertical axis with angular speed <span class="math notranslate nohighlight">\(\omega_p\)</span>. <strong>(b)</strong> The vector change <span class="math notranslate nohighlight">\(\Delta\vec{L}\)</span> adds to the original angular momentum <span class="math notranslate nohighlight">\(\vec{L}\)</span>, giving a new angular momentum <span class="math notranslate nohighlight">\(\vec{L}+\Delta\vec{L}\)</span> with a slightly different direction. <em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-7-gyroscopic-effects-vector-aspects-of-angular-momentum">OpenStax, College Physics 2e</a>.</em></span><a class="headerlink" href="#fig-gyroscope-precession" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Rotational kinetic energy is associated with angular momentum. Does that mean rotational kinetic energy is a vector?</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">No. Angular momentum is a vector, but rotational kinetic energy is a scalar. The association between two quantities does not require them to have the same mathematical type; <span class="math notranslate nohighlight">\(L=I\omega\)</span> retains the direction of angular velocity, while <span class="math notranslate nohighlight">\({\rm KE}_{\rm rot}=\frac12I\omega^2\)</span> depends only on its magnitude.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/10-7-gyroscopic-effects-vector-aspects-of-angular-momentum">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+</section>
+<section id="in-class-exercises">
+<h2><span class="section-number">9.8. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">9.8.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3><span class="section-number">9.8.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>You have a grindstone (a disk) that is <span class="math notranslate nohighlight">\(9.0\times10^1\ {\rm kg}\)</span>, has a <span class="math notranslate nohighlight">\(0.34\ {\rm m}\)</span> radius, and is turning at <span class="math notranslate nohighlight">\(9.0\times10^1\ {\rm rpm}\)</span>, and you press a steel axe against it with a radial force of <span class="math notranslate nohighlight">\(2.0\times10^1\ {\rm N}\)</span>.<br />
+(a) Assuming the kinetic coefficient of friction between steel and stone is <span class="math notranslate nohighlight">\(0.20\)</span>, calculate the angular acceleration of the grindstone.<br />
+(b) How many turns will the stone make before coming to rest?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Calculate the moment of inertia of a skater given the following information.<br />
+(a) The <span class="math notranslate nohighlight">\(6.0\times10^1\ {\rm kg}\)</span> skater is approximated as a cylinder that has a <span class="math notranslate nohighlight">\(0.11\ {\rm m}\)</span> radius.<br />
+(b) The skater with arms extended is approximately a cylinder that is <span class="math notranslate nohighlight">\(52.5\ {\rm kg}\)</span>, has a <span class="math notranslate nohighlight">\(0.11\ {\rm m}\)</span> radius, and has two <span class="math notranslate nohighlight">\(0.90\ {\rm m}\)</span>-long arms which are <span class="math notranslate nohighlight">\(3.75\ {\rm kg}\)</span> each and extend straight out from the cylinder like rods rotated about their ends.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>While punting a football, a kicker rotates her leg about the hip joint. The moment of inertia of the leg is <span class="math notranslate nohighlight">\(3.8\ {\rm kg\cdot m^2}\)</span> and its rotational kinetic energy is <span class="math notranslate nohighlight">\(1.8\times10^2\ {\rm J}\)</span>.<br />
+(a) What is the angular velocity of the leg?<br />
+(b) What is the velocity of the tip of the punter’s shoe if it is <span class="math notranslate nohighlight">\(1.05\ {\rm m}\)</span> from the hip joint?<br />
+(c) Explain how the football can be given a velocity greater than the tip of the shoe, which is necessary for a decent kick distance.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>Three children are riding on the edge of a merry-go-round that is <span class="math notranslate nohighlight">\(1.0\times10^2\ {\rm kg}\)</span>, has a <span class="math notranslate nohighlight">\(1.6\ {\rm m}\)</span> radius, and is spinning at <span class="math notranslate nohighlight">\(2.0\times10^1\ {\rm rpm}\)</span>. The children have masses of <span class="math notranslate nohighlight">\(22\ {\rm kg}\)</span>, <span class="math notranslate nohighlight">\(28\ {\rm kg}\)</span>, and <span class="math notranslate nohighlight">\(33\ {\rm kg}\)</span>. If the child who has a mass of <span class="math notranslate nohighlight">\(28\ {\rm kg}\)</span> moves to the center of the merry-go-round, what is the new angular velocity in <span class="math notranslate nohighlight">\({\rm rpm}\)</span>?</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">9.9. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">9.9.1. </span>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">9.9.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>A ball slides up a frictionless ramp. It is then rolled without slipping and with the same initial velocity up another frictionless ramp (with the same slope angle). In which case does it reach a greater height, and why?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Suppose a child walks from the outer edge of a rotating merry-go-round to the inside. Does the angular velocity of the merry-go-round increase, decrease, or remain the same? Explain your answer.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">9.9.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>An ultracentrifuge accelerates from rest to <span class="math notranslate nohighlight">\(1.0\times10^5\ {\rm rpm}\)</span> in <span class="math notranslate nohighlight">\(2.0\ {\rm min}\)</span>.<br />
+(a) What is its angular acceleration in <span class="math notranslate nohighlight">\({\rm rad/s^2}\)</span>?<br />
+(b) What is the tangential acceleration of a point <span class="math notranslate nohighlight">\(9.5\ {\rm cm}\)</span> from the axis of rotation?<br />
+(c) What is the radial acceleration in <span class="math notranslate nohighlight">\({\rm m/s^2}\)</span> and multiples of <span class="math notranslate nohighlight">\(g\)</span> of this point at full rpm?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>A gyroscope slows from an initial rate of <span class="math notranslate nohighlight">\(32\ {\rm rad/s}\)</span> at a rate of <span class="math notranslate nohighlight">\(0.70\ {\rm rad/s^2}\)</span>.<br />
+(a) How long does it take to come to rest?<br />
+(b) How many revolutions does it make before stopping?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>The triceps muscle in the back of the upper arm extends the forearm. This muscle in a professional boxer exerts a force of <span class="math notranslate nohighlight">\(2.0\times10^3\ {\rm N}\)</span> with an effective perpendicular lever arm of <span class="math notranslate nohighlight">\(3.0\ {\rm cm}\)</span>, producing an angular acceleration of the forearm of <span class="math notranslate nohighlight">\(1.2\times10^2\ {\rm rad/s^2}\)</span>. What is the moment of inertia of the boxer’s forearm?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>A playground merry-go-round has a mass of <span class="math notranslate nohighlight">\(1.2\times10^2\ {\rm kg}\)</span> and a radius of <span class="math notranslate nohighlight">\(1.8\ {\rm m}\)</span> and it is rotating with an angular velocity of <span class="math notranslate nohighlight">\(0.50\ {\rm rev/s}\)</span>. What is its angular velocity after a <span class="math notranslate nohighlight">\(22\ {\rm kg}\)</span> child gets onto it by grabbing its outer edge? The child is initially at rest.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +1827,70 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-acceleration">9.1. Angular Acceleration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-acceleration-of-a-bike-wheel">9.1.1. Example Problem: Angular Acceleration of a Bike Wheel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-acceleration-of-a-motorcycle-wheel">9.1.2. Example Problem: Angular Acceleration of a Motorcycle Wheel</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematics-of-rotational-motion">9.2. Kinematics of Rotational Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-acceleration-of-a-fishing-reel">9.2.1. Example Problem: Acceleration of a Fishing Reel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-stopping-a-fishing-reel">9.2.2. Example Problem: Stopping a Fishing Reel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-slow-acceleration-of-a-freight-train">9.2.3. Example Problem: Slow Acceleration of a Freight Train</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-distance-traveled-on-a-microwave-plate">9.2.4. Example Problem: Distance Traveled on a Microwave Plate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamics-of-rotational-motion-rotational-inertia">9.3. Dynamics of Rotational Motion: Rotational Inertia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-inertia-and-moment-of-inertia">9.3.1. Rotational Inertia and Moment of Inertia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-mass-distribution-on-a-merry-go-round">9.3.2. Example Problem: Mass Distribution on a Merry-Go-Round</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-kinetic-energy">9.4. Rotational Kinetic Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-work-and-energy-of-a-grindstone">9.4.1. Example Problem: Work and Energy of a Grindstone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-energy-in-helicopter-blades">9.4.2. Example Problem: Energy in Helicopter Blades</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-don-t-all-objects-roll-downhill-at-the-same-rate">9.4.3. Why Don’t all Objects Roll Downhill at the Same Rate?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cylinder-rolling-down-an-incline">9.4.4. Example Problem: Cylinder Rolling Down an Incline</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum-and-its-conservation">9.5. Angular Momentum and its Conservation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-momentum-of-earth">9.5.1. Example Problem: Angular Momentum of Earth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-angular-momentum-of-a-lazy-susan">9.5.2. Example Problem: Angular Momentum of a Lazy Susan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-torque-in-a-kick">9.5.3. Example Problem: Torque in a Kick</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-angular-momentum">9.5.4. Conservation of Angular Momentum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-spinning-ice-skater">9.5.5. Example Problem: Spinning Ice Skater</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collisions-of-extended-bodies-in-2d">9.6. Collisions of Extended Bodies in 2D</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-angular-momentum-in-a-collision">9.6.1. Using Angular Momentum in a Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-rotation-in-a-collision">9.6.2. Example Problem: Rotation in a Collision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-percussion-point">9.6.3. The Percussion Point</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gyroscopic-effects">9.7. Gyroscopic Effects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">9.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">9.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">9.8.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">9.9. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.9.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">9.9.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">9.9.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
