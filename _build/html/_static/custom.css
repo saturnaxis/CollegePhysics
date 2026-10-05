@@ -24,6 +24,34 @@ P {text-align: justify;}
     /* Text and Icons: White for high contrast against the blue */
     --plyr-audio-control-color: #FFFFFF;
 }
+
+.pronunciation-widget {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.pronunciation-label {
+    font-weight: 600;
+    margin-right: 0.15rem;
+}
+
+.pronunciation-widget button {
+    padding: 0.25rem 0.65rem;
+    border: 1px solid #777;
+    border-radius: 0.3rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+.pronunciation-widget button:hover {
+    background: rgba(128, 128, 128, 0.12);
+}
+
 /* -----------------------------
    etamu-exercise styling
    ----------------------------- */

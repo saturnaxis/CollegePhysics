@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ffec1ee8" />
     <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -494,12 +494,32 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-rate-and-its-relation-to-velocity">11.1. Flow Rate and its Relation to Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-equation">11.2. Bernoulli’s Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-applications-of-bernoulli-s-equation">11.3. General Applications of Bernoulli’s Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-and-laminar-flow">11.4. Viscosity and Laminar Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-equation">11.2. Bernoulli’s Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-equation-for-static-fluids">11.2.1. Bernoulli’s Equation for Static Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-principle-bernoulli-s-equation-at-constant-depth">11.2.2. Bernoulli’s Principle – Bernoulli’s Equation at Constant Depth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entrainment">11.2.3. Entrainment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wings-and-sails">11.2.4. Wings and Sails</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-measurement">11.2.5. Velocity Measurement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-applications-of-bernoulli-s-equation">11.3. General Applications of Bernoulli’s Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torricelli-s-theorem">11.3.1. Torricelli’s Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-in-fluid-flow">11.3.2. Power in Fluid Flow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-and-laminar-flow">11.4. Viscosity and Laminar Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laminar-flow-confined-to-tubes-poiseuille-s-law">11.4.1. Laminar Flow Confined to Tubes – Poiseuille’s Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-resistance-as-causes-of-pressure-drops">11.4.2. Flow and Resistance as Causes of Pressure Drops</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onset-of-turbulence">11.5. Onset of Turbulence</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-of-an-object-in-a-viscous-fluid">11.6. Motion of an Object in a Viscous Fluid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-transport-phenomena">11.7. Molecular Transport Phenomena</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-transport-phenomena">11.7. Molecular Transport Phenomena</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion">11.7.1. Diffusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-and-direction-of-diffusion">11.7.2. Rate and Direction of Diffusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osmosis-and-dialysis-diffusion-across-membranes">11.7.3. Osmosis and Dialysis – Diffusion across Membranes</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">11.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">11.8.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">11.8.2. Problems</a></li>
@@ -524,12 +544,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fluids-dynamics">
 <h1><span class="section-number">11. </span>Fluids: Dynamics<a class="headerlink" href="#fluids-dynamics" title="Link to this heading">#</a></h1>
-<p>Oct 02, 2026 | 1176 words | 8 min read</p>
+<p>Oct 04, 2026 | 5480 words | 37 min read</p>
 <section id="flow-rate-and-its-relation-to-velocity">
 <h2><span class="section-number">11.1. </span>Flow Rate and its Relation to Velocity<a class="headerlink" href="#flow-rate-and-its-relation-to-velocity" title="Link to this heading">#</a></h2>
 <p>The volume of fluid <span class="math notranslate nohighlight">\(V\)</span> passing by some location through an area <span class="math notranslate nohighlight">\(A\)</span> during a time interval <span class="math notranslate nohighlight">\(t\)</span> defines the <strong>flow rate</strong> <span class="math notranslate nohighlight">\(Q\)</span>.  Mathematically this is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e204d141-4708-4f98-800a-99ff5e3374e7">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-e204d141-4708-4f98-800a-99ff5e3374e7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5fca70c9-443f-4be4-a033-b337962afaf2">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-5fca70c9-443f-4be4-a033-b337962afaf2" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = \frac{V}{t}.
 \end{align}\]</div>
 <p><em>Note that the <span class="math notranslate nohighlight">\(V\)</span> used here is for volume not velocity.</em></p>
@@ -558,13 +578,13 @@ Q = \frac{V}{t}.
 <li><p>The flow rate also depends on the size of the river.</p></li>
 </ul>
 <p>A rapid mountain stream carries less water than the Amazon River.  the precise relationship between the flow rate <span class="math notranslate nohighlight">\(Q\)</span> and average velocity <span class="math notranslate nohighlight">\(\bar{v}\)</span> depends on the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb8941be-8eeb-405d-999d-3ed979c5ab0f">
-<span class="eqno">(11.2)<a class="headerlink" href="#equation-fb8941be-8eeb-405d-999d-3ed979c5ab0f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-51f34d26-218c-4f9a-835a-5eaf98543087">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-51f34d26-218c-4f9a-835a-5eaf98543087" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = A\bar{v}.
 \end{align}\]</div>
 <p>The flow rate is directly proportional to both the magnitude of the average velocity (or speed) and the size of the river, pipe or other conduit.  The larger the pipe, the greater its cross-sectional area.  Figure <a class="reference internal" href="#fluid-flow-rate"><span class="std std-numref">11.1</span></a> shows a shaded cylinder, where a volume <span class="math notranslate nohighlight">\(V\)</span> is found by the amount of fluid that flows past a point <span class="math notranslate nohighlight">\(P\)</span> in a time <span class="math notranslate nohighlight">\(t\)</span>.  The volume is determined using the cross-section <span class="math notranslate nohighlight">\(A\)</span> and the distance <span class="math notranslate nohighlight">\(d\)</span> traveled by the cross-section or <span class="math notranslate nohighlight">\(V=Ad\)</span>.  If we divide both sides by <span class="math notranslate nohighlight">\(t\)</span>, then we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-403baa1c-671f-4066-bae8-2173cbdfde51">
-<span class="eqno">(11.3)<a class="headerlink" href="#equation-403baa1c-671f-4066-bae8-2173cbdfde51" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-888ad9a7-a967-46d5-8da9-c1f0dcf52c94">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-888ad9a7-a967-46d5-8da9-c1f0dcf52c94" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = \frac{V}{t} = \frac{Ad}{t} = A\bar{v},
 \end{align}\]</div>
 <p>and the average speed is <span class="math notranslate nohighlight">\(\bar{v}=d/t\)</span>.</p>
@@ -587,36 +607,521 @@ Q = \frac{V}{t} = \frac{Ad}{t} = A\bar{v},
 </figure>
 <p>Figure <a class="reference internal" href="#continuity-flow"><span class="std std-numref">11.2</span></a> shows an incompressible fluid flowing along a pipe of decreasing radius.  The same amount of fluid must flow past any point in the tube in given time to ensure the continuity of flow because the fluid is incompressible.  In this case, the velocity must increase because the cross-sectional area of the pipe decreases and the flow rate must be constant.</p>
 <p>Consider the flow rate in the wider section <span class="math notranslate nohighlight">\(Q_1\)</span> and the flow rate in the narrower section <span class="math notranslate nohighlight">\(Q_2\)</span>.  If the flow rate is a constant (i.e., not changing), then</p>
-<div class="amsmath math notranslate nohighlight" id="equation-200c26f0-c180-4f35-a183-168b4c3a90f7">
-<span class="eqno">(11.4)<a class="headerlink" href="#equation-200c26f0-c180-4f35-a183-168b4c3a90f7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-79302b51-9af8-4b64-8b48-bee2c785825e">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-79302b51-9af8-4b64-8b48-bee2c785825e" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q_1 &amp;= Q_2, \\
 A_1 \bar{v}_1 &amp;= A_2 \bar{v}_2.
 \end{align}\]</div>
 <p>This is called the equation of continuity and is valid for any incompressible fluid.  You can see the consequences of this equation by observing how water flows from a hose into a narrow spray nozzle, where the water emerges with a large speed.  A river water that empties into one end of a reservoir will slow considerably and pickup speed again when/if it leaves the other end of the reservoir.</p>
 <p>In the cardiovascular system (and other situations), branching of the flow occurs.  The blood is pumped from the heart into arteries that subdivide into smaller arteries (arterioles) which branch into very fine vessels called <em>capillaries</em>.  The continuity of flow is maintained but it the <em>sum</em> of the flow rates in each branch in any portion along the tube that is maintained.  As a result, the equation of continuity in a more general form becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74f41ad3-8b0b-484d-a81c-84cf75810d51">
-<span class="eqno">(11.5)<a class="headerlink" href="#equation-74f41ad3-8b0b-484d-a81c-84cf75810d51" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6fa63902-4000-4994-b9fb-55a11836ef1d">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-6fa63902-4000-4994-b9fb-55a11836ef1d" title="Permalink to this equation">#</a></span>\[\begin{align}
 n_1 A_1 \bar{v}_1 = n_2 A_2 \bar{v}_2,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_2\)</span> are the number of branches in each of the sections along the tube.</p>
 </section>
 <section id="bernoulli-s-equation">
 <h2><span class="section-number">11.2. </span>Bernoulli’s Equation<a class="headerlink" href="#bernoulli-s-equation" title="Link to this heading">#</a></h2>
+<p>When a fluid flows into a narrower channel, its speed increases.  It also means that his kinetic energy increases.  <em>Where does that change in kinetic energy come from?</em></p>
+<p>The increased kinetic energy comes from the net work done on the fluid to push it into the channel and by the gravitational force if there is a vertical displacement.  Recall the work-energy theorem</p>
+<div class="math notranslate nohighlight">
+\[ W_{\rm net} = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2. \]</div>
+<p>There is a pressure difference (<span class="math notranslate nohighlight">\(\Delta P = P_2-P_1\)</span>) when the channel narrows.  This pressure difference results in a net force on the fluid (i.e., <span class="math notranslate nohighlight">\(F = PA\)</span>).  The net work done increases the fluid’s kinetic energy.  As a result, the <em>pressure will drop in a rapidly-moving fluid</em>, whether or not the fluid is confined to a tube.</p>
+<p>There are a number of examples of pressure dropping in rapidly-moving fluids.</p>
+<ol class="arabic simple">
+<li><p>Shower curtain bulge when the shower is on.  The high-velocity stream of water and air creates a region of lower pressure inside the shower, while atmospheric pressure is on the other side.  the pressure difference results in a net force pushing the curtain in.</p></li>
+<li><p>Passing a truck on the highway, your car tends to veer toward it.  The high-velocity air between the car and the truck creates a region of lower pressure, and the vehicles are pushed together by the greater pressure on the outside.</p></li>
+</ol>
+<hr class="docutils" />
+<p>The relationship between pressure and velocity in fluids is described quantitatively by <strong>Bernoulli’s equation</strong>, named after <a class="reference external" href="https://en.wikipedia.org/wiki/Daniel_Bernoulli">Daniel Bernoulli</a>.  Bernoulli’s equation applies to an incompressible, frictionless fluid so that the absolute pressure <span class="math notranslate nohighlight">\(P\)</span> and “energy” of the fluid add to each to make a constant, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2b0e6fb3-423e-4984-98f3-e1657b06fb1c">
+<span class="eqno">(11.6)<a class="headerlink" href="#equation-2b0e6fb3-423e-4984-98f3-e1657b06fb1c" title="Permalink to this equation">#</a></span>\[\begin{align}
+P + \frac{1}{2}\rho v^2 + \rho gh = \text{constant},
+\end{align}\]</div>
+<p>which depends on the density <span class="math notranslate nohighlight">\(\rho\)</span> of the fluid, the velocity of the fluid <span class="math notranslate nohighlight">\(v\)</span>, height <span class="math notranslate nohighlight">\(h\)</span> above some reference point, and the acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p>If we follow a small volume of fluid along its path, various quantities may change, but the total sum remains constant.  Let the subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> refer to two points along the path that the bit of fluid follows.  Bernoulli’s equation becomes</p>
+<div class="amsmath math notranslate nohighlight" id="equation-62143a0a-190c-45dd-8a35-b92dd6422539">
+<span class="eqno">(11.7)<a class="headerlink" href="#equation-62143a0a-190c-45dd-8a35-b92dd6422539" title="Permalink to this equation">#</a></span>\[\begin{align}
+P_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 &amp;= P_2 + \frac{1}{2}\rho v_2^2 + \rho gh_2, 
+(P_1 - P_2) + \frac{1}{2}\rho (v_1^2-v_2^2) + \rho g (h_1-h_2) &amp; = 0.
+\end{align}\]</div>
+<p>Bernoulli’s equation is a form of the conservation of energy principle, where second and third terms are the kinetic and potential energy and the mass <span class="math notranslate nohighlight">\(m\)</span> is replaced with the density <span class="math notranslate nohighlight">\(\rho\)</span>.  Each term has units of energy per unit volume.</p>
+<section id="bernoulli-s-equation-for-static-fluids">
+<h3><span class="section-number">11.2.1. </span>Bernoulli’s Equation for Static Fluids<a class="headerlink" href="#bernoulli-s-equation-for-static-fluids" title="Link to this heading">#</a></h3>
+<p>Let’s first consider the case where the fluid is static (i.e., <span class="math notranslate nohighlight">\(v_1 = v_2 = 0\)</span>).  Bernoulli’s equation simplifies to</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ffa4e3e3-b821-416c-aac1-bbe7dc58af9f">
+<span class="eqno">(11.8)<a class="headerlink" href="#equation-ffa4e3e3-b821-416c-aac1-bbe7dc58af9f" title="Permalink to this equation">#</a></span>\[\begin{align}
+P_1 + \rho gh_1 = P_2 + \rho gh_2.
+\end{align}\]</div>
+<p>We can measure <span class="math notranslate nohighlight">\(h_1\)</span> relative to point 2 so that <span class="math notranslate nohighlight">\(h_2 = 0\)</span> and <span class="math notranslate nohighlight">\(h_1=h\)</span>.  In this case we find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d351020a-9d61-459b-8d56-a46e8eab4a80">
+<span class="eqno">(11.9)<a class="headerlink" href="#equation-d351020a-9d61-459b-8d56-a46e8eab4a80" title="Permalink to this equation">#</a></span>\[\begin{align}
+P_2 &amp;= P_1 \rho gh, \\
+P_2 - P_1 &amp;= \rho gh.
+\end{align}\]</div>
+<p>For static fluids, the pressure increases with the depth <span class="math notranslate nohighlight">\(h\)</span>.  Bernoulli’s equation includes the fact that the pressure dut to the weight of the fluid is <span class="math notranslate nohighlight">\(\rho gh\)</span>.</p>
+</section>
+<section id="bernoulli-s-principle-bernoulli-s-equation-at-constant-depth">
+<h3><span class="section-number">11.2.2. </span>Bernoulli’s Principle – Bernoulli’s Equation at Constant Depth<a class="headerlink" href="#bernoulli-s-principle-bernoulli-s-equation-at-constant-depth" title="Link to this heading">#</a></h3>
+<p>Another situation is when the fluid moves but its depth is constant (i.e., <span class="math notranslate nohighlight">\(h_1 = h2\)</span>).  Under that condition, Bernoulli’s equation becomes</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aa99f938-01cc-45ef-83ab-429fef9c9300">
+<span class="eqno">(11.10)<a class="headerlink" href="#equation-aa99f938-01cc-45ef-83ab-429fef9c9300" title="Permalink to this equation">#</a></span>\[\begin{align}
+P_1 + \frac{1}{2}\rho v_1^2 &amp;= P_2 + \frac{1}{2}\rho v_2^2, \\
+P_1 - P_2 &amp;= \frac{1}{2}\rho\left(v_2^2-v_1^2).
+\end{align}\]</div>
+<p>The condition for constant height is called <strong>Bernoulli’s principle</strong>.  Pressure drops as speed increases in a moving fluid.  We can see this when <span class="math notranslate nohighlight">\(v_2 &gt; v_1\)</span>, then <span class="math notranslate nohighlight">\(P_2 &lt; P_1\)</span> in order for the equality to hold (i.e., both sides are positive).</p>
+</section>
+<section id="entrainment">
+<h3><span class="section-number">11.2.3. </span>Entrainment<a class="headerlink" href="#entrainment" title="Link to this heading">#</a></h3>
+<p>With higher pressure on the outside, a high-velocity fluid forces other fluids into the stream, which is called <strong>entrainment</strong>.  Entrainment devices have been in use since ancient times, particularly as pumps to raise water small heights (e.g., draining swamps, fields, or other low lying areas).</p>
+</section>
+<section id="wings-and-sails">
+<h3><span class="section-number">11.2.4. </span>Wings and Sails<a class="headerlink" href="#wings-and-sails" title="Link to this heading">#</a></h3>
+<p>The airplane wing is an example of Bernoulli’s principle in action.  The wing is tilted upward at a small angle and the upper surface is longer, which causes air to flow faster over it.  The pressure on top of the wing is reduced, which creates an upward force (or <em>lift</em>).  Wings can also gain lift by pushing air downward utilizing the conservation of momentum.  The deflected air molecules result in an upward force on the wing (i.e., Newton’s third law).</p>
+<p>Sails have a shape similar to a wing.  The pressure on the front of the sail (<span class="math notranslate nohighlight">\(P_{\rm front}\)</span>) is lower than the pressure on the back of the sail, <span class="math notranslate nohighlight">\(P_{\rm back}\)</span>.  This results in a forward force and allows you to sail into the wind.</p>
+</section>
+<section id="velocity-measurement">
+<h3><span class="section-number">11.2.5. </span>Velocity Measurement<a class="headerlink" href="#velocity-measurement" title="Link to this heading">#</a></h3>
+<p>A manometer can be used to measure the fluid velocity based on Bernoulli’s principle.  There are two tubes that are small enough so they do not appreciably disturb the flow.  The tube facing the oncoming fluid creates a dead spot having zero velocity (i.e., <span class="math notranslate nohighlight">\(v_1=0\)</span>) in front of it, while fluid passing the other tube has a velocity <span class="math notranslate nohighlight">\(v_2\)</span>.  This means that Bernoulli’s principle reduces to</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bd103db3-3447-47a4-99b8-5a042fb2171a">
+<span class="eqno">(11.11)<a class="headerlink" href="#equation-bd103db3-3447-47a4-99b8-5a042fb2171a" title="Permalink to this equation">#</a></span>\[\begin{align}
+P_1 &amp;= P_2 + \frac{1}{2}\rho v_2^2, \\
+P_1 - P_2 &amp;= \frac{1}{2}\rho v_2^2.
+\end{align}\]</div>
+<p>There is a drop in pressure at <span class="math notranslate nohighlight">\(P_2\)</span>, so the fluid in the manometer rises by <span class="math notranslate nohighlight">\(h\)</span> on the side connected to the second opening, where</p>
+<div class="math notranslate nohighlight">
+\[ h \propto \frac{1}{2}\rho v_2^2. \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(v_2\)</span>, we find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a4aa82c0-7d33-46e4-ae20-80ad3a95f72e">
+<span class="eqno">(11.12)<a class="headerlink" href="#equation-a4aa82c0-7d33-46e4-ae20-80ad3a95f72e" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_2 \propto \sqrt{h}.
+\end{align}\]</div>
+</section>
 </section>
 <section id="general-applications-of-bernoulli-s-equation">
 <h2><span class="section-number">11.3. </span>General Applications of Bernoulli’s Equation<a class="headerlink" href="#general-applications-of-bernoulli-s-equation" title="Link to this heading">#</a></h2>
+<section id="torricelli-s-theorem">
+<h3><span class="section-number">11.3.1. </span>Torricelli’s Theorem<a class="headerlink" href="#torricelli-s-theorem" title="Link to this heading">#</a></h3>
+<p>Consider water gushing from a large tube through a dam.  <em>What is its speed as it emerges</em>?</p>
+<p>If resistance is negligible, the speed is the same as if the water fell a distance <span class="math notranslate nohighlight">\(h\)</span> from the surface of the reservoir.  The water’s speed is independent of the size of the opening.</p>
+<p>We can analyze this using Bernoulli’s equation since the depth is not constant.  We consider water flowing from the surface (point 1) to the tube’s outlet (point 2).  Then we have from Bernoulli’s equation</p>
+<div class="math notranslate nohighlight">
+\[ P_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 = P_2 + \frac{1}{2}\rho v_1^2 + \rho gh_2. \]</div>
+<p>The pressure is the same at the top of the reservoir and at the outlet because both are exposed to the outside air (i.e., <span class="math notranslate nohighlight">\(P_1 = P_2 = P_{\rm atm}\)</span>).  Under this condition, Bernoulli’s equation reduces to</p>
+<div class="amsmath math notranslate nohighlight" id="equation-60d0083a-f503-49eb-b3fd-94281a3ef466">
+<span class="eqno">(11.13)<a class="headerlink" href="#equation-60d0083a-f503-49eb-b3fd-94281a3ef466" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}\rho v_1^2 + \rho gh_1 &amp;= \frac{1}{2}\rho v_1^2 + \rho gh_2, \\
+v_2^2 &amp;= v_1^2 + 2 g(h_1-h_2).
+\end{align}\]</div>
+<p>Notice that we canceled the common factor of <span class="math notranslate nohighlight">\(\rho\)</span> from all the terms and multiplied by a factor of 2 throughout.  We can measure the height difference of the water as <span class="math notranslate nohighlight">\(h = h_1 - h_2\)</span> so that the equation becomes</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b1475f40-9975-45c9-9de8-e99ab18d81cf">
+<span class="eqno">(11.14)<a class="headerlink" href="#equation-b1475f40-9975-45c9-9de8-e99ab18d81cf" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_2^2 = v_1^2 + 2gh.
+\end{align}\]</div>
+<p>This is a kinematic equation for any object falling a distance <span class="math notranslate nohighlight">\(h\)</span> with negligible resistance.  In fluids, this is called <em>Torricelli’s theorem</em>.</p>
+</section>
+<section id="power-in-fluid-flow">
+<h3><span class="section-number">11.3.2. </span>Power in Fluid Flow<a class="headerlink" href="#power-in-fluid-flow" title="Link to this heading">#</a></h3>
+<p>Power is the <em>rate</em> at which work is done or energy (in any form) is used or supplied.  We can apply this concept through Bernoulli’s equation by considering the following form:</p>
+<div class="math notranslate nohighlight">
+\[ P + \frac{1}{\rho v^2 + \rho gh} = \text{constant}.\]</div>
+<p>All three terms have units of energy per volume.  Recall that the flow rate <span class="math notranslate nohighlight">\(Q = V/t\)</span> relates the volume to the time.  This means that we can multiply the energy per volume (E/V) with the volume per time (V/t) to get an energy per time, or power.  This means we can multiply Bernoulli’s equation by the flow rate to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6c8a4a60-44b6-4f28-9329-078819c4ca18">
+<span class="eqno">(11.15)<a class="headerlink" href="#equation-6c8a4a60-44b6-4f28-9329-078819c4ca18" title="Permalink to this equation">#</a></span>\[\begin{align}
+\left(P + \frac{1}{2}\rho v^2 + \rho gh \right)Q = \text{power}.
+\end{align}\]</div>
+<p>Each term has a clear physical meaning:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(PQ\)</span> ist the power supplied to a fluid (e.g., through a pump) to give it its pressure <span class="math notranslate nohighlight">\(P\)</span>.</p></li>
+<li><p>The middle term <span class="math notranslate nohighlight">\(\frac{1}{2}\rho v^2 Q\)</span> is the power supplied to a fluid to give it its kinetic energy.</p></li>
+<li><p>The final term is the power going to gravitational potential energy.</p></li>
+</ul>
+</section>
 </section>
 <section id="viscosity-and-laminar-flow">
 <h2><span class="section-number">11.4. </span>Viscosity and Laminar Flow<a class="headerlink" href="#viscosity-and-laminar-flow" title="Link to this heading">#</a></h2>
+<p>When preparing a glass of juice, the liquid flows freely and quickly when poured.  However, the syrup you pour on your pancakes flows slowly and some sticks to the inside of the bottle.  The difference is fluid friction between:</p>
+<ol class="arabic simple">
+<li><p>the fluid itself, and</p></li>
+<li><p>the fluid and its surroundings.</p></li>
+</ol>
+<p>The difference in flow due to this friction is called the fluids <strong>viscosity</strong>.  Juice is mostly water with some sugar mixed in, which means it will have a low viscosity.  In contrast, the syrup has a high viscosity.</p>
+<p>The precise definition of viscosity is based on the type of flow: <em>laminar</em> or <em>turbulent</em>.</p>
+<ul class="simple">
+<li><p><strong>Laminar</strong> flow is characterized by the smooth flow of the fluid in <em>layers</em> that do not mix.</p></li>
+<li><p><strong>Turbulent</strong> flow (or <em>turbulence</em>) is characterized by eddies and swirls that mix layers of fluid together.</p></li>
+</ul>
+<p>We see schematically how laminar and turbulent flow differ for the water flowing towards a beach.  Far from the beach the layers flow without mixing and is thus laminar.  When there is a bump in the submerged coastline, there can be turbulence where the layers mix and there are significant velocities in directions other than the overall direction of flow.</p>
+<p>To show the direction of flow, diagrams of these system use <em>streamline</em> that show the direction over small distances.  Streamlines are smooth and continuous when the flow is laminar, but break up and mix when the flow is turbulent.  Turbulence as two main causes:</p>
+<ol class="arabic simple">
+<li><p>Any obstruction or sharp corner creates turbulence by imparting velocities perpendicular to the flow (e.g., for a faucet).</p></li>
+<li><p>High speeds cause turbulence, where the drag between adjacent layers of fluid and between the fluid and its surrounding form swirls and eddies (e.g., for a jet).</p></li>
+</ol>
+<p>We can model viscosity of a fluid using two plates and dividing the fluid into layers of (approximately) laminar flow.  The bottom of the two plate is held fixed, while the top plate is moved to the right and drags fluid with it.  The layer (or lamina) of fluid in contact with either plate does not move relative to the plate.  The top plate moves with a velocity <span class="math notranslate nohighlight">\(v\)</span> while the bottom layer remains at rest.</p>
+<p>Each successive layer from the top down exerts a force on the layer below it and tries to drag it along.  This produces a continuous variation in speed from <span class="math notranslate nohighlight">\(v\)</span> to <span class="math notranslate nohighlight">\(0\)</span>.  Since this is laminar flow, we make sure that the layers do not mix.  The motion appears like a continuous shearing motion.  Fluids have zero shear strength, but the <em>rate</em> at which they are sheared is related to the same geometrical factors <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(L\)</span> used for shear deformation for solids (see <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter05/friction-drag-elasticity.html#sideways-stress-shear-modulus">Sideways Stress</a>).</p>
+<p>A force <span class="math notranslate nohighlight">\(F\)</span> is required to keep the top plate moving at a constant velocity <span class="math notranslate nohighlight">\(v\)</span>, where experiments have shown that this force depends on four factors.</p>
+<ol class="arabic simple">
+<li><p>The force <span class="math notranslate nohighlight">\(F\)</span> is directly proportional to <span class="math notranslate nohighlight">\(v\)</span> (for low enough speeds to avoid turbulence).</p></li>
+<li><p>The force <span class="math notranslate nohighlight">\(F\)</span> is proportional to the area <span class="math notranslate nohighlight">\(A\)</span> of the plate.  This seems reasonable because <span class="math notranslate nohighlight">\(A\)</span> is directly proportional to the amount of fluid being moved.</p></li>
+<li><p>The force <span class="math notranslate nohighlight">\(F\)</span> is <em>inversely</em> proportional to the distance between the plates <span class="math notranslate nohighlight">\(L\)</span>.  This distance acts like an lever arm, where a greater lever arm increases the torque and less force is required.</p></li>
+<li><p>The force <span class="math notranslate nohighlight">\(F\)</span> is proportional to the coefficient of viscosity <span class="math notranslate nohighlight">\(\eta\)</span> (or <code class="docutils literal notranslate"><span class="pre">$\eta$</span></code>).  The greater the viscosity, the greater the force required.</p></li>
+</ol>
+<p>These dependencies are combined into the following relation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e7d54256-b260-4f87-aba0-06f4660cd368">
+<span class="eqno">(11.16)<a class="headerlink" href="#equation-e7d54256-b260-4f87-aba0-06f4660cd368" title="Permalink to this equation">#</a></span>\[\begin{align}
+F = \eta \frac{vA}{L}, 
+\end{align}\]</div>
+<p>which gives us a working definition of the fluid viscosity through the coefficient <span class="math notranslate nohighlight">\(\eta\)</span>, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c88f5d88-72ed-4da2-a950-5576918991b8">
+<span class="eqno">(11.17)<a class="headerlink" href="#equation-c88f5d88-72ed-4da2-a950-5576918991b8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\eta = \frac{FL}{vA}.
+\end{align}\]</div>
+<p>The SI unit of viscosity is <span class="math notranslate nohighlight">\(\rm N\cdot m/[(m/s)m^2] = (N/m^2)s\)</span>, which is a pressure multiplied by a time, or <span class="math notranslate nohighlight">\(\rm Pa\cdot s\)</span>.</p>
+<p>Viscosity varies from one fluid to another by several orders of magnitude.  The viscosities of gases are much less than those of liquids, where these viscosities are also temperature dependent.  The viscosity of blood can be reduced by aspirin (i.e., thinned), allowing it to flow more easily around the body.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-viscosity-fluids">
+<caption><span class="caption-number">Table 11.1 </span><span class="caption-text">Coefficients of Viscosity for Various Fluids</span><a class="headerlink" href="#table-viscosity-fluids" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Fluid</p></th>
+<th class="head"><p>Temperature (<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</p></th>
+<th class="head"><p>Viscosity <span class="math notranslate nohighlight">\(\eta\)</span> (<span class="math notranslate nohighlight">\({\rm mPa\cdot s}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Gases</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Air</p></td>
+<td><p>0</p></td>
+<td><p>0.0171</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>20</p></td>
+<td><p>0.0181</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>40</p></td>
+<td><p>0.0190</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>100</p></td>
+<td><p>0.0218</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ammonia</p></td>
+<td><p>20</p></td>
+<td><p>0.00974</p></td>
+</tr>
+<tr class="row-even"><td><p>Carbon dioxide</p></td>
+<td><p>20</p></td>
+<td><p>0.0147</p></td>
+</tr>
+<tr class="row-odd"><td><p>Helium</p></td>
+<td><p>20</p></td>
+<td><p>0.0196</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydrogen</p></td>
+<td><p>0</p></td>
+<td><p>0.0090</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury vapor</p></td>
+<td><p>20</p></td>
+<td><p>0.0450</p></td>
+</tr>
+<tr class="row-even"><td><p>Oxygen</p></td>
+<td><p>20</p></td>
+<td><p>0.0203</p></td>
+</tr>
+<tr class="row-odd"><td><p>Steam</p></td>
+<td><p>100</p></td>
+<td><p>0.0130</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Liquids</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>0</p></td>
+<td><p>1.792</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>20</p></td>
+<td><p>1.002</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>37</p></td>
+<td><p>0.6947</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>40</p></td>
+<td><p>0.653</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>100</p></td>
+<td><p>0.282</p></td>
+</tr>
+<tr class="row-even"><td><p>Whole blood</p></td>
+<td><p>20</p></td>
+<td><p>3.015</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>37</p></td>
+<td><p>2.084</p></td>
+</tr>
+<tr class="row-even"><td><p>Blood plasma</p></td>
+<td><p>20</p></td>
+<td><p>1.810</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>37</p></td>
+<td><p>1.257</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethyl alcohol</p></td>
+<td><p>20</p></td>
+<td><p>1.20</p></td>
+</tr>
+<tr class="row-odd"><td><p>Methanol</p></td>
+<td><p>20</p></td>
+<td><p>0.584</p></td>
+</tr>
+<tr class="row-even"><td><p>Heavy machine oil</p></td>
+<td><p>20</p></td>
+<td><p>660</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motor oil (SAE 10)</p></td>
+<td><p>30</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-even"><td><p>Olive oil</p></td>
+<td><p>20</p></td>
+<td><p>138</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glycerin</p></td>
+<td><p>20</p></td>
+<td><p>1500</p></td>
+</tr>
+<tr class="row-even"><td><p>Honey</p></td>
+<td><p>20</p></td>
+<td><p>2000–10000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maple syrup</p></td>
+<td><p>20</p></td>
+<td><p>2000–3000</p></td>
+</tr>
+<tr class="row-even"><td><p>Milk</p></td>
+<td><p>20</p></td>
+<td><p>3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Corn oil</p></td>
+<td><p>20</p></td>
+<td><p>65</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Representative values. Viscosity depends on temperature and, for materials such as blood, oils, honey, and syrup, also on composition and measurement conditions. Adapted from OpenStax, College Physics 2e, Table 12.1.</em></p>
+<section id="laminar-flow-confined-to-tubes-poiseuille-s-law">
+<h3><span class="section-number">11.4.1. </span>Laminar Flow Confined to Tubes – Poiseuille’s Law<a class="headerlink" href="#laminar-flow-confined-to-tubes-poiseuille-s-law" title="Link to this heading">#</a></h3>
+<p><em>What causes flow?</em></p>
+<p>From Bernoulli’s principle, we can see that this is simply due to a pressure difference.  The flow rate <span class="math notranslate nohighlight">\(Q\)</span> is in the direction from high to low pressure.  The greater the pressure differential between two points, the greater the flow rate.  This relationship is given mathematically as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b82023bf-d767-476d-b4ad-b5cded188eda">
+<span class="eqno">(11.18)<a class="headerlink" href="#equation-b82023bf-d767-476d-b4ad-b5cded188eda" title="Permalink to this equation">#</a></span>\[\begin{align}
+Q = \frac{P_2 - P_1}{R}, 
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span> are the pressures at points 1 and 2, while the <span class="math notranslate nohighlight">\(R\)</span> is the resistance to flow.  The resistance <span class="math notranslate nohighlight">\(R\)</span> includes everything (except pressure) that affects flow rate.  For example,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R\)</span> is greater for a long tube compared to a short one.</p></li>
+<li><p>The greater the viscosity of the fluid, the greater the value of <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+<li><p>Turbulence greatly increases <span class="math notranslate nohighlight">\(R\)</span>, where as increasing the diameter of a tube decreases <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+</ul>
+<p>if viscosity is zero, the fluid is frictionless and the resistance to flow is also zero.  Comparing frictionless flow in a tube to viscous flow, we see that the speed is greatest at midstream because of drag at the boundaries in the viscous fluid.</p>
+<p>The resistance <span class="math notranslate nohighlight">\(R\)</span> to laminar flow of a incompressible fluid with viscosity <span class="math notranslate nohighlight">\(\eta\)</span> through a horizontal tube of uniform radius <span class="math notranslate nohighlight">\(r\)</span> and length <span class="math notranslate nohighlight">\(l\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a8d9608f-19ac-43eb-9351-31bc8ee6b290">
+<span class="eqno">(11.19)<a class="headerlink" href="#equation-a8d9608f-19ac-43eb-9351-31bc8ee6b290" title="Permalink to this equation">#</a></span>\[\begin{align}
+R = \frac{8\eta l}{\pi r^4}.
+\end{align}\]</div>
+<p>This is called <strong>Poiseuille’s law for resistance</strong> after J.L. Poiseuille, who derived it in an attempt to understand the flow of blood.</p>
+<div class="pronunciation-widget">
+  <span class="pronunciation-label"><strong>Poiseuille</strong> Pronunciation:</span>
+  <button type="button" onclick="speakFrench('Poiseuille', 0.90)" aria-label="Hear Poiseuille pronounced at normal speed">▶ Normal</button>
+  <button type="button" onclick="speakFrench('Poiseuille', 0.65)" aria-label="Hear Poiseuille pronounced slowly">▶ Slow</button>
+  <button type="button" onclick="speakFrench('Poiseuille', 0.45)" aria-label="Hear Poiseuille pronounced very slowly">▶ Slower</button>
+</div>
+
+<script>
+function speakFrench(text, rate) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "fr-FR";
+    utterance.rate = rate;
+    utterance.pitch = 1.0;
+
+    const voices = window.speechSynthesis.getVoices();
+    const frenchVoice = voices.find(voice => voice.lang.toLowerCase().startsWith("fr"));
+    if (frenchVoice) {
+        utterance.voice = frenchVoice;
+    }
+
+    window.speechSynthesis.speak(utterance);
+}
+</script><p>Let’s see what insights we can derive from Poiseuille’s expression for <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<ul class="simple">
+<li><p>Resistance is directly proportional to both fluid viscosity <span class="math notranslate nohighlight">\(\eta\)</span> and the length <span class="math notranslate nohighlight">\(l\)</span> of the tube.  These both directly affect the amount of friction encountered.</p></li>
+<li><p>The radius <span class="math notranslate nohighlight">\(r\)</span> of a tube also affects the resistance, where a greater radius allows for a greater flow.  Since the radius is raised to the <em>fourth</em> power, this means that any change in the radius of a tube has a very large effect on resistance.  Doubling the radius of a tube decreases resistance by a factor of <span class="math notranslate nohighlight">\(2^4 = 16\)</span>.</p></li>
+</ul>
+<p>We can combine the expression for the flow rate <span class="math notranslate nohighlight">\(Q\)</span> and the resistance <span class="math notranslate nohighlight">\(R\)</span> to get a fuller expression of the flow rate as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1ed6edaf-1b61-48a0-9f10-b72825d151ca">
+<span class="eqno">(11.20)<a class="headerlink" href="#equation-1ed6edaf-1b61-48a0-9f10-b72825d151ca" title="Permalink to this equation">#</a></span>\[\begin{align} 
+Q = \frac{(P_2 - P_1)\pi r^4}{8\eta l}.
+\end{align}\]</div>
+<p>This equation describe laminar flow through a tube.</p>
+<p>The circulatory system provides many examples of Poiseuille’s law in action, where blood flow is regulated by changes in the vessel size and blood pressure.  Blood vessels are not rigid but elastic.  Adjustments to blood flow are primarily made by varying the size of the vessels, since the resistance is so sensitive to the radius.</p>
+<p>During vigorous exercise, blood vessels are selectively dilated to important muscles and blood pressure increases.  This creates both greater overall blood flow and increased flow to specific areas.  Conversely, decreases in vessel radii can greatly reduce blood flow (e.g., from plaques in the arteries).</p>
+<p>If a vessel’s radius is reduced by only <span class="math notranslate nohighlight">\(5\%\)</span>, the flow rate is reduced to about <span class="math notranslate nohighlight">\((1-0.05)^4 = 0.81\)</span>, or <span class="math notranslate nohighlight">\(81\%\)</span> of its original value.  A <span class="math notranslate nohighlight">\(19\%\)</span> decrease in flow is caused by a <span class="math notranslate nohighlight">\(5\%\)</span> decrease in
+radius.  The body may compensate by increasing blood pressure by <span class="math notranslate nohighlight">\(19\%\)</span>, but this presents hazards to the heart and any vessel that has weakened walls.</p>
+</section>
+<section id="flow-and-resistance-as-causes-of-pressure-drops">
+<h3><span class="section-number">11.4.2. </span>Flow and Resistance as Causes of Pressure Drops<a class="headerlink" href="#flow-and-resistance-as-causes-of-pressure-drops" title="Link to this heading">#</a></h3>
+<p>You may have noticed that water pressure in your home might be lower than normal on hot summer days when there is more use.  This pressure drop occurs in the water main before it reaches your home.  We can understand why the pressure <span class="math notranslate nohighlight">\(P_1\)</span> to your home drops during times of heavy usage by defining <span class="math notranslate nohighlight">\(P_2\)</span> as the pressure at the water main and rearranging:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d9cebc4e-d6c2-48eb-bb9c-a089fdf6c771">
+<span class="eqno">(11.21)<a class="headerlink" href="#equation-d9cebc4e-d6c2-48eb-bb9c-a089fdf6c771" title="Permalink to this equation">#</a></span>\[\begin{align}
+Q &amp;= \frac{P_2 - P_1}{R},\\
+P_2 - P_1 &amp;= RQ.
+\end{align}\]</div>
+<p>During times of heavy use, the flow rate <span class="math notranslate nohighlight">\(Q\)</span> is large.  This means that <span class="math notranslate nohighlight">\(P_2-P_1\)</span> (i.e., the pressure drop) must also be large.  It is correct to think of flow and resistance as causing the pressure to drop from <span class="math notranslate nohighlight">\(P_2\)</span> to <span class="math notranslate nohighlight">\(P_1\)</span>, where this expression is valid for both laminar and turbulent flows.</p>
+<p>In the human circulatory system, pressure is created by the heart’s two pumps: the right and left ventricles.  The pressure is reduced by the resistance of the blood vessels as the blood flows through them.  The right ventricle receives the lower pressure blood from two major veins and pumps it through the lungs for gas exchange with atmospheric gases (i.e., push out carbon dioxide and take in oxygen).</p>
+<p>The circulatory system branches from arteries to even smaller vessels, where the smallest are <em>capillaries</em>.  There is a considerable flexibility in the flow regulation to the organs in the body by the constriction and dilation of the arteries and capillaries leading to them.  The sensitivity of flow to tube radius makes this flexibility possible over a large range of flow rates.</p>
+<p>Each branching of larger vessels into smaller vessels increase the total cross-sectional area of the tubes through which the blood flows.  For example, an artery with a cross section of <span class="math notranslate nohighlight">\(1\ {\rm cm^2}\)</span> may branch into 20 smaller arteries, each with cross-sections of <span class="math notranslate nohighlight">\(0.5\ {\rm cm^2}\)</span>, with a total of <span class="math notranslate nohighlight">\(10\ {\rm cm^2}\)</span>.  The resistance of the branchings is reduced so that pressure is not entirely lost.</p>
+<p>Because <span class="math notranslate nohighlight">\(Q = A\bar{v}\)</span> and <span class="math notranslate nohighlight">\(A\)</span> increases through branching, the average velocity of the blood in the smaller vessels is reduced.  The blood velocity in the aorta (<span class="math notranslate nohighlight">\(d = 1\ {\rm cm}\)</span>) is about <span class="math notranslate nohighlight">\(25\ {\rm cm/s}\)</span>, while in the capillaries (<span class="math notranslate nohighlight">\(d = 20\ {\rm \mu m} = 0.002\ {\rm cm}\)</span>) the velocity is about <span class="math notranslate nohighlight">\(1\ {\rm mm/s\)</span>.  This reduced velocity allows the blood to exchange substance with the cells in the capillaries and alveoli.</p>
+</section>
 </section>
 <section id="onset-of-turbulence">
 <h2><span class="section-number">11.5. </span>Onset of Turbulence<a class="headerlink" href="#onset-of-turbulence" title="Link to this heading">#</a></h2>
+<p>Sometimes we can predict if flow will be laminar or turbulent.  The flow in a very smooth tube or around a smooth, streamlined object will be laminar at low velocity.  We also know that at high velocity, even flow in a smooth tube (or around a smooth object) will experience turbulence.  It is more difficult to predict conditions between these extremes.  At intermediate velocities, the flow may oscillate back and forth indefinitely between laminar and turbulent.</p>
+<p>An occlusion (or narrowing) of an artery is likely to cause turbulence because of the irregularity of the blockage, as well as the complexity of blood as a fluid.  Turbulence in the circulatory system is noisy and cam sometimes be detected with a stethoscope.  These turbulent sounds are called <em>Korotkoff sounds</em>, which occur at the onset of blood flow when the cuff pressure become sufficiently small.</p>
+<p>Aneurysms (or ballooning of arteries) create significant turbulence and can sometimes be detected with a stethoscope.  Heart murmurs are sounds produced by turbulent flow around damaged and insufficiently closed heart valves.  Ultrasound can also be used to detect turbulence as a medical indicator in a process analogous to Doppler-shift radar used to detect storms.</p>
+<p>An indicator called the <strong>Reynolds number</strong> <span class="math notranslate nohighlight">\(N_{\rm R}\)</span> can reveal whether flow is laminar or turbulent.  For flow in a tube of uniform diameter, the Reynolds number is defined as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-781e9ea3-06e7-40de-8606-7a9985c3cbde">
+<span class="eqno">(11.22)<a class="headerlink" href="#equation-781e9ea3-06e7-40de-8606-7a9985c3cbde" title="Permalink to this equation">#</a></span>\[\begin{align}
+N_{\rm R} = \frac{2}{\eta}\rho v r, \qquad \text{(flow in tube)}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, <span class="math notranslate nohighlight">\(v\)</span> is the fluid speed, and <span class="math notranslate nohighlight">\(r\)</span> is the radius of the tube.  The Reynolds number is a unitless quantity.</p>
+<p>Experiments have revealed that <span class="math notranslate nohighlight">\(N_{\rm R}\)</span> is related to the onset of turbulence.</p>
+<ul class="simple">
+<li><p>For <span class="math notranslate nohighlight">\(N_{\rm R} \lesssim 2000\)</span>, the flow is laminar.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(N_{\rm R} \gtrsim 3000\)</span>, the flow is turbulent.</p></li>
+</ul>
+<p>For values between <span class="math notranslate nohighlight">\(2000-3000\)</span>, the flow is unstable where it can be laminar and small obstructions/surface roughness can make it turbulent.  It may oscillate randomly between being laminar and being turbulent.  The blood flow through most of the body is a quiet, laminar flow.  The exception is the aorta, where the speed of the blood flow rises above a critical value of <span class="math notranslate nohighlight">\(35\ {\rm m/s}\)</span> and becomes turbulent.</p>
 </section>
 <section id="motion-of-an-object-in-a-viscous-fluid">
 <h2><span class="section-number">11.6. </span>Motion of an Object in a Viscous Fluid<a class="headerlink" href="#motion-of-an-object-in-a-viscous-fluid" title="Link to this heading">#</a></h2>
+<p>A moving object in a viscous fluid is equivalent to a stationary object in flowing fluid stream.  For example, when you ride a bicycle at <span class="math notranslate nohighlight">\(10\ {\rm m/s}\)</span> in still air, you feel the air in your face exactly as if you were stationary in a <span class="math notranslate nohighlight">\(10\ {\rm m/s}\)</span> wind.</p>
+<p>Flow of a stationary fluid around a moving object may be laminar, turbulent, or a combination of the two.  Just as with flow in tubes, it is possible to predict when a moving object creates turbulence.  We use another for of the Reynolds number <span class="math notranslate nohighlight">\(N_{\rm R}^\prime\)</span> defined for an object moving in a fluid:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c020cd78-2eb9-4a89-bea9-780a30477d9a">
+<span class="eqno">(11.23)<a class="headerlink" href="#equation-c020cd78-2eb9-4a89-bea9-780a30477d9a" title="Permalink to this equation">#</a></span>\[\begin{align}
+N_{\rm R}^\prime = \frac{1}{\eta}\rho vL, \qquad \text{(object in a fluid)}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is a characteristic length of the object, <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, <span class="math notranslate nohighlight">\(\eta\)</span> is its viscosity, and <span class="math notranslate nohighlight">\(v\)</span> is the object’s speed in the fluid.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(N_{\rm R}^\prime \lesssim 1\)</span>, the flow around the object can be laminar, especially if the object has a smooth shape.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(1&lt; N_{\rm R}^\prime \lesssim 10\)</span>, the flow can transition to being turbulent, depending on surface roughness.  There can be a turbulent wake with some laminar flow over its surface.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(10 &lt; N_{\rm R}^\prime \lesssim 10^6\)</span>, the flow is entirely turbulent, even at the surface of the object.</p></li>
+</ul>
+<p>Laminar flow occurs mostly when the objects in the fluid are small (e.g., raindrops, pollen, and blood cells in plasma).</p>
+<p>There is a resistive force called <strong>viscous drag</strong> <span class="math notranslate nohighlight">\(F_{\rm V}\)</span> that is exerted on a moving object.  This force typically depends on the object’s speed.  Experiments showed that for laminar flow, viscous drag is proportional to speed, whereas for turbulent flow, it is proportional to the speed squared.</p>
+<p>For <span class="math notranslate nohighlight">\(N_{\rm R}^\prime &gt;10^6\)</span>, drag increases dramatically and behaves with greater complexity.  For laminar flow around a sphere <span class="math notranslate nohighlight">\(F_{\rm V}\)</span> is proportional to the fluid viscosity <span class="math notranslate nohighlight">\(\eta\)</span>, characteristic size <span class="math notranslate nohighlight">\(L\)</span>, and its speed <span class="math notranslate nohighlight">\(v\)</span>.  <em>The more viscous the fluid and the larger the object, the more drag we expect.</em>  Recall <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter05/friction-drag-elasticity.html#equation-968999aa-2fc9-4e7f-8fd0-396d4ad99aee">Stokes law</a>, which follows this prescription.</p>
+<p>For the special case of a small sphere of radius <span class="math notranslate nohighlight">\(R\)</span> moving slowly in a fluid of viscosity <span class="math notranslate nohighlight">\(\eta\)</span>, the drag force follows Stoke’s law, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-146b7594-9590-4206-8712-28229077a2a5">
+<span class="eqno">(11.24)<a class="headerlink" href="#equation-146b7594-9590-4206-8712-28229077a2a5" title="Permalink to this equation">#</a></span>\[\begin{align}
+F_{\rm S} = 6\pi R\eta v.
+\end{align}\]</div>
+<p>An interesting consequence of the increase in viscous drag <span class="math notranslate nohighlight">\(F_{\rm V}\)</span> with speed is that an object falling through a fluid will not continue to accelerate indefinitely.  Instead viscous drag increases, slowing acceleration, until the <strong>terminal speed</strong> is reached and the acceleration of the object becomes zero.  Once this happens, the object continues to fall at constant speed.</p>
+<p>This is the case for particles of sand falling in the ocean, cells falling in a centrifuge, and sky divers falling through the air.  There is a viscous drag on an object that depends on the viscosity of the fluid and the size of the object.  But there is also a buoyant force that depends on the density of the object relative to the fluid.  Terminal speed will be greatest for low-viscosity fluids, where the falling objects have high densities and small sizes.  Thus a skydiver falls more slowly with outspread limbs than when they are in a pike position (i.e., head first with hands at their sides and legs together).</p>
 </section>
 <section id="molecular-transport-phenomena">
 <h2><span class="section-number">11.7. </span>Molecular Transport Phenomena<a class="headerlink" href="#molecular-transport-phenomena" title="Link to this heading">#</a></h2>
+<section id="diffusion">
+<h3><span class="section-number">11.7.1. </span>Diffusion<a class="headerlink" href="#diffusion" title="Link to this heading">#</a></h3>
+<p>Atoms and molecules are in constant motion at any temperature.  In fluids, they move about randomly even in the absence of macroscopic flow.  This motion is called a random walk and is executing diffusion.  <strong>Diffusion</strong> is the movement of substances due to random thermal molecular motion.  Fluids can even diffuse through solids.</p>
+<p>Diffusion si a slow process over macroscopic distances.  The densities of common material are great enough that molecules cannot travel very far before having a collision that can scatter them in any direction (including straight backward).  The average distance <span class="math notranslate nohighlight">\(x_{\rm rms}\)</span> that a molecule travels is proportional to the square root of time:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9c4339a4-4565-4ee4-9cac-71c412753d8d">
+<span class="eqno">(11.25)<a class="headerlink" href="#equation-9c4339a4-4565-4ee4-9cac-71c412753d8d" title="Permalink to this equation">#</a></span>\[\begin{align}
+x_{\rm rms} = \sqrt{2Dt},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_{\rm rms}\)</span> represents the <strong>root-mean-square distance</strong> and is the statistical average for the process. The <span class="math notranslate nohighlight">\(D\)</span> is the diffusion constant for the particular molecule in a specific medium.  The unit for <span class="math notranslate nohighlight">\(D\)</span> is an area per second, or <span class="math notranslate nohighlight">\(m^2/s\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-diffusion-constants">
+<caption><span class="caption-number">Table 11.2 </span><span class="caption-text">Diffusion Constants for Various Molecules</span><a class="headerlink" href="#table-diffusion-constants" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 45.0%" />
+<col style="width: 25.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Diffusing molecule</p></th>
+<th class="head"><p>Medium</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(D\)</span> (<span class="math notranslate nohighlight">\({\rm m^2/s}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hydrogen (<span class="math notranslate nohighlight">\({\rm H_2}\)</span>)</p></td>
+<td><p>Air</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.4\times10^{-5}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Oxygen (<span class="math notranslate nohighlight">\({\rm O_2}\)</span>)</p></td>
+<td><p>Air</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.8\times10^{-5}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Oxygen (<span class="math notranslate nohighlight">\({\rm O_2}\)</span>)</p></td>
+<td><p>Water</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\times10^{-9}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Glucose (<span class="math notranslate nohighlight">\({\rm C_6H_{12}O_6}\)</span>)</p></td>
+<td><p>Water</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.7\times10^{-10}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Hemoglobin</p></td>
+<td><p>Water</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.9\times10^{-11}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>DNA</p></td>
+<td><p>Water</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.3\times10^{-12}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Adapted from OpenStax, College Physics 2e, Table 12.2.</em></p>
+<p>Note that <span class="math notranslate nohighlight">\(D\)</span> gets progressively smaller for massive molecules.  This decrease is because the average molecular speed at a given temperature is inversely proportional to molecular mass.  Thus, the more massive molecules diffuse more slowly.  The value of <span class="math notranslate nohighlight">\(D\)</span> for oxygen in air is much greater than for oxygen in water.</p>
+<p>In water an oxygen molecule makes more collisions in its random walk and is slowed considerably.  An oxygen molecule moves only about <span class="math notranslate nohighlight">\(40\ {\rm mu m}\)</span> in <span class="math notranslate nohighlight">\(1\ {\rm s}\)</span>, where each molecule actually collides about <span class="math notranslate nohighlight">\(10^{10}\times\)</span> per second.</p>
+<p>Diffusion constants increase with temperature because the average molecular speed increases with temperature.  The average kinetic energy of molecules <span class="math notranslate nohighlight">\(\left(\frac{1}{2}mv^2\right)\)</span> is proportional to the absolute temperature.</p>
+</section>
+<section id="rate-and-direction-of-diffusion">
+<h3><span class="section-number">11.7.2. </span>Rate and Direction of Diffusion<a class="headerlink" href="#rate-and-direction-of-diffusion" title="Link to this heading">#</a></h3>
+<p>If you carefully place a drop of food coloring in a still glass of water, it will slowly diffuse into the colorless surroundings until the concentration is the same everywhere.  This type of diffusion is called <em>free diffusion</em> because there are no barriers inhibiting it.</p>
+<p>Let’s analyze how the direction and rate of diffusion.  Molecular motion is random in direction, so that simple chance dictates that more molecules will move out of a region of high concentration that into it.  The net rate of diffusion is higher initially than after the process is partially completed.</p>
+<p>The net rate of diffusion is proportional to the concentration difference.  Many more molecules will leave a region of high concentration than will enter a region of low concentration.  If the concentrations were the same, there would be no net movement.  The net rate of diffusion is also proportional to the diffusion constant <span class="math notranslate nohighlight">\(D\)</span>, which is empirical (i.e., experimentally determined).  The farther a molecule can diffuse in a given time, the more likely it is to leave the region of higher concentration. Temperature, cohesive forces, and adhesive forces all affect the values of <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<p>Diffusion is the dominant mechanism by which the exchange of nutrients and waste products occur between the blood and tissue, as well as between air and blood in the lungs.  Larger organisms needed quicker methods of transportation than net diffusion because of the large distances involved in the transport, where those born with a proto-circulatory system survived to reproduction more often that those without such an evolutionary trick.  Less sophisticated, single-celled organisms still rely totally on diffusion for the remove of waste products and the uptake of nutrients.</p>
+</section>
+<section id="osmosis-and-dialysis-diffusion-across-membranes">
+<h3><span class="section-number">11.7.3. </span>Osmosis and Dialysis – Diffusion across Membranes<a class="headerlink" href="#osmosis-and-dialysis-diffusion-across-membranes" title="Link to this heading">#</a></h3>
+<p>Many substances regularly move through cell membranes:</p>
+<ul class="simple">
+<li><p>oxygen moves in,</p></li>
+<li><p>carbon dioxide moves out,</p></li>
+<li><p>nutrients go in, and</p></li>
+<li><p>waste goes out.</p></li>
+</ul>
+<p>Because membranes are thin structures (<span class="math notranslate nohighlight">\(6.5-10\ {\rm nm}\)</span> across) diffusion rates through them can be high.  Membranes are general selectively permeable (or <strong>semipermeable</strong>).  One type of semipermeable membrane has small pores that allow only small molecules to pass through.  Other types of membranes allow molecules to dissolve in the membrane or react with molecules in the membrane while moving across.</p>
+<p>Osmosis can create a substantial pressure.  For example, water moves by osmosis through a semipermeable membrane from a region of high to low concentration.  This can cause the level of the solution to rise, where this movement will continue until the pressure <span class="math notranslate nohighlight">\(\rho g h\)</span> created is large enough to stop further osmosis (i.e., a <em>back pressure</em>).  The back pressure <span class="math notranslate nohighlight">\(\rho gh\)</span> that stops osmosis is also called the <strong>relative osmotic pressure</strong> if neither solution is pure water.  If the solution is pure water, then it is called <strong>osmotic pressure</strong>.</p>
+<p>Osmotic pressure can be large, depending on the size of the concentration difference.  For example, if pure water and sea water are separated by a semipermeable membrane that passes no salt, the osmotic pressure will be <span class="math notranslate nohighlight">\(25.9\ {\rm atm}\)</span>.  Water will diffuse through teh membrane until the salt water surface rises <span class="math notranslate nohighlight">\(268\ {\rm m\)</span> above the pure-water surface.</p>
+<p><strong>Reverse osmosis</strong> and <strong>reverse dialysis</strong> are processes that occur when back pressure is sufficient to reverse the normal direction of substances through membranes.  Back pressure can be created naturally, or a piston can also create this pressure.  Reverse osmosis can be used to desalinate water by simply forcing it through a membrane that will not pass salt.  Reverse dialysis can be used to filter out any substance that a given membrane will not pass.</p>
+<p>We sometimes find that substances pass in teh direction opposite to what we expect.  Cypress tree roots extract pure water from salt water, although osmosis would move it in the opposite direction.  This is not reverse osmosis because there is no back pressure to cause it.  Instead it is <strong>active transport</strong>, which is a process in which a living membrane expends energy to move substances across it.  Many living membranes move water and other substances by active transport.</p>
+<p>The kidneys not only use osmosis and dialysis, they also employ active transport to move substances into an out of blood.  It is estimated that <span class="math notranslate nohighlight">\(&gt;25\%\)</span> of the body’s energy is expended on active transport of substances at the cellular level.</p>
+</section>
 </section>
 <section id="in-class-exercises">
 <h2><span class="section-number">11.8. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
@@ -765,12 +1270,32 @@ n_1 A_1 \bar{v}_1 = n_2 A_2 \bar{v}_2,
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-rate-and-its-relation-to-velocity">11.1. Flow Rate and its Relation to Velocity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-equation">11.2. Bernoulli’s Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-applications-of-bernoulli-s-equation">11.3. General Applications of Bernoulli’s Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-and-laminar-flow">11.4. Viscosity and Laminar Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-equation">11.2. Bernoulli’s Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-equation-for-static-fluids">11.2.1. Bernoulli’s Equation for Static Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-s-principle-bernoulli-s-equation-at-constant-depth">11.2.2. Bernoulli’s Principle – Bernoulli’s Equation at Constant Depth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entrainment">11.2.3. Entrainment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wings-and-sails">11.2.4. Wings and Sails</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-measurement">11.2.5. Velocity Measurement</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-applications-of-bernoulli-s-equation">11.3. General Applications of Bernoulli’s Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torricelli-s-theorem">11.3.1. Torricelli’s Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-in-fluid-flow">11.3.2. Power in Fluid Flow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-and-laminar-flow">11.4. Viscosity and Laminar Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laminar-flow-confined-to-tubes-poiseuille-s-law">11.4.1. Laminar Flow Confined to Tubes – Poiseuille’s Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-resistance-as-causes-of-pressure-drops">11.4.2. Flow and Resistance as Causes of Pressure Drops</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onset-of-turbulence">11.5. Onset of Turbulence</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motion-of-an-object-in-a-viscous-fluid">11.6. Motion of an Object in a Viscous Fluid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-transport-phenomena">11.7. Molecular Transport Phenomena</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-transport-phenomena">11.7. Molecular Transport Phenomena</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusion">11.7.1. Diffusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-and-direction-of-diffusion">11.7.2. Rate and Direction of Diffusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#osmosis-and-dialysis-diffusion-across-membranes">11.7.3. Osmosis and Dialysis – Diffusion across Membranes</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">11.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">11.8.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">11.8.2. Problems</a></li>
