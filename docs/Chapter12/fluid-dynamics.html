@@ -528,7 +528,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">11.9. Homework</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.9.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">11.9.2. Conceptual Questions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">11.9.3. Quantitative Questions</a></li>
 </ul>
 </li>
 </ul>
@@ -544,12 +543,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fluids-dynamics">
 <h1><span class="section-number">11. </span>Fluids: Dynamics<a class="headerlink" href="#fluids-dynamics" title="Link to this heading">#</a></h1>
-<p>Oct 06, 2026 | 6912 words | 46 min read</p>
+<p>Oct 06, 2026 | 6873 words | 46 min read</p>
 <section id="flow-rate-and-its-relation-to-velocity">
 <h2><span class="section-number">11.1. </span>Flow Rate and its Relation to Velocity<a class="headerlink" href="#flow-rate-and-its-relation-to-velocity" title="Link to this heading">#</a></h2>
 <p>The volume of fluid <span class="math notranslate nohighlight">\(V\)</span> passing by some location through an area <span class="math notranslate nohighlight">\(A\)</span> during a time interval <span class="math notranslate nohighlight">\(t\)</span> defines the <strong>flow rate</strong> <span class="math notranslate nohighlight">\(Q\)</span>.  Mathematically this is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c5b8c83b-e5f5-4a51-aff5-aa25a2625d96">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-c5b8c83b-e5f5-4a51-aff5-aa25a2625d96" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2b7a637c-fe37-459d-b255-1a7268d05993">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-2b7a637c-fe37-459d-b255-1a7268d05993" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = \frac{V}{t}.
 \end{align}\]</div>
 <p><em>Note that the <span class="math notranslate nohighlight">\(V\)</span> used here is for volume not velocity.</em></p>
@@ -578,13 +577,13 @@ Q = \frac{V}{t}.
 <li><p>The flow rate also depends on the size of the river.</p></li>
 </ul>
 <p>A rapid mountain stream carries less water than the Amazon River.  the precise relationship between the flow rate <span class="math notranslate nohighlight">\(Q\)</span> and average velocity <span class="math notranslate nohighlight">\(\bar{v}\)</span> depends on the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bef25587-838f-40e9-ac87-58a9de033e31">
-<span class="eqno">(11.2)<a class="headerlink" href="#equation-bef25587-838f-40e9-ac87-58a9de033e31" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dc4aaae3-8f36-42fb-994d-3e711a1cf379">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-dc4aaae3-8f36-42fb-994d-3e711a1cf379" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = A\bar{v}.
 \end{align}\]</div>
 <p>The flow rate is directly proportional to both the magnitude of the average velocity (or speed) and the size of the river, pipe or other conduit.  The larger the pipe, the greater its cross-sectional area.  Figure <a class="reference internal" href="#fluid-flow-rate"><span class="std std-numref">11.1</span></a> shows a shaded cylinder, where a volume <span class="math notranslate nohighlight">\(V\)</span> is found by the amount of fluid that flows past a point <span class="math notranslate nohighlight">\(P\)</span> in a time <span class="math notranslate nohighlight">\(t\)</span>.  The volume is determined using the cross-section <span class="math notranslate nohighlight">\(A\)</span> and the distance <span class="math notranslate nohighlight">\(d\)</span> traveled by the cross-section or <span class="math notranslate nohighlight">\(V=Ad\)</span>.  If we divide both sides by <span class="math notranslate nohighlight">\(t\)</span>, then we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2f427c5-9b4d-4d2e-953f-ceb75e4c4a1f">
-<span class="eqno">(11.3)<a class="headerlink" href="#equation-c2f427c5-9b4d-4d2e-953f-ceb75e4c4a1f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-64e090a9-adf7-4f19-851f-0871a2cd49aa">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-64e090a9-adf7-4f19-851f-0871a2cd49aa" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = \frac{V}{t} = \frac{Ad}{t} = A\bar{v},
 \end{align}\]</div>
 <p>and the average speed is <span class="math notranslate nohighlight">\(\bar{v}=d/t\)</span>.</p>
@@ -607,15 +606,15 @@ Q = \frac{V}{t} = \frac{Ad}{t} = A\bar{v},
 </figure>
 <p>Figure <a class="reference internal" href="#continuity-flow"><span class="std std-numref">11.2</span></a> shows an incompressible fluid flowing along a pipe of decreasing radius.  The same amount of fluid must flow past any point in the tube in given time to ensure the continuity of flow because the fluid is incompressible.  In this case, the velocity must increase because the cross-sectional area of the pipe decreases and the flow rate must be constant.</p>
 <p>Consider the flow rate in the wider section <span class="math notranslate nohighlight">\(Q_1\)</span> and the flow rate in the narrower section <span class="math notranslate nohighlight">\(Q_2\)</span>.  If the flow rate is a constant (i.e., not changing), then</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e22da819-5a41-4dd8-8d27-5c489a464d04">
-<span class="eqno">(11.4)<a class="headerlink" href="#equation-e22da819-5a41-4dd8-8d27-5c489a464d04" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cc2dfceb-883b-4282-aca8-d092dfc17d2d">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-cc2dfceb-883b-4282-aca8-d092dfc17d2d" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q_1 &amp;= Q_2, \\
 A_1 \bar{v}_1 &amp;= A_2 \bar{v}_2.
 \end{align}\]</div>
 <p>This is called the equation of continuity and is valid for any incompressible fluid.  You can see the consequences of this equation by observing how water flows from a hose into a narrow spray nozzle, where the water emerges with a large speed.  A river water that empties into one end of a reservoir will slow considerably and pick up speed again when/if it leaves the other end of the reservoir.</p>
 <p>In the cardiovascular system (and other situations), branching of the flow occurs.  The blood is pumped from the heart into arteries that subdivide into smaller arteries (arterioles) which branch into very fine vessels called <em>capillaries</em>.  The continuity of flow is maintained but it the <em>sum</em> of the flow rates in each branch in any portion along the tube that is maintained.  As a result, the equation of continuity in a more general form becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-50e564a8-e4a5-41e2-acce-3f4b2b0ba52c">
-<span class="eqno">(11.5)<a class="headerlink" href="#equation-50e564a8-e4a5-41e2-acce-3f4b2b0ba52c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-543819f3-b510-41d2-b0ef-dc96d928889e">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-543819f3-b510-41d2-b0ef-dc96d928889e" title="Permalink to this equation">#</a></span>\[\begin{align}
 n_1 A_1 \bar{v}_1 = n_2 A_2 \bar{v}_2,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_2\)</span> are the number of branches in each of the sections along the tube.</p>
@@ -640,14 +639,14 @@ n_1 A_1 \bar{v}_1 = n_2 A_2 \bar{v}_2,
 </figure>
 <hr class="docutils" />
 <p>The relationship between pressure and velocity in fluids is described quantitatively by <strong>Bernoulli’s equation</strong>, named after <a class="reference external" href="https://en.wikipedia.org/wiki/Daniel_Bernoulli">Daniel Bernoulli</a>.  Bernoulli’s equation applies to an incompressible, frictionless fluid so that the absolute pressure <span class="math notranslate nohighlight">\(P\)</span> and “energy” of the fluid add to each to make a constant, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-da6abba7-eead-4faf-b0c2-74f8504f750f">
-<span class="eqno">(11.6)<a class="headerlink" href="#equation-da6abba7-eead-4faf-b0c2-74f8504f750f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9ac381af-86bf-42bc-b40b-2e3b27672354">
+<span class="eqno">(11.6)<a class="headerlink" href="#equation-9ac381af-86bf-42bc-b40b-2e3b27672354" title="Permalink to this equation">#</a></span>\[\begin{align}
 P + \frac{1}{2}\rho v^2 + \rho gh = \text{constant},
 \end{align}\]</div>
 <p>which depends on the density <span class="math notranslate nohighlight">\(\rho\)</span> of the fluid, the velocity of the fluid <span class="math notranslate nohighlight">\(v\)</span>, height <span class="math notranslate nohighlight">\(h\)</span> above some reference point, and the acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <p>If we follow a small volume of fluid along its path, various quantities may change, but the total sum remains constant.  Let the subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> refer to two points along the path that the bit of fluid follows.  Bernoulli’s equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ce3f9bf-ec78-4945-8cec-65c7bce07ced">
-<span class="eqno">(11.7)<a class="headerlink" href="#equation-4ce3f9bf-ec78-4945-8cec-65c7bce07ced" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5d0d85db-a951-4a56-b505-325b674f25ae">
+<span class="eqno">(11.7)<a class="headerlink" href="#equation-5d0d85db-a951-4a56-b505-325b674f25ae" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 &amp;= P_2 + \frac{1}{2}\rho v_2^2 + \rho gh_2, \\
 (P_1 - P_2) + \frac{1}{2}\rho (v_1^2-v_2^2) + \rho g (h_1-h_2) &amp; = 0.
 \end{align}\]</div>
@@ -655,13 +654,13 @@ P_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 &amp;= P_2 + \frac{1}{2}\rho v_2^2 + \rh
 <section id="bernoulli-s-equation-for-static-fluids">
 <h3><span class="section-number">11.2.1. </span>Bernoulli’s Equation for Static Fluids<a class="headerlink" href="#bernoulli-s-equation-for-static-fluids" title="Link to this heading">#</a></h3>
 <p>Let’s first consider the case where the fluid is static (i.e., <span class="math notranslate nohighlight">\(v_1 = v_2 = 0\)</span>).  Bernoulli’s equation simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7074ea40-6272-4f22-9486-f31425afd8ec">
-<span class="eqno">(11.8)<a class="headerlink" href="#equation-7074ea40-6272-4f22-9486-f31425afd8ec" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aaa034ee-44c6-4a37-a40c-82e421fded32">
+<span class="eqno">(11.8)<a class="headerlink" href="#equation-aaa034ee-44c6-4a37-a40c-82e421fded32" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_1 + \rho gh_1 = P_2 + \rho gh_2.
 \end{align}\]</div>
 <p>We can measure <span class="math notranslate nohighlight">\(h_1\)</span> relative to point 2 so that <span class="math notranslate nohighlight">\(h_2 = 0\)</span> and <span class="math notranslate nohighlight">\(h_1=h\)</span>.  In this case we find that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e5b609e-2f7a-467d-a549-0a87ef91690c">
-<span class="eqno">(11.9)<a class="headerlink" href="#equation-1e5b609e-2f7a-467d-a549-0a87ef91690c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ee2ef3b3-86dd-4117-a992-1ce65cb2e347">
+<span class="eqno">(11.9)<a class="headerlink" href="#equation-ee2ef3b3-86dd-4117-a992-1ce65cb2e347" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_2 &amp;= P_1 \rho gh, \\
 P_2 - P_1 &amp;= \rho gh.
 \end{align}\]</div>
@@ -670,8 +669,8 @@ P_2 - P_1 &amp;= \rho gh.
 <section id="bernoulli-s-principle-bernoulli-s-equation-at-constant-depth">
 <h3><span class="section-number">11.2.2. </span>Bernoulli’s Principle – Bernoulli’s Equation at Constant Depth<a class="headerlink" href="#bernoulli-s-principle-bernoulli-s-equation-at-constant-depth" title="Link to this heading">#</a></h3>
 <p>Another situation is when the fluid moves but its depth is constant (i.e., <span class="math notranslate nohighlight">\(h_1 = h2\)</span>).  Under that condition, Bernoulli’s equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f2bebbac-a053-4d96-8643-bdbabd68f84e">
-<span class="eqno">(11.10)<a class="headerlink" href="#equation-f2bebbac-a053-4d96-8643-bdbabd68f84e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-695396b1-82dc-47c3-a5da-5beae91a3e3f">
+<span class="eqno">(11.10)<a class="headerlink" href="#equation-695396b1-82dc-47c3-a5da-5beae91a3e3f" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_1 + \frac{1}{2}\rho v_1^2 &amp;= P_2 + \frac{1}{2}\rho v_2^2, \\
 P_1 - P_2 &amp;= \frac{1}{2}\rho\left(v_2^2-v_1^2\right).
 \end{align}\]</div>
@@ -710,8 +709,8 @@ P_1 - P_2 &amp;= \frac{1}{2}\rho\left(v_2^2-v_1^2\right).
 </figcaption>
 </figure>
 <p>A manometer can be used to measure the fluid velocity based on Bernoulli’s principle.  There are two tubes that are small enough so they do not appreciably disturb the flow.  The tube facing the oncoming fluid creates a dead spot having zero velocity (i.e., <span class="math notranslate nohighlight">\(v_1=0\)</span>) in front of it, while fluid passing the other tube has a velocity <span class="math notranslate nohighlight">\(v_2\)</span>.  This means that Bernoulli’s principle reduces to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b0f16a2-b305-4c88-88a2-1322773c1470">
-<span class="eqno">(11.11)<a class="headerlink" href="#equation-6b0f16a2-b305-4c88-88a2-1322773c1470" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9fa568d1-b2c8-498e-8c0d-9d4f474cf5eb">
+<span class="eqno">(11.11)<a class="headerlink" href="#equation-9fa568d1-b2c8-498e-8c0d-9d4f474cf5eb" title="Permalink to this equation">#</a></span>\[\begin{align}
 P_1 &amp;= P_2 + \frac{1}{2}\rho v_2^2, \\
 P_1 - P_2 &amp;= \frac{1}{2}\rho v_2^2.
 \end{align}\]</div>
@@ -719,8 +718,8 @@ P_1 - P_2 &amp;= \frac{1}{2}\rho v_2^2.
 <div class="math notranslate nohighlight">
 \[ h \propto \frac{1}{2}\rho v_2^2. \]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(v_2\)</span>, we find that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cfa0479f-1aee-4e64-bd20-0d0c6ae1b5ac">
-<span class="eqno">(11.12)<a class="headerlink" href="#equation-cfa0479f-1aee-4e64-bd20-0d0c6ae1b5ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a06e9630-cecb-43a5-a4ad-bc66667280b8">
+<span class="eqno">(11.12)<a class="headerlink" href="#equation-a06e9630-cecb-43a5-a4ad-bc66667280b8" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_2 \propto \sqrt{h}.
 \end{align}\]</div>
 </section>
@@ -742,14 +741,14 @@ v_2 \propto \sqrt{h}.
 <div class="math notranslate nohighlight">
 \[ P_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 = P_2 + \frac{1}{2}\rho v_1^2 + \rho gh_2. \]</div>
 <p>The pressure is the same at the top of the reservoir and at the outlet because both are exposed to the outside air (i.e., <span class="math notranslate nohighlight">\(P_1 = P_2 = P_{\rm atm}\)</span>).  Under this condition, Bernoulli’s equation reduces to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa513a00-8df3-4661-b8f4-c0fd41ccf15c">
-<span class="eqno">(11.13)<a class="headerlink" href="#equation-aa513a00-8df3-4661-b8f4-c0fd41ccf15c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-eb0e4a74-f1aa-4fbd-841f-1eeb6405eddd">
+<span class="eqno">(11.13)<a class="headerlink" href="#equation-eb0e4a74-f1aa-4fbd-841f-1eeb6405eddd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{2}\rho v_1^2 + \rho gh_1 &amp;= \frac{1}{2}\rho v_1^2 + \rho gh_2, \\
 v_2^2 &amp;= v_1^2 + 2 g(h_1-h_2).
 \end{align}\]</div>
 <p>Notice that we canceled the common factor of <span class="math notranslate nohighlight">\(\rho\)</span> from all the terms and multiplied by a factor of 2 throughout.  We can measure the height difference of the water as <span class="math notranslate nohighlight">\(h = h_1 - h_2\)</span> so that the equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04f397bf-f14a-4e56-bbe4-45c17c5bc2a1">
-<span class="eqno">(11.14)<a class="headerlink" href="#equation-04f397bf-f14a-4e56-bbe4-45c17c5bc2a1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d5762179-c34b-4203-9b8a-6a1997e0991d">
+<span class="eqno">(11.14)<a class="headerlink" href="#equation-d5762179-c34b-4203-9b8a-6a1997e0991d" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_2^2 = v_1^2 + 2gh.
 \end{align}\]</div>
 <p>This is a kinematic equation for any object falling a distance <span class="math notranslate nohighlight">\(h\)</span> with negligible resistance.  In fluids, this is called <em>Torricelli’s theorem</em>.</p>
@@ -760,8 +759,8 @@ v_2^2 = v_1^2 + 2gh.
 <div class="math notranslate nohighlight">
 \[ P + \frac{1}{\rho v^2 + \rho gh} = \text{constant}.\]</div>
 <p>All three terms have units of energy per volume.  Recall that the flow rate <span class="math notranslate nohighlight">\(Q = V/t\)</span> relates the volume to the time.  This means that we can multiply the energy per volume (E/V) with the volume per time (V/t) to get an energy per time, or power.  This means we can multiply Bernoulli’s equation by the flow rate to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5bfb3697-a0b1-4bea-9901-c155498cc063">
-<span class="eqno">(11.15)<a class="headerlink" href="#equation-5bfb3697-a0b1-4bea-9901-c155498cc063" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f7dcee5e-3121-475a-be8f-9e921814cb39">
+<span class="eqno">(11.15)<a class="headerlink" href="#equation-f7dcee5e-3121-475a-be8f-9e921814cb39" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left(P + \frac{1}{2}\rho v^2 + \rho gh \right)Q = \text{power}.
 \end{align}\]</div>
 <p>Each term has a clear physical meaning:</p>
@@ -814,13 +813,13 @@ v_2^2 = v_1^2 + 2gh.
 <li><p>The force <span class="math notranslate nohighlight">\(F\)</span> is proportional to the coefficient of viscosity <span class="math notranslate nohighlight">\(\eta\)</span> (or <code class="docutils literal notranslate"><span class="pre">$\eta$</span></code>).  The greater the viscosity, the greater the force required.</p></li>
 </ol>
 <p>These dependencies are combined into the following relation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e4b9664-4e9e-4cf4-a3d7-6031fe8db528">
-<span class="eqno">(11.16)<a class="headerlink" href="#equation-7e4b9664-4e9e-4cf4-a3d7-6031fe8db528" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-76185ed3-d8ef-45c2-8dfa-c3a2379e28db">
+<span class="eqno">(11.16)<a class="headerlink" href="#equation-76185ed3-d8ef-45c2-8dfa-c3a2379e28db" title="Permalink to this equation">#</a></span>\[\begin{align}
 F = \eta \frac{vA}{L}, 
 \end{align}\]</div>
 <p>which gives us a working definition of the fluid viscosity through the coefficient <span class="math notranslate nohighlight">\(\eta\)</span>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f4b6a641-95a9-40fb-82a9-2841834a3020">
-<span class="eqno">(11.17)<a class="headerlink" href="#equation-f4b6a641-95a9-40fb-82a9-2841834a3020" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bbc8eaa5-7d71-442c-8820-e65d20d66dd1">
+<span class="eqno">(11.17)<a class="headerlink" href="#equation-bbc8eaa5-7d71-442c-8820-e65d20d66dd1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \eta = \frac{FL}{vA}.
 \end{align}\]</div>
 <p>The SI unit of viscosity is <span class="math notranslate nohighlight">\(\rm N\cdot m/[(m/s)m^2] = (N/m^2)s\)</span>, which is a pressure multiplied by a time, or <span class="math notranslate nohighlight">\(\rm Pa\cdot s\)</span>.</p>
@@ -975,8 +974,8 @@ F = \eta \frac{vA}{L},
 <h3><span class="section-number">11.4.1. </span>Laminar Flow Confined to Tubes – Poiseuille’s Law<a class="headerlink" href="#laminar-flow-confined-to-tubes-poiseuille-s-law" title="Link to this heading">#</a></h3>
 <p><em>What causes flow?</em></p>
 <p>From Bernoulli’s principle, we can see that this is simply due to a pressure difference.  The flow rate <span class="math notranslate nohighlight">\(Q\)</span> is in the direction from high to low pressure.  The greater the pressure differential between two points, the greater the flow rate.  This relationship is given mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-938785ae-be24-4eef-a6c9-d6f52bcd0653">
-<span class="eqno">(11.18)<a class="headerlink" href="#equation-938785ae-be24-4eef-a6c9-d6f52bcd0653" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6f80bf9c-ae11-4d13-8cc6-17a0e5fb7696">
+<span class="eqno">(11.18)<a class="headerlink" href="#equation-6f80bf9c-ae11-4d13-8cc6-17a0e5fb7696" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = \frac{P_2 - P_1}{R}, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span> are the pressures at points 1 and 2, while the <span class="math notranslate nohighlight">\(R\)</span> is the resistance to flow.  The resistance <span class="math notranslate nohighlight">\(R\)</span> includes everything (except pressure) that affects flow rate.  For example,</p>
@@ -994,8 +993,8 @@ Q = \frac{P_2 - P_1}{R},
 </figcaption>
 </figure>
 <p>The resistance <span class="math notranslate nohighlight">\(R\)</span> to laminar flow of a incompressible fluid with viscosity <span class="math notranslate nohighlight">\(\eta\)</span> through a horizontal tube of uniform radius <span class="math notranslate nohighlight">\(r\)</span> and length <span class="math notranslate nohighlight">\(l\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8034044-04b6-4a43-8d44-faf11887db83">
-<span class="eqno">(11.19)<a class="headerlink" href="#equation-c8034044-04b6-4a43-8d44-faf11887db83" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-52eb1cf7-7b00-4f10-9136-9a2a93226beb">
+<span class="eqno">(11.19)<a class="headerlink" href="#equation-52eb1cf7-7b00-4f10-9136-9a2a93226beb" title="Permalink to this equation">#</a></span>\[\begin{align}
 R = \frac{8\eta l}{\pi r^4}.
 \end{align}\]</div>
 <p>This is called <strong>Poiseuille’s law for resistance</strong> after J.L. Poiseuille, who derived it in an attempt to understand the flow of blood.</p>
@@ -1041,8 +1040,8 @@ function speakFrench(text, rate) {
 <li><p>The radius <span class="math notranslate nohighlight">\(r\)</span> of a tube also affects the resistance, where a greater radius allows for a greater flow.  Since the radius is raised to the <em>fourth</em> power, this means that any change in the radius of a tube has a very large effect on resistance.  Doubling the radius of a tube decreases resistance by a factor of <span class="math notranslate nohighlight">\(2^4 = 16\)</span>.</p></li>
 </ul>
 <p>We can combine the expression for the flow rate <span class="math notranslate nohighlight">\(Q\)</span> and the resistance <span class="math notranslate nohighlight">\(R\)</span> to get a fuller expression of the flow rate as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-139c15b6-1667-4142-bb0b-82fb24be0ed7">
-<span class="eqno">(11.20)<a class="headerlink" href="#equation-139c15b6-1667-4142-bb0b-82fb24be0ed7" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-161cc0a3-cef5-4046-8300-6d122e77f236">
+<span class="eqno">(11.20)<a class="headerlink" href="#equation-161cc0a3-cef5-4046-8300-6d122e77f236" title="Permalink to this equation">#</a></span>\[\begin{align} 
 Q = \frac{(P_2 - P_1)\pi r^4}{8\eta l}.
 \end{align}\]</div>
 <p>This equation describe laminar flow through a tube.</p>
@@ -1054,8 +1053,8 @@ radius.  The body may compensate by increasing blood pressure by <span class="ma
 <section id="flow-and-resistance-as-causes-of-pressure-drops">
 <h3><span class="section-number">11.4.2. </span>Flow and Resistance as Causes of Pressure Drops<a class="headerlink" href="#flow-and-resistance-as-causes-of-pressure-drops" title="Link to this heading">#</a></h3>
 <p>You may have noticed that water pressure in your home might be lower than normal on hot summer days when there is more use.  This pressure drop occurs in the water main before it reaches your home.  We can understand why the pressure <span class="math notranslate nohighlight">\(P_1\)</span> to your home drops during times of heavy usage by defining <span class="math notranslate nohighlight">\(P_2\)</span> as the pressure at the water main and rearranging:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-685fd512-3cb3-4045-8468-6cdd8e65f0a3">
-<span class="eqno">(11.21)<a class="headerlink" href="#equation-685fd512-3cb3-4045-8468-6cdd8e65f0a3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7e917262-b372-43f2-9e0d-dbbc3092cae7">
+<span class="eqno">(11.21)<a class="headerlink" href="#equation-7e917262-b372-43f2-9e0d-dbbc3092cae7" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q &amp;= \frac{P_2 - P_1}{R},\\
 P_2 - P_1 &amp;= RQ.
 \end{align}\]</div>
@@ -1091,8 +1090,8 @@ P_2 - P_1 &amp;= RQ.
 </figcaption>
 </figure>
 <p>An indicator called the <strong>Reynolds number</strong> <span class="math notranslate nohighlight">\(N_{\rm R}\)</span> can reveal whether flow is laminar or turbulent.  For flow in a tube of uniform diameter, the Reynolds number is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f39388ff-029a-4c7a-87d9-5a4f8c6e587a">
-<span class="eqno">(11.22)<a class="headerlink" href="#equation-f39388ff-029a-4c7a-87d9-5a4f8c6e587a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-47ed5b7d-e150-49be-9029-a657539dc9b5">
+<span class="eqno">(11.22)<a class="headerlink" href="#equation-47ed5b7d-e150-49be-9029-a657539dc9b5" title="Permalink to this equation">#</a></span>\[\begin{align}
 N_{\rm R} = \frac{2}{\eta}\rho v r, \qquad \text{(flow in tube)}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, <span class="math notranslate nohighlight">\(v\)</span> is the fluid speed, and <span class="math notranslate nohighlight">\(r\)</span> is the radius of the tube.  The Reynolds number is a unitless quantity.</p>
@@ -1107,8 +1106,8 @@ N_{\rm R} = \frac{2}{\eta}\rho v r, \qquad \text{(flow in tube)}
 <h2><span class="section-number">11.6. </span>Motion of an Object in a Viscous Fluid<a class="headerlink" href="#motion-of-an-object-in-a-viscous-fluid" title="Link to this heading">#</a></h2>
 <p>A moving object in a viscous fluid is equivalent to a stationary object in flowing fluid stream.  For example, when you ride a bicycle at <span class="math notranslate nohighlight">\(10\ {\rm m/s}\)</span> in still air, you feel the air in your face exactly as if you were stationary in a <span class="math notranslate nohighlight">\(10\ {\rm m/s}\)</span> wind.</p>
 <p>Flow of a stationary fluid around a moving object may be laminar, turbulent, or a combination of the two.  Just as with flow in tubes, it is possible to predict when a moving object creates turbulence.  We use another form of the Reynolds number <span class="math notranslate nohighlight">\(N_{\rm R}^\prime\)</span> defined for an object moving in a fluid:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-711e9db9-d1f0-4530-a835-2c1f1bb777b5">
-<span class="eqno">(11.23)<a class="headerlink" href="#equation-711e9db9-d1f0-4530-a835-2c1f1bb777b5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9b9351f6-0b5a-4c58-943d-6ab235e3d2fb">
+<span class="eqno">(11.23)<a class="headerlink" href="#equation-9b9351f6-0b5a-4c58-943d-6ab235e3d2fb" title="Permalink to this equation">#</a></span>\[\begin{align}
 N_{\rm R}^\prime = \frac{1}{\eta}\rho vL, \qquad \text{(object in a fluid)}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(L\)</span> is a characteristic length of the object, <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, <span class="math notranslate nohighlight">\(\eta\)</span> is its viscosity, and <span class="math notranslate nohighlight">\(v\)</span> is the object’s speed in the fluid.</p>
@@ -1127,8 +1126,8 @@ N_{\rm R}^\prime = \frac{1}{\eta}\rho vL, \qquad \text{(object in a fluid)}
 <p>There is a resistive force called <strong>viscous drag</strong> <span class="math notranslate nohighlight">\(F_{\rm V}\)</span> that is exerted on a moving object.  This force typically depends on the object’s speed.  Experiments showed that for laminar flow, viscous drag is proportional to speed, whereas for turbulent flow, it is proportional to the speed squared.</p>
 <p>For <span class="math notranslate nohighlight">\(N_{\rm R}^\prime &gt;10^6\)</span>, drag increases dramatically and behaves with greater complexity.  For laminar flow around a sphere <span class="math notranslate nohighlight">\(F_{\rm V}\)</span> is proportional to the fluid viscosity <span class="math notranslate nohighlight">\(\eta\)</span>, characteristic size <span class="math notranslate nohighlight">\(L\)</span>, and its speed <span class="math notranslate nohighlight">\(v\)</span>.  <em>The more viscous the fluid and the larger the object, the more drag we expect.</em>  Recall <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter05/friction-drag-elasticity.html#equation-968999aa-2fc9-4e7f-8fd0-396d4ad99aee">Stokes law</a>, which follows this prescription.</p>
 <p>For the special case of a small sphere of radius <span class="math notranslate nohighlight">\(R\)</span> moving slowly in a fluid of viscosity <span class="math notranslate nohighlight">\(\eta\)</span>, the drag force follows Stokes’ law, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-307b2c9f-7625-4447-8fdb-f6386a64284f">
-<span class="eqno">(11.24)<a class="headerlink" href="#equation-307b2c9f-7625-4447-8fdb-f6386a64284f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-28570c1f-f4d2-435f-9cd2-f12d4e37aca3">
+<span class="eqno">(11.24)<a class="headerlink" href="#equation-28570c1f-f4d2-435f-9cd2-f12d4e37aca3" title="Permalink to this equation">#</a></span>\[\begin{align}
 F_{\rm S} = 6\pi R\eta v.
 \end{align}\]</div>
 <p>An interesting consequence of the increase in viscous drag <span class="math notranslate nohighlight">\(F_{\rm V}\)</span> with speed is that an object falling through a fluid will not continue to accelerate indefinitely.  Instead viscous drag increases, slowing acceleration, until the <strong>terminal speed</strong> is reached and the acceleration of the object becomes zero.  Once this happens, the object continues to fall at constant speed.</p>
@@ -1153,8 +1152,8 @@ F_{\rm S} = 6\pi R\eta v.
 </figcaption>
 </figure>
 <p>Diffusion is a slow process over macroscopic distances.  The densities of common material are great enough that molecules cannot travel very far before having a collision that can scatter them in any direction (including straight backward).  The average distance <span class="math notranslate nohighlight">\(x_{\rm rms}\)</span> that a molecule travels is proportional to the square root of time:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df72f772-fcc4-4d49-b8ee-3fea091e6641">
-<span class="eqno">(11.25)<a class="headerlink" href="#equation-df72f772-fcc4-4d49-b8ee-3fea091e6641" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-63db06de-30e3-4900-9487-b4b61f12b031">
+<span class="eqno">(11.25)<a class="headerlink" href="#equation-63db06de-30e3-4900-9487-b4b61f12b031" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_{\rm rms} = \sqrt{2Dt},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(x_{\rm rms}\)</span> represents the <strong>root-mean-square distance</strong> and is the statistical average for the process. The <span class="math notranslate nohighlight">\(D\)</span> is the diffusion constant for the particular molecule in a specific medium.  The unit for <span class="math notranslate nohighlight">\(D\)</span> is an area per second, or <span class="math notranslate nohighlight">\(m^2/s\)</span>.</p>
@@ -1365,18 +1364,16 @@ x_{\rm rms} = \sqrt{2Dt},
 <div class="admonition-problem-2 admonition">
 <p class="admonition-title">Problem 2</p>
 <blockquote>
-<div><p>You can squirt water a considerably greater distance by placing your thumb over the end of a garden hose and then releasing it than by leaving it completely uncovered. Explain how this works.</p>
+<div><p>When paddling a canoe upstream, it is wisest to travel as near to the shore as possible. When canoeing downstream, it may be best to stay near the middle. Explain why.</p>
 </div></blockquote>
 </div>
-</section>
-<section id="quantitative-questions">
-<h3><span class="section-number">11.9.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
-<div class="admonition-problem-3 admonition">
-<p class="admonition-title">Problem 3</p>
-<blockquote>
-<div><p>A major artery with a cross-sectional area of <span class="math notranslate nohighlight">\(1.0\ {\rm cm^2}\)</span> branches into 18 smaller arteries, each with an average cross-sectional area of <span class="math notranslate nohighlight">\(0.40\ {\rm cm^2}\)</span>.</p>
-<p>By what factor is the average velocity of the blood reduced when it passes into these branches?</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+### Quantitative Questions
+```{admonition} Problem 3
+&gt; A major artery with a cross-sectional area of $1.0\ {\rm cm^2}$ branches into 18 smaller arteries, each with an average cross-sectional area of $0.40\ {\rm cm^2}$.
+&gt;
+&gt; By what factor is the average velocity of the blood reduced when it passes into these branches?
+</pre></div>
 </div>
 <div class="admonition-problem-4 admonition">
 <p class="admonition-title">Problem 4</p>
@@ -1502,7 +1499,6 @@ x_{\rm rms} = \sqrt{2Dt},
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">11.9. Homework</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11.9.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">11.9.2. Conceptual Questions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">11.9.3. Quantitative Questions</a></li>
 </ul>
 </li>
 </ul>
