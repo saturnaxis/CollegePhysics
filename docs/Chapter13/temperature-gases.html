@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ffec1ee8" />
     <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter13/temperature-gases';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,33 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature">12.1. Temperature</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-scales">12.1.1. Temperature Scales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-ranges-in-the-universe">12.1.2. Temperature Ranges in the Universe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-equilibrium-and-the-zeroth-law-of-thermodynamics">12.1.3. Thermal Equilibrium and the Zeroth Law of Thermodynamics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-expansion-of-solids-and-liquids">12.2. Thermal Expansion of Solids and Liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-expansion-in-2d-and-3d">12.2.1. Thermal Expansion in 2D and 3D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-stress">12.2.2. Thermal Stress</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law">12.3. The Ideal Gas Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moles-and-avogadro-s-number">12.3.1. Moles and Avogadro’s Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law-restated-using-moles">12.3.2. The Ideal Gas Law Restated Using Moles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law-and-energy">12.3.3. The Ideal Gas Law and Energy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-theory">12.4. Kinetic Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#humidity-evaporation-and-boiling">12.6. Humidity, Evaporation, and Boiling</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +526,444 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="kinetic-theory-of-gases">
 <h1><span class="section-number">12. </span>Kinetic Theory of Gases<a class="headerlink" href="#kinetic-theory-of-gases" title="Link to this heading">#</a></h1>
-<p>Aug 23, 2026 | 7 words | 0 min read</p>
+<p>Oct 11, 2026 | 3593 words | 24 min read</p>
+<section id="temperature">
+<h2><span class="section-number">12.1. </span>Temperature<a class="headerlink" href="#temperature" title="Link to this heading">#</a></h2>
+<p>Human perception of temperature has evolved from the relative sensation of what feels hot or cold.  For example,</p>
+<ul class="simple">
+<li><p>place one hand in hot water and the other in cold water;</p></li>
+<li><p>then place both hands in tepid (warm) water.</p></li>
+</ul>
+<p>The tepid water will feel cool to the hand that was in hot water, and warm to the one that was in cold water.  The scientific definition of temperature is less ambiguous than your senses of hot and cold.</p>
+<p><strong>Temperature</strong> is operationally defined as what we measure with a thermometer.  However, we will ultimately define the temperature in terms of the kinetic energies of atoms and molecules.</p>
+<p>Many physical properties depend on temperature.  For example, volume increases with temperature for most substances.  This property is the basis for the common alcohol thermometer, the old mercury thermometer, and the bimetallic strip (used in modern thermostat).  Other properties used to measure temperature include electrical resistance and color, as well as the emission of infrared (IR) radiation.</p>
+<section id="temperature-scales">
+<h3><span class="section-number">12.1.1. </span>Temperature Scales<a class="headerlink" href="#temperature-scales" title="Link to this heading">#</a></h3>
+<p>Thermometers are used to measure temperature according to well-defined scales that use pre-defined reference points to compare quantities.  The three most common temperature scales are the Fahrenheit, Celsius, and Kelvin scales.  A temperature scale can be created by identifying two easily reproducible temperatures.  The freezing and boiling temperatures of water at standard atmospheric pressure are commonly used.</p>
+<ul class="simple">
+<li><p>The <strong>Celsius</strong> scale has the freezing point of water at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> and the boiling point at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>.  Its unit is the <strong>degree Celsius</strong> <span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>.</p></li>
+<li><p>On the <strong>Fahrenheit</strong> scale, the freezing point of water is <span class="math notranslate nohighlight">\(32^\circ{\rm F}\)</span> and the boiling point is at <span class="math notranslate nohighlight">\(212^\circ{\rm F}\)</span>, where its unit is the <strong>degree Fahrenheit</strong> <span class="math notranslate nohighlight">\(^\circ{\rm F}\)</span>.</p>
+<ul>
+<li><p><em>Note that a temperature difference of 1 degree in Celsius is greater than 1 degree difference in Fahrenheit.</em></p></li>
+<li><p>One degree on the Celsius scale is <span class="math notranslate nohighlight">\(9/5 = 1.8\)</span> times larger than one degree on the Fahrenheit scale.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>Kelvin</strong> scale is most commonly used in science.  It is an <em>absolute temperature scale</em> define to have <span class="math notranslate nohighlight">\(0\ {\rm K}\)</span> at the lowest possible temperature (i.e., <strong>absolute zero</strong>).  The <em>kelvin</em> (<span class="math notranslate nohighlight">\(\rm K\)</span>) is the unit on this scale and the adopted SI unit for temperature.  The freezing and boiling points on this scale are <span class="math notranslate nohighlight">\(273.15\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(373.15\ {\rm K}\)</span>, respectively.  The temperature difference of one degree in Celsius and Kelvin scales are the same.</p>
+<figure class="align-default" id="fig-temperature-scales">
+<img alt="Comparison of the Fahrenheit, Celsius, and Kelvin temperature scales. Absolute zero is shown on each scale, while the freezing point of water, normal human body temperature, and boiling point of water are vertically aligned across the three scales. An ice cube, a person, and a beaker of boiling water illustrate the three reference temperatures." src="../_images/temperature_scales_reference_infographic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.1 </span><span class="caption-text">The Fahrenheit, Celsius, and Kelvin temperature scales use different numerical values for the same physical temperatures. The freezing point of water, normal human body temperature, and boiling point of water are aligned to emphasize the correspondence among the three scales. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-1-temperature">OpenStax, College Physics 2e, Figure 13.7</a>.</em></span><a class="headerlink" href="#fig-temperature-scales" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-temperature-conversion-flowchart">
+<img alt="Flowchart for converting temperatures among Celsius, Fahrenheit, and Kelvin. The chart begins with the known temperature scale and branches to the equations used to convert to either of the other two scales." src="../_images/temperature_conversion_flowchart.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.2 </span><span class="caption-text">To convert a temperature, begin with the known temperature scale and follow the branch to the desired scale. Each branch gives the corresponding conversion equation, where <span class="math notranslate nohighlight">\(T_{\rm C}\)</span>, <span class="math notranslate nohighlight">\(T_{\rm F}\)</span>, and <span class="math notranslate nohighlight">\(T_{\rm K}\)</span> represent temperatures in degrees Celsius, degrees Fahrenheit, and kelvin, respectively. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-1-temperature">OpenStax, College Physics 2e, Table 13.1</a>.</em></span><a class="headerlink" href="#fig-temperature-conversion-flowchart" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="temperature-ranges-in-the-universe">
+<h3><span class="section-number">12.1.2. </span>Temperature Ranges in the Universe<a class="headerlink" href="#temperature-ranges-in-the-universe" title="Link to this heading">#</a></h3>
+<p>Humans have been known to survive with body temperatures within a small range, from <span class="math notranslate nohighlight">\(24^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(44^\circ{\rm C}\)</span> (<span class="math notranslate nohighlight">\(75^\circ{\rm F}\)</span> to <span class="math notranslate nohighlight">\(111^\circ{\rm F}\)</span>).  The average normal body temperature is usually at <span class="math notranslate nohighlight">\(37^\circ{\rm C}\)</span> (or <span class="math notranslate nohighlight">\(98.6^\circ{\rm F}\)</span>). Variations in the average temperature can indicate a medical condition, e.g., a fever, an infection, a tumor, or circulatory problem.</p>
+<figure class="align-default" id="fig-rheumatoid-arthritis-thermography">
+<img alt="Three-panel medical comparison of hands affected by rheumatoid arthritis: a clinical photograph, an infrared thermogram showing warmer finger joints, and a power Doppler ultrasound image showing joint inflammation." src="../_images/ra_thermography_figure3_panels.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.3 </span><span class="caption-text">Infrared thermography reveals differences in skin temperature associated with rheumatoid arthritis. (a) A clinical photograph shows the patient’s hands. (b) Infrared imaging identifies elevated temperatures around several finger joints, where inflammation increases local blood flow and heat transfer. (c) Power Doppler ultrasonography provides additional evidence of active joint inflammation (synovitis). These images illustrate how measurements of infrared radiation can help identify regions of inflammation without direct contact. <em>Adapted from: <a class="reference external" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12906918/">Chandra et al. (2026), Figure 3</a>, licensed under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</em></span><a class="headerlink" href="#fig-rheumatoid-arthritis-thermography" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The lowest temperatures ever recorded are during lab experiments:</p>
+<p>The coldest temperature was <span class="math notranslate nohighlight">\(4.5 \times 10^{-10}\ {\rm K}\)</span>, or <span class="math notranslate nohighlight">\(0.45\ {\rm nK}\)</span> (at MIT), and <span class="math notranslate nohighlight">\(1.0\times 10^{-10}\ {\rm K}\)</span>, or <span class="math notranslate nohighlight">\(0.1\ {\rm nK}\)</span> (at Helsinki University of Technology in Finland).</p>
+<p>In contrast, the coldest recorded place on Earth’s surface is Vostok, Antarctica at <span class="math notranslate nohighlight">\(183\ {\rm K}\)</span> (<span class="math notranslate nohighlight">\(-896\circ{\rm C}\)</span>), and the coldest place (outside the lab) known in the universe is the Boomerang Nebula with a temperature of <span class="math notranslate nohighlight">\(1\ {\rm K}\)</span>.</p>
+<figure class="align-default" id="fig-temperatures-universe">
+<img alt="Horizontal logarithmic temperature scale showing representative temperatures in the universe from about 10^-10 kelvin to 10^12 kelvin. The figure includes examples such as the lowest temperature achieved, the Boomerang Nebula, the cosmic microwave background, liquid helium, liquid nitrogen, Vostok Antarctica, water freezing, water boiling, fireplace fire, the Sun's surface, a white dwarf surface, the solar corona, the solar interior, rapid hydrogen fusion, the interior of a neutron star, and experiments at the Large Hadron Collider." src="../_images/temperatures_in_the_universe_a_cosmic_scale.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.4 </span><span class="caption-text">Representative temperatures in the universe span many orders of magnitude, from ultracold laboratory systems near <span class="math notranslate nohighlight">\(10^{-10}\ {\rm K}\)</span> to the extreme conditions produced in high-energy particle collisions near <span class="math notranslate nohighlight">\(10^{12}\ {\rm K}\)</span>. This horizontal logarithmic scale highlights familiar cryogenic, everyday, astrophysical, and high-energy examples, with selected illustrations to help visualize the wide range of temperatures. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-1-temperature">OpenStax, College Physics 2e, Section 13.1 Temperature</a>.</em></span><a class="headerlink" href="#fig-temperatures-universe" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="thermal-equilibrium-and-the-zeroth-law-of-thermodynamics">
+<h3><span class="section-number">12.1.3. </span>Thermal Equilibrium and the Zeroth Law of Thermodynamics<a class="headerlink" href="#thermal-equilibrium-and-the-zeroth-law-of-thermodynamics" title="Link to this heading">#</a></h3>
+<p>Thermometers actually take their own temperature, not the temperature they are measuring.  <em>Thermal contact</em> is the heat transfer that occurs between two objects.</p>
+<ul class="simple">
+<li><p>After some time <span class="math notranslate nohighlight">\(t\)</span>, both objects will have exactly the same temperature.  Then the objects are in <strong>thermal equilibrium</strong> and no further heat flow (or changes in temperature) will occur.</p></li>
+<li><p>Given enough time, the thermometer registers a temperature of both the thermometer and the system with which it is in thermal equilibrium.</p></li>
+<li><p>A single object is in internal thermal equilibrium when no heat is flowing within the object and therefore its temperature is uniform.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Zeroth Law of Thermodynamics</p>
+<p>If two systems, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, are in thermal equilibrium, they have the same temperature. If a third system, <span class="math notranslate nohighlight">\(C\)</span>, is also in thermal equilibrium with <span class="math notranslate nohighlight">\(B\)</span>, then <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> must be in thermal equilibrium with each other. All three systems have the same temperature.</p>
+<figure class="align-default" id="fig-zeroth-law-equilibrium-sequence">
+<img alt="Three-panel illustration of the approach to thermal equilibrium. The left panel, labeled Before, shows three separate blocks A, B, and C at different temperatures: 320 K, 300 K, and 280 K. The middle panel, labeled In contact, shows the blocks touching, with heat flowing from the hotter block A toward the cooler blocks. The right panel, labeled Equilibrium, shows all three blocks at the same temperature, 300 K, with no net heat transfer." src="../_images/before_contact_and_equilibrium.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.5 </span><span class="caption-text">When systems at different temperatures are brought into thermal contact, heat flows from higher temperature to lower temperature until thermal equilibrium is reached. Once equilibrium is established, all three systems have the same temperature, so there is no net heat transfer between them.</span><a class="headerlink" href="#fig-zeroth-law-equilibrium-sequence" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>The zeroth law of thermodynamics was postulated in the 1930s, after the first and second laws of thermodynamics were already developed.  Suppose a cold metal block and a hot metal block are both placed on a metal plate at room temperature.  Eventually the cold block and plate will be in thermal equilibrium.</p>
+<p>By the zeroth law, we can conclude that the cold block and hot block are also in thermal equilibrium.  Two thermometers placed in thermal contact (one with each block) will also be in thermal equilibrium and therefore read the same temperature.</p>
+</section>
+</section>
+<section id="thermal-expansion-of-solids-and-liquids">
+<h2><span class="section-number">12.2. </span>Thermal Expansion of Solids and Liquids<a class="headerlink" href="#thermal-expansion-of-solids-and-liquids" title="Link to this heading">#</a></h2>
+<p>The expansion of alcohol in thermometers is an example of <strong>thermal expansion</strong>, which is the change in size of volume of a given mass with temperature.  Hot air rises because air expands when its temperature increases, which causes the hot air’s density to be smaller than the density of the surrounding air.</p>
+<ul class="simple">
+<li><p>The buoyant (upward) force on a given mass of air increases when the air is heated.</p></li>
+<li><p>This results in a net upward force on that air mass.</p></li>
+</ul>
+<p>The same happens in all liquids and gases, driving natural heat transfer upwards in homes, oceans, and weather systems.  Solids also undergo thermal expansion.  Railroad tracks and bridges have expansion joints to allow them to freely expand and contract with temperature changes.</p>
+<p><em>What are the basic properties of thermal expansion?</em></p>
+<ol class="arabic simple">
+<li><p>Thermal expansion is clearly related to temperature change.  The greater the temperature change, the more a bimetallic strip will bend.</p></li>
+<li><p>It depends on the material.  In a thermometer, the expansion of alcohol is much grater than the expansion of the glass containing it.</p></li>
+</ol>
+<p><em>What is the underlying cause of thermal expansion?</em></p>
+<p>An increase in temperature implies an increase in <em>kinetic energy</em> of the individual atoms.  In a solid, the atoms or molecules are closely packed together, but their kinetic energy (through rapid vibrations) pushes neighboring atoms (or molecules) apart from each other.  This pushing of neighboring atoms results in a slightly greater distance (on average) between neighbors, and adds up to a large size for the whole object.  Under ordinary conditions for most substances, there is no preferred direction and an increase in temperature will increase the soli’s size by certain fraction in each dimension.</p>
+<div class="note admonition">
+<p class="admonition-title">Linear Thermal Expansion in 1D</p>
+<p>The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> is proportional to length <span class="math notranslate nohighlight">\(L\)</span>.  The dependence of thermal expansion <span class="math notranslate nohighlight">\(\Delta L\)</span> on temperature change <span class="math notranslate nohighlight">\(\Delta T\)</span> (in Kelvin), substance, and length <span class="math notranslate nohighlight">\(L\)</span> is summarized by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-90d302f3-cadc-4c35-8b35-af354406869c">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-90d302f3-cadc-4c35-8b35-af354406869c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta L = \alpha L \Delta T,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) is the <strong>coefficient of linear expansion</strong>.  The coefficient <span class="math notranslate nohighlight">\(\alpha\)</span> varies slightly with temperature.</p>
+</div>
+<p>Table <a class="reference internal" href="#thermal-expansion-table"><span class="std std-numref">12.1</span></a> lists representative values of the coefficient of linear expansion <span class="math notranslate nohighlight">\(\alpha\)</span>.  The equation <span class="math notranslate nohighlight">\(\Delta L = \alpha L\Delta T\)</span> is accurate for small changes in temperature and can be used for large changes in temperature if an average value of <span class="math notranslate nohighlight">\(\alpha\)</span> is used.</p>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="thermal-expansion-table">
+<caption><span class="caption-number">Table 12.1 </span><span class="caption-text">Thermal Expansion Coefficients at <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span></span><a class="headerlink" href="#thermal-expansion-table" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Material</p></th>
+<th class="head"><p>Linear expansion, <span class="math notranslate nohighlight">\(\alpha\)</span> (<span class="math notranslate nohighlight">\(\times 10^{-6}\ {\rm K}^{-1}\)</span>)</p></th>
+<th class="head"><p>Volume expansion, <span class="math notranslate nohighlight">\(\beta\)</span> (<span class="math notranslate nohighlight">\(\times 10^{-6}\ {\rm K}^{-1}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Solids</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Aluminum</p></td>
+<td><p>25</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td><p>Brass</p></td>
+<td><p>19</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copper</p></td>
+<td><p>17</p></td>
+<td><p>51</p></td>
+</tr>
+<tr class="row-even"><td><p>Gold</p></td>
+<td><p>14</p></td>
+<td><p>42</p></td>
+</tr>
+<tr class="row-odd"><td><p>Iron or steel</p></td>
+<td><p>12</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-even"><td><p>Invar (nickel-iron alloy)</p></td>
+<td><p>0.9</p></td>
+<td><p>2.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lead</p></td>
+<td><p>29</p></td>
+<td><p>87</p></td>
+</tr>
+<tr class="row-even"><td><p>Silver</p></td>
+<td><p>18</p></td>
+<td><p>54</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glass (ordinary)</p></td>
+<td><p>9</p></td>
+<td><p>27</p></td>
+</tr>
+<tr class="row-even"><td><p>Glass (Pyrex)</p></td>
+<td><p>3</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Quartz</p></td>
+<td><p>0.4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Concrete or brick (approximate)</p></td>
+<td><p>12</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td><p>Marble (average)</p></td>
+<td><p>7</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Liquids</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ether</p></td>
+<td><p>—</p></td>
+<td><p>1650</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethyl alcohol</p></td>
+<td><p>—</p></td>
+<td><p>1100</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gasoline (petrol)</p></td>
+<td><p>—</p></td>
+<td><p>950</p></td>
+</tr>
+<tr class="row-even"><td><p>Glycerin</p></td>
+<td><p>—</p></td>
+<td><p>500</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury</p></td>
+<td><p>—</p></td>
+<td><p>180</p></td>
+</tr>
+<tr class="row-even"><td><p>Water</p></td>
+<td><p>—</p></td>
+<td><p>210</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gases (at constant pressure)</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Air</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nitrogen (<span class="math notranslate nohighlight">\({\rm N_2}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-even"><td><p>Oxygen (<span class="math notranslate nohighlight">\({\rm O_2}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-odd"><td><p>Helium (<span class="math notranslate nohighlight">\({\rm He}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydrogen (<span class="math notranslate nohighlight">\({\rm H_2}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-odd"><td><p>Argon (<span class="math notranslate nohighlight">\({\rm Ar}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-even"><td><p>Carbon dioxide (<span class="math notranslate nohighlight">\({\rm CO_2}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+<tr class="row-odd"><td><p>Methane (<span class="math notranslate nohighlight">\({\rm CH_4}\)</span>)</p></td>
+<td><p>—</p></td>
+<td><p>3400</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Note:</em> The gas coefficients are approximate values based on ideal-gas behavior at <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span> and constant pressure. Real gases exhibit small differences depending on their composition, temperature, and pressure. For most gases near atmospheric pressure, <span class="math notranslate nohighlight">\(\beta\approx 1/T\)</span> provides a good approximation.</p>
+<p><em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-2-thermal-expansion-of-solids-and-liquids">OpenStax, College Physics 2e, Table 13.2</a>.</em></p>
+<section id="thermal-expansion-in-2d-and-3d">
+<h3><span class="section-number">12.2.1. </span>Thermal Expansion in 2D and 3D<a class="headerlink" href="#thermal-expansion-in-2d-and-3d" title="Link to this heading">#</a></h3>
+<p>Objects expand in all dimensions, where their lengths, areas, and volumes all increase with temperature.  Holes get larger with a larger temperature.  If you cut a hole in a metal plate, the remaining material will expand exactly as it would if the plug (i.e., piece of metal that is cut out) was still in place. The plug would get bigger and so the hole must get bigger too.</p>
+<figure class="align-center" id="fig-thermal-expansion">
+<div class="output text_html">
+<video
+    src="../_static/videos/ThermalExpansionThreePanel.mp4"
+    poster="../_static/images/ThermalExpansionThreePanel_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    style="width: 100%; max-width: 900px; height: auto; display: block; margin: auto;"
+    aria-label="Diffusion animation showing random particle motion, a decreasing concentration gradient, and live histograms with dashed equilibrium guides. Blue indicates higher density, red lower density, and white approximately uniform density.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 12.6 </span><span class="caption-text">Thermal expansion of brass in two and three dimensions. As the temperature increases, (a) a solid plate and circular disk expand, (b) the hole in a plate becomes larger rather than smaller, and (c) a cube expands in all three dimensions, increasing its volume. The dashed outlines indicate the original dimensions before heating. The expansion is magnified by a factor of 100 to make the small changes visible. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-2-thermal-expansion-of-solids-and-liquids">OpenStax, College Physics 2e, Figure 13.12</a>.</em></span><a class="headerlink" href="#fig-thermal-expansion" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Thermal Expansion in 2D and 3D</p>
+<p>For small temperature changes, the change in area <span class="math notranslate nohighlight">\(\Delta A\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6d7b5584-d7a7-4ca1-bf0e-cfe0e7c6b948">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-6d7b5584-d7a7-4ca1-bf0e-cfe0e7c6b948" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta A = 2\alpha A\Delta T,
+\end{align}\]</div>
+<p>which depends on the change in temperature <span class="math notranslate nohighlight">\(\Delta T\)</span> (in Kelvin), and <span class="math notranslate nohighlight">\(\alpha\)</span> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) is the coefficient of linear expansion.</p>
+<hr class="docutils" />
+<p>The change in volume <span class="math notranslate nohighlight">\(\Delta V\)</span> is very nearly <span class="math notranslate nohighlight">\(\Delta V = 3\alpha V\Delta T\)</span>, but the formal equation is usually written as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f34bf24c-0e23-4ff1-856d-915d66ab225d">
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-f34bf24c-0e23-4ff1-856d-915d66ab225d" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta V = \beta V\Delta T,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta\)</span> is the <strong>coefficient of volume expansion</strong> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) and <span class="math notranslate nohighlight">\(\beta \approx 3\alpha\)</span>.</p>
+</div>
+<p>In general, objects will expand with increasing temperature.  <em>Water is the most important exception to this rule.</em>  Water expands with increasing temperature (its density <em>decreases</em>) when it is between <span class="math notranslate nohighlight">\(+4^\circ{\rm C}\)</span> and <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>.  Water is densest at <span class="math notranslate nohighlight">\(+4^\circ{\rm C}\)</span>.</p>
+<figure class="align-center" id="fig-pond-freezing">
+<div class="output text_html">
+<video
+    src="../_static/videos/freezing_pond.mp4"
+    poster="../_static/images/freezing_pond_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    style="width: 100%; max-width: 900px; height: auto; display: block; margin: auto;"
+    aria-label="Diffusion animation showing random particle motion, a decreasing concentration gradient, and live histograms with dashed equilibrium guides. Blue indicates higher density, red lower density, and white approximately uniform density.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 12.7 </span><span class="caption-text">Seasonal cooling and freezing of a freshwater pond illustrate the unusual thermal expansion of water. As surface water cools toward <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>, its density increases, causing it to sink and circulate with warmer water below. This turnover continues until the pond approaches a uniform temperature of <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>, where water reaches its maximum density. Further cooling below <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span> decreases the density of the surface water, allowing it to remain above the warmer, denser water. Eventually, ice forms at the surface and provides an insulating layer, allowing liquid water near <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span> to remain at the bottom, where aquatic life can survive during winter. <em>Based on: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-2-thermal-expansion-of-solids-and-liquids">OpenStax, College Physics 2e, Section 13.2, Thermal Expansion of Solids and Liquids</a>.</em></span><a class="headerlink" href="#fig-pond-freezing" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The most striking effect is the freezing of water in a pond.  When water near the surface cools to <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>, it is denser than the remaining water and thus will sink to the bottom.  This “turnover” results in a layer of warmer water near the surface, which is then cooled.  Eventually, the pond has a uniform temperature of <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>.</p>
+<p>If the temperature fo the surface layer drops below <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>, the water is less dense than the water below, and thus stays near the top. As a result, the pond surface can completely freeze over.  The ice on top of liquid water provides an insulating layer form winter’s harsh exterior air temperatures.  Fish and other aquatic life can survive in <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span> beneath ice, due to this unusual characteristic of water.  It also produces circulation of water in the pond that necessary for a healthy ecosystem for the body of water.</p>
+<figure class="align-default" id="fig-freshwater-density">
+<img alt="Graph of freshwater density versus temperature from 0 to 12 degrees Celsius. Water reaches its maximum density near 4 degrees Celsius. Arrows indicate the direction of cooling: above 4 degrees Celsius, density increases as water cools; below 4 degrees Celsius, density decreases as water cools." src="../_images/freshwater_density_annotated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.8 </span><span class="caption-text">The density of freshwater reaches a maximum near <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>. As water cools toward this temperature, its density increases, causing cooler surface water to sink and circulate with warmer water below. However, further cooling below <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span> decreases its density, allowing colder water to remain near the surface. This unusual behavior explains why ponds freeze from the top while deeper water can remain liquid near <span class="math notranslate nohighlight">\(4^\circ{\rm C}\)</span>. The vertical axis is truncated to emphasize the small changes in density. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-2-thermal-expansion-of-solids-and-liquids">OpenStax, College Physics 2e, Figure 13.13</a>.</em></span><a class="headerlink" href="#fig-freshwater-density" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="thermal-stress">
+<h3><span class="section-number">12.2.2. </span>Thermal Stress<a class="headerlink" href="#thermal-stress" title="Link to this heading">#</a></h3>
+<p><strong>Thermal stress</strong> is created by thermal expansion or contraction.  This can be destructive, such as when expanding gasoline ruptures a tank.  It can also be useful: for example, when two parts are joined together by heating one in manufacturing, then slipping it over the other and allowing the combination to cool.  Thermal stress can explain the weathering of rocks and pavement by expansion of ice when it freezes, as well as other phenomena.</p>
+<ul class="simple">
+<li><p>Railroad tracks and roadways can buckle on hot days if they lack sufficient expansion joints.</p></li>
+<li><p>Power lines sag more in the summer than in the winter, and will snap in cold weather if there is insufficient slack.</p></li>
+<li><p>Cracks open and close in plaster walls as a house warms and cools.</p></li>
+<li><p>Glass cooking pans will crack if cooled rapidly and unevenly, because of differential contraction and the stresses it creates.</p></li>
+<li><p>Nuclear reactor pressure vessels are threatened by overly rapid cooling.</p></li>
+<li><p>Biological cells are ruptured when foods are frozen, detracting from their taste.</p></li>
+</ul>
+<p>Metal is regularly used in the human body for hip and knee implants.  Most implants need to be replaced over time because metal does not bond with bone. Researchers are looking for better metal coating that would allow metal-to-bone bonding.  One challenge is to find a coating that has an expansion coefficient similar to that of metal.  If the expansion coefficients are too different, then the thermal stresses during the manufacturing process lead to cracks at the coating-metal interface.</p>
+<p>Dental fillings can expand differently from tooth enamel, causing pain when eating ice cream or having a hot drink.  Cracks might occur in the filling.  Metal fillings (e.g., gold or silver) are generally replaced with composite fillings (i.e., porcelain), which have smaller coefficients of expansion closer to those of teeth.</p>
+</section>
+</section>
+<section id="the-ideal-gas-law">
+<h2><span class="section-number">12.3. </span>The Ideal Gas Law<a class="headerlink" href="#the-ideal-gas-law" title="Link to this heading">#</a></h2>
+<p>Gases are easily compressed because their molecules are relatively far apart. They also have the largest coefficients of volume expansion (see Table <a class="reference internal" href="#thermal-expansion-table"><span class="std std-numref">12.1</span></a>). These large coefficients mean that gases undergo much greater changes in volume for a given temperature change than most solids and liquids, assuming constant pressure.</p>
+<p>Because atoms and molecules have large separations, forces between them can be ignored, except when they collide with each other during collisions.  The motion of atoms and molecules is fast, such that the gas occupies all of the accessible volume and the expansion of gases is rapid.  In liquids and solids, atoms and molecules are closer together, which makes them quite sensitive to the forces between them.</p>
+<figure class="align-default" id="fig-tire-pressure-temperature">
+<img alt="Three-panel realistic comparison of tire pressure changes. In panel (a), adding air to a deflated tire increases its volume much more than its pressure. In panel (b), adding more air to a nearly full tire causes a larger increase in pressure. In panel (c), after the tire is inflated, increasing the temperature raises the pressure. Pressure gauges are connected to the tire valve stems by hoses, and cutaway views in the right-hand tire of each panel show the changing behavior of the gas inside the tire." src="../_images/tire_pressure_and_temperature_triptych.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.9 </span><span class="caption-text">Pressure in a tire depends on both the amount of air in the tire and its temperature. (a) When air is first added to a deflated tire, the tire expands noticeably, so its volume increases much more than its pressure. (b) Once the tire is nearly full and the tire walls resist further expansion, adding more air produces a larger increase in pressure. (c) After the tire is inflated, increasing the temperature raises the pressure of the gas inside the tire. The cutaway views illustrate the gas particles inside the tire, with faster particle motion in the warmer tire. <em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-3-the-ideal-gas-law">OpenStax, College Physics 2e, Figure 13.19</a>.</em></span><a class="headerlink" href="#fig-tire-pressure-temperature" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Consider what happens when you pump air into an initially deflated tire.  The tire’s volume first increases in direct proportion to the amount of air injected, without much increase in the tire pressure.  Once the tire has expanded to nearly its full size, the walls limit volume expansion.  If we continue to pump air into it, the pressure increases.  The pressure will further increase when the car is driven and the tires move.</p>
+<p>For room temperature air, the gas particles have negligible volume and do not interact with each other where they experience perfectly elastic collisions.  In such cases, the gas is called an <strong>ideal gas</strong>.  There is a mathematical relationship between the pressure, volume, and temperature which ic called the <strong>ideal gas law</strong>.  An equation (e.g., the ideal gas law) which relates the behavior of a physical system in terms of its thermodynamic properties is called an <em>equation of state</em>.</p>
+<div class="note admonition">
+<p class="admonition-title">Ideal Gas Law</p>
+<p>The <strong>ideal gas law</strong> states that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aef36902-b8d0-434e-b2c4-c73c5d1e58c8">
+<span class="eqno">(12.4)<a class="headerlink" href="#equation-aef36902-b8d0-434e-b2c4-c73c5d1e58c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+PV = NkT,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> is the absolute pressure (in <span class="math notranslate nohighlight">\(\rm Pa\)</span>) of a gas, <span class="math notranslate nohighlight">\(V\)</span> (in <span class="math notranslate nohighlight">\(\rm m^3\)</span>) is the volume it occupies, <span class="math notranslate nohighlight">\(N\)</span> is the number of atoms and molecules in the gas, and <span class="math notranslate nohighlight">\(T\)</span> (in <span class="math notranslate nohighlight">\({\rm K}\)</span>) is its absolute temperature.  The constant <span class="math notranslate nohighlight">\(k\)</span> is called the Boltzmann constant, which has the value</p>
+<div class="math notranslate nohighlight">
+\[ k = 1.38\times 10^{-23}\ {\rm J/K}.\]</div>
+</div>
+<p>The ideal gas law can be derived from basic principles, but it was originally deduced from experimental measurements of</p>
+<ul class="simple">
+<li><p>Charles’ law (that volume is proportional to temperature at a fixed pressure),</p></li>
+<li><p>Boyle’s law (that the product <span class="math notranslate nohighlight">\(PV\)</span> is constant for a fixed temperature), and</p></li>
+<li><p>Guy-Lussac’s law (that the ratio <span class="math notranslate nohighlight">\(P/T\)</span> is constant for a fixed volume).</p></li>
+</ul>
+<p>The ideal gas law describes the behavior of real gases under most conditions.</p>
+<p>The ideal gas law describes a tire when it is pumped slowly and the temperature is constant.  At first, teh pressure <span class="math notranslate nohighlight">\(P\)</span> is essentially equal to the atmospheric pressure, and the volume <span class="math notranslate nohighlight">\(V\)</span> increases in direct proportion to the number of atoms and molecules <span class="math notranslate nohighlight">\(N\)</span> put into the tire.  Once the volume of the tire is constant, the equation <span class="math notranslate nohighlight">\(PV = NkT\)</span> predicts that the pressure should increase in proportion to the number <span class="math notranslate nohighlight">\(N\)</span> of atoms and molecules.</p>
+<section id="moles-and-avogadro-s-number">
+<h3><span class="section-number">12.3.1. </span>Moles and Avogadro’s Number<a class="headerlink" href="#moles-and-avogadro-s-number" title="Link to this heading">#</a></h3>
+<p>Chemists use another unit instead of number of molecules when measuring the amount of a substance.  A <strong>mole</strong> (abbreviated <span class="math notranslate nohighlight">\(\rm mol\)</span>) is defined as the amount of substance that contains the same number of atoms as <span class="math notranslate nohighlight">\(12\ {\rm g}\)</span> of carbon-<span class="math notranslate nohighlight">\(12\)</span>.  The actual number of molecules in one mole is <strong>Avogadro’s number</strong> (<span class="math notranslate nohighlight">\(N_{\rm A}\)</span>) in recognition of <a class="reference external" href="https://en.wikipedia.org/wiki/Amedeo_Avogadro">Amedeo Avogadro</a>.  He developed the concept of the mole based on the hypothesis that equal volumed of gas (at the same pressure and temperature) contain equal numbers of molecules.</p>
+<div class="note admonition">
+<p class="admonition-title">Avogadro’s Number</p>
+<p>One mole contains <span class="math notranslate nohighlight">\(6.02 \times 10^{23}\)</span> particles (atoms or molecules), independent of the element or substance.  A mole of any substance has a mass in <em>grams</em> equal to its molecular (<em>molar</em>) mass, which can be calculated by multiplying the number of moles of the substance by its atomic mass.  The atomic masses of elements are given in the <a class="reference external" href="https://en.wikipedia.org/wiki/Periodic_table">periodic table</a>.  Mathematically, Avogadro’s number is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-570dba81-6c8c-4b25-ba40-bb9728a709c9">
+<span class="eqno">(12.5)<a class="headerlink" href="#equation-570dba81-6c8c-4b25-ba40-bb9728a709c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+N_{\rm A} = 6.02 \times 10^{23}\ {\rm mol^{-1}}.
+\end{align}\]</div>
+</div>
+</section>
+<section id="the-ideal-gas-law-restated-using-moles">
+<h3><span class="section-number">12.3.2. </span>The Ideal Gas Law Restated Using Moles<a class="headerlink" href="#the-ideal-gas-law-restated-using-moles" title="Link to this heading">#</a></h3>
+<p>Another version of the ideal gas law uses the number of moles <span class="math notranslate nohighlight">\(n\)</span>, rather than the number of atoms and molecules <span class="math notranslate nohighlight">\(N\)</span>.  To find this alternative relation, we begin with the ideal gas law and multiply the right-side by Avogadro’s number on top and bottom (<span class="math notranslate nohighlight">\(N_{\rm A}/N_{\rm A} = 1\)</span>) to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-eeac8506-2e15-42c8-8133-599cecc55781">
+<span class="eqno">(12.6)<a class="headerlink" href="#equation-eeac8506-2e15-42c8-8133-599cecc55781" title="Permalink to this equation">#</a></span>\[\begin{align}
+PV &amp;= NkT,\\
+PV = \left(\frac{N}{N_{\rm A}}\right) \left(N_{\rm A}k\right)T.
+\end{align}\]</div>
+<p>The number of moles is just the ratio of the number of molecules with Avogadro’s number, or <span class="math notranslate nohighlight">\(n= N/N_{\rm A}\)</span>.  We define the universal gas constant <span class="math notranslate nohighlight">\(R = N_{\rm A}k\)</span>, and then we obtain the ideal gas law in terms of moles.</p>
+<div class="note admonition">
+<p class="admonition-title">Ideal Gas Law (in Terms of Moles)</p>
+<p>The ideal gas law (in terms of moles) is given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c2303f29-41e8-40ab-ae43-2d127c421daa">
+<span class="eqno">(12.7)<a class="headerlink" href="#equation-c2303f29-41e8-40ab-ae43-2d127c421daa" title="Permalink to this equation">#</a></span>\[\begin{align}
+PV = nRT.
+\end{align}\]</div>
+<p>The <strong>universal gas constant</strong>, <span class="math notranslate nohighlight">\(R\)</span>, is related to Avogadro’s constant <span class="math notranslate nohighlight">\(N_{\rm A}\)</span> and Boltzmann’s constant <span class="math notranslate nohighlight">\(k\)</span> through <span class="math notranslate nohighlight">\(R=N_{\rm A}k\)</span>. Since the 2019 revision of the International System of Units (SI), both <span class="math notranslate nohighlight">\(N_{\rm A}\)</span> and <span class="math notranslate nohighlight">\(k\)</span> have exact defined values:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c73c7e67-0962-4eeb-81bf-605c3349ad77">
+<span class="eqno">(12.8)<a class="headerlink" href="#equation-c73c7e67-0962-4eeb-81bf-605c3349ad77" title="Permalink to this equation">#</a></span>\[\begin{align}
+N_{\rm A} &amp;= 6.02214076 \times10^{23}\ {\rm mol}^{-1}, \\
+k &amp;= 1.380649 \times10^{-23}\ {\rm J/K}.
+\end{align}\]</div>
+<p>As a result, the universal gas constant has the exact value</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ff3d03de-519c-4b5b-b4df-bd1d4c50a42b">
+<span class="eqno">(12.9)<a class="headerlink" href="#equation-ff3d03de-519c-4b5b-b4df-bd1d4c50a42b" title="Permalink to this equation">#</a></span>\[\begin{align}
+R = N_{\rm A}k = 8.31446261815324\ {\rm J/(mol\cdot K)}.
+\end{align}\]</div>
+<p>For most calculations, we use the rounded value <span class="math notranslate nohighlight">\(R=8.31\ {\rm J/(mol\cdot K)}\)</span>. The gas constant can also be expressed in other commonly used units:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+R &amp;\approx 1.99\ {\rm cal/(mol\cdot K)},\\
+R &amp;\approx 0.0821\ {\rm L\cdot atm/(mol\cdot K)}.
+\end{align*}\]</div>
+<p>You can use whichever form of <span class="math notranslate nohighlight">\(R\)</span> is most convenient for a particular problem, provided the units are consistent.</p>
+</div>
+<p>The ideal gas law can be considered as another manifestation of the law of conservation of energy.  Work done on a gas results in an increase in its energy, by increasing pressure and/or temperature.  This increased energy can also be viewed as increasing the kinetic energy of the atoms and molecules within the gas.</p>
+</section>
+<section id="the-ideal-gas-law-and-energy">
+<h3><span class="section-number">12.3.3. </span>The Ideal Gas Law and Energy<a class="headerlink" href="#the-ideal-gas-law-and-energy" title="Link to this heading">#</a></h3>
+<p>When you inflate a bike tire by hand, you do work by repeatedly exerting a force through a distance.  This energy goes into increasing the pressure of air inside the tire adn increasing the temperature of the pump and the air.</p>
+<p>The ideal gas law is closely related to energy: the dimensions on both sides are those of energy (with units of joules).</p>
+<ul class="simple">
+<li><p>The right-hand side of the ideal gas law is <span class="math notranslate nohighlight">\(NkT\)</span>.  This term is proportional to the amount of translational energy for <span class="math notranslate nohighlight">\(N\)</span> atoms or molecules at an absolute temperature <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p>The left-hand side of the ideal gas law is <span class="math notranslate nohighlight">\(PV\)</span>, which also has units of joules.  Pressure is force per unit area, so we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ PV = \left(\frac{F}{A}\right)V = F\left(\frac{V}{A}\right) = Fd. \]</div>
+<p>There is energy in a gas related to both its pressure and its volume.  The energy can be changed when the gas is doing work as it expands.</p>
+<div class="note admonition">
+<p class="admonition-title">Problem-Solving Strategy: The Ideal Gas Law</p>
+<ol class="arabic simple">
+<li><p>First, determine whether the problem can be modeled with the ideal gas law by identifying the gas variables involved, such as pressure, volume, temperature, and amount of gas.</p></li>
+<li><p>Next, list the known quantities and clearly identify the unknown quantity that must be found.</p></li>
+<li><p>Convert all known quantities into consistent units, using kelvin for temperature, appropriate pressure and volume units for the chosen gas constant, and either moles or molecules for the amount of gas.</p></li>
+<li><p>Choose the appropriate form of the ideal gas law by using <span class="math notranslate nohighlight">\(PV=nRT\)</span> when the amount of gas is given in moles, or <span class="math notranslate nohighlight">\(PV=NkT\)</span> when the amount of gas is given as molecules.</p></li>
+<li><p>Solve the equation for the unknown quantity, substitute the known values with units, and then check whether the final answer is reasonable.</p></li>
+</ol>
+<figure class="align-default" id="fig-ideal-gas-law-flowchart">
+<img alt="Flow chart for solving ideal gas law problems. The chart begins by identifying whether the problem involves an ideal gas, then listing the known and unknown quantities, and converting all quantities to consistent units. It next asks whether the amount of gas is given in moles or in molecules, leading to the use of either PV = nRT or PV = NkT, or to first determining the amount of gas. The chart ends by solving for the unknown and checking that the answer is reasonable." src="../_images/ideal_gas_law_problem_solving_flowchart.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.10 </span><span class="caption-text">Flow chart for solving ideal gas law problems. Begin by identifying whether the problem can be modeled with the ideal gas law, then list the known and unknown quantities and convert all values to consistent units. Next, choose the appropriate form of the ideal gas law: use <span class="math notranslate nohighlight">\(PV=nRT\)</span> when the amount of gas is given in moles, or use <span class="math notranslate nohighlight">\(PV=NkT\)</span> when the amount of gas is given in molecules. If the amount of gas is not directly given, determine or infer it before solving for the unknown quantity and checking that the result is reasonable.</span><a class="headerlink" href="#fig-ideal-gas-law-flowchart" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="kinetic-theory">
+<h2><span class="section-number">12.4. </span>Kinetic Theory<a class="headerlink" href="#kinetic-theory" title="Link to this heading">#</a></h2>
+</section>
+<section id="phase-changes">
+<h2><span class="section-number">12.5. </span>Phase Changes<a class="headerlink" href="#phase-changes" title="Link to this heading">#</a></h2>
+</section>
+<section id="humidity-evaporation-and-boiling">
+<h2><span class="section-number">12.6. </span>Humidity, Evaporation, and Boiling<a class="headerlink" href="#humidity-evaporation-and-boiling" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +1020,40 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature">12.1. Temperature</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-scales">12.1.1. Temperature Scales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-ranges-in-the-universe">12.1.2. Temperature Ranges in the Universe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-equilibrium-and-the-zeroth-law-of-thermodynamics">12.1.3. Thermal Equilibrium and the Zeroth Law of Thermodynamics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-expansion-of-solids-and-liquids">12.2. Thermal Expansion of Solids and Liquids</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-expansion-in-2d-and-3d">12.2.1. Thermal Expansion in 2D and 3D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-stress">12.2.2. Thermal Stress</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law">12.3. The Ideal Gas Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moles-and-avogadro-s-number">12.3.1. Moles and Avogadro’s Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law-restated-using-moles">12.3.2. The Ideal Gas Law Restated Using Moles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law-and-energy">12.3.3. The Ideal Gas Law and Energy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-theory">12.4. Kinetic Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#humidity-evaporation-and-boiling">12.6. Humidity, Evaporation, and Boiling</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
