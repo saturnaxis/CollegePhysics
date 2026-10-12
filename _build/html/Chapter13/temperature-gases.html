@@ -510,7 +510,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law-and-energy">12.3.3. The Ideal Gas Law and Energy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-theory">12.4. Kinetic Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-theory">12.4. Kinetic Theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-molecular-speeds">12.4.1. Distribution of Molecular Speeds</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#humidity-evaporation-and-boiling">12.6. Humidity, Evaporation, and Boiling</a></li>
 </ul>
@@ -526,7 +529,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="kinetic-theory-of-gases">
 <h1><span class="section-number">12. </span>Kinetic Theory of Gases<a class="headerlink" href="#kinetic-theory-of-gases" title="Link to this heading">#</a></h1>
-<p>Oct 11, 2026 | 3593 words | 24 min read</p>
+<p>Oct 11, 2026 | 4414 words | 29 min read</p>
 <section id="temperature">
 <h2><span class="section-number">12.1. </span>Temperature<a class="headerlink" href="#temperature" title="Link to this heading">#</a></h2>
 <p>Human perception of temperature has evolved from the relative sensation of what feels hot or cold.  For example,</p>
@@ -622,8 +625,8 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Linear Thermal Expansion in 1D</p>
 <p>The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> is proportional to length <span class="math notranslate nohighlight">\(L\)</span>.  The dependence of thermal expansion <span class="math notranslate nohighlight">\(\Delta L\)</span> on temperature change <span class="math notranslate nohighlight">\(\Delta T\)</span> (in Kelvin), substance, and length <span class="math notranslate nohighlight">\(L\)</span> is summarized by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90d302f3-cadc-4c35-8b35-af354406869c">
-<span class="eqno">(12.1)<a class="headerlink" href="#equation-90d302f3-cadc-4c35-8b35-af354406869c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d113406b-3610-474a-92c9-5b8ad3e282a2">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-d113406b-3610-474a-92c9-5b8ad3e282a2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta L = \alpha L \Delta T,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) is the <strong>coefficient of linear expansion</strong>.  The coefficient <span class="math notranslate nohighlight">\(\alpha\)</span> varies slightly with temperature.</p>
@@ -791,15 +794,15 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Thermal Expansion in 2D and 3D</p>
 <p>For small temperature changes, the change in area <span class="math notranslate nohighlight">\(\Delta A\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6d7b5584-d7a7-4ca1-bf0e-cfe0e7c6b948">
-<span class="eqno">(12.2)<a class="headerlink" href="#equation-6d7b5584-d7a7-4ca1-bf0e-cfe0e7c6b948" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2120f0a4-f150-4a1b-999f-282bad31514d">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-2120f0a4-f150-4a1b-999f-282bad31514d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta A = 2\alpha A\Delta T,
 \end{align}\]</div>
 <p>which depends on the change in temperature <span class="math notranslate nohighlight">\(\Delta T\)</span> (in Kelvin), and <span class="math notranslate nohighlight">\(\alpha\)</span> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) is the coefficient of linear expansion.</p>
 <hr class="docutils" />
 <p>The change in volume <span class="math notranslate nohighlight">\(\Delta V\)</span> is very nearly <span class="math notranslate nohighlight">\(\Delta V = 3\alpha V\Delta T\)</span>, but the formal equation is usually written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f34bf24c-0e23-4ff1-856d-915d66ab225d">
-<span class="eqno">(12.3)<a class="headerlink" href="#equation-f34bf24c-0e23-4ff1-856d-915d66ab225d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-df2aeb6b-f7f2-49a9-bedb-bb17b1f48fe3">
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-df2aeb6b-f7f2-49a9-bedb-bb17b1f48fe3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta V = \beta V\Delta T,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\beta\)</span> is the <strong>coefficient of volume expansion</strong> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) and <span class="math notranslate nohighlight">\(\beta \approx 3\alpha\)</span>.</p>
@@ -861,8 +864,8 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Ideal Gas Law</p>
 <p>The <strong>ideal gas law</strong> states that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aef36902-b8d0-434e-b2c4-c73c5d1e58c8">
-<span class="eqno">(12.4)<a class="headerlink" href="#equation-aef36902-b8d0-434e-b2c4-c73c5d1e58c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0bdae153-71eb-460c-a892-c8539001fcb2">
+<span class="eqno">(12.4)<a class="headerlink" href="#equation-0bdae153-71eb-460c-a892-c8539001fcb2" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV = NkT,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(P\)</span> is the absolute pressure (in <span class="math notranslate nohighlight">\(\rm Pa\)</span>) of a gas, <span class="math notranslate nohighlight">\(V\)</span> (in <span class="math notranslate nohighlight">\(\rm m^3\)</span>) is the volume it occupies, <span class="math notranslate nohighlight">\(N\)</span> is the number of atoms and molecules in the gas, and <span class="math notranslate nohighlight">\(T\)</span> (in <span class="math notranslate nohighlight">\({\rm K}\)</span>) is its absolute temperature.  The constant <span class="math notranslate nohighlight">\(k\)</span> is called the Boltzmann constant, which has the value</p>
@@ -883,8 +886,8 @@ PV = NkT,
 <div class="note admonition">
 <p class="admonition-title">Avogadro’s Number</p>
 <p>One mole contains <span class="math notranslate nohighlight">\(6.02 \times 10^{23}\)</span> particles (atoms or molecules), independent of the element or substance.  A mole of any substance has a mass in <em>grams</em> equal to its molecular (<em>molar</em>) mass, which can be calculated by multiplying the number of moles of the substance by its atomic mass.  The atomic masses of elements are given in the <a class="reference external" href="https://en.wikipedia.org/wiki/Periodic_table">periodic table</a>.  Mathematically, Avogadro’s number is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-570dba81-6c8c-4b25-ba40-bb9728a709c9">
-<span class="eqno">(12.5)<a class="headerlink" href="#equation-570dba81-6c8c-4b25-ba40-bb9728a709c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-883286ff-ac04-45af-9273-122ead0c34f5">
+<span class="eqno">(12.5)<a class="headerlink" href="#equation-883286ff-ac04-45af-9273-122ead0c34f5" title="Permalink to this equation">#</a></span>\[\begin{align}
 N_{\rm A} = 6.02 \times 10^{23}\ {\rm mol^{-1}}.
 \end{align}\]</div>
 </div>
@@ -892,8 +895,8 @@ N_{\rm A} = 6.02 \times 10^{23}\ {\rm mol^{-1}}.
 <section id="the-ideal-gas-law-restated-using-moles">
 <h3><span class="section-number">12.3.2. </span>The Ideal Gas Law Restated Using Moles<a class="headerlink" href="#the-ideal-gas-law-restated-using-moles" title="Link to this heading">#</a></h3>
 <p>Another version of the ideal gas law uses the number of moles <span class="math notranslate nohighlight">\(n\)</span>, rather than the number of atoms and molecules <span class="math notranslate nohighlight">\(N\)</span>.  To find this alternative relation, we begin with the ideal gas law and multiply the right-side by Avogadro’s number on top and bottom (<span class="math notranslate nohighlight">\(N_{\rm A}/N_{\rm A} = 1\)</span>) to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eeac8506-2e15-42c8-8133-599cecc55781">
-<span class="eqno">(12.6)<a class="headerlink" href="#equation-eeac8506-2e15-42c8-8133-599cecc55781" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1b2d14a0-5e0c-4a7c-ba1e-ffd8f1f10d8c">
+<span class="eqno">(12.6)<a class="headerlink" href="#equation-1b2d14a0-5e0c-4a7c-ba1e-ffd8f1f10d8c" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV &amp;= NkT,\\
 PV = \left(\frac{N}{N_{\rm A}}\right) \left(N_{\rm A}k\right)T.
 \end{align}\]</div>
@@ -901,19 +904,19 @@ PV = \left(\frac{N}{N_{\rm A}}\right) \left(N_{\rm A}k\right)T.
 <div class="note admonition">
 <p class="admonition-title">Ideal Gas Law (in Terms of Moles)</p>
 <p>The ideal gas law (in terms of moles) is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2303f29-41e8-40ab-ae43-2d127c421daa">
-<span class="eqno">(12.7)<a class="headerlink" href="#equation-c2303f29-41e8-40ab-ae43-2d127c421daa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-288bb7d4-24c2-4e6b-9cb6-03b8611bf9c8">
+<span class="eqno">(12.7)<a class="headerlink" href="#equation-288bb7d4-24c2-4e6b-9cb6-03b8611bf9c8" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV = nRT.
 \end{align}\]</div>
 <p>The <strong>universal gas constant</strong>, <span class="math notranslate nohighlight">\(R\)</span>, is related to Avogadro’s constant <span class="math notranslate nohighlight">\(N_{\rm A}\)</span> and Boltzmann’s constant <span class="math notranslate nohighlight">\(k\)</span> through <span class="math notranslate nohighlight">\(R=N_{\rm A}k\)</span>. Since the 2019 revision of the International System of Units (SI), both <span class="math notranslate nohighlight">\(N_{\rm A}\)</span> and <span class="math notranslate nohighlight">\(k\)</span> have exact defined values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c73c7e67-0962-4eeb-81bf-605c3349ad77">
-<span class="eqno">(12.8)<a class="headerlink" href="#equation-c73c7e67-0962-4eeb-81bf-605c3349ad77" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-48ec3840-0069-4b27-a7a1-84b71b043f28">
+<span class="eqno">(12.8)<a class="headerlink" href="#equation-48ec3840-0069-4b27-a7a1-84b71b043f28" title="Permalink to this equation">#</a></span>\[\begin{align}
 N_{\rm A} &amp;= 6.02214076 \times10^{23}\ {\rm mol}^{-1}, \\
 k &amp;= 1.380649 \times10^{-23}\ {\rm J/K}.
 \end{align}\]</div>
 <p>As a result, the universal gas constant has the exact value</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff3d03de-519c-4b5b-b4df-bd1d4c50a42b">
-<span class="eqno">(12.9)<a class="headerlink" href="#equation-ff3d03de-519c-4b5b-b4df-bd1d4c50a42b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bf46b4ca-2d86-4c27-bed0-813132ea770b">
+<span class="eqno">(12.9)<a class="headerlink" href="#equation-bf46b4ca-2d86-4c27-bed0-813132ea770b" title="Permalink to this equation">#</a></span>\[\begin{align}
 R = N_{\rm A}k = 8.31446261815324\ {\rm J/(mol\cdot K)}.
 \end{align}\]</div>
 <p>For most calculations, we use the rounded value <span class="math notranslate nohighlight">\(R=8.31\ {\rm J/(mol\cdot K)}\)</span>. The gas constant can also be expressed in other commonly used units:</p>
@@ -957,6 +960,98 @@ R &amp;\approx 0.0821\ {\rm L\cdot atm/(mol\cdot K)}.
 </section>
 <section id="kinetic-theory">
 <h2><span class="section-number">12.4. </span>Kinetic Theory<a class="headerlink" href="#kinetic-theory" title="Link to this heading">#</a></h2>
+<p>Pressure is the force divided by the area on which the force is exerted and temperature is measured with a thermometer.  The kinetic theory of gases provides more insights which assumes that gas particles are in continuous random motion.</p>
+<p>Consider an elastic collision of a gas molecule with the wall of a container, where it exerts a force on the wall by Newton’s third law.  We observe an average force per unit area through the huge number of molecules that collide with the wall in a short time.  These collisions are the source of pressure in a gas.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Single-molecule collision</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-momentum-reflection-wall">
+<img alt="Diagram of a gas molecule undergoing an elastic collision with a vertical wall. The incoming velocity vector points down and to the left toward the wall, and the outgoing velocity vector points down and to the right after the collision. The x-component of momentum reverses direction, while the y-component remains unchanged. The diagram also shows the net change in x-momentum as delta p_x equals 2mv_x." src="../_images/momentum_reflection_vector_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.11 </span><span class="caption-text">Elastic collision of a gas molecule with a wall. During the collision, the component of momentum perpendicular to the wall changes from <span class="math notranslate nohighlight">\(-mv_x\)</span> to <span class="math notranslate nohighlight">\(+mv_x\)</span>, while the component parallel to the wall remains unchanged. Thus, the total change in momentum is <span class="math notranslate nohighlight">\(\Delta p_x = 2mv_x\)</span>, which is the basis for relating molecular collisions to the pressure exerted by a gas.</span><a class="headerlink" href="#fig-momentum-reflection-wall" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Gas pressure in Box</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-gas-pressure-collisions">
+<img alt="Illustration showing gas molecules moving randomly inside a rectangular container and a magnified view of the right-hand wall. Blue molecules with velocity arrows move in random directions inside the box. The magnified inset shows molecules near the wall and a red arrow labeled average force on wall. The equation P equals F average divided by A is shown below, along with the statement that pressure is average normal force per unit area." src="../_images/molecular_motion_and_gas_pressure.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.12 </span><span class="caption-text">Gas pressure emerges from the collective motion of many molecules in a container. In the box at left, molecules move in random directions with a range of speeds, so increasing either the number of molecules or their average speed increases the number and strength of wall collisions. The magnified view at right emphasizes that these repeated impacts produce an average force on the wall. Pressure is therefore the average normal force per unit area, <span class="math notranslate nohighlight">\(P = F_{\rm avg}/A\)</span>.</span><a class="headerlink" href="#fig-gas-pressure-collisions" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>As the number of molecules increases, the pressure increases due to the higher number of collisions.  The gas pressure is higher if the average velocity of the molecules is higher.</p>
+<p>Consider the elastic collision of a single molecule with a vertical wall within a box of width <span class="math notranslate nohighlight">\(\ell\)</span>.  Using conservation of linear momentum and energy, we can show that there is a change in momentum along the <span class="math notranslate nohighlight">\(x\)</span>-direction such that <span class="math notranslate nohighlight">\(-mv_x\)</span> changes to <span class="math notranslate nohighlight">\(+mv_x\)</span>.  The total change in momentum  is then <span class="math notranslate nohighlight">\(\Delta mv = +mv_x - (-mv_x) = 2mv_x\)</span>.  Then the force on the molecule is given by</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{\Delta p}{\Delta t} = \frac{2mv_x}{\Delta t}. \]</div>
+<p>There is no force between the wall and the molecule until the molecule is in contact with (i.e., hits) the wall.  During the short time of the collision, the force between the molecule and the wall is relatively large.  Since we are looking for the average force, we take <span class="math notranslate nohighlight">\(\Delta t\)</span> to be the average time between collisions of the moleculer and this wall.</p>
+<p>It is the time for the molecule to fully go across to the other side of the box (a distance of <span class="math notranslate nohighlight">\(2\ell\)</span>) at a speed <span class="math notranslate nohighlight">\(v_x\)</span>.  We can determine that <span class="math notranslate nohighlight">\(\Delta t = 2\ell/v_x\)</span> using the definition of velocity.  The expression for the force becomes</p>
+<div class="math notranslate nohighlight">
+\[ F = \left(\frac{ 2mv_x}{1}\right) \left(\frac{v_x}{2\ell}\right) = \frac{mv_x^2}{\ell}. \]</div>
+<p>This is the force per molecule, so we must multiply by the number of molecules <span class="math notranslate nohighlight">\(N\)</span> and us the average squared velocity <span class="math notranslate nohighlight">\(\overline{v_x^2}\)</span>.  Thus, we now have the force as</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{N}{\ell}m\overline{v_x^2}, \]</div>
+<p>where the bar over a quantity denotes the average value.  To get the force in terms of just the average velocity squared, we consider that collisions must be occurring with the other sides of the boxes (i.e., in the <span class="math notranslate nohighlight">\(y\)</span>- and <span class="math notranslate nohighlight">\(z\)</span>-directions).  We expect the average velocity squared is represented by</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v^2} = \overline{v_x^2} +\overline{v_y^2} + \overline{v_z^2}. \]</div>
+<p>Because the velocities are random, their average components in all directions are the same (<span class="math notranslate nohighlight">\(\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}\)</span>).  So we can simplify so that <span class="math notranslate nohighlight">\(\overline{v^2} = 3\overline{v_x^2}\)</span>, or <span class="math notranslate nohighlight">\(\overline{v_x^2} = \overline{v^2}/3\)</span>.  Substituting into our expression for <span class="math notranslate nohighlight">\(F\)</span>, we find that</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{N}{3\ell}m\overline{v^2}. \]</div>
+<p>The pressure is <span class="math notranslate nohighlight">\(F/A\)</span>, so we can divide both sides by <span class="math notranslate nohighlight">\(A\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{F}{A} = \frac{N}{3A\ell}m\overline{v^2} = \frac{N}{3V}m\overline{v^2}, \]</div>
+<p>where we used the volume <span class="math notranslate nohighlight">\(V = A\ell\)</span>.  If we multiply the volume <span class="math notranslate nohighlight">\(V\)</span> to both sides, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d1f5065d-4f12-4f00-971c-0af1a6ccc3b3">
+<span class="eqno">(12.10)<a class="headerlink" href="#equation-d1f5065d-4f12-4f00-971c-0af1a6ccc3b3" title="Permalink to this equation">#</a></span>\[\begin{align}
+PV = \frac{N}{3}m\overline{v^2},
+\end{align}\]</div>
+<p>which is another expression of the ideal gas law.  We can set this equal to our expected result, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1286921c-7121-43f7-ae13-d605c716deeb">
+<span class="eqno">(12.11)<a class="headerlink" href="#equation-1286921c-7121-43f7-ae13-d605c716deeb" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{N}{3}m\overline{v^2} &amp;= NkT, \\
+kT &amp;= \frac{1}{3}m\overline{v^2}.
+\end{align}\]</div>
+<p>If we multiply both sides by <span class="math notranslate nohighlight">\(3/2\)</span>, then we find the average translational kinetic energy, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-66fe4c0d-df23-4374-8c72-ed029ab0a7c8">
+<span class="eqno">(12.12)<a class="headerlink" href="#equation-66fe4c0d-df23-4374-8c72-ed029ab0a7c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\overline{\rm KE} = \frac{3}{2}kT = \frac{1}{2}m\overline{v^2}.
+\end{align}\]</div>
+<p>The average translational kinetic energy of a molecule <span class="math notranslate nohighlight">\(\overline{KE}\)</span> is called <strong>thermal energy</strong>.  This is another definition of the expression of temperature based on an expression of the molecular energy.</p>
+<p>We can also solve for the <em>root-mean-square</em> velocity <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>, which describes the average velocity weighted by the velocity squared.  To solve for it, we use</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aea2b775-febf-4738-805a-9ad844b50139">
+<span class="eqno">(12.13)<a class="headerlink" href="#equation-aea2b775-febf-4738-805a-9ad844b50139" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm rms} = \sqrt{\overline{v^2}} = \sqrt{\frac{3kT}{m}}.
+\end{align}\]</div>
+<section id="distribution-of-molecular-speeds">
+<h3><span class="section-number">12.4.1. </span>Distribution of Molecular Speeds<a class="headerlink" href="#distribution-of-molecular-speeds" title="Link to this heading">#</a></h3>
+<p>The motion of molecules in a gas is random in magnitude and direction for individual molecules.  However, a gas of many molecules has a predictable distribution of molecular speeds, which is called the <em>Maxwell-Boltzmann distribution</em>.  The distribution has a long tail, because few molecules may go several times the <span class="math notranslate nohighlight">\(\rm rms\)</span> speed.  The most probable speed <span class="math notranslate nohighlight">\(v_{\rm p}\)</span> is les sthan the <span class="math notranslate nohighlight">\(\rm rms\)</span> speed <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Oxygen at 300 K</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-mb-oxygen-300k">
+<img alt="Maxwell-Boltzmann speed distribution for molecular oxygen at 300 kelvin. The curve peaks near the most probable speed and includes markers for the most probable speed and the root-mean-square speed." src="../_images/maxwell_boltzmann_oxygen_300K.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.13 </span><span class="caption-text">Maxwell–Boltzmann speed distribution for molecular oxygen, <span class="math notranslate nohighlight">\(\mathrm{O}_2\)</span>, at <span class="math notranslate nohighlight">\(T=300\ {\rm K}\)</span>. The peak of the curve occurs at the <strong>most probable speed</strong> <span class="math notranslate nohighlight">\(v_p\)</span>, which is the speed at which the largest number of molecules are found. The <strong>root-mean-square speed</strong> <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span> lies farther to the right because it weights the distribution toward higher speeds. This graph shows that even at a single temperature, gas molecules have a wide range of speeds.</span><a class="headerlink" href="#fig-mb-oxygen-300k" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Hydrogen at two temperatures</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-mb-hydrogen-two-temperatures">
+<img alt="Two Maxwell-Boltzmann speed distributions for molecular hydrogen, one at 300 kelvin and one at 600 kelvin. The higher-temperature curve is broader, shifted to higher speeds, and has a lower peak." src="../_images/maxwell_boltzmann_hydrogen_two_temperatures.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.14 </span><span class="caption-text">Maxwell–Boltzmann speed distributions for molecular hydrogen, <span class="math notranslate nohighlight">\(\mathrm{H}_2\)</span>, at two different temperatures. As the temperature increases from <span class="math notranslate nohighlight">\(T_1=300\ {\rm K}\)</span> to <span class="math notranslate nohighlight">\(T_2=600\ {\rm K}\)</span>, the distribution shifts toward higher speeds, becomes broader, and has a lower peak. Although the shapes of the curves differ, the total area under each curve is the same because each curve represents the full distribution of molecular speeds.</span><a class="headerlink" href="#fig-mb-hydrogen-two-temperatures" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
 </section>
 <section id="phase-changes">
 <h2><span class="section-number">12.5. </span>Phase Changes<a class="headerlink" href="#phase-changes" title="Link to this heading">#</a></h2>
@@ -1047,7 +1142,10 @@ R &amp;\approx 0.0821\ {\rm L\cdot atm/(mol\cdot K)}.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-gas-law-and-energy">12.3.3. The Ideal Gas Law and Energy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-theory">12.4. Kinetic Theory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kinetic-theory">12.4. Kinetic Theory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-molecular-speeds">12.4.1. Distribution of Molecular Speeds</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#humidity-evaporation-and-boiling">12.6. Humidity, Evaporation, and Boiling</a></li>
 </ul>
