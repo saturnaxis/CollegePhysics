@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=dc7a9e5f" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ffec1ee8" />
     <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -536,7 +536,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statics-torque">
 <h1><span class="section-number">8. </span>Statics &amp; Torque<a class="headerlink" href="#statics-torque" title="Link to this heading">#</a></h1>
-<p>Sep 14, 2026 | 8039 words | 54 min read</p>
+<p>Oct 16, 2026 | 8039 words | 54 min read</p>
 <div class="tip admonition">
 <p class="admonition-title">Chapter roadmap</p>
 <p>Statics extends the idea of balanced forces to objects that can also rotate. This chapter develops the two conditions for equilibrium, examines stability, and applies torque to machines and the human body.</p>
@@ -557,8 +557,8 @@ document.write(`
 <section id="the-first-condition-for-equilibrium">
 <h2><span class="section-number">8.1. </span>The First Condition for Equilibrium<a class="headerlink" href="#the-first-condition-for-equilibrium" title="Link to this heading">#</a></h2>
 <p>The first condition necessary for equilibrium is that the <strong>net external force on the system must be zero.</strong>  If the <span class="math notranslate nohighlight">\(\vec{F}_{\rm net} = 0\)</span>, then the net external force in <em>any direction</em> is zero. Mathematically, this is represented by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d2059730-f6d1-4709-995a-53e3891b38af">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-d2059730-f6d1-4709-995a-53e3891b38af" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b03505f6-a621-4b0c-aa56-2b3ca26f891e">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-b03505f6-a621-4b0c-aa56-2b3ca26f891e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{F}_{\rm net} &amp;= m\vec{a} = 0, \\
 {\displaystyle \sum_i F_{ix}} &amp;= ma_x = 0, \\
 {\displaystyle \sum_i F_{iy}} &amp;= ma_y = 0.
@@ -611,8 +611,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <div class="note admonition">
 <p class="admonition-title">Torque</p>
 <p>The magnitude, direction, and point of application of the force combine to define the <strong>torque</strong>.  Torque is the rotational equivalent of a force, where it is written mathematically as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-889b4332-c06b-474e-a353-1748932a6164">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-889b4332-c06b-474e-a353-1748932a6164" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3774bc0c-fbf5-4d92-9e99-ac4f8c99b7ae">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-3774bc0c-fbf5-4d92-9e99-ac4f8c99b7ae" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = rF\sin{\theta},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau\)</span> is the torque, <span class="math notranslate nohighlight">\(r\)</span> is the distance from the pivot to the point where the force <span class="math notranslate nohighlight">\(F\)</span> is applied, and <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the distance <span class="math notranslate nohighlight">\(r\)</span> and the force <span class="math notranslate nohighlight">\(F\)</span>.</p>
@@ -620,8 +620,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[ r_\perp = r\sin{\theta}, \]</div>
 <p>so that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bcb5a586-810b-4ebb-a15c-9627716b5205">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-bcb5a586-810b-4ebb-a15c-9627716b5205" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ef3a03af-674a-4d0a-b28d-949670959f83">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-ef3a03af-674a-4d0a-b28d-949670959f83" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = r_\perp F.
 \end{align}\]</div>
 <p>The perpendicular lever arm <span class="math notranslate nohighlight">\(r_\perp\)</span> is the shortest distance from the pivot point to the line where the force <span class="math notranslate nohighlight">\(F\)</span> acts.</p>
@@ -641,8 +641,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <p>Torque has two possible directions: clockwise or counterclockwise relative to the chosen pivot point.  A common convention defines the counterclockwise (ccw) torque as positive, while the clockwise (cw) torque is negative.  Torques assigned in opposite directions have opposite signs.</p>
 <p>The <strong>second condition for equilibrium</strong> requires that the net <em>external torque on a system must be zero</em>.  An external torque is one that is created by an external force.  <em>You can choose the point around which the torque is calculated.</em></p>
 <p>The point can be the physical pivot point of a system or any other point in space.  However, it must be the same point for all the calculated torques for that system.  If the net external torque is zero for one choice of the pivot point, then it will hold true for any other choice of pivot point (within an inertial frame of reference).  The second condition necessary for equilibrium is stated in equation form as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-64d44379-bad0-4380-8c3a-c63410cf7f2a">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-64d44379-bad0-4380-8c3a-c63410cf7f2a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5cb4b7b8-2eb2-48ae-8930-e754c19bde91">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-5cb4b7b8-2eb2-48ae-8930-e754c19bde91" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{\tau}_{\rm net} = {\displaystyle \sum_i \vec{\tau}_i} = 0.
 \end{align}\]</div>
 <p>Two children (of unequal weight: <span class="math notranslate nohighlight">\(w_1\)</span> and <span class="math notranslate nohighlight">\(w_2\)</span>) balanced on a seesaw satisfy both conditions for equilibrium. To balance the seesaw, the heavier child (<span class="math notranslate nohighlight">\(w_2\)</span>) must sit closer to the pivot compared to the lighter child (<span class="math notranslate nohighlight">\(w_1\)</span>).</p>
@@ -655,8 +655,8 @@ Dynamic Equilibrium</label><div class="sd-tab-content docutils">
 <li><p>curl your fingers in the direction of the applied force <span class="math notranslate nohighlight">\(F_i\)</span>.</p></li>
 </ol>
 <p>The direction in which your fingers curl determines the sign: counterclockwise (positive) or clockwise (negative).  The net torque is then calculated for equilibrium as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-010eef30-f41b-4ecc-b03f-295da0fff2af">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-010eef30-f41b-4ecc-b03f-295da0fff2af" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-544f8ffe-5910-4850-bf5d-d29e42d2ecba">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-544f8ffe-5910-4850-bf5d-d29e42d2ecba" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau_{\rm net} &amp;= \tau_1 + \tau_2 = 0, \\
 &amp;= +r_1w_1 + (-r_2w_2) = 0, \\
 r_1w_1 &amp;= r_2w_2.
@@ -879,8 +879,8 @@ F_L=mg-F_R=(5.00\ {\rm kg})(9.80\ {\rm m/s^2})-32.7\ {\rm N}=16.3\ {\rm N}.
 <section id="simple-machines">
 <h2><span class="section-number">8.5. </span>Simple Machines<a class="headerlink" href="#simple-machines" title="Link to this heading">#</a></h2>
 <p>Simple machines are devices that multiply (or augment) a force that we apply at the expense of a distance through which we apply the force.  Levers, gears, pulleys, wedges, and screws are some examples of machines.  Energy is still conserved for these devices because a machine cannot do more work than the energy put into it.  However, machines can reduce the input force necessary.  The <strong>mechanical advantage</strong> (<span class="math notranslate nohighlight">\(\rm MA\)</span>) is the ratio of output to input force magnitudes, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-00e7f115-7a09-4aba-b051-1ef5e8767b12">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-00e7f115-7a09-4aba-b051-1ef5e8767b12" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-118b9dc0-931d-440f-a482-aaac553371d7">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-118b9dc0-931d-440f-a482-aaac553371d7" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm MA} = \frac{F_{\rm o}}{F_{\rm i}}, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(F_{\rm o}\)</span> is the output force magnitude and <span class="math notranslate nohighlight">\(F_{\rm i}\)</span> is the input force magnitude.</p>
@@ -907,8 +907,8 @@ F_L=mg-F_R=(5.00\ {\rm kg})(9.80\ {\rm m/s^2})-32.7\ {\rm N}=16.3\ {\rm N}.
 <p>For the pry bar, we choose the <em>pry bar itself</em> as the system of interest. There are three vertical forces acting on this system: the input force <span class="math notranslate nohighlight">\(\vec{F}_{\rm i}\)</span> exerted by the hand, the reaction force <span class="math notranslate nohighlight">\(\vec{F}_{\rm n}\)</span> exerted by the nail on the pry bar, and the normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> exerted by the supporting surface at the pivot. <strong>The output force <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> is not a force acting on the pry bar.</strong> Instead, <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> is the force that the pry bar exerts on the nail.</p>
 <p>The forces <span class="math notranslate nohighlight">\(\vec{F}_{\rm n}\)</span> and <span class="math notranslate nohighlight">\(\vec{F}_{\rm o}\)</span> form a Newton’s third-law pair, so they have equal magnitudes and opposite directions. The normal force <span class="math notranslate nohighlight">\(\vec{N}\)</span> produces no torque about the chosen pivot because it acts at the pivot.</p>
 <p>A pry bar is intended to move the nail, rather than remain permanently in equilibrium. We therefore analyze the system at the <em>threshold of motion</em>, just before the nail begins to move. At this instant, the torques are balanced, so</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a852755-6883-4089-b72a-a9ccd980a810">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-9a852755-6883-4089-b72a-a9ccd980a810" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cc02ba4a-6603-4074-aa9e-ead0593bb6c7">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-cc02ba4a-6603-4074-aa9e-ead0593bb6c7" title="Permalink to this equation">#</a></span>\[\begin{align}
 l_{\rm i}F_{\rm i}=l_{\rm o}F_{\rm n}.
 \end{align}\]</div>
 <p>Because <span class="math notranslate nohighlight">\(F_{\rm n}=F_{\rm o}\)</span> in magnitude, this becomes</p>
@@ -1233,7 +1233,7 @@ F_V=\sqrt{F_{Vx}^2+F_{Vy}^2}=4.66\times10^3\ {\rm N}, \qquad \theta=\tan^{-1}\!\
 <figure class="align-default" id="fig-standing-on-toes-achilles">
 <img alt="Simplified lever model of a foot while standing on the toes. The Achilles tendon exerts an upward force F_A at the heel, the ankle-joint force F_p acts downward at the pivot, and the ground exerts an upward normal force N at the ball of the foot. The center of gravity is marked above the ankle, and the distances from the pivot to the Achilles tendon and normal force are labeled 4.0 cm and 12 cm." src="https://openstax.org/apps/image-cdn/v1/f%3Dwebp/apps/archive/20260604.144757/resources/450ce58f3f05416be835508db4a6128637be281e" />
 <figcaption>
-<p><span class="caption-number">Fig. 8.22 </span><span class="caption-text"><strong>Standing on the toes can be modeled as a lever system.</strong> The Achilles tendon exerts the upward force <span class="math notranslate nohighlight">\(F_A\)</span> at the heel, while the ground exerts the upward normal force <span class="math notranslate nohighlight">\(N\)</span> at the ball of the foot. The force <span class="math notranslate nohighlight">\(F_p\)</span> acts at the ankle-joint pivot, and the labeled distances determine the torques used to analyze the system. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-problems">OpenStax, <em>College Physics 2e</em>, Chapter 9 Problems</a>.</span><a class="headerlink" href="#fig-standing-on-toes-achilles" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 8.22 </span><span class="caption-text"><strong>Standing on the toes can be modeled as a lever system.</strong> The Achilles tendon exerts the upward force <span class="math notranslate nohighlight">\(F_A\)</span> at the heel, while the ground exerts the upward normal force <span class="math notranslate nohighlight">\(N\)</span> at the ball of the foot. The force <span class="math notranslate nohighlight">\(F_p\)</span> acts at the ankle-joint pivot, and the labeled distances determine the torques used to analyze the system. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/9-problems-exercises">OpenStax, <em>College Physics 2e</em>, Chapter 9 Problems</a>.</span><a class="headerlink" href="#fig-standing-on-toes-achilles" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>

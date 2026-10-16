@@ -514,8 +514,25 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-molecular-speeds">12.4.1. Distribution of Molecular Speeds</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-diagrams">12.5.1. PV Diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-diagrams">12.5.2. Phase Diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium">12.5.3. Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor-pressure-partial-pressure-and-dalton-s-law">12.5.4. Vapor Pressure, Partial Pressure, and Dalton’s Law</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#humidity-evaporation-and-boiling">12.6. Humidity, Evaporation, and Boiling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">12.7. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">12.7.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">12.7.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">12.8. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">12.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">12.8.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">12.8.3. Quantitative Questions</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -529,7 +546,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="kinetic-theory-of-gases">
 <h1><span class="section-number">12. </span>Kinetic Theory of Gases<a class="headerlink" href="#kinetic-theory-of-gases" title="Link to this heading">#</a></h1>
-<p>Oct 11, 2026 | 4414 words | 29 min read</p>
+<p>Oct 16, 2026 | 7697 words | 51 min read</p>
 <section id="temperature">
 <h2><span class="section-number">12.1. </span>Temperature<a class="headerlink" href="#temperature" title="Link to this heading">#</a></h2>
 <p>Human perception of temperature has evolved from the relative sensation of what feels hot or cold.  For example,</p>
@@ -625,8 +642,8 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Linear Thermal Expansion in 1D</p>
 <p>The change in length <span class="math notranslate nohighlight">\(\Delta L\)</span> is proportional to length <span class="math notranslate nohighlight">\(L\)</span>.  The dependence of thermal expansion <span class="math notranslate nohighlight">\(\Delta L\)</span> on temperature change <span class="math notranslate nohighlight">\(\Delta T\)</span> (in Kelvin), substance, and length <span class="math notranslate nohighlight">\(L\)</span> is summarized by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d113406b-3610-474a-92c9-5b8ad3e282a2">
-<span class="eqno">(12.1)<a class="headerlink" href="#equation-d113406b-3610-474a-92c9-5b8ad3e282a2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5bbf94bb-a0bd-46e1-a51c-2aedf79ddcee">
+<span class="eqno">(12.1)<a class="headerlink" href="#equation-5bbf94bb-a0bd-46e1-a51c-2aedf79ddcee" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta L = \alpha L \Delta T,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) is the <strong>coefficient of linear expansion</strong>.  The coefficient <span class="math notranslate nohighlight">\(\alpha\)</span> varies slightly with temperature.</p>
@@ -794,15 +811,15 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Thermal Expansion in 2D and 3D</p>
 <p>For small temperature changes, the change in area <span class="math notranslate nohighlight">\(\Delta A\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2120f0a4-f150-4a1b-999f-282bad31514d">
-<span class="eqno">(12.2)<a class="headerlink" href="#equation-2120f0a4-f150-4a1b-999f-282bad31514d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1049a904-6c98-41c3-98b7-ad9bfc1251f0">
+<span class="eqno">(12.2)<a class="headerlink" href="#equation-1049a904-6c98-41c3-98b7-ad9bfc1251f0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta A = 2\alpha A\Delta T,
 \end{align}\]</div>
 <p>which depends on the change in temperature <span class="math notranslate nohighlight">\(\Delta T\)</span> (in Kelvin), and <span class="math notranslate nohighlight">\(\alpha\)</span> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) is the coefficient of linear expansion.</p>
 <hr class="docutils" />
 <p>The change in volume <span class="math notranslate nohighlight">\(\Delta V\)</span> is very nearly <span class="math notranslate nohighlight">\(\Delta V = 3\alpha V\Delta T\)</span>, but the formal equation is usually written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df2aeb6b-f7f2-49a9-bedb-bb17b1f48fe3">
-<span class="eqno">(12.3)<a class="headerlink" href="#equation-df2aeb6b-f7f2-49a9-bedb-bb17b1f48fe3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e2097ce7-3244-43ad-ad9c-05a54c811c3c">
+<span class="eqno">(12.3)<a class="headerlink" href="#equation-e2097ce7-3244-43ad-ad9c-05a54c811c3c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta V = \beta V\Delta T,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\beta\)</span> is the <strong>coefficient of volume expansion</strong> (in <span class="math notranslate nohighlight">\(1/{\rm K}\)</span>) and <span class="math notranslate nohighlight">\(\beta \approx 3\alpha\)</span>.</p>
@@ -864,8 +881,8 @@ document.write(`
 <div class="note admonition">
 <p class="admonition-title">Ideal Gas Law</p>
 <p>The <strong>ideal gas law</strong> states that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0bdae153-71eb-460c-a892-c8539001fcb2">
-<span class="eqno">(12.4)<a class="headerlink" href="#equation-0bdae153-71eb-460c-a892-c8539001fcb2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f934e20d-fb4b-480c-bd6c-3c2584b03337">
+<span class="eqno">(12.4)<a class="headerlink" href="#equation-f934e20d-fb4b-480c-bd6c-3c2584b03337" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV = NkT,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(P\)</span> is the absolute pressure (in <span class="math notranslate nohighlight">\(\rm Pa\)</span>) of a gas, <span class="math notranslate nohighlight">\(V\)</span> (in <span class="math notranslate nohighlight">\(\rm m^3\)</span>) is the volume it occupies, <span class="math notranslate nohighlight">\(N\)</span> is the number of atoms and molecules in the gas, and <span class="math notranslate nohighlight">\(T\)</span> (in <span class="math notranslate nohighlight">\({\rm K}\)</span>) is its absolute temperature.  The constant <span class="math notranslate nohighlight">\(k\)</span> is called the Boltzmann constant, which has the value</p>
@@ -879,15 +896,15 @@ PV = NkT,
 <li><p>Guy-Lussac’s law (that the ratio <span class="math notranslate nohighlight">\(P/T\)</span> is constant for a fixed volume).</p></li>
 </ul>
 <p>The ideal gas law describes the behavior of real gases under most conditions.</p>
-<p>The ideal gas law describes a tire when it is pumped slowly and the temperature is constant.  At first, teh pressure <span class="math notranslate nohighlight">\(P\)</span> is essentially equal to the atmospheric pressure, and the volume <span class="math notranslate nohighlight">\(V\)</span> increases in direct proportion to the number of atoms and molecules <span class="math notranslate nohighlight">\(N\)</span> put into the tire.  Once the volume of the tire is constant, the equation <span class="math notranslate nohighlight">\(PV = NkT\)</span> predicts that the pressure should increase in proportion to the number <span class="math notranslate nohighlight">\(N\)</span> of atoms and molecules.</p>
+<p>The ideal gas law describes a tire when it is pumped slowly and the temperature is constant.  At first, the pressure <span class="math notranslate nohighlight">\(P\)</span> is essentially equal to the atmospheric pressure, and the volume <span class="math notranslate nohighlight">\(V\)</span> increases in direct proportion to the number of atoms and molecules <span class="math notranslate nohighlight">\(N\)</span> put into the tire.  Once the volume of the tire is constant, the equation <span class="math notranslate nohighlight">\(PV = NkT\)</span> predicts that the pressure should increase in proportion to the number <span class="math notranslate nohighlight">\(N\)</span> of atoms and molecules.</p>
 <section id="moles-and-avogadro-s-number">
 <h3><span class="section-number">12.3.1. </span>Moles and Avogadro’s Number<a class="headerlink" href="#moles-and-avogadro-s-number" title="Link to this heading">#</a></h3>
 <p>Chemists use another unit instead of number of molecules when measuring the amount of a substance.  A <strong>mole</strong> (abbreviated <span class="math notranslate nohighlight">\(\rm mol\)</span>) is defined as the amount of substance that contains the same number of atoms as <span class="math notranslate nohighlight">\(12\ {\rm g}\)</span> of carbon-<span class="math notranslate nohighlight">\(12\)</span>.  The actual number of molecules in one mole is <strong>Avogadro’s number</strong> (<span class="math notranslate nohighlight">\(N_{\rm A}\)</span>) in recognition of <a class="reference external" href="https://en.wikipedia.org/wiki/Amedeo_Avogadro">Amedeo Avogadro</a>.  He developed the concept of the mole based on the hypothesis that equal volumed of gas (at the same pressure and temperature) contain equal numbers of molecules.</p>
 <div class="note admonition">
 <p class="admonition-title">Avogadro’s Number</p>
 <p>One mole contains <span class="math notranslate nohighlight">\(6.02 \times 10^{23}\)</span> particles (atoms or molecules), independent of the element or substance.  A mole of any substance has a mass in <em>grams</em> equal to its molecular (<em>molar</em>) mass, which can be calculated by multiplying the number of moles of the substance by its atomic mass.  The atomic masses of elements are given in the <a class="reference external" href="https://en.wikipedia.org/wiki/Periodic_table">periodic table</a>.  Mathematically, Avogadro’s number is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-883286ff-ac04-45af-9273-122ead0c34f5">
-<span class="eqno">(12.5)<a class="headerlink" href="#equation-883286ff-ac04-45af-9273-122ead0c34f5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f05d17ce-b955-4dd7-9a61-2dbdc5d7cec8">
+<span class="eqno">(12.5)<a class="headerlink" href="#equation-f05d17ce-b955-4dd7-9a61-2dbdc5d7cec8" title="Permalink to this equation">#</a></span>\[\begin{align}
 N_{\rm A} = 6.02 \times 10^{23}\ {\rm mol^{-1}}.
 \end{align}\]</div>
 </div>
@@ -895,8 +912,8 @@ N_{\rm A} = 6.02 \times 10^{23}\ {\rm mol^{-1}}.
 <section id="the-ideal-gas-law-restated-using-moles">
 <h3><span class="section-number">12.3.2. </span>The Ideal Gas Law Restated Using Moles<a class="headerlink" href="#the-ideal-gas-law-restated-using-moles" title="Link to this heading">#</a></h3>
 <p>Another version of the ideal gas law uses the number of moles <span class="math notranslate nohighlight">\(n\)</span>, rather than the number of atoms and molecules <span class="math notranslate nohighlight">\(N\)</span>.  To find this alternative relation, we begin with the ideal gas law and multiply the right-side by Avogadro’s number on top and bottom (<span class="math notranslate nohighlight">\(N_{\rm A}/N_{\rm A} = 1\)</span>) to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b2d14a0-5e0c-4a7c-ba1e-ffd8f1f10d8c">
-<span class="eqno">(12.6)<a class="headerlink" href="#equation-1b2d14a0-5e0c-4a7c-ba1e-ffd8f1f10d8c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-68613fed-be1e-4be1-a9a6-ff2d71d73288">
+<span class="eqno">(12.6)<a class="headerlink" href="#equation-68613fed-be1e-4be1-a9a6-ff2d71d73288" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV &amp;= NkT,\\
 PV = \left(\frac{N}{N_{\rm A}}\right) \left(N_{\rm A}k\right)T.
 \end{align}\]</div>
@@ -904,19 +921,19 @@ PV = \left(\frac{N}{N_{\rm A}}\right) \left(N_{\rm A}k\right)T.
 <div class="note admonition">
 <p class="admonition-title">Ideal Gas Law (in Terms of Moles)</p>
 <p>The ideal gas law (in terms of moles) is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-288bb7d4-24c2-4e6b-9cb6-03b8611bf9c8">
-<span class="eqno">(12.7)<a class="headerlink" href="#equation-288bb7d4-24c2-4e6b-9cb6-03b8611bf9c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f9c811fc-4988-49f5-891e-6cf85d8d0559">
+<span class="eqno">(12.7)<a class="headerlink" href="#equation-f9c811fc-4988-49f5-891e-6cf85d8d0559" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV = nRT.
 \end{align}\]</div>
 <p>The <strong>universal gas constant</strong>, <span class="math notranslate nohighlight">\(R\)</span>, is related to Avogadro’s constant <span class="math notranslate nohighlight">\(N_{\rm A}\)</span> and Boltzmann’s constant <span class="math notranslate nohighlight">\(k\)</span> through <span class="math notranslate nohighlight">\(R=N_{\rm A}k\)</span>. Since the 2019 revision of the International System of Units (SI), both <span class="math notranslate nohighlight">\(N_{\rm A}\)</span> and <span class="math notranslate nohighlight">\(k\)</span> have exact defined values:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48ec3840-0069-4b27-a7a1-84b71b043f28">
-<span class="eqno">(12.8)<a class="headerlink" href="#equation-48ec3840-0069-4b27-a7a1-84b71b043f28" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dee229a1-10bf-42c0-aa07-68f718013719">
+<span class="eqno">(12.8)<a class="headerlink" href="#equation-dee229a1-10bf-42c0-aa07-68f718013719" title="Permalink to this equation">#</a></span>\[\begin{align}
 N_{\rm A} &amp;= 6.02214076 \times10^{23}\ {\rm mol}^{-1}, \\
 k &amp;= 1.380649 \times10^{-23}\ {\rm J/K}.
 \end{align}\]</div>
 <p>As a result, the universal gas constant has the exact value</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf46b4ca-2d86-4c27-bed0-813132ea770b">
-<span class="eqno">(12.9)<a class="headerlink" href="#equation-bf46b4ca-2d86-4c27-bed0-813132ea770b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ac75c5b-ce8f-4838-9ebc-1b6f2f18d707">
+<span class="eqno">(12.9)<a class="headerlink" href="#equation-4ac75c5b-ce8f-4838-9ebc-1b6f2f18d707" title="Permalink to this equation">#</a></span>\[\begin{align}
 R = N_{\rm A}k = 8.31446261815324\ {\rm J/(mol\cdot K)}.
 \end{align}\]</div>
 <p>For most calculations, we use the rounded value <span class="math notranslate nohighlight">\(R=8.31\ {\rm J/(mol\cdot K)}\)</span>. The gas constant can also be expressed in other commonly used units:</p>
@@ -1005,25 +1022,25 @@ Gas pressure in Box</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[ P = \frac{F}{A} = \frac{N}{3A\ell}m\overline{v^2} = \frac{N}{3V}m\overline{v^2}, \]</div>
 <p>where we used the volume <span class="math notranslate nohighlight">\(V = A\ell\)</span>.  If we multiply the volume <span class="math notranslate nohighlight">\(V\)</span> to both sides, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d1f5065d-4f12-4f00-971c-0af1a6ccc3b3">
-<span class="eqno">(12.10)<a class="headerlink" href="#equation-d1f5065d-4f12-4f00-971c-0af1a6ccc3b3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7ccd4ef4-8b36-4d9a-af0b-632b0a900696">
+<span class="eqno">(12.10)<a class="headerlink" href="#equation-7ccd4ef4-8b36-4d9a-af0b-632b0a900696" title="Permalink to this equation">#</a></span>\[\begin{align}
 PV = \frac{N}{3}m\overline{v^2},
 \end{align}\]</div>
 <p>which is another expression of the ideal gas law.  We can set this equal to our expected result, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1286921c-7121-43f7-ae13-d605c716deeb">
-<span class="eqno">(12.11)<a class="headerlink" href="#equation-1286921c-7121-43f7-ae13-d605c716deeb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9dcdcd34-ea29-4106-b4dc-e7b019711470">
+<span class="eqno">(12.11)<a class="headerlink" href="#equation-9dcdcd34-ea29-4106-b4dc-e7b019711470" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{N}{3}m\overline{v^2} &amp;= NkT, \\
 kT &amp;= \frac{1}{3}m\overline{v^2}.
 \end{align}\]</div>
 <p>If we multiply both sides by <span class="math notranslate nohighlight">\(3/2\)</span>, then we find the average translational kinetic energy, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-66fe4c0d-df23-4374-8c72-ed029ab0a7c8">
-<span class="eqno">(12.12)<a class="headerlink" href="#equation-66fe4c0d-df23-4374-8c72-ed029ab0a7c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-20ddc2e6-0dad-4e08-83e5-9403e41493fe">
+<span class="eqno">(12.12)<a class="headerlink" href="#equation-20ddc2e6-0dad-4e08-83e5-9403e41493fe" title="Permalink to this equation">#</a></span>\[\begin{align}
 \overline{\rm KE} = \frac{3}{2}kT = \frac{1}{2}m\overline{v^2}.
 \end{align}\]</div>
 <p>The average translational kinetic energy of a molecule <span class="math notranslate nohighlight">\(\overline{KE}\)</span> is called <strong>thermal energy</strong>.  This is another definition of the expression of temperature based on an expression of the molecular energy.</p>
 <p>We can also solve for the <em>root-mean-square</em> velocity <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>, which describes the average velocity weighted by the velocity squared.  To solve for it, we use</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aea2b775-febf-4738-805a-9ad844b50139">
-<span class="eqno">(12.13)<a class="headerlink" href="#equation-aea2b775-febf-4738-805a-9ad844b50139" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6ec88499-37ea-4c2b-80f2-498ac70b3b38">
+<span class="eqno">(12.13)<a class="headerlink" href="#equation-6ec88499-37ea-4c2b-80f2-498ac70b3b38" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm rms} = \sqrt{\overline{v^2}} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <section id="distribution-of-molecular-speeds">
@@ -1051,13 +1068,471 @@ Hydrogen at two temperatures</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 </div>
+<p>The distribution of thermal speeds strongly on temperature.  As temperature increases, the speeds are shifted to higher values and the distribution is broadened.</p>
 </section>
 </section>
 <section id="phase-changes">
 <h2><span class="section-number">12.5. </span>Phase Changes<a class="headerlink" href="#phase-changes" title="Link to this heading">#</a></h2>
+<p>Real gases are like ideal gases at high temperatures.  At lower temperatures, the interactions between the molecules and their volumes <em>cannot</em> be ignored.  When the molecules are very close condensation can occur and there is a dramatic decrease in volume.  The substance changes from a gas to a liquid.  When liquid is cooled to even lower temperatures, it becomes a solid.  The volume never reaches zero because of the finite volume of the molecules.</p>
+<p>High pressure may also force a phase change for a gas to become a liquid. For example, carbon dioxide <span class="math notranslate nohighlight">\(\rm CO_2\)</span> is a gas at room temperature and atmospheric pressure, but becomes a liquid under sufficiently high pressure.  If the pressure is reduced, the temperature drops to <span class="math notranslate nohighlight">\(-78^\circ{\rm C}\)</span> and the liquid carbon dioxide solidifies into a snow-like substance.  Solid <span class="math notranslate nohighlight">\(\rm CO_2\)</span> is called “dry ice.”</p>
+<p>Nitrogen can be cooled and compressed to make liquid nitrogen <span class="math notranslate nohighlight">\(\rm LN_2\)</span>.  It boils at <span class="math notranslate nohighlight">\(77\ {\rm K}\)</span> (or <span class="math notranslate nohighlight">\(-196^\circ{\rm C}\)</span>) at atmospheric pressure.  Liquid nitrogen is useful as a refrigerant and allows for the preservation of blood, sperm, and other biological materials.  It is also used to reduce thermal noise in electronic sensors and equipment.  In dermatology, <span class="math notranslate nohighlight">\(\rm LN_2\)</span> is used to freeze and painlessly remove warts and other growths from the skin.</p>
+<section id="pv-diagrams">
+<h3><span class="section-number">12.5.1. </span>PV Diagrams<a class="headerlink" href="#pv-diagrams" title="Link to this heading">#</a></h3>
+<p>We can plot a graph comparing the pressure versus the volume, called a <strong>PV diagram</strong>.  When the substance behaves like an ideal gas, the ideal gas law describes the relationship between its pressure and volume (i.e., <span class="math notranslate nohighlight">\(PV = NkT\)</span>).  If we assume that the number of molecules and temperature are fixed,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fd88d1a8-7775-43eb-982f-b12058943fbe">
+<span class="eqno">(12.14)<a class="headerlink" href="#equation-fd88d1a8-7775-43eb-982f-b12058943fbe" title="Permalink to this equation">#</a></span>\[\begin{align}
+PV = \text{constant} \qquad (\text{ideal gas, constant temperature}).
+\end{align}\]</div>
+<p>For example, the volume of the gas will decrease as the pressure increases.  If yo plot the relationship <span class="math notranslate nohighlight">\(PV = \text{constant}\)</span> on a <span class="math notranslate nohighlight">\(PV\)</span> diagram, you find a hyperbola.  The hyperbolas (in Figure <a class="reference internal" href="#fig-real-gas-pv-isotherms"><span class="std std-numref">12.15</span></a>) are called <em>isotherms</em> and represent ideal-gas behavior at various fixed temperatures.</p>
+<figure class="align-default" id="fig-real-gas-pv-isotherms">
+<img alt="Two-panel pressure-volume diagram for carbon dioxide using the van der Waals model. Panel a shows isotherms at different temperatures, including horizontal liquid-vapor coexistence segments. Panel b identifies the critical point, critical isotherm, saturation boundaries, and liquid-vapor coexistence region." src="../_images/co2_pv_isotherms.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.15 </span><span class="caption-text"><strong>Pressure–volume behavior of a real gas.</strong> The curves illustrate the behavior of carbon dioxide using the van der Waals equation of state. (a) At temperatures below the critical temperature <span class="math notranslate nohighlight">\(T_c\)</span>, compression can cause vapor to condense into liquid at constant pressure, producing the horizontal segments. These segments become shorter as the temperature approaches <span class="math notranslate nohighlight">\(T_c\)</span>. (b) The blue saturation boundaries enclose the liquid–vapor coexistence region and meet at the critical point, where the liquid and vapor phases become indistinguishable. The diagram is a qualitative representation of the van der Waals model, with the low-pressure phase envelope extending beyond the plotted volume range.</span><a class="headerlink" href="#fig-real-gas-pv-isotherms" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>At lower temperatures, the curves begin to look less like hyperbolas indicating that it is not behaving ideally and could contain liquid.  There is a <strong>critical point</strong> (i.e., <strong>critical temperature</strong>) above which liquid cannot exist.  At sufficiently high pressure above the critical point, the gas will have the density of a liquid but will not condense.  Carbon dioxide <span class="math notranslate nohighlight">\(\rm CO_2\)</span> cannot be liquefied at <span class="math notranslate nohighlight">\(T&gt;31^\circ{\rm C}\)</span>.  <strong>Critical pressure</strong> is the maximum pressure needed for liquid to exist at the critical temperature.</p>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="critical-temperature-pressure-table">
+<caption><span class="caption-number">Table 12.2 </span><span class="caption-text">Critical temperatures and pressures of selected substances</span><a class="headerlink" href="#critical-temperature-pressure-table" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 28.0%" />
+<col style="width: 18.0%" />
+<col style="width: 18.0%" />
+<col style="width: 19.0%" />
+<col style="width: 17.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(T_c\)</span> (K)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(T_c\)</span> (<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(P_c\)</span> (<span class="math notranslate nohighlight">\(10^6\ {\rm Pa}\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(P_c\)</span> (atm)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Water</p></td>
+<td><p>647.1</p></td>
+<td><p>374.0</p></td>
+<td><p>22.06</p></td>
+<td><p>217.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sulfur dioxide</p></td>
+<td><p>430.7</p></td>
+<td><p>157.5</p></td>
+<td><p>7.88</p></td>
+<td><p>77.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Ammonia</p></td>
+<td><p>405.4</p></td>
+<td><p>132.3</p></td>
+<td><p>11.30</p></td>
+<td><p>111.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carbon dioxide</p></td>
+<td><p>304.2</p></td>
+<td><p>31.0</p></td>
+<td><p>7.38</p></td>
+<td><p>72.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Oxygen</p></td>
+<td><p>154.6</p></td>
+<td><p>−118.6</p></td>
+<td><p>5.04</p></td>
+<td><p>49.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nitrogen</p></td>
+<td><p>126.2</p></td>
+<td><p>−147.0</p></td>
+<td><p>3.40</p></td>
+<td><p>33.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydrogen</p></td>
+<td><p>33.2</p></td>
+<td><p>−240.0</p></td>
+<td><p>1.30</p></td>
+<td><p>12.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Helium</p></td>
+<td><p>5.2</p></td>
+<td><p>−268.0</p></td>
+<td><p>0.227</p></td>
+<td><p>2.24</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-5-phase-changes">OpenStax, College Physics 2e, Table 13.3</a>. Critical temperatures and pressures have been updated using modern reference values, with standardized units and rounding.</em></p>
+</section>
+<section id="phase-diagrams">
+<h3><span class="section-number">12.5.2. </span>Phase Diagrams<a class="headerlink" href="#phase-diagrams" title="Link to this heading">#</a></h3>
+<p>Using a pressure versus temperature <span class="math notranslate nohighlight">\(PT\)</span> diagram provides insight into the thermal properties of substances.  There are well-defined regions on these graphs that correspond to various phases of matter, which is why <span class="math notranslate nohighlight">\(PT\)</span> graphs are called <strong>phase diagrams</strong>.</p>
+<p>Using the phase diagram for water (see Figure <a class="reference internal" href="#fig-water-phase-diagram"><span class="std std-numref">12.16</span></a>), you can determine the phase of water given the pressure and temperature.  The solid lines (i.e., phase boundaries) indicate temperatures and pressures at which the phases coexist.  For example, the boiling point of water is <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span> at <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span> (i.e., sea level), where the point moves downward on the curve to lower temperatures at high altitude where <span class="math notranslate nohighlight">\(P_{\rm atm} &lt; 1\)</span>.</p>
+<figure class="align-default" id="fig-water-phase-diagram">
+<img alt="Pressure-temperature phase diagram for water showing the solid, liquid, and vapor regions separated by red phase boundaries. The triple point occurs at 0.01 degrees Celsius and 0.006 atm, while the critical point occurs near 374 degrees Celsius and 218 atm. The solid-liquid boundary slopes toward lower temperatures as pressure increases." src="../_images/water_phase_diagram_clean_ticks.svg" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.16 </span><span class="caption-text"><strong>Pressure–temperature phase diagram for water.</strong> The red curves separate the solid, liquid, and vapor phases, while the shaded regions indicate the conditions under which each phase is stable. At the <strong>triple point</strong> (<span class="math notranslate nohighlight">\(0.01^\circ{\rm C}\)</span>, <span class="math notranslate nohighlight">\(0.006\ {\rm atm}\)</span>), all three phases coexist in equilibrium. The liquid–vapor boundary terminates at the <strong>critical point</strong> (approximately <span class="math notranslate nohighlight">\(374^\circ{\rm C}\)</span> and <span class="math notranslate nohighlight">\(218\ {\rm atm}\)</span>), beyond which liquid and vapor are no longer distinct phases. Unlike most substances, water has a negatively sloped solid–liquid boundary because ice is less dense than liquid water. The vaporization and sublimation boundaries are approximated using the Clausius–Clapeyron relation, while the fusion boundary is represented schematically. Pressure is displayed on a logarithmic scale.</span><a class="headerlink" href="#fig-water-phase-diagram" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The boiling temperature can also increase to <span class="math notranslate nohighlight">\(374^\circ{\rm C}\)</span> as the pressure increases.  A pressure cooker (or covered pot) will cook food faster because the water can exist as a liquid at <span class="math notranslate nohighlight">\(T&gt;100^\circ{\rm C}\)</span> without all boiling away.  The curve ends at a point called the <em>critical point</em> because at higher temperatures the liquid phase does not exist at any pressure.  The critical point occurs at the critical temperature.</p>
+<p>The curve between the solid and liquid regions (in Fig. <a class="reference internal" href="#fig-water-phase-diagram"><span class="std std-numref">12.16</span></a>) gives the melting temperature at various pressures (i.e., moving up and left along the curve).  For example, the melting point is <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> at <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>, as expected.  At a fixed temperature, you can change the phase from solid (ice) to liquid (water) by increasing the pressure.  Ice melts from pressure in the hands of a snowball maker.</p>
+<p>At sufficiently low pressures there is not liquid phase, but the substance can exist as either a gas or solid.  For water, there is not liquid phase below <span class="math notranslate nohighlight">\(0.006\ {\rm atm}\)</span>.  The phase change from solid to gas is called <strong>sublimation</strong>.  It accounts for large losses of snow pack that never make it into a river.  Carbon dioxide sublimates at standard atmospheric pressure of <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>.</p>
+<p>All three curves on the phase diagram meet at a single point called the <strong>triple point</strong>, where all three phases exist in equilibrium.  For water, the triple point occurs at <span class="math notranslate nohighlight">\(273.16\ {\rm K}\)</span> and is a more accurate calibration temperature than the melting point of water at <span class="math notranslate nohighlight">\(273.15\ {\rm K}\)</span> at <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="triple-point-table">
+<caption><span class="caption-number">Table 12.3 </span><span class="caption-text">Triple-point temperatures and pressures of selected substances</span><a class="headerlink" href="#triple-point-table" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 28.0%" />
+<col style="width: 18.0%" />
+<col style="width: 18.0%" />
+<col style="width: 19.0%" />
+<col style="width: 17.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(T\)</span> (K)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(T\)</span> (<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(P\)</span> (Pa)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(P\)</span> (atm)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Water</p></td>
+<td><p>273.16</p></td>
+<td><p>0.01</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.10 \times 10^2\)</span></p></td>
+<td><p>0.00600</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carbon dioxide</p></td>
+<td><p>216.55</p></td>
+<td><p>−56.60</p></td>
+<td><p><span class="math notranslate nohighlight">\(5.16 \times 10^5\)</span></p></td>
+<td><p>5.11</p></td>
+</tr>
+<tr class="row-even"><td><p>Sulfur dioxide</p></td>
+<td><p>197.68</p></td>
+<td><p>−75.47</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.67 \times 10^3\)</span></p></td>
+<td><p>0.0167</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ammonia</p></td>
+<td><p>195.40</p></td>
+<td><p>−77.75</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.06 \times 10^3\)</span></p></td>
+<td><p>0.0600</p></td>
+</tr>
+<tr class="row-even"><td><p>Nitrogen</p></td>
+<td><p>63.18</p></td>
+<td><p>−210.0</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.25 \times 10^4\)</span></p></td>
+<td><p>0.124</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oxygen</p></td>
+<td><p>54.36</p></td>
+<td><p>−218.8</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.52 \times 10^2\)</span></p></td>
+<td><p>0.00151</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydrogen</p></td>
+<td><p>13.84</p></td>
+<td><p>−259.3</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.04 \times 10^3\)</span></p></td>
+<td><p>0.0697</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-5-phase-changes">OpenStax, College Physics 2e, Table 13.4</a>.</em></p>
+</section>
+<section id="equilibrium">
+<h3><span class="section-number">12.5.3. </span>Equilibrium<a class="headerlink" href="#equilibrium" title="Link to this heading">#</a></h3>
+<p>Liquid and gas phases are in equilibrium at the boiling temperature.  If a substance is in a closed container at the boiling point, then the liquid is boiling and the gas is condensing at the same rate without a net change in the their relative amount.  Molecules in the liquid escape as a gas at the same rate at which gas molecules: (1) stick to the liquid, or (2) form droplets and become part of the liquid phase.</p>
+<figure class="align-default" id="fig-liquid-vapor-equilibrium">
+<img alt="Two sealed glass containers partially filled with water, each equipped with a pressure gauge and thermometer. The right container has a higher temperature and vapor pressure. Green upward arrows represent vaporization, while purple downward arrows represent condensation. The arrows are larger in the higher-temperature container." src="../_images/vaporization_and_condensation_equilibrium.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.17 </span><span class="caption-text"><strong>Dynamic equilibrium between liquid and vapor.</strong> (a) At a lower temperature, molecules leave the liquid through vaporization and return through condensation at equal average rates, maintaining equilibrium between the two phases. (b) At a higher temperature, more molecules enter the vapor phase, increasing the equilibrium vapor pressure. Both vaporization and condensation occur at faster rates, but the average rates remain equal, so there is no net change in the amount of liquid or vapor. The green and purple arrows represent the rates of vaporization and condensation, respectively. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-5-phase-changes">OpenStax, College Physics 2e, Figure 13.30</a>.</em></span><a class="headerlink" href="#fig-liquid-vapor-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Water boils at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>, when the pressure is <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span> and means that the water/steam are in equilibrium.  <em>Why does an open pot of water boil completely away?</em></p>
+<p>The gas surrounding an open pot is not pure water: it is mixed with air.  If pure water and steam are in a closed container at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span> and <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>, they would coexist.  However, the air over the pot means that there are fewer water molecules to condense and water boils.  <em>What about room temperature (<span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span>) water at standard pressure?</em></p>
+<p>This temperature and pressure correspond to the liquid region, yet an open glass at this temperature will completely evaporate.  The gas around it is air and not pure water vapor, which means that the reduced evaporation rate is greater than the condensation rate of water from dry air.  If the glass is sealed, then the liquid phase remains.  We call the gas a vapor when it exists at a temperature below the boiling temperature.</p>
+</section>
+<section id="vapor-pressure-partial-pressure-and-dalton-s-law">
+<h3><span class="section-number">12.5.4. </span>Vapor Pressure, Partial Pressure, and Dalton’s Law<a class="headerlink" href="#vapor-pressure-partial-pressure-and-dalton-s-law" title="Link to this heading">#</a></h3>
+<p><strong>Vapor pressure</strong> is the pressure at which a gas coexists with its solid or liquid phase.  Vapor pressure is created by faster molecules that break away from the liquid (or solid)  and enter the gas phase (see Figure <a class="reference internal" href="#fig-mb-oxygen-300k"><span class="std std-numref">12.13</span></a>).  The vapor pressure of a substance depends on both the substance and its temperature.</p>
+<p>Partial pressure is the pressure a gas would create if it occupied the total volume available.  In a mixture of gases, <em>the total pressure is the sum of the partial pressures of the component gases</em>, assuming ideal gas behavior and not chemical reactions.  This is known as <strong>Dalton’s law of partial pressures</strong> after <a class="reference external" href="https://en.wikipedia.org/wiki/John_Dalton">John Dalton</a>.</p>
+<p>Dalton’s law is based on kinetic theory, where each gas exerts its pressure through molecular collisions, independent of the gases present.  It is consistent with how pressures add according to Pascal’s principle.  Thus water evaporates and ice sublimates when their vapor pressures exceed the partial pressure of water vapor in the surrounding mixture of gases.  If their vapor pressures are less than the partial pressures in the surrounding gas, liquid droplets or ice crystals (frost) forms.</p>
+</section>
 </section>
 <section id="humidity-evaporation-and-boiling">
 <h2><span class="section-number">12.6. </span>Humidity, Evaporation, and Boiling<a class="headerlink" href="#humidity-evaporation-and-boiling" title="Link to this heading">#</a></h2>
+<p>We keep cool in hot weather by evaporating sweat from our skin and water from our breathing passages (i.e., nose and mouth).  Evaporation is inhibited by high humidity, we feel hotter at a given temperature when the humidity is high.  Low humidity can cause discomfort from excessive drying of mucous membranes leading to an increased risk of respiratory infections and skin irritation.</p>
+<p>When we say humidity, we really mean <strong>relative humidity</strong>, where this tells us how much water vapor is in the air compared with the maximum possible amount.</p>
+<p><strong>Saturation</strong> occurs at maximum humidity and the relative humidity is 100%.  Evaporation is inhibited because adding more energy to water does not allow it increase its motion for long before colliding with another water molecule and slowing back down.  The amount of water vapor depends on temperature.</p>
+<p>If the air temperature decreases, the humidity can rise (e.g., in the evening) and sometimes the temperature can fall and reach the <strong>dew point</strong> temperature.  At the dew point temperature, the relative humidity is still <span class="math notranslate nohighlight">\(100\%\)</span>, where water vapor can condense into water droplets if they are small enough to remain in suspension and fog begins to form.</p>
+<p>If you wish to dry something, it is more effective to blow hot air over it rather than cold air because the hot air delivers more energy to the medium.  This means that the molecules can gain more energy and the rate of evaporation increases.</p>
+<p>The amount of water vapor in the air depends on the vapor pressure of water.  The liquid and solid phases are continuously giving off vapor because some of the molecules have high enough speeds to enter the gas phase.  If a lid is placed over a container, evaporation increases the pressure between the liquid and the lid until sufficient vapor has built up for condensation to balance evaporation.</p>
+<p>Then equilibrium has been achieved, and the vapor pressure is equal to the partial pressure of water in the container.  Vapor pressure increases with temperature because the molecular speeds are higher as the temperature increases.</p>
+<figure class="align-default" id="fig-evaporation-condensation">
+<img alt="Two glass vessels containing liquid water. The open vessel on the left allows water molecules to escape into the surrounding air. The sealed vessel on the right contains more water vapor, with visible condensation droplets on the underside of the lid. Arrows indicate random molecular motion." src="../_images/open_and_sealed_water_evaporation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.18 </span><span class="caption-text"><strong>Evaporation and condensation in open and closed systems.</strong> (a) In an open container, some water molecules near the surface have sufficient kinetic energy to escape into the vapor phase. Because the vapor can disperse into the surrounding air, evaporation generally exceeds condensation. (b) In a sealed container, evaporated molecules accumulate above the liquid, increasing the water vapor pressure and the rate of condensation. Eventually, evaporation and condensation occur at equal average rates, establishing dynamic equilibrium. Water droplets on the underside of the lid illustrate condensation on a cooler surface. The arrows represent random molecular motion, and the molecular sizes are exaggerated for clarity. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-6-humidity-evaporation-and-boiling">OpenStax, College Physics 2e, Figure 13.32</a>.</em></span><a class="headerlink" href="#fig-evaporation-condensation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table table-center" id="saturation-vapor-density-table">
+<caption><span class="caption-number">Table 12.4 </span><span class="caption-text">Saturation Vapor Pressure and Density of Water</span><a class="headerlink" href="#saturation-vapor-density-table" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Temperature (<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</p></th>
+<th class="head"><p>Saturation vapor pressure (Pa)</p></th>
+<th class="head"><p>Saturation vapor density (<span class="math notranslate nohighlight">\({\rm g/m^3}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>−50</p></td>
+<td><p>3.94</p></td>
+<td><p>0.0382</p></td>
+</tr>
+<tr class="row-odd"><td><p>−20</p></td>
+<td><p>103</p></td>
+<td><p>0.884</p></td>
+</tr>
+<tr class="row-even"><td><p>−10</p></td>
+<td><p>260</p></td>
+<td><p>2.14</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>611</p></td>
+<td><p>4.85</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>873</p></td>
+<td><p>6.80</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.23 \times 10^3\)</span></p></td>
+<td><p>9.41</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.71 \times 10^3\)</span></p></td>
+<td><p>12.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p><span class="math notranslate nohighlight">\(2.34 \times 10^3\)</span></p></td>
+<td><p>17.3</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.17 \times 10^3\)</span></p></td>
+<td><p>23.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.25 \times 10^3\)</span></p></td>
+<td><p>30.4</p></td>
+</tr>
+<tr class="row-even"><td><p>37</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.28 \times 10^3\)</span></p></td>
+<td><p>44.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.39 \times 10^3\)</span></p></td>
+<td><p>51.2</p></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.24 \times 10^4\)</span></p></td>
+<td><p>83.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>60</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.99 \times 10^4\)</span></p></td>
+<td><p>130</p></td>
+</tr>
+<tr class="row-even"><td><p>70</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.12 \times 10^4\)</span></p></td>
+<td><p>198</p></td>
+</tr>
+<tr class="row-odd"><td><p>80</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.74 \times 10^4\)</span></p></td>
+<td><p>294</p></td>
+</tr>
+<tr class="row-even"><td><p>90</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.02 \times 10^4\)</span></p></td>
+<td><p>424</p></td>
+</tr>
+<tr class="row-odd"><td><p>95</p></td>
+<td><p><span class="math notranslate nohighlight">\(8.46 \times 10^4\)</span></p></td>
+<td><p>505</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.01 \times 10^5\)</span></p></td>
+<td><p>598</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.99 \times 10^5\)</span></p></td>
+<td><p>1120</p></td>
+</tr>
+<tr class="row-even"><td><p>150</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.76 \times 10^5\)</span></p></td>
+<td><p>2550</p></td>
+</tr>
+<tr class="row-odd"><td><p>200</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.55 \times 10^6\)</span></p></td>
+<td><p>7860</p></td>
+</tr>
+<tr class="row-even"><td><p>220</p></td>
+<td><p><span class="math notranslate nohighlight">\(2.32 \times 10^6\)</span></p></td>
+<td><p>11600</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-6-humidity-evaporation-and-boiling">OpenStax, College Physics 2e, Table 13.5</a>. Values recalculated using the <a class="reference external" href="https://iapws.org/technical-guidance/release/Supp-sat">IAPWS saturation-property formulation</a> for water vapor above 0°C and the <a class="reference external" href="https://iapws.org/technical-guidance/release/MeltSub">IAPWS sublimation-pressure formulation</a> for ice below 0°C. Below 0°C, vapor density is calculated using the ideal-gas approximation. Values rounded for instructional use.</em></p>
+<p>Relative humidity is related to the partial pressure of water vapor in air.</p>
+<ul class="simple">
+<li><p>At <span class="math notranslate nohighlight">\(100\%\)</span> humidity, the partial pressure is equal to the vapor pressure so that no more water can enter the vapor phase.</p></li>
+<li><p>If the partial pressure is greater than the vapor pressure, condensation takes place.</p></li>
+</ul>
+<p>People sometimes refer to the capacity of air to “hold” water vapor, but this is not actually what happens.  The water vapor is not held by the air, where the amount of water in air is determined by the vapor pressure of water and is independent of the properties of air.</p>
+<div class="note admonition">
+<p class="admonition-title">Percent Relative Humidity</p>
+<p>We define <strong>percent relative humidity</strong> as the ratio of vapor density to saturation vapor density or,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-05132aac-3c1d-41f5-9552-0e6a93135aa8">
+<span class="eqno">(12.15)<a class="headerlink" href="#equation-05132aac-3c1d-41f5-9552-0e6a93135aa8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\text{percent relative humidity} = \frac{\text{vapor density}}{\text{saturation vapor density}} \times 100.
+\end{align}\]</div>
+</div>
+<p><em>Why does water boil at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>?</em></p>
+<p>The vapor pressure of water at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span> is <span class="math notranslate nohighlight">\(1.01\times 10^5\ {\rm Pa}\)</span>, or <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>.  Water can evaporate without limit as this temperature and pressure.</p>
+<figure class="align-default" id="fig-boiling-bubble-growth">
+<img alt="Three beakers of water heated from below at 20, 50, and 100 degrees Celsius. A small bubble rests at the bottom of the first beaker, expands in the second, and rises through the third." src="../_images/heating_water_bubble_growth.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12.19 </span><span class="caption-text"><strong>Bubble growth during heating.</strong> (a) At <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span>, a small air bubble contains a relatively small amount of water vapor. (b) As the temperature increases to <span class="math notranslate nohighlight">\(50^\circ{\rm C}\)</span>, the vapor pressure of water increases, allowing more water vapor to enter the bubble and causing it to expand. (c) At <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span> and atmospheric pressure, water vapor enters the bubble continuously, causing it to grow and rise toward the surface due to buoyancy. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/13-6-humidity-evaporation-and-boiling">OpenStax, College Physics 2e, Figure 13.33</a>.</em></span><a class="headerlink" href="#fig-boiling-bubble-growth" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><em>Why does it form bubbles when it boils?</em></p>
+<p>Water ordinarily contains significant amounts of dissolved air and other impurities, which are observed as small bubbles of air in a glass of water.  If a bubble starts out at the bottom of the container at <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span>, it contains water vapor (about <span class="math notranslate nohighlight">\(2.3\%\)</span>).   The pressure inside the bubble is fixed at <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>.</p>
+<p>As the temperature rises, the amount of air in the bubble stays the same, but the water vapor increases.  The bubble expands to keep the pressure at <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>.  This expansion displaces more water around the bubble, thereby increasing the buoyant force.  At <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>, water vapor enters the bubble continuously since the partial pressure of water is equalt to <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span> in equilibrium.  THe bubble breaks away and rises rapidly to the surface, which we call this boiling.</p>
+</section>
+<section id="in-class-exercises">
+<h2><span class="section-number">12.7. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">12.7.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3><span class="section-number">12.7.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>To conserve energy, room temperatures are kept at <span class="math notranslate nohighlight">\(68.0^\circ{\rm F}\)</span> in the winter and <span class="math notranslate nohighlight">\(78.0^\circ{\rm F}\)</span> in the summer. What are these temperatures on the Celsius scale?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>How large an expansion gap should be left between steel railroad rails if they may reach a maximum temperature <span class="math notranslate nohighlight">\(35.0^\circ{\rm C}\)</span> greater than when they were laid? Their original length is <span class="math notranslate nohighlight">\(10.0\ {\rm m}\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>An airplane passenger has <span class="math notranslate nohighlight">\(100\ {\rm cm^3}\)</span> of air in his stomach just before the plane takes off from a sea-level airport. What volume will the air have at cruising altitude if cabin pressure drops to <span class="math notranslate nohighlight">\(7.50 \times 10^4\ {\rm N/m^2}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>The escape velocity of any object from Earth is <span class="math notranslate nohighlight">\(11.2\ {\rm km/s}\)</span>.</p>
+<p>(a) Express this speed in <span class="math notranslate nohighlight">\({\rm m/s}\)</span> and <span class="math notranslate nohighlight">\({\rm km/h}\)</span>.</p>
+<p>(b) At what temperature would oxygen molecules (molecular mass is equal to <span class="math notranslate nohighlight">\(32.0\ {\rm g/mol}\)</span>) have an average velocity <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span> equal to Earth’s escape velocity?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>(a) At what temperature does water boil at an altitude of <span class="math notranslate nohighlight">\(1500\ {\rm m}\)</span> (about <span class="math notranslate nohighlight">\(5000\ {\rm ft}\)</span>) on a day when atmospheric pressure is <span class="math notranslate nohighlight">\(8.59 \times 10^4\ {\rm N/m^2}\)</span>?</p>
+<p>(b) What about at an altitude of <span class="math notranslate nohighlight">\(3000\ {\rm m}\)</span> (about <span class="math notranslate nohighlight">\(10{,}000\ {\rm ft}\)</span>) when atmospheric pressure is <span class="math notranslate nohighlight">\(7.00 \times 10^4\ {\rm N/m^2}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">12.8. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">12.8.1. </span>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">12.8.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>One method of getting a tight fit, say of a metal peg in a hole in a metal block, is to manufacture the peg slightly larger than the hole. The peg is then inserted when at a different temperature than the block. Should the block be hotter or colder than the peg during insertion? Explain your answer.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>A pressure cooker contains water and steam in equilibrium at a pressure greater than atmospheric pressure. How does this greater pressure increase cooking speed?</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">12.8.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>One of the hottest temperatures ever recorded on the surface of Earth was <span class="math notranslate nohighlight">\(134^\circ{\rm F}\)</span> in Death Valley, CA. What is this temperature in Celsius degrees? What is this temperature in Kelvin?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>A physicist makes a cup of instant coffee and notices that, as the coffee cools, its level drops <span class="math notranslate nohighlight">\(3.00\ {\rm mm}\)</span> in the glass cup. Show that this decrease cannot be due to thermal contraction by calculating the decrease in level if the <span class="math notranslate nohighlight">\(350\ {\rm cm^3}\)</span> of coffee is in a <span class="math notranslate nohighlight">\(7.00\)</span>-cm-diameter cup and decreases in temperature from <span class="math notranslate nohighlight">\(95.0^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(45.0^\circ{\rm C}\)</span>. (Most of the drop in level is actually due to escaping bubbles of air.)</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>A bicycle tire has a pressure of <span class="math notranslate nohighlight">\(7.00 \times 10^5\ {\rm N/m^2}\)</span> at a temperature of <span class="math notranslate nohighlight">\(18.0^\circ{\rm C}\)</span> and contains <span class="math notranslate nohighlight">\(2.00\ {\rm L}\)</span> of gas. What will its pressure be if you let out an amount of air that has a volume of <span class="math notranslate nohighlight">\(100\ {\rm cm^3}\)</span> at atmospheric pressure? Assume tire temperature and volume remain constant.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>What is the dew point (the temperature at which 100% relative humidity would occur) on a day when relative humidity is <span class="math notranslate nohighlight">\(39.0\%\)</span> at a temperature of <span class="math notranslate nohighlight">\(20.0^\circ{\rm C}\)</span>?</p>
+</div></blockquote>
+</div>
+</section>
 </section>
 </section>
 
@@ -1146,8 +1621,25 @@ Hydrogen at two temperatures</label><div class="sd-tab-content docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-of-molecular-speeds">12.4.1. Distribution of Molecular Speeds</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-changes">12.5. Phase Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-diagrams">12.5.1. PV Diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-diagrams">12.5.2. Phase Diagrams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrium">12.5.3. Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vapor-pressure-partial-pressure-and-dalton-s-law">12.5.4. Vapor Pressure, Partial Pressure, and Dalton’s Law</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#humidity-evaporation-and-boiling">12.6. Humidity, Evaporation, and Boiling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">12.7. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">12.7.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">12.7.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">12.8. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">12.8.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">12.8.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">12.8.3. Quantitative Questions</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
