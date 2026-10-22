@@ -497,12 +497,31 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-equivalent-of-heat">13.1.1. Mechanical Equivalent of Heat</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-change-and-heat-capacity">13.2. Temperature Change and Heat Capacity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-change-and-latent-heat">13.3. Phase Change and Latent Heat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-change-and-heat-capacity">13.2. Temperature Change and Heat Capacity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-heating-water-in-an-aluminum-pan">13.2.1. Example Problem: Heating Water in an Aluminum Pan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-warming-truck-brakes-on-a-descent">13.2.2. Example Problem: Warming Truck Brakes on a Descent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cold-water-in-a-hot-pan">13.2.3. Example Problem: Cold Water in a Hot Pan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-change-and-latent-heat">13.3. Phase Change and Latent Heat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cooling-soda-with-ice">13.3.1. Example Problem: Cooling Soda with Ice</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-methods">13.4. Heat Transfer Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">13.5. Conduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">13.6. Convection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">13.7. Radiation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">13.5. Conduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-ice-melting-in-an-insulated-box">13.5.1. Example Problem: Ice Melting in an Insulated Box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-temperature-difference-across-a-pan-bottom">13.5.2. Example Problem: Temperature Difference across a Pan Bottom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">13.6. Convection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-heating-replacement-air-in-a-house">13.6.1. Example Problem: Heating Replacement Air in a House</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cooling-by-evaporation">13.6.2. Example Problem: Cooling by Evaporation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">13.7. Radiation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-net-radiation-from-a-person">13.7.1. Example Problem: Net Radiation from a Person</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">13.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">13.8.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">13.8.2. Problems</a></li>
@@ -527,8 +546,19 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="heat-transfer">
 <h1><span class="section-number">13. </span>Heat Transfer<a class="headerlink" href="#heat-transfer" title="Link to this heading">#</a></h1>
-<p>Oct 22, 2026 | 6839 words | 46 min read</p>
-<p>Energy can exist in many forms including heat, which is often hidden.  Heat exists when in transit and is transferred by a several different methods.  Heat transfer touches many aspects of our lives, where it explains the chill we feel on a clear breezy night, or why we need to allocate resources to manage it.</p>
+<p>Oct 22, 2026 | 10075 words | 67 min read</p>
+<div class="tip admonition">
+<p class="admonition-title">Chapter roadmap</p>
+<p>Energy transfer can change a material’s temperature or its phase. This chapter connects those effects to the mechanisms that move energy between objects and their surroundings.</p>
+<p>As you read, focus on three questions:</p>
+<ol class="arabic simple">
+<li><p>How do heat transfer and mechanical work change a system’s internal energy?</p></li>
+<li><p>How can conservation of energy predict temperature changes and phase changes?</p></li>
+<li><p>What controls the rates of conduction, convection, and radiation?</p></li>
+</ol>
+<p>The examples at the ends of the sections apply these ideas to heating, cooling, insulation, and everyday energy balances.</p>
+</div>
+<p>Energy can exist in many forms including heat, which is often hidden.  Heat exists when in transit and is transferred by several different methods.  Heat transfer touches many aspects of our lives, where it explains the chill we feel on a clear breezy night, or why we need to allocate resources to manage it.</p>
 <section id="heat">
 <h2><span class="section-number">13.1. </span>Heat<a class="headerlink" href="#heat" title="Link to this heading">#</a></h2>
 <p>Previously, we defined work as the product of force over a distance and that kinetic energy is the work done to bring an object to rest.  We also showed that temperature is proportional to the (average) kinetic energy of atoms and molecules.  We can say that a thermal system has a certain internal energy: <em>its internal energy is higher if the temperature is higher.</em></p>
@@ -537,9 +567,11 @@ document.write(`
 <div><p>Heat is the spontaneous transfer of energy due to a temperature difference.</p>
 </div></blockquote>
 <p>Heat is often confused with temperature, where we may say that the heat is unbearable when we mean that the temperature was high.   Although these concepts are related, they describe different physical quantities.</p>
-<p>-<em>Temperature</em> is related to the average kinetic energy of the particles in a substance, whereas <strong>heat</strong> is energy transferred between objects because of a temperature difference.</p>
+<blockquote>
+<div><p><em>Temperature</em> is related to the average kinetic energy of the particles in a substance, whereas <strong>heat</strong> is energy transferred between objects because of a temperature difference.</p>
+</div></blockquote>
 <p>When heat enters an object, it increases the object’s internal energy, which may cause its temperature to rise. We often associate heat with temperature because our sensation of warmth depends on both the temperature of our surroundings and the rate at which energy is transferred to or from our bodies.</p>
-<p>Since heat is a form of energy transfer due to a temperature difference, it has the SI unit of <em>joule</em> (<span class="math notranslate nohighlight">\(\rm J\)</span>).  The <em>calorie</em> (<span class="math notranslate nohighlight">\(\rm cal\)</span>) is a common unit of energy defined as the energy needed to change the temperature of <span class="math notranslate nohighlight">\(1\ {rm g}\)</span> of water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  The most common unit of heat is the <strong>kilocalorie</strong> (<span class="math notranslate nohighlight">\(\rm kcal\)</span>), which is the energy needed to change the temperature of <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  Food calories (given the notation of <span class="math notranslate nohighlight">\(\rm Cal\)</span>; notice the capitalization) are actually kilocalories (<span class="math notranslate nohighlight">\(1\ {\rm kcal} = 1000\ {\rm cal}\)</span>).</p>
+<p>Since heat is a form of energy transfer due to a temperature difference, it has the SI unit of <em>joule</em> (<span class="math notranslate nohighlight">\(\rm J\)</span>).  The <em>calorie</em> (<span class="math notranslate nohighlight">\(\rm cal\)</span>) is a common unit of energy defined as the energy needed to change the temperature of <span class="math notranslate nohighlight">\(1\ {\rm g}\)</span> of water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  The most common unit of heat is the <strong>kilocalorie</strong> (<span class="math notranslate nohighlight">\(\rm kcal\)</span>), which is the energy needed to change the temperature of <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  Food calories (given the notation of <span class="math notranslate nohighlight">\(\rm Cal\)</span>; notice the capitalization) are actually kilocalories (<span class="math notranslate nohighlight">\(1\ {\rm kcal} = 1000\ {\rm cal}\)</span>).</p>
 <figure class="align-default" id="fig-iced-coffee-thermal-equilibrium">
 <img alt="Two-panel illustration of thermal equilibrium. (a) Hot coffee at temperature T1 and ice at temperature T2 are initially separated. (b) Ice is added to the coffee, and red arrows show heat transferring from the warmer coffee to the colder ice until they reach a common temperature." src="../_images/iced_coffee_thermodynamics_diagram.png" />
 <figcaption>
@@ -548,9 +580,9 @@ document.write(`
 </figure>
 <section id="mechanical-equivalent-of-heat">
 <h3><span class="section-number">13.1.1. </span>Mechanical Equivalent of Heat<a class="headerlink" href="#mechanical-equivalent-of-heat" title="Link to this heading">#</a></h3>
-<p>It is possible to change the temperature of a substance by doing work.  Work can transfer energy into or out of a system.  this realization helped establish that heat is a form of energy.  <a class="reference external" href="https://en.wikipedia.org/wiki/James_Prescott_Joule">James Prescott Joule</a> performed many experiments to establish the <strong>mechanical equivalent of heat</strong>, or the work needed to produce the same effects as heat transfer.  In terms of units used for these two terms, the best modern value for this equivalence is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2357362e-f1b1-4f96-a1c4-d4ad907ceecf">
-<span class="eqno">(13.1)<a class="headerlink" href="#equation-2357362e-f1b1-4f96-a1c4-d4ad907ceecf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>It is possible to change the temperature of a substance by doing work.  Work can transfer energy into or out of a system.  This realization helped establish that heat is a form of energy.  <a class="reference external" href="https://en.wikipedia.org/wiki/James_Prescott_Joule">James Prescott Joule</a> performed many experiments to establish the <strong>mechanical equivalent of heat</strong>, or the work needed to produce the same effects as heat transfer.  In terms of units used for these two terms, the best modern value for this equivalence is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e3368aad-0420-483e-b3cd-76dd2fe18b8b">
+<span class="eqno">(13.1)<a class="headerlink" href="#equation-e3368aad-0420-483e-b3cd-76dd2fe18b8b" title="Permalink to this equation">#</a></span>\[\begin{align}
 1.000\ {\rm kcal} = 4186\ {\rm J}.
 \end{align}\]</div>
 <div class="sd-tab-set docutils">
@@ -577,19 +609,33 @@ Video Demonstration using a Blender</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <p>Figure <a class="reference internal" href="#fig-joule-paddle-wheel-energy-transfer"><span class="std std-numref">13.2</span></a> shows one of Joule’s most famous experimental setups for demonstrating the mechanical equivalent of heat.  It demonstrated that work and heat can produce the same effects, and helped establish the principle of the conservation of energy.</p>
-<p>Gravitational potential energy (<span class="math notranslate nohighlight">\(\rm PE\)</span>), or the work done by the gravitational force, is converted into kinetic energy <span class="math notranslate nohighlight">\((\rm KE)\)</span> of the paddlewheel.  The viscosity and turbulence in the water raises its average kinetic energy, which produces a temperature increase.</p>
-<p>Heat added or removed from a system changes its internal energy and thus, its temperature.  Adding heat does not necessarily increase the temperature.  For example, when ice melts it is due to a phase change and not the temperature.  Work done on an a system or by the system can also change the internal energy of the system.</p>
+<p>Gravitational potential energy (<span class="math notranslate nohighlight">\(\rm PE\)</span>), or the work done by the gravitational force, is converted into kinetic energy <span class="math notranslate nohighlight">\((\rm KE)\)</span> of the paddlewheel.  The viscosity and turbulence in the water raise its average kinetic energy, which produces a temperature increase.</p>
+<p>Heat added or removed from a system changes its internal energy and thus, its temperature.  Adding heat does not necessarily increase the temperature.  For example, when ice melts it is due to a phase change and not the temperature.  Work done on a system or by the system can also change the internal energy of the system.</p>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Can a Sample Reveal How Energy Entered?</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Two samples of the same substance each receive <span class="math notranslate nohighlight">\(10\ {\rm kJ}\)</span> of energy. One receives the energy by heat transfer, while work is done on the other. Can you identify the energy-transfer method by examining their final equilibrium properties? Assume identical initial states, the same final volume, and no other energy transfer.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-1-heat">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">No. Under the stated conditions, both samples have the same increase in internal energy and the same final equilibrium state. Final temperature and other equilibrium properties do not record whether the energy arrived as heat or work. The distinction concerns the transfer process, so identifying it requires information about what happened during that process.</p>
+</div>
+</details></div>
 </section>
 </section>
 <section id="temperature-change-and-heat-capacity">
 <h2><span class="section-number">13.2. </span>Temperature Change and Heat Capacity<a class="headerlink" href="#temperature-change-and-heat-capacity" title="Link to this heading">#</a></h2>
-<p>One effect of heat transfer is a temperature change, where can easily observe that heating increases the temperature of a substance while cooling decreases it.  We assume that there is not phase change and that no work is done on (or by) the system.  Experiments show that the transferred heat depends on three factors:</p>
+<p>One effect of heat transfer is a temperature change, where we can easily observe that heating increases the temperature of a substance while cooling decreases it.  We assume that there is no phase change and that no work is done on (or by) the system.  Experiments show that the transferred heat depends on three factors:</p>
 <ol class="arabic simple">
 <li><p>the change in temperature,</p></li>
 <li><p>the mass of the system, and</p></li>
 <li><p>the substance and the phase of the substance.</p></li>
 </ol>
-<p>The dependence on temperature change and mass are easily understood.</p>
+<p>The dependences on temperature change and mass are easily understood.</p>
 <ul class="simple">
 <li><p>The (average) kinetic energy of an atom (or molecule) is proportional to the absolute temperature and the number of atoms (or molecules).</p></li>
 <li><p>The transferred heat is equal to the change in the internal energy, which means that the heat is proportional to the mass of the substance.</p></li>
@@ -604,14 +650,14 @@ Video Demonstration using a Blender</label><div class="sd-tab-content docutils">
 <div class="note admonition">
 <p class="admonition-title">Heat Transfer and Temperature Change</p>
 <p>The quantitative relationship between heat transfer <span class="math notranslate nohighlight">\(Q\)</span> and temperature change <span class="math notranslate nohighlight">\(\Delta T\)</span> contains all three factors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-561a0f68-2dd0-44ec-b91f-071e474b7216">
-<span class="eqno">(13.2)<a class="headerlink" href="#equation-561a0f68-2dd0-44ec-b91f-071e474b7216" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f736a5fa-d0ef-45fe-b95a-578ff07381bc">
+<span class="eqno">(13.2)<a class="headerlink" href="#equation-f736a5fa-d0ef-45fe-b95a-578ff07381bc" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = mc\Delta T,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the substance, and the symbol <span class="math notranslate nohighlight">\(c\)</span> denotes the <strong>specific heat</strong> that depends on the material and phase.</p>
 <p>The specific heat <span class="math notranslate nohighlight">\(c\)</span> is a property of the substance, and its SI unit is <span class="math notranslate nohighlight">\(\rm J/(kg\cdot K)\)</span>.  Note that the unit used for <span class="math notranslate nohighlight">\(\Delta T\)</span> must match that given for the specific heat, where a conversion may be necessary.  If heat transferred is measured in <span class="math notranslate nohighlight">\(\rm kcal\)</span>, then the unit of specific heat can be converted so that the units are <span class="math notranslate nohighlight">\(\rm kcal/(kg\cdot ^\circ{C})\)</span>.</p>
 </div>
-<p>Values of specific heat are empirically measured and must generally be referenced in tables because there is no simple way to calculate them from first principles.  The temperature and volume dependence of the specific heat of most substances is weak.  The specific heat of water is <span class="math notranslate nohighlight">\(5\times\)</span> that of glass and <span class="math notranslate nohighlight">\(10\times\)</span> that of iron, which means that it takes that much more heat to raise the temperature of water by same amount.  Water has one of the largest specific heats of any material, which is important for life as we know it on Earth.</p>
+<p>Values of specific heat are empirically measured and must generally be referenced in tables because there is no simple way to calculate them from first principles.  The temperature and volume dependence of the specific heat of most substances is weak.  The specific heat of water is <span class="math notranslate nohighlight">\(5\times\)</span> that of glass and <span class="math notranslate nohighlight">\(10\times\)</span> that of iron, which means that it takes that much more heat to raise the temperature of water by the same amount.  Water has one of the largest specific heats of any material, which is important for life as we know it on Earth.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-specific-heats">
 <caption><span class="caption-number">Table 13.1 </span><span class="caption-text">Specific Heats of Various Substances<span class="math notranslate nohighlight">\(^3\)</span></span><a class="headerlink" href="#tab-specific-heats" title="Link to this table">#</a></caption>
 <colgroup>
@@ -737,24 +783,171 @@ Q = mc\Delta T,
 <span class="math notranslate nohighlight">\(^2\)</span> For gases, <span class="math notranslate nohighlight">\(c_v\)</span> represents the specific heat at constant volume, measured at approximately <span class="math notranslate nohighlight">\(293.2\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(1.00\ {\rm atm}\)</span> unless otherwise noted. Values in parentheses represent <span class="math notranslate nohighlight">\(c_p\)</span>, the specific heat at constant pressure of <span class="math notranslate nohighlight">\(1.00\ {\rm atm}\)</span>.<br />
 <span class="math notranslate nohighlight">\(^3\)</span> Values for solids and liquids are measured at constant volume and approximately <span class="math notranslate nohighlight">\(298\ {\rm K}\)</span> unless otherwise noted.<br />
 <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">OpenStax College Physics 2e, Table 14.1</a>.</em><br />
-<strong>Note:</strong> The numerical value of specific heat is unchanged when replacing degrees Celsius with Kelvin in the denominator because <span class="math notranslate nohighlight">\(\Delta T=1\ {\rm K}\)</span> corresponds to <span class="math notranslate nohighlight">\(\Delta T=1^\circ{\rm C}\)</span>. Only the temperature scale’s zero point differs.</p>
+<strong>Note:</strong> The numerical value of specific heat is unchanged when replacing degrees Celsius with kelvins in the denominator because <span class="math notranslate nohighlight">\(\Delta T=1\ {\rm K}\)</span> corresponds to <span class="math notranslate nohighlight">\(\Delta T=1^\circ{\rm C}\)</span>. Only the temperature scale’s zero point differs.</p>
+<section id="example-problem-heating-water-in-an-aluminum-pan">
+<h3><span class="section-number">13.2.1. </span>Example Problem: Heating Water in an Aluminum Pan<a class="headerlink" href="#example-problem-heating-water-in-an-aluminum-pan" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Heating Water in an Aluminum Pan</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>An aluminum pan of mass <span class="math notranslate nohighlight">\(0.500\ {\rm kg}\)</span> contains <span class="math notranslate nohighlight">\(0.250\ {\rm L}\)</span> of water. Both warm from <span class="math notranslate nohighlight">\(20.0^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(80.0^\circ{\rm C}\)</span>. Find (a) the total heat required, (b) the percentage absorbed by the pan, and (c) the percentage absorbed by the water. Neglect heat lost to the surroundings. Use <span class="math notranslate nohighlight">\(c_{\rm Al}=9.00\times10^2\ {\rm J/(kg\,K)}\)</span>, <span class="math notranslate nohighlight">\(c_{\rm w}=4.19\times10^3\ {\rm J/(kg\,K)}\)</span>, and <span class="math notranslate nohighlight">\(\rho_{\rm w}=1.00\ {\rm kg/L}\)</span>.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">OpenStax, College Physics 2e, Example 14.1</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The pan and water form the system receiving energy from the stove. Each undergoes the same temperature increase without changing phase, so we calculate the energy absorbed by each material and add the contributions. Their shares of the total are determined by their heat capacities, which combine mass and specific heat. The volume of water must first be related to its mass through density.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The water mass is <span class="math notranslate nohighlight">\(m_{\rm w}=\rho_{\rm w}V_{\rm w}\)</span>. Applying the temperature-change relation to both materials gives the total heat</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{\rm total}=m_{\rm Al}c_{\rm Al}(T_f-T_i)+\rho_{\rm w}V_{\rm w}c_{\rm w}(T_f-T_i).
+\]</div>
+<p class="sd-card-text">Factoring out the common temperature interval shows that the combined heat capacity controls the required energy:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{\rm total}=(m_{\rm Al}c_{\rm Al}+\rho_{\rm w}V_{\rm w}c_{\rm w})\Delta T.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The pan’s percentage is its heat contribution divided by the total. The common temperature interval cancels, so</p>
+<div class="math notranslate nohighlight">
+\[
+f_{\rm Al}=\frac{m_{\rm Al}c_{\rm Al}}{m_{\rm Al}c_{\rm Al}+\rho_{\rm w}V_{\rm w}c_{\rm w}}\times100\%.
+\]</div>
+<p class="sd-card-text"><strong>(c)</strong> The water receives the remaining share, which gives <span class="math notranslate nohighlight">\(f_{\rm w}=100\%-f_{\rm Al}\)</span>. The specified density and volume give a water mass of <span class="math notranslate nohighlight">\(0.250\ {\rm kg}\)</span>, and the temperature interval is <span class="math notranslate nohighlight">\(60.0\ {\rm K}\)</span>. Evaluating the total and the two shares gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+Q_{\rm total}&amp;=[(0.500\ {\rm kg})(9.00\times10^2\ {\rm J/(kg\,K)})+(0.250\ {\rm kg})(4.19\times10^3\ {\rm J/(kg\,K)})](60.0\ {\rm K})=89.9\ {\rm kJ},\\
+f_{\rm Al}&amp;=\frac{(0.500\ {\rm kg})(9.00\times10^2\ {\rm J/(kg\,K)})}{(0.500\ {\rm kg})(9.00\times10^2\ {\rm J/(kg\,K)})+(0.250\ {\rm kg})(4.19\times10^3\ {\rm J/(kg\,K)})}\times100\%=30.1\%,\\
+f_{\rm w}&amp;=69.9\%.
+\end{align*}\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The required heat is <strong>(a)</strong> <span class="math notranslate nohighlight">\(89.9\ {\rm kJ}\)</span>, with <strong>(b)</strong> <span class="math notranslate nohighlight">\(30.1\%\)</span> going into the pan and <strong>(c)</strong> <span class="math notranslate nohighlight">\(69.9\%\)</span> into the water. The percentages sum to the full input. Water absorbs more energy despite having half the pan’s mass because its specific heat is more than four times as large.</p>
+</div>
+</details></div>
+</section>
+<section id="example-problem-warming-truck-brakes-on-a-descent">
+<h3><span class="section-number">13.2.2. </span>Example Problem: Warming Truck Brakes on a Descent<a class="headerlink" href="#example-problem-warming-truck-brakes-on-a-descent" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Warming Truck Brakes on a Descent</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A truck of mass <span class="math notranslate nohighlight">\(1.0\times10^4\ {\rm kg}\)</span> descends through a vertical height of <span class="math notranslate nohighlight">\(75\ {\rm m}\)</span> at constant speed. Its brakes retain <span class="math notranslate nohighlight">\(10\%\)</span> of the lost gravitational potential energy. Find the temperature increase of <span class="math notranslate nohighlight">\(1.0\times10^2\ {\rm kg}\)</span> of brake material with average specific heat <span class="math notranslate nohighlight">\(8.0\times10^2\ {\rm J/(kg\,K)}\)</span>. Use <span class="math notranslate nohighlight">\(g=9.8\ {\rm m/s^2}\)</span>.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">OpenStax, College Physics 2e, Example 14.2</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The truck’s constant speed means that its kinetic energy does not increase during the descent. Part of the decrease in gravitational potential energy remains as internal energy in the brakes. We use the stated retained fraction to find that contribution, then relate the brake material’s internal-energy increase to its temperature rise. Mechanical work supplies the energy; heat transfer from a hotter object is not required.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">We denote the truck mass by <span class="math notranslate nohighlight">\(M\)</span>, the brake mass by <span class="math notranslate nohighlight">\(m\)</span>, and the retained fraction by <span class="math notranslate nohighlight">\(f\)</span>. The positive energy retained in the brakes is</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta U_{\rm brakes}=fMgh.
+\]</div>
+<p class="sd-card-text">The brake material’s thermal response is described by <span class="math notranslate nohighlight">\(\Delta U_{\rm brakes}=mc\Delta T\)</span> within the constant-specific-heat approximation. Equating the two expressions and isolating the temperature change gives</p>
+<div class="math notranslate nohighlight">
+\[
+mc\Delta T=fMgh,\qquad \Delta T=\frac{fMgh}{mc}.
+\]</div>
+<p class="sd-card-text">The stated percentage corresponds to <span class="math notranslate nohighlight">\(f=0.10\)</span>. The temperature rise is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta T=\frac{(0.10)(1.0\times10^4\ {\rm kg})(9.8\ {\rm m/s^2})(75\ {\rm m})}{(1.0\times10^2\ {\rm kg})(8.0\times10^2\ {\rm J/(kg\,K)})}=9.2\ {\rm K}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The brakes warm by <span class="math notranslate nohighlight">\(9.2\ {\rm K}\)</span>, equivalent to a <span class="math notranslate nohighlight">\(9.2^\circ{\rm C}\)</span> increase. The positive change is consistent with retaining mechanical energy. The modest rise reflects the assumption that only one-tenth of the lost potential energy remains in the brakes; retaining a larger fraction would produce a proportionally larger rise.</p>
+</div>
+</details></div>
+</section>
+<section id="example-problem-cold-water-in-a-hot-pan">
+<h3><span class="section-number">13.2.3. </span>Example Problem: Cold Water in a Hot Pan<a class="headerlink" href="#example-problem-cold-water-in-a-hot-pan" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Cold Water in a Hot Pan</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A <span class="math notranslate nohighlight">\(0.500\ {\rm kg}\)</span> aluminum pan initially at <span class="math notranslate nohighlight">\(150^\circ{\rm C}\)</span> receives <span class="math notranslate nohighlight">\(0.250\ {\rm kg}\)</span> of water at <span class="math notranslate nohighlight">\(20.0^\circ{\rm C}\)</span>. The pan rests on an insulating pad. Find the final equilibrium temperature, assuming negligible evaporation and heat exchange with the surroundings. Use <span class="math notranslate nohighlight">\(c_{\rm Al}=9.00\times10^2\ {\rm J/(kg\,K)}\)</span> and <span class="math notranslate nohighlight">\(c_{\rm w}=4.19\times10^3\ {\rm J/(kg\,K)}\)</span>.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">OpenStax, College Physics 2e, Example 14.3</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The pan and water exchange energy with each other while their combined energy remains constant. The pan cools and the water warms until they share a common temperature. We take heat entering either object as positive, so the pan’s heat transfer is negative and the water’s is positive. A temperature between the two initial values is required for this model to be consistent.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The separate heat transfers follow from each object’s initial temperature and the common final temperature. Conservation of energy requires their sum to vanish:</p>
+<div class="math notranslate nohighlight">
+\[
+m_{\rm Al}c_{\rm Al}(T_f-T_{{\rm Al},i})+m_{\rm w}c_{\rm w}(T_f-T_{{\rm w},i})=0.
+\]</div>
+<p class="sd-card-text">Collecting the terms that contain the final temperature gives a heat-capacity-weighted average of the initial temperatures:</p>
+<div class="math notranslate nohighlight">
+\[
+T_f=\frac{m_{\rm Al}c_{\rm Al}T_{{\rm Al},i}+m_{\rm w}c_{\rm w}T_{{\rm w},i}}{m_{\rm Al}c_{\rm Al}+m_{\rm w}c_{\rm w}}.
+\]</div>
+<p class="sd-card-text">Celsius readings can be used in this weighted average because the weights sum to one, and temperature differences have the same size in kelvins and Celsius degrees. The stated masses give heat capacities of <span class="math notranslate nohighlight">\(450\ {\rm J/K}\)</span> for the pan and <span class="math notranslate nohighlight">\(1.048\times10^3\ {\rm J/K}\)</span> for the water, with one working digit retained for the latter. Evaluation using unrounded products gives</p>
+<div class="math notranslate nohighlight">
+\[
+T_f\approx\frac{(450\ {\rm J/K})(150^\circ{\rm C})+(1.048\times10^3\ {\rm J/K})(20.0^\circ{\rm C})}{450\ {\rm J/K}+1.048\times10^3\ {\rm J/K}}=59.1^\circ{\rm C}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The final temperature is approximately <span class="math notranslate nohighlight">\(59.1^\circ{\rm C}\)</span>. It lies between the initial temperatures and closer to the water’s initial temperature because the water has the larger heat capacity. The result is below the boiling point, consistent with a final liquid state under the stipulated negligible-evaporation approximation.</p>
+</div>
+</details></div>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Equal Temperature Intervals</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A block requires <span class="math notranslate nohighlight">\(25\ {\rm kJ}\)</span> to warm from <span class="math notranslate nohighlight">\(25^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(30^\circ{\rm C}\)</span>. How much heat is required to warm the same block from <span class="math notranslate nohighlight">\(45^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(50^\circ{\rm C}\)</span>? Assume its specific heat stays constant and no phase change occurs.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The block has the same mass and material in both processes. With constant specific heat, only the temperature interval determines whether the required heat differs. Comparing the two heat transfers allows the common mass and specific heat to cancel.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The heat-transfer relation applies to both intervals. Taking their ratio isolates the role of the temperature change:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{Q_2}{Q_1}=\frac{mc\Delta T_2}{mc\Delta T_1},\qquad Q_2=Q_1\frac{\Delta T_2}{\Delta T_1}.
+\]</div>
+<p class="sd-card-text">Each interval is <span class="math notranslate nohighlight">\(5\ {\rm K}\)</span>, so the ratio is unity. The required heat is</p>
+<div class="math notranslate nohighlight">
+\[
+Q_2=(25\ {\rm kJ})\frac{5\ {\rm K}}{5\ {\rm K}}=25\ {\rm kJ}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The second warming requires <span class="math notranslate nohighlight">\(25\ {\rm kJ}\)</span>. Both processes produce the same temperature increase in the same block, so the constant-specific-heat model predicts equal energy transfers. The higher starting temperature alone does not change this result.</p>
+</div>
+</details></div>
+</section>
 </section>
 <section id="phase-change-and-latent-heat">
 <h2><span class="section-number">13.3. </span>Phase Change and Latent Heat<a class="headerlink" href="#phase-change-and-latent-heat" title="Link to this heading">#</a></h2>
-<p>Energy is required to melt a solid because the cohesive bonds between the molecules in the solid must be broke apart such that the molecules can move around in the liquid at comparable kinetic energies.  Thus, there is not rise in temperature.  Energy is also needed to vaporize a liquid because molecules in a liquid interact with each other via attractive forces.  There is no temperature change until a phase change is complete.</p>
+<p>Energy is required to melt a solid because the cohesive bonds between the molecules in the solid must be broken apart such that the molecules can move around in the liquid at comparable kinetic energies.  Thus, there is no rise in temperature.  Energy is also needed to vaporize a liquid because molecules in a liquid interact with each other via attractive forces.  There is no temperature change until a phase change is complete.</p>
 <p>The temperature of a cup of soda initially at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> stays at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> until all the ice has melted.  Conversely, energy is released during freezing and condensation, usually in the form of thermal energy.  Work is done by cohesive forces when molecules are brought together.  The corresponding energy must be given off (dissipated) to allow them to stay together.</p>
-<p>The energy involved ina  phase change depends on two major factors:</p>
+<p>The energy involved in a phase change depends on two major factors:</p>
 <ol class="arabic simple">
 <li><p>the <em>number</em> of bonds (or force pairs), and</p></li>
 <li><p>the <em>strength</em> of bonds (or force pairs).</p></li>
 </ol>
 <p>The number of bonds is proportional to the number of molecules and thus, the mass of the sample.  The strength of forces depends on the type of molecules.  The heat transfer <span class="math notranslate nohighlight">\(Q\)</span> required to change the phase of a sample of mass <span class="math notranslate nohighlight">\(m\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2bb40592-79b9-48c0-936b-d273fcd1476f">
-<span class="eqno">(13.3)<a class="headerlink" href="#equation-2bb40592-79b9-48c0-936b-d273fcd1476f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-45dca22d-770a-4171-a1aa-afd23cd8fd62">
+<span class="eqno">(13.3)<a class="headerlink" href="#equation-45dca22d-770a-4171-a1aa-afd23cd8fd62" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q &amp;= m L_{\rm f}, \qquad \text{(melting/freezing)} \\
 Q &amp;= m L_{\rm v}, \qquad \text{(vaporization/condensation)}
 \end{align}\]</div>
-<p>where the latent heat of fusion <span class="math notranslate nohighlight">\(L_{\rm f}\)</span> and the latent heat of vaporization <span class="math notranslate nohighlight">\(L_{\rm v}\)</span> are material constraints that are determined experimentally.</p>
+<p>where the latent heat of fusion <span class="math notranslate nohighlight">\(L_{\rm f}\)</span> and the latent heat of vaporization <span class="math notranslate nohighlight">\(L_{\rm v}\)</span> are material constants that are determined experimentally.</p>
 <figure class="align-default" id="fig-water-phase-changes-molecular-motion">
 <img alt="Two-panel molecular illustration of water phase changes. Panel (a) shows solid ice and liquid water, with arrows indicating limited molecular motion in the solid and greater random motion in the liquid. Panel (b) shows liquid water and water vapor, with arrows indicating random motion in the liquid and larger translational motion in the gas." src="../_images/water_phase_changes_and_molecular_motion.png" />
 <figcaption>
@@ -1041,7 +1234,7 @@ Heat of Vaporization</label><div class="sd-tab-content docutils">
 </ul>
 <p>We can examine the effects of phase change more precisely by considering adding heat into a sample of ice at <span class="math notranslate nohighlight">\(-20^\circ{\rm C}\)</span>.</p>
 <ul class="simple">
-<li><p>The temperature of the ice rises linearly, absorbing heat at a constant rate of <span class="math notranslate nohighlight">\(0.5/ {\rm kcal/(kg\cdot ^\circ{\rm C})}\)</span> (see Table <a class="reference internal" href="#tab-specific-heats"><span class="std std-numref">13.1</span></a>) until it reaches <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>.</p></li>
+<li><p>The temperature of the ice rises linearly, absorbing heat at a constant rate of <span class="math notranslate nohighlight">\(0.5\ {\rm kcal/(kg\cdot ^\circ{\rm C})}\)</span> (see Table <a class="reference internal" href="#tab-specific-heats"><span class="std std-numref">13.1</span></a>) until it reaches <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>.</p></li>
 <li><p>Once at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>, the ice begins to melt until all the ice has melted, absorbing <span class="math notranslate nohighlight">\(79.8\ {\rm kcal/kg}\)</span> of heat (see Table <a class="reference internal" href="#tab-latent-heat-fusion"><span class="std std-numref">13.2</span></a>).  The temperature remains constant at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> during this phase change.</p></li>
 <li><p>Once all the ice has melted, the temperature of the liquid water rises, absorbing heat at a new constant rate of <span class="math notranslate nohighlight">\(1.00\ {\rm kcal/(kg\cdot ^\circ{C})}\)</span>.</p></li>
 <li><p>At <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>, the water begins to boil and the temperature again remains constant while the water absorbs <span class="math notranslate nohighlight">\(540\ {\rm kcal/kg}\)</span> (see Table <a class="reference internal" href="#tab-latent-heat-vaporization"><span class="std std-numref">13.3</span></a>) of heat during this phase change.</p></li>
@@ -1064,14 +1257,14 @@ Heat of Vaporization</label><div class="sd-tab-content docutils">
 <p><span class="caption-number">Fig. 13.5 </span><span class="caption-text"><strong>Heating curve of water and changes in molecular behavior.</strong> As energy is added to ice initially at <span class="math notranslate nohighlight">\(-20^\circ{\rm C}\)</span>, its temperature rises until it reaches the melting point at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>. During melting, the temperature remains constant while the added energy increases the intermolecular potential energy as the solid structure breaks down. Once all the ice has melted, the liquid water warms to <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>, where vaporization begins. The temperature again remains constant as energy separates the molecules into the gas phase. After vaporization is complete, additional energy raises the temperature of the steam. The horizontal sections of the graph illustrate the energy required for phase changes, with vaporization requiring substantially more energy than melting. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-3-phase-change-and-latent-heat">OpenStax, College Physics 2e, Figure 14.8</a>.</em></span><a class="headerlink" href="#fig-water-heating-curve" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Water can evaporate at temperature below the boiling point.  More energy is required than at the boiling point because there is less energy available from random motions.  For example, at body temperature, perspiration from skin requires a heat input of <span class="math notranslate nohighlight">\(2428\ {\rm kJ/kg}\)</span>, which is about <span class="math notranslate nohighlight">\(10\%\)</span> higher than the latent heat of vaporization at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>.  This heat comes from the skin, and thus provides an effective cooling mechanism in hot weather.  High humidity inhibits evaporation, which inhibits the body from cooling.  We feel that the temperature might rise, but unevaporated sweat still exists on your brow.</p>
+<p>Water can evaporate at temperatures below the boiling point.  More energy is required than at the boiling point because there is less energy available from random motions.  For example, at body temperature, perspiration from skin requires a heat input of <span class="math notranslate nohighlight">\(2428\ {\rm kJ/kg}\)</span>, which is about <span class="math notranslate nohighlight">\(10\%\)</span> higher than the latent heat of vaporization at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>.  This heat comes from the skin, and thus provides an effective cooling mechanism in hot weather.  High humidity inhibits evaporation, which inhibits the body from cooling.  We feel that the temperature might rise, but unevaporated sweat still exists on your brow.</p>
 <p>Vaporization and condensation are opposite processes that transfer energy between a substance and its surroundings. During <em>vaporization</em>, a liquid absorbs energy from its surroundings to become a gas, which can cause the surroundings to cool. During <em>condensation</em>, a gas releases energy to its surroundings as it becomes a liquid, which can cause the surroundings to warm.</p>
 <p>For example, water vapor in the air condenses when it comes into contact with a cold glass. Although the glass is initially cold, the condensation process releases energy to the glass, warming it slightly. The amount of energy released during condensation is equal to the energy required for vaporization of the same mass of the substance. The magnitude of this energy transfer is <span class="math notranslate nohighlight">\(Q=mL_v,\)</span> where <span class="math notranslate nohighlight">\(m\)</span> is the mass undergoing the phase change and <span class="math notranslate nohighlight">\(L_v\)</span> is the latent heat of vaporization.</p>
-<p><strong>Sublimation</strong> is the transition from the solid to vapor phase.  For example, snow or ice can disappear without at trace of liquid water when in the right environment.  The reverse is also true: Frost can form on very cold windows without going through the liquid stage.</p>
+<p><strong>Sublimation</strong> is the transition from the solid to vapor phase.  For example, snow or ice can disappear without a trace of liquid water when in the right environment.  The reverse is also true: Frost can form on very cold windows without going through the liquid stage.</p>
 <p>A popular effect is the making of “smoke” or “fog” from dry ice, which is solid carbon dioxide.  Sublimation occurs because the equilibrium vapor pressure of solids is not zero.  Some air fresheners use the sublimation of a solid to inject a perfume into the room.</p>
-<p>All phase transition involve heat transfer.  In the case of direct solid-vapor transitions, the energy required is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b1c9885-b46e-425d-ae44-00e30cef109c">
-<span class="eqno">(13.4)<a class="headerlink" href="#equation-5b1c9885-b46e-425d-ae44-00e30cef109c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>All phase transitions involve heat transfer.  In the case of direct solid-vapor transitions, the energy required is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5407c9a7-ea8a-4c10-b7f0-ced91414a0a5">
+<span class="eqno">(13.4)<a class="headerlink" href="#equation-5407c9a7-ea8a-4c10-b7f0-ced91414a0a5" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q = mL_{\rm s},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(L_{\rm s}\)</span> is the <em>latent heat of sublimation</em> and is the energy required to change <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of a substance from the solid phase to the vapor phase.  The value of <span class="math notranslate nohighlight">\(L_{\rm s}\)</span> depends on the substance.  Sublimation requires energy input, so that dry ice is an effective coolant, whereas the reverse process (i.e., frosting) releases energy.</p>
@@ -1091,6 +1284,57 @@ Q = mL_{\rm s},
 <li><p><strong>Check your answer.</strong> Make sure the units are correct and the result is reasonable. Check whether the final temperature crosses a melting or boiling point, which would require an additional phase-change calculation.</p></li>
 </ol>
 </div>
+<section id="example-problem-cooling-soda-with-ice">
+<h3><span class="section-number">13.3.1. </span>Example Problem: Cooling Soda with Ice<a class="headerlink" href="#example-problem-cooling-soda-with-ice" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Cooling Soda with Ice</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Three ice cubes, each of mass <span class="math notranslate nohighlight">\(6.0\ {\rm g}\)</span> and initially at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>, are added to <span class="math notranslate nohighlight">\(0.25\ {\rm kg}\)</span> of soda at <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span> in a foam cup. Find the final temperature. Treat the soda as water, neglect the cup’s heat capacity and external heat exchange, and use <span class="math notranslate nohighlight">\(c_{\rm w}=4.2\times10^3\ {\rm J/(kg\,K)}\)</span> and <span class="math notranslate nohighlight">\(L_{\rm f}=3.3\times10^5\ {\rm J/kg}\)</span>. Check that all the ice melts.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-3-phase-change-and-latent-heat">OpenStax, College Physics 2e, Example 14.4</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Energy released by the cooling soda must first melt the ice and then warm the resulting liquid water. We begin by assuming all the ice melts and solve the energy balance for a common final temperature. A result above the melting point confirms that enough energy is available to complete melting. The ice begins at its melting point, so no initial warming of solid ice is needed.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">We denote the soda mass by <span class="math notranslate nohighlight">\(m_{\rm s}\)</span>, the total ice mass by <span class="math notranslate nohighlight">\(m_{\rm i}\)</span>, and the melting temperature by <span class="math notranslate nohighlight">\(T_{\rm m}\)</span>. The soda’s energy loss equals the energy required for melting plus the warming of the meltwater:</p>
+<div class="math notranslate nohighlight">
+\[
+m_{\rm s}c_{\rm w}(T_{{\rm s},i}-T_f)=m_{\rm i}L_{\rm f}+m_{\rm i}c_{\rm w}(T_f-T_{\rm m}).
+\]</div>
+<p class="sd-card-text">Solving for the final temperature relative to the melting point gives</p>
+<div class="math notranslate nohighlight">
+\[
+T_f-T_{\rm m}=\frac{m_{\rm s}c_{\rm w}(T_{{\rm s},i}-T_{\rm m})-m_{\rm i}L_{\rm f}}{(m_{\rm s}+m_{\rm i})c_{\rm w}}.
+\]</div>
+<p class="sd-card-text">The numerator is the energy available after melting if the soda cools to the melting point. It must be positive for all the ice to melt and the mixture to warm above that point. The three cubes have a combined mass of <span class="math notranslate nohighlight">\(0.018\ {\rm kg}\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+T_f-T_{\rm m}=\frac{(0.25\ {\rm kg})(4.2\times10^3\ {\rm J/(kg\,K)})(20\ {\rm K})-(0.018\ {\rm kg})(3.3\times10^5\ {\rm J/kg})}{(0.25\ {\rm kg}+0.018\ {\rm kg})(4.2\times10^3\ {\rm J/(kg\,K)})}\approx13\ {\rm K}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The final temperature is approximately <span class="math notranslate nohighlight">\(13^\circ{\rm C}\)</span>. It is above the melting point, so the assumption that all the ice melts is consistent with the energy balance. A relatively small ice mass produces noticeable cooling because melting requires substantial energy in addition to the energy needed to warm the meltwater.</p>
+</div>
+</details></div>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Snow above the Freezing Temperature</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Why can snow remain on a mountain slope when daytime air temperatures rise above freezing?</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-3-phase-change-and-latent-heat">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Snow must absorb enough energy to melt, even after it reaches its melting temperature. Warmer air can supply that energy only at a finite rate, and the large latent heat of fusion allows snow to persist while melting proceeds. Shading, overnight cooling, and the depth of the snowpack can further slow its disappearance. Air temperature above freezing therefore does not imply that all the snow melts immediately.</p>
+</div>
+</details></div>
+</section>
 </section>
 <section id="heat-transfer-methods">
 <h2><span class="section-number">13.4. </span>Heat Transfer Methods<a class="headerlink" href="#heat-transfer-methods" title="Link to this heading">#</a></h2>
@@ -1112,25 +1356,39 @@ Q = mL_{\rm s},
 <p><span class="caption-number">Fig. 13.6 </span><span class="caption-text"><strong>Heat transfer by conduction, convection, and radiation in a room heated by a fireplace.</strong> Thermal radiation (yellow arrows) transfers energy directly from the fire to objects throughout the room without requiring a material medium. Conduction (black arrow) transfers energy through solid materials, such as the hearth and surrounding floor. Convection (red and blue arrows) transfers energy through the movement of air. Warm air rises near the fireplace and circulates through the room, while cooler air near the window sinks and moves along the floor toward the fireplace. Hot combustion gases also rise through the chimney, carrying energy out of the house. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-4-heat-transfer-methods">OpenStax, College Physics 2e, Figure 14.12</a>.</em></span><a class="headerlink" href="#fig-fireplace-heat-transfer" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Recognizing the Three Transfer Mechanisms</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Give an everyday example of conduction, convection, and radiation that differs from the examples used in the main text. Explain the energy-transfer mechanism in each case.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-4-heat-transfer-methods">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">A metal spoon warms when its lower end is left in hot soup because energy travels through the metal by conduction. Water circulating through a household radiator carries energy from the boiler by convection. Sunlight warms a parked bicycle seat through absorption of electromagnetic radiation. More than one mechanism can operate in a real setting, but each example identifies the particular transfer being described.</p>
+</div>
+</details></div>
 </section>
 <section id="conduction">
 <h2><span class="section-number">13.5. </span>Conduction<a class="headerlink" href="#conduction" title="Link to this heading">#</a></h2>
-<p>Your feet feel cold as you walk barefoot across the living room carpet in your cold house and then, step onto the kitchen tile floor.  The carpet and the tile floor are both at the same temperature.  The different sensation you feel is explained by the different rates of heat transfer: <em>the heat loss during the same time interval is greater for skin in contact with the tiles than with the carpet</em>, so the temperature drop is greater on the tiles.</p>
+<p>Your feet feel cold as you walk barefoot across the living room carpet in your cold house and then step onto the kitchen tile floor.  The carpet and the tile floor are both at the same temperature.  The different sensation you feel is explained by the different rates of heat transfer: <em>the heat loss during the same time interval is greater for skin in contact with the tiles than with the carpet</em>, so the temperature drop is greater on the tiles.</p>
 <p>Some materials conduct thermal energy faster than others.  Good conductors of electricity (e.g., metals) are also good heat conductors, whereas insulators of electricity (e.g., wood, plastic, and rubber) are poor heat conductors.</p>
 <p>The (average) kinetic energy of a molecule in a hot body is higher than in a colder body.  If two molecules collide, an energy transfer between molecules occurs from the higher kinetic energy to the lower kinetic energy molecule.  The cumulative effect from all collisions results in a net flux of heat from the hot body to the cold body.  The heat flux thus depends on the temperature difference:</p>
 <div class="math notranslate nohighlight">
 \[ \Delta T = T_{\rm hot} - T_{\rm cold}. \]</div>
-<p>You get a more severe burn from boiling water than hot tap water because this temperature difference (of gradient) is larger.  Conversely, if the temperatures ar the same, the net heat transfer falls to zero and equilibrium is achieved.  Since the number of collisions possible increases with increasing area, heat conduction depends on the cross-sectional area.  If you touch a cold wall with your palm, your hand cools faster than if you just touch it with your fingertip.</p>
+<p>You get a more severe burn from boiling water than hot tap water because this temperature difference (or gradient) is larger.  Conversely, if the temperatures are the same, the net heat transfer falls to zero and equilibrium is achieved.  Since the number of collisions possible increases with increasing area, heat conduction depends on the cross-sectional area.  If you touch a cold wall with your palm, your hand cools faster than if you just touch it with your fingertip.</p>
 <figure class="align-default" id="fig-conduction-molecular-collisions">
 <img alt="Schematic of heat conduction across a surface separating regions at different temperatures. On the hot side, a faster-moving red particle approaches the surface and rebounds with less speed after transferring energy. On the cold side, a slower-moving blue particle approaches and rebounds with greater speed after gaining energy. Arrow lengths represent relative particle speeds, while a large arrow indicates net heat flow from hot to cold." src="../_images/heat_conduction_across_a_surface.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 13.7 </span><span class="caption-text"><strong>Heat conduction through microscopic particle collisions.</strong> Particles in the higher-temperature region have greater average kinetic energy than those in the lower-temperature region. When a faster-moving particle strikes the boundary, it can transfer some of its kinetic energy to particles at the surface and rebound with a lower speed. Conversely, a slower-moving particle approaching from the cooler region can gain kinetic energy through interactions at the surface and rebound with a greater speed. The lengths of the smaller arrows represent the relative particle speeds before and after each collision. Although individual collisions can transfer energy in either direction, the combined effect of many collisions produces a net transfer of thermal energy <span class="math notranslate nohighlight">\(Q\)</span> from the higher-temperature region to the lower-temperature region. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Figure 14.14</a>.</em></span><a class="headerlink" href="#fig-conduction-molecular-collisions" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The thickness of the material through which heat transfers also affects the mechanism of conduction.  Consider a slab of material with different temperatures on either side.  Suppose that <span class="math notranslate nohighlight">\(T_2 &gt; T_1\)</span>, so that heat is transferred from left to right.  Heat transfer from the left side to the right side is accomplished by a series of molecular collisions.  The thicker the material, teh more time it takes to transfer the same amount of heat.  This model explains why thick clothing is warmer than thin clothing in winters.</p>
-<p>The heat transfer rate depends on the material properties described by the <em>coefficient of thermal conductivity.</em>  THe <strong>rate of conductive heat transfer</strong> through a slab of material is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-524eb075-1c76-483f-b6a7-c6d2ee9149c0">
-<span class="eqno">(13.5)<a class="headerlink" href="#equation-524eb075-1c76-483f-b6a7-c6d2ee9149c0" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<p>The thickness of the material through which heat transfers also affects the mechanism of conduction.  Consider a slab of material with different temperatures on either side.  Suppose that <span class="math notranslate nohighlight">\(T_2 &gt; T_1\)</span>, so that heat is transferred from left to right.  Heat transfer from the left side to the right side is accomplished by a series of molecular collisions.  The thicker the material, the more time it takes to transfer the same amount of heat.  This model explains why thick clothing is warmer than thin clothing in winters.</p>
+<p>The heat transfer rate depends on the material properties described by the <em>coefficient of thermal conductivity.</em>  The <strong>rate of conductive heat transfer</strong> through a slab of material is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1c465e98-e9c5-4b00-ada7-3d4fafdde2b1">
+<span class="eqno">(13.5)<a class="headerlink" href="#equation-1c465e98-e9c5-4b00-ada7-3d4fafdde2b1" title="Permalink to this equation">#</a></span>\[\begin{align} 
 \frac{Q}{t} = \frac{kA}{d}(T_2 -T_1),
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(Q/t\)</span> is the rate of heat transfer in watts (or <span class="math notranslate nohighlight">\(\rm kcal/s\)</span>), <span class="math notranslate nohighlight">\(k\)</span> is the <strong>thermal conductivity</strong> of the material, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(d\)</span> are its surface area and thickness, and <span class="math notranslate nohighlight">\(T_2-T_1\)</span> is the temperature difference across the slab.</p>
@@ -1140,7 +1398,7 @@ Q = mL_{\rm s},
 <p><span class="caption-number">Fig. 13.8 </span><span class="caption-text"><strong>Heat conduction through a material between two temperatures.</strong> A material with thermal conductivity <span class="math notranslate nohighlight">\(k\)</span>, cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>, and thickness <span class="math notranslate nohighlight">\(d\)</span> connects two surfaces maintained at temperatures <span class="math notranslate nohighlight">\(T_2\)</span> and <span class="math notranslate nohighlight">\(T_1\)</span>, where <span class="math notranslate nohighlight">\(T_2&gt;T_1\)</span>. Thermal energy flows from the higher-temperature surface to the lower-temperature surface through conduction. The rate of heat transfer increases with the thermal conductivity, cross-sectional area, and temperature difference, but decreases as the thickness <span class="math notranslate nohighlight">\(d\)</span> increases. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Section 14.5</a>.</em></span><a class="headerlink" href="#fig-heat-conduction-through-material" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A combination of material and thickness is necessary to develop good insulators, where the a smaller conductivity <span class="math notranslate nohighlight">\(k\)</span> and larger thickness <span class="math notranslate nohighlight">\(d\)</span> is better.  The ratio <span class="math notranslate nohighlight">\(d/k\)</span> will be large for a good insulator, where the ratio is called the <strong>R factor</strong>.  The rate of conductive heat transfer is inversely proportional to <span class="math notranslate nohighlight">\(R\)</span>.  The <span class="math notranslate nohighlight">\(R\)</span> factor is used most commonly for household insulation (in the attic and walls) and refrigerators.</p>
+<p>A combination of material and thickness is necessary to develop good insulators, where a smaller conductivity <span class="math notranslate nohighlight">\(k\)</span> and larger thickness <span class="math notranslate nohighlight">\(d\)</span> are better.  The ratio <span class="math notranslate nohighlight">\(d/k\)</span> will be large for a good insulator, where the ratio is called the <strong>R factor</strong>.  The rate of conductive heat transfer is inversely proportional to <span class="math notranslate nohighlight">\(R\)</span>.  The <span class="math notranslate nohighlight">\(R\)</span> factor is used most commonly for household insulation (in the attic and walls) and refrigerators.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-thermal-conductivities">
 <caption><span class="caption-number">Table 13.4 </span><span class="caption-text">Thermal Conductivities of Common Substances near <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span></span><a class="headerlink" href="#tab-thermal-conductivities" title="Link to this table">#</a></caption>
 <colgroup>
@@ -1221,6 +1479,109 @@ Q = mL_{\rm s},
 </table>
 </div>
 <p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Table 14.3</a>.</em> OpenStax lists <span class="math notranslate nohighlight">\(0.010\ {\rm W/(m\cdot K)}\)</span> for Styrofoam. The updated value of <span class="math notranslate nohighlight">\(0.034\ {\rm W/(m\cdot K)}\)</span> is representative of expanded polystyrene insulation at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>, based on <a class="reference external" href="https://www.fao.org/4/y5013e/y5013e08.htm">FAO thermal insulation data</a>.</p>
+<section id="example-problem-ice-melting-in-an-insulated-box">
+<h3><span class="section-number">13.5.1. </span>Example Problem: Ice Melting in an Insulated Box<a class="headerlink" href="#example-problem-ice-melting-in-an-insulated-box" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Ice Melting in an Insulated Box</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>An expanded-polystyrene ice box has total wall area <span class="math notranslate nohighlight">\(0.950\ {\rm m^2}\)</span> and average wall thickness <span class="math notranslate nohighlight">\(2.50\ {\rm cm}\)</span>. Its contents remain at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> while the surrounding car trunk remains at <span class="math notranslate nohighlight">\(35.0^\circ{\rm C}\)</span>. How much ice melts in one day because of conduction through the walls? Use the chapter’s updated conductivity <span class="math notranslate nohighlight">\(k=0.034\ {\rm W/(m\,K)}\)</span> and <span class="math notranslate nohighlight">\(L_{\rm f}=3.3\times10^5\ {\rm J/kg}\)</span>. Assume enough ice remains to maintain the interior temperature throughout the day.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Example 14.5</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We approximate the walls as a uniform slab with a steady temperature difference across it. Energy conducted into the box goes into melting ice while the contents remain at the melting point. Multiplying the conduction rate by the elapsed time gives the incoming energy, which determines the melted mass. We neglect air leakage, openings, and additional energy needed to cool warm beverages.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The steady conduction rate depends on wall area, thickness, conductivity, and the temperature difference. The energy entering over time <span class="math notranslate nohighlight">\(t\)</span> is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{Q}{t}=\frac{kA(T_2-T_1)}{d},\qquad Q=\frac{kA(T_2-T_1)t}{d}.
+\]</div>
+<p class="sd-card-text">Melting requires energy <span class="math notranslate nohighlight">\(Q=mL_{\rm f}\)</span>. Combining the two relations and isolating the melted mass gives</p>
+<div class="math notranslate nohighlight">
+\[
+m=\frac{kA(T_2-T_1)t}{dL_{\rm f}}.
+\]</div>
+<p class="sd-card-text">The wall thickness is <span class="math notranslate nohighlight">\(0.0250\ {\rm m}\)</span>, the temperature difference is <span class="math notranslate nohighlight">\(35.0\ {\rm K}\)</span>, and one day is <span class="math notranslate nohighlight">\(86{,}400\ {\rm s}\)</span>. Substitution into the combined expression gives</p>
+<div class="math notranslate nohighlight">
+\[
+m=\frac{(0.034\ {\rm W/(m\,K)})(0.950\ {\rm m^2})(35.0\ {\rm K})(86{,}400\ {\rm s})}{(0.0250\ {\rm m})(3.3\times10^5\ {\rm J/kg})}=12\ {\rm kg}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Approximately <span class="math notranslate nohighlight">\(12\ {\rm kg}\)</span> of ice melts in one day under these steady conditions. The large mass is consistent with continuous heat gain across nearly a square meter of wall for a full day. If less ice is initially present, it melts sooner and the interior warms, so this constant-temperature model cannot be extended through the entire day. The answer uses the updated conductivity in this chapter rather than OpenStax’s lower value.</p>
+</div>
+</details></div>
+</section>
+<section id="example-problem-temperature-difference-across-a-pan-bottom">
+<h3><span class="section-number">13.5.2. </span>Example Problem: Temperature Difference across a Pan Bottom<a class="headerlink" href="#example-problem-temperature-difference-across-a-pan-bottom" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Temperature Difference across a Pan Bottom</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Water boils in an aluminum pan whose bottom is <span class="math notranslate nohighlight">\(0.800\ {\rm cm}\)</span> thick and <span class="math notranslate nohighlight">\(14.0\ {\rm cm}\)</span> in diameter. Water evaporates at <span class="math notranslate nohighlight">\(1.00\ {\rm g/s}\)</span>. Find the temperature difference between the lower and upper faces of the pan bottom. Assume all energy conducted through the bottom vaporizes water, and use <span class="math notranslate nohighlight">\(k=2.20\times10^2\ {\rm W/(m\,K)}\)</span> and <span class="math notranslate nohighlight">\(L_{\rm v}=2.26\times10^6\ {\rm J/kg}\)</span>.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Example 14.6</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The boiling water remains at a nearly constant temperature while energy supplies its phase change. The evaporation rate determines the required energy-transfer rate. In steady operation, the same rate passes through the aluminum bottom by conduction. We use the circular bottom area and solve for the face-to-face temperature difference, taking the lower face to be hotter.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">We denote the mass evaporation rate by <span class="math notranslate nohighlight">\(\dot m\)</span>. Vaporizing each unit of mass requires the latent heat, so the energy-transfer rate is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{Q}{t}=\dot m L_{\rm v}.
+\]</div>
+<p class="sd-card-text">The circular bottom has area <span class="math notranslate nohighlight">\(A=\pi D^2/4\)</span>, where <span class="math notranslate nohighlight">\(D\)</span> is its diameter. Equating the conduction rate to the vaporization rate and solving for the temperature difference gives</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{kA\Delta T}{d}=\dot m L_{\rm v},\qquad \Delta T=\frac{4\dot m L_{\rm v}d}{k\pi D^2}.
+\]</div>
+<p class="sd-card-text">The evaporation rate is <span class="math notranslate nohighlight">\(1.00\times10^{-3}\ {\rm kg/s}\)</span>, the thickness is <span class="math notranslate nohighlight">\(0.00800\ {\rm m}\)</span>, and the diameter is <span class="math notranslate nohighlight">\(0.140\ {\rm m}\)</span>. The temperature difference is therefore</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta T=\frac{4(1.00\times10^{-3}\ {\rm kg/s})(2.26\times10^6\ {\rm J/kg})(0.00800\ {\rm m})}{(2.20\times10^2\ {\rm W/(m\,K)})\pi(0.140\ {\rm m})^2}=5.34\ {\rm K}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The lower face of the pan bottom is <span class="math notranslate nohighlight">\(5.34\ {\rm K}\)</span> warmer than the upper face. A small difference can sustain substantial energy transfer because aluminum conducts heat well and the bottom is thin. This is the temperature difference across the aluminum itself; it does not include any additional difference across the burner–pan contact.</p>
+</div>
+</details></div>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Doubling a Conducting Slab</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>How does the steady conduction rate change when every linear dimension of a slab is doubled? Keep the material and the temperature difference between its faces unchanged.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">Uniformly scaling the slab changes both the area available for heat flow and the distance through which energy must travel. We compare the new and original conduction rates so that the unchanged material property and temperature difference cancel. The area grows in two dimensions, while thickness grows in only one.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">We denote the steady conduction rate by <span class="math notranslate nohighlight">\(H=Q/t\)</span>. The ratio of the two rates follows from the slab conduction law:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{H_f}{H_i}=\frac{kA_f\Delta T/d_f}{kA_i\Delta T/d_i}=\frac{A_f}{A_i}\frac{d_i}{d_f}.
+\]</div>
+<p class="sd-card-text">Doubling both transverse dimensions multiplies area by four, while the thickness doubles. Substitution of these exact geometric scale factors gives</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{H_f}{H_i}=4\left(\frac{1}{2}\right)=2.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The conduction rate doubles. The larger cross-sectional area increases the rate by a factor of four, while the doubled thickness reduces it by a factor of two. Their combined effect is a factor of two, so considering thickness alone would give the wrong prediction.</p>
+</div>
+</details></div>
+</section>
 </section>
 <section id="convection">
 <h2><span class="section-number">13.6. </span>Convection<a class="headerlink" href="#convection" title="Link to this heading">#</a></h2>
@@ -1315,14 +1676,97 @@ Q = mL_{\rm s},
 </figcaption>
 </figure>
 <p>The gap between the two panes of a double-pane window is about <span class="math notranslate nohighlight">\(1\ {\rm cm}\)</span>, which prevents convection and takes advantage of air’s low conductivity to prevent further loss.  Fur, fiber, and fiberglass also take advantage of the low conductivity of air by trapping air in small spaces that don’t support convection.</p>
-<p>When convection is accompanied by a phase change.  It allows us to cool off by sweating, even if the temperature of the surrounding air exceeds body temperature.  Heat from the skin is required for sweat to evaporate from the skin, but without air flow, the air becomes saturated and evaporation stops.  Air flow caused by convection replaces the saturated air by dry air and evaporation continues.</p>
-<p>When water evaporates from the oceans, heat is removed from the ocean.  If the water vapor condenses in liquid droplets as clouds forms, then heat is released in the atmosphere.  There is an overall transfer of heat from the ocean to the atmosphere.  This process drives thunderheads, which are those great cumulus clouds that rise up to <span class="math notranslate nohighlight">\(20\ {\rm km}\)</span> into the stratosphere.</p>
+<p>Convection accompanied by a phase change allows us to cool off by sweating, even if the temperature of the surrounding air exceeds body temperature.  Heat from the skin is required for sweat to evaporate from the skin, but without air flow, the air becomes saturated and evaporation stops.  Air flow caused by convection replaces the saturated air by dry air and evaporation continues.</p>
+<p>When water evaporates from the oceans, heat is removed from the ocean.  If the water vapor condenses in liquid droplets as clouds form, then heat is released in the atmosphere.  There is an overall transfer of heat from the ocean to the atmosphere.  This process drives thunderheads, which are those great cumulus clouds that rise up to <span class="math notranslate nohighlight">\(20\ {\rm km}\)</span> into the stratosphere.</p>
 <p>Water vapor carried by convection condenses and releases tremendous amounts of energy. This energy causes the air to expand and rise, where it is much colder.  More condensation occurs in these colder regions, which drives the cloud even higher.  This is a positive feedback, since the process reinforces and accelerates itself.</p>
+<section id="example-problem-heating-replacement-air-in-a-house">
+<h3><span class="section-number">13.6.1. </span>Example Problem: Heating Replacement Air in a House<a class="headerlink" href="#example-problem-heating-replacement-air-in-a-house" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Heating Replacement Air in a House</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A house has interior dimensions <span class="math notranslate nohighlight">\(12.0\ {\rm m}\times18.0\ {\rm m}\times3.00\ {\rm m}\)</span>. Its air is completely replaced every <span class="math notranslate nohighlight">\(30.0\ {\rm min}\)</span>. Find the average power needed to warm the incoming air by <span class="math notranslate nohighlight">\(10.0\ {\rm K}\)</span>. Use an air density of <span class="math notranslate nohighlight">\(1.29\ {\rm kg/m^3}\)</span> and <span class="math notranslate nohighlight">\(c_p=1.00\times10^3\ {\rm J/(kg\,K)}\)</span>, and neglect other energy losses.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-6-convection">OpenStax, College Physics 2e, Example 14.7</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The replacement air carries energy out of the house as warm indoor air leaves and colder air enters. We model one complete air replacement over the stated time interval. Density converts the house volume to an air mass, and the specific heat at constant pressure describes warming that air at approximately atmospheric pressure. Dividing the required energy by the replacement time gives the average heating power.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The house volume is <span class="math notranslate nohighlight">\(V=\ell w h\)</span>, and the mass of air replaced is <span class="math notranslate nohighlight">\(m=\rho V\)</span>. The energy needed to warm one replacement volume is</p>
+<div class="math notranslate nohighlight">
+\[
+Q=mc_p\Delta T=\rho\ell w h c_p\Delta T.
+\]</div>
+<p class="sd-card-text">The average power is the energy divided by the replacement time. This gives the combined expression</p>
+<div class="math notranslate nohighlight">
+\[
+P=\frac{\rho\ell w h c_p\Delta T}{t}.
+\]</div>
+<p class="sd-card-text">The replacement interval is <span class="math notranslate nohighlight">\(1.80\times10^3\ {\rm s}\)</span>. Evaluating the power directly gives</p>
+<div class="math notranslate nohighlight">
+\[
+P=\frac{(1.29\ {\rm kg/m^3})(12.0\ {\rm m})(18.0\ {\rm m})(3.00\ {\rm m})(1.00\times10^3\ {\rm J/(kg\,K)})(10.0\ {\rm K})}{1.80\times10^3\ {\rm s}}=4.64\times10^3\ {\rm W}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The required average heating power is <span class="math notranslate nohighlight">\(4.64\ {\rm kW}\)</span>. This is a substantial heating load, which is reasonable because a large volume of air is replaced twice per hour. Slower air replacement would reduce this contribution proportionally, while wall conduction and other losses would add to the total heating requirement.</p>
+</div>
+</details></div>
+</section>
+<section id="example-problem-cooling-by-evaporation">
+<h3><span class="section-number">13.6.2. </span>Example Problem: Cooling by Evaporation<a class="headerlink" href="#example-problem-cooling-by-evaporation" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Cooling by Evaporation</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A resting person produces thermal energy at approximately <span class="math notranslate nohighlight">\(1.2\times10^2\ {\rm W}\)</span>. At what rate must water evaporate to remove all this energy if other energy-transfer mechanisms are negligible? Use <span class="math notranslate nohighlight">\(L_{\rm v}=2.4\times10^6\ {\rm J/kg}\)</span> for water near body temperature. Express the result in grams per minute.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-6-convection">OpenStax, College Physics 2e, Example 14.8</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We balance the body’s steady energy production against energy removed by evaporation. Each unit of evaporated mass carries away an amount set by the latent heat. The required rate is the rate of actual evaporation, which can differ from the rate of sweat production if some sweat drips off or remains on the skin.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The energy needed to evaporate a mass <span class="math notranslate nohighlight">\(m\)</span> is <span class="math notranslate nohighlight">\(Q=mL_{\rm v}\)</span>. Dividing by time relates the energy-transfer rate to the evaporation rate:</p>
+<div class="math notranslate nohighlight">
+\[
+P=\frac{Q}{t}=\frac{m}{t}L_{\rm v},\qquad \dot m=\frac{P}{L_{\rm v}}.
+\]</div>
+<p class="sd-card-text">The stated power and latent heat give the mass rate, and unit conversion expresses it in grams per minute:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot m=\frac{1.2\times10^2\ {\rm J/s}}{2.4\times10^6\ {\rm J/kg}}\left(\frac{1000\ {\rm g}}{1\ {\rm kg}}\right)\left(\frac{60\ {\rm s}}{1\ {\rm min}}\right)=3.0\ {\rm g/min}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">About <span class="math notranslate nohighlight">\(3.0\ {\rm g}\)</span> of water must evaporate each minute. This is a small mass rate because vaporization requires a large amount of energy per kilogram. The result describes the stated evaporation-only balance; sweat that does not evaporate cannot provide the same latent-heat cooling.</p>
+</div>
+</details></div>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Why a Fan Feels Refreshing</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Why does a fan often feel refreshing on a warm day even when it does not lower the room temperature?</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-6-convection">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Moving air replaces the warm, humid air near the skin. When the surrounding air is cooler than the skin, this increases convective energy loss; it can also promote sweat evaporation by carrying water vapor away. These processes can cool the body even though the fan does not cool the room air. The benefit depends on temperature and humidity, so airflow alone does not guarantee cooling in every environment.</p>
+</div>
+</details></div>
+</section>
 </section>
 <section id="radiation">
 <h2><span class="section-number">13.7. </span>Radiation<a class="headerlink" href="#radiation" title="Link to this heading">#</a></h2>
-<p>You can tell that an over or stove is hot without touching it because it warm you as you get near it.  The heat is transferred by radiation, where a hot body emits electromagnetic (EM) waves that are absorbed by your skin.</p>
-<p>The energy of EM radiation depends on the wavelength (or color) and is proportional to the frequency of the EM wave.  A higher frequency corresponds to a higher energy, where a longer wavelength wave has a lower energy.  A temperature change of an object is usually accompanied by a color change because the color and brightness of an blackbody (radiating object) depends on the temperature of the object.</p>
+<p>You can tell that an oven or stove is hot without touching it because it warms you as you get near it.  The heat is transferred by radiation, where a hot body emits electromagnetic (EM) waves that are absorbed by your skin.</p>
+<p>The energy of EM radiation depends on the wavelength (or color) and is proportional to the frequency of the EM wave.  A higher frequency corresponds to a higher energy, where a longer wavelength wave has a lower energy.  A temperature change of an object is usually accompanied by a color change because the color and brightness of a blackbody (radiating object) depend on the temperature of the object.</p>
 <p>Consider an electrical element on a stove, which glows from a dull red to a bright orange as it heats up.  A higher-temperature steel in a blast furnace glows from yellow to white.  The radiation you feel in both cases is mostly in the infrared, which corresponds to a lower temperature than the energy emitted as visible light.  The radiated energy depends on its intensity.</p>
 <figure class="align-default" id="fig-blackbody-radiation-temperature">
 <img alt="Two-panel illustration of blackbody radiation. Panel (a) shows heated steel at 700, 1000, and 1500 K, a tungsten light bulb at 3000 K, a Sun-like star at 5800 K, and a blue-white star at 10000 K. Panel (b) shows their blackbody radiation spectra on logarithmic axes, illustrating how the peak wavelength shifts toward shorter wavelengths and the emitted radiation increases as temperature rises." src="../_images/blackbody_emitters_and_spectra.png" />
@@ -1332,7 +1776,7 @@ Q = mL_{\rm s},
 </figure>
 <p>All objects absorb and emit electromagnetic radiation.  The rate of heat transfer by radiation is largely determined by the color of the object.  Black is the most effective color for heat transfer, where white is the least effective.  For example, black asphalt in a parking lot will be hotter than a gray sidewalk on a summer day because black absorbs better than gray.  The reverse is also true, where black radiates the energy better than gray.</p>
 <p>An <em>ideal radiator</em> is the same color as an <em>ideal absorber</em>, and captures all the radiation that falls on it.  In contrast, white is a poor absorber and is also a poor radiator.  A white object reflects all radiation like a mirror.</p>
-<p>Gray objects have a uniform ability to absorb all parts of the EM spectrum.  Colored objects display a particular color in the visible range, while they may also give off special wavelengths in the nonvisible spectrum.  For example, the strong absorption of infrared radiation by the skin, which allows us to be very sensitive to it.</p>
+<p>Gray objects have a uniform ability to absorb all parts of the EM spectrum.  Colored objects display a particular color in the visible range, while they may also give off special wavelengths in the nonvisible spectrum.  For example, the strong absorption of infrared radiation by the skin allows us to be very sensitive to it.</p>
 <figure class="align-default" id="fig-radiation-absorption-emission">
 <img alt="Four-panel comparison of thermal radiation involving black and silver-coated objects. In the left column, incident radiation is mostly absorbed by the black surface but largely reflected by the silver-coated surface. In the right column, after the external radiation source is removed, the black object emits thermal radiation more effectively, while the silver-coated object emits less energy." src="../_images/absorption_and_radiation_comparison.png" />
 <figcaption>
@@ -1341,19 +1785,19 @@ Q = mL_{\rm s},
 </figure>
 <div class="note admonition">
 <p class="admonition-title">Stefan-Boltzmann Law of Radiation</p>
-<p>The rate of heat transfer by emitted radiation by the <strong>Stefan-Boltzmann law of radiation</strong> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f98b79c-57ae-40c8-ab04-8bf4b1e69225">
-<span class="eqno">(13.6)<a class="headerlink" href="#equation-7f98b79c-57ae-40c8-ab04-8bf4b1e69225" title="Permalink to this equation">#</a></span>\[\begin{align}
+<p>The rate of energy transfer by emitted radiation is given by the <strong>Stefan-Boltzmann law of radiation</strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-318be001-0a52-4ab6-ac29-90404f283611">
+<span class="eqno">(13.6)<a class="headerlink" href="#equation-318be001-0a52-4ab6-ac29-90404f283611" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{Q}{t} = \sigma \varepsilon AT^4, 
 \end{align}\]</div>
 <p>which depends on the Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8}\ {\rm J/(s\cdot m^2\cdot K^4)}\)</span>, the surface area <span class="math notranslate nohighlight">\(A\)</span>, and the temperature <span class="math notranslate nohighlight">\(T\)</span> in kelvin.  The <strong>emissivity</strong> <span class="math notranslate nohighlight">\(\varepsilon\)</span> of the object is a measure of how <em>well</em> it radiates.  An ideal jet-black (or blackbody) radiator has <span class="math notranslate nohighlight">\(\varepsilon=1\)</span>, whereas a perfect reflector has <span class="math notranslate nohighlight">\(\varepsilon=0\)</span>.  Real objects fall between these two values.  A tungsten light bulb filament has an <span class="math notranslate nohighlight">\(\varepsilon \approx 0.5\)</span> and a material used in ink toner (carbon black) has the greatest known emissivity of <span class="math notranslate nohighlight">\(\varepsilon \approx 0.99\)</span>.</p>
 </div>
 <p>The radiation rate is directly proportional to the <em>fourth power of the absolute temperature</em>.  The radiated heat is proportional to the surface area of the object.  If you knock apart the coals of a fire, there is a noticeable increase in radiation (heat output) due to an increase in the radiating surface area.</p>
 <p>Your skin is a remarkably good absorber and emitter of infrared radiation, having an emissivity of <span class="math notranslate nohighlight">\(0.97\)</span> in the infrared part of the EM spectrum.  We are all nearly (jet) black in the infrared, in spite of the variations in skin color.  This is the basis for the use of night scopes used by law enforcement and military to detect humans.  <em>Thermographs</em> are images used by medical professionals to detect abnormally high temperature regions in the body that can indicate a disease is present.</p>
-<p>All objects emit and absorb radiation, where the <em>net rate of heat transfer</em> by radiation (absorption minus emission) is related to the temperature of the object and the temperature of its surroundings.  Assuming that an object with a temperature <span class="math notranslate nohighlight">\(T_1\)</span> is surrounded by an environment with uniform temperature <span class="math notranslate nohighlight">\(T_2\)</span>.  The <strong>net rate of heat transfer by radiation</strong> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b122f288-a72b-4389-8a09-99f231c5f0a1">
-<span class="eqno">(13.7)<a class="headerlink" href="#equation-b122f288-a72b-4389-8a09-99f231c5f0a1" title="Permalink to this equation">#</a></span>\[\begin{align}
-\frac{Q_{\rm net}}{t} = \sigma \varepsilon A \left(T_2^4 -T_2^4\right),
+<p>All objects emit and absorb radiation, where the <em>net rate of heat transfer</em> by radiation (absorption minus emission) is related to the temperature of the object and the temperature of its surroundings.  Assume that an object with a temperature <span class="math notranslate nohighlight">\(T_1\)</span> is surrounded by an environment with uniform temperature <span class="math notranslate nohighlight">\(T_2\)</span>.  The <strong>net rate of heat transfer by radiation</strong> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2762ca78-d328-4e2e-9ea5-85eaf00593d8">
+<span class="eqno">(13.7)<a class="headerlink" href="#equation-2762ca78-d328-4e2e-9ea5-85eaf00593d8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{Q_{\rm net}}{t} = \sigma \varepsilon A \left(T_2^4 -T_1^4\right),
 \end{align}\]</div>
 <p>which depends on the emissivity of the object alone.  The balance of radiation into and out of an object depends on how well it emits and absorbs radiation.  When <span class="math notranslate nohighlight">\(T_2&gt;T_1\)</span>, the net heat transfer is from hot to cold (or <span class="math notranslate nohighlight">\(Q_{\rm net}/t &gt;0\)</span>).</p>
 <div class="tip admonition">
@@ -1391,6 +1835,68 @@ Q &amp;= mL_{\rm v}.
 <li><p><strong>Check the result.</strong> Verify that the units, magnitude, and direction of energy transfer are physically reasonable.</p></li>
 </ol>
 </div>
+<section id="example-problem-net-radiation-from-a-person">
+<h3><span class="section-number">13.7.1. </span>Example Problem: Net Radiation from a Person<a class="headerlink" href="#example-problem-net-radiation-from-a-person" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Net Radiation from a Person</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A person with skin temperature <span class="math notranslate nohighlight">\(33.0^\circ{\rm C}\)</span> and surface area <span class="math notranslate nohighlight">\(1.50\ {\rm m^2}\)</span> stands in a dark room whose surrounding surfaces are at <span class="math notranslate nohighlight">\(22.0^\circ{\rm C}\)</span>. The skin’s infrared emissivity is <span class="math notranslate nohighlight">\(0.97\)</span>. Find the net rate of radiative heat transfer into the person. Use <span class="math notranslate nohighlight">\(\sigma=5.7\times10^{-8}\ {\rm W/(m^2\,K^4)}\)</span>.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-7-radiation">OpenStax, College Physics 2e, Example 14.9</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We treat the person as a gray emitter surrounded by a much larger enclosure at a uniform temperature. The body emits radiation and also absorbs radiation from the room, so both contributions must be included. We define the net transfer as positive into the body; warmer skin in a cooler enclosure should therefore give a negative result. Absolute temperatures are required by the radiation law.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The chapter’s notation assigns <span class="math notranslate nohighlight">\(T_1\)</span> to the body and <span class="math notranslate nohighlight">\(T_2\)</span> to the surroundings. Absorption minus emission gives the net rate into the body:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{Q_{\rm net}}{t}=\sigma\varepsilon A(T_2^4-T_1^4).
+\]</div>
+<p class="sd-card-text">This expression already isolates the requested rate. Converting the temperatures gives approximately <span class="math notranslate nohighlight">\(T_1=306.2\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(T_2=295.2\ {\rm K}\)</span>; retaining the conversion precision internally avoids premature rounding. The numerical rate is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{Q_{\rm net}}{t}\approx(5.7\times10^{-8}\ {\rm W/(m^2\,K^4)})(0.97)(1.50\ {\rm m^2})[(295.2\ {\rm K})^4-(306.2\ {\rm K})^4]=-99\ {\rm W}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The net radiative transfer into the person is <span class="math notranslate nohighlight">\(-99\ {\rm W}\)</span>, corresponding to a loss of <span class="math notranslate nohighlight">\(99\ {\rm W}\)</span>. The negative sign agrees with the warmer body losing energy to cooler surroundings. The magnitude is comparable to resting metabolic power, so radiation can be a significant part of the body’s energy balance even in a dark room.</p>
+</div>
+</details></div>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Check Your Understanding: Radiation after a Temperature Increase</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A body’s temperature rises from <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(40^\circ{\rm C}\)</span> while its area and emissivity stay constant. Estimate the factor by which its emitted radiation power increases and the percentage increase. Consider emitted power rather than net exchange with the surroundings.</p>
+</div></blockquote>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-7-radiation">OpenStax, College Physics 2e, Check Your Understanding</a>.</em></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We compare the emitted powers using the Stefan–Boltzmann law. The same surface area and emissivity appear in both states and cancel in the ratio. Converting the two temperature readings to kelvins is essential because the fourth-power dependence refers to absolute temperature.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The emitted power is proportional to the fourth power of absolute temperature. Taking a ratio and expressing the relative increase gives</p>
+<div class="math notranslate nohighlight">
+\[
+r=\frac{P_2}{P_1}=\left(\frac{T_2}{T_1}\right)^4,\qquad \text{percentage increase}=(r-1)\times100\%.
+\]</div>
+<p class="sd-card-text">The temperatures are approximately <span class="math notranslate nohighlight">\(293\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(313\ {\rm K}\)</span>. Their ratio gives a power ratio of about <span class="math notranslate nohighlight">\(1.30\)</span>, with a working digit retained before evaluating the percentage:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+r&amp;\approx\left(\frac{313\ {\rm K}}{293\ {\rm K}}\right)^4\approx1.30,\\
+\text{percentage increase}&amp;\approx(1.30-1)\times100\%\approx30\%.
+\end{align*}\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The emitted power becomes about <span class="math notranslate nohighlight">\(1.3\)</span> times its original value, an increase of approximately <span class="math notranslate nohighlight">\(30\%\)</span>. Doubling the Celsius reading does not double the absolute temperature, so it does not produce a sixteenfold increase. The modest change in absolute temperature produces a larger fractional power change because radiation depends on its fourth power.</p>
+</div>
+</details></div>
+</section>
 </section>
 <section id="in-class-exercises">
 <h2><span class="section-number">13.8. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
@@ -1588,12 +2094,31 @@ Q &amp;= mL_{\rm v}.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-equivalent-of-heat">13.1.1. Mechanical Equivalent of Heat</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-change-and-heat-capacity">13.2. Temperature Change and Heat Capacity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-change-and-latent-heat">13.3. Phase Change and Latent Heat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-change-and-heat-capacity">13.2. Temperature Change and Heat Capacity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-heating-water-in-an-aluminum-pan">13.2.1. Example Problem: Heating Water in an Aluminum Pan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-warming-truck-brakes-on-a-descent">13.2.2. Example Problem: Warming Truck Brakes on a Descent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cold-water-in-a-hot-pan">13.2.3. Example Problem: Cold Water in a Hot Pan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-change-and-latent-heat">13.3. Phase Change and Latent Heat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cooling-soda-with-ice">13.3.1. Example Problem: Cooling Soda with Ice</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-methods">13.4. Heat Transfer Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">13.5. Conduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">13.6. Convection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">13.7. Radiation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">13.5. Conduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-ice-melting-in-an-insulated-box">13.5.1. Example Problem: Ice Melting in an Insulated Box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-temperature-difference-across-a-pan-bottom">13.5.2. Example Problem: Temperature Difference across a Pan Bottom</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">13.6. Convection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-heating-replacement-air-in-a-house">13.6.1. Example Problem: Heating Replacement Air in a House</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-cooling-by-evaporation">13.6.2. Example Problem: Cooling by Evaporation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">13.7. Radiation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-net-radiation-from-a-person">13.7.1. Example Problem: Net Radiation from a Person</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">13.8. In-Class Exercises</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">13.8.1. Instructions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">13.8.2. Problems</a></li>

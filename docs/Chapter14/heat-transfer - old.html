@@ -1,0 +1,1646 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Heat Transfer &#8212; College Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=20ffa6e1" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/metadata_figure.css?v=2463d4a7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_iframe.css?v=96c28b52" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ffec1ee8" />
+    <link rel="stylesheet" type="text/css" href="../_static/audio-player.css?v=b56eb1ea" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/h5p-resizer.js?v=a3e8b8ed"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter14/heat-transfer - old';</script>
+    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
+    <script src="../_static/init-plyr.js?v=bf401924"></script>
+    <script src="../_static/audio-player.js?v=5a953d7a"></script>
+    <link rel="canonical" href="https://saturnaxis.github.io/CollegePhysics/Chapter14/heat-transfer - old.html" />
+    <link rel="icon" href="../_static/PHYS1401_logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/PHYS1401_logo.png" class="logo__image only-light" alt="College Physics - Home"/>
+    <script>document.write(`<img src="../_static/PHYS1401_logo.png" class="logo__image only-dark" alt="College Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    Welcome to College Physics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who Are These Notes For?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/cite-reuse.html">How to Cite and Reuse This Material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/computational-writing-primer.html">Writing Primer: Markdown and LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/figures-primer.html">Figures and Graphs Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/course-faq.html">Course FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/physics-recruitment.html">Finding Your Path in Physics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter02/kinematics.html">1. Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter03/2D-kinematics.html">2. 2D Kinematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter04/dynamics.html">3. Dynamics: Force &amp; Newton’s Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter05/friction-drag-elasticity.html">4. Friction, Drag, &amp; Elasticity</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter06/circular-motion-gravitation.html">5. Circular Motion &amp; Gravitation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter07/work-energy.html">6. Work &amp; Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter08/momentum-collisions.html">7. Momentum &amp; Collisions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter09/statics-torque.html">8. Statics &amp; Torque</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Chapter10/rotational-motion.html">9. Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter11/fluid-statics.html">10. Fluids: Statics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter12/fluid-dynamics.html">11. Fluids: Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter13/temperature-gases.html">12. Kinetic Theory of Gases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="heat-transfer.html">13. Heat Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter15/thermodynamics.html">14. Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter16/oscillations-waves.html">15. Oscillations &amp; Waves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter17/hearing.html">16. Hearing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/CollegePhysics/main?urlpath=tree/Chapter14/heat-transfer - old.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/CollegePhysics/blob/main/Chapter14/heat-transfer - old.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/CollegePhysics/issues/new?title=Issue%20on%20page%20%2FChapter14/heat-transfer - old.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter14/heat-transfer - old.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Heat Transfer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat">Heat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-equivalent-of-heat">Mechanical Equivalent of Heat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-change-and-heat-capacity">Temperature Change and Heat Capacity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-change-and-latent-heat">Phase Change and Latent Heat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-methods">Heat Transfer Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">Conduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">Convection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">Radiation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="heat-transfer">
+<h1>Heat Transfer<a class="headerlink" href="#heat-transfer" title="Link to this heading">#</a></h1>
+<p>Oct 22, 2026 | 6839 words | 46 min read</p>
+<p>Energy can exist in many forms including heat, which is often hidden.  Heat exists when in transit and is transferred by a several different methods.  Heat transfer touches many aspects of our lives, where it explains the chill we feel on a clear breezy night, or why we need to allocate resources to manage it.</p>
+<section id="heat">
+<h2>Heat<a class="headerlink" href="#heat" title="Link to this heading">#</a></h2>
+<p>Previously, we defined work as the product of force over a distance and that kinetic energy is the work done to bring an object to rest.  We also showed that temperature is proportional to the (average) kinetic energy of atoms and molecules.  We can say that a thermal system has a certain internal energy: <em>its internal energy is higher if the temperature is higher.</em></p>
+<p>If two objects at different temperatures are brought in contact with each other, energy is transmitted (i.e., flows from) the hotter to the cooler object until equilibrium is reached and the objects reach thermal equilibrium (i.e., they are at the same temperature).  No work is done by either object because no force acts over a distance.  The transfer of energy is caused by the temperature difference <span class="math notranslate nohighlight">\((\Delta T)_i\)</span> and ceases once the temperatures are equal, <span class="math notranslate nohighlight">\((\Delta T)_f = 0\)</span>.  These observations lead to the following definition of <strong>heat</strong>:</p>
+<blockquote>
+<div><p>Heat is the spontaneous transfer of energy due to a temperature difference.</p>
+</div></blockquote>
+<p>Heat is often confused with temperature, where we may say that the heat is unbearable when we mean that the temperature was high.   Although these concepts are related, they describe different physical quantities.</p>
+<blockquote>
+<div><p><em>Temperature</em> is related to the average kinetic energy of the particles in a substance, whereas <strong>heat</strong> is energy transferred between objects because of a temperature difference.</p>
+</div></blockquote>
+<p>When heat enters an object, it increases the object’s internal energy, which may cause its temperature to rise. We often associate heat with temperature because our sensation of warmth depends on both the temperature of our surroundings and the rate at which energy is transferred to or from our bodies.</p>
+<p>Since heat is a form of energy transfer due to a temperature difference, it has the SI unit of <em>joule</em> (<span class="math notranslate nohighlight">\(\rm J\)</span>).  The <em>calorie</em> (<span class="math notranslate nohighlight">\(\rm cal\)</span>) is a common unit of energy defined as the energy needed to change the temperature of <span class="math notranslate nohighlight">\(1\ {rm g}\)</span> of water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  The most common unit of heat is the <strong>kilocalorie</strong> (<span class="math notranslate nohighlight">\(\rm kcal\)</span>), which is the energy needed to change the temperature of <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  Food calories (given the notation of <span class="math notranslate nohighlight">\(\rm Cal\)</span>; notice the capitalization) are actually kilocalories (<span class="math notranslate nohighlight">\(1\ {\rm kcal} = 1000\ {\rm cal}\)</span>).</p>
+<figure class="align-default" id="fig-iced-coffee-thermal-equilibrium">
+<img alt="Two-panel illustration of thermal equilibrium. (a) Hot coffee at temperature T1 and ice at temperature T2 are initially separated. (b) Ice is added to the coffee, and red arrows show heat transferring from the warmer coffee to the colder ice until they reach a common temperature." src="../_images/iced_coffee_thermodynamics_diagram.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Heat transfer and thermal equilibrium when making iced coffee.</strong> (a) Hot coffee at temperature <span class="math notranslate nohighlight">\(T_1\)</span> and ice at temperature <span class="math notranslate nohighlight">\(T_2\)</span> are initially separated, with <span class="math notranslate nohighlight">\(T_1&gt;T_2\)</span>. (b) When the ice is added to the coffee, thermal energy transfers from the warmer coffee to the colder ice, causing the coffee to cool and some of the ice to melt. Assuming negligible heat exchange with the surroundings, the mixture eventually reaches thermal equilibrium at a common temperature <span class="math notranslate nohighlight">\(T'\)</span>, where no net heat transfer occurs between its components. <em>Adapted from OpenStax, College Physics 2e, Figure 14.2.</em></span><a class="headerlink" href="#fig-iced-coffee-thermal-equilibrium" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="mechanical-equivalent-of-heat">
+<h3>Mechanical Equivalent of Heat<a class="headerlink" href="#mechanical-equivalent-of-heat" title="Link to this heading">#</a></h3>
+<p>It is possible to change the temperature of a substance by doing work.  Work can transfer energy into or out of a system.  this realization helped establish that heat is a form of energy.  <a class="reference external" href="https://en.wikipedia.org/wiki/James_Prescott_Joule">James Prescott Joule</a> performed many experiments to establish the <strong>mechanical equivalent of heat</strong>, or the work needed to produce the same effects as heat transfer.  In terms of units used for these two terms, the best modern value for this equivalence is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-959f29ca-a35e-4815-b6a7-ae780b379341">
+<span class="eqno">()<a class="headerlink" href="#equation-959f29ca-a35e-4815-b6a7-ae780b379341" title="Permalink to this equation">#</a></span>\[\begin{align}
+1.000\ {\rm kcal} = 4186\ {\rm J}.
+\end{align}\]</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Joule Paddle Wheel</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-joule-paddle-wheel-energy-transfer">
+<img alt="Realistic paddle-wheel calorimetry apparatus showing falling masses, rotating shaft and paddles, insulated water, thermometer, and arrows indicating the transfer of gravitational potential energy into thermal energy of the water." src="../_images/joule_heating_calorimeter_diagram.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Conversion of gravitational potential energy into thermal energy in Joule’s paddle-wheel experiment.</strong> As the suspended masses fall through a measured height <span class="math notranslate nohighlight">\(h\)</span>, their gravitational potential energy decreases. The falling masses turn the shaft and paddles, so mechanical work is done on the water. This stirring transfers energy to the water, increasing its thermal energy and producing a measurable rise in temperature. The insulated container helps ensure that the energy transferred by the falling masses is primarily observed as heating of the known volume of water. <em>Adapted from OpenStax, College Physics 2e.</em></span><a class="headerlink" href="#fig-joule-paddle-wheel-energy-transfer" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Video Demonstration using a Blender</label><div class="sd-tab-content docutils">
+<div class="tip admonition">
+<p class="admonition-title"><a class="reference external" href="https://www.youtube.com/&#64;MITK12Videos"><strong>MIT+K12 Videos</strong></a></p>
+<div class="video_wrapper align-center" style="text-align: center">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/onv3s2i_rDY" style="border: 0; height: 345px; width: 560px">
+</iframe></div><p><strong>Blender, the Next Stove? (The Joule Experiment).</strong> This MIT educational video explores how mechanical work can increase the temperature of a substance using an ordinary kitchen blender. Like Joule’s paddle-wheel experiment, the rotating blades transfer mechanical energy to a fluid, increasing its internal energy.</p>
+<p>The important connection is that <strong>a substance can become warmer through mechanical work without receiving energy by heat transfer from a hotter object</strong>. As you watch, focus on how the motion of the blades transfers energy to the fluid and how this illustrates the conservation of energy.</p>
+</div>
+</div>
+</div>
+<p>Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code> shows one of Joule’s most famous experimental setups for demonstrating the mechanical equivalent of heat.  It demonstrated that work and heat can produce the same effects, and helped establish the principle of the conservation of energy.</p>
+<p>Gravitational potential energy (<span class="math notranslate nohighlight">\(\rm PE\)</span>), or the work done by the gravitational force, is converted into kinetic energy <span class="math notranslate nohighlight">\((\rm KE)\)</span> of the paddlewheel.  The viscosity and turbulence in the water raises its average kinetic energy, which produces a temperature increase.</p>
+<p>Heat added or removed from a system changes its internal energy and thus, its temperature.  Adding heat does not necessarily increase the temperature.  For example, when ice melts it is due to a phase change and not the temperature.  Work done on an a system or by the system can also change the internal energy of the system.</p>
+</section>
+</section>
+<section id="temperature-change-and-heat-capacity">
+<h2>Temperature Change and Heat Capacity<a class="headerlink" href="#temperature-change-and-heat-capacity" title="Link to this heading">#</a></h2>
+<p>One effect of heat transfer is a temperature change, where can easily observe that heating increases the temperature of a substance while cooling decreases it.  We assume that there is not phase change and that no work is done on (or by) the system.  Experiments show that the transferred heat depends on three factors:</p>
+<ol class="arabic simple">
+<li><p>the change in temperature,</p></li>
+<li><p>the mass of the system, and</p></li>
+<li><p>the substance and the phase of the substance.</p></li>
+</ol>
+<p>The dependence on temperature change and mass are easily understood.</p>
+<ul class="simple">
+<li><p>The (average) kinetic energy of an atom (or molecule) is proportional to the absolute temperature and the number of atoms (or molecules).</p></li>
+<li><p>The transferred heat is equal to the change in the internal energy, which means that the heat is proportional to the mass of the substance.</p></li>
+<li><p>The transferred heat also depends on the substance so that the heat necessary to raise the temperature is less for alcohol than for water.  For the same substance, the transferred heat also depends on the phase.</p></li>
+</ul>
+<figure class="align-default" id="fig-heat-transfer-mass-material-comparison">
+<img alt="Three-panel comparison showing how heat transfer depends on temperature change, mass, and material. Panel (a) compares equal copper cylinders with temperature changes ΔT and 2ΔT. Panel (b) compares copper cylinders of mass m and 2m with the same temperature change. Panel (c) compares a copper cylinder and water of equal mass for the same temperature change." src="../_images/copper_cylinders_and_heat_transfer_comparison.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Heat transfer depends on temperature change, mass, and material.</strong> In (a), two copper cylinders of equal mass <span class="math notranslate nohighlight">\(m\)</span> are compared. Producing a temperature change of <span class="math notranslate nohighlight">\(2\Delta T\)</span> requires twice as much heat transfer as producing a temperature change of <span class="math notranslate nohighlight">\(\Delta T\)</span>. In (b), doubling the mass from <span class="math notranslate nohighlight">\(m\)</span> to <span class="math notranslate nohighlight">\(2m\)</span> while keeping the material the same requires twice as much heat transfer to produce the same temperature change <span class="math notranslate nohighlight">\(\Delta T\)</span>. In (c), equal masses of copper and water undergo the same temperature change, but water requires much more heat transfer because its specific heat is larger. The arrows labeled <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(Q'\)</span> emphasize how the required heat transfer changes in each case.</span><a class="headerlink" href="#fig-heat-transfer-mass-material-comparison" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Heat Transfer and Temperature Change</p>
+<p>The quantitative relationship between heat transfer <span class="math notranslate nohighlight">\(Q\)</span> and temperature change <span class="math notranslate nohighlight">\(\Delta T\)</span> contains all three factors:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0b5ccfdd-5f21-4a27-9e3c-3f12146a9552">
+<span class="eqno">()<a class="headerlink" href="#equation-0b5ccfdd-5f21-4a27-9e3c-3f12146a9552" title="Permalink to this equation">#</a></span>\[\begin{align}
+Q = mc\Delta T,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the substance, and the symbol <span class="math notranslate nohighlight">\(c\)</span> denotes the <strong>specific heat</strong> that depends on the material and phase.</p>
+<p>The specific heat <span class="math notranslate nohighlight">\(c\)</span> is a property of the substance, and its SI unit is <span class="math notranslate nohighlight">\(\rm J/(kg\cdot K)\)</span>.  Note that the unit used for <span class="math notranslate nohighlight">\(\Delta T\)</span> must match that given for the specific heat, where a conversion may be necessary.  If heat transferred is measured in <span class="math notranslate nohighlight">\(\rm kcal\)</span>, then the unit of specific heat can be converted so that the units are <span class="math notranslate nohighlight">\(\rm kcal/(kg\cdot ^\circ{C})\)</span>.</p>
+</div>
+<p>Values of specific heat are empirically measured and must generally be referenced in tables because there is no simple way to calculate them from first principles.  The temperature and volume dependence of the specific heat of most substances is weak.  The specific heat of water is <span class="math notranslate nohighlight">\(5\times\)</span> that of glass and <span class="math notranslate nohighlight">\(10\times\)</span> that of iron, which means that it takes that much more heat to raise the temperature of water by same amount.  Water has one of the largest specific heats of any material, which is important for life as we know it on Earth.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-specific-heats">
+<caption><span class="caption-text">Specific Heats of Various Substances<span class="math notranslate nohighlight">\(^3\)</span></span><a class="headerlink" href="#tab-specific-heats" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 45.5%" />
+<col style="width: 27.3%" />
+<col style="width: 27.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Substance</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(c\)</span> (<span class="math notranslate nohighlight">\({\rm J/(kg\cdot K)}\)</span>)</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(c\)</span> (<span class="math notranslate nohighlight">\({\rm kcal/(kg\cdot K)}\)</span>)<span class="math notranslate nohighlight">\(^1\)</span></strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Solids</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Aluminum</p></td>
+<td><p>900</p></td>
+<td><p>0.215</p></td>
+</tr>
+<tr class="row-even"><td><p>Asbestos</p></td>
+<td><p>800</p></td>
+<td><p>0.19</p></td>
+</tr>
+<tr class="row-odd"><td><p>Concrete, granite (average)</p></td>
+<td><p>840</p></td>
+<td><p>0.20</p></td>
+</tr>
+<tr class="row-even"><td><p>Copper</p></td>
+<td><p>387</p></td>
+<td><p>0.0924</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glass</p></td>
+<td><p>840</p></td>
+<td><p>0.20</p></td>
+</tr>
+<tr class="row-even"><td><p>Gold</p></td>
+<td><p>129</p></td>
+<td><p>0.0308</p></td>
+</tr>
+<tr class="row-odd"><td><p>Human body (average at <span class="math notranslate nohighlight">\(310\ {\rm K}\)</span>)</p></td>
+<td><p>3500</p></td>
+<td><p>0.83</p></td>
+</tr>
+<tr class="row-even"><td><p>Ice (average, <span class="math notranslate nohighlight">\(223\)</span> to <span class="math notranslate nohighlight">\(273\ {\rm K}\)</span>)</p></td>
+<td><p>2090</p></td>
+<td><p>0.50</p></td>
+</tr>
+<tr class="row-odd"><td><p>Iron, steel</p></td>
+<td><p>452</p></td>
+<td><p>0.108</p></td>
+</tr>
+<tr class="row-even"><td><p>Lead</p></td>
+<td><p>128</p></td>
+<td><p>0.0305</p></td>
+</tr>
+<tr class="row-odd"><td><p>Silver</p></td>
+<td><p>235</p></td>
+<td><p>0.0562</p></td>
+</tr>
+<tr class="row-even"><td><p>Wood</p></td>
+<td><p>1700</p></td>
+<td><p>0.4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Liquids</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Benzene</p></td>
+<td><p>1740</p></td>
+<td><p>0.415</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ethanol</p></td>
+<td><p>2450</p></td>
+<td><p>0.586</p></td>
+</tr>
+<tr class="row-even"><td><p>Glycerin</p></td>
+<td><p>2410</p></td>
+<td><p>0.576</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury</p></td>
+<td><p>139</p></td>
+<td><p>0.0333</p></td>
+</tr>
+<tr class="row-even"><td><p>Water (<span class="math notranslate nohighlight">\(288.2\ {\rm K}\)</span>)</p></td>
+<td><p>4186</p></td>
+<td><p>1.000</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gases<span class="math notranslate nohighlight">\(^2\)</span></strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(c_v\)</span> (<span class="math notranslate nohighlight">\(c_p\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(c_v\)</span> (<span class="math notranslate nohighlight">\(c_p\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Air (dry)</p></td>
+<td><p>721 (1015)</p></td>
+<td><p>0.172 (0.242)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ammonia</p></td>
+<td><p>1670 (2190)</p></td>
+<td><p>0.399 (0.523)</p></td>
+</tr>
+<tr class="row-even"><td><p>Carbon dioxide</p></td>
+<td><p>638 (833)</p></td>
+<td><p>0.152 (0.199)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nitrogen</p></td>
+<td><p>739 (1040)</p></td>
+<td><p>0.177 (0.248)</p></td>
+</tr>
+<tr class="row-even"><td><p>Oxygen</p></td>
+<td><p>651 (913)</p></td>
+<td><p>0.156 (0.218)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Steam (<span class="math notranslate nohighlight">\(373\ {\rm K}\)</span>)</p></td>
+<td><p>1520 (2020)</p></td>
+<td><p>0.363 (0.482)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span class="math notranslate nohighlight">\(^1\)</span> These numerical values are also identical when expressed in <span class="math notranslate nohighlight">\({\rm cal/(g\cdot K)}\)</span>.<br />
+<span class="math notranslate nohighlight">\(^2\)</span> For gases, <span class="math notranslate nohighlight">\(c_v\)</span> represents the specific heat at constant volume, measured at approximately <span class="math notranslate nohighlight">\(293.2\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(1.00\ {\rm atm}\)</span> unless otherwise noted. Values in parentheses represent <span class="math notranslate nohighlight">\(c_p\)</span>, the specific heat at constant pressure of <span class="math notranslate nohighlight">\(1.00\ {\rm atm}\)</span>.<br />
+<span class="math notranslate nohighlight">\(^3\)</span> Values for solids and liquids are measured at constant volume and approximately <span class="math notranslate nohighlight">\(298\ {\rm K}\)</span> unless otherwise noted.<br />
+<em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">OpenStax College Physics 2e, Table 14.1</a>.</em><br />
+<strong>Note:</strong> The numerical value of specific heat is unchanged when replacing degrees Celsius with Kelvin in the denominator because <span class="math notranslate nohighlight">\(\Delta T=1\ {\rm K}\)</span> corresponds to <span class="math notranslate nohighlight">\(\Delta T=1^\circ{\rm C}\)</span>. Only the temperature scale’s zero point differs.</p>
+</section>
+<section id="phase-change-and-latent-heat">
+<h2>Phase Change and Latent Heat<a class="headerlink" href="#phase-change-and-latent-heat" title="Link to this heading">#</a></h2>
+<p>Energy is required to melt a solid because the cohesive bonds between the molecules in the solid must be broke apart such that the molecules can move around in the liquid at comparable kinetic energies.  Thus, there is not rise in temperature.  Energy is also needed to vaporize a liquid because molecules in a liquid interact with each other via attractive forces.  There is no temperature change until a phase change is complete.</p>
+<p>The temperature of a cup of soda initially at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> stays at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> until all the ice has melted.  Conversely, energy is released during freezing and condensation, usually in the form of thermal energy.  Work is done by cohesive forces when molecules are brought together.  The corresponding energy must be given off (dissipated) to allow them to stay together.</p>
+<p>The energy involved ina  phase change depends on two major factors:</p>
+<ol class="arabic simple">
+<li><p>the <em>number</em> of bonds (or force pairs), and</p></li>
+<li><p>the <em>strength</em> of bonds (or force pairs).</p></li>
+</ol>
+<p>The number of bonds is proportional to the number of molecules and thus, the mass of the sample.  The strength of forces depends on the type of molecules.  The heat transfer <span class="math notranslate nohighlight">\(Q\)</span> required to change the phase of a sample of mass <span class="math notranslate nohighlight">\(m\)</span> is given by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9c6dc146-595b-4c43-b459-b59100fc22b2">
+<span class="eqno">()<a class="headerlink" href="#equation-9c6dc146-595b-4c43-b459-b59100fc22b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+Q &amp;= m L_{\rm f}, \qquad \text{(melting/freezing)} \\
+Q &amp;= m L_{\rm v}, \qquad \text{(vaporization/condensation)}
+\end{align}\]</div>
+<p>where the latent heat of fusion <span class="math notranslate nohighlight">\(L_{\rm f}\)</span> and the latent heat of vaporization <span class="math notranslate nohighlight">\(L_{\rm v}\)</span> are material constraints that are determined experimentally.</p>
+<figure class="align-default" id="fig-water-phase-changes-molecular-motion">
+<img alt="Two-panel molecular illustration of water phase changes. Panel (a) shows solid ice and liquid water, with arrows indicating limited molecular motion in the solid and greater random motion in the liquid. Panel (b) shows liquid water and water vapor, with arrows indicating random motion in the liquid and larger translational motion in the gas." src="../_images/water_phase_changes_and_molecular_motion.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Molecular view of phase changes in water.</strong> In (a), water molecules in the solid phase are arranged in an ordered structure and can only undergo limited motion about relatively fixed positions. When energy is added, the solid melts into a liquid, where the molecules remain close together but can move and slip past one another more freely. Removing energy from the liquid causes freezing. In (b), water molecules in the liquid phase are still close together but move randomly. Adding energy causes boiling, producing a gas in which the molecules are much farther apart and move independently through space. Removing energy from the gas causes condensation back to the liquid phase.</span><a class="headerlink" href="#fig-water-phase-changes-molecular-motion" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Latent heat is measured in units of <span class="math notranslate nohighlight">\(\rm kJ/kg\)</span>.  Both latent heat coefficients (<span class="math notranslate nohighlight">\(L_{\rm f}\)</span> and <span class="math notranslate nohighlight">\(L_{\rm v}\)</span>) depend on the substance, particularly on the strength of its molecular forces.  They are <em>latent</em> (or hidden) because in phase changes, energy enters or leaves a system without causing a temperature change in the system.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Heat of Fusion</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table" id="tab-latent-heat-fusion">
+<caption><span class="caption-text">Latent Heat of Fusion (<span class="math notranslate nohighlight">\(L_f\)</span>)</span><a class="headerlink" href="#tab-latent-heat-fusion" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Substance</strong></p></th>
+<th class="head"><p><strong>Melting Point<br> (<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</strong></p></th>
+<th class="head"><p><strong>Melting Point<br> (<span class="math notranslate nohighlight">\({\rm K}\)</span>)</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(L_f\)</span> (<span class="math notranslate nohighlight">\({\rm kJ/kg}\)</span>)</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(L_f\)</span> (<span class="math notranslate nohighlight">\({\rm kcal/kg}\)</span>)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Helium</p></td>
+<td><p>-269.7</p></td>
+<td><p>3.5</p></td>
+<td><p>5.23</p></td>
+<td><p>1.25</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hydrogen</p></td>
+<td><p>-259.3</p></td>
+<td><p>13.9</p></td>
+<td><p>58.6</p></td>
+<td><p>14.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Nitrogen</p></td>
+<td><p>-210.0</p></td>
+<td><p>63.2</p></td>
+<td><p>25.5</p></td>
+<td><p>6.09</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oxygen</p></td>
+<td><p>-218.8</p></td>
+<td><p>54.4</p></td>
+<td><p>13.8</p></td>
+<td><p>3.30</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethanol</p></td>
+<td><p>-114</p></td>
+<td><p>159</p></td>
+<td><p>104</p></td>
+<td><p>24.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ammonia</p></td>
+<td><p>-75</p></td>
+<td><p>198</p></td>
+<td><p>—</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>-38.9</p></td>
+<td><p>234.3</p></td>
+<td><p>11.8</p></td>
+<td><p>2.82</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>0.00</p></td>
+<td><p>273.15</p></td>
+<td><p>334</p></td>
+<td><p>79.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Sulfur</p></td>
+<td><p>119</p></td>
+<td><p>392</p></td>
+<td><p>38.1</p></td>
+<td><p>9.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lead</p></td>
+<td><p>327</p></td>
+<td><p>600</p></td>
+<td><p>24.5</p></td>
+<td><p>5.85</p></td>
+</tr>
+<tr class="row-even"><td><p>Antimony</p></td>
+<td><p>631</p></td>
+<td><p>904</p></td>
+<td><p>165</p></td>
+<td><p>39.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aluminum</p></td>
+<td><p>660</p></td>
+<td><p>933</p></td>
+<td><p>380</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-even"><td><p>Silver</p></td>
+<td><p>961</p></td>
+<td><p>1234</p></td>
+<td><p>88.3</p></td>
+<td><p>21.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gold</p></td>
+<td><p>1063</p></td>
+<td><p>1336</p></td>
+<td><p>64.5</p></td>
+<td><p>15.4</p></td>
+</tr>
+<tr class="row-even"><td><p>Copper</p></td>
+<td><p>1083</p></td>
+<td><p>1356</p></td>
+<td><p>134</p></td>
+<td><p>32.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Uranium</p></td>
+<td><p>1133</p></td>
+<td><p>1406</p></td>
+<td><p>84</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td><p>Tungsten</p></td>
+<td><p>3410</p></td>
+<td><p>3683</p></td>
+<td><p>184</p></td>
+<td><p>44</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Notes:</strong> Values are given at the normal melting point under standard atmospheric pressure (<span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>), unless otherwise noted.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Heat of Vaporization</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table" id="tab-latent-heat-vaporization">
+<caption><span class="caption-text">Latent Heat of Vaporization (<span class="math notranslate nohighlight">\(L_v\)</span>)</span><a class="headerlink" href="#tab-latent-heat-vaporization" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 25.8%" />
+<col style="width: 18.6%" />
+<col style="width: 18.6%" />
+<col style="width: 18.6%" />
+<col style="width: 18.6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Substance</strong></p></th>
+<th class="head"><p><strong>Boiling Point<br> (<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</strong></p></th>
+<th class="head"><p><strong>Boiling Point<br> (<span class="math notranslate nohighlight">\({\rm K}\)</span>)</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(L_v\)</span> (<span class="math notranslate nohighlight">\({\rm kJ/kg}\)</span>)</strong></p></th>
+<th class="head"><p><strong><span class="math notranslate nohighlight">\(L_v\)</span> (<span class="math notranslate nohighlight">\({\rm kcal/kg}\)</span>)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Helium</p></td>
+<td><p>-268.9</p></td>
+<td><p>4.3</p></td>
+<td><p>20.9</p></td>
+<td><p>4.99</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hydrogen</p></td>
+<td><p>-252.9</p></td>
+<td><p>20.3</p></td>
+<td><p>452</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-even"><td><p>Nitrogen</p></td>
+<td><p>-195.8</p></td>
+<td><p>77.4</p></td>
+<td><p>201</p></td>
+<td><p>48.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Oxygen</p></td>
+<td><p>-183.0</p></td>
+<td><p>90.2</p></td>
+<td><p>213</p></td>
+<td><p>50.9</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethanol</p></td>
+<td><p>78.3</p></td>
+<td><p>351.5</p></td>
+<td><p>854</p></td>
+<td><p>204</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ammonia</p></td>
+<td><p>-33.4</p></td>
+<td><p>239.8</p></td>
+<td><p>1370</p></td>
+<td><p>327</p></td>
+</tr>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>357</p></td>
+<td><p>630</p></td>
+<td><p>272</p></td>
+<td><p>65.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>100.0</p></td>
+<td><p>373.2</p></td>
+<td><p>2256</p></td>
+<td><p>540</p></td>
+</tr>
+<tr class="row-even"><td><p>Water <br> (at body temperature)<span class="math notranslate nohighlight">\(^1\)</span></p></td>
+<td><p>37.0</p></td>
+<td><p>310.2</p></td>
+<td><p>2430</p></td>
+<td><p>580</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sulfur</p></td>
+<td><p>444.6</p></td>
+<td><p>717.8</p></td>
+<td><p>326</p></td>
+<td><p>77.9</p></td>
+</tr>
+<tr class="row-even"><td><p>Lead</p></td>
+<td><p>1750</p></td>
+<td><p>2023</p></td>
+<td><p>871</p></td>
+<td><p>208</p></td>
+</tr>
+<tr class="row-odd"><td><p>Antimony</p></td>
+<td><p>1440</p></td>
+<td><p>1713</p></td>
+<td><p>561</p></td>
+<td><p>134</p></td>
+</tr>
+<tr class="row-even"><td><p>Aluminum</p></td>
+<td><p>2450</p></td>
+<td><p>2723</p></td>
+<td><p>11400</p></td>
+<td><p>2720</p></td>
+</tr>
+<tr class="row-odd"><td><p>Silver</p></td>
+<td><p>2193</p></td>
+<td><p>2466</p></td>
+<td><p>2336</p></td>
+<td><p>558</p></td>
+</tr>
+<tr class="row-even"><td><p>Gold</p></td>
+<td><p>2660</p></td>
+<td><p>2933</p></td>
+<td><p>1578</p></td>
+<td><p>377</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copper</p></td>
+<td><p>2595</p></td>
+<td><p>2868</p></td>
+<td><p>5069</p></td>
+<td><p>1211</p></td>
+</tr>
+<tr class="row-even"><td><p>Uranium</p></td>
+<td><p>3900</p></td>
+<td><p>4173</p></td>
+<td><p>1900</p></td>
+<td><p>454</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tungsten</p></td>
+<td><p>5900</p></td>
+<td><p>6173</p></td>
+<td><p>4810</p></td>
+<td><p>1150</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Notes:</strong> Values are given at the normal boiling point under standard atmospheric pressure (<span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>), unless otherwise noted.<br />
+<span class="math notranslate nohighlight">\(^1\)</span> At <span class="math notranslate nohighlight">\(37.0^\circ{\rm C}\)</span> (body temperature), the latent heat of vaporization of water is <span class="math notranslate nohighlight">\(2430\ {\rm kJ/kg}\)</span> or <span class="math notranslate nohighlight">\(580\ {\rm kcal/kg}\)</span>. This represents evaporation below the normal boiling point.</p>
+</div>
+</div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-3-phase-change-and-latent-heat">OpenStax College Physics 2e, Table 14.2: Heats of Fusion and Vaporization</a>.</em></p>
+<p><em>How much energy is needed to melt a kilogram of ice at <span class="math notranslate nohighlight">\(0^\circ{C}\)</span> to produce a kilogram of water at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>?</em></p>
+<p>We can use the equations for the heat transfer <span class="math notranslate nohighlight">\(Q\)</span> in terms of the mass and latent heat of water.  Thus we find that</p>
+<div class="math notranslate nohighlight">
+\[ Q = mL_{\rm f} = (1.0\ {\rm kg})(334\ {\rm kJ/kg}) = 334\ {\rm kJ}\]</div>
+<p>is the energy needed to melt a kilogram of ice.  This is a lot of energy as it represents the same amount of energy needed to raise the temperature of <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of liquid water from <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(79.8^\circ{\rm C}\)</span>.</p>
+<p>Even more energy is required to vaporize water.  It would take <span class="math notranslate nohighlight">\(2256\ {\rm kJ}\)</span> to change <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of liquid water at the boiling point (<span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span> at <span class="math notranslate nohighlight">\(1\ {\rm atm}\)</span>) to steam (or water vapor).</p>
+<p>Phase changes can have a tremendous stabilizing effect even on temperatures that are not near the melting and boiling point.  Evaporation and condensation (conversion of a gas into a liquid state) occur even at temperatures below the boiling point.  Consider that the air temperatures in humid climates</p>
+<ul class="simple">
+<li><p>rarely go above <span class="math notranslate nohighlight">\(35^\circ{\rm C}\)</span>, which is because most heat transfer goes into evaporating water into the air.</p></li>
+<li><p>rarely fall below the dew point because enormous heat is released when water vapor condenses.</p></li>
+</ul>
+<p>We can examine the effects of phase change more precisely by considering adding heat into a sample of ice at <span class="math notranslate nohighlight">\(-20^\circ{\rm C}\)</span>.</p>
+<ul class="simple">
+<li><p>The temperature of the ice rises linearly, absorbing heat at a constant rate of <span class="math notranslate nohighlight">\(0.5/ {\rm kcal/(kg\cdot ^\circ{\rm C})}\)</span> (see Table <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>) until it reaches <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>.</p></li>
+<li><p>Once at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>, the ice begins to melt until all the ice has melted, absorbing <span class="math notranslate nohighlight">\(79.8\ {\rm kcal/kg}\)</span> of heat (see Table <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>).  The temperature remains constant at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> during this phase change.</p></li>
+<li><p>Once all the ice has melted, the temperature of the liquid water rises, absorbing heat at a new constant rate of <span class="math notranslate nohighlight">\(1.00\ {\rm kcal/(kg\cdot ^\circ{C})}\)</span>.</p></li>
+<li><p>At <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>, the water begins to boil and the temperature again remains constant while the water absorbs <span class="math notranslate nohighlight">\(540\ {\rm kcal/kg}\)</span> (see Table <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>) of heat during this phase change.</p></li>
+<li><p>When all the liquid has become steam vapor, the temperature rises again, absorbing heat at a rate of <span class="math notranslate nohighlight">\(0.482\ {\rm kcal/(kg\cdot ^\circ{\rm C})}\)</span>.</p></li>
+</ul>
+<figure class="align-center" id="fig-water-heating-curve">
+<div class="output text_html">
+<video
+    src="../_static/videos/WaterHeatingCurve.mp4"
+    poster="../_static/images/WaterHeatingCurve_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    style="width: 100%; max-width: 1000px; height: auto; display: block; margin: auto;"
+    aria-label="Animation of the heating curve of water from minus 20 to 120 degrees Celsius. A molecular visualization shows ice warming, melting, liquid water warming, vaporization, and steam warming while a synchronized graph plots temperature against energy added per unit mass. Progress indicators show energy absorbed during phase changes at constant temperature.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-text"><strong>Heating curve of water and changes in molecular behavior.</strong> As energy is added to ice initially at <span class="math notranslate nohighlight">\(-20^\circ{\rm C}\)</span>, its temperature rises until it reaches the melting point at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>. During melting, the temperature remains constant while the added energy increases the intermolecular potential energy as the solid structure breaks down. Once all the ice has melted, the liquid water warms to <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>, where vaporization begins. The temperature again remains constant as energy separates the molecules into the gas phase. After vaporization is complete, additional energy raises the temperature of the steam. The horizontal sections of the graph illustrate the energy required for phase changes, with vaporization requiring substantially more energy than melting. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-3-phase-change-and-latent-heat">OpenStax, College Physics 2e, Figure 14.8</a>.</em></span><a class="headerlink" href="#fig-water-heating-curve" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Water can evaporate at temperature below the boiling point.  More energy is required than at the boiling point because there is less energy available from random motions.  For example, at body temperature, perspiration from skin requires a heat input of <span class="math notranslate nohighlight">\(2428\ {\rm kJ/kg}\)</span>, which is about <span class="math notranslate nohighlight">\(10\%\)</span> higher than the latent heat of vaporization at <span class="math notranslate nohighlight">\(100^\circ{\rm C}\)</span>.  This heat comes from the skin, and thus provides an effective cooling mechanism in hot weather.  High humidity inhibits evaporation, which inhibits the body from cooling.  We feel that the temperature might rise, but unevaporated sweat still exists on your brow.</p>
+<p>Vaporization and condensation are opposite processes that transfer energy between a substance and its surroundings. During <em>vaporization</em>, a liquid absorbs energy from its surroundings to become a gas, which can cause the surroundings to cool. During <em>condensation</em>, a gas releases energy to its surroundings as it becomes a liquid, which can cause the surroundings to warm.</p>
+<p>For example, water vapor in the air condenses when it comes into contact with a cold glass. Although the glass is initially cold, the condensation process releases energy to the glass, warming it slightly. The amount of energy released during condensation is equal to the energy required for vaporization of the same mass of the substance. The magnitude of this energy transfer is <span class="math notranslate nohighlight">\(Q=mL_v,\)</span> where <span class="math notranslate nohighlight">\(m\)</span> is the mass undergoing the phase change and <span class="math notranslate nohighlight">\(L_v\)</span> is the latent heat of vaporization.</p>
+<p><strong>Sublimation</strong> is the transition from the solid to vapor phase.  For example, snow or ice can disappear without at trace of liquid water when in the right environment.  The reverse is also true: Frost can form on very cold windows without going through the liquid stage.</p>
+<p>A popular effect is the making of “smoke” or “fog” from dry ice, which is solid carbon dioxide.  Sublimation occurs because the equilibrium vapor pressure of solids is not zero.  Some air fresheners use the sublimation of a solid to inject a perfume into the room.</p>
+<p>All phase transition involve heat transfer.  In the case of direct solid-vapor transitions, the energy required is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9f7513bd-5fff-4e51-b94d-14e91af52038">
+<span class="eqno">()<a class="headerlink" href="#equation-9f7513bd-5fff-4e51-b94d-14e91af52038" title="Permalink to this equation">#</a></span>\[\begin{align}
+Q = mL_{\rm s},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_{\rm s}\)</span> is the <em>latent heat of sublimation</em> and is the energy required to change <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of a substance from the solid phase to the vapor phase.  The value of <span class="math notranslate nohighlight">\(L_{\rm s}\)</span> depends on the substance.  Sublimation requires energy input, so that dry ice is an effective coolant, whereas the reverse process (i.e., frosting) releases energy.</p>
+<div class="tip admonition">
+<p class="admonition-title">Problem-Solving Strategy: Heat Transfer</p>
+<ol class="arabic simple">
+<li><p><strong>Identify what is happening.</strong> Determine which objects are heating up, cooling down, melting, freezing, or changing phase in another way. Remember that heat flows from warmer objects to cooler objects.</p></li>
+<li><p><strong>List the knowns and unknowns.</strong> Write down the given masses, temperatures, specific heats, and latent heats. Identify what the problem asks you to find.</p></li>
+<li><p><strong>Choose the appropriate equation.</strong></p>
+<ul class="simple">
+<li><p><strong>Temperature change:</strong> Use <span class="math notranslate nohighlight">\(Q = mc\Delta T\)</span>.</p></li>
+<li><p><strong>Phase change:</strong> Use <span class="math notranslate nohighlight">\(Q = mL\)</span>.</p></li>
+<li><p><strong>Multiple objects:</strong> If no energy escapes to the surroundings, the heat lost by warmer objects equals the heat gained by cooler objects.</p></li>
+</ul>
+</li>
+<li><p><strong>Solve the problem.</strong> Rearrange the equations to isolate the unknown before substituting numerical values. If the process involves both temperature and phase changes, solve each stage separately.</p></li>
+<li><p><strong>Check your answer.</strong> Make sure the units are correct and the result is reasonable. Check whether the final temperature crosses a melting or boiling point, which would require an additional phase-change calculation.</p></li>
+</ol>
+</div>
+</section>
+<section id="heat-transfer-methods">
+<h2>Heat Transfer Methods<a class="headerlink" href="#heat-transfer-methods" title="Link to this heading">#</a></h2>
+<p>Whenever there is a temperature difference, heat transfer occurs.  Heat transfer may occur rapidly (e.g., a cooking pan) or slowly (e.g., walls of an insulated ice chest).  We control rates of heat transfer by</p>
+<ul class="simple">
+<li><p>choosing materials (e.g., wool clothing in the winter),</p></li>
+<li><p>controlling air movement (e.g., use of weather stripping around doors), or</p></li>
+<li><p>choice of color (e.g., a white roof to reflect summer sunlight).</p></li>
+</ul>
+<p>Many processes involve heat transfer, where each process involving heat transfer takes place by only three methods:</p>
+<ol class="arabic simple">
+<li><p><strong>Conduction</strong> is heat transfer through stationary matter by <em>physical contact</em>.  Heat transferred between the electric burner and the bottom of a pan is transferred by conduction.</p></li>
+<li><p><strong>Convection</strong> is the heat transfer by the macroscopic movement of a fluid.  This type of transfer takes place in a forced-air furnace and in weather systems.</p></li>
+<li><p><strong>Radiation</strong> is the heat transfer that occurs when microwaves, infrared radiation, visible light, or another form of electromagnetic radiation is emitted or absorbed.</p></li>
+</ol>
+<figure class="align-default" id="fig-fireplace-heat-transfer">
+<img alt="Realistic cutaway of a living room with a fireplace illustrating three heat-transfer mechanisms. Yellow wavy arrows show thermal radiation from the fire, black arrows show conduction through the hearth and floor, and red and blue arrows show convection currents. Hot gases rise through the chimney while cooler air descends near the window and circulates toward the fireplace." src="../_images/living_room_heat_transfer_diagram.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Heat transfer by conduction, convection, and radiation in a room heated by a fireplace.</strong> Thermal radiation (yellow arrows) transfers energy directly from the fire to objects throughout the room without requiring a material medium. Conduction (black arrow) transfers energy through solid materials, such as the hearth and surrounding floor. Convection (red and blue arrows) transfers energy through the movement of air. Warm air rises near the fireplace and circulates through the room, while cooler air near the window sinks and moves along the floor toward the fireplace. Hot combustion gases also rise through the chimney, carrying energy out of the house. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-4-heat-transfer-methods">OpenStax, College Physics 2e, Figure 14.12</a>.</em></span><a class="headerlink" href="#fig-fireplace-heat-transfer" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="conduction">
+<h2>Conduction<a class="headerlink" href="#conduction" title="Link to this heading">#</a></h2>
+<p>Your feet feel cold as you walk barefoot across the living room carpet in your cold house and then, step onto the kitchen tile floor.  The carpet and the tile floor are both at the same temperature.  The different sensation you feel is explained by the different rates of heat transfer: <em>the heat loss during the same time interval is greater for skin in contact with the tiles than with the carpet</em>, so the temperature drop is greater on the tiles.</p>
+<p>Some materials conduct thermal energy faster than others.  Good conductors of electricity (e.g., metals) are also good heat conductors, whereas insulators of electricity (e.g., wood, plastic, and rubber) are poor heat conductors.</p>
+<p>The (average) kinetic energy of a molecule in a hot body is higher than in a colder body.  If two molecules collide, an energy transfer between molecules occurs from the higher kinetic energy to the lower kinetic energy molecule.  The cumulative effect from all collisions results in a net flux of heat from the hot body to the cold body.  The heat flux thus depends on the temperature difference:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta T = T_{\rm hot} - T_{\rm cold}. \]</div>
+<p>You get a more severe burn from boiling water than hot tap water because this temperature difference (of gradient) is larger.  Conversely, if the temperatures ar the same, the net heat transfer falls to zero and equilibrium is achieved.  Since the number of collisions possible increases with increasing area, heat conduction depends on the cross-sectional area.  If you touch a cold wall with your palm, your hand cools faster than if you just touch it with your fingertip.</p>
+<figure class="align-default" id="fig-conduction-molecular-collisions">
+<img alt="Schematic of heat conduction across a surface separating regions at different temperatures. On the hot side, a faster-moving red particle approaches the surface and rebounds with less speed after transferring energy. On the cold side, a slower-moving blue particle approaches and rebounds with greater speed after gaining energy. Arrow lengths represent relative particle speeds, while a large arrow indicates net heat flow from hot to cold." src="../_images/heat_conduction_across_a_surface.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Heat conduction through microscopic particle collisions.</strong> Particles in the higher-temperature region have greater average kinetic energy than those in the lower-temperature region. When a faster-moving particle strikes the boundary, it can transfer some of its kinetic energy to particles at the surface and rebound with a lower speed. Conversely, a slower-moving particle approaching from the cooler region can gain kinetic energy through interactions at the surface and rebound with a greater speed. The lengths of the smaller arrows represent the relative particle speeds before and after each collision. Although individual collisions can transfer energy in either direction, the combined effect of many collisions produces a net transfer of thermal energy <span class="math notranslate nohighlight">\(Q\)</span> from the higher-temperature region to the lower-temperature region. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Figure 14.14</a>.</em></span><a class="headerlink" href="#fig-conduction-molecular-collisions" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The thickness of the material through which heat transfers also affects the mechanism of conduction.  Consider a slab of material with different temperatures on either side.  Suppose that <span class="math notranslate nohighlight">\(T_2 &gt; T_1\)</span>, so that heat is transferred from left to right.  Heat transfer from the left side to the right side is accomplished by a series of molecular collisions.  The thicker the material, teh more time it takes to transfer the same amount of heat.  This model explains why thick clothing is warmer than thin clothing in winters.</p>
+<p>The heat transfer rate depends on the material properties described by the <em>coefficient of thermal conductivity.</em>  THe <strong>rate of conductive heat transfer</strong> through a slab of material is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e16ddc83-65fb-499a-b275-559d7b5feb43">
+<span class="eqno">()<a class="headerlink" href="#equation-e16ddc83-65fb-499a-b275-559d7b5feb43" title="Permalink to this equation">#</a></span>\[\begin{align} 
+\frac{Q}{t} = \frac{kA}{d}(T_2 -T_1),
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q/t\)</span> is the rate of heat transfer in watts (or <span class="math notranslate nohighlight">\(\rm kcal/s\)</span>), <span class="math notranslate nohighlight">\(k\)</span> is the <strong>thermal conductivity</strong> of the material, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(d\)</span> are its surface area and thickness, and <span class="math notranslate nohighlight">\(T_2-T_1\)</span> is the temperature difference across the slab.</p>
+<figure class="align-default" id="fig-heat-conduction-through-material">
+<img alt="A conducting bar of thermal conductivity k, cross-sectional area A, and thickness d connects two surfaces at temperatures T2 and T1, where T2 is greater than T1. A horizontal arrow shows heat Q flowing from the hotter surface on the left to the colder surface on the right. The dimension line d extends between the two contact faces of the conducting material." src="../_images/heat_conduction_through_a_bar.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Heat conduction through a material between two temperatures.</strong> A material with thermal conductivity <span class="math notranslate nohighlight">\(k\)</span>, cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>, and thickness <span class="math notranslate nohighlight">\(d\)</span> connects two surfaces maintained at temperatures <span class="math notranslate nohighlight">\(T_2\)</span> and <span class="math notranslate nohighlight">\(T_1\)</span>, where <span class="math notranslate nohighlight">\(T_2&gt;T_1\)</span>. Thermal energy flows from the higher-temperature surface to the lower-temperature surface through conduction. The rate of heat transfer increases with the thermal conductivity, cross-sectional area, and temperature difference, but decreases as the thickness <span class="math notranslate nohighlight">\(d\)</span> increases. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Section 14.5</a>.</em></span><a class="headerlink" href="#fig-heat-conduction-through-material" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A combination of material and thickness is necessary to develop good insulators, where the a smaller conductivity <span class="math notranslate nohighlight">\(k\)</span> and larger thickness <span class="math notranslate nohighlight">\(d\)</span> is better.  The ratio <span class="math notranslate nohighlight">\(d/k\)</span> will be large for a good insulator, where the ratio is called the <strong>R factor</strong>.  The rate of conductive heat transfer is inversely proportional to <span class="math notranslate nohighlight">\(R\)</span>.  The <span class="math notranslate nohighlight">\(R\)</span> factor is used most commonly for household insulation (in the attic and walls) and refrigerators.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-thermal-conductivities">
+<caption><span class="caption-text">Thermal Conductivities of Common Substances near <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span></span><a class="headerlink" href="#tab-thermal-conductivities" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 65.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Substance</strong></p></th>
+<th class="head"><p><strong>Thermal Conductivity</strong><br />
+<strong><span class="math notranslate nohighlight">\(k\)</span> (<span class="math notranslate nohighlight">\({\rm W/(m\cdot K)}\)</span>)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Silver</p></td>
+<td><p>420</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copper</p></td>
+<td><p>390</p></td>
+</tr>
+<tr class="row-even"><td><p>Gold</p></td>
+<td><p>318</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aluminum</p></td>
+<td><p>220</p></td>
+</tr>
+<tr class="row-even"><td><p>Iron (steel)</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-odd"><td><p>Stainless steel</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>Ice</p></td>
+<td><p>2.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glass (average)</p></td>
+<td><p>0.84</p></td>
+</tr>
+<tr class="row-even"><td><p>Concrete or brick</p></td>
+<td><p>0.84</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>0.60</p></td>
+</tr>
+<tr class="row-even"><td><p>Fatty tissue (without blood)</p></td>
+<td><p>0.20</p></td>
+</tr>
+<tr class="row-odd"><td><p>Asbestos</p></td>
+<td><p>0.16</p></td>
+</tr>
+<tr class="row-even"><td><p>Plasterboard</p></td>
+<td><p>0.16</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wood</p></td>
+<td><p>0.08–0.16</p></td>
+</tr>
+<tr class="row-even"><td><p>Snow (dry)</p></td>
+<td><p>0.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cork</p></td>
+<td><p>0.042</p></td>
+</tr>
+<tr class="row-even"><td><p>Glass wool</p></td>
+<td><p>0.042</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wool</p></td>
+<td><p>0.040</p></td>
+</tr>
+<tr class="row-even"><td><p>Down feathers</p></td>
+<td><p>0.025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Air</p></td>
+<td><p>0.023</p></td>
+</tr>
+<tr class="row-even"><td><p>Polystyrene foam (Styrofoam)</p></td>
+<td><p>0.034</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-5-conduction">OpenStax, College Physics 2e, Table 14.3</a>.</em> OpenStax lists <span class="math notranslate nohighlight">\(0.010\ {\rm W/(m\cdot K)}\)</span> for Styrofoam. The updated value of <span class="math notranslate nohighlight">\(0.034\ {\rm W/(m\cdot K)}\)</span> is representative of expanded polystyrene insulation at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span>, based on <a class="reference external" href="https://www.fao.org/4/y5013e/y5013e08.htm">FAO thermal insulation data</a>.</p>
+</section>
+<section id="convection">
+<h2>Convection<a class="headerlink" href="#convection" title="Link to this heading">#</a></h2>
+<p>Convection is driven by large-scale flow of matter.  In the case of Earth’s atmosphere, the circulation is caused by the flow of hot air from the tropics to the poles and the flow of cold air from the poles toward the tropics (i.e., Hadley cells).  Car engines are kept cool by the flow of water in the cooling system, where a water pump maintains the flow of cool water.</p>
+<p>While convection is usually a more complicated process than conduction, we can describe convection and do some straightforward, realistic calculations of its effects.  Natural convection is driven by buoyant forces, where hot air rises because density decreases as temperature increases.</p>
+<figure class="align-default" id="fig-natural-convection-house-water">
+<img alt="Two-panel realistic illustration of natural convection. (a) A cutaway house shows warm air rising from a gravity furnace, moving along the ceiling, cooling and sinking near the opposite wall, and returning along the floor. (b) A pot of water heated from below shows warmer water rising near the center and cooler water sinking along the sides, forming convection currents." src="../_images/natural_convection_in_homes_and_pots.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Natural convection in air and water.</strong> (a) A gravity furnace heats the surrounding air, causing it to expand, become less dense, and rise toward the ceiling. As the warm air circulates through the room, it transfers energy to the surroundings, cools, and becomes denser. The cooler air sinks and flows along the floor toward the furnace, completing the convection cycle. (b) Water heated from below behaves similarly. Warmer, less-dense water rises from the heated region near the bottom of the pot, while cooler, denser water sinks along the sides. These circulating currents transfer thermal energy throughout the fluid without requiring a pump or fan. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-6-convection">OpenStax, College Physics 2e, Figure 14.17</a>.</em></span><a class="headerlink" href="#fig-natural-convection-house-water" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A cold wind is much more chilling than still cold air because convection combines with conduction in the body to increase the rate at which energy is transferred away from the body.  Wind-chill factors are approximated as the temperature of still air that produces the same rate of cooling as air of a given temperature and speed.  For example, a <span class="math notranslate nohighlight">\(15\ {\rm m/s}\)</span> wind at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> has the chilling equivalent of still air at about <span class="math notranslate nohighlight">\(-18^\circ{\rm C}\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-wind-chill-factors">
+<caption><span class="caption-text">Wind-Chill Factors</span><a class="headerlink" href="#tab-wind-chill-factors" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+<col style="width: 14.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Air Temperature</strong><br />
+<strong>(<span class="math notranslate nohighlight">\(^\circ{\rm C}\)</span>)</strong></p></th>
+<th class="head"><p><strong>2 m/s</strong></p></th>
+<th class="head"><p><strong>5 m/s</strong></p></th>
+<th class="head"><p><strong>10 m/s</strong></p></th>
+<th class="head"><p><strong>15 m/s</strong></p></th>
+<th class="head"><p><strong>20 m/s</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>−1</p></td>
+<td><p>−8</p></td>
+<td><p>−10</p></td>
+<td><p>−12</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>0</p></td>
+<td><p>−7</p></td>
+<td><p>−12</p></td>
+<td><p>−16</p></td>
+<td><p>−18</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>−2</p></td>
+<td><p>−9</p></td>
+<td><p>−15</p></td>
+<td><p>−18</p></td>
+<td><p>−20</p></td>
+</tr>
+<tr class="row-odd"><td><p>−5</p></td>
+<td><p>−7</p></td>
+<td><p>−15</p></td>
+<td><p>−22</p></td>
+<td><p>−26</p></td>
+<td><p>−29</p></td>
+</tr>
+<tr class="row-even"><td><p>−10</p></td>
+<td><p>−12</p></td>
+<td><p>−21</p></td>
+<td><p>−29</p></td>
+<td><p>−34</p></td>
+<td><p>−36</p></td>
+</tr>
+<tr class="row-odd"><td><p>−20</p></td>
+<td><p>−23</p></td>
+<td><p>−34</p></td>
+<td><p>−44</p></td>
+<td><p>−50</p></td>
+<td><p>−52</p></td>
+</tr>
+<tr class="row-even"><td><p>−40</p></td>
+<td><p>−44</p></td>
+<td><p>−59</p></td>
+<td><p>−73</p></td>
+<td><p>−82</p></td>
+<td><p>−84</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Adapted from OpenStax, College Physics 2e, Table 14.4.</em></p>
+<p>Although air can transfer heat rapidly by convection, it is a poor conductor and thus a good insulator. The amount of available space for airflow determines whether air acts as an insulator or conductor.  The space inside and outside walls of a house is about <span class="math notranslate nohighlight">\(9\ {\rm cm}\)</span> (<span class="math notranslate nohighlight">\(3.5\ {\rm in}\)</span>), which is large enough for convection to work effectively.  The addition of wall insulation prevents airflow, so heat loss (or gain) is decreased.</p>
+<figure class="align-default" id="fig-fur-feathers-thermal-insulation">
+<img alt="Side-by-side cross-sectional illustrations of thermal insulation in animals. (a) Dense mammalian fur traps pockets of air between the warm body and cold surroundings. (b) Overlapping duck feathers and fluffy down trap insulating air near the bird's body. Small circular arrows illustrate the limited convection within these air pockets." src="../_images/fur_and_feathers_insulation_compared.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Thermal insulation provided by fur and feathers.</strong> (a) Mammalian fur traps pockets of air between the warm body and the colder surroundings, reducing the transfer of thermal energy. (b) Ducks achieve a similar insulating effect using overlapping outer feathers and a layer of fluffy down that traps air close to the body. In both cases, the trapped air is a poor thermal conductor, while the small spaces between hairs or feathers restrict air circulation and reduce heat transfer by convection. The circular arrows represent the limited motion of air within these pockets. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-6-convection">OpenStax, College Physics 2e, Section 14.6: Convection</a>.</em></span><a class="headerlink" href="#fig-fur-feathers-thermal-insulation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The gap between the two panes of a double-pane window is about <span class="math notranslate nohighlight">\(1\ {\rm cm}\)</span>, which prevents convection and takes advantage of air’s low conductivity to prevent further loss.  Fur, fiber, and fiberglass also take advantage of the low conductivity of air by trapping air in small spaces that don’t support convection.</p>
+<p>When convection is accompanied by a phase change.  It allows us to cool off by sweating, even if the temperature of the surrounding air exceeds body temperature.  Heat from the skin is required for sweat to evaporate from the skin, but without air flow, the air becomes saturated and evaporation stops.  Air flow caused by convection replaces the saturated air by dry air and evaporation continues.</p>
+<p>When water evaporates from the oceans, heat is removed from the ocean.  If the water vapor condenses in liquid droplets as clouds forms, then heat is released in the atmosphere.  There is an overall transfer of heat from the ocean to the atmosphere.  This process drives thunderheads, which are those great cumulus clouds that rise up to <span class="math notranslate nohighlight">\(20\ {\rm km}\)</span> into the stratosphere.</p>
+<p>Water vapor carried by convection condenses and releases tremendous amounts of energy. This energy causes the air to expand and rise, where it is much colder.  More condensation occurs in these colder regions, which drives the cloud even higher.  This is a positive feedback, since the process reinforces and accelerates itself.</p>
+</section>
+<section id="radiation">
+<h2>Radiation<a class="headerlink" href="#radiation" title="Link to this heading">#</a></h2>
+<p>You can tell that an over or stove is hot without touching it because it warm you as you get near it.  The heat is transferred by radiation, where a hot body emits electromagnetic (EM) waves that are absorbed by your skin.</p>
+<p>The energy of EM radiation depends on the wavelength (or color) and is proportional to the frequency of the EM wave.  A higher frequency corresponds to a higher energy, where a longer wavelength wave has a lower energy.  A temperature change of an object is usually accompanied by a color change because the color and brightness of an blackbody (radiating object) depends on the temperature of the object.</p>
+<p>Consider an electrical element on a stove, which glows from a dull red to a bright orange as it heats up.  A higher-temperature steel in a blast furnace glows from yellow to white.  The radiation you feel in both cases is mostly in the infrared, which corresponds to a lower temperature than the energy emitted as visible light.  The radiated energy depends on its intensity.</p>
+<figure class="align-default" id="fig-blackbody-radiation-temperature">
+<img alt="Two-panel illustration of blackbody radiation. Panel (a) shows heated steel at 700, 1000, and 1500 K, a tungsten light bulb at 3000 K, a Sun-like star at 5800 K, and a blue-white star at 10000 K. Panel (b) shows their blackbody radiation spectra on logarithmic axes, illustrating how the peak wavelength shifts toward shorter wavelengths and the emitted radiation increases as temperature rises." src="../_images/blackbody_emitters_and_spectra.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Blackbody radiation and its dependence on temperature.</strong> (a) As the temperature of an object increases, its thermal radiation becomes more intense and its visible appearance changes. At <span class="math notranslate nohighlight">\(700\ {\rm K}\)</span>, heated steel emits primarily infrared radiation and does not visibly glow. At higher temperatures, the steel begins to glow red and then yellow-orange. A tungsten filament at approximately <span class="math notranslate nohighlight">\(3000\ {\rm K}\)</span> emits warm-white light, while stars at <span class="math notranslate nohighlight">\(5800\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(10{,}000\ {\rm K}\)</span> appear approximately white and blue-white, respectively. (b) Blackbody radiation is emitted over a continuous range of wavelengths, with the distribution depending on temperature. As temperature increases, the wavelength of maximum spectral radiance shifts toward shorter wavelengths, as described by Wien’s displacement law, while the total energy emitted increases according to the Stefan–Boltzmann law. The shaded region represents visible light. Although each spectrum has a peak wavelength, the color we observe results from the combined visible wavelengths rather than the peak wavelength alone.</span><a class="headerlink" href="#fig-blackbody-radiation-temperature" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>All objects absorb and emit electromagnetic radiation.  The rate of heat transfer by radiation is largely determined by the color of the object.  Black is the most effective color for heat transfer, where white is the least effective.  For example, black asphalt in a parking lot will be hotter than a gray sidewalk on a summer day because black absorbs better than gray.  The reverse is also true, where black radiates the energy better than gray.</p>
+<p>An <em>ideal radiator</em> is the same color as an <em>ideal absorber</em>, and captures all the radiation that falls on it.  In contrast, white is a poor absorber and is also a poor radiator.  A white object reflects all radiation like a mirror.</p>
+<p>Gray objects have a uniform ability to absorb all parts of the EM spectrum.  Colored objects display a particular color in the visible range, while they may also give off special wavelengths in the nonvisible spectrum.  For example, the strong absorption of infrared radiation by the skin, which allows us to be very sensitive to it.</p>
+<figure class="align-default" id="fig-radiation-absorption-emission">
+<img alt="Four-panel comparison of thermal radiation involving black and silver-coated objects. In the left column, incident radiation is mostly absorbed by the black surface but largely reflected by the silver-coated surface. In the right column, after the external radiation source is removed, the black object emits thermal radiation more effectively, while the silver-coated object emits less energy." src="../_images/absorption_and_radiation_comparison.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Absorption and emission of thermal radiation by different surfaces.</strong> The left column illustrates how black and silver-coated objects respond to incident radiation. A black surface absorbs most of the incoming energy and warms more rapidly, while a reflective silver-coated surface absorbs less energy because most of the radiation is reflected. The right column shows what happens when the external radiation source is removed. A black surface is also an efficient emitter of thermal radiation, allowing it to lose energy and cool more rapidly. In contrast, the silver-coated surface has a lower emissivity and releases thermal energy more slowly through radiation. This relationship illustrates why surfaces that are good absorbers of radiation are also good emitters at the same wavelengths. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/14-7-radiation">OpenStax, College Physics 2e, Figure 14.26</a>.</em></span><a class="headerlink" href="#fig-radiation-absorption-emission" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Stefan-Boltzmann Law of Radiation</p>
+<p>The rate of heat transfer by emitted radiation by the <strong>Stefan-Boltzmann law of radiation</strong> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7763147a-738d-4f6e-9b2c-e7689eccb668">
+<span class="eqno">()<a class="headerlink" href="#equation-7763147a-738d-4f6e-9b2c-e7689eccb668" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{Q}{t} = \sigma \varepsilon AT^4, 
+\end{align}\]</div>
+<p>which depends on the Stefan-Boltzmann constant <span class="math notranslate nohighlight">\(\sigma = 5.67 \times 10^{-8}\ {\rm J/(s\cdot m^2\cdot K^4)}\)</span>, the surface area <span class="math notranslate nohighlight">\(A\)</span>, and the temperature <span class="math notranslate nohighlight">\(T\)</span> in kelvin.  The <strong>emissivity</strong> <span class="math notranslate nohighlight">\(\varepsilon\)</span> of the object is a measure of how <em>well</em> it radiates.  An ideal jet-black (or blackbody) radiator has <span class="math notranslate nohighlight">\(\varepsilon=1\)</span>, whereas a perfect reflector has <span class="math notranslate nohighlight">\(\varepsilon=0\)</span>.  Real objects fall between these two values.  A tungsten light bulb filament has an <span class="math notranslate nohighlight">\(\varepsilon \approx 0.5\)</span> and a material used in ink toner (carbon black) has the greatest known emissivity of <span class="math notranslate nohighlight">\(\varepsilon \approx 0.99\)</span>.</p>
+</div>
+<p>The radiation rate is directly proportional to the <em>fourth power of the absolute temperature</em>.  The radiated heat is proportional to the surface area of the object.  If you knock apart the coals of a fire, there is a noticeable increase in radiation (heat output) due to an increase in the radiating surface area.</p>
+<p>Your skin is a remarkably good absorber and emitter of infrared radiation, having an emissivity of <span class="math notranslate nohighlight">\(0.97\)</span> in the infrared part of the EM spectrum.  We are all nearly (jet) black in the infrared, in spite of the variations in skin color.  This is the basis for the use of night scopes used by law enforcement and military to detect humans.  <em>Thermographs</em> are images used by medical professionals to detect abnormally high temperature regions in the body that can indicate a disease is present.</p>
+<p>All objects emit and absorb radiation, where the <em>net rate of heat transfer</em> by radiation (absorption minus emission) is related to the temperature of the object and the temperature of its surroundings.  Assuming that an object with a temperature <span class="math notranslate nohighlight">\(T_1\)</span> is surrounded by an environment with uniform temperature <span class="math notranslate nohighlight">\(T_2\)</span>.  The <strong>net rate of heat transfer by radiation</strong> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-af699a1b-c05d-4b36-876e-51f99145c187">
+<span class="eqno">()<a class="headerlink" href="#equation-af699a1b-c05d-4b36-876e-51f99145c187" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{Q_{\rm net}}{t} = \sigma \varepsilon A \left(T_2^4 -T_1^4\right),
+\end{align}\]</div>
+<p>which depends on the emissivity of the object alone.  The balance of radiation into and out of an object depends on how well it emits and absorbs radiation.  When <span class="math notranslate nohighlight">\(T_2&gt;T_1\)</span>, the net heat transfer is from hot to cold (or <span class="math notranslate nohighlight">\(Q_{\rm net}/t &gt;0\)</span>).</p>
+<div class="tip admonition">
+<p class="admonition-title">Problem-Solving Strategy: Methods of Heat Transfer</p>
+<ol class="arabic">
+<li><p><strong>Examine the physical situation.</strong> Determine whether heat transfer occurs through conduction, convection, radiation, or a combination of these mechanisms.</p></li>
+<li><p><strong>Identify the knowns and unknowns.</strong> List the given quantities, determine what must be calculated, and identify any necessary assumptions.</p></li>
+<li><p><strong>Choose the appropriate equation.</strong> The relationship depends on the mechanism involved:</p>
+<ul>
+<li><p><strong>Conduction:</strong> Heat transfer through a material is described by</p>
+<div class="math notranslate nohighlight">
+\[\frac{Q}{t}=\frac{kA(T_2-T_1)}{d},\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is the thermal conductivity (see Table <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>).</p>
+</li>
+<li><p><strong>Convection:</strong> When a fluid moves and changes temperature, the energy transferred can be calculated using</p>
+<div class="math notranslate nohighlight">
+\[Q=mc\Delta T.\]</div>
+</li>
+<li><p><strong>Phase changes:</strong> If the fluid undergoes melting, freezing, vaporization, or condensation, use</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+Q &amp;= mL_{\rm f}, \\
+Q &amp;= mL_{\rm v}.
+\end{align*}\]</div>
+<p>The latent heats are listed in Tables <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">{number}</span></code>.</p>
+</li>
+<li><p><strong>Radiation:</strong> The net rate of thermal radiation is</p>
+<div class="math notranslate nohighlight">
+\[\frac{Q_{\rm net}}{t}=\sigma\varepsilon A(T_2^4-T_1^4),\]</div>
+<p>where the temperatures <strong>must be expressed</strong> in kelvin.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Solve symbolically and evaluate.</strong> Rearrange the equation for the unknown quantity before substituting numerical values with their units.</p></li>
+<li><p><strong>Check the result.</strong> Verify that the units, magnitude, and direction of energy transfer are physically reasonable.</p></li>
+</ol>
+</div>
+</section>
+<section id="in-class-exercises">
+<h2>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>Rubbing your hands together warms them by converting work into thermal energy. If a woman rubs her hands back and forth for a total of 20 rubs, at a distance of <span class="math notranslate nohighlight">\(7.50\ {\rm cm}\)</span> per rub, and with an average frictional force of <span class="math notranslate nohighlight">\(40.0\ {\rm N}\)</span>, what is the temperature increase? The mass of tissues warmed is only <span class="math notranslate nohighlight">\(0.100\ {\rm kg}\)</span>, mostly in the palms and fingers.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>(a) How much heat transfer is required to raise the temperature of a <span class="math notranslate nohighlight">\(0.750\ {\rm kg}\)</span> aluminum pot containing <span class="math notranslate nohighlight">\(2.50\ {\rm kg}\)</span> of water from <span class="math notranslate nohighlight">\(30.0^\circ{\rm C}\)</span> to the boiling point and then boil away <span class="math notranslate nohighlight">\(0.750\ {\rm kg}\)</span> of water?</p>
+<p>(b) How long does this take if the rate of heat transfer is <span class="math notranslate nohighlight">\(500\ {\rm W}\)</span>? Recall that <span class="math notranslate nohighlight">\(1\ {\rm W}=1\ {\rm J/s}\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>How many grams of coffee must evaporate from <span class="math notranslate nohighlight">\(350\ {\rm g}\)</span> of coffee in a <span class="math notranslate nohighlight">\(100\ {\rm g}\)</span> glass cup to cool the coffee from <span class="math notranslate nohighlight">\(95.0^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(45.0^\circ{\rm C}\)</span>? You may assume the coffee has the same thermal properties as water and that the average heat of vaporization is <span class="math notranslate nohighlight">\(2340\ {\rm kJ/kg}\)</span> (<span class="math notranslate nohighlight">\(560\ {\rm cal/g}\)</span>). You may neglect the change in mass of the coffee as it cools, which will give you an answer that is slightly larger than correct.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>Calculate the rate of heat conduction out of the human body, assuming that the core internal temperature is <span class="math notranslate nohighlight">\(37.0^\circ{\rm C}\)</span>, the skin temperature is <span class="math notranslate nohighlight">\(34.0^\circ{\rm C}\)</span>, the thickness of the tissues between averages <span class="math notranslate nohighlight">\(1.00\ {\rm cm}\)</span>, and the surface area is <span class="math notranslate nohighlight">\(1.40\ {\rm m^2}\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>The “steam” above a freshly made cup of instant coffee is actually tiny water droplets formed by condensation of water vapor that evaporated from the hot coffee. What is the final temperature of <span class="math notranslate nohighlight">\(250\ {\rm g}\)</span> of hot coffee initially at <span class="math notranslate nohighlight">\(90.0^\circ{\rm C}\)</span> if <span class="math notranslate nohighlight">\(2.00\ {\rm g}\)</span> evaporates from it? The coffee is in a Styrofoam cup, so other methods of heat transfer can be neglected.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>Find the net rate of heat transfer by radiation from a skier standing in the shade, given the following. She is completely clothed in white (head to foot, including a ski mask), the clothes have an emissivity of <span class="math notranslate nohighlight">\(0.200\)</span> and a surface temperature of <span class="math notranslate nohighlight">\(10.0^\circ{\rm C}\)</span>, the surroundings are at <span class="math notranslate nohighlight">\(-15.0^\circ{\rm C}\)</span>, and her surface area is <span class="math notranslate nohighlight">\(1.60\ {\rm m^2}\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>In very humid climates where there are numerous bodies of water, such as in Florida, it is unusual for temperatures to rise above about <span class="math notranslate nohighlight">\(35^\circ{\rm C}\)</span> (<span class="math notranslate nohighlight">\(95^\circ{\rm F}\)</span>). In deserts, however, temperatures can rise far above this. Explain how the evaporation of water helps limit high temperatures in humid climates.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>When our bodies get too warm, they respond by sweating and increasing blood circulation to the surface to transfer thermal energy away from the core. What effect will this have on a person in a <span class="math notranslate nohighlight">\(40.0^\circ{\rm C}\)</span> hot tub?</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>Following vigorous exercise, the body temperature of an <span class="math notranslate nohighlight">\(80.0\ {\rm kg}\)</span> person is <span class="math notranslate nohighlight">\(40.0^\circ{\rm C}\)</span>. At what rate in watts must the person transfer thermal energy to reduce the body temperature to <span class="math notranslate nohighlight">\(37.0^\circ{\rm C}\)</span> in <span class="math notranslate nohighlight">\(30.0\ {\rm min}\)</span>, assuming the body continues to produce energy at the rate of <span class="math notranslate nohighlight">\(150\ {\rm W}\)</span>? Recall that <span class="math notranslate nohighlight">\(1\ {\rm W}=1\ {\rm J/s}\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>(a) How much heat transfer is required to raise the temperature of a <span class="math notranslate nohighlight">\(0.750\ {\rm kg}\)</span> aluminum pot containing <span class="math notranslate nohighlight">\(2.50\ {\rm kg}\)</span> of water from <span class="math notranslate nohighlight">\(30.0^\circ{\rm C}\)</span> to the boiling point and then boil away <span class="math notranslate nohighlight">\(0.750\ {\rm kg}\)</span> of water?</p>
+<p>(b) How long does this take if the rate of heat transfer is <span class="math notranslate nohighlight">\(500\ {\rm W}\)</span>? Recall that <span class="math notranslate nohighlight">\(1\ {\rm W}=1\ {\rm J/s}\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>(a) What is the rate of heat conduction through the <span class="math notranslate nohighlight">\(3.00\ {\rm cm}\)</span>-thick fur of a large animal having a <span class="math notranslate nohighlight">\(1.40\ {\rm m^2}\)</span> surface area? Assume the animal’s skin temperature is <span class="math notranslate nohighlight">\(32.0^\circ{\rm C}\)</span>, the air temperature is <span class="math notranslate nohighlight">\(-5.00^\circ{\rm C}\)</span>, and fur has the same thermal conductivity as air.</p>
+<p>(b) What food intake will the animal need in one day to replace this heat transfer?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>(a) Cherry-red embers in a fireplace are at <span class="math notranslate nohighlight">\(850^\circ{\rm C}\)</span> and have an exposed area of <span class="math notranslate nohighlight">\(0.200\ {\rm m^2}\)</span> and an emissivity of <span class="math notranslate nohighlight">\(0.980\)</span>. The surrounding room has a temperature of <span class="math notranslate nohighlight">\(18.0^\circ{\rm C}\)</span>. If <span class="math notranslate nohighlight">\(50\%\)</span> of the radiant energy enters the room, what is the net rate of radiant heat transfer in kilowatts?</p>
+<p>(b) Does your answer support the contention that most of the heat transfer into a room by a fireplace comes from infrared radiation?</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "saturnaxis/CollegePhysics",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Chapter14"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat">Heat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-equivalent-of-heat">Mechanical Equivalent of Heat</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-change-and-heat-capacity">Temperature Change and Heat Capacity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-change-and-latent-heat">Phase Change and Latent Heat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-methods">Heat Transfer Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">Conduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">Convection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">Radiation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
