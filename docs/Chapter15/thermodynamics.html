@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter15/thermodynamics';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,58 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">14.1. The First Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-q-and-work-w">14.1.1. Heat <span class="math notranslate nohighlight">\(Q\)</span> and Work <span class="math notranslate nohighlight">\(W\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy-e-rm-int">14.1.2. Internal Energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#human-metabolism-and-the-first-law-of-thermodynamics">14.1.3. Human Metabolism and the First Law of Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-internal-energy-along-two-paths">14.1.4. Example Problem: Internal Energy Along Two Paths</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-processes-of-the-first-law-of-thermodynamics">14.2. Simple Processes of the First Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-diagrams-and-their-relationship-to-work-done-on-or-by-a-gas">14.2.1. <span class="math notranslate nohighlight">\(PV\)</span> Diagrams and their Relationship to Work Done on or by a Gas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reversible-processes">14.2.2. Reversible Processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-work-around-a-rectangular-gas-cycle">14.2.3. Example Problem: Work Around a Rectangular Gas Cycle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-second-law-of-thermodynamics">14.3. Introduction to the Second Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-engines">14.3.1. Heat Engines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-coal-plant-energy-balance-and-emissions">14.3.2. Example Problem: Coal-Plant Energy Balance and Emissions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-s-heat-engine-heat-pumps-and-refrigerators">14.4. Carnot’s Heat Engine, Heat Pumps, and Refrigerators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-pumps">14.4.1. Heat Pumps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#air-conditioners-and-refrigerators">14.4.2. Air Conditioners and Refrigerators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-carnot-limit-for-a-nuclear-power-plant">14.4.3. Example Problem: Carnot Limit for a Nuclear Power Plant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-maximum-heating-coefficient-of-performance">14.4.4. Example Problem: Maximum Heating Coefficient of Performance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-the-second-law-of-thermodynamics">14.5. Entropy and the Second Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-the-unavailability-to-do-work">14.5.1. Entropy and the Unavailability to Do Work</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-to-disorder">14.5.2. Order to Disorder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#life-evolution-and-the-second-law-of-thermodynamics">14.5.3. Life, Evolution, and the Second Law of Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-entropy-from-heat-flow-between-reservoirs">14.5.4. Example Problem: Entropy from Heat Flow Between Reservoirs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-lost-work-after-irreversible-heat-transfer">14.5.5. Example Problem: Lost Work After Irreversible Heat Transfer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-entropy-change-when-ice-melts">14.5.6. Example Problem: Entropy Change When Ice Melts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">14.6. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">14.6.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">14.6.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">14.7. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">14.7.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">14.7.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">14.7.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +551,1042 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="thermodynamics">
 <h1><span class="section-number">14. </span>Thermodynamics<a class="headerlink" href="#thermodynamics" title="Link to this heading">#</a></h1>
-<p>Aug 23, 2026 | 4 words | 0 min read</p>
+<p>Oct 28, 2026 | 10889 words | 73 min read</p>
+<div class="tip admonition">
+<p class="admonition-title">Chapter roadmap</p>
+<p>Thermodynamics connects heat transfer and work with changes in a system’s internal energy. It also explains why energy conservation alone cannot tell us which processes occur spontaneously or how efficiently an engine can operate.</p>
+<p>As you read, focus on three questions:</p>
+<ol class="arabic simple">
+<li><p>How do the system boundary and sign convention determine the energy balance?</p></li>
+<li><p>How do a process path and reservoir temperatures limit useful work?</p></li>
+<li><p>How does entropy distinguish reversible processes from irreversible ones?</p></li>
+</ol>
+<p>You will use these ideas to analyze gas cycles, heat engines, heat pumps, and changes in the availability of energy.</p>
+</div>
+<p>Heat transfer is energy in transit and can be used to do work.  But it can also be converted into other types of energy.  For example, a car engine burns fuel for heat transfer into a gas.  Work is done by the gas as it exerts a force through a distance, converting its energy into other forms including</p>
+<ul class="simple">
+<li><p>the car’s kinetic or gravitational potential energy,</p></li>
+<li><p>electrical energy to run the spark plugs, radio, and lights,</p></li>
+<li><p>back into stored energy in the car’s battery.</p></li>
+</ul>
+<p>Most of the heat transfer produced from burning fuel in the engine does not do work on the gas.  Rather the energy is released into the environment as heat, doing no useful work.</p>
+<section id="the-first-law-of-thermodynamics">
+<h2><span class="section-number">14.1. </span>The First Law of Thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Link to this heading">#</a></h2>
+<p>If we are interested in how heat transfer is converted into doing work, then we turn to the <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter07/work-energy.html#conservation-of-energy">conservation of energy</a>.</p>
+<div class="note admonition">
+<p class="admonition-title">The First law of Thermodynamics</p>
+<p>The <strong>first law of thermodynamics</strong> states that the change in the internal energy equals the net heat transfer into the system minus the net work done by the system.  Mathematically, this is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fc88af83-e333-47b8-9033-d4d5d57386c7">
+<span class="eqno">(14.1)<a class="headerlink" href="#equation-fc88af83-e333-47b8-9033-d4d5d57386c7" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta E_{\rm int} = Q - W,
+\end{align}\]</div>
+<p>which describes the change in the internal energy <span class="math notranslate nohighlight">\(\Delta E_{\rm int}\)</span>, the <em>net heat transferred into the system</em> <span class="math notranslate nohighlight">\(Q\)</span> (i.e., sum of all heat transfer into and out of the system), and the <em>net work done by the system</em> <span class="math notranslate nohighlight">\(W\)</span>.</p>
+</div>
+<p>The heat and work follow a sign convention given by:</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(Q &gt; 0\)</span>, then there is a net heat transfer into the system,</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(W &gt; 0\)</span>, then there is a net work done by the system.</p></li>
+</ul>
+<p>Positive <span class="math notranslate nohighlight">\(Q\)</span> adds energy to the system and positive <span class="math notranslate nohighlight">\(W\)</span> takes energy from the system.  If more energy comes in than is removed, the difference is stored as internal energy.  Heat engines are a good example, where heat transfer takes place so they can do work.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Static Figure</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-first-law-energy-conservation">
+<img alt="Two-panel illustration of the first law of thermodynamics. On the left, 100 J of heat enters a gas enclosed in a cylinder, causing the gas to expand and perform 60 J of work by raising a piston. A dashed boundary identifies the gas as the system. On the right, an energy-flow diagram shows that the remaining 40 J increases the internal energy of the gas." class="custom-wide-figure" src="../_images/first-law-thermodynamics-static.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.1 </span><span class="caption-text"><strong>Conservation of energy during gas expansion.</strong> In the left panel, <span class="math notranslate nohighlight">\(100\ {\rm J}\)</span> of heat enters the gas, which performs <span class="math notranslate nohighlight">\(60\ {\rm J}\)</span> of work by raising a piston. The dashed boundary identifies the gas as the thermodynamic system, while the heater, piston, and weight belong to the surroundings. The right panel illustrates the energy balance: the heat transferred into the system is divided between the work performed on the surroundings and the increase in internal energy. According to the first law, <span class="math notranslate nohighlight">\(\Delta E_{\rm int}=Q-W=40\ {\rm J}\)</span>. In this example, both <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are positive because heat enters the system and the gas performs work on its surroundings. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-1-the-first-law-of-thermodynamics">OpenStax, College Physics 2e, Figure 15.3</a>.</em></span><a class="headerlink" href="#fig-first-law-energy-conservation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Animation</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-first-law-thermodynamics-animation" style="width: 900px">
+<div class="output text_html">
+<video
+    src="../_static/videos/FirstLawThermodynamics.mp4"
+    poster="../_static/images/FirstLawThermodynamics_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    style="width: 100%; max-width: 900px; height: auto; display: block; margin: 0 auto;"
+    aria-label="Animation of the first law of thermodynamics. Heat enters a gas beneath a piston, causing the piston to rise and perform work. Animated energy bars show 100 joules of heat input divided into 60 joules of work and a 40-joule increase in internal energy.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 14.2 </span><span class="caption-text"><strong>First Law of Thermodynamics (Animation).</strong> Heat enters a gas confined beneath a movable piston. As the gas expands, it performs work by lifting a weight. The accompanying energy bars illustrate how an input of <span class="math notranslate nohighlight">\(100\ {\rm J}\)</span> is divided between <span class="math notranslate nohighlight">\(60\ {\rm J}\)</span> of work and a <span class="math notranslate nohighlight">\(40\ {\rm J}\)</span> increase in internal energy. The relationship <span class="math notranslate nohighlight">\(\Delta E_{\rm int}=Q-W\)</span> demonstrates conservation of energy.</span><a class="headerlink" href="#fig-first-law-thermodynamics-animation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="heat-q-and-work-w">
+<h3><span class="section-number">14.1.1. </span>Heat <span class="math notranslate nohighlight">\(Q\)</span> and Work <span class="math notranslate nohighlight">\(W\)</span><a class="headerlink" href="#heat-q-and-work-w" title="Link to this heading">#</a></h3>
+<p>Heat transfer <span class="math notranslate nohighlight">\(Q\)</span> and doing work <span class="math notranslate nohighlight">\(W\)</span> are the two everyday means of bringing energy into or removing energy from a system.  Heat transfer is driven by a temperature difference, where work involves a macroscopic force exerted through a distance. Heat and work produce the same result.  For example, both can cause a temperature increase.</p>
+<p>Heat transfer into a system can increase the temperature, where work can accomplish the same result.  For example, the Sun can warm the air in a tire while pumping air into the tire can warm it as well.  Once the temperature increase has occurred, it is impossible to tell which process (heat transfer or doing work) caused the temperature rise.  Both processes are energy in transit and both can change the internal energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span> of a system.</p>
+</section>
+<section id="internal-energy-e-rm-int">
+<h3><span class="section-number">14.1.2. </span>Internal Energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span><a class="headerlink" href="#internal-energy-e-rm-int" title="Link to this heading">#</a></h3>
+<p>The internal energy of a system can be represented in two (but consistent) ways.</p>
+<ol class="arabic simple">
+<li><p>The atomic and molecular view at incredibly small scales.  The internal energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span> of a system is the sum of the kinetic and potential energies of its atoms and molecules.</p></li>
+<li><p>The macroscopic characteristics, which are similar to the atomic and molecular average values.  Macroscopically, we define the change in the internal energy <span class="math notranslate nohighlight">\(\Delta E_{\rm int}\)</span> using the first law of thermodynamics.</p></li>
+</ol>
+<p>The internal energy of the system depends only on the state of the system and not <em>how it reached that state.</em>  The internal energy is found as a function of a few macroscopic quantities (e.g., pressure, volume, and temperature) independent of past history.  This independence means that if we know the state of a system, we can calculate the changes in its internal energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span> from a few macroscopic variables.</p>
+<p>Consider a system going from State 1 to State 2.  The system has internal energy <span class="math notranslate nohighlight">\(E_{\rm int}^1\)</span> in State 1 and it has internal energy <span class="math notranslate nohighlight">\(E_{\rm int}^2\)</span> in State 2, no matter how it arrived at either state.  The change in internal energy <span class="math notranslate nohighlight">\(\Delta E_{\rm int}\)</span> is path independent (recall doing work in a conservative system).</p>
+<p><em>Why is this independence important?</em></p>
+<p>Note that in the first law of thermodynamics both <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(W\)</span> <em>depend on the path</em> but <span class="math notranslate nohighlight">\(\Delta E_{\rm int}\)</span> does not.  This path independence means that internal energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span> is easier to determine than either heat transfer <span class="math notranslate nohighlight">\(Q\)</span> or work done <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<figure class="align-default" id="fig-first-law-energy-transfer-comparison">
+<img alt="Two energy-transfer processes involving a gas. Panel A shows heat and work entering and leaving the system. Panel B shows compression with heat loss. Both processes increase internal energy by 9 J." src="../_images/first_law_energy_transfers.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.3 </span><span class="caption-text"><strong>Different Energy Transfers, Same Internal-Energy Change.</strong>
+(a) Heat enters and leaves a gas while work is performed both on and by the system. (b) Work is performed on a gas while heat leaves it. In both cases, the first law of thermodynamics, <span class="math notranslate nohighlight">\(\Delta E_{\rm int}=Q-W\)</span>, gives an increase of <span class="math notranslate nohighlight">\(9\ {\rm J}\)</span> in internal energy. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-1-the-first-law-of-thermodynamics">OpenStax, College Physics 2e, Figure 15.4</a>.</em></span><a class="headerlink" href="#fig-first-law-energy-transfer-comparison" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="human-metabolism-and-the-first-law-of-thermodynamics">
+<h3><span class="section-number">14.1.3. </span>Human Metabolism and the First Law of Thermodynamics<a class="headerlink" href="#human-metabolism-and-the-first-law-of-thermodynamics" title="Link to this heading">#</a></h3>
+<p><strong>Human metabolism</strong> is (thermodynamically-speaking) the conversion of food into heat transfer, work, and stored fat.  We can use the first law to examine these activities under different conditions ranging from sleep to heavy exercise.  <em>What are some of the major characteristics of heat transfer, doing work, and energy in the body?</em></p>
+<p>Body temperature is normally kept constant by heat transfer to the surroundings, which means <span class="math notranslate nohighlight">\(Q &lt; 0\)</span>.  The body usually does work on the outside world, which means <span class="math notranslate nohighlight">\(W &gt; 0\)</span>.  In such situations, the body loses internal energy, since the change in internal energy is negative, or</p>
+<div class="math notranslate nohighlight">
+\[ \Delta E_{\rm int} = Q_{\rm body} - W_{\rm body} &lt; 0.\]</div>
+<p>Consider the effects of eating, which increases the internal energy of the body by adding chemical potential energy.  The body <em>metabolizes</em> all the food we consume through an oxidation process and the chemical potential energy is released.  This implies that food input is the form of work.  Food energy is reported using the <strong>C</strong>alorie (or <span class="math notranslate nohighlight">\(\rm kcal\)</span>).  This energy is measured by burning food in a calorimeter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A chemist or biochemist will use the unit <em>calorie</em>, which measures the energy (or heat transfer) needed to raise the temperature of <span class="math notranslate nohighlight">\(1\ {\rm g}\)</span> of pure water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  Nutritionists use the <em>Calorie</em>, which has a similar definition but uses the energy to raise <span class="math notranslate nohighlight">\(1\ {\rm kg}\)</span> of pure water by <span class="math notranslate nohighlight">\(1^\circ{\rm C}\)</span>.  As a result the dietary Calorie is equal to <span class="math notranslate nohighlight">\(1\ {\rm kcal}\)</span> (i.e., the chemist’s calorie).</p>
+</div>
+<p>Consider the internal energy the body has lost.  There are three places this internal energy can go:</p>
+<ol class="arabic simple">
+<li><p>to heat transfer,</p></li>
+<li><p>to doing work, and</p></li>
+<li><p>to stored fat.</p></li>
+</ol>
+<p>Heat transfer and doing work take energy out of the body, where food puts it back in.  If you eat just the right amount of food, then your average internal energy remains constant.  Whatever you lose to heat transfer and doing work is replaced by food, where you achieve equilibrium and <span class="math notranslate nohighlight">\(\Delta E_{\rm int} = 0\)</span>.</p>
+<p>If you overeat repeatedly (or otherwise have a hormonal imbalance), then <span class="math notranslate nohighlight">\(\Delta E_{\rm int}\)</span> is always positive, and your body stores this extra internal energy as fat.  The reverse is true if you eat too little or have a hormonal imbalance (in the opposite direction).  If <span class="math notranslate nohighlight">\(\Delta E_{\rm int}\)</span> is negative for a few days, then the body metabolizes its own fat to maintain body temperature and do work that takes energy from the body.  This thermodynamic process is responsible for how dieting can produce weight loss.</p>
+<p>The body stores fat or metabolizes it only if energy intake changes for a period of several days.  Your basal metabolic rate (BMR) is the rate at which food is converted into heat transfer and work done while the body is at complete rest.  The body adjusts its BMR to partially compensate for over- or under-eating.  The body will decrease the metabolic rate rather than eliminate its own fat to replace lost food intake.  As a result, the next diet (after a major one) is less successful because your body alters the way it responds to low energy intake.  You will chill more easily and feel less energetic as a result of the lower metabolic rate.</p>
+<p>Exercise helps to lose weight because it produces both heat transfer from your body and work, which raises your metabolic rate even when you are at rest.  Weight loss is also aided by the quite low efficiency of the body in converting internal energy to work, so that the loss of internal energy resulting from doing work is much greater than the work done.</p>
+<p>The body provides us with an excellent indication that many thermodynamic processes are <em>irreversible</em>.  An irreversible process can only go in one direction under a given set of conditions.  For example, body fat can be converted to do work and produce heat transfer, but heat transfer and doing work cannot be converted into stored fat.  Otherwise we could skip lunch by sunning ourselves outside (like a lizard or plant) or by walking down stairs.</p>
+<figure class="align-default" id="fig-energy-transfers-living-systems">
+<img alt="Two-panel illustration of energy transformations in living systems. Panel (a) shows a woman climbing stairs while holding an apple. Green identifies chemical energy supplied by food, red identifies heat released by the body, and blue identifies mechanical work. Panel (b) shows a sunflower. Gold identifies incoming sunlight, red identifies heat released to the surroundings, and green identifies chemical energy stored in sugars." src="../_images/biological_energy_realistic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.4 </span><span class="caption-text"><strong>Energy transformations in living systems through metabolism and photosynthesis.</strong> (a) The human body obtains chemical energy from food (green), which can be used to perform mechanical work (blue), such as climbing stairs, or transferred to the surroundings as heat (red). The first law of thermodynamics accounts for these energy transfers and any resulting change in the body’s internal energy. (b) During photosynthesis, plants absorb energy from sunlight (gold) and convert some of it into chemical energy stored in sugars (green). Some of the absorbed energy is also transferred to the surroundings as heat (red). Both processes illustrate the conservation of energy: energy is transformed or transferred rather than created or destroyed. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-1-the-first-law-of-thermodynamics">OpenStax, College Physics 2e, Figure 15.5</a>.</em></span><a class="headerlink" href="#fig-energy-transfers-living-systems" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-first-law-terms">
+<caption><span class="caption-number">Table 14.1 </span><span class="caption-text">Summary of Terms for the First Law of Thermodynamics, <span class="math notranslate nohighlight">\(\Delta E_{\rm int}=Q-W\)</span></span><a class="headerlink" href="#tab-first-law-terms" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Term</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(E_{\rm int}\)</span></p></td>
+<td><p><strong>Internal energy</strong>—the sum of the kinetic and potential energies of a system’s atoms and molecules. Can be divided into many subcategories, such as thermal and chemical energy. Depends only on the state of a system (such as its <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(V\)</span>, and <span class="math notranslate nohighlight">\(T\)</span>), not on how the energy entered the system. Change in internal energy is path independent.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q\)</span></p></td>
+<td><p><strong>Heat</strong>—energy transferred because of a temperature difference. Characterized by random molecular motion. Highly dependent on path. <span class="math notranslate nohighlight">\(Q\)</span> entering a system is positive.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(W\)</span></p></td>
+<td><p><strong>Work</strong>—energy transferred by a force moving through a distance. An organized, orderly process. Path dependent. <span class="math notranslate nohighlight">\(W\)</span> done by a system (either against an external force or to increase the volume of the system) is positive.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-1-the-first-law-of-thermodynamics">OpenStax, College Physics 2e, Table 15.1</a>.</em></p>
+</section>
+<section id="example-problem-internal-energy-along-two-paths">
+<h3><span class="section-number">14.1.4. </span>Example Problem: Internal Energy Along Two Paths<a class="headerlink" href="#example-problem-internal-energy-along-two-paths" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Internal Energy Along Two Paths</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>(a) A system absorbs <span class="math notranslate nohighlight">\(40\ {\rm J}\)</span> of heat and does <span class="math notranslate nohighlight">\(10\ {\rm J}\)</span> of work. It then releases <span class="math notranslate nohighlight">\(25\ {\rm J}\)</span> of heat while its surroundings do <span class="math notranslate nohighlight">\(4\ {\rm J}\)</span> of work on it. Find the total change in internal energy. (b) In a different process, a system releases <span class="math notranslate nohighlight">\(150\ {\rm J}\)</span> of heat while its surroundings do <span class="math notranslate nohighlight">\(159\ {\rm J}\)</span> of work on it. Find its change in internal energy. Treat all energy inputs as specified to the nearest joule.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We treat the material receiving heat and work as the system and apply the first law over each complete process. Heat entering the system is positive, and work done by the system is positive. Work done on the system therefore enters with a negative sign in the work term. Adding the transfers before applying the first law allows us to compare the internal-energy changes without assuming that the separate heat and work transfers are the same.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The net heat transfer is the heat absorbed minus the heat released, and the net work is the work done by the system minus the work done on it. Using positive magnitudes for these individual transfers gives the energy balance</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta E_{\rm int}=(Q_{\rm in}-Q_{\rm out})-(W_{\rm by}-W_{\rm on}).
+\]</div>
+<p class="sd-card-text">The specified transfers therefore produce the internal-energy change</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta E_{\rm int}=(40\ {\rm J}-25\ {\rm J})-(10\ {\rm J}-4\ {\rm J})=+9\ {\rm J}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Heat leaves the system and work enters it, so the same sign convention gives</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta E_{\rm int}=-Q_{\rm out}-(-W_{\rm on})=W_{\rm on}-Q_{\rm out}.
+\]</div>
+<p class="sd-card-text">Substituting the transfers for this process gives</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta E_{\rm int}=159\ {\rm J}-150\ {\rm J}=+9\ {\rm J}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The internal energy increases by <span class="math notranslate nohighlight">\(9\ {\rm J}\)</span> in each process. The positive signs are reasonable because the combined energy entering exceeds the energy leaving. Different heat and work transfers can produce the same internal-energy change; this alone does not establish that every other state variable is identical.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-1-the-first-law-of-thermodynamics">OpenStax, College Physics 2e, Example 15.1</a>.</em></p>
+</section>
+</section>
+<section id="simple-processes-of-the-first-law-of-thermodynamics">
+<h2><span class="section-number">14.2. </span>Simple Processes of the First Law of Thermodynamics<a class="headerlink" href="#simple-processes-of-the-first-law-of-thermodynamics" title="Link to this heading">#</a></h2>
+<p>We are interested in heat transfer because it is used to do work for us.  Such devices that do work using heat are called <strong>heat engines</strong>.  Car engines and steam turbines that generate electricity are examples of heat engines.</p>
+<figure class="align-default" id="fig-piston-heat-engine">
+<img alt="Two-panel illustration of a heat engine. Panel (a) shows a realistic piston-cylinder assembly heated by a burner beneath the cylinder. The heated gas expands, pushing the piston and turning a flywheel, while an exhaust pipe releases hot gases upward. Panel (b) shows a simplified heat-engine diagram. Red arrows indicate heat entering from below and leaving above, while a blue arrow represents mechanical work produced by the engine. The equations show that the change in internal energy over a complete cycle is zero and that work output equals heat input minus heat rejected." src="../_images/heat_engine_piston_two_panel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.5 </span><span class="caption-text"><strong>Energy transfers in a heat engine.</strong> (a) A burner transfers heat to gas inside a cylinder, increasing its temperature and pressure. As the gas expands, it pushes the piston, which transfers mechanical energy through a connecting rod to turn the flywheel. The exhaust pipe illustrates how hot gases carry energy away from the engine. (b) The simplified model represents the energy transfers over a complete engine cycle. Heat enters the engine from below (<span class="math notranslate nohighlight">\(Q_{\rm in}\)</span>, red arrow), while some energy is rejected to the surroundings (<span class="math notranslate nohighlight">\(Q_{\rm out}\)</span>, red arrow). The remaining energy is converted into useful mechanical work (<span class="math notranslate nohighlight">\(W\)</span>, blue arrow). Because the engine returns to its initial state after each complete cycle, its net change in internal energy is zero, giving <span class="math notranslate nohighlight">\(W=Q_{\rm in}-Q_{\rm out}\)</span>. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Figures 15.7 and 15.8</a>.</em></span><a class="headerlink" href="#fig-piston-heat-engine" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Fuel combustion produces heat transfer to a gas in a cylinder, which increases the pressure of the gas and thereby the force it exerts on a movable piston.</p></li>
+<li><p>The gas does work on the outside world, as this force moves the piston through some distance.</p></li>
+<li><p>Heat transfer to the gas cylinder results in work being done.  To repeat this process, the piston needs to return to its starting position.</p></li>
+<li><p>Heat transfer occurs from the gas to the surroundings so that its pressure decreases, and force is exerted by the surroundings to push the piston back through some distance.</p></li>
+</ul>
+<figure class="align-default" id="fig-piston-heat-engine-cycle">
+<img alt="Three-panel illustration of a piston heat engine, with an exhaust outlet on top of each cylinder. Panel (a) shows heat entering the gas while the piston remains stationary. Panel (b) shows the expanding gas pushing the piston to the right and doing work. Panel (c) shows heat leaving the gas and a smaller force pushing the piston back to the left. Red arrows represent heat transfer, while blue arrows represent mechanical forces and work." src="../_images/piston_cycle_three_panel_annotated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.6 </span><span class="caption-text"><strong>Heat transfer and mechanical work in a simplified piston-engine cycle.</strong> (a) Heat transfer <span class="math notranslate nohighlight">\(Q_{\rm in}\)</span> increases the internal energy of the gas while the piston remains stationary, raising its temperature and pressure. The gas exerts a force <span class="math notranslate nohighlight">\(F=PA\)</span> on the piston, where <span class="math notranslate nohighlight">\(P\)</span> is the pressure and <span class="math notranslate nohighlight">\(A\)</span> is the piston’s cross-sectional area. (b) The expanding gas pushes the piston through a distance <span class="math notranslate nohighlight">\(d\)</span>, performing work <span class="math notranslate nohighlight">\(W_{\rm out}=Fd\)</span> on its surroundings. Assuming no additional heat transfer during this expansion, the work comes from the gas’s internal energy, causing its temperature and pressure to decrease. (c) Heat transfer <span class="math notranslate nohighlight">\(Q_{\rm out}\)</span> removes additional energy from the gas, further reducing its pressure. Consequently, a smaller opposing force <span class="math notranslate nohighlight">\(F'&lt;F\)</span> can return the piston to its initial position, requiring an input of work <span class="math notranslate nohighlight">\(W_{\rm in}=F'd\)</span>. Red arrows indicate heat transfer into or out of the system, while blue arrows indicate mechanical forces and work. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Figure 15.8</a>.</em></span><a class="headerlink" href="#fig-piston-heat-engine-cycle" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="pv-diagrams-and-their-relationship-to-work-done-on-or-by-a-gas">
+<h3><span class="section-number">14.2.1. </span><span class="math notranslate nohighlight">\(PV\)</span> Diagrams and their Relationship to Work Done on or by a Gas<a class="headerlink" href="#pv-diagrams-and-their-relationship-to-work-done-on-or-by-a-gas" title="Link to this heading">#</a></h3>
+<p>An <strong>isobaric process</strong> is one where a gas does work on a piston at <em>constant</em> pressure.  The force exerted is constant and the work done is given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d16896bd-1a2e-4b35-af86-fe3b5713b61e">
+<span class="eqno">(14.2)<a class="headerlink" href="#equation-d16896bd-1a2e-4b35-af86-fe3b5713b61e" title="Permalink to this equation">#</a></span>\[\begin{align}
+W &amp;= Fd = (PA)d = P(Ad), \\
+  &amp;= P\Delta V.
+\end{align}\]</div>
+<figure class="align-default" id="fig-isobaric-piston-expansion">
+<img alt="Realistic transparent cylinder containing a movable piston and a pale-blue gas. A red arrow shows heat entering the gas from a burner, while a blue arrow represents the upward force exerted by the gas. A dashed ellipse marks the piston's initial position, and a double-headed arrow indicates its upward displacement d. Labels identify the piston's cross-sectional area A, the gas volume V, and the relationship between work and volume change." src="../_images/isobaric_expansion_annotated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.7 </span><span class="caption-text"><strong>Work done by a gas during isobaric expansion.</strong> Heat transfer <span class="math notranslate nohighlight">\(Q_{\rm in}\)</span> increases the internal energy of the gas, allowing it to expand while maintaining a constant pressure. The gas exerts an upward force <span class="math notranslate nohighlight">\(F=PA\)</span> on the piston, where <span class="math notranslate nohighlight">\(P\)</span> is the gas pressure and <span class="math notranslate nohighlight">\(A\)</span> is the piston’s cross-sectional area. As the piston moves upward through a distance <span class="math notranslate nohighlight">\(d\)</span>, its initial position (dashed ellipse) and final position define a change in volume <span class="math notranslate nohighlight">\(\Delta V=Ad\)</span>. The work performed by the expanding gas is therefore <span class="math notranslate nohighlight">\(W_{\rm out}=Fd=PAd=P\Delta V\)</span>. The red arrow represents heat entering the system, while the blue arrow represents the upward force exerted by the gas on the piston. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Figure 15.9</a>.</em></span><a class="headerlink" href="#fig-isobaric-piston-expansion" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Because the volume of a cylinder is its cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> times its length <span class="math notranslate nohighlight">\(d\)</span>, we see that <span class="math notranslate nohighlight">\(Ad = \Delta V\)</span>, the change in volume.  If <span class="math notranslate nohighlight">\(\Delta V &gt; 0\)</span>, then <span class="math notranslate nohighlight">\(W&gt;0\)</span> which means that work is done by the gas on the outside world.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Many texts use a different definition of work, where it is defined as the work against the <em>external</em> pressure <span class="math notranslate nohighlight">\(P_{\rm ext}\)</span>, where the above definition of <span class="math notranslate nohighlight">\(P\)</span> describes the <em>internal</em> pressure.  Under this alternate definition, we have</p>
+<div class="math notranslate nohighlight">
+\[ W = -P_{\rm ext}\Delta V\]</div>
+<p>for an isobaric process.  This changes the definition of the First Law of Thermodynamics by reversing the sign conventions for work resulting in</p>
+<div class="math notranslate nohighlight">
+\[ \Delta E_{\rm int} = Q+W. \]</div>
+</div>
+<p>Recall from our treatment of <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter12/fluid-dynamics.html#bernoulli-s-equation">fluids</a> that pressure is a type of energy per unit volume and that pressure has units of energy divided by volume.  Also the <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter13/temperature-gases.html#the-ideal-gas-law">ideal gas law</a> has <span class="math notranslate nohighlight">\(PV\)</span>, which has units of energy.</p>
+<p>A <span class="math notranslate nohighlight">\(PV\)</span> diagram illustrates an isobaric process as a horizontal line because the pressure is constant while the volume changes.  The work done is the area under the curve, which is generally applicable regardless if the pressure is constant.</p>
+<figure class="align-default" id="fig-pv-work-diagrams">
+<img alt="Three pressure-volume diagrams illustrating thermodynamic work. (a) Isobaric expansion at constant pressure, with the shaded rectangular area representing work. (b) Expansion at varying pressure, with rectangular strips approximating the area under the pressure-volume curve. (c) Compression along the reverse path, with the shaded area representing negative work done by the gas." src="../_images/pv_three_panels.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.8 </span><span class="caption-text">Work done by or on a gas can be determined from the area under a pressure-volume (<span class="math notranslate nohighlight">\(PV\)</span>) curve. (a) For an isobaric process, pressure remains constant as the gas expands from A to B, and the work done by the gas is <span class="math notranslate nohighlight">\(W=P\Delta V\)</span>. (b) When pressure varies with volume, the work done during expansion is the sum of the contributions from small volume intervals, <span class="math notranslate nohighlight">\(W_{\rm out}=\sum_i P_{i,\rm ave}\Delta V_i\)</span>, approaching the total area under the curve as the intervals become smaller. (c) Reversing the process from B to A corresponds to compression, for which the work done by the gas is negative, <span class="math notranslate nohighlight">\(W_{\rm in}=-W_{\rm out}\)</span>, for the same path. <em>Combined and adapted from: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Figures 15.10 and 15.11</a>. The original isobaric diagram (Figure 15.10) and the two variable-pressure diagrams (Figure 15.11a,b) have been redrawn and arranged into a single three-panel figure.</em></span><a class="headerlink" href="#fig-pv-work-diagrams" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Work is also the area under the curve for a general process where both pressure and volume change.  We can approximate the area under the curve for a more complicated change in pressure by dividing it into vertical strips, each having an average constant pressure <span class="math notranslate nohighlight">\(P_{i({\rm ave})}\)</span>.  The work done by an individual strip is given by</p>
+<div class="math notranslate nohighlight">
+\[ W_i = P_{i({\rm ave})}\Delta V_i \]</div>
+<p>and the total work done is the sum of <span class="math notranslate nohighlight">\(W_i\)</span>, or <span class="math notranslate nohighlight">\(W = \sum W_i\)</span>.  The total work is the total area under the curve.  If the path is reversed, then work is done on the system (instead of by the system) as denoted by a negative area because <span class="math notranslate nohighlight">\(\Delta V &lt;0 \)</span>.</p>
+<p><span class="math notranslate nohighlight">\(PV\)</span> diagrams clearly illustrate that the <em>work done depends on the path taken and not just the endpoints.</em>  The vertical paths on a <span class="math notranslate nohighlight">\(PV\)</span> diagram are called <strong>isochoric</strong> processes where the volume is constant <span class="math notranslate nohighlight">\(\Delta V = 0\)</span> and no work is done (i.e., similar to no displacement).  If the system follows a cyclical path, then the work done is the area inside the loop.  In general, the work done is the area inside a (square) loop on a <span class="math notranslate nohighlight">\(PV\)</span> diagram.  When the loop is traversed in the clockwise direction, then the work is positive, or a net work output.</p>
+<figure class="align-default" id="fig-pv-work-cycles">
+<img alt="Three side-by-side pressure-volume diagrams illustrating thermodynamic work. Panel (a) compares two paths from A to C, with the upper path producing more work than the lower path. Panel (b) shows a clockwise rectangular cycle with two pressure levels and a volume change of 500 cubic centimeters. Panel (c) shows a clockwise elliptical cycle whose enclosed area represents the net work done by the gas. Arrows indicate the direction of each process." src="../_images/pv_diagrams_three_panel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.9 </span><span class="caption-text"><strong>Work done by a gas during thermodynamic processes.</strong> The work performed by a gas depends on the path followed on a pressure-volume (<span class="math notranslate nohighlight">\(PV\)</span>) diagram. (a) Two different paths connect states A and C. Along path ABC, the gas expands at a higher pressure than along path ADC, so <span class="math notranslate nohighlight">\(W_{ABC}&gt;W_{ADC}\)</span>. Horizontal segments represent isobaric processes (constant pressure), while vertical segments represent isochoric processes (constant volume), during which no work is performed. (b) A clockwise rectangular cycle illustrates expansion at a higher pressure followed by compression at a lower pressure. The net work performed by the gas is positive and equals the shaded area enclosed by the cycle. (c) For a general cyclic process, the net work is also equal to the area enclosed by the <span class="math notranslate nohighlight">\(PV\)</span> curve. A clockwise cycle produces positive net work, while a counterclockwise cycle requires net work to be done on the gas. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Figure 15.12</a>.</em></span><a class="headerlink" href="#fig-pv-work-cycles" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A <span class="math notranslate nohighlight">\(PV\)</span> diagram can show two other important processes: <strong>isothermal</strong> and <strong>adiabatic</strong> processes.  An <em>isothermal</em> process is one in which the temperature is kept constant.  If the gas behaves like an ideal gas and if no phase change occurs, then <span class="math notranslate nohighlight">\(PV = nRT\)</span>.  For an isothermal process, <span class="math notranslate nohighlight">\(PV = \text{constant}\)</span> since the temperature <span class="math notranslate nohighlight">\(T\)</span> is constant.  Normally, we expect the temperature of a gas to decrease as it expands and suspect that heat transfer must occur from the surroundings to the gas to keep the temperature constant during an isothermal expansion.</p>
+<figure class="align-default" id="fig-isothermal-adiabatic-pv-processes">
+<img alt="Two side-by-side pressure-volume diagrams comparing isothermal and adiabatic processes. Panel (a) shows two expansion paths from state A: an isothermal path to B and an adiabatic path to C. Panel (b) shows a complete clockwise cycle from A to B to C and back to A, with arrows indicating the direction of each process." src="../_images/pv_isothermal_adiabatic_two_panel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.10 </span><span class="caption-text"><strong>Comparison of isothermal and adiabatic processes on pressure–volume diagrams.</strong> (a) A gas expands from state A along two possible paths. During isothermal expansion (teal curve), the temperature remains constant as heat enters the gas, allowing it to reach state B. During adiabatic expansion (purple curve), no heat is exchanged, so the temperature decreases and the gas reaches state C at a lower pressure. The area under each curve represents the work performed by the gas during expansion. (b) The gas undergoes a complete thermodynamic cycle consisting of isothermal expansion from A to B, isochoric cooling from B to C, and adiabatic compression from C back to A. The net work performed by the gas equals the shaded area enclosed between the two curves. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Figure 15.14</a>.</em></span><a class="headerlink" href="#fig-isothermal-adiabatic-pv-processes" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Consider the special case of a monatomic (single element) ideal gas, where we know that the average kinetic energy of an atom in such a gas is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-28a4c5a2-0797-4472-9715-fcb37e6dc1f4">
+<span class="eqno">(14.3)<a class="headerlink" href="#equation-28a4c5a2-0797-4472-9715-fcb37e6dc1f4" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}m\overline{v^2} = \frac{3}{2}kT,
+\end{align}\]</div>
+<p>from <a class="reference external" href="https://saturnaxis.github.io/CollegePhysics/Chapter13/temperature-gases.html#kinetic-theory">kinetic theory</a>.  The kinetic energy of the atoms in a monatomic ideal gas is its only form of internal energy, and so the internal energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span> is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1b04194f-fd46-4171-899b-84c5dea41243">
+<span class="eqno">(14.4)<a class="headerlink" href="#equation-1b04194f-fd46-4171-899b-84c5dea41243" title="Permalink to this equation">#</a></span>\[\begin{align}
+E_{\rm int} = N\frac{1}{2}m\overline{v^2} = \frac{3}{2}NkT, \quad \text{(monatomic ideal gas)}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> is the number of atoms in the gas.  This relationship means that the internal energy of an ideal monatomic gas is constant during an isothermal process (i.e., <span class="math notranslate nohighlight">\(\Delta E_{\rm int} = 0\)</span>).  If the internal energy does not change, then the net heat transfer into the gas must <em>equal the net work done by the gas.</em>  Mathematically we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Delta E_{\rm int} &amp;= Q - W = 0, \quad \text{isothermal process}\\
+Q&amp;= W.
+\end{align*}\]</div>
+<p>We have just enough heat transfer to replace the work done.  An isothermal process is inherently slow because heat transfer occurs continuously to keep the gas temperature constant at all times and must be allowed to spread through the gas so that there are no hot or cold regions.</p>
+<p>An <em>adiabatic</em> process is one in which there is no heat transfer (i.e., <span class="math notranslate nohighlight">\(Q=0\)</span>).  Processes that are nearly adiabatic can be achieved either by using very effective insulation or by performing the process so fast that there is little time for heat transfer.  Temperature must decrease during an adiabatic process, since work is done at the expense of internal energy:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-93994ca2-e132-4a0f-ad8e-3e207b7426db">
+<span class="eqno">(14.5)<a class="headerlink" href="#equation-93994ca2-e132-4a0f-ad8e-3e207b7426db" title="Permalink to this equation">#</a></span>\[\begin{align}
+E_{\rm int} = \frac{3}{2}NkT.
+\end{align}\]</div>
+<p>Since there is no heat transfer (<span class="math notranslate nohighlight">\(Q=0\)</span>), this means that the change in the internal energy is the negative of the work (<span class="math notranslate nohighlight">\(\Delta E_{\rm int}=-W\)</span>) for an adiabatic process.  Lower temperature results in lower pressure along the way.  Figure <a class="reference internal" href="#fig-isothermal-adiabatic-pv-processes"><span class="std std-numref">14.10</span></a> shows this by the AC curve, where it is lower than the curve AB and less work is done.  If a full cycle is achieved (e.g., ABCA), where the gas follows an isothermal, isochoric, and adiabatic process, then there would be a net work output (i.e., closed loop).</p>
+</section>
+<section id="reversible-processes">
+<h3><span class="section-number">14.2.2. </span>Reversible Processes<a class="headerlink" href="#reversible-processes" title="Link to this heading">#</a></h3>
+<p>Both isothermal and adiabatic processes are reversible, in principle.  A <strong>reversible process</strong> is one in which both the system and its environment can return to exactly the states they were in by following the reverse path.  The reverse isothermal and adiabatic paths in Fig. <a class="reference internal" href="#fig-isothermal-adiabatic-pv-processes"><span class="std std-numref">14.10</span></a> are BA and CA, respectively.  Real macroscopic processes are never exactly reversible.</p>
+<p>For a piston-cylinder system, the system is the gas while the environment is the piston, cylinder, and the rest of the universe.  If there are any energy-dissipating mechanisms (e.g., friction or turbulence) then heat transfer to the environment occurs for either direction of the piston.  If the path BA is followed and there is friction, then the gas will be returned to its original state, but the environment will not.  The environment will have been heated in both directions.  <em>Reversibility requires the direction of heat transfer to reverse for the reverse path.</em>  Since dissipative mechanisms cannot be completely eliminated, real processes cannot be reversible.</p>
+<p>There must be reasons that real macroscopic processes cannot be reversible.  Heat transfer occurs spontaneously from hot to cold, and never spontaneously in the reverse.  It would not violate the first law of thermodynamics for this to happen.  All spontaneous processes (e.g., bubbles bursting) never go in reverse.  There is a second law of thermodynamics that forbids them from going in reverse.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-simple-thermodynamic-processes">
+<caption><span class="caption-number">Table 14.2 </span><span class="caption-text">Summary of Simple Thermodynamic Processes</span><a class="headerlink" href="#tab-simple-thermodynamic-processes" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Isobaric</strong></p></td>
+<td><p>Constant pressure: <span class="math notranslate nohighlight">\(W = P\Delta V\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Isochoric</strong></p></td>
+<td><p>Constant volume: <span class="math notranslate nohighlight">\(W = 0\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Isothermal</strong></p></td>
+<td><p>Constant temperature: <span class="math notranslate nohighlight">\(Q = W\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Adiabatic</strong></p></td>
+<td><p>No heat transfer: <span class="math notranslate nohighlight">\(Q = 0\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Table 15.2</a>.</em></p>
+</section>
+<section id="example-problem-work-around-a-rectangular-gas-cycle">
+<h3><span class="section-number">14.2.3. </span>Example Problem: Work Around a Rectangular Gas Cycle<a class="headerlink" href="#example-problem-work-around-a-rectangular-gas-cycle" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Work Around a Rectangular Gas Cycle</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A gas follows the clockwise rectangular cycle ABCDA in panel (b) of the figure below. It expands along AB at <span class="math notranslate nohighlight">\(1.50\times10^6\ {\rm Pa}\)</span> through a volume increase of <span class="math notranslate nohighlight">\(5.00\times10^{-4}\ {\rm m^3}\)</span>, cools at constant volume along BC, compresses along CD at <span class="math notranslate nohighlight">\(2.00\times10^5\ {\rm Pa}\)</span> to its original volume, and returns to A at constant volume. (a) Find the work on each leg and the net work done by the gas. (b) Verify the net work using the enclosed area. Use three significant figures.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-rectangular-cycle">
+<img alt="Pressure-volume diagrams comparing paths and cycles; panel (b) is the rectangular cycle ABCDA used in this example." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/23044d09b65e2011062a407e29e90a71b956cffb" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.11 </span><span class="caption-text"><strong>Paths and work on a pressure–volume diagram.</strong> Panel (b) supplies the rectangular cycle; horizontal legs change volume, while vertical legs keep volume fixed. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, <em>College Physics 2e</em>, Figure 15.12</a>.</span><a class="headerlink" href="#fig-example-rectangular-cycle" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The gas is the system, and work done by the gas is positive. Only the horizontal legs contribute pressure-volume work because the piston does not move during either constant-volume leg. Expansion occurs at the higher pressure and compression at the lower pressure, so we expect a positive net work output. The area of the rectangle provides an independent geometric way to evaluate that output.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> We denote the upper and lower pressures by <span class="math notranslate nohighlight">\(P_{\rm H}\)</span> and <span class="math notranslate nohighlight">\(P_{\rm L}\)</span> and the positive volume increase by <span class="math notranslate nohighlight">\(\Delta V\)</span>. Constant-pressure work then gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+W_{AB}&amp;=P_{\rm H}\Delta V,\\
+W_{CD}&amp;=-P_{\rm L}\Delta V.
+\end{align*}\]</div>
+<p class="sd-card-text">The two vertical legs have no volume change, so <span class="math notranslate nohighlight">\(W_{BC}=W_{DA}=0\)</span>. Adding all four contributions gives</p>
+<div class="math notranslate nohighlight">
+\[
+W_{\rm net}=(P_{\rm H}-P_{\rm L})\Delta V.
+\]</div>
+<p class="sd-card-text">The given pressures and volume interval determine the nonzero contributions as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+W_{AB}&amp;=(1.50\times10^6\ {\rm Pa})(5.00\times10^{-4}\ {\rm m^3})=7.50\times10^2\ {\rm J},\\
+W_{CD}&amp;=-(2.00\times10^5\ {\rm Pa})(5.00\times10^{-4}\ {\rm m^3})=-1.00\times10^2\ {\rm J}.
+\end{align*}\]</div>
+<p class="sd-card-text">Their sum is the net work done in one cycle,</p>
+<div class="math notranslate nohighlight">
+\[
+W_{\rm net}=7.50\times10^2\ {\rm J}-1.00\times10^2\ {\rm J}=6.50\times10^2\ {\rm J}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The rectangle’s height is the pressure difference and its width is the volume interval, so its area represents the work</p>
+<div class="math notranslate nohighlight">
+\[
+W_{\rm area}=(P_{\rm H}-P_{\rm L})\Delta V.
+\]</div>
+<p class="sd-card-text">Evaluating this area independently gives</p>
+<div class="math notranslate nohighlight">
+\[
+W_{\rm area}=(1.50\times10^6-2.00\times10^5)\ {\rm Pa}\,(5.00\times10^{-4}\ {\rm m^3})=6.50\times10^2\ {\rm J}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Both methods give <span class="math notranslate nohighlight">\(6.50\times10^2\ {\rm J}\)</span> of net work done by the gas per cycle. The positive result agrees with the clockwise direction: expansion at high pressure delivers more work than compression at low pressure requires. Pressure times volume has units of joules, as required.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-2-the-first-law-of-thermodynamics-and-some-simple-processes">OpenStax, College Physics 2e, Example 15.2</a>.</em></p>
+</section>
+</section>
+<section id="introduction-to-the-second-law-of-thermodynamics">
+<h2><span class="section-number">14.3. </span>Introduction to the Second Law of Thermodynamics<a class="headerlink" href="#introduction-to-the-second-law-of-thermodynamics" title="Link to this heading">#</a></h2>
+<p>The second law of thermodynamics deals with the direction taken by spontaneous processes.  Many processes occur spontaneously in <em>one direction only</em> (i.e., they are irreversible).  Although irreversibility is seen in day-to-day life (e.g., broken glass does not become unbroken spontaneously), complete irreversibility is a statistical statement that cannot be seen during the lifetime of the universe.  An <strong>irreversible process</strong> is one that depends on the path.</p>
+<p>If the process can go only in one direction, then the reverse path differs fundamentally and the process cannot be reversible.  For example, heat involves the transfer of energy from higher to lower temperature.  A cold object in contact with a hot one never gets colder, which would require transferring heat to the hot object and making it hotter.  Kinetic energy can be completely converted into thermal energy by friction, but the reverse is impossible.  The expansion of a puff of gas introduced into one corner of a vacuum chamber expands to fill the chamber.  It never regroups in the corner.  The random motion of the gas molecules could take them back to the corner, but this is never observed to happen.</p>
+<figure class="align-default" id="fig-irreversible-thermodynamic-processes">
+<img alt="Three-panel illustration of irreversible thermodynamic processes. Panel (a) shows heat flowing from a hot copper block to a colder metal block. Panel (b) shows a moving car braking to a stop, with thermal energy released from the heated brakes. Panel (c) shows a localized puff of gas spreading throughout a vacuum chamber until it becomes uniformly distributed." src="../_images/irreversible_processes_three_panel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.12 </span><span class="caption-text"><strong>Examples of irreversible thermodynamic processes.</strong> (a) Heat transfers spontaneously from a hotter object to a colder object when they are in thermal contact. The arrow indicates the direction of heat transfer, <span class="math notranslate nohighlight">\(Q\)</span>, from hot to cold. (b) A moving car slows to a stop as friction in its brakes converts kinetic energy into thermal energy. The brakes become warmer, and heat is subsequently transferred to the surroundings. The reverse process, in which thermal energy spontaneously causes the stationary car to accelerate, does not occur. (c) A localized puff of gas released into an evacuated chamber spontaneously expands until the gas becomes approximately uniformly distributed throughout the available volume. Although the molecules continue moving randomly, they do not spontaneously regroup in their original location. These examples illustrate processes that naturally proceed in one direction, consistent with the second law of thermodynamics. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency">OpenStax, College Physics 2e, Figure 15.16</a>.</em></span><a class="headerlink" href="#fig-irreversible-thermodynamic-processes" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">The Second Law of Thermodynamics</p>
+<p><strong>First Expression</strong></p>
+<blockquote>
+<div><p>Heat transfer occurs spontaneously from higher- to lower-temperature bodies but never spontaneously in the reverse direction.</p>
+</div></blockquote>
+<p><strong>Second Expression</strong></p>
+<blockquote>
+<div><p>It is impossible in any system for heat transfer from a reservoir to completely convert to work in a cyclical process in which the system returns to its initial state.</p>
+</div></blockquote>
+</div>
+<section id="heat-engines">
+<h3><span class="section-number">14.3.1. </span>Heat Engines<a class="headerlink" href="#heat-engines" title="Link to this heading">#</a></h3>
+<p>Consider a device that uses heat transfer to do work, which is called a <em>heat engine</em>.  Heat transfer from the hot object (or hot reservoir) is denoted as <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span>, while heat transfer into the cold object (or cold reservoir) is <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span>, and the work done by the engine is <span class="math notranslate nohighlight">\(W\)</span>.  The temperatures of the hot and cold reservoirs are <span class="math notranslate nohighlight">\(T_{\rm h}\)</span> and <span class="math notranslate nohighlight">\(T_{\rm c}\)</span>, respectively.</p>
+<figure class="align-default" id="fig-second-law-heat-flow-engine">
+<img alt="Two-panel illustration comparing spontaneous heat transfer and a heat engine. Panel (a) shows heat flowing upward from a hot copper block to a colder metal block, alongside a simplified diagram with a hot reservoir below a cold reservoir. Panel (b) shows a realistic piston heat engine heated from below, with waste heat exiting through an upper exhaust and mechanical work delivered to the right. A corresponding energy-flow diagram shows heat input Q_h, rejected heat Q_c, and useful work W." src="../_images/second_law_heat_flow_engine_two_panel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.13 </span><span class="caption-text"><strong>Spontaneous heat transfer and the operation of a heat engine.</strong> (a) Thermal energy naturally transfers from a hot reservoir at temperature <span class="math notranslate nohighlight">\(T_h\)</span> to a colder reservoir at temperature <span class="math notranslate nohighlight">\(T_c\)</span>, as indicated by the upward arrow <span class="math notranslate nohighlight">\(Q\)</span>. The reverse transfer does not occur spontaneously. (b) A heat engine uses part of the thermal energy received from a hot reservoir to perform mechanical work. Heat input <span class="math notranslate nohighlight">\(Q_h\)</span> enters the engine from below, while some energy is rejected to the colder surroundings as <span class="math notranslate nohighlight">\(Q_c\)</span> through the upper exhaust. The remaining energy is converted into useful work <span class="math notranslate nohighlight">\(W\)</span>. For a complete thermodynamic cycle, conservation of energy gives <span class="math notranslate nohighlight">\(W=Q_h-Q_c\)</span>. The simplified diagrams illustrate the direction of energy transfer, with red arrows representing heat transfer and blue arrows representing mechanical work. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency">OpenStax, College Physics 2e, Figure 15.16</a>.</em></span><a class="headerlink" href="#fig-second-law-heat-flow-engine" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Because the hot reservoir is heated externally, it is important that the work is done as efficiently as possible.  We would like <span class="math notranslate nohighlight">\(W\)</span> to equal <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span> and there to be no heat transfer to the environment (i.e., <span class="math notranslate nohighlight">\(Q_{\rm c}=0\)</span>).  Unfortunately, this is impossible due to the second law of thermodynamics.</p>
+<p>A <strong>cyclical</strong> process brings a system (e.g., gas in a cylinder) back to its original state at the end of every cycle. Most heat engines use cyclical processes, such as reciprocating piston engines and rotating turbines.  The second law of thermodynamics clearly states that such engines cannot have perfect conversion of heat transfer into work done.</p>
+<p>We can show the conditions for a cyclical process in terms of <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span>, and <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span>.  If the system returns to its initial state, then the change in the internal energy is zero, <span class="math notranslate nohighlight">\(\Delta E_{\rm int}=0\)</span>.  From the first law of thermodynamics, we have</p>
+<div class="math notranslate nohighlight">
+\[ \Delta E_{\rm int} = Q - W, \]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the net heat transfer during the cycle (<span class="math notranslate nohighlight">\(Q = Q_{\rm h}-Q_{\rm c}\)</span>) and <span class="math notranslate nohighlight">\(W\)</span> is the net work done by the system.  Since <span class="math notranslate nohighlight">\(\Delta E_{\rm int} = 0\)</span> for a complete cycle, we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+0 &amp;= Q-W, \\
+Q &amp;= W.
+\end{align*}\]</div>
+<p>Then the net work done by the system equals the net heat transfer into the system, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5e954263-79bb-403c-ab26-7dc99a844db3">
+<span class="eqno">(14.6)<a class="headerlink" href="#equation-5e954263-79bb-403c-ab26-7dc99a844db3" title="Permalink to this equation">#</a></span>\[\begin{align}
+W = Q_{\rm h} - Q_{\rm c}. \quad \text{(cyclical process)}
+\end{align}\]</div>
+<p>In the conversion of energy to work, we are faced with the problem of getting less out than we put in.  We define the conversion efficiency <span class="math notranslate nohighlight">\(\eta\)</span> as the ratio of useful work output <span class="math notranslate nohighlight">\(W\)</span> to the energy input <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span>, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f23e0ec6-45e0-42ef-88e2-72ac9cb85a1b">
+<span class="eqno">(14.7)<a class="headerlink" href="#equation-f23e0ec6-45e0-42ef-88e2-72ac9cb85a1b" title="Permalink to this equation">#</a></span>\[\begin{align}
+\eta = \frac{W}{Q_{\rm h}}.
+\end{align}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(W = Q_{\rm h} - Q_{\rm c}\)</span> in a cyclical process, we can also express this as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2c2c55f1-5495-44a1-9427-4b22c10aa40c">
+<span class="eqno">(14.8)<a class="headerlink" href="#equation-2c2c55f1-5495-44a1-9427-4b22c10aa40c" title="Permalink to this equation">#</a></span>\[\begin{align}
+\eta = \frac{Q_{\rm h}-Q_{\rm c}}{Q_{\rm h}} = 1 - \frac{Q_{\rm c}}{Q_{\rm h}}, \quad \text{(cyclical process)}
+\end{align}\]</div>
+<p>which shows that an efficiency of <span class="math notranslate nohighlight">\(\eta = 1\)</span> (or <span class="math notranslate nohighlight">\(100\%\)</span>) is possible only if there is no heat transfer to the environment or <span class="math notranslate nohighlight">\(Q_{\rm c}=0\)</span>.  Note that <span class="math notranslate nohighlight">\(Q_{\rm h}&gt;0\)</span> and <span class="math notranslate nohighlight">\(Q_{\rm c} &gt;0\)</span>.  The direction of the heat transfer is indicated by a plus or minus sign.</p>
+<p>The <strong>Otto cycle</strong> is used in four-stroke internal combustion engines (ICEs), although the true Otto-cycle paths do not correspond exactly to the strokes of the engine.</p>
+<ol class="arabic simple">
+<li><p>The adiabatic process AB corresponds to the nearly adiabatic <em>compression</em> stroke of the gasoline engine.  In both cases, work is done on the system (i.e., the gas mixture in the cylinder), increasing its temperature and pressure.</p></li>
+<li><p>Along the path BC, heat transfer <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span> into the gas occurs at constant volume, causing a further increase in pressure and temperature.  This process corresponds to burning fuel in an ICE, and takes place so rapidly that the volume is nearly constant.</p></li>
+<li><p>Path CD is an adiabatic expansion that does work on the outside world, just as the <em>power</em> stroke of an ICE does in an adiabatic expansion.  The work done by the system along the path CD is greater than the work done on the system along path AB because the pressure is greater, and so there is a net work output.</p></li>
+<li><p>Along path DA, the heat transfer <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> from the gas at constant volume reduces its temperature and pressure, returning it to its original state.  In an ICE, this process corresponds to the <em>exhaust</em> of hot gases and the <em>intake</em> of an air gasoline mixture at considerably lower temperature.</p></li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Four-Stroke Engine</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-four-stroke-engine">
+<img alt="Four cutaway views of a gasoline engine during intake, compression, power, and exhaust. Each panel shows piston displacement, a fixed-length connecting rod, crankshaft position, and camshaft timing." src="../_images/otto_four_stroke_realistic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.14 </span><span class="caption-text"><strong>The four strokes of a gasoline engine.</strong> (a) During intake, the piston moves downward while the intake valve is open, drawing an air–fuel mixture into the cylinder. (b) During compression, the piston rises with both valves closed, compressing the mixture in a nearly adiabatic process. (c) A spark ignites the mixture, raising its pressure and driving the piston downward during the power stroke. (d) During exhaust, the piston rises with the exhaust valve open, expelling the burned gases. The piston is connected to the rotating crankshaft by a fixed-length connecting rod. The timing indicators below the panels show that the camshaft completes one revolution for every two crankshaft revolutions. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency">OpenStax, College Physics 2e, Figure 15.17</a>.</em></span><a class="headerlink" href="#fig-four-stroke-engine" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Otto Cycle</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-otto-cycle-pv">
+<img alt="Pressure-volume diagram of an Otto cycle showing adiabatic compression from A to B, constant-volume heating from B to C, adiabatic expansion from C to D, and constant-volume cooling from D to A. The adjacent energy-flow diagram shows a hot source below the engine and a cold sink above it." src="../_images/otto_pv_baseline_cycle.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.15 </span><span class="caption-text"><strong>Pressure–volume diagram of an idealized Otto cycle.</strong> Along path <span class="math notranslate nohighlight">\(A\rightarrow B\)</span>, the gas is compressed adiabatically, increasing its pressure and temperature. Heat <span class="math notranslate nohighlight">\(Q_h\)</span> is added at constant volume along <span class="math notranslate nohighlight">\(B\rightarrow C\)</span>, increasing the pressure further. The gas then expands adiabatically along <span class="math notranslate nohighlight">\(C\rightarrow D\)</span>, performing work on the piston. Finally, heat <span class="math notranslate nohighlight">\(Q_c\)</span> is rejected at constant volume along <span class="math notranslate nohighlight">\(D\rightarrow A\)</span>, returning the gas to its initial state. The shaded area enclosed by the cycle represents the net work <span class="math notranslate nohighlight">\(W_{\rm net}\)</span> produced per cycle. In the simplified energy-flow model, heat enters from the hot source below, some energy is converted into useful work, and the remaining heat flows upward to the cold sink. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency">OpenStax, College Physics 2e, Figure 15.18</a>.</em></span><a class="headerlink" href="#fig-otto-cycle-pv" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Greater Work Output</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-otto-cycle-greater-work">
+<img alt="Pressure-volume diagram of an Otto cycle with a larger enclosed area than the original cycle, which is shown using dashed curves. An adjacent energy-flow model shows heat flowing upward from the hot source to the engine and then to the cold sink, with useful work directed to the right." src="../_images/otto_pv_improved_efficiency.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.16 </span><span class="caption-text"><strong>Increasing the net work produced by an Otto cycle.</strong> The solid curves represent a cycle with a higher peak pressure during expansion and a lower pressure at the beginning of compression. The dashed curves show the original cycle for comparison. Because the solid curve encloses a larger area on the <span class="math notranslate nohighlight">\(PV\)</span> diagram, the modified cycle produces more net work, <span class="math notranslate nohighlight">\(W'\)</span>, during each complete cycle. The accompanying energy-flow model shows heat <span class="math notranslate nohighlight">\(Q'_h\)</span> entering from the hot source below, heat <span class="math notranslate nohighlight">\(Q'_c\)</span> leaving toward the cold sink above, and work <span class="math notranslate nohighlight">\(W'\)</span> delivered to the surroundings. The increased area demonstrates greater work output, although it does not by itself establish a higher thermal efficiency. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency">OpenStax, College Physics 2e, Figure 15.19</a>.</em></span><a class="headerlink" href="#fig-otto-cycle-greater-work" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>The net work done by a cyclical process is the area inside the closed path on a <span class="math notranslate nohighlight">\(PV\)</span> diagram, such as ABCDA.  It is necessary for heat transfer from the system to occur to get a net work output for a cyclical process.  In the Otto cycle, heat transfer occurs along path DA.  If no heat transfer occurs, then the return path is the same, and the net work output is zero.  The lower the temperature on the path AB, the less work has to be done to compress the gas.</p>
+<p>The area inside the closed path is then greater, and so the engine does more work and is thus more efficient.  The higher the temperature along path CD, the more work output there is (see Figure <a class="reference internal" href="#fig-otto-cycle-greater-work"><span class="std std-numref">14.16</span></a>). So efficiency is related to the temperatures of the hot and cold reservoirs.</p>
+</section>
+<section id="example-problem-coal-plant-energy-balance-and-emissions">
+<h3><span class="section-number">14.3.2. </span>Example Problem: Coal-Plant Energy Balance and Emissions<a class="headerlink" href="#example-problem-coal-plant-energy-balance-and-emissions" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Coal-Plant Energy Balance and Emissions</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>During one day, a model coal-fired plant receives <span class="math notranslate nohighlight">\(2.50\times10^{14}\ {\rm J}\)</span> of heat and releases <span class="math notranslate nohighlight">\(1.48\times10^{14}\ {\rm J}\)</span> to its surroundings. (a) Find its useful work output. (b) Find its thermal efficiency. (c) For comparison with the textbook calculation, assume a fuel heating value of <span class="math notranslate nohighlight">\(2.5\times10^6\ {\rm J/kg}\)</span> and approximate the fuel as pure carbon that burns completely to carbon dioxide. Use a carbon-to-carbon-dioxide mass ratio of <span class="math notranslate nohighlight">\(12:44\)</span> to estimate the daily carbon dioxide output. These are stipulated model inputs, not current plant-performance or fuel-composition data.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the plant’s working fluid as completing cycles with no net accumulation of internal energy over the day. The heat received must be divided between useful work and heat rejected. For the emissions estimate, the heat input determines how much fuel is consumed, and the reaction’s mass ratio converts that fuel mass to carbon dioxide mass. This simplified chemical model includes the oxygen incorporated from the air.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The first law for a complete cycle makes the useful work equal to the difference between the positive heat-transfer magnitudes,</p>
+<div class="math notranslate nohighlight">
+\[
+W=Q_{\rm h}-Q_{\rm c}.
+\]</div>
+<p class="sd-card-text">The daily transfers therefore give</p>
+<div class="math notranslate nohighlight">
+\[
+W=2.50\times10^{14}\ {\rm J}-1.48\times10^{14}\ {\rm J}=1.02\times10^{14}\ {\rm J}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> Thermal efficiency is the fraction of heat input converted into useful work. Combining that definition with the cyclic energy balance gives</p>
+<div class="math notranslate nohighlight">
+\[
+\eta=\frac{W}{Q_{\rm h}}=1-\frac{Q_{\rm c}}{Q_{\rm h}}.
+\]</div>
+<p class="sd-card-text">Using the specified transfers gives</p>
+<div class="math notranslate nohighlight">
+\[
+\eta=1-\frac{1.48\times10^{14}\ {\rm J}}{2.50\times10^{14}\ {\rm J}}=0.408=40.8\%.
+\]</div>
+<p class="sd-card-text"><strong>(c)</strong> If <span class="math notranslate nohighlight">\(H\)</span> is the stipulated heating value, the fuel mass is <span class="math notranslate nohighlight">\(m_{\rm fuel}=Q_{\rm h}/H\)</span>. Complete combustion in the pure-carbon model therefore produces</p>
+<div class="math notranslate nohighlight">
+\[
+m_{{\rm CO}_2}=\frac{44}{12}m_{\rm fuel}=\frac{44Q_{\rm h}}{12H}.
+\]</div>
+<p class="sd-card-text">The two-significant-figure heating value limits the precision of the resulting emissions estimate,</p>
+<div class="math notranslate nohighlight">
+\[
+m_{{\rm CO}_2}=\frac{44}{12}\frac{2.50\times10^{14}\ {\rm J}}{2.5\times10^6\ {\rm J/kg}}=3.7\times10^8\ {\rm kg}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The model plant delivers <span class="math notranslate nohighlight">\(1.02\times10^{14}\ {\rm J}\)</span> of work per day at <span class="math notranslate nohighlight">\(40.8\%\)</span> efficiency. Its stipulated fuel model gives <span class="math notranslate nohighlight">\(3.7\times10^8\ {\rm kg}\)</span> of carbon dioxide per day. The efficiency is below unity, and the exhaust mass exceeds the fuel mass because oxygen is added. The unusually low stipulated heating value makes the emissions estimate unusually large; it should not be treated as a representative modern coal-plant value.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency">OpenStax, College Physics 2e, Example 15.3</a>.</em></p>
+</section>
+</section>
+<section id="carnot-s-heat-engine-heat-pumps-and-refrigerators">
+<h2><span class="section-number">14.4. </span>Carnot’s Heat Engine, Heat Pumps, and Refrigerators<a class="headerlink" href="#carnot-s-heat-engine-heat-pumps-and-refrigerators" title="Link to this heading">#</a></h2>
+<p>We know from the second law of thermodynamics that a heat engine cannot be <span class="math notranslate nohighlight">\(100\%\)</span> efficient, since there must always be some heat transfer <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> to the environment (i.e., <em>waste heat</em>).  <em>How efficient can a heat engine be?</em></p>
+<p>A young French engineer, <a class="reference external" href="https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot">Sadi Carnot</a>, answered this question at a theoretical level.  He devised a theoretical cycle (called a <strong>Carnot cycle</strong>) which is the most efficient cyclical process possible.  Any heat engine employing the Carnot cycle is called a <strong>Carnot engine</strong>.</p>
+<p>What is crucial to the Carnot cycle is that only <em>reversible processes</em> are used.  Irreversible processes (e.g., friction and turbulence) increase heat transfer <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> to the environment and reduce the efficiency of the engine.</p>
+<div class="note admonition">
+<p class="admonition-title">Carnot Engine</p>
+<p>Stated in terms of reversible processes, the second law of thermodynamics has a <strong>third form</strong>:</p>
+<blockquote>
+<div><p>A Carnot engine operating between two given temperatures has the greatest possible efficiency of any heat engine operating between these two temperatures.  Furthermore, all engines employing only <em>reversible</em> processes have the same maximum efficiency when operating between the same given temperatures.</p>
+</div></blockquote>
+</div>
+<p>The Carnot cycle comprises two isothermal and two adiabatic processes on a <span class="math notranslate nohighlight">\(PV\)</span> diagram.  Recall that both isothermal and adiabatic processes are reversible, in principle.  Carnot also determined the efficiency of a perfect heat engine.  It is always true that the efficiency of a cyclical heat engine is given by:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{Q_{\rm h}-Q_{\rm c}}{Q_{\rm h}} = 1 - \frac{Q_{\rm c}}{Q_{\rm h}}. \]</div>
+<p>Carnot found that for a perfect heat engine, the ratio <span class="math notranslate nohighlight">\(Q_{\rm c}/Q_{\rm h}\)</span> equals the ratio of the absolute temperatures of the heat reservoirs.  Then the maximum Carnot efficiency <span class="math notranslate nohighlight">\(\eta_{\rm C}\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-16b089d3-abb6-4668-a680-33c11fc06cc7">
+<span class="eqno">(14.9)<a class="headerlink" href="#equation-16b089d3-abb6-4668-a680-33c11fc06cc7" title="Permalink to this equation">#</a></span>\[\begin{align}
+\eta_{\rm C} = 1 - \frac{T_{\rm c}}{T_{\rm h}},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(T_{\rm h}\)</span> and <span class="math notranslate nohighlight">\(T_{\rm c}\)</span> are in kelvins.  No real heat engine can do as well as the Carnot efficiency.  But the ideal Carnot engine has zero power, which makes it unrealistic for any applications.</p>
+<p>Carnot’s interesting result implies that <span class="math notranslate nohighlight">\(100\%\)</span> efficiency would be possible only if <span class="math notranslate nohighlight">\(T_{\rm c} = 0\ {\rm K}\)</span> (i.e., the cold reservoir was at absolute zero!).  It is also apparent that the greatest efficiencies are obtained when the ratio <span class="math notranslate nohighlight">\(T_{\rm c}/T_{\rm h}\)</span> is as small as possible, or greatest difference <span class="math notranslate nohighlight">\(T_{\rm h}-T_{\rm c}\)</span>.  This means that efficiency is greatest for the highest possible temperature of the hot reservoir and the lowest possible temperature of the cold reservoir.</p>
+<p>All real processes are irreversible, which means that the actual efficiency is always less than a Carnot engine.  There are always dissipative processes in peripheral equipment (e.g., electrical transformers or car transmissions).  These further reduce the overall efficiency by converting some of the engine’s work output back into heat transfer.</p>
+<figure class="align-default" id="fig-carnot-cycle">
+<img alt="Two-panel diagram showing the Carnot cycle on a pressure-volume graph and a schematic heat engine. The clockwise cycle includes two isothermal and two adiabatic processes. The heat engine receives heat from a hot reservoir below, produces work, and transfers waste heat to a cold reservoir above." src="../_images/carnot_cycle_schematic_final.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.17 </span><span class="caption-text"><strong>The Carnot cycle and energy flow in an ideal heat engine.</strong> (a) The clockwise cycle ABCDA consists of two isothermal processes (AB and CD) and two adiabatic processes (BC and DA). The shaded area is proportional to the net work produced, since the axes are normalized. (b) Heat <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span> enters from the hot reservoir below, some is converted into work <span class="math notranslate nohighlight">\(W\)</span>, and the remaining heat <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> is transferred to the cold reservoir above. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-4-carnots-perfect-heat-engine-the-second-law-of-thermodynamics-restated">OpenStax, College Physics 2e, Figure 15.21</a>.</em></span><a class="headerlink" href="#fig-carnot-cycle" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="heat-pumps">
+<h3><span class="section-number">14.4.1. </span>Heat Pumps<a class="headerlink" href="#heat-pumps" title="Link to this heading">#</a></h3>
+<p>The great advantage of using a heat pump to keep your home warm is that a heat pump supplies <span class="math notranslate nohighlight">\(Q_{h} = Q_{\rm c} + W\)</span> rather than just burning fuel.  Heat transfer is from the outside air to the indoor space.  You only pay for <span class="math notranslate nohighlight">\(W\)</span> and you get an additional heat transfer of <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> from the outside at no cost.  In many cases, more energy (<span class="math notranslate nohighlight">\({\sim}2\times\)</span>) is transferred to the heated space as is used to run the heat pump.  When you burn fuel to keep warm, you pay for all of it.  The disadvantage is that the work input is sometimes more expensive than simply burning fuel, especially if the work is done by electrical energy.</p>
+<figure class="align-default" id="fig-heat-pump">
+<img alt="Three-panel illustration of heat-pump operation. Panel (a) shows a counterclockwise Carnot cycle with two isothermal and two adiabatic processes, where the shaded area represents the magnitude of work input. Panel (b) shows work entering a heat pump from the right, with heat transferred downward from the cold reservoir to the hot reservoir. Panel (c) shows a realistic heat pump with an outdoor evaporator, expansion valve, compressor, and indoor condenser. Blue arrows indicate heat absorbed outdoors, orange arrows indicate heat released indoors, and purple arrows indicate work input." src="../_images/heat_pump_three_panel_final.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.18 </span><span class="caption-text"><strong>The reversed Carnot cycle and heat-pump operation.</strong> (a) A Carnot cycle operating counterclockwise (ADCBA) requires net work input, whose magnitude is proportional to the shaded area on the normalized <span class="math notranslate nohighlight">\(PV\)</span> diagram. (b) A heat pump uses external work <span class="math notranslate nohighlight">\(W_{\rm in}\)</span> to transfer heat <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> from a cold reservoir to a hot reservoir, delivering <span class="math notranslate nohighlight">\(Q_{\rm h}=Q_{\rm c}+W_{\rm in}\)</span>. (c) In a practical heat pump, the outdoor evaporator absorbs heat, the compressor raises the refrigerant’s pressure and temperature, and the indoor condenser releases heat. The expansion valve reduces the refrigerant’s pressure before it returns to the evaporator. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators">OpenStax, College Physics 2e, Figures 15.26 and 15.27</a>.</em></span><a class="headerlink" href="#fig-heat-pump" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The basic components of a heat pump need a working fluid (e.g., a non-CFC refrigerant).  In the outdoor coils (i.e., the evaporator), heat transfer <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> occurs to the working fluid from the cold outdoor air, turning it into a gas.  The electric compressor (i.e., work input <span class="math notranslate nohighlight">\(W\)</span>) raises the temperature and pressure of the gas and forces it into the condenser coils that are inside the heated space.</p>
+<p>Because the temperature of the gas is higher than the temperature inside the room, heat transfer to the room occurs and the gas condenses to a liquid.  The liquid then flows back through a pressure-reducing valve to the outdoor evaporator coils, being cooled through expansion.</p>
+<p>The quality of a heat pump is judged by how much heat transfer <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span> occurs into the warm space compared with how much work input <span class="math notranslate nohighlight">\(W\)</span> is required.  We define a <strong>heat pump’s coefficient of performance</strong> <span class="math notranslate nohighlight">\(COP_{\rm hp}\)</span> as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bd2ee32a-044f-43bb-b451-e9c626ab087a">
+<span class="eqno">(14.10)<a class="headerlink" href="#equation-bd2ee32a-044f-43bb-b451-e9c626ab087a" title="Permalink to this equation">#</a></span>\[\begin{align}
+COP_{\rm hp} = \frac{Q_{\rm h}}{W}.
+\end{align}\]</div>
+<p>Recall that the efficiency of a heat engine is <span class="math notranslate nohighlight">\(\eta = W/Q_{\rm h}\)</span>, which means that <span class="math notranslate nohighlight">\(COP_{\rm hp} = 1/\eta\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Since the efficiency of a heat engine is less than 1, then the <span class="math notranslate nohighlight">\(COP_{\rm hp} &gt;1.\)</span>  A heat pump always has more heat transfer <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span> than work put into it.</p></li>
+<li><p>Heat pumps work best when the temperature differences are small.  Heat pumps do not work as well in very cold climates as they do in more moderate climates.</p></li>
+</ol>
+<p>Friction and other irreversible processes reduce heat engine efficiency, but they do not benefit the operation of a heat pump.  They reduce the work input by converting part of it to heat transfer back into the cold reservoir before it gets into the heat pump.</p>
+<figure class="align-default" id="fig-heat-pump-losses">
+<img alt="Two-panel comparison of ideal and real heat pumps. Both absorb heat from outdoor air and release heat indoors. In the real heat pump, some input work is dissipated as heat to the outdoor surroundings, reducing the useful heating output." src="../_images/heat_pump_losses_comparison.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.19 </span><span class="caption-text"><strong>Energy losses in a real heat pump.</strong> (a) An ideal heat pump uses all the input work <span class="math notranslate nohighlight">\(W\)</span> to transfer heat from the cold surroundings to the heated space. (b) In a real heat pump, some work is dissipated as heat <span class="math notranslate nohighlight">\(Q_{\rm f}\)</span> to the surroundings, leaving <span class="math notranslate nohighlight">\(W'=W-Q_{\rm f}\)</span> for useful heat pumping. This reduces the heat delivered indoors for the same input work. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators">OpenStax, College Physics 2e, Figure 15.28</a>.</em></span><a class="headerlink" href="#fig-heat-pump-losses" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Real heat pumps do not perform quite as well as an ideal one.  Their <span class="math notranslate nohighlight">\(COP_{\rm hp}\)</span> values range from <span class="math notranslate nohighlight">\(2-4\)</span>, where this range means that the heat transfer <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span> from the heat pumps is that much greater than the work <span class="math notranslate nohighlight">\(W\)</span> put into them.</p>
+<p>The economic feasibility of a heat pump is limited since <span class="math notranslate nohighlight">\(W\)</span> is usually supplied by electrical energy that costs more per joule than heat transfer by burning fuels.  The initial cost of a heat pump is greater than that of many furnaces, so that it takes longer for the costs to be recovered.  Heat pumps are most likely economically viable in regions with mild winter climates, with relatively cheap electricity, and when other fuels are relatively expensive.</p>
+</section>
+<section id="air-conditioners-and-refrigerators">
+<h3><span class="section-number">14.4.2. </span>Air Conditioners and Refrigerators<a class="headerlink" href="#air-conditioners-and-refrigerators" title="Link to this heading">#</a></h3>
+<p>Air conditioners and refrigerators are designed to cool something down in a warm environment.  Work input <span class="math notranslate nohighlight">\(W\)</span> is required for heat transfer from cold to hot, which is expensive.  The quality of an air conditioner or refrigerator is based on its <strong>coefficient of performance</strong> <span class="math notranslate nohighlight">\(COP_{\rm ref}\)</span> that depends on how much heat transfer <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> occurs from a cold environment, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2fc2819d-1df8-40a7-ad42-d69e007ea284">
+<span class="eqno">(14.11)<a class="headerlink" href="#equation-2fc2819d-1df8-40a7-ad42-d69e007ea284" title="Permalink to this equation">#</a></span>\[\begin{align}
+COP_{\rm ref} = \frac{Q_{\rm c}}{W}.
+\end{align}\]</div>
+<p>An air conditioner will have a lower coefficient of performance than a heat pump because <span class="math notranslate nohighlight">\(Q_{\rm h}&gt;Q_{\rm c}\)</span>.  Real air conditioners and refrigerators have <span class="math notranslate nohighlight">\(COP_{\rm ref}\)</span> values ranging from <span class="math notranslate nohighlight">\(2-6\)</span>.</p>
+<p>A type of <span class="math notranslate nohighlight">\(COP\)</span> rating system called the “energy efficiency rating” (EER) was developed.  This rating makes it easier for the consumer (in Australia, Canada, New Zealand, and the US) to use an Energy Star Rating (out of 5 stars), where 5 stars is the most energy efficient.  The EER of an air conditioner or refrigerator can be expressed as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b379e09f-447b-4a6f-8110-cdddc5202d42">
+<span class="eqno">(14.12)<a class="headerlink" href="#equation-b379e09f-447b-4a6f-8110-cdddc5202d42" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\rm EER} = \frac{Q_{\rm c}/t_1}{W/t_2},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> is the amount of heat transfer from a cold environment in British thermal units (BTUs), <span class="math notranslate nohighlight">\(t_1\)</span> is time measured in <em>hours</em>, <span class="math notranslate nohighlight">\(W\)</span> is the work input in joules, and <span class="math notranslate nohighlight">\(t_2\)</span> is the time in seconds.</p>
+</section>
+<section id="example-problem-carnot-limit-for-a-nuclear-power-plant">
+<h3><span class="section-number">14.4.3. </span>Example Problem: Carnot Limit for a Nuclear Power Plant<a class="headerlink" href="#example-problem-carnot-limit-for-a-nuclear-power-plant" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Carnot Limit for a Nuclear Power Plant</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Consider an illustrative pressurized-water nuclear power plant with hot-side water at <span class="math notranslate nohighlight">\(300^\circ{\rm C}\)</span> and steam condensing at <span class="math notranslate nohighlight">\(27^\circ{\rm C}\)</span>. Treat these as the temperatures of two ideal reservoirs. Find the maximum theoretical efficiency of a heat engine operating between them. The temperatures are specified to the nearest degree; they are not universal limits for all reactor designs.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-nuclear-plant">
+<img alt="Schematic of a pressurized-water reactor, steam generator, turbines, condenser, and cooling system." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/99ae7d5b83d9e1a69d8da6b174b81219b8e595d2" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.20 </span><span class="caption-text"><strong>Heat flow through a nuclear power plant.</strong> The reactor supplies thermal energy through a steam generator, the turbines deliver work, and the condenser rejects heat. The example idealizes this multistage process using two reservoir temperatures. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-4-carnots-perfect-heat-engine-the-second-law-of-thermodynamics-restated">OpenStax, <em>College Physics 2e</em>, Figure 15.22</a>.</span><a class="headerlink" href="#fig-example-nuclear-plant" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We seek a theoretical upper bound, so we compare the plant with a reversible Carnot engine between the specified reservoirs. The calculation requires absolute temperatures rather than Celsius temperature ratios. Real heat exchangers, turbines, pumps, and electrical equipment introduce losses, so the actual electrical efficiency will be lower than this ideal bound.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The Carnot efficiency depends only on the ratio of the cold and hot absolute temperatures,</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_{\rm C}=1-\frac{T_{\rm c}}{T_{\rm h}}.
+\]</div>
+<p class="sd-card-text">The Celsius-to-kelvin conversion adds the exact offset <span class="math notranslate nohighlight">\(273.15\)</span> to each Celsius reading. The two reservoir temperatures are approximately <span class="math notranslate nohighlight">\(T_{\rm h}=573\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(T_{\rm c}=300\ {\rm K}\)</span>, so the maximum efficiency is</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_{\rm C}=1-\frac{300\ {\rm K}}{573\ {\rm K}}\approx0.476=47.6\%.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The ideal upper bound is <span class="math notranslate nohighlight">\(47.6\%\)</span>, or about <span class="math notranslate nohighlight">\(48\%\)</span>. This is reasonable because the cold reservoir remains well above absolute zero, so even a reversible engine must reject substantial heat. The result is a Carnot limit for the specified temperatures, not a measured nuclear-plant efficiency or a capacity factor.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-4-carnots-perfect-heat-engine-the-second-law-of-thermodynamics-restated">OpenStax, College Physics 2e, Example 15.4</a>.</em></p>
+</section>
+<section id="example-problem-maximum-heating-coefficient-of-performance">
+<h3><span class="section-number">14.4.4. </span>Example Problem: Maximum Heating Coefficient of Performance<a class="headerlink" href="#example-problem-maximum-heating-coefficient-of-performance" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Maximum Heating Coefficient of Performance</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A heat pump operates between a hot reservoir at <span class="math notranslate nohighlight">\(45.0^\circ{\rm C}\)</span> and a cold reservoir at <span class="math notranslate nohighlight">\(-15.0^\circ{\rm C}\)</span>. Determine the largest possible heating coefficient of performance. The working fluid must be warmer than the indoor air when releasing heat and colder than the outdoor air when absorbing heat.</p>
+</div></blockquote>
+<figure class="align-default" id="fig-example-heat-pump-cop">
+<img alt="Heat pump transferring heat from outdoor air to indoor air, with working-fluid temperatures beyond the outdoor and indoor air temperatures." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/a3db350045752f1a0f8883bdf6694fe54e802b5a" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.21 </span><span class="caption-text"><strong>Temperature differences drive heat transfer.</strong> The working fluid must be colder than the outdoor air to absorb heat and warmer than the indoor air to release it. The ideal heating output includes both absorbed heat and input work. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators">OpenStax, <em>College Physics 2e</em>, Figure 15.29</a>.</span><a class="headerlink" href="#fig-example-heat-pump-cop" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the best possible device as a reversed Carnot cycle. Its useful output is the heat delivered to the warm reservoir, while its input is the work supplied to run the pump. Conservation of energy includes both the absorbed outdoor heat and the work input. We use the reversible heat-transfer ratio to express the heating coefficient of performance in terms of absolute temperatures.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The heating coefficient of performance compares delivered heat with input work. The cycle’s energy balance gives <span class="math notranslate nohighlight">\(W_{\rm in}=Q_{\rm h}-Q_{\rm c}\)</span>, which yields</p>
+<div class="math notranslate nohighlight">
+\[
+COP_{\rm hp}=\frac{Q_{\rm h}}{Q_{\rm h}-Q_{\rm c}}=\frac{1}{1-Q_{\rm c}/Q_{\rm h}}.
+\]</div>
+<p class="sd-card-text">For a reversed Carnot cycle, <span class="math notranslate nohighlight">\(Q_{\rm c}/Q_{\rm h}=T_{\rm c}/T_{\rm h}\)</span>. Substituting that reversible relation before inserting numbers gives</p>
+<div class="math notranslate nohighlight">
+\[
+COP_{{\rm hp},\max}=\frac{T_{\rm h}}{T_{\rm h}-T_{\rm c}}.
+\]</div>
+<p class="sd-card-text">The absolute hot-side temperature is <span class="math notranslate nohighlight">\(318.2\ {\rm K}\)</span>, and the reservoir temperature difference is <span class="math notranslate nohighlight">\(60.0\ {\rm K}\)</span>. Keeping the exact conversion internally and rounding the final result to three significant figures gives</p>
+<div class="math notranslate nohighlight">
+\[
+COP_{{\rm hp},\max}=\frac{318.2\ {\rm K}}{60.0\ {\rm K}}=5.30.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The maximum heating coefficient of performance is <span class="math notranslate nohighlight">\(5.30\)</span>. For each joule of input work, the ideal pump can deliver <span class="math notranslate nohighlight">\(5.30\ {\rm J}\)</span> indoors, with the balance supplied by heat absorbed outdoors. A value above one therefore conserves energy; it measures heat moved per unit work rather than heat converted entirely into work. A real pump operating under these conditions has a lower coefficient of performance.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators">OpenStax, College Physics 2e, Example 15.5</a>.</em></p>
+</section>
+</section>
+<section id="entropy-and-the-second-law-of-thermodynamics">
+<h2><span class="section-number">14.5. </span>Entropy and the Second Law of Thermodynamics<a class="headerlink" href="#entropy-and-the-second-law-of-thermodynamics" title="Link to this heading">#</a></h2>
+<p>There is another way of expressing the second law of thermodynamics, which uses a concept called <strong>entropy</strong>.  The entropy relates the tendency in nature for systems to become disordered and for less energy to be available for use as work.</p>
+<p>From our discussion of the Carnot engine (and any reversible process), we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0759dbc9-3666-45b8-acce-c367331c97ac">
+<span class="eqno">(14.13)<a class="headerlink" href="#equation-0759dbc9-3666-45b8-acce-c367331c97ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{Q_{\rm c}}{Q_{\rm h}} &amp;=  \frac{T_{\rm c}}{T_{\rm h}}, \qquad \text{or} \\
+\frac{Q_{\rm c}}{T_{\rm c}} &amp; = \frac{Q_{\rm h}}{T_{\rm h}},
+\end{align}\]</div>
+<p>which depends on the absolute values of the heat transfer (<span class="math notranslate nohighlight">\(Q_{\rm c}\)</span> and <span class="math notranslate nohighlight">\(Q_{\rm h}\)</span>) at temperatures <span class="math notranslate nohighlight">\(T_{\rm c}\)</span> and <span class="math notranslate nohighlight">\(T_{\rm h}\)</span>, respectively.  The ratio of heat transfer to the temperature is defined as the <strong>change in entropy</strong> <span class="math notranslate nohighlight">\(\Delta S\)</span> for a reversible process, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-482fcb9f-7d43-46e2-b2b6-91b0d394a525">
+<span class="eqno">(14.14)<a class="headerlink" href="#equation-482fcb9f-7d43-46e2-b2b6-91b0d394a525" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta S = \left( \frac{Q}{T}\right)_{\rm rev},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the heat transfer (positive for transfer into and negative for out of) and <span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature (in kelvins) at which the reversible process takes place.  The SI unit for entropy is <span class="math notranslate nohighlight">\(\rm J/K\)</span>.  If temperature changes in the process, then it is usually a good approximation to take <span class="math notranslate nohighlight">\(T\)</span> as the average temperature.</p>
+<p>The definition of <span class="math notranslate nohighlight">\(\Delta S\)</span> is strictly valid only for reversible processes (e.g., a Carnot engine).  We can find <span class="math notranslate nohighlight">\(\Delta S\)</span> precisely even for real, irreversible processes.  The entropy <span class="math notranslate nohighlight">\(S\)</span> of a system depends only on the state of the system and not how it reached that condition.  Entropy is a property of the state. The change in entropy <span class="math notranslate nohighlight">\(\Delta S\)</span> of a system between two states <span class="math notranslate nohighlight">\(S_1\)</span> and <span class="math notranslate nohighlight">\(S_2\)</span> is the same no matter how the change occurs.</p>
+<figure class="align-default" id="fig-entropy-state-function">
+<img alt="Two-panel comparison of entropy changes in an ideal gas. Panel (a) shows irreversible free expansion into a vacuum with no heat transfer or work. Panel (b) shows reversible isothermal expansion using a movable piston, with heat entering and work leaving the gas. Both processes begin at volume V and end at volume 2V at the same temperature, producing the same entropy change." src="../_images/entropy_same_states_two_paths.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.22 </span><span class="caption-text"><strong>Entropy is a state function.</strong> (a) During irreversible free expansion, the gas occupies a larger volume without heat transfer or work. (b) During reversible isothermal expansion, the gas absorbs heat and performs work. Both processes have the same initial and final states, so their entropy changes are identical: <span class="math notranslate nohighlight">\(\Delta S=nR\ln 2\)</span>. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy">OpenStax, College Physics 2e, Figure 15.32</a>.</em></span><a class="headerlink" href="#fig-entropy-state-function" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Consider the change in entropy of a Carnot engine and its heat reservoirs for one full cycle.</p>
+<ul class="simple">
+<li><p>The hot reservoir has a loss of entropy <span class="math notranslate nohighlight">\(\Delta S_{\rm h} = -Q_{\rm h}/T_{\rm h}\)</span> because heat transfer occurs <em>out of it</em>.</p></li>
+<li><p>The cold reservoir has a gain of entropy <span class="math notranslate nohighlight">\(\Delta S_{\rm c} = Q_{\rm c}/T_{\rm c}\)</span> because heat transfer occurs <em>into</em> it.</p></li>
+</ul>
+<p>The total change in entropy is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b8a29e8f-f7c1-4474-875e-23ffe0962f3e">
+<span class="eqno">(14.15)<a class="headerlink" href="#equation-b8a29e8f-f7c1-4474-875e-23ffe0962f3e" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta S_{\rm tot} = \Delta S_{\rm h} + \Delta S_{\rm c}.
+\end{align}\]</div>
+<p>Since we know that <span class="math notranslate nohighlight">\(Q_{\rm h}/T_{\rm h} = Q_{\rm c}/T_{\rm c}\)</span> for a Carnot engine, we have the total change in entropy as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-eaad92eb-7e16-414f-8d7e-02f2af7139ce">
+<span class="eqno">(14.16)<a class="headerlink" href="#equation-eaad92eb-7e16-414f-8d7e-02f2af7139ce" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta S_{\rm tot} = -\frac{Q_{\rm h}}{T_{\rm h}} + \frac{Q_{\rm c}}{T_{\rm c}} = 0.
+\end{align}\]</div>
+<p>The total <em>change in entropy</em> for a system in <em>any reversible process is zero.</em></p>
+<p>The entropy of various parts of the system may change, but the total change is zero.  The system does not affect the entropy of its surroundings since heat transfer does not occur between the system and the surroundings.  Real processes are not reversible, where they do change the total entropy.</p>
+<p>It is reasonable that entropy increases for heat transfer from hot to cold.  Since the change in entropy is <span class="math notranslate nohighlight">\(Q/T\)</span>, there is a larger change at lower temperatures.  The decrease in entropy of the hot object is less than the increase in entropy of the cold object, which <strong>produces an overall increase</strong>.  There is an increase in entropy for any system undergoing an irreversible process.</p>
+<p>There are only two possibilities:</p>
+<ol class="arabic simple">
+<li><p>entropy is constant for a reversible process, or</p></li>
+<li><p>entropy increases for an irreversible process.</p></li>
+</ol>
+<blockquote>
+<div><p><em>The total entropy of a system either increases or remains constant; it never decreases.</em></p>
+</div></blockquote>
+<p>Heat transfer cannot occur spontaneously from cold to hot because entropy would decrease.</p>
+<p>Entropy is different than energy.  Entropy is not conserved but increases in all real processes.  Reversible processes allow for the most heat transfer to be used for work and are also the ones that keep entropy constant.</p>
+<section id="entropy-and-the-unavailability-to-do-work">
+<h3><span class="section-number">14.5.1. </span>Entropy and the Unavailability to Do Work<a class="headerlink" href="#entropy-and-the-unavailability-to-do-work" title="Link to this heading">#</a></h3>
+<p><em>What does a change in entropy mean?</em></p>
+<p>Entropy is directly related to whether all heat transfer is available to be converted into work. When entropy increases a certain amount of energy becomes <em>permanently</em> unavailable to do work.  The energy is not lost, but its character is changed so that some of it cannot be converted to doing work.  The amount of energy that becomes unavailable to do work is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7447faac-036e-4388-9b48-e51c455e1251">
+<span class="eqno">(14.17)<a class="headerlink" href="#equation-7447faac-036e-4388-9b48-e51c455e1251" title="Permalink to this equation">#</a></span>\[\begin{align}
+W_{\rm unavail} = \Delta S \cdot T_0,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(T_0\)</span> is the lowest temperature utilized.</p>
+</section>
+<section id="order-to-disorder">
+<h3><span class="section-number">14.5.2. </span>Order to Disorder<a class="headerlink" href="#order-to-disorder" title="Link to this heading">#</a></h3>
+<p>Entropy is related not only to the unavailability of energy to do work; it is also a measure of disorder.  Melting a block of ice means taking a highly structured and orderly system of water molecules and converting it into a disorderly liquid in which the molecules have no fixed positions.  There is a large increase in entropy in the process.</p>
+<p>Suppose we mix equal masses of water originally at two different temperatures (e.g., <span class="math notranslate nohighlight">\(20^\circ{\rm C}\)</span> and <span class="math notranslate nohighlight">\(40^\circ{\rm C}\)</span>).  The result is water at an intermediate temperature of <span class="math notranslate nohighlight">\(30^\circ{\rm C}\)</span>.  Three outcomes have resulted:</p>
+<ol class="arabic simple">
+<li><p>entropy has increased,</p>
+<ul class="simple">
+<li><p>Entropy has increased because mixing two bodies of water has the same effect as heat transfer from the hot and cold one.  The mixing decreases the entropy of the hot one and increases it for the cold one by a greater amount.</p></li>
+</ul>
+</li>
+<li><p>some energy has become unavailable to do work, and</p>
+<ul class="simple">
+<li><p>Once the two masses have mixed, there is only one temperature.  You cannot run a heat engine with them.</p></li>
+</ul>
+</li>
+<li><p>the system has become less orderly.</p>
+<ul class="simple">
+<li><p>The mixture is less orderly, or less structured.  Instead of having two masses at different temperatures (and different distributions of molecular speeds), we now have a single mass with a uniform temperature.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="life-evolution-and-the-second-law-of-thermodynamics">
+<h3><span class="section-number">14.5.3. </span>Life, Evolution, and the Second Law of Thermodynamics<a class="headerlink" href="#life-evolution-and-the-second-law-of-thermodynamics" title="Link to this heading">#</a></h3>
+<p>Some people misunderstand and say that the process of evolution violates the second law of thermodynamics.  Over time, simple organisms evolved to more complex ones representing a large decrease in entropy of the Earth’s biosphere.  The complex organisms are more highly structured, and have a lower entropy than the substances from which they grow.  But it is <em>always</em> possible for the entropy of one part of the universe to decrease.  In equation form, we can write this as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f9ad8a70-5884-4e0f-9659-ded536d2d23f">
+<span class="eqno">(14.18)<a class="headerlink" href="#equation-f9ad8a70-5884-4e0f-9659-ded536d2d23f" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta S_{\rm tot} = \Delta S_{\rm sys} + \Delta S_{\rm env} &gt; 0.
+\end{align}\]</div>
+<p>Thus <span class="math notranslate nohighlight">\(\Delta S_{\rm sys}\)</span> can be negative as long as <span class="math notranslate nohighlight">\(\Delta S_{\rm env}\)</span> is positive and greater in magnitude.</p>
+<p><em>How is it possible for a system to decrease its entropy?</em></p>
+<p>Energy transfer is necessary.  If you pick up marbles that are scattered about the room and put them into a cup, your work has decreased the entropy of the system.  Energy from the Sun can decrease the entropy of local systems on Earth (i.e., <span class="math notranslate nohighlight">\(\Delta S_{\rm sys}&lt;0\)</span>).  But the overall entropy of the rest of the universe increases by a greater amount (i.e., <span class="math notranslate nohighlight">\(\Delta S_{\rm env}&gt;0\)</span> and <span class="math notranslate nohighlight">\(|\Delta S_{\rm env}|&gt;|\Delta S_{\rm sys}|\)</span>).</p>
+<p>The Earth can be viewed as a heat engine operating between a hot reservoir supplied by the Sun and cold reservoir supplied by outer space.  There is a large total increase in entropy resulting from this massive heat transfer. A small part of this heat transfer is stored in structured systems on Earth, producing much smaller local decreases in entropy.</p>
+</section>
+<section id="example-problem-entropy-from-heat-flow-between-reservoirs">
+<h3><span class="section-number">14.5.4. </span>Example Problem: Entropy from Heat Flow Between Reservoirs<a class="headerlink" href="#example-problem-entropy-from-heat-flow-between-reservoirs" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Entropy from Heat Flow Between Reservoirs</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A quantity of heat <span class="math notranslate nohighlight">\(Q=4.0\times10^3\ {\rm J}\)</span> flows directly from a reservoir at <span class="math notranslate nohighlight">\(6.0\times10^2\ {\rm K}\)</span> to a reservoir at <span class="math notranslate nohighlight">\(2.5\times10^2\ {\rm K}\)</span>. Neither reservoir changes temperature. Find the total entropy change of the two reservoirs.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We take both reservoirs together as the system. The direct transfer is irreversible, but entropy is a state function, so we can calculate each reservoir’s entropy change using an imagined reversible transfer at that reservoir’s fixed temperature. The hot reservoir loses heat and entropy, while the cold reservoir gains them. Adding the signed changes determines whether the total agrees with the second law.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">A reversible transfer at constant temperature changes entropy by the signed heat transfer divided by the absolute temperature. Using <span class="math notranslate nohighlight">\(Q\)</span> for the positive magnitude of the energy transferred gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Delta S_{\rm h}&amp;=-\frac{Q}{T_{\rm h}},\\
+\Delta S_{\rm c}&amp;=\frac{Q}{T_{\rm c}}.
+\end{align*}\]</div>
+<p class="sd-card-text">Adding these changes before substituting values gives</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S_{\rm tot}=Q\left(\frac{1}{T_{\rm c}}-\frac{1}{T_{\rm h}}\right).
+\]</div>
+<p class="sd-card-text">The reservoir temperatures then determine the total change as</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S_{\rm tot}=(4.0\times10^3\ {\rm J})\left(\frac{1}{2.5\times10^2\ {\rm K}}-\frac{1}{6.0\times10^2\ {\rm K}}\right)=+9.3\ {\rm J/K}.
+\]</div>
+<figure class="align-default" id="fig-example-reservoir-entropy">
+<img alt="Direct irreversible heat transfer compared with separate reversible transfers used to calculate each reservoir entropy change." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/20d9af9859635ea2b64bb07683851d6a3f2f7cf8" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.23 </span><span class="caption-text"><strong>A reversible reference path for an irreversible transfer.</strong> Separate reversible transfers reproduce the reservoirs’ endpoint changes, allowing their entropy changes to be calculated even though the actual heat flow is irreversible. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy">OpenStax, <em>College Physics 2e</em>, Figure 15.33</a>.</span><a class="headerlink" href="#fig-example-reservoir-entropy" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The total entropy increases by <span class="math notranslate nohighlight">\(9.3\ {\rm J/K}\)</span>. The cold reservoir gains more entropy per joule than the hot reservoir loses, so the positive result agrees with spontaneous heat flow from hot to cold. The two reservoirs exchange equal amounts of energy even though their entropy changes do not cancel.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy">OpenStax, College Physics 2e, Example 15.6</a>.</em></p>
+</section>
+<section id="example-problem-lost-work-after-irreversible-heat-transfer">
+<h3><span class="section-number">14.5.5. </span>Example Problem: Lost Work After Irreversible Heat Transfer<a class="headerlink" href="#example-problem-lost-work-after-irreversible-heat-transfer" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Lost Work After Irreversible Heat Transfer</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>(a) Find the work produced by a Carnot engine that receives <span class="math notranslate nohighlight">\(4.0\times10^3\ {\rm J}\)</span> from a reservoir at <span class="math notranslate nohighlight">\(6.0\times10^2\ {\rm K}\)</span> and rejects heat to one at <span class="math notranslate nohighlight">\(1.0\times10^2\ {\rm K}\)</span>. (b) Suppose the same heat first flows without doing work from the <span class="math notranslate nohighlight">\(6.0\times10^2\ {\rm K}\)</span> reservoir to one at <span class="math notranslate nohighlight">\(2.5\times10^2\ {\rm K}\)</span>. It then enters a Carnot engine operating between <span class="math notranslate nohighlight">\(2.5\times10^2\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(1.0\times10^2\ {\rm K}\)</span>. Find the work output and compare it with part (a).</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We compare two reversible engines receiving the same amount of heat and rejecting heat to the same cold reservoir. In the second arrangement, the preliminary direct heat transfer is irreversible and lowers the temperature at which the energy becomes available to the engine. Multiplying the heat input by the appropriate Carnot efficiency gives each work output. We expect the preliminary transfer to reduce the useful work even though it does not destroy energy.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The work delivered by a Carnot engine is its heat input multiplied by its efficiency. If <span class="math notranslate nohighlight">\(T_{\rm h}\)</span> is the original hot temperature, <span class="math notranslate nohighlight">\(T_{\rm m}\)</span> is the intermediate temperature, and <span class="math notranslate nohighlight">\(T_{\rm c}\)</span> is the cold temperature, the two arrangements give</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+W_a&amp;=Q\left(1-\frac{T_{\rm c}}{T_{\rm h}}\right),\\
+W_b&amp;=Q\left(1-\frac{T_{\rm c}}{T_{\rm m}}\right).
+\end{align*}\]</div>
+<p class="sd-card-text">Subtracting the expressions before rounding gives the work opportunity lost during the preliminary transfer,</p>
+<div class="math notranslate nohighlight">
+\[
+W_a-W_b=QT_{\rm c}\left(\frac{1}{T_{\rm m}}-\frac{1}{T_{\rm h}}\right).
+\]</div>
+<p class="sd-card-text"><strong>(a)</strong> The original reservoir temperatures give the work output</p>
+<div class="math notranslate nohighlight">
+\[
+W_a=(4.0\times10^3\ {\rm J})\left(1-\frac{1.0\times10^2\ {\rm K}}{6.0\times10^2\ {\rm K}}\right)=3.3\times10^3\ {\rm J}.
+\]</div>
+<p class="sd-card-text"><strong>(b)</strong> The lower hot-side temperature gives the work output</p>
+<div class="math notranslate nohighlight">
+\[
+W_b=(4.0\times10^3\ {\rm J})\left(1-\frac{1.0\times10^2\ {\rm K}}{2.5\times10^2\ {\rm K}}\right)=2.4\times10^3\ {\rm J}.
+\]</div>
+<p class="sd-card-text">Using the unrounded expressions for the comparison gives</p>
+<div class="math notranslate nohighlight">
+\[
+W_a-W_b=(4.0\times10^3\ {\rm J})(1.0\times10^2\ {\rm K})\left(\frac{1}{2.5\times10^2\ {\rm K}}-\frac{1}{6.0\times10^2\ {\rm K}}\right)=9.3\times10^2\ {\rm J}.
+\]</div>
+<figure class="align-default" id="fig-example-lost-work">
+<img alt="Two Carnot-engine arrangements, one with direct high-temperature heat input and one preceded by irreversible heat transfer to an intermediate reservoir." src="https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20260604.144757/resources/ec206d452621bf4a5dcf52a31d3594e2f9dda5d0" />
+<figcaption>
+<p><span class="caption-number">Fig. 14.24 </span><span class="caption-text"><strong>The same energy input can provide different work outputs.</strong> The preliminary transfer lowers the temperature of the heat supplied to the second engine. The original diagram displays extra calculation digits; the answers here are rounded to two significant figures. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy">OpenStax, <em>College Physics 2e</em>, Figure 15.34</a>.</span><a class="headerlink" href="#fig-example-lost-work" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The work output falls from <span class="math notranslate nohighlight">\(3.3\times10^3\ {\rm J}\)</span> to <span class="math notranslate nohighlight">\(2.4\times10^3\ {\rm J}\)</span>, a loss of <span class="math notranslate nohighlight">\(9.3\times10^2\ {\rm J}\)</span> of potential work. Both outputs are below the heat input, and the lower hot-side temperature gives the smaller output, as expected. The lost opportunity equals the cold-reservoir temperature times the entropy generated in the preliminary transfer; the energy itself is conserved.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy">OpenStax, College Physics 2e, Example 15.7</a>.</em></p>
+</section>
+<section id="example-problem-entropy-change-when-ice-melts">
+<h3><span class="section-number">14.5.6. </span>Example Problem: Entropy Change When Ice Melts<a class="headerlink" href="#example-problem-entropy-change-when-ice-melts" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Entropy Change When Ice Melts</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>Find the entropy increase when <span class="math notranslate nohighlight">\(1.00\ {\rm kg}\)</span> of ice at <span class="math notranslate nohighlight">\(0^\circ{\rm C}\)</span> melts completely to water at the same temperature. Use the latent heat of fusion <span class="math notranslate nohighlight">\(L_f=334\ {\rm kJ/kg}\)</span> at standard atmospheric pressure.</p>
+</div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">The ice and resulting water are the system. Melting absorbs latent heat without changing the temperature, so we can imagine a reversible phase change at the melting point to determine the entropy change. The mass and latent heat give the required energy transfer. Dividing that transfer by the absolute melting temperature gives the entropy increase.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text">The heat absorbed during melting is <span class="math notranslate nohighlight">\(Q=mL_f\)</span>. Because the reversible reference process takes place at constant temperature, the entropy change is</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S=\frac{Q}{T}=\frac{mL_f}{T}.
+\]</div>
+<p class="sd-card-text">The melting temperature is approximately <span class="math notranslate nohighlight">\(273\ {\rm K}\)</span>, and <span class="math notranslate nohighlight">\(334\ {\rm kJ/kg}=3.34\times10^5\ {\rm J/kg}\)</span>. Substituting these values gives</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S=\frac{(1.00\ {\rm kg})(3.34\times10^5\ {\rm J/kg})}{273\ {\rm K}}=1.22\times10^3\ {\rm J/K}.
+\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">The water’s entropy increases by <span class="math notranslate nohighlight">\(1.22\times10^3\ {\rm J/K}\)</span>. The positive sign is consistent with heat entering the system and the loss of the ice crystal’s fixed molecular arrangement. A constant temperature does not require a constant entropy: latent heat changes the phase rather than raising the temperature.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy">OpenStax, College Physics 2e, Example 15.8</a>.</em></p>
+</section>
+</section>
+<section id="in-class-exercises">
+<h2><span class="section-number">14.6. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">14.6.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3><span class="section-number">14.6.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>Suppose a woman does <span class="math notranslate nohighlight">\(500\ {\rm J}\)</span> of work and <span class="math notranslate nohighlight">\(9500\ {\rm J}\)</span> of heat transfer occurs into the environment in the process. (a) What is the decrease in her internal energy, assuming no change in temperature or consumption of food? (That is, there is no other energy transfer.) (b) What is her efficiency?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>A car tire contains <span class="math notranslate nohighlight">\(0.0380\ {\rm m^3}\)</span> of nitrogen at a gauge pressure of <span class="math notranslate nohighlight">\(2.20 \times 10^5\ {\rm N/m^2}\)</span> (about 32 psi). How much more internal energy does this gas have than the same volume at zero gauge pressure (normal atmospheric pressure)? Use <span class="math notranslate nohighlight">\(E_{\rm int}=\frac{5}{2}NkT\)</span> for the internal energy of nitrogen, a diatomic gas.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>With <span class="math notranslate nohighlight">\(2.56 \times 10^6\ {\rm J}\)</span> of heat transfer into an engine, a given cyclical heat engine can do only <span class="math notranslate nohighlight">\(1.50 \times 10^5\ {\rm J}\)</span> of work. (a) What is the engine’s efficiency? (b) How much heat transfer to the environment takes place?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>A certain gasoline engine has an efficiency of <span class="math notranslate nohighlight">\(30.0\%\)</span>. What would the hot reservoir temperature be for a Carnot engine having that efficiency, if it operates with a cold reservoir temperature of <span class="math notranslate nohighlight">\(200^\circ{\rm C}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>What is the coefficient of performance of an ideal heat pump that transfers heat from a cold reservoir at <span class="math notranslate nohighlight">\(-25.0^\circ{\rm C}\)</span> to a hot reservoir at <span class="math notranslate nohighlight">\(40.0^\circ{\rm C}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>On a hot summer day, <span class="math notranslate nohighlight">\(4.00 \times 10^6\ {\rm J}\)</span> of heat transfer into a parked car increases its temperature from <span class="math notranslate nohighlight">\(35.0^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(45.0^\circ{\rm C}\)</span>. What is the increase in entropy of the car due to this heat transfer alone?</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">14.7. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">14.7.1. </span>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">14.7.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>A great deal of effort, time, and money has been spent in the quest for the so-called perpetual-motion machine, which is defined as a hypothetical machine that operates or produces useful work indefinitely and/or a hypothetical machine that produces more work or energy than it consumes. Explain, in terms of heat engines and the first law of thermodynamics, why or why not such a machine is likely to be constructed.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>Is a temperature difference necessary to operate a heat engine? State why or why not.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">14.7.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>(a) How long will the energy in a <span class="math notranslate nohighlight">\(1470\ {\rm kJ}\)</span> (<span class="math notranslate nohighlight">\(350\ {\rm kcal}\)</span>) cup of yogurt last in a woman doing work at the rate of <span class="math notranslate nohighlight">\(150\ {\rm W}\)</span> with an efficiency of <span class="math notranslate nohighlight">\(20.0\%\)</span> (such as in leisurely climbing stairs)?</p>
+<p>(b) Does the time found in part (a) imply that it is easy to consume more food energy than you can reasonably expect to work off with exercise?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>(a) What is the efficiency of a cyclical heat engine in which <span class="math notranslate nohighlight">\(75.0\ {\rm kJ}\)</span> of heat transfer occurs to the environment for every <span class="math notranslate nohighlight">\(95.0\ {\rm kJ}\)</span> of heat transfer into the engine?</p>
+<p>(b) How much work does it produce for <span class="math notranslate nohighlight">\(100\ {\rm kJ}\)</span> of heat transfer into the engine?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>(a) What is the hot reservoir temperature of a Carnot engine that has an efficiency of <span class="math notranslate nohighlight">\(42.0\%\)</span> and a cold reservoir temperature of <span class="math notranslate nohighlight">\(27.0^\circ{\rm C}\)</span>?</p>
+<p>(b) What must the hot reservoir temperature be for a real heat engine that achieves <span class="math notranslate nohighlight">\(0.700\)</span> of the maximum efficiency, but still has an efficiency of <span class="math notranslate nohighlight">\(42.0\%\)</span> (and a cold reservoir at <span class="math notranslate nohighlight">\(27.0^\circ{\rm C}\)</span>)?</p>
+<p>(c) Does your answer imply practical limits to the efficiency of car gasoline engines?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>A hot rock ejected from a volcano’s lava fountain cools from <span class="math notranslate nohighlight">\(1100^\circ{\rm C}\)</span> to <span class="math notranslate nohighlight">\(40.0^\circ{\rm C}\)</span>, and its entropy decreases by <span class="math notranslate nohighlight">\(950\ {\rm J/K}\)</span>. How much heat transfer occurs from the rock?</p>
+</div></blockquote>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +1643,65 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-first-law-of-thermodynamics">14.1. The First Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-q-and-work-w">14.1.1. Heat <span class="math notranslate nohighlight">\(Q\)</span> and Work <span class="math notranslate nohighlight">\(W\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy-e-rm-int">14.1.2. Internal Energy <span class="math notranslate nohighlight">\(E_{\rm int}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#human-metabolism-and-the-first-law-of-thermodynamics">14.1.3. Human Metabolism and the First Law of Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-internal-energy-along-two-paths">14.1.4. Example Problem: Internal Energy Along Two Paths</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-processes-of-the-first-law-of-thermodynamics">14.2. Simple Processes of the First Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-diagrams-and-their-relationship-to-work-done-on-or-by-a-gas">14.2.1. <span class="math notranslate nohighlight">\(PV\)</span> Diagrams and their Relationship to Work Done on or by a Gas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reversible-processes">14.2.2. Reversible Processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-work-around-a-rectangular-gas-cycle">14.2.3. Example Problem: Work Around a Rectangular Gas Cycle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-second-law-of-thermodynamics">14.3. Introduction to the Second Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-engines">14.3.1. Heat Engines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-coal-plant-energy-balance-and-emissions">14.3.2. Example Problem: Coal-Plant Energy Balance and Emissions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-s-heat-engine-heat-pumps-and-refrigerators">14.4. Carnot’s Heat Engine, Heat Pumps, and Refrigerators</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-pumps">14.4.1. Heat Pumps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#air-conditioners-and-refrigerators">14.4.2. Air Conditioners and Refrigerators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-carnot-limit-for-a-nuclear-power-plant">14.4.3. Example Problem: Carnot Limit for a Nuclear Power Plant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-maximum-heating-coefficient-of-performance">14.4.4. Example Problem: Maximum Heating Coefficient of Performance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-the-second-law-of-thermodynamics">14.5. Entropy and the Second Law of Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-the-unavailability-to-do-work">14.5.1. Entropy and the Unavailability to Do Work</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-to-disorder">14.5.2. Order to Disorder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#life-evolution-and-the-second-law-of-thermodynamics">14.5.3. Life, Evolution, and the Second Law of Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-entropy-from-heat-flow-between-reservoirs">14.5.4. Example Problem: Entropy from Heat Flow Between Reservoirs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-lost-work-after-irreversible-heat-transfer">14.5.5. Example Problem: Lost Work After Irreversible Heat Transfer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-entropy-change-when-ice-melts">14.5.6. Example Problem: Entropy Change When Ice Melts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">14.6. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">14.6.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">14.6.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">14.7. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">14.7.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">14.7.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">14.7.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
