@@ -66,6 +66,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter16/oscillations-waves';</script>
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script src="../_static/init-plyr.js?v=bf401924"></script>
@@ -468,7 +470,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -484,6 +488,48 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke-s-law">15.1. Hooke’s Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-in-hooke-s-law-of-deformation">15.1.1. Energy in Hooke’s Law of Deformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-energy-stored-in-a-toy-gun-spring">15.1.2. Example Problem: Energy Stored in a Toy Gun Spring</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#period-and-frequency-in-oscillations">15.2. Period and Frequency in Oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-harmonic-motion">15.3. Simple Harmonic Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-between-shm-and-waves">15.3.1. The Link between SHM and Waves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-pendulum">15.4. Simple Pendulum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-and-the-simple-harmonic-oscillator">15.5. Energy and the Simple Harmonic Oscillator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damped-harmonic-motion">15.6. Damped Harmonic Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forced-oscillations-and-resonance">15.7. Forced Oscillations and Resonance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waves">15.8. Waves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transverse-and-longitudinal-waves">15.8.1. Transverse and Longitudinal Waves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superposition-and-interference">15.9. Superposition and Interference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standing-waves">15.9.1. Standing Waves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beats">15.9.2. Beats</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-in-waves">15.10. Energy in Waves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">15.11. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">15.11.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">15.11.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">15.12. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">15.12.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">15.12.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">15.12.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -495,7 +541,750 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="oscillations-waves">
 <h1><span class="section-number">15. </span>Oscillations &amp; Waves<a class="headerlink" href="#oscillations-waves" title="Link to this heading">#</a></h1>
-<p>Aug 23, 2026 | 5 words | 0 min read</p>
+<p>Nov 03, 2026 | 7017 words | 47 min read</p>
+<p>Many systems oscillate that is they move back and forth between two points.  All oscillations involve force and energy.  You push a child in a swing to get the motion started.  You put energy into a guitar string when you pluck it.</p>
+<p>Some oscillations create waves (e.g., a guitar creates sound waves).  Water waves are visible, but sound waves are not.  Every wave is a <em>disturbance that moves from its source and carries energy</em>.</p>
+<section id="hooke-s-law">
+<h2><span class="section-number">15.1. </span>Hooke’s Law<a class="headerlink" href="#hooke-s-law" title="Link to this heading">#</a></h2>
+<p>Newton’s first law implies that an object oscillating back and forth is experiencing forces. Without force, the object would move in a straight line at constant speed.  Consider plucking a plastic ruler, where the deformation of the ruler creates a force in the opposite direction, known as a restoring force.  Once released, the restoring force causes the ruler to move back toward it stable equilibrium.</p>
+<p><em>Why doesn’t the ruler just stop at the middle?</em></p>
+<p>By the time the ruler gets there, it gains momentum and continues to move to the right.  Eventually, there is a deformation in the opposite direction.  It is then forced to the left back through the equilibrium point and the process repeats until dissipative force dampen the motion.  Dissipative forces remove mechanical energy from the system and bring the ruler to rest.</p>
+<p>The simplest oscillations occur when the restoring forces is directly proportional to displacement (i.e, <span class="math notranslate nohighlight">\(F\propto x\)</span>).  The name given to this relationship between force and displacement is Hooke’s law:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cdfd2ce7-e563-4ef0-99e4-8587a7b219a6">
+<span class="eqno">(15.1)<a class="headerlink" href="#equation-cdfd2ce7-e563-4ef0-99e4-8587a7b219a6" title="Permalink to this equation">#</a></span>\[\begin{align}
+F = -kx,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(F\)</span> is the restoring force, <span class="math notranslate nohighlight">\(x\)</span> is the displacement from equilibrium (i.e., <strong>deformation</strong>), and <span class="math notranslate nohighlight">\(k\)</span> is a constant related to the difficulty in deforming the system (i.e., a property of the material). The minus sign indicates the restoring force is in the direction opposite to the displacement.</p>
+<figure class="align-default" id="fig-diving-board-oscillation">
+<img alt="Five-panel illustration of a flexible diving board oscillating about equilibrium. Red arrows show the restoring force opposing displacement, while green arrows show the direction of velocity as the board passes through equilibrium." class="custom-wide-figure" src="../_images/diving-board-hookes-law-oscillation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.1 </span><span class="caption-text"><strong>Restoring force and oscillation of a diving board.</strong> When displaced from equilibrium, the board experiences a restoring force proportional to its displacement, <span class="math notranslate nohighlight">\(F_{\rm r}=-kx\)</span>, for small deformations. The restoring force is greatest at the turning points, where <span class="math notranslate nohighlight">\(v=0\)</span>, and vanishes at equilibrium, where the speed is greatest. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-1-hookes-law-stress-and-strain-revisited">OpenStax, College Physics 2e, Figures 16.2–16.3</a>.</em></span><a class="headerlink" href="#fig-diving-board-oscillation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The constant <span class="math notranslate nohighlight">\(k\)</span> is related to the rigidity (or stiffness) of a system, where a larger the force constant produces a larger restoring force and a stiffer system.  The units of <span class="math notranslate nohighlight">\(k\)</span> are newtons per meter (<span class="math notranslate nohighlight">\(N/m\)</span>).  A common physics laboratory exercise is to measure restoring forces created by springs (Figure <a class="reference internal" href="#fig-hookes-law-spring-measurements"><span class="std std-numref">15.2</span></a>), determine if they follow Hooke’s law, and calculate their force constants if they do (Figure <a class="reference internal" href="#fig-hookes-law-force-displacement"><span class="std std-numref">15.3</span></a>).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Taking Measurements</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-hookes-law-spring-measurements">
+<img alt="Six successive trials with the same spring, showing hanging masses increasing from 0.0 to 0.5 kg in 0.1 kg increments and the corresponding extensions measured to the nearest centimeter." class="custom-wide-figure" src="../_images/hookes-law-spring-measurement.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.2 </span><span class="caption-text"><strong>Measuring spring extension.</strong> Known masses are added in <span class="math notranslate nohighlight">\(0.1\ {\rm kg}\)</span> increments, and the spring’s extension is measured relative to its unloaded position to the nearest centimeter.</span><a class="headerlink" href="#fig-hookes-law-spring-measurements" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Analyzing the Data</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-hookes-law-force-displacement">
+<img alt="Measurement table and force-versus-extension graph showing scattered data points, horizontal measurement uncertainty bars, and a best-fit line constrained to pass through the origin." class="custom-wide-figure" src="../_images/hookes-law-data-fit.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.3 </span><span class="caption-text"><strong>Determining the spring constant.</strong> Plotting the applied force, <span class="math notranslate nohighlight">\(F=mg\)</span>, against extension, <span class="math notranslate nohighlight">\(x\)</span>, gives a best-fit line through the origin with slope <span class="math notranslate nohighlight">\(k=37.9\ {\rm N/m}\)</span>. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-1-hookes-law-stress-and-strain-revisited">OpenStax, College Physics 2e, Figures 16.4</a>.</em></span><a class="headerlink" href="#fig-hookes-law-force-displacement" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="energy-in-hooke-s-law-of-deformation">
+<h3><span class="section-number">15.1.1. </span>Energy in Hooke’s Law of Deformation<a class="headerlink" href="#energy-in-hooke-s-law-of-deformation" title="Link to this heading">#</a></h3>
+<p>To produce a deformation, work must be done.  If the only result is deformation and no work goes into thermal, sound, or kinetic energy, then all the work is initially stored in the deformed object as some form of potential energy.  The potential energy stored in a spring is <span class="math notranslate nohighlight">\({\rm PE_s} = \frac{1}{2}kx^2.\)</span>  We generalize the idea to elastic potential energy for a deformation of any system that can be describe by Hooke’s law, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a8214dd1-aae5-4e05-a772-e24ac63d593e">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-a8214dd1-aae5-4e05-a772-e24ac63d593e" title="Permalink to this equation">#</a></span>\[\begin{align}
+{\rm PE_{el}} = \frac{1}{2}kx^2,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\({\rm PE_{el}}\)</span> is the elastic potential energy stored in any deformed system that obeys Hooke’s law.  This means it has a displacement <span class="math notranslate nohighlight">\(x\)</span> from equilibrium and a constant <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>It is possible to find the work done in deforming a system to find the energy stored.  This work is performed by an applied force <span class="math notranslate nohighlight">\(F_{\rm app}\)</span>, which is exactly opposite to the restoring force (action-reaction) so that <span class="math notranslate nohighlight">\(F_{\rm app} = kx\)</span>.  Work done on the the system is the force multiplied by the distance, which is also the area under the curve.</p>
+<figure class="align-default" id="fig-hookes-law-work">
+<img alt="Applied force versus displacement for a spring. Two equal-area regions labeled A demonstrate that the work under the linear force-displacement curve equals the area of a rectangle with height equal to half the final applied force." class="custom-wide-figure" src="../_images/hookes-law-work-equal-areas.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.4 </span><span class="caption-text"><strong>Work done stretching a spring.</strong> The work is the area under the force-displacement curve (<span class="math notranslate nohighlight">\(A+B\)</span>). Because the two regions labeled <span class="math notranslate nohighlight">\(A\)</span> have equal areas, the work is equivalent to a rectangle with height <span class="math notranslate nohighlight">\(\frac{1}{2}F_{\rm app}\)</span>, giving <span class="math notranslate nohighlight">\(W=\frac{1}{2}F_{\rm app}x=\frac{1}{2}kx^2\)</span>. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-1-hookes-law-stress-and-strain-revisited">OpenStax, College Physics 2e, Figure 16.6</a>.</em></span><a class="headerlink" href="#fig-hookes-law-work" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="example-problem-energy-stored-in-a-toy-gun-spring">
+<h3><span class="section-number">15.1.2. </span>Example Problem: Energy Stored in a Toy Gun Spring<a class="headerlink" href="#example-problem-energy-stored-in-a-toy-gun-spring" title="Link to this heading">#</a></h3>
+<div class="etamu-exercise admonition">
+<p class="admonition-title">Example Problem: Calculating Stored Energy in a Toy Gun Spring</p>
+<p><strong>The Problem</strong></p>
+<blockquote>
+<div><p>A toy gun uses a spring with a force constant of <span class="math notranslate nohighlight">\(50.0\ {\rm N/m}\)</span> that is compressed by <span class="math notranslate nohighlight">\(0.150\ {\rm m}\)</span>. <strong>(a)</strong> How much elastic potential energy is stored in the compressed spring? <strong>(b)</strong> If friction and the mass of the spring are negligible, at what speed will a <span class="math notranslate nohighlight">\(2.00\ {\rm g}\)</span> projectile be ejected from the gun?</p>
+</div></blockquote>
+<figure class="align-default" id="fig-toy-gun-spring-energy">
+<img alt="Three stages of a spring-powered toy gun with a transparent housing. Panel (a) shows the uncompressed spring, panel (b) shows the spring compressed by distance x, and panel (c) shows the spring returning to its original length as the projectile leaves the gun with velocity v." class="custom-wide-figure" src="../_images/spring-projectile-energy.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.5 </span><span class="caption-text"><strong>Energy transfer in a spring-powered toy gun.</strong> (a) The spring is initially uncompressed. (b) Compressing the spring by a distance <span class="math notranslate nohighlight">\(x\)</span> stores elastic potential energy. (c) When released, the spring transfers its stored energy to the projectile, which leaves the gun with speed <span class="math notranslate nohighlight">\(v\)</span>. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-1-hookes-law-stress-and-strain-revisited">OpenStax, College Physics 2e, Figure 16.7</a>.</em></span><a class="headerlink" href="#fig-toy-gun-spring-energy" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3 etamu-dropdown">
+<summary class="sd-summary-title sd-card-header etamu-dropdown-title sd-bg-secondary sd-bg-text-secondary">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></span><span class="sd-summary-text">Show worked solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body etamu-dropdown-body docutils">
+<p class="sd-card-text"><strong>The Model</strong></p>
+<p class="sd-card-text">We model the toy gun as an ideal spring that obeys Hooke’s law. The spring constant and compression distance determine how much elastic potential energy is stored before the projectile is released. We take the spring’s uncompressed length as the position of zero elastic potential energy and define the horizontal <span class="math notranslate nohighlight">\(x\)</span>-axis along the barrel, with <span class="math notranslate nohighlight">\(+x\)</span> pointing toward the opening.</p>
+<p class="sd-card-text">The projectile is initially at rest. When the spring is released, its stored elastic potential energy is converted into the projectile’s kinetic energy. Because friction and the mass of the spring are neglected, we assume that all the stored energy is transferred to the projectile. We can therefore determine the launch speed using conservation of mechanical energy.</p>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Math</strong></p>
+<p class="sd-card-text"><strong>(a)</strong> The elastic potential energy stored in an ideal spring equals the work required to compress it from its equilibrium length. For a spring constant <span class="math notranslate nohighlight">\(k\)</span> and compression distance <span class="math notranslate nohighlight">\(x\)</span>, the stored energy is</p>
+<div class="math notranslate nohighlight">
+\[ PE_{\rm el}=\frac{1}{2}kx^2. \]</div>
+<p class="sd-card-text">Using the given spring constant and compression distance, the stored energy becomes</p>
+<div class="math notranslate nohighlight">
+\[ PE_{\rm el}=\frac{1}{2}(50.0\ {\rm N/m})(0.150\ {\rm m})^2=0.563\ {\rm J}. \]</div>
+<p class="sd-card-text"><strong>(b)</strong> When the spring is released, its elastic potential energy is converted into the kinetic energy of the projectile. Conservation of mechanical energy relates the initially stored energy to the projectile’s kinetic energy as</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2}kx^2=\frac{1}{2}mv^2.
+\]</div>
+<p class="sd-card-text">Solving this relationship symbolically for the projectile’s speed gives <span class="math notranslate nohighlight">\(v=x\sqrt{\frac{k}{m}}.\)</span>  The projectile’s mass must first be converted to SI units, so <span class="math notranslate nohighlight">\(2.00\ {\rm g}=2.00\times10^{-3}\ {\rm kg}\)</span>. Substituting the known quantities into the expression for speed gives</p>
+<div class="math notranslate nohighlight">
+\[ v=(0.150\ {\rm m})\sqrt{\frac{50.0\ {\rm N/m}}{2.00\times10^{-3}\ {\rm kg}}}=23.7\ {\rm m/s}.\]</div>
+<hr class="docutils" />
+<p class="sd-card-text"><strong>The Conclusion</strong></p>
+<p class="sd-card-text">Compressing the spring by <span class="math notranslate nohighlight">\(0.150\ {\rm m}\)</span> stores approximately <span class="math notranslate nohighlight">\(0.563\ {\rm J}\)</span> of elastic potential energy. If all this energy is transferred to the projectile, the <span class="math notranslate nohighlight">\(2.00\ {\rm g}\)</span> projectile leaves the toy gun with a speed of <span class="math notranslate nohighlight">\(23.7\ {\rm m/s}\)</span>. Although the stored energy is less than one joule, the projectile has a very small mass, so a relatively high launch speed is reasonable. In an actual toy gun, friction and the motion of the spring itself would absorb some energy, resulting in a lower launch speed.</p>
+</div>
+</details></div>
+<p><em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-1-hookes-law-stress-and-strain-revisited">OpenStax, College Physics 2e, Example 16.2</a>.</em></p>
+</section>
+</section>
+<section id="period-and-frequency-in-oscillations">
+<h2><span class="section-number">15.2. </span>Period and Frequency in Oscillations<a class="headerlink" href="#period-and-frequency-in-oscillations" title="Link to this heading">#</a></h2>
+<p>When you pluck a guitar string, the resulting sound has a steady tone and can last a long time.  Each successive vibration of the string takes the same time as the previous one.</p>
+<ul class="simple">
+<li><p>Motions that return to their initial position (or repeat themselves) are <strong>periodic</strong> and occur on a regular interval.</p></li>
+<li><p>The time to complete one oscillation remains constant and is called the <strong>period</strong> <span class="math notranslate nohighlight">\(T\)</span>.  Its units are usually in seconds, but can be in any unit of time (e.g., hours, days, years).</p></li>
+</ul>
+<p>A concept closely related to the period is the frequency of an event.  If the period is the time for the motion to return, the frequency is how many times it returns within a given item interval that is not equal to the period.  For example, if you are paid biweekly that means you receive a paycheck twice a month and the period between the paychecks is about two weeks.</p>
+<ul class="simple">
+<li><p><strong>Frequency</strong> <span class="math notranslate nohighlight">\(f\)</span> is defined to be the number of events per unit time (i.e., number of events per second).</p></li>
+</ul>
+<p>For periodic motion, frequency is the number of oscillations per unit time.  The mathematical relationship between frequency and period is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8c660c7c-6870-43ad-a2eb-6530d854a97f">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-8c660c7c-6870-43ad-a2eb-6530d854a97f" title="Permalink to this equation">#</a></span>\[\begin{align}
+f = \frac{1}{T}.
+\end{align}\]</div>
+<p>THe SI unit for frequency is <em>cycle per second</em> , which is defined as a <em>hertz</em> (<span class="math notranslate nohighlight">\(\rm Hz\)</span>):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cde55af0-dc61-4c69-b524-61dd432dfef0">
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-cde55af0-dc61-4c69-b524-61dd432dfef0" title="Permalink to this equation">#</a></span>\[\begin{align}
+1\ {\rm Hz} = \frac{1\ {\rm cycle}}{\rm s} = \frac{1}{s},
+\end{align}\]</div>
+<p>where a cycle is one complete oscillation.</p>
+</section>
+<section id="simple-harmonic-motion">
+<h2><span class="section-number">15.3. </span>Simple Harmonic Motion<a class="headerlink" href="#simple-harmonic-motion" title="Link to this heading">#</a></h2>
+<p><strong>Simple Harmonic Motion</strong> (SHM) is the oscillatory motion for a system where the net force has the same form as Hooke’s law.  We call these systems <strong>simple harmonic oscillators</strong> (SHOs).  A simple harmonic oscillator will continue to oscillate with equal displacement on either side of its equilibrium position as long as there is not damping (by friction or other non-conservative forces).</p>
+<p>The maximum displacement is called the <strong>amplitude</strong> <span class="math notranslate nohighlight">\(A\)</span>, where the units for the amplitude and displacement are the same.  For an object on a spring, the units of amplitude and displacement are in meters, whereas for sound oscillations they can have units of pressure.  The amplitude is related to the energy in the oscillation because the energy depends on the displacement (e.g., <span class="math notranslate nohighlight">\(\rm PE_{sp} = \frac{1}{2}kx^2\)</span>).  Figure <a class="reference internal" href="#fig-spring-oscillator"><span class="std std-numref">Fig. 15.6</span></a> illustrates how the restoring force and velocity change during one complete oscillation.</p>
+<figure class="align-center" id="fig-spring-oscillator">
+<div class="output text_html">
+<video
+    src="../_static/videos/SpringOscillatorAnimation.mp4"
+    poster="../_static/images/SpringOscillatorAnimation_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    width="100%"
+    style="max-width: 900px; display: block;"
+    aria-label="Animation of a mass attached to a spring oscillating on a frictionless surface. The animation pauses at five characteristic times during one period, showing the changing velocity, spring force, and free-body diagram.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 15.6 </span><span class="caption-text"><strong>Simple harmonic motion of a mass–spring system.</strong> A block oscillates between <span class="math notranslate nohighlight">\(x=+A\)</span> and <span class="math notranslate nohighlight">\(x=-A\)</span> on a frictionless surface. The restoring force <span class="math notranslate nohighlight">\(F_s=-kx\)</span> always points toward equilibrium and vanishes at <span class="math notranslate nohighlight">\(x=0\)</span>, where the block reaches its maximum speed. The free-body diagram illustrates the changing spring force and the constant vertical forces. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-3-simple-harmonic-motion-a-special-periodic-motion">OpenStax, College Physics 2e, Figure 16.9</a>.</em></span><a class="headerlink" href="#fig-spring-oscillator" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><em>What is special about simple harmonic motion?</em></p>
+<p>The period <span class="math notranslate nohighlight">\(T\)</span> and the frequency <span class="math notranslate nohighlight">\(f\)</span> of SHO are independent of amplitude.  A guitar string will oscillate with the same frequency whether plucked gently or vigorously.  A SHO can be used as a clock because the period is constant.</p>
+<p>Two important factors affect the period of a SHO:</p>
+<ol class="arabic simple">
+<li><p>The period is related to how stiff the system is.  A very stiff system has a large <strong>constant</strong> <span class="math notranslate nohighlight">\(k\)</span>, which causes the system to have a smaller period (or a string to have a higher pitch).</p></li>
+<li><p>Period also depends on the <strong>mass</strong> of the oscillating system. A more massive string produces a lower pitch (or a longer period vibration).</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Period of a Simple Harmonic Oscillator</p>
+<p>The <em>period of a simple harmonic oscillator</em> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fcc832d5-ff75-41eb-b1e6-a8f5b2d13b22">
+<span class="eqno">(15.5)<a class="headerlink" href="#equation-fcc832d5-ff75-41eb-b1e6-a8f5b2d13b22" title="Permalink to this equation">#</a></span>\[\begin{align}
+T = 2\pi \sqrt{\frac{m}{k}},
+\end{align}\]</div>
+<p>or in terms of the frequency is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-317a5c3a-b32e-452b-92d5-488f0c8310ba">
+<span class="eqno">(15.6)<a class="headerlink" href="#equation-317a5c3a-b32e-452b-92d5-488f0c8310ba" title="Permalink to this equation">#</a></span>\[\begin{align}
+f = \frac{1}{2\pi}\sqrt{\frac{k}{m}}.
+\end{align}\]</div>
+<p>Note that neither <span class="math notranslate nohighlight">\(T\)</span> nor <span class="math notranslate nohighlight">\(f\)</span> has any dependence on amplitude.</p>
+</div>
+<section id="the-link-between-shm-and-waves">
+<h3><span class="section-number">15.3.1. </span>The Link between SHM and Waves<a class="headerlink" href="#the-link-between-shm-and-waves" title="Link to this heading">#</a></h3>
+<p>If you could see a car bouncing in slow motion as it drove by, the headlight would make a streak moving up and down.  This is similar to a mass bouncing on a spring, where we can trace its path on a moving strip of paper.  Both motions produce waves that are sine functions.  All simple harmonic motion is intimately related to sine and cosine waves.</p>
+<figure class="align-center" id="fig-headlight-oscillation">
+<div class="output text_html">
+<video
+    src="../_static/videos/HeadlightOscillationFinal.mp4"
+    poster="../_static/images/HeadlightOscillation_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    width="100%"
+    style="max-width: 900px; display: block;"
+    aria-label="Animation of a car traveling over a bumpy road, illustrating the relationship between vertical headlight oscillations and a displacement-versus-time graph.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 15.7 </span><span class="caption-text"><strong>Oscillatory motion of a car’s suspension.</strong> As a car travels over bumps in the road, its suspension causes the headlights to move vertically about their equilibrium position. The cyan line represents a horizontal ray extending from the headlight, while the inset graph illustrates the corresponding vertical displacement, <span class="math notranslate nohighlight">\(\Delta y\)</span>, as a function of time. If the restoring force approximately follows Hooke’s law and damping is negligible, the resulting oscillation is sinusoidal. The graph uses an expanded vertical scale in centimeters to make the small displacement easier to visualize. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-3-simple-harmonic-motion-a-special-periodic-motion">OpenStax, <em>College Physics 2e</em>, Figure 16.10</a>.</span><a class="headerlink" href="#fig-headlight-oscillation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The displacement function of time <span class="math notranslate nohighlight">\(t\)</span> in any SHM is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-250a6b31-b7de-4af2-818a-7caafb1d6574">
+<span class="eqno">(15.7)<a class="headerlink" href="#equation-250a6b31-b7de-4af2-818a-7caafb1d6574" title="Permalink to this equation">#</a></span>\[\begin{align}
+x(t) = A\cos\left(\frac{2\pi}{T}t\right) = A\cos\left(\omega t\right),
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the amplitude and <span class="math notranslate nohighlight">\(T\)</span> is the period of the oscillation.  At <span class="math notranslate nohighlight">\(t=0\)</span>, the initial position is <span class="math notranslate nohighlight">\(x_0 = A\)</span> and the displacement oscillates back and forth with a period <span class="math notranslate nohighlight">\(T\)</span>.  From this expression, the velocity <span class="math notranslate nohighlight">\(v\)</span> is also given as a function of time <span class="math notranslate nohighlight">\(t\)</span>, or</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e7cba124-7df9-4487-824f-2dce521f6a02">
+<span class="eqno">(15.8)<a class="headerlink" href="#equation-e7cba124-7df9-4487-824f-2dce521f6a02" title="Permalink to this equation">#</a></span>\[\begin{align}
+v(t) = -v_{\rm max} \sin{\left(\frac{2\pi}{T}t\right)} = -v_{\rm max} \sin(\omega t),
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_{\rm max} = \omega A = A\sqrt{k/m}\)</span>.</p>
+<p>The object has zero velocity at the maximum displacement <span class="math notranslate nohighlight">\(x_0 = A;\ v_0 = 0\)</span>.  The minus sign in <span class="math notranslate nohighlight">\(v(t)\)</span> gives the correct direction for the velocity because the system is moving back toward the equilibrium point.</p>
+<p>According to Newton’s second law, the acceleration is <span class="math notranslate nohighlight">\(a = F/m = -kx/m\)</span>.  Thus, we have a cosine function:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dfa3d41e-d725-4be8-81da-9b07d63e281e">
+<span class="eqno">(15.9)<a class="headerlink" href="#equation-dfa3d41e-d725-4be8-81da-9b07d63e281e" title="Permalink to this equation">#</a></span>\[\begin{align}
+a(t) = -\frac{k}{m}x = -\frac{k}{m}A\cos(\omega t).
+\end{align}\]</div>
+<p>Hence, <span class="math notranslate nohighlight">\(a(t)\)</span> is directly proportional to and <em>in the opposite direction of</em> <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<figure class="align-default" id="fig-shm-position-velocity-acceleration">
+<img alt="Ten successive positions of a vertically oscillating mass attached to a spring, aligned with corresponding points on position, velocity, and acceleration graphs." class="custom-wide-figure" src="../_images/SHM_SpringGraphAlignment.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.8 </span><span class="caption-text"><strong>Position, velocity, and acceleration in simple harmonic motion.</strong> Ten successive snapshots of a mass oscillating on a vertical spring correspond to the colored points on the three graphs below. The faded curves show the continuous sinusoidal motion. At maximum displacement (<span class="math notranslate nohighlight">\(x=\pm A\)</span>), the velocity is zero and the acceleration points toward equilibrium. As the mass passes through equilibrium (<span class="math notranslate nohighlight">\(x=0\)</span>), its speed is greatest and its acceleration is zero. The vertical guides connect each spring position to its corresponding values of <span class="math notranslate nohighlight">\(x(t)\)</span>, <span class="math notranslate nohighlight">\(v(t)\)</span>, and <span class="math notranslate nohighlight">\(a(t)\)</span>, illustrating their relationship throughout the oscillation. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-3-simple-harmonic-motion-a-special-periodic-motion">OpenStax, <em>College Physics 2e</em>, Figure 16.12</a>.</span><a class="headerlink" href="#fig-shm-position-velocity-acceleration" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="simple-pendulum">
+<h2><span class="section-number">15.4. </span>Simple Pendulum<a class="headerlink" href="#simple-pendulum" title="Link to this heading">#</a></h2>
+<p>Pendulums are used in clocks, while others are used for fun (e.g., a child’s swing).  For small displacements, a pendulum is a simple harmonic oscillator (SHO).  A <strong>simple pendulum</strong> has a low mass pendulum bob suspended from a light wire (or string).</p>
+<p>The pendulum sweeps out an arc, where we can define the displacement as the distance traveled along the arc or the arclength <span class="math notranslate nohighlight">\(s\)</span>.  The net force on the bob is tangent to the arc and equals <span class="math notranslate nohighlight">\(-mg\sin{\theta}\)</span>; Note that this is found in a similar way as a mass sliding on an incline.  The weight is divided among the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components, where the tension cancels the <span class="math notranslate nohighlight">\(mg\cos{\theta}\)</span> component parallel to the string.  The remaining force restores the system by pulling the bob back to the equilibrium position (i.e., hanging vertically or <span class="math notranslate nohighlight">\(\theta = 0^\circ\)</span>).</p>
+<p>If the restoring force (<span class="math notranslate nohighlight">\(F = -mg\sin{\theta}\)</span>) is directly proportional to the displacement, then we have a SHO.  We can make a simplification, where for small angles (e.g., <span class="math notranslate nohighlight">\(\theta \lesssim 15^\circ\)</span>), we can use the <em>small angle approximation</em>, or <span class="math notranslate nohighlight">\(\sin{\theta} \approx \theta\)</span>.  In the small angle approximation <span class="math notranslate nohighlight">\(\sin{\theta}\)</span> differs from <span class="math notranslate nohighlight">\(\theta\)</span> by about 1% or less.  Then, the restoring force $FE is given approximately by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-365aef4e-fc6a-47dd-a39c-cedf932fa9b6">
+<span class="eqno">(15.10)<a class="headerlink" href="#equation-365aef4e-fc6a-47dd-a39c-cedf932fa9b6" title="Permalink to this equation">#</a></span>\[\begin{align}
+F =-mg\sin{\theta} \approx -mg\theta.
+\end{align}\]</div>
+<p>The displacement <span class="math notranslate nohighlight">\(s\)</span> is directly proportional to <span class="math notranslate nohighlight">\(\theta\)</span>, where the arclength in a circle is related to its radius <span class="math notranslate nohighlight">\(L\)</span> by <span class="math notranslate nohighlight">\(s = L\theta\)</span> so that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c95eeca4-3313-481b-bedb-9cadcbeda083">
+<span class="eqno">(15.11)<a class="headerlink" href="#equation-c95eeca4-3313-481b-bedb-9cadcbeda083" title="Permalink to this equation">#</a></span>\[\begin{align}
+\theta = \frac{s}{L}.
+\end{align}\]</div>
+<p>For small angles, the restoring force is written as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6ee555bb-d05e-44d6-8137-e3f6913be07d">
+<span class="eqno">(15.12)<a class="headerlink" href="#equation-6ee555bb-d05e-44d6-8137-e3f6913be07d" title="Permalink to this equation">#</a></span>\[\begin{align}
+F \approx -mg\theta = - \left(\frac{mg}{L}\right)s.
+\end{align}\]</div>
+<p>Notice that we can substitute <span class="math notranslate nohighlight">\(k = mg/L\)</span>, and the restoring force now resembles Hooke’s law, or <span class="math notranslate nohighlight">\(F = -kx\)</span>.  For angles less than <span class="math notranslate nohighlight">\({\sim}15^\circ\)</span>, the restoring force is directly proportional to the displacement, and the simple pendulum is a SHO.</p>
+<p>We can find the period of oscillation for a simple pendulum using the equation for the period of a SHO.  Mathematically, we have for the SHO:</p>
+<div class="math notranslate nohighlight">
+\[ T = 2\pi\sqrt{\frac{m}{k}},\]</div>
+<p>where we can substitute the constant <span class="math notranslate nohighlight">\(k\)</span> for a simple pendulum to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e9d5172f-f0b8-4a60-95c7-3493003b99ab">
+<span class="eqno">(15.13)<a class="headerlink" href="#equation-e9d5172f-f0b8-4a60-95c7-3493003b99ab" title="Permalink to this equation">#</a></span>\[\begin{align}
+T = 2\pi\sqrt{\frac{m}{mg/L}} = 2\pi \sqrt{\frac{L}{g}}.
+\end{align}\]</div>
+<p>The result shows that the period of a simple pendulum does <em>not</em> depend on the mass of the bob, only the length of the string and the acceleration due to gravity <span class="math notranslate nohighlight">\(g\)</span>.  If the period of oscillation and length of the string are precisely measured, then a simple pendulum can be used to measure <span class="math notranslate nohighlight">\(g\)</span>.  As with SHOs, the period <span class="math notranslate nohighlight">\(T\)</span> for a simple pendulum is nearly independent of amplitude.</p>
+</section>
+<section id="energy-and-the-simple-harmonic-oscillator">
+<h2><span class="section-number">15.5. </span>Energy and the Simple Harmonic Oscillator<a class="headerlink" href="#energy-and-the-simple-harmonic-oscillator" title="Link to this heading">#</a></h2>
+<p>To study the energy, we first consider all the forms of energy it can have.  The potential energy stored in the deformation (or displacement) of a simple harmonic oscillator (SHO) is given by <span class="math notranslate nohighlight">\(PE_{\rm el} = \frac{1}{2}kx^2\)</span> because a SHO has no dissipative forces.  The other important form of energy is kinetic energy <span class="math notranslate nohighlight">\(KE\)</span>.</p>
+<p>The conservation of energy (for conservative forces) is given by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fe4cf694-9f8a-403f-bd48-81341ca525c4">
+<span class="eqno">(15.14)<a class="headerlink" href="#equation-fe4cf694-9f8a-403f-bd48-81341ca525c4" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \text{constant}.
+\end{align}\]</div>
+<p>This statement of the conservation of energy is valid for <em>all</em> SHOs including those where the gravitational force plays a role (i.e., simple pendulum).</p>
+<p>For the simple pendulum, we used the relation <span class="math notranslate nohighlight">\(s=L\theta\)</span>.  Thus, we can also replace the velocity with <span class="math notranslate nohighlight">\(v = L\omega\)</span> and the spring constant <span class="math notranslate nohighlight">\(k = mg/L\)</span>.  The, the conservation of energy becomes</p>
+<div class="amsmath math notranslate nohighlight" id="equation-71578432-2178-43b7-8d41-a8f1db8cd3c3">
+<span class="eqno">(15.15)<a class="headerlink" href="#equation-71578432-2178-43b7-8d41-a8f1db8cd3c3" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}mL^2\omega^2 + \frac{1}{2}mgL\theta^2 = \text{constant}.
+\end{align}\]</div>
+<p>In the case of an undamped SHO, the energy oscillates back and forth between kinetic and potential.  So for the example of a mass on a spring sliding on a frictionless surface, the motion starts with all of the energy stored in the spring.</p>
+<ul class="simple">
+<li><p>As the object starts to move, the elastic potential energy is converted into kinetic energy and becoming entirely kinetic energy at the equilibrium position.</p></li>
+<li><p>It is then converted back into elastic potential energy by the spring, the velocity becomes zero when the kinetic energy is completely converted.</p></li>
+</ul>
+<figure class="align-center" id="fig-spring-energy-conservation">
+<div class="output text_html">
+<video
+    src="../_static/videos/SpringOscillatorEnergy.mp4"
+    poster="../_static/images/SpringOscillatorEnergy_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    width="100%"
+    style="max-width: 900px; display: block;"
+    aria-label="Animation of a square block oscillating horizontally on a frictionless surface while a stacked energy bar illustrates the exchange between kinetic and elastic potential energy. Total mechanical energy remains constant.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 15.9 </span><span class="caption-text"><strong>Conservation of energy in simple harmonic motion.</strong> A block attached to a spring oscillates on a frictionless surface while a stacked energy bar illustrates the continuous exchange between elastic potential energy (<span class="math notranslate nohighlight">\(U_s=\frac{1}{2}kx^2\)</span>) and kinetic energy (<span class="math notranslate nohighlight">\(K=\frac{1}{2}mv^2\)</span>). At the turning points (<span class="math notranslate nohighlight">\(x=\pm A\)</span>), the block momentarily stops and all the mechanical energy is stored in the spring. At equilibrium (<span class="math notranslate nohighlight">\(x=0\)</span>), the block reaches its maximum speed and all the mechanical energy is kinetic. Throughout the motion, the total mechanical energy <span class="math notranslate nohighlight">\(E=K+U_s\)</span> remains constant. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-3-simple-harmonic-motion-a-special-periodic-motion">OpenStax, <em>College Physics 2e</em>, Figure 16.14</a>.</span><a class="headerlink" href="#fig-spring-energy-conservation" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The conservation of energy principle can be used to derive an expression for the velocity <span class="math notranslate nohighlight">\(v\)</span>.  Starting the SHO from rest and at maximum displacement (<span class="math notranslate nohighlight">\(x_o = A\)</span>), then the total energy is</p>
+<div class="math notranslate nohighlight">
+\[ E_i = \frac{1}{2} kA^2. \]</div>
+<p>This total energy is constant and is shifted back and forth between kinetic and potential energy.  The conservation of energy for this system becomes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-30863161-98d8-458a-acc4-736a3deaefc0">
+<span class="eqno">(15.16)<a class="headerlink" href="#equation-30863161-98d8-458a-acc4-736a3deaefc0" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2,
+\end{align}\]</div>
+<p>where the velocity <span class="math notranslate nohighlight">\(v\)</span> and displacement <span class="math notranslate nohighlight">\(x\)</span> varies after the mass is released but must maintain a constant total energy.  We can solve for the velocity <span class="math notranslate nohighlight">\(v\)</span> through some algebra to get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3e184e4a-46c0-401b-9ee7-688f547ecc5a">
+<span class="eqno">(15.17)<a class="headerlink" href="#equation-3e184e4a-46c0-401b-9ee7-688f547ecc5a" title="Permalink to this equation">#</a></span>\[\begin{align}
+v &amp;= \pm \sqrt{\frac{k}{m}\left(A^2-x^2\right)}, \\
+&amp;= \pm \sqrt{\frac{k}{m}}A\sqrt{1-\left(\frac{x}{A}\right)^2}.
+\end{align}\]</div>
+<p>We can use the position equation <span class="math notranslate nohighlight">\(x(t) = A\cos(\omega t)\)</span> (see Eqn. 15.7) for a SHO and the substitution <span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{k}{m}}\)</span> to simplify this expression further.  We find that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e4b9fa12-e904-42ed-83ab-8c4ebf05a6a5">
+<span class="eqno">(15.18)<a class="headerlink" href="#equation-e4b9fa12-e904-42ed-83ab-8c4ebf05a6a5" title="Permalink to this equation">#</a></span>\[\begin{align}
+v(t) &amp;= \pm \omega A \sqrt{1-\cos^2{(\omega t)}}, \\
+&amp;= \pm \omega A |\sin{(\omega t)}|, \\
+&amp;= \pm v_{\rm max}\sin{(\omega t)},
+\end{align}\]</div>
+<p>where the direction of <span class="math notranslate nohighlight">\(v_{\rm max}\)</span> determines the sign initially and <span class="math notranslate nohighlight">\(\sin{(\omega t)}\)</span> flips the sign as it passes through the equilibrium position.</p>
+<p>Thus, we have the same form as Equation 15.8.  Notice that the maximum velocity <span class="math notranslate nohighlight">\(v_{\rm max}\)</span> depends on three factors.</p>
+<ol class="arabic simple">
+<li><p>Maximum velocity is <em>directly proportional to amplitude</em>, <span class="math notranslate nohighlight">\(v_{\rm max} = \omega A\)</span>. The greater the maximum displacement, the greater the maximum velocity.</p></li>
+<li><p>Maximum velocity is <em>greater for stiffer systems</em> because they exert greater force for the same displacement, <span class="math notranslate nohighlight">\(v_{\rm max} \propto \sqrt{k}\)</span>.</p></li>
+<li><p>The maximum velocity is <em>smaller for larger masses</em> because it is inversely proportional to the square root of <span class="math notranslate nohighlight">\(m\)</span>, or <span class="math notranslate nohighlight">\(v_{\rm max} \propto 1/\sqrt{m}\)</span>.  Objects with more mass accelerate more slowly.</p></li>
+</ol>
+<p>A similar calculation for the simple pendulum produces a similar result:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fb7cbb4a-97ad-4018-afe1-94f75b3c63d0">
+<span class="eqno">(15.19)<a class="headerlink" href="#equation-fb7cbb4a-97ad-4018-afe1-94f75b3c63d0" title="Permalink to this equation">#</a></span>\[\begin{align}
+\omega_{\rm max} &amp;= \sqrt{\frac{g}{L}}\theta_{\rm max}.
+\end{align}\]</div>
+</section>
+<section id="damped-harmonic-motion">
+<h2><span class="section-number">15.6. </span>Damped Harmonic Motion<a class="headerlink" href="#damped-harmonic-motion" title="Link to this heading">#</a></h2>
+<p>A guitar string stops oscillating a few seconds after being plucked.  Although we can make friction and non-conservative forces negligibly small, they do not go to zero.  Sometimes we may even want to damp oscillations (e.g., car shock absorbers).</p>
+<p>For a system that has a small amount of damping, the period and frequency are nearly the same for simple harmonic motion (SHM), but hte amplitude gradually decreases.  This occurs because the non-conservative damping force removes energy from the system, usually in the form of thermal energy.  Energy removal by non-conservative forces is described as</p>
+<div class="math notranslate nohighlight">
+\[ W_{\rm nc} = \Delta ({\rm KE} + {\rm PE}), \]</div>
+<p>where <span class="math notranslate nohighlight">\(W_{\rm nc}\)</span> is work done by a non-conservative force (i.e., the damping force).  For a damped harmonic oscillator, <span class="math notranslate nohighlight">\(W_{\rm nc}\)</span> is negative because it removes mechanical energy (<span class="math notranslate nohighlight">\(\rm KE + PE\)</span>) from the system.</p>
+<p>If you gradually increase the amount of damping in a system, the period and frequency become affected because damping opposes and slows the back and forth motion.  If damping is large, the system does not even oscillate, where it slowly moves toward equilibrium.</p>
+<p>When we want to damp out oscillations (e.g., car suspension), we may want the system to return to equilibrium as quickly as possible, or <strong>critical damping</strong> needs to occur.  The critically damped system may overshoot the equilibrium position, but it should only do so once.</p>
+<p>With sub-critical damping, the system will return to equilibrium faster, but will overshoot and cross over more than once.  Such a system is <strong>underdamped</strong>.  An <strong>overdamped</strong> system may overshoot the equilibrium system, but it will take longer to reach equilibrium.</p>
+<p>Critical damping is often desired because such a system returns to equilibrium quickly and remains at equilibrium.  A constant force applied to a critically damped system moves the system to a new equilibrium position in the shortest possible time without overshooting.</p>
+<p>For example, when you stand on the bathroom scale the reading doesn’t oscillate about some value.  It would be inconvenient if reading oscillated about some value for a long time before settling on a value.  Damping forces can vary greatly.  Friction is sometimes independent of velocity.  But many damping forces are velocity-dependent and in complicated ways.</p>
+<figure class="align-center" id="fig-damping-regimes">
+<div class="output text_html">
+<video
+    src="../_static/videos/ThreeDampingRegimes.mp4"
+    poster="../_static/images/ThreeDampingRegimes_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    width="100%"
+    style="max-width: 900px; display: block;"
+    aria-label="Animation of a square block oscillating horizontally on a frictionless surface while a stacked energy bar illustrates the exchange between kinetic and elastic potential energy. Total mechanical energy remains constant.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 15.10 </span><span class="caption-text"><strong>Underdamping, critical damping, and overdamping.</strong> Three identical blocks attached to springs are released from rest at the same initial displacement. Each system has the same mass and spring constant but experiences a different damping force. With <strong>underdamping</strong> (teal), the block repeatedly passes through equilibrium while its oscillation amplitude gradually decreases. With <strong>critical damping</strong> (orange), the block approaches equilibrium as quickly as possible without overshooting. With <strong>overdamping</strong> (purple), the stronger resistance slows the block’s return to equilibrium. The synchronized displacement-versus-time graphs illustrate how the damping strength affects the motion. In all three cases, the damping force removes mechanical energy from the system. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-7-damped-harmonic-motion">OpenStax, <em>College Physics 2e</em>, Figure 16.21</a>.</span><a class="headerlink" href="#fig-damping-regimes" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="forced-oscillations-and-resonance">
+<h2><span class="section-number">15.7. </span>Forced Oscillations and Resonance<a class="headerlink" href="#forced-oscillations-and-resonance" title="Link to this heading">#</a></h2>
+<p>Some objects (e.g., a piano string) can be forced to oscillate at their natural frequency.  This is described by a <em>periodic driving force</em> acting on a simple harmonic oscillator (SHO).  The driving force puts energy into the system at a certain frequency, not necessarily the same as the natural frequency fo the system.  The <strong>natural frequency</strong> is the frequency at which a system would oscillate in the absence of a driving or damping force.</p>
+<p>Highway rumble strips provide a familiar example of <strong>forced oscillations</strong>. As a car travels over the regularly spaced grooves, the tires vibrate and produce a buzzing sound. Increasing the car’s speed increases the frequency of these vibrations. If the grooves are separated by a distance <span class="math notranslate nohighlight">\(d\)</span>, a car traveling at speed <span class="math notranslate nohighlight">\(v\)</span> encounters them at a <strong>driving frequency</strong> of <span class="math notranslate nohighlight">\(f_{\rm drive}=v/d\)</span>. Some roads even use carefully spaced grooves to produce musical notes!</p>
+<div class="tip admonition">
+<p class="admonition-title">Video: Why California’s Musical Road Sounds Terrible</p>
+<p><a class="reference external" href="https://www.youtube.com/&#64;TomScottGo"><strong>Tom Scott</strong></a> explores a musical road in California and explains how the spacing between grooves determines the frequency of the sound.</p>
+<iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/Ef93WmlEho0" title="Why California's Musical Road Sounds Terrible — Tom Scott" style="border: 0;" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<p>Now imagine a car traveling over larger, evenly spaced bumps. The suspension has a natural frequency, <span class="math notranslate nohighlight">\(f_0\)</span>, at which it tends to oscillate. When the driving frequency approaches this natural frequency, successive bumps reinforce the car’s motion, producing larger oscillations. This phenomenon is called <strong>resonance</strong>. At driving frequencies far from the natural frequency, the response is smaller. Shock absorbers provide <strong>damping</strong>, which limits the amplitude by dissipating mechanical energy.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Driving Frequency</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-car-suspension-resonance">
+<img alt="Three panels comparing a car traveling over evenly spaced bumps below, near, and above the suspension's natural frequency. Each panel includes a suspension cutaway, a translucent outline indicating body motion, and a displacement-versus-time graph." class="custom-wide-figure" src="../_images/ResonanceThreeRegimes_Photo.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.11 </span><span class="caption-text"><strong>Resonance in a car’s suspension.</strong> As a car travels over evenly spaced bumps, its suspension experiences a periodic driving force. (a) Below resonance, the car undergoes moderate vertical oscillations. (b) Near the suspension’s natural frequency, <span class="math notranslate nohighlight">\(f_0\)</span>, the oscillation amplitude becomes much larger. (c) Above resonance, the car’s body responds with smaller oscillations. Shock absorbers provide damping that limits the amplitude. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-8-forced-oscillations-and-resonance">OpenStax, <em>College Physics 2e</em>, Figure 16.24</a>.</span><a class="headerlink" href="#fig-car-suspension-resonance" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Effect of Damping</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-resonance-damping">
+<img alt="Graph of oscillation amplitude versus driving frequency for three damping levels. All three curves peak near the natural frequency, with the smallest damping producing the tallest and narrowest peak." src="https://openstax.org/apps/image-cdn/v1/f%3Dwebp/apps/archive/20260604.144757/resources/ae3edd93d4a7065a792dfb37f777d3fa0c0943cd" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.12 </span><span class="caption-text"><strong>Effect of damping on resonance.</strong> The oscillation amplitude <span class="math notranslate nohighlight">\(X\)</span> reaches its maximum near the natural frequency <span class="math notranslate nohighlight">\(f_0\)</span>. Smaller damping produces a taller, narrower resonance peak, while greater damping reduces the maximum amplitude and broadens the response over a range of driving frequencies. Source: <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-8-forced-oscillations-and-resonance">OpenStax, <em>College Physics 2e</em>, Figure 16.25</a>.</span><a class="headerlink" href="#fig-resonance-damping" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Figure <a class="reference internal" href="#fig-resonance-damping"><span class="std std-numref">15.12</span></a> illustrates how the amplitude depends on driving frequency. The response generally reaches a maximum near the natural frequency, while increasing the damping reduces and broadens the resonance peak.</p>
+<p>It is interesting that the widths of the resonance curves depend on the damping: the less damping, the narrower the resonance.  If you want a driven oscillator to resonate at a very specific frequency, you need as little damping as possible.  Low damping is the case for piano strings and other musical instruments.  If you want small-amplitude oscillations (e.g., car suspension) then you want heavy damping.</p>
+<p>These features of driven harmonic oscillators apply to a huge variety of systems.  When you tune your radio, you are adjusting its resonant frequency so that it only oscillates to the desired station’s broadcast (<em>driving</em>) frequency.</p>
+<ul class="simple">
+<li><p>Magnetic resonance imaging (MRI) is a medical diagnostic tool in which atomic nuclei (mostly hydrogen) are made to resonate by incoming radio waves (<span class="math notranslate nohighlight">\(\lambda \sim 100\ {\rm MHz}\)</span>).</p></li>
+<li><p>A child on a swing is driven by a parent at the swing’s natural frequency to achieve the maximum amplitude.</p></li>
+<li><p>Speed bumps and gravel roads prove that even a car’s suspension is not immune to resonance.</p></li>
+</ul>
+<p>In our bodies, the chest cavity is a clear example of a system at resonance.  The diaphragm and chest wall drive the oscillations of the chest cavity which result in the lungs inflating and deflating.  The system is critically damped and the muscular diaphragm oscillates at the resonant value for the system, making it highly efficient.</p>
+</section>
+<section id="waves">
+<h2><span class="section-number">15.8. </span>Waves<a class="headerlink" href="#waves" title="Link to this heading">#</a></h2>
+<p>A <strong>wave</strong> is a disturbance that propagates (or moves) from the place it was created.</p>
+<ul class="simple">
+<li><p>For water waves, the disturbance is in the surface of the water.</p></li>
+<li><p>For sound waves, the disturbance i a change in air pressure.</p></li>
+<li><p>For seismic waves, there are several types of disturbances, including disturbances of Earth’s surface and pressure disturbances under the surface.</p></li>
+</ul>
+<p>Visualizing water waves is useful because there is more to it than just a mental image.  Water waves exhibit characteristics common to all waves (e.g., amplitude, period, frequency, and energy).  All wave characteristics can be described by a small set of underlying principles.</p>
+<p>The simplest waves repeat themselves for several cycles and are associated with simple harmonic motion.  Consider a simplified water wave, which is an up and down disturbance of the water surface.  It causes a seagull on its surface to undergo simple harmonic motion as the wave crests (peaks) and troughs (valleys) pass under the bird.</p>
+<p>The time for one complete up and down motion is the wave’s period <span class="math notranslate nohighlight">\(T\)</span>, where the wave frequency is given by <span class="math notranslate nohighlight">\(f = 1/T\)</span>.  The movement of the wave is actually the disturbance moving to the right, not the water itself (otherwise the bird would move to the right too).  The <strong>wave velocity</strong> is the speed at which the disturbance moves.  Wave velocity is also called the <em>propagation velocity</em> or <em>propagation speed</em> because the disturbance propagates from one location to another at this speed.</p>
+<figure class="align-default" id="fig-surface-wave">
+<img alt="Realistic ocean surface wave with a floating seagull and a fish below the surface. Annotations identify the wavelength, amplitude, crest-to-trough height, equilibrium level, and direction of wave propagation." class="custom-wide-figure" src="../_images/SeagullSurfaceWave_Annotated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.13 </span><span class="caption-text"><strong>Characteristics of a Surface Wave.</strong> The wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is the horizontal distance between successive crests, while the amplitude <span class="math notranslate nohighlight">\(A\)</span> is the maximum vertical displacement from the equilibrium level. The total height between a crest and a trough is <span class="math notranslate nohighlight">\(2A\)</span>. The wave propagates to the right with speed <span class="math notranslate nohighlight">\(v_w\)</span>, while the seagull rises and falls as the wave passes.</span><a class="headerlink" href="#fig-surface-wave" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The water wave also has a characteristic <strong>wavelength</strong> <span class="math notranslate nohighlight">\(\lambda\)</span>, which is the distance between two adjacent crests or troughs.  The speed of the propagation <span class="math notranslate nohighlight">\(v_{\rm wave}\)</span> is the distance the wave travels in a given time.  In equation form, this is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-59451f9f-31c5-4eb3-b477-80576e57b6d4">
+<span class="eqno">(15.20)<a class="headerlink" href="#equation-59451f9f-31c5-4eb3-b477-80576e57b6d4" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm wave} = \frac{\lambda}{T} = f\lambda.
+\end{align}\]</div>
+<p>This fundamental relationship holds for all types of waves.</p>
+<ul class="simple">
+<li><p>For water waves, <span class="math notranslate nohighlight">\(v_{\rm wave}\)</span> is the speed of a surface wave,</p></li>
+<li><p>For sound waves, <span class="math notranslate nohighlight">\(v_{\rm wave}\)</span> is the speed of sound in a medium,</p></li>
+<li><p>For light waves, <span class="math notranslate nohighlight">\(v_{\rm wave} = c\)</span> is the speed of light.</p></li>
+</ul>
+<section id="transverse-and-longitudinal-waves">
+<h3><span class="section-number">15.8.1. </span>Transverse and Longitudinal Waves<a class="headerlink" href="#transverse-and-longitudinal-waves" title="Link to this heading">#</a></h3>
+<p>A simple wave can propagate as a</p>
+<ul class="simple">
+<li><p><strong>transverse</strong> (or shear) wave which moves in the horizontal direction while the surface is disturbed in the vertical direction.</p></li>
+<li><p><strong>longitudinal</strong> (or compressional) wave where the disturbance is parallel to the direction of propagation.</p></li>
+</ul>
+<figure class="align-default" id="fig-transverse-longitudinal-slinky">
+<img alt="A person demonstrates transverse and longitudinal waves using a slinky. Blue arrows show wave propagation, while orange arrows indicate the direction of coil displacement." class="custom-wide-figure" src="../_images/SlinkyWaves_Annotated.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.14 </span><span class="caption-text"><strong>Transverse and Longitudinal Waves.</strong> (a) In a transverse wave, the coils oscillate perpendicular to the direction of wave propagation. (b) In a longitudinal wave, the coils oscillate parallel to the direction of propagation, producing alternating compressions and rarefactions. Adapted from OpenStax, <em>College Physics 2e</em>, Figures 16.29 and 16.30.</span><a class="headerlink" href="#fig-transverse-longitudinal-slinky" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Waves may be transverse, longitudinal, or a <em>combination of the two.</em>  The waves on the strings of musical instruments are transverse, as well as electromagnetic waves like visible light.</p>
+<p>Sound waves in air and water are longitudinal.  Their disturbances are periodic variations in pressure that are transmitted in fluids.  Fluids do not have appreciable shear strength, and thus sound waves in them must be longitudinal or compressional.  Sound in solids can be both longitudinal and transverse.</p>
+<p>Earthquake (or seismic) waves under Earth’s surface also have both longitudinal and transverse components, which are called compressional P-waves and shear S-waves.  Earthquakes also have surface waves that are similar to surface waves on water.</p>
+</section>
+</section>
+<section id="superposition-and-interference">
+<h2><span class="section-number">15.9. </span>Superposition and Interference<a class="headerlink" href="#superposition-and-interference" title="Link to this heading">#</a></h2>
+<p>Most waves do not look very simple. Complex waves are more interesting, but they look formidable.  Most water waves appear complex because they result from several simple waves adding together.  Luckily the rules for adding waves are quite simple.</p>
+<p>When two or more waves arrive at the same point, they superimpose themselves on one another.  The disturbances of waves are superimposed when they come together, which is a phenomenon called <strong>superposition</strong>.  Each disturbance corresponds to a force, where the forces add.  If the disturbances are along the same line, then the resulting wave is a simple addition of the disturbances of the individual waves, or their amplitudes add.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Constructive Interference</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-constructive-interference">
+<img alt="Point-by-point addition of two identical waves in phase, producing a resultant wave with twice the amplitude." class="custom-wide-figure" src="../_images/ConstructiveInterference_Dots.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.15 </span><span class="caption-text"><strong>Constructive Interference.</strong> Two identical waves with amplitude <span class="math notranslate nohighlight">\(A\)</span> are added point by point. Because their crests and troughs align, the resulting wave has twice the amplitude (<span class="math notranslate nohighlight">\(2A\)</span>) but the same wavelength. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, <em>College Physics 2e</em>, Figure 16.33</a>.</span><a class="headerlink" href="#fig-constructive-interference" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Destructive Interference</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-destructive-interference">
+<img alt="Point-by-point addition of two identical waves 180 degrees out of phase, producing zero resultant displacement." class="custom-wide-figure" src="../_images/DestructiveInterference_Dots.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.16 </span><span class="caption-text"><strong>Destructive Interference.</strong> Two identical waves with amplitude <span class="math notranslate nohighlight">\(A\)</span> are added point by point, but their crests align with the opposing wave’s troughs. Their equal and opposite displacements cancel, producing a resultant wave with zero amplitude. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, <em>College Physics 2e</em>, Figure 16.34</a>.</span><a class="headerlink" href="#fig-destructive-interference" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+Non-identical Waves</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-nonidentical-superposition">
+<img alt="Point-by-point addition of two waves with different amplitudes and wavelengths, producing a complex resultant wave." class="custom-wide-figure" src="../_images/NonidenticalSuperposition_Dots.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.17 </span><span class="caption-text"><strong>Superposition of Non-identical Waves.</strong> Two waves with different amplitudes and wavelengths are added point by point. Depending on their relative displacements, the waves reinforce or partially cancel, producing a more complex resultant. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, <em>College Physics 2e</em>, Figure 16.35</a>.</span><a class="headerlink" href="#fig-nonidentical-superposition" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Figure <a class="reference internal" href="#fig-constructive-interference"><span class="std std-numref">15.15</span></a> shows two identical waves that arrive at the same point exactly <em>in phase</em>.  The crests of the two waves are precisely aligned, as are the troughs.  The superposition produces pure <strong>constructive interference</strong>.  Because the disturbances add, pure constructive interference produces a wave that has twice the amplitude of the individual wave and has the same wavelength.</p>
+<p>Figure <a class="reference internal" href="#fig-destructive-interference"><span class="std std-numref">15.16</span></a> shows the same two identical wave that exactly <em>out of phase</em>, where the crest is precisely aligned with a trough.  This superposition produces pure <strong>destructive interference</strong>.  Because the disturbances are in the opposite direction, the resulting amplitude is zero.  The waves completely cancel.</p>
+<p>While pure constructive and destructive interference do occur, they require precisely aligned identical waves.  The superposition of most waves produces a <em>combination</em> of constructive and destructive interference.  For example, sound from a stereo can be loud in one spot and quiet in another.  The sound waves add partially constructively and destructively at different locations.  A stereo has (at least) 2 speakers, and waves can reflect from the walls.  All these waves superimpose. The addition of two dissimilar waves changes the overall wave shape and frequency (see Fig. <a class="reference internal" href="#fig-nonidentical-superposition"><span class="std std-numref">15.17</span></a>) to make it look more complicated.</p>
+<section id="standing-waves">
+<h3><span class="section-number">15.9.1. </span>Standing Waves<a class="headerlink" href="#standing-waves" title="Link to this heading">#</a></h3>
+<p>Sometime waves do not seem to move, rather they “stand” in place.  These unmoving waves can be seen on the surface of a glass of milk in a refrigerator.  Vibrations from the refrigerator motor create waves on the milk that oscillate up and down but do not seem to move across the surface.  These waves are formed by the superposition of two (or more) moving waves.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+Milk in a refrigerator</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-standing-wave-milk">
+<img alt="A glass of milk inside a refrigerator. Faint circular ripple bands brighten and darken in place as the milk surface vibrates." class="custom-wide-figure" src="../_images/MilkStandingWave.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.18 </span><span class="caption-text"><strong>Vibrations on the surface of milk.</strong> Vibrations from a refrigerator motor can excite oscillations in the milk. This illustrative standing-wave pattern changes in amplitude while the locations of its nodal rings remain fixed.</span><a class="headerlink" href="#fig-standing-wave-milk" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+Jurassic Park puddle</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-jurassic-park-puddle">
+<img alt="A puddle develops visible ripples as vibrations associated with an approaching dinosaur disturb its surface in Jurassic Park." class="custom-wide-figure" src="https://media1.tenor.com/m/fiml4DQELVAAAAAd/jurassicpark-puddle.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.19 </span><span class="caption-text"><strong>Ripples from approaching footsteps.</strong> In <em>Jurassic Park</em> (1993), ground vibrations from an approaching dinosaur disturb water in a puddle. This illustrates how vibrations excite surface waves, although the ripples are not necessarily a standing-wave pattern. Source: <em>Jurassic Park</em> (Universal Pictures, 1993), <a class="reference external" href="https://tenor.com/view/jurassicpark-puddle-trex-suspense-trexfoot-gif-5969949">GIF hosted on Tenor</a>.</span><a class="headerlink" href="#fig-jurassic-park-puddle" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Waves can move through each other with their disturbances adding as they go by.  If the two waves have the same amplitude and wavelength, then they alternate between constructive and destructive interference.  The resultant looks like a wave standing in place, or a <strong>standing wave</strong>.  Waves on a guitar string or within organ pipes can be standing waves.</p>
+<p>A closer look at earthquakes provides evidence for conditions appropriate for resonance, standing waves, and constructive/destructive interference.  A building may be vibrated for several seconds with a driving frequency matching that of the natural frequency of vibration of the building.  This produces a resonance allowing for one building to collapse while the neighboring buildings stay upright.  This often depends on the building height, which sets the condition for a standing wave.  As the earthquake waves travel along Earth’s surface and reflect off denser rocks, constructive interference occurs at certain points.</p>
+<figure class="align-center" id="fig-standing-wave-superposition">
+<div class="output text_html">
+<video
+    src="../_static/videos/StandingWaveSuperposition.mp4"
+    poster="../_static/images/StandingWaveSuperposition_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    width="100%"
+    style="max-width: 900px; display: block; margin: auto;"
+    aria-label="Animation of standing-wave formation. Two identical waves travel in opposite directions while their resultant changes continuously. Fixed nodes and antinodes are identified, with pauses at quarter-period intervals.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 15.20 </span><span class="caption-text"><strong>Formation of a standing wave through superposition.</strong> Two identical waves travel in opposite directions, with their displacements adding to produce a standing wave. The blue and orange waves propagate to the right and left, respectively, while the green resultant oscillates without traveling. Nodes remain at zero displacement, whereas antinodes reach maximum displacements of <span class="math notranslate nohighlight">\(\pm 2A\)</span>. At <span class="math notranslate nohighlight">\(t=T/4\)</span> and <span class="math notranslate nohighlight">\(t=3T/4\)</span>, the entire resultant momentarily passes through equilibrium. The animation pauses at quarter-period intervals to illustrate these changes. <em>Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, College Physics 2e, Figure 16.36</a>.</em></span><a class="headerlink" href="#fig-standing-wave-superposition" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Standing waves are also found on the strings of musical instruments and are due to reflections of waves from the ends of the string.</p>
+<ul class="simple">
+<li><p><strong>Nodes</strong> are the points where the string does not move, or more generally, where the wave disturbance is zero in a standing wave.  The fixed ends of strings must be nodes because the string cannot move there.</p></li>
+<li><p><strong>Antinodes</strong> are the location of maximum amplitude in standing waves.</p></li>
+</ul>
+<p>Standing waves on strings have a frequency that is related to the propagation speed <span class="math notranslate nohighlight">\(v_{\rm wave}\)</span> of the disturbance on the string.  The wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is determined by the distance between the points where the string is fixed in place.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
+Fundamental</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-bass-string-fundamental">
+<img alt="Bass guitar string vibrating in its fundamental mode, with nodes at the fixed ends and an antinode at the midpoint." class="custom-wide-figure" src="../_images/BassString_Fundamental.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.21 </span><span class="caption-text"><strong>Fundamental standing-wave mode on a bass guitar string.</strong> The string has nodes at the nut and bridge and one antinode at its midpoint. The two highlighted curves show the opposite extremes of the vibrating string. The wavelength is <span class="math notranslate nohighlight">\(\lambda_1=2L\)</span>, giving a fundamental frequency of <span class="math notranslate nohighlight">\(f_1=v_{\rm w}/(2L)\)</span>. The displacement is exaggerated for visibility. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, <em>College Physics 2e</em>, Figure 16.37</a>.</span><a class="headerlink" href="#fig-bass-string-fundamental" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
+Overtones</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="fig-bass-string-overtones">
+<img alt="Bass guitar string vibrating in its second and third harmonics, showing two and three loops with stationary nodes." class="custom-wide-figure" src="../_images/BassString_Overtones.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.22 </span><span class="caption-text"><strong>Higher standing-wave modes on a bass guitar string.</strong> The first overtone (second harmonic) has two antinodes and one interior node, with <span class="math notranslate nohighlight">\(\lambda_2=L\)</span> and <span class="math notranslate nohighlight">\(f_2=2f_1\)</span>. The second overtone (third harmonic) has three antinodes and two interior nodes, with <span class="math notranslate nohighlight">\(\lambda_3=2L/3\)</span> and <span class="math notranslate nohighlight">\(f_3=3f_1\)</span>. Adjacent segments vibrate in opposite directions, while the nodes remain stationary. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, <em>College Physics 2e</em>, Figure 16.38</a>.</span><a class="headerlink" href="#fig-bass-string-overtones" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>The lowest frequency is called the <strong>fundamental frequency</strong>, which is used for the longest wavelength, <span class="math notranslate nohighlight">\(\lambda_1 = 2L\)</span>.  The fundamental frequency, <strong>overtones</strong>, or harmonics can be represented by</p>
+<div class="math notranslate nohighlight">
+\[ f_n = \frac{v_{\rm wave}}{\lambda_n}. \]</div>
+<p>Therefore the fundamental frequency is <span class="math notranslate nohighlight">\(f_1 = v_{\rm wave}/2L\)</span>.  The overtones or harmonics are the multiples of the fundamental frequency.  The first harmonic can be calculated since <span class="math notranslate nohighlight">\(\lambda_2 = L\)</span>, which makes the first harmonic frequency is <span class="math notranslate nohighlight">\(f_2 = v_{\rm wave}/L = 2f_1.\)</span>  Similarly, <span class="math notranslate nohighlight">\(f_3 = 3f_1\)</span>.</p>
+<p>All the frequencies can be changed by adjusting the tension in the string.  The greater the tension, the grater <span class="math notranslate nohighlight">\(v_{\rm wave}\)</span> is and the higher the frequencies.</p>
+</section>
+<section id="beats">
+<h3><span class="section-number">15.9.2. </span>Beats<a class="headerlink" href="#beats" title="Link to this heading">#</a></h3>
+<p>Striking two adjacent keys on a piano produces a warbling combination usually considered to be unpleasant.  the superposition of two similar (but not identical) waves is the culprit.  The combined sound of the two jet engines goes up and down in loudness (volume).  The varying loudness happens because the sound waves have similar (but not identical) frequencies.  This warbling is due to the alternating constructive and destructive interference between the waves.</p>
+<p>The wave resulting from the superposition of two similar-frequency waves has a frequency that is the average of the two.  this wave fluctuates in amplitude, or <strong>beats</strong>, at the <em>beat frequency</em>.  We can determine the beat frequency by adding two waves together mathematically.</p>
+<p>A single wave can be represented as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8c4b4b9c-da64-430f-b5f0-ce531af6c4df">
+<span class="eqno">(15.21)<a class="headerlink" href="#equation-8c4b4b9c-da64-430f-b5f0-ce531af6c4df" title="Permalink to this equation">#</a></span>\[\begin{align} 
+x = A\cos{\omega t} = A\cos(2\pi ft),
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega = 2\pi f\)</span> and <span class="math notranslate nohighlight">\(f = 1/T\)</span> is the frequency of the wave.  Adding two waves that have different frequencies but identical amplitudes produces</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b5fbc1fa-865e-43b5-92c1-ee8a87decfb0">
+<span class="eqno">(15.22)<a class="headerlink" href="#equation-b5fbc1fa-865e-43b5-92c1-ee8a87decfb0" title="Permalink to this equation">#</a></span>\[\begin{align}
+x &amp;= x_1 + x_2, \\
+&amp;= A\cos{2\pi f_1t} + A\cos(2\pi f_2t).
+\end{align}\]</div>
+<p>Using a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities">trigonometric identity</a>, we can write this expression as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1b5ab76f-1259-44c5-bbfb-981254cdf915">
+<span class="eqno">(15.23)<a class="headerlink" href="#equation-1b5ab76f-1259-44c5-bbfb-981254cdf915" title="Permalink to this equation">#</a></span>\[\begin{align}
+x = A \cos(\pi f_{\rm B}t)\cos(2\pi f_{\rm ave}t), 
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f_{\rm B} = |f_1 - f_2|\)</span> is the beat frequency and <span class="math notranslate nohighlight">\(f_{\rm ave} = (f_1 + f_2)/2\)</span> is the average frequency.</p>
+<p>These results mean that the resultant wave has twice the amplitude and average frequency of the two superimposed waves.  It also fluctuates in overall amplitude at the beat frequency <span class="math notranslate nohighlight">\(f_{\rm B}\)</span>.</p>
+<ul class="simple">
+<li><p>The first cosine term effectively causes the amplitude to go up and down.</p></li>
+<li><p>The second cosine term is the wave with the average frequency <span class="math notranslate nohighlight">\(f_{\rm ave}\)</span>.</p></li>
+</ul>
+<figure class="align-center" id="fig-beats-superposition">
+<div class="output text_html">
+<video
+    src="../_static/videos/BeatsSuperposition.mp4"
+    poster="../_static/images/BeatsSuperposition_final.png"
+    controls
+    loop
+    playsinline
+    preload="metadata"
+    width="100%"
+    style="max-width: 900px; display: block; margin: auto;"
+    aria-label="Animation showing the superposition of two waves with slightly different frequencies. The blue and orange waves are added point by point to produce a green resultant whose amplitude varies periodically. The animation pauses at constructive and destructive interference.">
+    Your browser does not support the HTML5 video element.
+</video>
+</div><figcaption>
+<p><span class="caption-number">Fig. 15.23 </span><span class="caption-text"><strong>Beats produced by superposition.</strong> Two waves with equal amplitudes but slightly different frequencies (<span class="math notranslate nohighlight">\(f_1=2.5\ {\rm Hz}\)</span> and <span class="math notranslate nohighlight">\(f_2=2.9\ {\rm Hz}\)</span>) combine to produce a resultant wave whose amplitude varies periodically. Constructive interference produces a maximum amplitude of <span class="math notranslate nohighlight">\(2A\)</span>, while destructive interference produces complete cancellation. The beat frequency is <span class="math notranslate nohighlight">\(f_{\rm beat}=|f_2-f_1|=0.4\ {\rm Hz}\)</span>. The animation pauses at these interference conditions to illustrate how the individual displacements combine. Adapted from <a class="reference external" href="https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference">OpenStax, <em>College Physics 2e</em>, Figure 16.39</a>.</span><a class="headerlink" href="#fig-beats-superposition" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="energy-in-waves">
+<h2><span class="section-number">15.10. </span>Energy in Waves<a class="headerlink" href="#energy-in-waves" title="Link to this heading">#</a></h2>
+<p>Waves carry energy, where the energy of some waves can be directly observed.  Earthquakes can shake whole cities to the ground.  Ultrasound is used for deep-heat treatment of muscle strains, while a laser beam can burn away a malignancy.</p>
+<p>The amount of energy in a wave is related to its <em>amplitude</em>.  Large-amplitude earthquakes produce large ground displacements.  Loud sounds have higher pressure amplitudes and come from larger-amplitude source vibrations than soft sounds.</p>
+<p>More quantitatively, a wave is a displacement that is resisted by a restoring force.  the larger the displacement <span class="math notranslate nohighlight">\(x\)</span>, the larger the force <span class="math notranslate nohighlight">\(F = kx\)</span> needed to create it.  Energy is put into the wave by the work done to create it ands is related to the amplitude.  A wave’s energy is directly proportional to its amplitude squared through</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1a32ae1e-83d4-4664-8309-d086cfe3eb84">
+<span class="eqno">(15.24)<a class="headerlink" href="#equation-1a32ae1e-83d4-4664-8309-d086cfe3eb84" title="Permalink to this equation">#</a></span>\[\begin{align}
+W \propto Fx = (kx)x = kx^2.
+\end{align}\]</div>
+<p>The energy effects of a wave depend on time as well as amplitude.  For example, the longer deep-heat ultrasound is applied, the more energy it transfers.  Waves can also be concentrated or spread out.  For example, Sunlight can be focused to burn wood because it is concentrated, where earthquakes do less damage as they spread out farther from the source.  In both cases, changing the area the waves cover has important effects.  The <strong>intensity</strong> <span class="math notranslate nohighlight">\(I\)</span> of a wave is measured as power <span class="math notranslate nohighlight">\(P\)</span> per unit area <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bd73e588-7586-478d-843d-61c382c7c730">
+<span class="eqno">(15.25)<a class="headerlink" href="#equation-bd73e588-7586-478d-843d-61c382c7c730" title="Permalink to this equation">#</a></span>\[\begin{align}
+I = \frac{P}{A}.
+\end{align}\]</div>
+<p>The definition of intensity is valid for any energy in transit, including that carried by waves.  The SI unit for intensity is watts per square meter (<span class="math notranslate nohighlight">\(\rm W/m^2\)</span>).  For example, the Earth receives an intensity of sunlight equal to <span class="math notranslate nohighlight">\(1361\ {\rm W/m^2}\)</span> (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Solar_constant">solar constant</a>) of energy just above the atmosphere, where a majority comes in the visible and infrared portions of the electromagnetic spectrum.</p>
+</section>
+<section id="in-class-exercises">
+<h2><span class="section-number">15.11. </span>In-Class Exercises<a class="headerlink" href="#in-class-exercises" title="Link to this heading">#</a></h2>
+<section id="instructions">
+<h3><span class="section-number">15.11.1. </span>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<p>You will use the final <strong>20 minutes of class</strong> to begin the problems assigned for that class day. First, you must make a serious attempt on each assigned problem independently. After developing your own approach, you may compare ideas and discuss the problems with other students.</p>
+<p>Each student must prepare and submit an individual solution. Organize each quantitative solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Show your reasoning, equations, substitutions with units, and interpretation of the result. A numerical answer without supporting work is not a complete solution.</p>
+<blockquote>
+<div><p>Open this page in Google Colab so you can easily copy the problems to the template without retyping them.</p>
+</div></blockquote>
+<p>Export your completed Jupyter notebook as a PDF and submit the PDF to D2L by <strong>11:59 p.m. CT on the day of class</strong>. The PDF filename must follow the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_SetY.pdf</span></code>, where <code class="docutils literal notranslate"><span class="pre">XX</span></code> is the two-digit chapter number and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the problem-set number.</p>
+<div class="warning admonition">
+<p class="admonition-title">Make your own copy before beginning</p>
+<p>A <strong>read-only Jupyter notebook template</strong> is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook by selecting <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">a</span> <span class="pre">copy</span> <span class="pre">in</span> <span class="pre">Drive</span></code>.</p>
+<p>Changes made directly to the read-only template cannot be saved. It does not matter how much work you enter: if you have not made your own copy, your changes will be lost. Confirm that you can rename and save your copy before beginning the problems.</p>
+</div>
+</section>
+<section id="problems">
+<h3><span class="section-number">15.11.2. </span>Problems<a class="headerlink" href="#problems" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>One type of BB gun uses a spring-driven plunger to blow the BB from its barrel.</p>
+<p><strong>(a)</strong> Calculate the force constant of the plunger’s spring if you must compress it <span class="math notranslate nohighlight">\(0.15\ {\rm m}\)</span> to drive the <span class="math notranslate nohighlight">\(0.05\)</span>-<span class="math notranslate nohighlight">\(\rm kg\)</span> plunger to a top speed of <span class="math notranslate nohighlight">\(20\ {\rm m/s}\)</span>.</p>
+<p><strong>(b)</strong> What force must be exerted to compress the spring?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>A diver on a diving board is undergoing simple harmonic motion. Her mass is <span class="math notranslate nohighlight">\(55\ {\rm kg}\)</span>, and the period of her motion is <span class="math notranslate nohighlight">\(0.80\ {\rm s}\)</span>. The next diver is a male whose period of simple harmonic oscillation is <span class="math notranslate nohighlight">\(1.05\ {\rm s}\)</span>. What is his mass if the mass of the board is negligible?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p><strong>(a)</strong> What is the effect on the period of a pendulum if you double its length?</p>
+<p><strong>(b)</strong> What is the effect on the period of a pendulum if you decrease its length by <span class="math notranslate nohighlight">\(5.00\%\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>If a car has a suspension system with a force constant of <span class="math notranslate nohighlight">\(5.00\times10^4\ {\rm N/m}\)</span>, how much energy must the car’s shocks remove to dampen an oscillation starting with a maximum displacement of <span class="math notranslate nohighlight">\(0.075\ {\rm m}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>What is the wavelength of the waves you create in a swimming pool if you splash your hand at a rate of <span class="math notranslate nohighlight">\(2.00\ {\rm Hz}\)</span> and the waves propagate at <span class="math notranslate nohighlight">\(0.800\ {\rm m/s}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>Two tuning forks having frequencies of <span class="math notranslate nohighlight">\(460\ {\rm Hz}\)</span> and <span class="math notranslate nohighlight">\(464\ {\rm Hz}\)</span> are struck simultaneously. What average frequency will you hear, and what will the beat frequency be?</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">15.12. </span>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">15.12.1. </span>Instructions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Homework assignment</p>
+<p>The homework is designed to give you regular practice applying the ideas developed in this chapter. A <strong>read-only Jupyter notebook template</strong> for the assignment is available on D2L. Before entering any work, you <strong>must make your own editable copy</strong> of the notebook. Changes made directly to the read-only template cannot be saved, so confirm that you can rename and save your copy before beginning.</p>
+<p>There are two types of homework questions:</p>
+<p><strong>Conceptual questions:</strong> Copy the question into your notebook and answer it under a heading titled <strong>The Conclusion</strong>. Your response should be a paragraph that directly answers the question and explains the physical reasoning behind your answer. A Model or Math section is not required unless the question genuinely requires a calculation.</p>
+<p><strong>Quantitative questions:</strong> Copy the problem into your notebook and organize your solution using the <strong>Problem–Model–Math–Conclusion</strong> format. Identify the physical situation, assumptions, knowns, unknowns, and sign convention in the Model; develop and apply the necessary equations in the Math; and state, interpret, and check your result in the Conclusion. Include units in numerical substitutions.</p>
+<p>The worked examples on the course webpage model the reasoning and solution style expected in your homework.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Don’t wait until the night it is due</p>
+<p>Homework is much easier to manage when you complete <strong>a couple of problems at a time as you work through the chapter</strong>. This gives you time to identify concepts that you do not understand and ask questions before the due date. Trying to complete the entire assignment the night it is due usually leaves little time to diagnose mistakes or revisit the course material.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Submission</p>
+<p>When your assignment is complete, export the Jupyter notebook as a <strong>PDF</strong> and submit the PDF to D2L by <strong>11:59 p.m. CT on the due date</strong>.</p>
+<p>Name your submitted file using the format <code class="docutils literal notranslate"><span class="pre">LastName_ChXX_HW.pdf</span></code>. Replace <code class="docutils literal notranslate"><span class="pre">LastName</span></code> with your last name and <code class="docutils literal notranslate"><span class="pre">XX</span></code> with the two-digit chapter number. For example, homework for Chapter 2 submitted by Jane Smith would be <code class="docutils literal notranslate"><span class="pre">Smith_Ch02_HW.pdf</span></code>.</p>
+<p>Before submitting, open the PDF and make sure that all questions, equations, figures, and solutions are visible and readable.</p>
+</div>
+</section>
+<section id="conceptual-questions">
+<h3><span class="section-number">15.12.2. </span>Conceptual Questions<a class="headerlink" href="#conceptual-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<blockquote>
+<div><p>Explain why you expect an object made of a stiff material to vibrate at a higher frequency than a similar object made of a spongy material.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<blockquote>
+<div><p>If the spring constant of a simple harmonic oscillator is doubled, by what factor will the mass of the system need to change in order for the frequency of the motion to remain the same?</p>
+</div></blockquote>
+</div>
+</section>
+<section id="quantitative-questions">
+<h3><span class="section-number">15.12.3. </span>Quantitative Questions<a class="headerlink" href="#quantitative-questions" title="Link to this heading">#</a></h3>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<blockquote>
+<div><p>Suppose you attach an object of mass <span class="math notranslate nohighlight">\(m\)</span> to a vertical spring originally at rest and let it bounce up and down. You release the object from rest at the spring’s original rest length.</p>
+<p><strong>(a)</strong> Show that the spring exerts an upward force of <span class="math notranslate nohighlight">\(2.00\,mg\)</span> on the object at its lowest point.</p>
+<p><strong>(b)</strong> If the spring has a force constant of <span class="math notranslate nohighlight">\(10\ {\rm N/m}\)</span> and a <span class="math notranslate nohighlight">\(0.25\ {\rm kg}\)</span> object is set in motion as described, find the amplitude of the oscillations.</p>
+<p><strong>(c)</strong> Find the maximum velocity.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<blockquote>
+<div><p>What is the length of a pendulum that has a period of <span class="math notranslate nohighlight">\(0.50\ {\rm s}\)</span>?</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<blockquote>
+<div><p>How much energy must the shock absorbers of a <span class="math notranslate nohighlight">\(1200\ {\rm kg}\)</span> car dissipate in order to damp a bounce that initially has a velocity of <span class="math notranslate nohighlight">\(0.80\ {\rm m/s}\)</span> at the equilibrium position? Assume the car returns to its original vertical position.</p>
+</div></blockquote>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<blockquote>
+<div><p>What is the wavelength of an earthquake that shakes you with a frequency of <span class="math notranslate nohighlight">\(10\ {\rm Hz}\)</span> and gets to another city <span class="math notranslate nohighlight">\(84\ {\rm km}\)</span> away in <span class="math notranslate nohighlight">\(12\ {\rm s}\)</span>?</p>
+</div></blockquote>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,6 +1341,55 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke-s-law">15.1. Hooke’s Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-in-hooke-s-law-of-deformation">15.1.1. Energy in Hooke’s Law of Deformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-energy-stored-in-a-toy-gun-spring">15.1.2. Example Problem: Energy Stored in a Toy Gun Spring</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#period-and-frequency-in-oscillations">15.2. Period and Frequency in Oscillations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-harmonic-motion">15.3. Simple Harmonic Motion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-between-shm-and-waves">15.3.1. The Link between SHM and Waves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-pendulum">15.4. Simple Pendulum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-and-the-simple-harmonic-oscillator">15.5. Energy and the Simple Harmonic Oscillator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damped-harmonic-motion">15.6. Damped Harmonic Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forced-oscillations-and-resonance">15.7. Forced Oscillations and Resonance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waves">15.8. Waves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transverse-and-longitudinal-waves">15.8.1. Transverse and Longitudinal Waves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superposition-and-interference">15.9. Superposition and Interference</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standing-waves">15.9.1. Standing Waves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beats">15.9.2. Beats</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-in-waves">15.10. Energy in Waves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-class-exercises">15.11. In-Class Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">15.11.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">15.11.2. Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">15.12. Homework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">15.12.1. Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-questions">15.12.2. Conceptual Questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-questions">15.12.3. Quantitative Questions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
